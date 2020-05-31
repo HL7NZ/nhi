@@ -1,0 +1,124 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+<table class='table table-condensed table-bordered'>
+
+<tr><th>Url</th><th>Description</th><th>Where used</th></tr>
+<tr>
+<td><a href='StructureDefinition-address-isPrimary.html'>http://hl7.org.nz/fhir/StructureDefinition/address-isPrimary</a></td>
+<td>
+Indicates this is the primary residential address - each patient must have one and only one
+</td>
+<td>
+<div>NzNHIPatient.address.isPrimary</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-buildingName.html'>http://hl7.org.nz/fhir/StructureDefinition/buildingName</a></td>
+<td>
+No description
+</td>
+<td>
+<div>NzNHIPatient.address.buildingName</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-dhb.html'>http://hl7.org.nz/fhir/StructureDefinition/dhb</a></td>
+<td>
+The District Health Board the patient resides in. It is derived from the patient's primary residential address. Not updated directly.
+</td>
+<td>
+<div>NzNHIPatient.DHB</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-ethnicity.html'>http://hl7.org.nz/fhir/StructureDefinition/ethnicity</a></td>
+<td>
+The ethnicity of the patient. One to six level 4 codes.
+</td>
+<td>
+<div>NzNHIPatient.ethnicity</div>
+</td>
+</tr>
+<tr>
+<td><a href='undefined'>http://hl7.org.nz/fhir/StructureDefinition/informationsource</a></td>
+<td>
+(Not defined in this IG)
+</td>
+<td>
+<div>NzNHIPatient.name.source</div>
+<div>NzNHIPatient.birthDate.source</div>
+<div>NzNHIPatient.deathDate.source</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-notValidatedReason.html'>http://hl7.org.nz/fhir/StructureDefinition/notValidatedReason</a></td>
+<td>
+The reason why the address has not been validated
+</td>
+<td>
+<div>NzNHIPatient.address.notValidatedReason</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-patient-addressDerived.html'>http://hl7.org.nz/fhir/StructureDefinition/patient-addressDerived</a></td>
+<td>
+Additional address elements exposed by the NHI and calculated from the address using the eSAM address service
+</td>
+<td>
+<div>NzNHIPatient.address.derivedData</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-patient-citizenship.html'>http://hl7.org.nz/fhir/StructureDefinition/patient-citizenship</a></td>
+<td>
+New Zealand citizenship
+</td>
+<td>
+<div>NzNHIPatient.nzcitizenship</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-patient-countryOfBirth.html'>http://hl7.org.nz/fhir/StructureDefinition/patient-countryOfBirth</a></td>
+<td>
+The country where the person was born
+</td>
+<td>
+<div>NzNHIPatient.birthCountry</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-suburb.html'>http://hl7.org.nz/fhir/StructureDefinition/suburb</a></td>
+<td>
+The suburb of the address. This is not the same as 'district' or 'state.
+</td>
+<td>
+<div>NzNHIPatient.address.suburb</div>
+</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-informationsource.html'>http://hl7.org.nz/fhir/Structuredefinition/informationsource</a></td>
+<td>
+The source of the information
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><a href='undefined'>http://hl7.org/fhir/StructureDefinition/iso21090-preferred</a></td>
+<td>
+(Not defined in this IG)
+</td>
+<td>
+<div>NzNHIPatient.name.isPreferred</div>
+</td>
+</tr>
+<tr>
+<td><a href='undefined'>http://hl7.org/fhir/StructureDefinition/originalText</a></td>
+<td>
+(Not defined in this IG)
+</td>
+<td>
+<div>NzNHIPatient.gender.responseText</div>
+</td>
+</tr>
+</table>
+</div>

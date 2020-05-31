@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DeathDateInformationsource",
+  "id": "DeathDateInformationsource",
+  "title": "DeathDate Information source",
+  "description": "The source of data for the date of death",
+  "version": "0.1.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/deathdate-informationsource",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/cs/informationsource",
+        "concept": [
+          {
+            "code": "MIGR",
+            "display": "Migrated"
+          },
+          {
+            "code": "NPRF",
+            "display": "Proof not sighted"
+          },
+          {
+            "code": "NZCI",
+            "display": "New Zealand Certificate of Identity"
+          }
+        ]
+      }
+    ]
+  }
+}

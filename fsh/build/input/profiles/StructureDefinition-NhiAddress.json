@@ -1,0 +1,140 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NhiAddress",
+  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiAddress",
+  "version": "0.1.0",
+  "name": "NhiAddress",
+  "title": "NHI Address",
+  "status": "active",
+  "description": "Adds additional, NHI specific extensions",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "vcard",
+      "uri": "http://w3.org/vcard",
+      "name": "vCard Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Address",
+  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/nzAddress",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Address.extension:patient-addressDerived",
+        "path": "Address.extension",
+        "sliceName": "patient-addressDerived",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/patient-addressDerived"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:notValidatedAddressReason",
+        "path": "Address.extension",
+        "sliceName": "notValidatedAddressReason",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/notValidatedAddressReason"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:isPrimaryAddress",
+        "path": "Address.extension",
+        "sliceName": "isPrimaryAddress",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:depCentils",
+        "path": "Address.extension",
+        "sliceName": "depCentils",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/depCentile"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:depQuintile",
+        "path": "Address.extension",
+        "sliceName": "depQuintile",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/depQuintile"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:SAID",
+        "path": "Address.extension",
+        "sliceName": "SAID",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/SAID"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Address.extension:meshBlock",
+        "path": "Address.extension",
+        "sliceName": "meshBlock",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/meshBlock"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DHB",
+  "id": "DHB",
+  "title": "dhb",
+  "description": "New Zealand DHBs",
+  "version": "0.1.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/dhb",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/cs/dhb"
+      }
+    ]
+  }
+}

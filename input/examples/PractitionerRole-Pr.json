@@ -1,0 +1,30 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Pr",
+  "practitioner": {
+    "type": "Practitioner",
+    "identifier": {
+      "system": "https://standards.digital.health.nz/id/hpi-person",
+      "value": "hpiNum1"
+    },
+    "display": "Dr Marcus Welby"
+  },
+  "organization": {
+    "type": "Organization",
+    "identifier": {
+      "system": "https://standards.digital.health.nz/id/hpi-organisation",
+      "value": "hpiOrgId"
+    },
+    "display": "HealthIsUs"
+  },
+  "location": [
+    {
+      "type": "Organization",
+      "identifier": {
+        "system": "https://standards.digital.health.nz/id/hpi-facility",
+        "value": "hpiFacilityId"
+      },
+      "display": "Good Health Medcial Centre"
+    }
+  ]
+}

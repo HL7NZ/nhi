@@ -1,0 +1,230 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.org.nz.nhi",
+  "url": "http://hl7.org.nz/fhir/ImplementationGuide/hl7.org.nz.nhi",
+  "version": "0.1.0",
+  "name": "NewZealandNHIIG",
+  "title": "New Zealand NHI IG",
+  "status": "active",
+  "publisher": "David Hay",
+  "contact": [
+    {
+      "name": "David Hay",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:david.hay25@gmail.com"
+        }
+      ]
+    }
+  ],
+  "description": "The FHIRb  API for the NHI",
+  "packageId": "hl7.org.nz.nhi",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/NhiPatient"
+        },
+        "name": "NHI Patient",
+        "description": "The Patient resource exposed by the NHI.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/address-isPrimary"
+        },
+        "name": "Address_isPrimary",
+        "description": "Indicates this is the primary residential address - each patient must have one and only one",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/buildingName"
+        },
+        "name": "BuildingName",
+        "description": "No description",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/dhb"
+        },
+        "name": "Dhb",
+        "description": "The District Health Board the patient resides in. It is derived from the patient's primary residential address. Not updated directly.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ethnicity"
+        },
+        "name": "Ethnicity",
+        "description": "The ethnicity of the patient. One to six level 4 codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/informationsource"
+        },
+        "name": "Informationsource",
+        "description": "The source of the information",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/notValidatedReason"
+        },
+        "name": "NotValidatedReason",
+        "description": "The reason why the address has not been validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patient-addressDerived"
+        },
+        "name": "Patient_addressDerived",
+        "description": "Additional address elements exposed by the NHI and calculated from the address using the eSAM address service",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patient-citizenship"
+        },
+        "name": "Patient_citizenship",
+        "description": "New Zealand citizenship",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patient-countryOfBirth"
+        },
+        "name": "Patient_countryOfBirth",
+        "description": "The country where the person was born",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/suburb"
+        },
+        "name": "Suburb",
+        "description": "The suburb of the address. This is not the same as 'district' or 'state.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AddressInfoSource"
+        },
+        "name": "Information source",
+        "description": "The source of this data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AddressNotValidated"
+        },
+        "name": "Address Not Validated reason",
+        "description": "The reason why the address was not validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Infosource"
+        },
+        "name": "Information source",
+        "description": "The source of this data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AddressNotValidated"
+        },
+        "name": "Address Not Validated reason",
+        "description": "The reason why the address was not validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Infosource"
+        },
+        "name": "Information source",
+        "description": "The source of this data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/Gp-Patient"
+        },
+        "name": "Gp-Patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "PractitionerRole/Pr"
+        },
+        "name": "Pr",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "models.html",
+          "title": "Models",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminologySummary.html",
+          "title": "ValueSets",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "codeSystem.html",
+          "title": "CodeSystems",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "extensionSummary.html",
+          "title": "Extensions",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "API.html",
+          "title": "API",
+          "generation": "markdown"
+        }
+      ]
+    },
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

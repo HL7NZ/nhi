@@ -1,0 +1,23 @@
+# Temporary folders # (at any level)
+#####################
+temp/
+template/
+output/
+input-cache/
+/input-cache
+/output
+/localOnly
+
+
+# Windows generated files #
+###########################
+Thumbs.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak

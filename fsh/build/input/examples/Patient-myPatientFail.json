@@ -1,0 +1,16 @@
+{
+  "resourceType": "Patient",
+  "id": "myPatientFail",
+  "meta": {
+    "profile": [
+      "http://hl7.org.nz/fhir/nhi/StructureDefinition/TestPatient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://some.other/url",
+      "value": "ABC1234"
+    }
+  ],
+  "active": true
+}

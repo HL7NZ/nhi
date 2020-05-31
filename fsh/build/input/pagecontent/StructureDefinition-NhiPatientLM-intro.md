@@ -1,0 +1,1 @@
+This is the Logical Model that was created for the profile on Patient. It is an Information Model that lists all the elements in the model from a business perspective - ie it doesn't directly match the elements that are in the FHIR profile. In particular, elements that are in this model but not the base Patient type will be represented as extensions in the Profile.

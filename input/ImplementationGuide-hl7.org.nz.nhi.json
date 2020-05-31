@@ -1,0 +1,295 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.org.nz.nhi",
+  "url": "http://hl7.org.nz/fhir/nhi/ImplementationGuide/hl7.org.nz.nhi",
+  "version": "0.1.0",
+  "name": "NewZealandNHIIG",
+  "title": "New Zealand NHI IG",
+  "status": "active",
+  "publisher": "David Hay",
+  "contact": [
+    {
+      "name": "David Hay",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:david.hay25@gmail.com"
+        }
+      ]
+    }
+  ],
+  "description": "The FHIRb  API for the NHI",
+  "packageId": "hl7.org.nz.nhi",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org.nz/fhir/ImplementationGuide/hl7.org.nz.base",
+      "packageId": "hl7.org.nz.base",
+      "id": "hl7_org_nz_base",
+      "version": "current"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/NhiAddress"
+        },
+        "name": "NHI Address",
+        "description": "Adds additional, NHI specific extensions",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/NhiPatient"
+        },
+        "name": "NHI Patient",
+        "description": "The Patient resource exposed by the NHI.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/depCentile"
+        },
+        "name": "DepCentile",
+        "description": "Deprivation deciles are based on the Index of Multiple Deprivation 2015 (IMD15), which is the official measure of relative deprivation. Decile one represents the most deprived and decile 10 represents the least deprived",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/depQuintile"
+        },
+        "name": "DepQuintile",
+        "description": "A small-area-based index providing a measure of neighbourhood deprivation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/informationsource"
+        },
+        "name": "Informationsource",
+        "description": "The source of the information",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/isPrimaryAddress"
+        },
+        "name": "IsPrimaryAddress",
+        "description": "Indicates this is the primary residential address - each patient must have one and only one",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/meshBlock"
+        },
+        "name": "MeshBlock",
+        "description": "A meshblock is both a geographic unit and a classification. It is the smallest geographic unit for which statistical data is reported by Stats NZ. A meshblock is a defined geographic area, varying in size from part of a city block to large areas of rural land. Meshblocks are contiguous: each meshblock borders on another to form a network covering all of New Zealand, including coasts and inlets. The meshblock classification extends out to New Zealand’s 200 mile exclusive economic zone (EEZ).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/notValidatedAddressReason"
+        },
+        "name": "NotValidatedAddressReason",
+        "description": "The reason why the address has not been validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SAID"
+        },
+        "name": "SAID",
+        "description": "Points to the id used buy the internal address coding. For use by advanced users only.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AddressNotValidatedReason"
+        },
+        "name": "Address Not Validated reason",
+        "description": "The reason why the address was not validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BirthDateInformationsource"
+        },
+        "name": "BirthDate Information source",
+        "description": "The source of data for date of birth",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CitizenshipInformationsource"
+        },
+        "name": "Citizenship Information source",
+        "description": "The source of data for Citizenship",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CountryInformationsource"
+        },
+        "name": "Country Information source",
+        "description": "The source of data for country of birth data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/DHB"
+        },
+        "name": "dhb",
+        "description": "New Zealand DHBs",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/DeathDateInformationsource"
+        },
+        "name": "DeathDate Information source",
+        "description": "The source of data for the date of death",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Domicilecode"
+        },
+        "name": "Domicilecode",
+        "description": "New Zealand Domicile codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ethnicity"
+        },
+        "name": "Patient ethnicity",
+        "description": "Level 4 ethnicity codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Informationsource"
+        },
+        "name": "Information source",
+        "description": "The source of this data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NameInformationsource"
+        },
+        "name": "Name Information source",
+        "description": "The source of data for name",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Patient-citizenship-status"
+        },
+        "name": "Patient citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AddressNotValidated"
+        },
+        "name": "Address Not Validated reason",
+        "description": "The reason why the address was not validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/DHB"
+        },
+        "name": "dhb",
+        "description": "New Zealand DHBs",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Domicilecode"
+        },
+        "name": "Domicilecode",
+        "description": "New Zealand Domicile codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/EthnicityL4"
+        },
+        "name": "Level 4 ethnicity codes",
+        "description": "Level 4 ethnicity codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Informationsource"
+        },
+        "name": "Information source",
+        "description": "The codesystem used to indivate where data has been soruced from. The ValueSets for recording source of Name, birthDate, date of death and country of birth all use this codesystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Patient-citizenship-status"
+        },
+        "name": "Patient citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/NhiCapabilityStatement"
+        },
+        "name": "NhiCapabilityStatement",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "API.html",
+          "title": "API",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "notes.html",
+          "title": "Notes",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

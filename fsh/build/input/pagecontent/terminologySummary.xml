@@ -1,0 +1,125 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
+<h4>NzNHIPatient</h4>
+<h5> Summary by element</h5>
+<table class='table table-condensed table-bordered'>
+
+<tr><th>Path</th><th>Url</th><th>Title</th><th>Description</th><th>CodeSystem Urls</th></tr>
+<tr>
+<td>name.source</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>Information source</td>
+<td>The source of this data</td>
+<td><div>https://standards.digital.health.nz/cs/informationsource</div></td>
+</tr>
+<tr>
+<td>gender</td>
+<td>http://hl7.org/fhir/ValueSet/administrative-gender</td>
+<td></td><td></td><td>This ValueSet not defined in this IG</td>
+</tr>
+<tr>
+<td>birthDate.source</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>Information source</td>
+<td>The source of this data</td>
+<td><div>https://standards.digital.health.nz/cs/informationsource</div></td>
+</tr>
+<tr>
+<td>deathDate.source</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>Information source</td>
+<td>The source of this data</td>
+<td><div>https://standards.digital.health.nz/cs/informationsource</div></td>
+</tr>
+<tr>
+<td>address.derivedData.domicileCode</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/domicilecode</td>
+<td>Domicilecode</td>
+<td>New Zealand Domicile codes</td>
+<td><div>https://standards.digital.health.nz/cs/domicilecode</div></td>
+</tr>
+<tr>
+<td>address.notValidatedReason</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/addressnotvalidatedreason</td>
+<td>Address Not Validated reason</td>
+<td>The reason why the address was not validated</td>
+<td><div>https://standards.digital.health.nz/cs/addressnotvalidatedreason</div></td>
+</tr>
+<tr>
+<td>ethnicity</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/ethnicity</td>
+<td></td><td></td><td>This ValueSet not defined in this IG</td>
+</tr>
+<tr>
+<td>birthCountry.country</td>
+<td>http://hl7.org/fhir/ValueSet/iso3166-1-2</td>
+<td></td><td></td><td>This ValueSet not defined in this IG</td>
+</tr>
+<tr>
+<td>birthCountry.source</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>Information source</td>
+<td>The source of this data</td>
+<td><div>https://standards.digital.health.nz/cs/informationsource</div></td>
+</tr>
+<tr>
+<td>nzcitizenship.status</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/citizenshipstatus</td>
+<td>Patient citizenship status</td>
+<td>Status of citizenship in NZ</td>
+<td><div>https://standards.digital.health.nz/cs/citizenshipstatus</div></td>
+</tr>
+<tr>
+<td>nzcitizenship.source</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>Information source</td>
+<td>The source of this data</td>
+<td><div>https://standards.digital.health.nz/cs/informationsource</div></td>
+</tr>
+<tr>
+<td>DHB</td>
+<td>https://standards.digital.health.nz/fhir/ValueSet/dhb</td>
+<td>dhb</td>
+<td>New Zealand DHBs</td>
+<td><div>https://standards.digital.health.nz/cs/dhb</div></td>
+</tr>
+</table>
+<h5> Summary by ValueSet </h5>
+<table class='table table-condensed table-bordered'>
+
+<tr><th>Url</th><th>elements</th></tr>
+<tr>
+<td>https://standards.digital.health.nz/fhir/ValueSet/addressnotvalidatedreason</td>
+<td>
+<div>address.notValidatedReason</div>
+</td>
+</tr>
+<tr>
+<td>https://standards.digital.health.nz/fhir/ValueSet/dhb</td>
+<td>
+<div>DHB</div>
+</td>
+</tr>
+<tr>
+<td>https://standards.digital.health.nz/fhir/ValueSet/domicilecode</td>
+<td>
+<div>address.derivedData.domicileCode</div>
+</td>
+</tr>
+<tr>
+<td>https://standards.digital.health.nz/fhir/ValueSet/informationsource</td>
+<td>
+<div>name.source</div>
+<div>birthDate.source</div>
+<div>deathDate.source</div>
+<div>birthCountry.source</div>
+<div>nzcitizenship.source</div>
+</td>
+</tr>
+<tr>
+<td>https://standards.digital.health.nz/fhir/ValueSet/citizenshipstatus</td>
+<td>
+<div>nzcitizenship.status</div>
+</td>
+</tr>
+</table>
+</div>

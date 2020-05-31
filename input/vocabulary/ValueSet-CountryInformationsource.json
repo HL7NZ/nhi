@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CountryInformationsource",
+  "id": "CountryInformationsource",
+  "title": "Country Information source",
+  "description": "The source of data for country of birth data",
+  "version": "0.1.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/country-informationsource",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/cs/informationsource",
+        "concept": [
+          {
+            "code": "PPRT",
+            "display": "Passport"
+          },
+          {
+            "code": "NZRS",
+            "display": "New Zealand Residency"
+          },
+          {
+            "code": "TRANS",
+            "display": "Transition Default"
+          },
+          {
+            "code": "NZPV",
+            "display": "New Zealand Permanent Visa"
+          },
+          {
+            "code": "NZTV",
+            "display": "New Zealand Resident Visa"
+          }
+        ]
+      }
+    ]
+  }
+}

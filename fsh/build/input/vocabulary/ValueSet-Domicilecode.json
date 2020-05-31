@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Domicilecode",
+  "id": "Domicilecode",
+  "title": "Domicilecode",
+  "description": "New Zealand Domicile codes",
+  "version": "0.1.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/domicilecode",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/cs/domicilecode"
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+Instance:   patient2
+InstanceOf: NhiPatient
+Usage: #example
+* contained = Pr2
+
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Test patient 2</div>"
+* text.status = #additional
+
+//name. The source of the name was a NZ Visa
+* name.family = "Doe"
+* name.given = "John"
+* name.given[1] = "Albertus"
+* name.extension[informationsource].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* name.extension[informationsource].valueCodeableConcept.coding.code = #NZPV
+* name.extension[informationsource].valueCodeableConcept.coding.display = "New Zealand Permanent Visa"
+
+* name.extension[preferred].valueBoolean = true
+
+* gender = #male
+* gender.extension[originalText].valueString = "Bloke"
+
+//Birth date, verified by passport
+* birthDate = "1989-12-12"
+* birthDate.extension[informationsource].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* birthDate.extension[informationsource].valueCodeableConcept.coding.code = #PPRT
+* birthDate.extension[informationsource].valueCodeableConcept.coding.display = "Passport"
+
+* deceasedDateTime = "2020-01-01"
+* deceasedDateTime.extension[informationsource].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* deceasedDateTime.extension[informationsource].valueCodeableConcept.coding.code = #NPRF
+* deceasedDateTime.extension[informationsource].valueCodeableConcept.coding.display = "Proof not sighted"
+
+//the current NHI
+* identifier.use = #official
+* identifier.system = "https://standards.digital.health.nz/id/nhi"
+* identifier.value = "WER4568"
+
+//a dormant (replaced)  NHI
+* identifier.use = #old
+* identifier.system = "https://standards.digital.health.nz/id/nhi"
+* identifier.value = "ABC1234"
+
+//ethnicity is 'not stated'
+* extension[nzEthnicity].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/ethnic-group-level-4"
+* extension[nzEthnicity].valueCodeableConcept.coding.code = #99999
+* extension[nzEthnicity].valueCodeableConcept.coding.display = "Not Stated"
+
+//email address & phone
+* telecom.system = #email
+* telecom.value = "johndoe@erewhon.com"
+* telecom[1].system = #phone
+* telecom[1].value = "+64 9 000 0000"
+
+//physical address
+* address.line = "23 Thule St"
+* address.city = "Waipu"
+* address.extension[suburb].valueString = "Waipu river"
+* address.extension[buildingName].valueString = "Big Black House"
+* address.extension[isPrimaryAddress].valueBoolean = true
+
+* address.extension[notValidatedAddressReason].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/addressnotvalidatedreason"
+* address.extension[notValidatedAddressReason].valueCodeableConcept.coding.code = #UKWN
+* address.extension[notValidatedAddressReason].valueCodeableConcept.coding.display = "Address unknown"
+
+* address.extension[nzGeocode].extension[latitude].valueDecimal = 100
+* address.extension[longitude].valueDecimal = 100
+* address.extension[patient-addressDerived].extension[meshblock].valueString = "mb100"
+* address.extension[patient-addressDerived].extension[depdecile].valueString = "dec100"
+* address.extension[patient-addressDerived].extension[depquintile].valueString = "quin100"
+* address.extension[patient-addressDerived].extension[domcode].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/domicilecode"
+* address.extension[patient-addressDerived].extension[domcode].valueCodeableConcept.coding.code = #0040
+* address.extension[patient-addressDerived].extension[domcode].valueCodeableConcept.coding.display = "Waipu"
+* address.extension[patient-addressDerived].extension[said].valueString = "said"
+
+//DHB (from address) is Counties Manakau DHB (Assuming that Organization1 is the DHB)
+* extension[dhb].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/dhb"
+* extension[dhb].valueCodeableConcept.coding.code = #cmdhb
+
+
+//born in Palmerston North, New Zealand. Verified by passport
+* extension[birthPlace].extension[placeOfBirth].valueString = "Palmerston North"
+
+
+//birth country New Zealand
+* extension[birthPlace].extension[country].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
+* extension[birthPlace].extension[country].valueCodeableConcept.coding.code = #NZ
+* extension[birthPlace].extension[country].valueCodeableConcept.coding.display = "New Zealand"
+
+//source of information about the birthplace was a passport
+* extension[birthPlace].extension[source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* extension[birthPlace].extension[source].valueCodeableConcept.coding.code = #PPRT
+* extension[birthPlace].extension[source].valueCodeableConcept.coding.display = "Passport"
+
+//citizenship status - is a citizen
+* extension[citizenship].extension[status].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/citizenshipstatus"
+* extension[citizenship].extension[status].valueCodeableConcept.coding.code = #CIT
+* extension[citizenship].extension[status].valueCodeableConcept.coding.display = "Citizen"
+/*
+//source of citizenship about the birthplace was a passport
+* extension[citizenship].extension[source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* extension[citizenship].extension[source].valueCodeableConcept.coding.code = #PPRT
+* extension[citizenship].extension[source].valueCodeableConcept.coding.display = "Passport"
+*/
+//DHB is counties manukau
+* extension[dhb].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/dhb"
+* extension[dhb].valueCodeableConcept.coding.code = #cmdhb
+* extension[dhb].valueCodeableConcept.coding.display = "Counties Manukau District Health Board"
+
+//ethnicity English & Irish
+* extension[nzEthnicity].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/ethnic-group-level-4"
+* extension[nzEthnicity].valueCodeableConcept.coding.code = #12114
+* extension[nzEthnicity].valueCodeableConcept.coding.display = "English"
+
+* extension[nzEthnicity][1].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/ethnic-group-level-4"
+* extension[nzEthnicity][1].valueCodeableConcept.coding.code = #12116
+* extension[nzEthnicity][1].valueCodeableConcept.coding.display = "Irish"
+
+
+
+//The general practitioner is described by the practitionerrole1 resource (has references to Practitioner & Organization)
+* generalPractitioner.reference = "#Pr2"
+
+
+Instance:   Pr2
+InstanceOf: PractitionerRole
+Description: "Practitioner role for test patient 2"
+Usage: #inline
+
+* practitioner.type = "Practitioner"
+* practitioner.identifier.system = "https://standards.digital.health.nz/id/hpi-person"
+* practitioner.identifier.value = "hpiNum1"
+* practitioner.display = "Dr Marcus Welby"
+
+* organization.type = "Organization"
+* organization.identifier.system = "https://standards.digital.health.nz/id/hpi-organisation"
+* organization.identifier.value = "hpiOrgId"
+* organization.display = "HealthIsUs"
+
+* location.type = "Organization"
+* location.identifier.system = "https://standards.digital.health.nz/id/hpi-facility"
+* location.identifier.value = "hpiFacilityId"
+* location.display = "Good Health Medcial Centre"

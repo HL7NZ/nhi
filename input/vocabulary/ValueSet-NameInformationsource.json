@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NameInformationsource",
+  "id": "NameInformationsource",
+  "title": "Name Information source",
+  "description": "The source of data for name",
+  "version": "0.1.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/name-informationsource",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/cs/informationsource",
+        "concept": [
+          {
+            "code": "BREG",
+            "display": "Birth Register"
+          },
+          {
+            "code": "HL7",
+            "display": "HL7 applied"
+          },
+          {
+            "code": "MIGR",
+            "display": "Migrated"
+          },
+          {
+            "code": "TRANS",
+            "display": "Transition Default"
+          },
+          {
+            "code": "NZPV",
+            "display": "New Zealand Permanent Visa"
+          }
+        ]
+      }
+    ]
+  }
+}

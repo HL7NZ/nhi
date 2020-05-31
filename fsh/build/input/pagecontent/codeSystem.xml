@@ -1,0 +1,247 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+<h4>AddressNotValidated</h4>
+<div class='row'>
+<div class='col-6'>
+<strong>https://standards.digital.health.nz/cs/addressnotvalidatedreason</strong>
+</div>
+<div class='col-6'>
+<em>The reason why the address was not validated</em>
+</div>
+</div>
+<table class='table table-condensed table-bordered'>
+
+<tr><th width='15%'>Code</th><th>Display</th></tr>
+<tr>
+<td>OSEA</td>
+<td>Overseas address</td>
+</tr>
+<tr>
+<td>UKWN</td>
+<td>Address unknown</td>
+</tr>
+<tr>
+<td>NFAB</td>
+<td>No fixed abode</td>
+</tr>
+<tr>
+<td>NOSVC</td>
+<td>Address service unavailable</td>
+</tr>
+<tr>
+<td>OTHER</td>
+<td>Other</td>
+</tr>
+</table>
+<h4>DHB</h4>
+<div class='row'>
+<div class='col-6'>
+<strong>https://standards.digital.health.nz/cs/dhb</strong>
+</div>
+<div class='col-6'>
+<em>New Zealand DHBs</em>
+</div>
+</div>
+<table class='table table-condensed table-bordered'>
+
+<tr><th width='15%'>Code</th><th>Display</th></tr>
+<tr>
+<td>adhb</td>
+<td>Auckland District Health Board</td>
+</tr>
+<tr>
+<td>bopdhb</td>
+<td>Bay of Plenty District Health Board</td>
+</tr>
+<tr>
+<td>ccdhb</td>
+<td>Capital and Coast District Health Board</td>
+</tr>
+<tr>
+<td>cmdhb</td>
+<td>Counties Manukau District Health Board</td>
+</tr>
+<tr>
+<td>hbdhb</td>
+<td>Hawkes Bay District Health Board</td>
+</tr>
+<tr>
+<td>hvdhb</td>
+<td>Hutt Valley District Health Board</td>
+</tr>
+<tr>
+<td>lddhb</td>
+<td>Lakes District Health Board</td>
+</tr>
+<tr>
+<td>mcdhb</td>
+<td>Mid Central District Health Board</td>
+</tr>
+<tr>
+<td>ndhb</td>
+<td>Northland District Health Board</td>
+</tr>
+<tr>
+<td>tdhb</td>
+<td>Tairawhiti District Health Board</td>
+</tr>
+<tr>
+<td>tardhb</td>
+<td>Taranaki District Health Board</td>
+</tr>
+<tr>
+<td>waikdhb</td>
+<td>Waikato District Health Board</td>
+</tr>
+<tr>
+<td>wairdhb</td>
+<td>Wairarapa District Health Board</td>
+</tr>
+<tr>
+<td>waitdhb</td>
+<td>Waitemata District Health Board</td>
+</tr>
+<tr>
+<td>whandhb</td>
+<td>Whanganui District Health Board</td>
+</tr>
+<tr>
+<td>cantchb</td>
+<td>Canterbury District Health Board</td>
+</tr>
+<tr>
+<td>nmdhb</td>
+<td>Nelson-Marlborough District Health Board</td>
+</tr>
+<tr>
+<td>scdhb</td>
+<td>South Canterbury District Health Board</td>
+</tr>
+<tr>
+<td>sddhb</td>
+<td>Southern District District Health Board</td>
+</tr>
+<tr>
+<td>wcdhb</td>
+<td>West Coast District Health Board</td>
+</tr>
+</table>
+<h4>Domicilecode</h4>
+<div class='row'>
+<div class='col-6'>
+<strong>https://standards.digital.health.nz/cs/domicilecode</strong>
+</div>
+<div class='col-6'>
+<em>New Zealand Domicile codes</em>
+</div>
+</div>
+<table class='table table-condensed table-bordered'>
+
+<tr><th width='15%'>Code</th><th>Display</th></tr>
+<tr>
+<td>0001</td>
+<td>Awanui</td>
+</tr>
+<tr>
+<td>0002</td>
+<td>Karikari Peninsula-Maungataniwha</td>
+</tr>
+<tr>
+<td>0040</td>
+<td>Waipu</td>
+</tr>
+</table>
+<h4>Informationsource</h4>
+<div class='row'>
+<div class='col-6'>
+<strong>https://standards.digital.health.nz/cs/informationsource</strong>
+</div>
+<div class='col-6'>
+<em>The source of this data</em>
+</div>
+</div>
+<table class='table table-condensed table-bordered'>
+
+<tr><th width='15%'>Code</th><th>Display</th></tr>
+<tr>
+<td>BREG</td>
+<td>Birth Register</td>
+</tr>
+<tr>
+<td>HL7</td>
+<td>HL7 applied</td>
+</tr>
+<tr>
+<td>MIGR</td>
+<td>Migrated</td>
+</tr>
+<tr>
+<td>NPRF</td>
+<td>Proof not sighted</td>
+</tr>
+<tr>
+<td>NZCI</td>
+<td>New Zealand Certificate of Identity</td>
+</tr>
+<tr>
+<td>NZCT</td>
+<td>New Zealand Citizenship Certificate</td>
+</tr>
+<tr>
+<td>NZET</td>
+<td>New Zealand Emergency Travel Document</td>
+</tr>
+<tr>
+<td>NZRT</td>
+<td>New Zealand Refugee Travel Document</td>
+</tr>
+<tr>
+<td>OTHR</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>PPRT</td>
+<td>Passport</td>
+</tr>
+<tr>
+<td>NZRS</td>
+<td>New Zealand Residency</td>
+</tr>
+<tr>
+<td>TRANS</td>
+<td>Transition Default</td>
+</tr>
+<tr>
+<td>NZPV</td>
+<td>New Zealand Permanent Visa</td>
+</tr>
+<tr>
+<td>NZTV</td>
+<td>New Zealand Resident Visa</td>
+</tr>
+</table>
+<h4>Patient_citizenship_status</h4>
+<div class='row'>
+<div class='col-6'>
+<strong>https://standards.digital.health.nz/cs/citizenshipstatus</strong>
+</div>
+<div class='col-6'>
+<em>Status of citizenship in NZ</em>
+</div>
+</div>
+<table class='table table-condensed table-bordered'>
+
+<tr><th width='15%'>Code</th><th>Display</th></tr>
+<tr>
+<td>CIT</td>
+<td>Citizen</td>
+</tr>
+<tr>
+<td>NCIT</td>
+<td>Not a citizen</td>
+</tr>
+<tr>
+<td>UNK</td>
+<td>Unknown</td>
+</tr>
+</table>
+</div>
