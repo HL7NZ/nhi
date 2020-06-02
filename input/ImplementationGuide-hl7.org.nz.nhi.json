@@ -29,7 +29,7 @@
       "uri": "http://hl7.org.nz/fhir/ImplementationGuide/hl7.org.nz.base",
       "packageId": "hl7.org.nz.base",
       "id": "hl7_org_nz_base",
-      "version": "current"
+      "version": "dev"
     }
   ],
   "definition": {
@@ -64,14 +64,6 @@
         },
         "name": "DepQuintile",
         "description": "A small-area-based index providing a measure of neighbourhood deprivation",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/informationsource"
-        },
-        "name": "Informationsource",
-        "description": "The source of the information",
         "exampleBoolean": false
       },
       {
@@ -116,130 +108,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BirthDateInformationsource"
-        },
-        "name": "BirthDate Information source",
-        "description": "The source of data for date of birth",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/CitizenshipInformationsource"
-        },
-        "name": "Citizenship Information source",
-        "description": "The source of data for Citizenship",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/CountryInformationsource"
-        },
-        "name": "Country Information source",
-        "description": "The source of data for country of birth data",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/DHB"
-        },
-        "name": "dhb",
-        "description": "New Zealand DHBs",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/DeathDateInformationsource"
-        },
-        "name": "DeathDate Information source",
-        "description": "The source of data for the date of death",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Domicilecode"
-        },
-        "name": "Domicilecode",
-        "description": "New Zealand Domicile codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/ethnicity"
-        },
-        "name": "Patient ethnicity",
-        "description": "Level 4 ethnicity codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Informationsource"
-        },
-        "name": "Information source",
-        "description": "The source of this data",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/NameInformationsource"
-        },
-        "name": "Name Information source",
-        "description": "The source of data for name",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Patient-citizenship-status"
-        },
-        "name": "Patient citizenship status",
-        "description": "Status of citizenship in NZ",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/AddressNotValidated"
         },
         "name": "Address Not Validated reason",
         "description": "The reason why the address was not validated",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/DHB"
-        },
-        "name": "dhb",
-        "description": "New Zealand DHBs",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/Domicilecode"
-        },
-        "name": "Domicilecode",
-        "description": "New Zealand Domicile codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/EthnicityL4"
-        },
-        "name": "Level 4 ethnicity codes",
-        "description": "Level 4 ethnicity codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/Informationsource"
-        },
-        "name": "Information source",
-        "description": "The codesystem used to indivate where data has been soruced from. The ValueSets for recording source of Name, birthDate, date of death and country of birth all use this codesystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/Patient-citizenship-status"
-        },
-        "name": "Patient citizenship status",
-        "description": "Status of citizenship in NZ",
         "exampleBoolean": false
       },
       {

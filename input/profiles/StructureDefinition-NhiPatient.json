@@ -81,7 +81,7 @@
         "path": "Patient.name.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/name-informationsource"
+          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
         }
       },
       {
@@ -171,7 +171,7 @@
         "path": "Patient.birthDate.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/birthdate-informationsource"
+          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
         }
       },
       {
@@ -233,7 +233,7 @@
         "path": "Patient.deceasedDateTime.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/deathdate-informationsource"
+          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
         }
       },
       {

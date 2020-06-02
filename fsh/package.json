@@ -7,7 +7,7 @@
  "description": "The FHIRb  API for the NHI",
  "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "hl7.org.nz.base" : "current"
+    "hl7.org.nz.base" : "dev"
  },
  "usage-stats-opt-out" : true,
  "language": "en",
