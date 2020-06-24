@@ -48,10 +48,6 @@
   "differential": {
     "element": [
       {
-        "id": "Patient",
-        "path": "Patient"
-      },
-      {
         "id": "Patient.active",
         "path": "Patient.active",
         "max": "0"
@@ -71,7 +67,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/informationsource"
+              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
             ]
           }
         ]
@@ -98,10 +94,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Patient.gender",
-        "path": "Patient.gender"
       },
       {
         "id": "Patient.gender.extension",
@@ -161,7 +153,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/informationsource"
+              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
             ]
           }
         ]
@@ -223,7 +215,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/informationsource"
+              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
             ]
           }
         ]

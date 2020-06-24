@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "hl7.org.nz.nhi",
-  "url": "http://hl7.org.nz/fhir/nhi/ImplementationGuide/hl7.org.nz.nhi",
+  "id": "hl7.fhir.nz.nhi",
+  "url": "http://hl7.org.nz/fhir/nhi/ImplementationGuide/hl7.fhir.nz.nhi",
   "version": "0.1.0",
   "name": "NewZealandNHIIG",
   "title": "New Zealand NHI IG",
@@ -19,7 +19,7 @@
     }
   ],
   "description": "The FHIRb  API for the NHI",
-  "packageId": "hl7.org.nz.nhi",
+  "packageId": "hl7.fhir.nz.nhi",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"

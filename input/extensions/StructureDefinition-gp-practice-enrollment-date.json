@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "depQuintile",
-  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/depQuintile",
+  "id": "gp-practice-enrollment-date",
+  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/gp-practice-enrollment-date",
   "version": "0.1.0",
-  "name": "DepQuintile",
+  "name": "GPPracticeEnrollmentDate",
   "status": "active",
-  "description": "A small-area-based index providing a measure of neighbourhood deprivation",
+  "description": "The date that the patient was enrolled with their GP Practicce",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -19,7 +19,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "Patient"
     }
   ],
   "type": "Extension",
@@ -35,14 +35,14 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/depQuintile"
+        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/gp-practice-enrollment-date"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "string"
+            "code": "date"
           }
         ]
       }

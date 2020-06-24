@@ -33,14 +33,10 @@
   "kind": "complex-type",
   "abstract": false,
   "type": "Address",
-  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/nzAddress",
+  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/NzAddress",
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "Address",
-        "path": "Address"
-      },
       {
         "id": "Address.extension:notValidatedAddressReason",
         "path": "Address.extension",

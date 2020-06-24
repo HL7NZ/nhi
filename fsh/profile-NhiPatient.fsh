@@ -8,7 +8,7 @@ Alias: $patient-birthPlace = http://hl7.org.nz/fhir/StructureDefinition/patient-
 Alias: $originalText = http://hl7.org/fhir/StructureDefinition/originalText
 Alias: $ethnicity = http://hl7.org.nz/fhir/StructureDefinition/ethnicity
 
-Alias: $informationsource = http://hl7.org.nz/fhir/StructureDefinition/informationsource
+Alias: $informationsource = http://hl7.org.nz/fhir/StructureDefinition/information-source
 Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 //Alias: $notValidatedAddressReason = http://hl7.org/fhir/nhi/StructureDefinition/notValidatedAddressReason
 Alias: $addressIsPrimary = http://hl7.org/fhir/nhi/StructureDefinition/addressIsPrimary
