@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "isPrimaryAddress",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "IsPrimaryAddress",
   "status": "active",
   "description": "Indicates this is the primary residential address - each patient must have one and only one",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "NhiAddress",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiAddress",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "NhiAddress",
   "title": "NHI Address",
   "status": "active",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "depCentile",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/depCentile",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "DepCentile",
   "status": "active",
   "description": "Deprivation deciles are based on the Index of Multiple Deprivation 2015 (IMD15), which is the official measure of relative deprivation. Decile one represents the most deprived and decile 10 represents the least deprived",

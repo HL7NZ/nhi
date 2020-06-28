@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.nz.nhi",
   "url": "http://hl7.org.nz/fhir/nhi/ImplementationGuide/hl7.fhir.nz.nhi",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "NewZealandNHIIG",
   "title": "New Zealand NHI IG",
   "status": "active",

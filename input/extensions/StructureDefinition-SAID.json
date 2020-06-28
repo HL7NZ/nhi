@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "SAID",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/SAID",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "SAID",
   "status": "active",
   "description": "Points to the id used buy the internal address coding. For use by advanced users only.",

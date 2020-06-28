@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "meshBlock",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/meshBlock",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "MeshBlock",
   "status": "active",
   "description": "A meshblock is both a geographic unit and a classification. It is the smallest geographic unit for which statistical data is reported by Stats NZ. A meshblock is a defined geographic area, varying in size from part of a city block to large areas of rural land. Meshblocks are contiguous: each meshblock borders on another to form a network covering all of New Zealand, including coasts and inlets. The meshblock classification extends out to New Zealand’s 200 mile exclusive economic zone (EEZ).",

@@ -6,7 +6,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">NHI Patient profile</div>"
   },
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiPatient",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "NhiPatient",
   "title": "NHI Patient",
   "status": "active",

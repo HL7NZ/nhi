@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "notValidatedAddressReason",
   "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/notValidatedAddressReason",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "NotValidatedAddressReason",
   "status": "active",
   "description": "The reason why the address has not been validated",
