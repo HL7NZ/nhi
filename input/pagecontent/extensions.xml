@@ -21,6 +21,14 @@
 <td>Points to the id used buy the internal address coding. For use by advanced users only.</td>
 </tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-building-name.html'>building-name</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/building-name</td>
+<td>
+<div>Address</div>
+</td>
+<td>Used on an adddress datatype when a building name is needed</td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-depCentile.html'>depCentile</a></td>
 <td>http://hl7.org.nz/fhir/nhi/StructureDefinition/depCentile</td>
 <td>
@@ -37,12 +45,28 @@
 <td>A small-area-based index providing a measure of neighbourhood deprivation</td>
 </tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-domicile-code.html'>domicile-code</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/domicile-code</td>
+<td>
+<div>Address</div>
+</td>
+<td>The domicile code. Derived from the address </td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-gp-practice-enrollment-date.html'>gp-practice-enrollment-date</a></td>
 <td>http://hl7.org.nz/fhir/nhi/StructureDefinition/gp-practice-enrollment-date</td>
 <td>
 <div>Patient</div>
 </td>
 <td>The date that the patient was enrolled with their GP Practicce</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-information-source.html'>information-source</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
+<td>
+<div>Patient.birthDate</div>
+</td>
+<td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-isPrimaryAddress.html'>isPrimaryAddress</a></td>
@@ -68,16 +92,27 @@
 </td>
 <td>The reason why the address has not been validated</td>
 </tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-nz-geocode.html'>nz-geocode</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nz-geocode</td>
+<td>
+<div>Address</div>
+</td>
+<td>The new zealand geocode. This uses a different datum from that defined in the spec for the geocode, so is an extension rather than using the element in the spec. see discussion at https://chat.fhir.org/#narrow/stream/179166-implementers/topic/geocode.20extension</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-suburb.html'>suburb</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/suburb</td>
+<td>
+<div>Address</div>
+</td>
+<td>The suburb of the address. This is not the same as 'district' or 'state.</td>
+</tr>
 </table>
 <a name="externalExtensions"> </a>
 <h3>Extensions used but defined elsewhere</h3>
 <table width='100%' border='1' cellspacing='0' cellpadding='5px'>
 <tr><th>Url</th><th>Description</th><th>IG</th></tr>
-<tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>http://hl7.org.nz/fhir/StructureDefinition/information-source</a></td>
-<td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
-<td>nzbase</td>
-</tr>
 <tr>
 <td>http://hl7.org/fhir/StructureDefinition/iso21090-preferred</td>
 <td>Defined outside of known IG's</td>
@@ -85,16 +120,6 @@
 <tr>
 <td>http://hl7.org/fhir/StructureDefinition/originalText</td>
 <td>Defined outside of known IG's</td>
-</tr>
-<tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>http://hl7.org.nz/fhir/StructureDefinition/information-source</a></td>
-<td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
-<td>nzbase</td>
-</tr>
-<tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>http://hl7.org.nz/fhir/StructureDefinition/information-source</a></td>
-<td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
-<td>nzbase</td>
 </tr>
 </table>
 </div>

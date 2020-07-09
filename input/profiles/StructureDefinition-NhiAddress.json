@@ -33,7 +33,7 @@
   "kind": "complex-type",
   "abstract": false,
   "type": "Address",
-  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/NzAddress",
+  "baseDefinition": "http://hl7.org.nz/fhir/nhi/StructureDefinition/CommonAddress",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,90 +42,72 @@
         "path": "Address.extension",
         "sliceName": "notValidatedAddressReason",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/notValidatedAddressReason"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:notValidatedAddressReason.url",
+        "path": "Address.extension.url",
+        "fixedUri": "notValidatedAddressReason"
       },
       {
         "id": "Address.extension:isPrimaryAddress",
         "path": "Address.extension",
         "sliceName": "isPrimaryAddress",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:isPrimaryAddress.url",
+        "path": "Address.extension.url",
+        "fixedUri": "isPrimaryAddress"
       },
       {
         "id": "Address.extension:depCentils",
         "path": "Address.extension",
         "sliceName": "depCentils",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/depCentile"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:depCentils.url",
+        "path": "Address.extension.url",
+        "fixedUri": "depCentils"
       },
       {
         "id": "Address.extension:depQuintile",
         "path": "Address.extension",
         "sliceName": "depQuintile",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/depQuintile"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:depQuintile.url",
+        "path": "Address.extension.url",
+        "fixedUri": "depQuintile"
       },
       {
         "id": "Address.extension:SAID",
         "path": "Address.extension",
         "sliceName": "SAID",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/SAID"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:SAID.url",
+        "path": "Address.extension.url",
+        "fixedUri": "SAID"
       },
       {
         "id": "Address.extension:meshBlock",
         "path": "Address.extension",
         "sliceName": "meshBlock",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/meshBlock"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Address.extension:meshBlock.url",
+        "path": "Address.extension.url",
+        "fixedUri": "meshBlock"
       }
     ]
   }

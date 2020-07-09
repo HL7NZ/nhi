@@ -19,7 +19,7 @@ status: active
 publisher:
   name: David Hay
   email: mailto:david.hay25@gmail.com
-description: The FHIRb  API for the NHI
+description: The FHIR  API for the NHI
 license: CC0-1.0
 fhirVersion: 4.0.1
 # dependencies:

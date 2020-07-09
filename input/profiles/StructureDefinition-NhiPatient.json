@@ -43,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/NzPatient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -62,19 +62,28 @@
         "path": "Patient.name.extension",
         "sliceName": "informationsource",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Patient.name.extension:informationsource.extension",
+        "path": "Patient.name.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.extension:informationsource.url",
+        "path": "Patient.name.extension.url",
+        "fixedUri": "informationsource"
       },
       {
         "id": "Patient.name.extension:informationsource.valueCodeableConcept",
         "path": "Patient.name.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
@@ -148,19 +157,28 @@
         "path": "Patient.birthDate.extension",
         "sliceName": "informationsource",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource.extension",
+        "path": "Patient.birthDate.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource.url",
+        "path": "Patient.birthDate.extension.url",
+        "fixedUri": "informationsource"
       },
       {
         "id": "Patient.birthDate.extension:informationsource.valueCodeableConcept",
         "path": "Patient.birthDate.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
@@ -210,19 +228,28 @@
         "path": "Patient.deceasedDateTime.extension",
         "sliceName": "informationsource",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/information-source"
-            ]
-          }
-        ]
+        "max": "1"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource.extension",
+        "path": "Patient.deceasedDateTime.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource.url",
+        "path": "Patient.deceasedDateTime.extension.url",
+        "fixedUri": "informationsource"
       },
       {
         "id": "Patient.deceasedDateTime.extension:informationsource.valueCodeableConcept",
         "path": "Patient.deceasedDateTime.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "binding": {
           "strength": "required",
           "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
@@ -231,15 +258,7 @@
       {
         "id": "Patient.address",
         "path": "Patient.address",
-        "min": 1,
-        "type": [
-          {
-            "code": "Address",
-            "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiAddress"
-            ]
-          }
-        ]
+        "min": 1
       },
       {
         "id": "Patient.address.line",
