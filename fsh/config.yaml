@@ -22,8 +22,8 @@ publisher:
 description: The FHIRb  API for the NHI
 license: CC0-1.0
 fhirVersion: 4.0.1
-dependencies:
-  hl7.fhir.nz.base: current
+# dependencies:
+#  hl7.fhir.nz.base: current
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
