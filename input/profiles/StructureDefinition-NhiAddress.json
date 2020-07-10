@@ -33,7 +33,7 @@
   "kind": "complex-type",
   "abstract": false,
   "type": "Address",
-  "baseDefinition": "http://hl7.org.nz/fhir/nhi/StructureDefinition/CommonAddress",
+  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/CommonAddress",
   "derivation": "constraint",
   "differential": {
     "element": [

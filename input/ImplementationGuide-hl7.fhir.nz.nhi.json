@@ -36,6 +36,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/CommonPatient"
+        },
+        "name": "Common Patient profiling",
+        "description": "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/NhiAddress"
         },
         "name": "NHI Address",
@@ -52,6 +60,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/birth-place"
+        },
+        "name": "BirthPlace",
+        "description": "The country where the person was born",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/building-name"
         },
         "name": "BuildingName",
@@ -60,18 +76,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/depCentile"
+          "reference": "StructureDefinition/citizenship"
         },
-        "name": "DepCentile",
-        "description": "Deprivation deciles are based on the Index of Multiple Deprivation 2015 (IMD15), which is the official measure of relative deprivation. Decile one represents the most deprived and decile 10 represents the least deprived",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/depQuintile"
-        },
-        "name": "DepQuintile",
-        "description": "A small-area-based index providing a measure of neighbourhood deprivation",
+        "name": "Citizenship",
+        "description": "New Zealand citizenship",
         "exampleBoolean": false
       },
       {
@@ -108,18 +116,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/meshBlock"
-        },
-        "name": "MeshBlock",
-        "description": "A meshblock is both a geographic unit and a classification. It is the smallest geographic unit for which statistical data is reported by Stats NZ. A meshblock is a defined geographic area, varying in size from part of a city block to large areas of rural land. Meshblocks are contiguous: each meshblock borders on another to form a network covering all of New Zealand, including coasts and inlets. The meshblock classification extends out to New Zealand’s 200 mile exclusive economic zone (EEZ).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/notValidatedAddressReason"
         },
         "name": "NotValidatedAddressReason",
         "description": "The reason why the address has not been validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nz-ethnicity"
+        },
+        "name": "NzEthnicity",
+        "description": "The ethnicity of the patient. Uses level 4 codes (most detailed).",
         "exampleBoolean": false
       },
       {
@@ -132,10 +140,18 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/SAID"
+          "reference": "StructureDefinition/patient-iwi"
         },
-        "name": "SAID",
-        "description": "Points to the id used buy the internal address coding. For use by advanced users only.",
+        "name": "Patient_iwi",
+        "description": "Persons Iwi affiliation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sex-at-birth"
+        },
+        "name": "SexAtBirth",
+        "description": "The persons sex when born. Is considered to be immutable ",
         "exampleBoolean": false
       },
       {

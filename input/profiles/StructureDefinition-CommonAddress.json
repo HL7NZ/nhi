@@ -5,7 +5,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">NZ Address datatype profile</div>",
     "status": "additional"
   },
-  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/CommonAddress",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/CommonAddress",
   "version": "0.2.0",
   "name": "CommonAddress",
   "title": "Common NZ Address datatype",

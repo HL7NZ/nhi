@@ -17,7 +17,7 @@ Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 Alias: $addressIsPrimary = http://hl7.org/fhir/nhi/StructureDefinition/addressIsPrimary
 
 Profile:        NhiPatient
-Parent:         Patient
+Parent:         CommonPatient
 Id:             NhiPatient
 Title:          "NHI Patient"
 Description:    "The Patient resource exposed by the NHI."
@@ -74,7 +74,7 @@ Description:    "The Patient resource exposed by the NHI."
 * deceasedDateTime.extension[informationsource].valueCodeableConcept from  http:/hl7.org.nz/fhir/ValueSet/infosource
 
 // address is required and has a number of extensions. It uses NhiAddress which takes NzAddress and adds NHI specific extensions...
-// - todo !!!!!  * address only NhiAddress
+* address only NhiAddress
 
 
 * address 1..*

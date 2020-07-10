@@ -43,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "baseDefinition": "http://hl7.org.nz/fhir/nhi/StructureDefinition/CommonPatient",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -258,7 +258,15 @@
       {
         "id": "Patient.address",
         "path": "Patient.address",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiAddress"
+            ]
+          }
+        ]
       },
       {
         "id": "Patient.address.line",
