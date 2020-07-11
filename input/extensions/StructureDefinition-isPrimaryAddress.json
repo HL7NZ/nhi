@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "isPrimaryAddress",
-  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/isPrimaryAddress",
   "version": "0.2.0",
   "name": "IsPrimaryAddress",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/isPrimaryAddress"
       },
       {
         "id": "Extension.value[x]",

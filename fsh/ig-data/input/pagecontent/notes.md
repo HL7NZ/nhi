@@ -50,7 +50,7 @@ In the Patient resource, the patients usual GP is indicated by a reference to a 
 The following diagram shows these relationships when the references are to resource instances (as would be provided by the HPI)
 
 
-<img style="float:none" src="GP-diagram.png" >
+> todo image here
 
 As the HPI FHIR interface is not yet ready, this initial implementation is using an alternative form of referencing - the [Logical Reference](https://standards.digital.health.nz/id/hpi-facility). This format means that the reference from PractitionerRole contains the identifier of resource, rather than it's location on a FHIR server.
 
@@ -87,4 +87,3 @@ where the CPN is in the reference and not the id of the Practitioner. This has t
 
 In this implementation, the PractitionerRole resource is not separate to the Patient resource - rather it is contained within the Patient resource.
 
-Refer to [the example](Patient-Gp-Patient.html) of representing a patients GP. 

@@ -3,12 +3,12 @@
 <table width='100%' border='1' cellspacing='0' cellpadding='5px'>
 <tr><th>Id</th><th>Url</th><th>Context of Use</th><th>Description</th></tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-SAID.html'>SAID</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/SAID</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-birth-place.html'>birth-place</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/birth-place</td>
 <td>
-<div>Element</div>
+<div>Patient</div>
 </td>
-<td>Points to the id used buy the internal address coding. For use by advanced users only.</td>
+<td>The country where the person was born</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-building-name.html'>building-name</a></td>
@@ -19,20 +19,12 @@
 <td>Used on an adddress datatype when a building name is needed</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-depCentile.html'>depCentile</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/depCentile</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-citizenship.html'>citizenship</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/citizenship</td>
 <td>
-<div>Element</div>
+<div>Patient</div>
 </td>
-<td>Deprivation deciles are based on the Index of Multiple Deprivation 2015 (IMD15), which is the official measure of relative deprivation. Decile one represents the most deprived and decile 10 represents the least deprived</td>
-</tr>
-<tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-depQuintile.html'>depQuintile</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/depQuintile</td>
-<td>
-<div>Element</div>
-</td>
-<td>A small-area-based index providing a measure of neighbourhood deprivation</td>
+<td>New Zealand citizenship</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-domicile-code.html'>domicile-code</a></td>
@@ -44,7 +36,7 @@
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-gp-practice-enrollment-date.html'>gp-practice-enrollment-date</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/gp-practice-enrollment-date</td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/gp-practice-enrollment-date</td>
 <td>
 <div>Patient</div>
 </td>
@@ -60,27 +52,27 @@
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-isPrimaryAddress.html'>isPrimaryAddress</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/isPrimaryAddress</td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/isPrimaryAddress</td>
 <td>
 <div>Element</div>
 </td>
 <td>Indicates this is the primary residential address - each patient must have one and only one</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-meshBlock.html'>meshBlock</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/meshBlock</td>
-<td>
-<div>Element</div>
-</td>
-<td>A meshblock is both a geographic unit and a classification. It is the smallest geographic unit for which statistical data is reported by Stats NZ. A meshblock is a defined geographic area, varying in size from part of a city block to large areas of rural land. Meshblocks are contiguous: each meshblock borders on another to form a network covering all of New Zealand, including coasts and inlets. The meshblock classification extends out to New Zealand’s 200 mile exclusive economic zone (EEZ).</td>
-</tr>
-<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-notValidatedAddressReason.html'>notValidatedAddressReason</a></td>
-<td>http://hl7.org.nz/fhir/nhi/StructureDefinition/notValidatedAddressReason</td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/notValidatedAddressReason</td>
 <td>
 <div>Element</div>
 </td>
 <td>The reason why the address has not been validated</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-nz-ethnicity.html'>nz-ethnicity</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity</td>
+<td>
+<div>Element</div>
+</td>
+<td>The ethnicity of the patient. Uses level 4 codes (most detailed).</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-nz-geocode.html'>nz-geocode</a></td>
@@ -89,6 +81,22 @@
 <div>Address</div>
 </td>
 <td>The new zealand geocode. This uses a different datum from that defined in the spec for the geocode, so is an extension rather than using the element in the spec. see discussion at https://chat.fhir.org/#narrow/stream/179166-implementers/topic/geocode.20extension</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-patient-iwi.html'>patient-iwi</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/patient-iwi</td>
+<td>
+<div>Patient</div>
+</td>
+<td>Persons Iwi affiliation</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-sex-at-birth.html'>sex-at-birth</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth</td>
+<td>
+<div>Patient</div>
+</td>
+<td>The persons sex when born. Is considered to be immutable </td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-suburb.html'>suburb</a></td>

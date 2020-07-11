@@ -15,10 +15,10 @@ Description: "New Zealand citizenship"
 * extension[status] ^definition = "The citizenship status - CIT, NCIT, UNK"
 * extension[status] ^short = "The citizenship status - CIT, NCIT, UNK"
 * extension[status].value[x] only CodeableConcept
-* extension[status].valueCodeableConcept from http:/hl7.org.nz/fhir/ValueSet/citizenship-status (preferred)
+* extension[status].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/citizenship-status (preferred)
 
 * extension[source].url = "source" (exactly)
 * extension[source] ^definition = "Where the information about the status came from"
 * extension[source] ^short = "Where the information about the status came from"
 * extension[source].value[x] only CodeableConcept
-* extension[source].valueCodeableConcept from http:/hl7.org.nz/fhir/ValueSet/info-source (preferred)
+* extension[source].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/information-source (preferred)

@@ -1,8 +1,0 @@
-{
-  "resourceType": "ValueSet",
-  "status": "active",
-  "name": "Name",
-  "id": "Name",
-  "version": "0.1.0",
-  "url": "http://hl7.org.nz/fhir/ValueSet/Name"
-}

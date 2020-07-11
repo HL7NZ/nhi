@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.nz.nhi",
-  "url": "http://hl7.org.nz/fhir/nhi/ImplementationGuide/hl7.fhir.nz.nhi",
+  "url": "http://hl7.org.nz/fhir/ImplementationGuide/hl7.fhir.nz.nhi",
   "version": "0.2.0",
   "name": "NewZealandNHIIG",
   "title": "New Zealand NHI IG",
@@ -36,7 +36,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/CommonPatient"
+          "reference": "StructureDefinition/CommonPatientCommonPatient"
         },
         "name": "Common Patient profiling",
         "description": "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions",
@@ -172,10 +172,90 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/citizenship-status"
+        },
+        "name": "Patient citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/domicile-code"
+        },
+        "name": "domicileCode",
+        "description": "domicileCode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ethnicity"
+        },
+        "name": "Patient ethnicity",
+        "description": "Level 4 ethnicity codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/information-source"
+        },
+        "name": "infosource",
+        "description": "infosource",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Iwi"
+        },
+        "name": "Iwi",
+        "description": "New Zealand iwi codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/AddressNotValidated"
         },
         "name": "Address Not Validated reason",
         "description": "The reason why the address was not validated",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/citizenship-status"
+        },
+        "name": "Patient citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/domicile-code"
+        },
+        "name": "domicileCode",
+        "description": "domicileCode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ethnicityL4"
+        },
+        "name": "Level 4 ethnicity codes",
+        "description": "Level 4 ethnicity codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/information-source"
+        },
+        "name": "infosource",
+        "description": "infosource",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Iwi"
+        },
+        "name": "Iwi",
+        "description": "New Zealand iwi codes",
         "exampleBoolean": false
       },
       {

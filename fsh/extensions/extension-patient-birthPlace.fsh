@@ -4,6 +4,8 @@ Id: birth-place
 Description: "The country where the person was born"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/birth-place"
+
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 * ^context.type = #element
 * ^context.expression = "Patient"
 
@@ -25,4 +27,4 @@ Description: "The country where the person was born"
 //* extension[source].url = "source" (exactly)
 * extension[source] ^definition = "The source of information concerning the country of birth"
 * extension[source].value[x] only CodeableConcept
-* extension[source].valueCodeableConcept from http:/hl7.org.nz/fhir/ValueSet/info-source (required)
+* extension[source].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/information-source (required)

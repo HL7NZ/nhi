@@ -11,7 +11,8 @@
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.nz.nhi
-canonical: http://hl7.org.nz/fhir/nhi
+#canonical: http://hl7.org.nz/fhir/nhi
+canonical: http://hl7.org.nz/fhir
 version: 0.2.0
 name: NewZealandNHIIG
 title: New Zealand NHI IG
@@ -51,9 +52,23 @@ history:
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# menu:
-#   IG Home: index.html
-#   Table of Contents: toc.html
-#   Artifact Index: artifacts.html
+menu:
+    IG Home: index.html
+    API: API.html
+    Notes: notes.html
+    Profiles: profiles.html
+    Extensions : extensions.html
+    Terminology: terminology.html
+    Table of Contents: toc.html
+    Artifact Index: artifacts.html
+   
+    Support:
+      Downloads: downloads.html
+      FHIR Specification: http://hl7.org/fhir/index.html
+      FHIR Spec: new-tab external http://hl7.org/fhir/R4/index.html
 #   Support:
 #     FHIR Spec: new-tab external http://hl7.org/fhir/R4/index.html
+
+
+
+  

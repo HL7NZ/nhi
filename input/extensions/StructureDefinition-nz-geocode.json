@@ -89,7 +89,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/nz-geocode"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode"
       },
       {
         "id": "Extension.value[x]",

@@ -10,7 +10,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org.nz/ValueSet/addressnotvalidatedreason"
+        "system": "https://standards.digital.health.nz/ns/addressnotvalidatedreason"
       }
     ]
   }

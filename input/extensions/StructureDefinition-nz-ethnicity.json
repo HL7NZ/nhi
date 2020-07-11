@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/nz-ethnicity"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
       },
       {
         "id": "Extension.value[x]",
@@ -63,7 +63,7 @@
         "max": "1",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/ethnic-group-level-4"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4"
         }
       }
     ]

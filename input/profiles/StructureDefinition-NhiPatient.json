@@ -5,7 +5,7 @@
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">NHI Patient profile</div>"
   },
-  "url": "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiPatient",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient",
   "version": "0.2.0",
   "name": "NhiPatient",
   "title": "NHI Patient",
@@ -43,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org.nz/fhir/nhi/StructureDefinition/CommonPatient",
+  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/CommonPatientCommonPatient",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -86,7 +86,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
         }
       },
       {
@@ -181,7 +181,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
         }
       },
       {
@@ -252,7 +252,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/infosource"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
         }
       },
       {
@@ -263,7 +263,7 @@
           {
             "code": "Address",
             "profile": [
-              "http://hl7.org.nz/fhir/nhi/StructureDefinition/NhiAddress"
+              "http://hl7.org.nz/fhir/StructureDefinition/NhiAddress"
             ]
           }
         ]

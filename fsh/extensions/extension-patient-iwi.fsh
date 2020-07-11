@@ -8,4 +8,4 @@ Description: "Persons Iwi affiliation"
 
 * extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from http:/hl7.org.nz/fhir/ValueSet/iwi (preferred)
+* valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/iwi (preferred)

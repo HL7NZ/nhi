@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Infosource",
+  "id": "information-source",
+  "title": "infosource",
+  "description": "infosource",
+  "version": "0.2.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/information-source",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/information-source"
+      }
+    ]
+  }
+}

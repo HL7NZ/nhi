@@ -6,6 +6,16 @@
   "name": "BirthPlace",
   "status": "active",
   "description": "The country where the person was born",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -145,13 +155,13 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http:/hl7.org.nz/fhir/ValueSet/info-source"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
         }
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/nhi/StructureDefinition/birth-place"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/birth-place"
       },
       {
         "id": "Extension.value[x]",

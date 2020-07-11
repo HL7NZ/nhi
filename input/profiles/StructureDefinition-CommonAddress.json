@@ -47,12 +47,15 @@
         "sliceName": "nz-geocode",
         "short": "A geocode using the NZ specific datum (reference point)",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:nz-geocode.url",
-        "path": "Address.extension.url",
-        "fixedUri": "nz-geocode"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode"
+            ]
+          }
+        ]
       },
       {
         "id": "Address.extension:suburb",
@@ -60,12 +63,15 @@
         "sliceName": "suburb",
         "short": "The suburb part of the address",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:suburb.url",
-        "path": "Address.extension.url",
-        "fixedUri": "suburb"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/suburb"
+            ]
+          }
+        ]
       },
       {
         "id": "Address.extension:building-name",
@@ -73,12 +79,15 @@
         "sliceName": "building-name",
         "short": "The name of the building",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:building-name.url",
-        "path": "Address.extension.url",
-        "fixedUri": "building-name"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/building-name"
+            ]
+          }
+        ]
       },
       {
         "id": "Address.extension:domicile-code",
@@ -86,12 +95,15 @@
         "sliceName": "domicile-code",
         "short": "The domicile code associated with this address",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:domicile-code.url",
-        "path": "Address.extension.url",
-        "fixedUri": "domicile-code"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"
+            ]
+          }
+        ]
       }
     ]
   }

@@ -8,4 +8,4 @@ Description: "The source of the information. Used paricularly in the NHI. Note t
 
 * extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from http:/hl7.org.nz/fhir/ValueSet/info-source (preferred)
+* valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/information-source (preferred)

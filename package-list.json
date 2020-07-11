@@ -1,6 +1,6 @@
 {
   "package-id": "hl7.fhir.nz.nhi",
-  "canonical": "http://hl7.org.nz/fhir/nhi",
+  "canonical": "http://hl7.org.nz/fhir",
   "title": "New Zealand NHI IG",
   "introduction": "The FHIR  API for the NHI",
   "list": [
