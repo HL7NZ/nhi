@@ -21,6 +21,7 @@ lists those files generated from project configs or the contents in the ig-data 
 | input/pagecontent/API.md                       | copied    | fsh/ig-data/input/pagecontent/API.md             |
 | input/pagecontent/downloads.md                 | copied    | fsh/ig-data/input/pagecontent/downloads.md       |
 | input/pagecontent/extensions.xml               | copied    | fsh/ig-data/input/pagecontent/extensions.xml     |
+| input/pagecontent/identifiers.md               | copied    | fsh/ig-data/input/pagecontent/identifiers.md     |
 | input/pagecontent/index.md                     | copied    | fsh/ig-data/input/pagecontent/index.md           |
 | input/pagecontent/notes.md                     | copied    | fsh/ig-data/input/pagecontent/notes.md           |
 | input/pagecontent/profiles.xml                 | copied    | fsh/ig-data/input/pagecontent/profiles.xml       |

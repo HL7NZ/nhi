@@ -8,8 +8,8 @@
 <td>Adds building name, suburb, domicile code and geocode to the Address datatype</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-CommonPatientCommonPatient.html'>CommonPatientCommonPatient</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/CommonPatientCommonPatient</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-CommonPatient.html'>CommonPatient</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/CommonPatient</td>
 <td>The base Patient resource in NZ. Slices on identifer for NHI numbers (current and old), uses nzAddress and adds sme commonly used extensions</td>
 </tr>
 <tr>

@@ -1,0 +1,325 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NhiPatient",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">NHI Patient profile</div>"
+  },
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient",
+  "version": "0.2.0",
+  "name": "NhiPatient",
+  "title": "NHI Patient",
+  "status": "active",
+  "description": "The Patient resource exposed by the NHI.",
+  "purpose": "Describe the Patient resource exposed by the NHI",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "loinc",
+      "uri": "http://loinc.org",
+      "name": "LOINC code for the element"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/CommonPatient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.name.extension:informationsource",
+        "path": "Patient.name.extension",
+        "sliceName": "informationsource",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Patient.name.extension:informationsource.extension",
+        "path": "Patient.name.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.extension:informationsource.url",
+        "path": "Patient.name.extension.url",
+        "fixedUri": "informationsource"
+      },
+      {
+        "id": "Patient.name.extension:informationsource.valueCodeableConcept",
+        "path": "Patient.name.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+        }
+      },
+      {
+        "id": "Patient.name.extension:preferred",
+        "path": "Patient.name.extension",
+        "sliceName": "preferred",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.gender.extension",
+        "path": "Patient.gender.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.gender.extension:originalText",
+        "path": "Patient.gender.extension",
+        "sliceName": "originalText",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate.extension",
+        "path": "Patient.birthDate.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource",
+        "path": "Patient.birthDate.extension",
+        "sliceName": "informationsource",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource.extension",
+        "path": "Patient.birthDate.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource.url",
+        "path": "Patient.birthDate.extension.url",
+        "fixedUri": "informationsource"
+      },
+      {
+        "id": "Patient.birthDate.extension:informationsource.valueCodeableConcept",
+        "path": "Patient.birthDate.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+        }
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Patient.deceasedDateTime",
+        "path": "Patient.deceasedDateTime",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension",
+        "path": "Patient.deceasedDateTime.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource",
+        "path": "Patient.deceasedDateTime.extension",
+        "sliceName": "informationsource",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource.extension",
+        "path": "Patient.deceasedDateTime.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource.url",
+        "path": "Patient.deceasedDateTime.extension.url",
+        "fixedUri": "informationsource"
+      },
+      {
+        "id": "Patient.deceasedDateTime.extension:informationsource.valueCodeableConcept",
+        "path": "Patient.deceasedDateTime.extension.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+        }
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "min": 1,
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/NhiAddress"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.address.line",
+        "path": "Patient.address.line",
+        "min": 1
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "max": "0"
+      }
+    ]
+  }
+}

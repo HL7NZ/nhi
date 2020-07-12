@@ -2,10 +2,10 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "Infosource",
+  "name": "InformationSource",
   "id": "information-source",
-  "title": "infosource",
-  "description": "infosource",
+  "title": "InformationSource",
+  "description": "All possible sources of information",
   "version": "0.2.0",
   "url": "https://standards.digital.health.nz/ns/information-source",
   "concept": [
