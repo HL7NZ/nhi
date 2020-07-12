@@ -1,14 +1,10 @@
-
 //Extension urls defined in this IG...
 
 Alias: $dhb = http://hl7.org.nz/fhir/StructureDefinition/dhb
 Alias: $patient-birthPlace = http://hl7.org.nz/fhir/StructureDefinition/patient-birthPlace
 
-
 Alias: $originalText = http://hl7.org/fhir/StructureDefinition/originalText
 Alias: $ethnicity = http://hl7.org.nz/fhir/StructureDefinition/ethnicity
-
-
 
 Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 Alias: $addressIsPrimary = http://hl7.org/fhir/nhi/StructureDefinition/addressIsPrimary
