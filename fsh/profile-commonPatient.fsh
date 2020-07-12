@@ -10,7 +10,7 @@ Alias: $sexAtBirth = http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth
 
 Profile:        CommonPatient
 Parent:         Patient
-Id:             CommonPatientCommonPatient
+Id:             CommonPatient
 Title:          "Common Patient profiling"
 Description:    "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions"
 
