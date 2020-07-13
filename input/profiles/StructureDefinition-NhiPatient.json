@@ -105,20 +105,6 @@
         ]
       },
       {
-        "id": "Patient.gender.extension",
-        "path": "Patient.gender.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Patient.gender.extension:originalText",
         "path": "Patient.gender.extension",
         "sliceName": "originalText",

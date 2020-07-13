@@ -7,6 +7,7 @@ Alias: $informationsource = http://hl7.org.nz/fhir/StructureDefinition/informati
 Alias: $citizenship = http://hl7.org.nz/fhir/StructureDefinition/citizenship
 Alias: $sexAtBirth = http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth
 Alias: $residencyStatus = http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status
+Alias: $additionalGender = http://hl7.org.nz/fhir/StructureDefinition/nz-additional-gender
 
 Profile:        CommonPatient
 Parent:         Patient
@@ -56,3 +57,8 @@ Description:    "The base Patient resource in NZ. Slices on identifer for NHI nu
 * identifier[dormantNHI].system = "https://standards.digital.health.nz/id/nhi"
 * identifier[dormantNHI].use = #old (exactly)
 * identifier[dormantNHI] ^short = "NHI numbers that have been deprecated"
+
+//Adds the additional gender codes
+
+* gender.extension contains
+    $additionalGender named nz-additional-gender 0..1   

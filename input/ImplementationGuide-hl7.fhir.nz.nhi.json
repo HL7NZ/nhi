@@ -60,6 +60,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/nz-additional-gender"
+        },
+        "name": "AdditionalGender",
+        "description": "Additional genders for Patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/birth-place"
         },
         "name": "BirthPlace",
@@ -172,6 +180,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/nz-additional-gender"
+        },
+        "name": "Patient citizenship status",
+        "description": "Additional genders for Patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/AddressNotValidatedReason"
         },
         "name": "Address Not Validated reason",
@@ -224,6 +240,14 @@
         },
         "name": "NZ Residency status",
         "description": "Is the person a NZ resident",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/nz-additional-gender"
+        },
+        "name": "Patient citizenship status",
+        "description": "Additional genders for Patient",
         "exampleBoolean": false
       },
       {
@@ -288,6 +312,13 @@
         },
         "name": "NhiCapabilityStatement",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/additionalGender"
+        },
+        "name": "additionalGender",
+        "exampleBoolean": true
       }
     ],
     "page": {

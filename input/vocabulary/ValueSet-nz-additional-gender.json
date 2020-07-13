@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "AdditionalGender",
+  "id": "nz-additional-gender",
+  "title": "Patient citizenship status",
+  "description": "Additional genders for Patient",
+  "version": "0.2.0",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/nz-additional-gender",
+  "compose": {
+    "include": [
+      {
+        "system": "https://standards.digital.health.nz/ns/nz-additional-gender"
+      }
+    ]
+  }
+}
