@@ -110,10 +110,26 @@
         ]
       },
       {
+        "id": "Patient.extension:nz-residency-status",
+        "path": "Patient.extension",
+        "sliceName": "nz-residency-status",
+        "short": "Is the person a NZ resident",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Patient.extension:citizenship",
         "path": "Patient.extension",
         "sliceName": "citizenship",
-        "short": "The citizenship status - Y, N, U",
+        "short": "The citizenship status",
         "min": 0,
         "max": "1",
         "type": [

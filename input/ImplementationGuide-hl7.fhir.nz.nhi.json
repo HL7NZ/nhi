@@ -116,6 +116,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/nz-residency-status"
+        },
+        "name": "NZResidencyStatus",
+        "description": "NZ Residency status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/notValidatedAddressReason"
         },
         "name": "NotValidatedAddressReason",
@@ -212,6 +220,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/nz-residency-status"
+        },
+        "name": "NZ Residency status",
+        "description": "Is the person a NZ resident",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/AddressNotValidated"
         },
         "name": "Address Not Validated reason",
@@ -256,6 +272,14 @@
         },
         "name": "Iwi",
         "description": "New Zealand iwi codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/nz-residency-status"
+        },
+        "name": "NZ Residency status",
+        "description": "NZ Residency status",
         "exampleBoolean": false
       },
       {

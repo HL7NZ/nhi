@@ -83,6 +83,14 @@
 <td>The new zealand geocode. This uses a different datum from that defined in the spec for the geocode, so is an extension rather than using the element in the spec. see discussion at https://chat.fhir.org/#narrow/stream/179166-implementers/topic/geocode.20extension</td>
 </tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-nz-residency-status.html'>nz-residency-status</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status</td>
+<td>
+<div>Patient</div>
+</td>
+<td>NZ Residency status</td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-patient-iwi.html'>patient-iwi</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/patient-iwi</td>
 <td>
