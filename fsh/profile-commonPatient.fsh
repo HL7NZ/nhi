@@ -7,7 +7,7 @@ Alias: $informationsource = http://hl7.org.nz/fhir/StructureDefinition/informati
 Alias: $citizenship = http://hl7.org.nz/fhir/StructureDefinition/citizenship
 Alias: $sexAtBirth = http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth
 Alias: $residencyStatus = http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status
-Alias: $additionalGender = http://hl7.org.nz/fhir/StructureDefinition/nz-additional-gender
+//Alias: $additionalGender = http://hl7.org.nz/fhir/StructureDefinition/nz-additional-gender
 
 Profile:        CommonPatient
 Parent:         Patient
@@ -23,7 +23,7 @@ Description:    "The base Patient resource in NZ. Slices on identifer for NHI nu
 * extension contains
     $nzEthnicity named nz-ethnicity 0..6 and
     $birthPlace named birth-place 0..1 and
-    $patient-iwi named patient-iwi 0..1 and
+    $patient-iwi named patient-iwi 0..* and
     $residencyStatus named nz-residency-status 0..1 and 
     $citizenship named citizenship 0..1 and 
     $sexAtBirth named sex-at-birth 0..1
@@ -58,7 +58,4 @@ Description:    "The base Patient resource in NZ. Slices on identifer for NHI nu
 * identifier[dormantNHI].use = #old (exactly)
 * identifier[dormantNHI] ^short = "NHI numbers that have been deprecated"
 
-//Adds the additional gender codes
 
-* gender.extension contains
-    $additionalGender named nz-additional-gender 0..1   

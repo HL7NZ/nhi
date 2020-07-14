@@ -19,9 +19,11 @@ Description: "Additional genders for Patient"
 
 * ^url = https://standards.digital.health.nz/fhir/ValueSet/nz-additional-gender
 
+//all the current gender ones
+* codes from system http://hl7.org/fhir/ValueSet/administrative-gender
+
 //todo - is there a SNOMED code we can use?
 * codes from system https://standards.digital.health.nz/ns/nz-additional-gender
-
 
 
 
