@@ -6,6 +6,16 @@
   "name": "NotValidatedAddressReason",
   "status": "active",
   "description": "The reason why the address has not been validated",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,7 +73,7 @@
         "max": "1",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/addressnotvalidatedreason"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code"
         }
       }
     ]

@@ -11,6 +11,16 @@
   "title": "Common NZ Address datatype",
   "status": "active",
   "description": "Adds building name, suburb, domicile code and geocode to the Address datatype",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

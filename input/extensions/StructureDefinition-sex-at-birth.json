@@ -6,6 +6,16 @@
   "name": "SexAtBirth",
   "status": "active",
   "description": "The persons sex when born. Is considered to be immutable ",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,7 +73,7 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/nz-additional-gender-code"
         }
       }
     ]

@@ -11,6 +11,16 @@
   "title": "Common Patient profiling",
   "status": "active",
   "description": "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "purpose": "Describe the base New Zealand Patient profile",
   "fhirVersion": "4.0.1",
   "mapping": [

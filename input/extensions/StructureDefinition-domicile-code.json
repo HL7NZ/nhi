@@ -6,6 +6,16 @@
   "name": "DomicileCode",
   "status": "active",
   "description": "The domicile code. Derived from the address ",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

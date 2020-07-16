@@ -15,6 +15,9 @@ Id:             CommonPatient
 Title:          "Common Patient profiling"
 Description:    "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions"
 
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/CommonPatient"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
 * ^purpose = "Describe the base New Zealand Patient profile"
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Base Patient profile</div>"
 * ^text.status = #additional

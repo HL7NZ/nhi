@@ -6,6 +6,16 @@
   "name": "BuildingName",
   "status": "active",
   "description": "Used on an adddress datatype when a building name is needed",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

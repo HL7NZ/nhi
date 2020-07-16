@@ -15,6 +15,10 @@ Id:             NhiPatient
 Title:          "NHI Patient"
 Description:    "The Patient resource exposed by the NHI."
 
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
+
 * ^purpose = "Describe the Patient resource exposed by the NHI"
 * ^text.status = #additional
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>NHI Patient profile</div>"
@@ -37,7 +41,7 @@ Description:    "The Patient resource exposed by the NHI."
 * name.extension contains
     informationsource 0..1 and
     $preferred named preferred 0..1
-* name.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source
+* name.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
   
 //The gender has an extension for the original text that was used to establish it (eg from a form)
 * gender.extension contains 
@@ -48,13 +52,13 @@ Description:    "The Patient resource exposed by the NHI."
 * birthDate.extension contains  
 //$informationsource named informationsource 0..1 
     informationsource 0..1 
-* birthDate.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source
+* birthDate.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
 
 //date of death has an extension for source, which is bound to the deathdate information source valueset
 * deceasedDateTime.extension contains   
     informationsource 0..1
 
-* deceasedDateTime.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source
+* deceasedDateTime.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
 
 // address is required and has a number of extensions. It uses NhiAddress which takes NzAddress and adds NHI specific extensions...
 * address only NhiAddress

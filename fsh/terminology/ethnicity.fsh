@@ -3,16 +3,16 @@ Id: ethnicity
 Title: "Patient ethnicity"
 Description: "Level 4 ethnicity codes"
 
-* ^url = https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4
+* ^url = https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code
 
-* codes from system https://standards.digital.health.nz/ns/ethnic-group-level-4
+* codes from system https://standards.digital.health.nz/ns/ethnic-group-level-4-code
 
 CodeSystem: EthnicityL4
 Id: ethnicityL4
 Title: "Level 4 ethnicity codes"
 Description: "Level 4 ethnicity codes"
 
-* ^url = https://standards.digital.health.nz/ns/ethnic-group-level-4
+* ^url = https://standards.digital.health.nz/ns/ethnic-group-level-4-code
 
 
 

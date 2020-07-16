@@ -7,7 +7,7 @@
   "title": "InformationSource",
   "description": "All possible sources of information",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/information-source",
+  "url": "https://standards.digital.health.nz/ns/information-source-code",
   "concept": [
     {
       "code": "BREG",

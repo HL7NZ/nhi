@@ -60,14 +60,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/nz-additional-gender"
-        },
-        "name": "AdditionalGender",
-        "description": "Additional genders for Patient",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/birth-place"
         },
         "name": "BirthPlace",
@@ -312,13 +304,6 @@
         },
         "name": "NhiCapabilityStatement",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Patient/additionalGender"
-        },
-        "name": "additionalGender",
-        "exampleBoolean": true
       }
     ],
     "page": {

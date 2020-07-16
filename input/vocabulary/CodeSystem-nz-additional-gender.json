@@ -7,7 +7,7 @@
   "title": "Patient citizenship status",
   "description": "Additional genders for Patient",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/nz-additional-gender",
+  "url": "https://standards.digital.health.nz/ns/nz-additional-gender-code",
   "concept": [
     {
       "code": "I",

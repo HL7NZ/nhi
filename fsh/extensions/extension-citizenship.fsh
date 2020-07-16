@@ -3,6 +3,8 @@ Id: citizenship
 Description: "New Zealand citizenship"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/citizenship"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
 * ^context.type = #element
 * ^context.expression = "Patient"
 
@@ -15,10 +17,10 @@ Description: "New Zealand citizenship"
 * extension[status] ^definition = "The citizenship status - CIT, NCIT, UNK"
 * extension[status] ^short = "The citizenship status - CIT, NCIT, UNK"
 * extension[status].value[x] only CodeableConcept
-* extension[status].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/citizenship-status (preferred)
+* extension[status].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/citizenship-status-code (preferred)
 
 * extension[source].url = "source" (exactly)
 * extension[source] ^definition = "Where the information about the status came from"
 * extension[source] ^short = "Where the information about the status came from"
 * extension[source].value[x] only CodeableConcept
-* extension[source].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/information-source (preferred)
+* extension[source].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/information-source-code (preferred)

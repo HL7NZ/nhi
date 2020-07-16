@@ -6,6 +6,16 @@
   "name": "Suburb",
   "status": "active",
   "description": "The suburb of the address. This is not the same as 'district' or 'state.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

@@ -4,8 +4,8 @@ Id: information-source
 Title: "InformationSource"
 Description: "The source from where the value of this item was sourced"
 
-* ^url = https://standards.digital.health.nz/fhir/ValueSet/information-source
-* codes from system https://standards.digital.health.nz/ns/information-source
+* ^url = https://standards.digital.health.nz/fhir/ValueSet/information-source-code
+* codes from system https://standards.digital.health.nz/ns/information-source-code
 
 
 CodeSystem: InformationSource
@@ -13,7 +13,7 @@ Id: information-source
 Title: "InformationSource"
 Description: "All possible sources of information"
 
-* ^url = https://standards.digital.health.nz/ns/information-source
+* ^url = https://standards.digital.health.nz/ns/information-source-code
 
 * #BREG "Birth Register"
 * #BRCT "Birth Certificate"

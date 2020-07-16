@@ -6,11 +6,11 @@
   "title": "Patient citizenship status",
   "description": "Status of citizenship in NZ",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/fhir/ValueSet/citizenship-status",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/citizenship-status-code",
   "compose": {
     "include": [
       {
-        "system": "https://standards.digital.health.nz/ns/citizenship-status"
+        "system": "https://standards.digital.health.nz/ns/citizenship-status-code"
       }
     ]
   }

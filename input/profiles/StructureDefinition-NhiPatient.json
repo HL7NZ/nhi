@@ -11,6 +11,16 @@
   "title": "NHI Patient",
   "status": "active",
   "description": "The Patient resource exposed by the NHI.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "purpose": "Describe the Patient resource exposed by the NHI",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -86,7 +96,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source-code"
         }
       },
       {
@@ -181,7 +191,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source-code"
         }
       },
       {
@@ -252,7 +262,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/information-source-code"
         }
       },
       {

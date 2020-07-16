@@ -4,6 +4,8 @@ Id: domicile-code
 Description: "The domicile code. Derived from the address "
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/domicile-code"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
 * ^context.type = #element
 * ^context.expression = "Address"
 

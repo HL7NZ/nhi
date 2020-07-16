@@ -1,14 +1,14 @@
 ValueSet: Iwi
 Title: "Iwi"
 Description: "New Zealand iwi codes"
-* ^url = https://standards.digital.health.nz/fhir/ValueSet/iwi
+* ^url = https://standards.digital.health.nz/fhir/ValueSet/iwi-code
 
-* codes from system https://standards.digital.health.nz/ns/iwi
+* codes from system https://standards.digital.health.nz/ns/iwi-cd
 
 CodeSystem: Iwi
 Title: "Iwi"
 Description: "New Zealand iwi codes"
-* ^url = https://standards.digital.health.nz/ns/iwi
+* ^url = https://standards.digital.health.nz/ns/iwi-code
 
 * #01 "Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi"
 * #0101 "Te Aupōuri"

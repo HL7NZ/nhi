@@ -16,6 +16,8 @@ Title:          "Common NZ Address datatype"
 Description:    "Adds building name, suburb, domicile code and geocode to the Address datatype"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/CommonAddress"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
 
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>NZ Address datatype profile</div>"
 * ^text.status = #additional

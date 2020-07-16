@@ -6,11 +6,11 @@
   "title": "Patient ethnicity",
   "description": "Level 4 ethnicity codes",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code",
   "compose": {
     "include": [
       {
-        "system": "https://standards.digital.health.nz/ns/ethnic-group-level-4"
+        "system": "https://standards.digital.health.nz/ns/ethnic-group-level-4-code"
       }
     ]
   }

@@ -7,7 +7,7 @@
   "title": "Address Not Validated reason",
   "description": "The reason why the address was not validated",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/addressnotvalidatedreason",
+  "url": "https://standards.digital.health.nz/ns/address-not-validated-reason-code",
   "concept": [
     {
       "code": "OSEA",

@@ -6,11 +6,11 @@
   "title": "Address Not Validated reason",
   "description": "The reason why the address was not validated",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/fhir/ValueSet/addressnotvalidatedreason",
+  "url": "https://standards.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code",
   "compose": {
     "include": [
       {
-        "system": "https://standards.digital.health.nz/ns/addressnotvalidatedreason"
+        "system": "https://standards.digital.health.nz/ns/address-not-validated-reason-code"
       }
     ]
   }

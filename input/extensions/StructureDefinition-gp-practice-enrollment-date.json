@@ -6,6 +6,16 @@
   "name": "GPPracticeEnrollmentDate",
   "status": "active",
   "description": "The date that the patient was enrolled with their GP Practicce",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

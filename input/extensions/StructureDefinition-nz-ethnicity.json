@@ -6,6 +6,16 @@
   "name": "NzEthnicity",
   "status": "active",
   "description": "The ethnicity of the patient. Uses level 4 codes (most detailed).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,7 +73,7 @@
         "max": "1",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code"
         }
       }
     ]

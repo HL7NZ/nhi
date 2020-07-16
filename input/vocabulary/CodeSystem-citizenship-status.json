@@ -7,7 +7,7 @@
   "title": "Patient citizenship status",
   "description": "Status of citizenship in NZ",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/citizenship-status",
+  "url": "https://standards.digital.health.nz/ns/citizenship-status-code",
   "concept": [
     {
       "code": "CIT",
