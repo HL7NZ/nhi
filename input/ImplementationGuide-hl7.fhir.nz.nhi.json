@@ -172,9 +172,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/nz-additional-gender"
+          "reference": "ValueSet/nz-additional-gender-code"
         },
-        "name": "Patient citizenship status",
+        "name": "Gender codes including Indeterminate",
         "description": "Additional genders for Patient",
         "exampleBoolean": false
       },
@@ -236,7 +236,7 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/nz-additional-gender"
+          "reference": "CodeSystem/nz-additional-gender-code"
         },
         "name": "Patient citizenship status",
         "description": "Additional genders for Patient",

@@ -12,6 +12,9 @@
   "patchFormat": [
     "json"
   ],
+  "implementation": {
+    "description": "HPI system"
+  },
   "implementationGuide": [
     "http://hl7.org.nz/fhir/StructureDefinition/NHI"
   ],

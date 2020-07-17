@@ -9,6 +9,7 @@ Usage: #definition
 * format = #xml
 * format[1] = #json
 * patchFormat = #json
+* implementation.description = "HPI system"
 * implementationGuide = "http://hl7.org.nz/fhir/StructureDefinition/NHI"
 * publisher = "New Zealand Ministry of Health"
 * contact.name = "David Hay"
