@@ -3,7 +3,7 @@ Title: "Iwi"
 Description: "New Zealand iwi codes"
 * ^url = https://standards.digital.health.nz/fhir/ValueSet/iwi-code
 
-* codes from system https://standards.digital.health.nz/ns/iwi-cd
+* codes from system https://standards.digital.health.nz/ns/iwi-code
 
 CodeSystem: Iwi
 Title: "Iwi"

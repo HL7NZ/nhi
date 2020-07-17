@@ -17,6 +17,7 @@ Usage: #definition
 * contact.telecom.value = "david.hay25@gmail.com"
 * description = "A FHIR API in front of the New Zealand NHI"
 * rest.mode = #server
+
 * rest.resource.type = #Patient
 * rest.resource.interaction.code = #read
 * rest.resource.interaction.documentation = "The id is the same as the currrent NHI value"

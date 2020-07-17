@@ -10,7 +10,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://standards.digital.health.nz/ns/iwi-cd"
+        "system": "https://standards.digital.health.nz/ns/iwi-code"
       }
     ]
   }

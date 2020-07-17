@@ -15,7 +15,6 @@ lists those files generated from project configs or the contents in the ig-data 
 | input/ImplementationGuide-hl7.fhir.nz.nhi.json | generated | fsh/config.yaml, {all input resources and pages} |
 | input/ignoreWarnings.txt                       | generated |                                                  |
 | input/includes/menu.xml                        | generated | fsh/config.yaml                                  |
-| package-list.json                              | generated | fsh/config.yaml                                  |
 | input/includes/menuDEP.xml                     | copied    | fsh/ig-data/input/includes/menuDEP.xml           |
 | input/pagecontent/.DS_Store                    | copied    | fsh/ig-data/input/pagecontent/.DS_Store          |
 | input/pagecontent/API.md                       | copied    | fsh/ig-data/input/pagecontent/API.md             |
