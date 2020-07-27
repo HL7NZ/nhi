@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "citizenship",
-  "url": "http://hl7.org.nz/fhir/StructureDefinition/citizenship",
+  "id": "nz-citizenship",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship",
   "version": "0.2.0",
-  "name": "Citizenship",
+  "name": "NzCitizenship",
   "status": "active",
   "description": "New Zealand citizenship",
   "jurisdiction": [
@@ -41,8 +41,8 @@
         "id": "Extension.extension:status",
         "path": "Extension.extension",
         "sliceName": "status",
-        "short": "The citizenship status - CIT, NCIT, UNK",
-        "definition": "The citizenship status - CIT, NCIT, UNK",
+        "short": "The New Zealand  citizenship status - CIT, NCIT, UNK",
+        "definition": "The New Zealand citizenship status - CIT, NCIT, UNK",
         "min": 0,
         "max": "1"
       },
@@ -82,7 +82,7 @@
         "max": "1",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/citizenship-status-code"
+          "valueSet": "https://standards.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code"
         }
       },
       {
@@ -136,7 +136,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/citizenship"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship"
       },
       {
         "id": "Extension.value[x]",

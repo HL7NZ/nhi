@@ -136,17 +136,17 @@
         ]
       },
       {
-        "id": "Patient.extension:citizenship",
+        "id": "Patient.extension:nz-citizenship",
         "path": "Patient.extension",
-        "sliceName": "citizenship",
-        "short": "The citizenship status",
+        "sliceName": "nz-citizenship",
+        "short": "The New Zealand citizenship status",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/citizenship"
+              "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship"
             ]
           }
         ]

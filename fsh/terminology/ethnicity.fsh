@@ -1,6 +1,6 @@
 ValueSet: Ethnicity
 Id: ethnicity
-Title: "Patient ethnicity"
+Title: "Ethnicity of a perrson"
 Description: "Level 4 ethnicity codes"
 
 * ^url = https://standards.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code
@@ -13,8 +13,6 @@ Title: "Level 4 ethnicity codes"
 Description: "Level 4 ethnicity codes"
 
 * ^url = https://standards.digital.health.nz/ns/ethnic-group-level-4-code
-
-
 
 * #10000 "European NFD"
 * #11111 "New Zealand European"

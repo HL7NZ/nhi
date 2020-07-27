@@ -56,21 +56,29 @@
 <td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-information-source.html'>information-source</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
 <td>
-<div>Patient.birthDate</div>
+<div>Element</div>
 </td>
 <td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-isPrimaryAddress.html'>isPrimaryAddress</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/isPrimaryAddress</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-is-primary-address.html'>is-primary-address</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/is-primary-address</td>
 <td>
 <div>Element</div>
 </td>
 <td>Indicates this is the primary residential address - each patient must have one and only one</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-notValidatedAddressReason.html'>notValidatedAddressReason</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/notValidatedAddressReason</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-nhi-address-derived.html'>nhi-address-derived</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived</td>
+<td>
+<div>Address</div>
+</td>
+<td>Address elements that are directly derived from the actual address</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/nhi/branches/master/StructureDefinition-not-validated-address-reason.html'>not-validated-address-reason</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason</td>
 <td>
 <div>Element</div>
 </td>

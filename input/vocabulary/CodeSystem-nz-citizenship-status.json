@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "CitizenshipStatus",
-  "id": "citizenship-status",
-  "title": "Patient citizenship status",
+  "name": "NzCitizenshipStatus",
+  "id": "nz-citizenship-status",
+  "title": "New Zealand citizenship status",
   "description": "Status of citizenship in NZ",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/citizenship-status-code",
+  "url": "https://standards.digital.health.nz/ns/nz-citizenship-status-code",
   "concept": [
     {
       "code": "CIT",

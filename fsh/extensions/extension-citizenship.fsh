@@ -1,8 +1,8 @@
-Extension: Citizenship
-Id: citizenship
+Extension: NzCitizenship
+Id: nz-citizenship
 Description: "New Zealand citizenship"
 
-* ^url = "http://hl7.org.nz/fhir/StructureDefinition/citizenship"
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship"
 * ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 
 * ^context.type = #element
@@ -14,10 +14,10 @@ Description: "New Zealand citizenship"
 
 // definitions of sub-extensions
 * extension[status].url = "status" (exactly)
-* extension[status] ^definition = "The citizenship status - CIT, NCIT, UNK"
-* extension[status] ^short = "The citizenship status - CIT, NCIT, UNK"
+* extension[status] ^definition = "The New Zealand citizenship status - CIT, NCIT, UNK"
+* extension[status] ^short = "The New Zealand  citizenship status - CIT, NCIT, UNK"
 * extension[status].value[x] only CodeableConcept
-* extension[status].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/citizenship-status-code (preferred)
+* extension[status].valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code (preferred)
 
 * extension[source].url = "source" (exactly)
 * extension[source] ^definition = "Where the information about the status came from"

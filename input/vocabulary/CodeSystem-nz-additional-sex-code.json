@@ -2,17 +2,17 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "AdditionalGender",
-  "id": "nz-additional-gender-code",
+  "name": "AdditionalSex",
+  "id": "nz-additional-sex-code",
   "title": "Patient citizenship status",
-  "description": "Additional genders for Patient",
+  "description": "Additional sex values for Patient",
   "version": "0.2.0",
-  "url": "https://standards.digital.health.nz/ns/nz-additional-gender-code",
+  "url": "https://standards.digital.health.nz/ns/nz-additional-sex-code",
   "concept": [
     {
       "code": "indeterminate",
       "display": "Indeterminate",
-      "definition": "When the gender cannot be determined"
+      "definition": "When the sex cannot be determined"
     }
   ],
   "count": 1

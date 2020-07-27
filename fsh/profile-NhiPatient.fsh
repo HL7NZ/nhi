@@ -55,11 +55,13 @@ Description:    "The Patient resource exposed by the NHI."
 * birthDate.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
 
 //date of death has an extension for source, which is bound to the deathdate information source valueset
-* deceasedDateTime.extension contains   
+* deceased[x] only dateTime
+* deceasedDateTime.extension contains  
+    //$informationsource named informationsource 0..1 
     informationsource 0..1
 
+//* deceasedDateTime.extension[informationsource].url = "informationsource" (exactly)
 * deceasedDateTime.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
-
 // address is required and has a number of extensions. It uses NhiAddress which takes NzAddress and adds NHI specific extensions...
 * address only NhiAddress
 

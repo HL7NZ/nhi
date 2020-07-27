@@ -4,10 +4,10 @@ Alias: $nzEthnicity = http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity
 Alias: $birthPlace = http://hl7.org.nz/fhir/StructureDefinition/birth-place
 Alias: $patient-iwi = http://hl7.org.nz/fhir/StructureDefinition/patient-iwi
 Alias: $informationsource = http://hl7.org.nz/fhir/StructureDefinition/information-source
-Alias: $citizenship = http://hl7.org.nz/fhir/StructureDefinition/citizenship
+Alias: $nzcitizenship = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $sexAtBirth = http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth
 Alias: $residencyStatus = http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status
-//Alias: $additionalGender = http://hl7.org.nz/fhir/StructureDefinition/nz-additional-gender
+
 
 Profile:        CommonPatient
 Parent:         Patient
@@ -28,14 +28,14 @@ Description:    "The base Patient resource in NZ. Slices on identifer for NHI nu
     $birthPlace named birth-place 0..1 and
     $patient-iwi named patient-iwi 0..* and
     $residencyStatus named nz-residency-status 0..1 and 
-    $citizenship named citizenship 0..1 and 
+    $nzcitizenship named nz-citizenship 0..1 and 
     $sexAtBirth named sex-at-birth 0..1
    
 * extension[nz-ethnicity] ^short = "The persons ethnicity (up to 6)"
 * extension[birth-place] ^short = "Where the person was born"
 * extension[patient-iwi] ^short = "The Iwi the person is associated with"
 * extension[nz-residency-status] ^short = "Is the person a NZ resident"
-* extension[citizenship] ^short = "The citizenship status"
+* extension[nz-citizenship] ^short = "The New Zealand citizenship status"
 * extension[sex-at-birth] ^short = "The sex that the patient was at birth. Considered immutable."
 
 //set the address to the nz address (adds geocode, building name, domicileCode and suburb)

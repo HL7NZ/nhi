@@ -10,4 +10,4 @@ Description: "The persons sex when born. Is considered to be immutable "
 
 * extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/nz-additional-gender-code (required)
+* valueCodeableConcept from https://standards.digital.health.nz/fhir/ValueSet/nz-additional-sex-code (required)

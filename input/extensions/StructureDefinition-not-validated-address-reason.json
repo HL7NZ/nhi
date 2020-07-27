@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "notValidatedAddressReason",
-  "url": "http://hl7.org.nz/fhir/StructureDefinition/notValidatedAddressReason",
+  "id": "not-validated-address-reason",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason",
   "version": "0.2.0",
   "name": "NotValidatedAddressReason",
   "status": "active",
@@ -45,7 +45,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/notValidatedAddressReason"
+        "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason"
       },
       {
         "id": "Extension.value[x]",

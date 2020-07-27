@@ -30,12 +30,7 @@ Description:    "Adds building name, suburb, domicile code and geocode to the Ad
     $buildingName named building-name 0..1 and 
     $domicileCode named domicile-code 0..1
 
-/*
-    $nzGeocode named nz-geocode 0..1 and
-    $suburb named suburb 0..1 and
-    $buildingName named building-name 0..1 and 
-    $domicileCode named domicile-code 0..1
-*/
+
 
 * extension[nz-geocode] ^short = "A geocode using the NZ specific datum (reference point)"
 * extension[nz-geocode].url = "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode" (exactly)

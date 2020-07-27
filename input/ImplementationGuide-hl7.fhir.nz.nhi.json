@@ -76,14 +76,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/citizenship"
-        },
-        "name": "Citizenship",
-        "description": "New Zealand citizenship",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/domicile-code"
         },
         "name": "DomicileCode",
@@ -108,7 +100,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/isPrimaryAddress"
+          "reference": "StructureDefinition/is-primary-address"
         },
         "name": "IsPrimaryAddress",
         "description": "Indicates this is the primary residential address - each patient must have one and only one",
@@ -124,7 +116,15 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/notValidatedAddressReason"
+          "reference": "StructureDefinition/nhi-address-derived"
+        },
+        "name": "NhiAddressDerived",
+        "description": "Address elements that are directly derived from the actual address",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/not-validated-address-reason"
         },
         "name": "NotValidatedAddressReason",
         "description": "The reason why the address has not been validated",
@@ -132,10 +132,18 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/nz-citizenship"
+        },
+        "name": "NzCitizenship",
+        "description": "New Zealand citizenship",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/nz-ethnicity"
         },
         "name": "NzEthnicity",
-        "description": "The ethnicity of the patient. Uses level 4 codes (most detailed).",
+        "description": "The ethnicity of the individual. Uses level 4 codes (most detailed).",
         "exampleBoolean": false
       },
       {
@@ -172,10 +180,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/nz-additional-gender-code"
+          "reference": "ValueSet/nz-additional-sex-code"
         },
         "name": "Gender codes including Indeterminate",
-        "description": "Additional genders for Patient",
+        "description": "Additional sex values for Patient",
         "exampleBoolean": false
       },
       {
@@ -184,14 +192,6 @@
         },
         "name": "Address Not Validated reason",
         "description": "The reason why the address was not validated",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/citizenship-status"
-        },
-        "name": "Patient citizenship status",
-        "description": "Status of citizenship in NZ",
         "exampleBoolean": false
       },
       {
@@ -206,7 +206,7 @@
         "reference": {
           "reference": "ValueSet/ethnicity"
         },
-        "name": "Patient ethnicity",
+        "name": "Ethnicity of a perrson",
         "description": "Level 4 ethnicity codes",
         "exampleBoolean": false
       },
@@ -236,10 +236,18 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/nz-additional-gender-code"
+          "reference": "ValueSet/nz-citizenship-status"
+        },
+        "name": "New Zealand citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/nz-additional-sex-code"
         },
         "name": "Patient citizenship status",
-        "description": "Additional genders for Patient",
+        "description": "Additional sex values for Patient",
         "exampleBoolean": false
       },
       {
@@ -248,14 +256,6 @@
         },
         "name": "Address Not Validated reason",
         "description": "The reason why the address was not validated",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/citizenship-status"
-        },
-        "name": "Patient citizenship status",
-        "description": "Status of citizenship in NZ",
         "exampleBoolean": false
       },
       {
@@ -300,9 +300,24 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/nz-citizenship-status"
+        },
+        "name": "New Zealand citizenship status",
+        "description": "Status of citizenship in NZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/NhiCapabilityStatement"
         },
         "name": "NhiCapabilityStatement",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/nhi"
+        },
+        "name": "nhi",
         "exampleBoolean": false
       }
     ],

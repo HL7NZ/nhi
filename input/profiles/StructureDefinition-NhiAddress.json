@@ -51,73 +51,49 @@
         "id": "Address.extension:notValidatedAddressReason",
         "path": "Address.extension",
         "sliceName": "notValidatedAddressReason",
+        "short": "The reason an address was not validated",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:notValidatedAddressReason.url",
-        "path": "Address.extension.url",
-        "fixedUri": "notValidatedAddressReason"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason"
+            ]
+          }
+        ]
       },
       {
         "id": "Address.extension:isPrimaryAddress",
         "path": "Address.extension",
         "sliceName": "isPrimaryAddress",
+        "short": "If true, this is the primary address",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/is-primary-address"
+            ]
+          }
+        ]
       },
       {
-        "id": "Address.extension:isPrimaryAddress.url",
-        "path": "Address.extension.url",
-        "fixedUri": "isPrimaryAddress"
-      },
-      {
-        "id": "Address.extension:depCentils",
+        "id": "Address.extension:addressDerived",
         "path": "Address.extension",
-        "sliceName": "depCentils",
+        "sliceName": "addressDerived",
+        "short": "Elements that are directly derived from the address",
         "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:depCentils.url",
-        "path": "Address.extension.url",
-        "fixedUri": "depCentils"
-      },
-      {
-        "id": "Address.extension:depQuintile",
-        "path": "Address.extension",
-        "sliceName": "depQuintile",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:depQuintile.url",
-        "path": "Address.extension.url",
-        "fixedUri": "depQuintile"
-      },
-      {
-        "id": "Address.extension:SAID",
-        "path": "Address.extension",
-        "sliceName": "SAID",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:SAID.url",
-        "path": "Address.extension.url",
-        "fixedUri": "SAID"
-      },
-      {
-        "id": "Address.extension:meshBlock",
-        "path": "Address.extension",
-        "sliceName": "meshBlock",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Address.extension:meshBlock.url",
-        "path": "Address.extension.url",
-        "fixedUri": "meshBlock"
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived"
+            ]
+          }
+        ]
       }
     ]
   }
