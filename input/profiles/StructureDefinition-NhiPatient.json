@@ -5,6 +5,16 @@
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">NHI Patient profile</div>"
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Individuals"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient",
   "version": "0.2.0",
   "name": "NhiPatient",
@@ -53,7 +63,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org.nz/fhir/StructureDefinition/CommonPatient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation": "constraint",
   "differential": {
     "element": [

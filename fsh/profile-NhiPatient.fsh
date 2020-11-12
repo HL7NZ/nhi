@@ -10,7 +10,8 @@ Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 Alias: $addressIsPrimary = http://hl7.org/fhir/nhi/StructureDefinition/addressIsPrimary
 
 Profile:        NhiPatient
-Parent:         CommonPatient
+//Parent:         CommonPatient
+Parent:         Patient
 Id:             NhiPatient
 Title:          "NHI Patient"
 Description:    "The Patient resource exposed by the NHI."

@@ -9,13 +9,13 @@ Alias: $suburb = http://hl7.org.nz/fhir/StructureDefinition/suburb
 Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
 
-Profile:        CommonAddress
+Profile:        NzAddress
 Parent:         Address
-Id:             CommonAddress
+Id:             NzAddress
 Title:          "Common NZ Address datatype"
 Description:    "Adds building name, suburb, domicile code and geocode to the Address datatype"
 
-* ^url = "http://hl7.org.nz/fhir/StructureDefinition/CommonAddress"
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/NzAddress"
 * ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 
 
@@ -29,9 +29,7 @@ Description:    "Adds building name, suburb, domicile code and geocode to the Ad
     $suburb named suburb 0..1 and
     $buildingName named building-name 0..1 and 
     $domicileCode named domicile-code 0..1
-
-
-
+    
 * extension[nz-geocode] ^short = "A geocode using the NZ specific datum (reference point)"
 * extension[nz-geocode].url = "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode" (exactly)
 * extension[suburb] ^short = "The suburb part of the address"

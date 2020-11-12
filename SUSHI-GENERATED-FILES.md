@@ -16,7 +16,6 @@ lists those files generated from project configs or the contents in the ig-data 
 | input/ignoreWarnings.txt                       | generated |                                                  |
 | input/includes/menu.xml                        | generated | fsh/config.yaml                                  |
 | input/includes/menuDEP.xml                     | copied    | fsh/ig-data/input/includes/menuDEP.xml           |
-| input/pagecontent/.DS_Store                    | copied    | fsh/ig-data/input/pagecontent/.DS_Store          |
 | input/pagecontent/API.md                       | copied    | fsh/ig-data/input/pagecontent/API.md             |
 | input/pagecontent/downloads.md                 | copied    | fsh/ig-data/input/pagecontent/downloads.md       |
 | input/pagecontent/extensions.xml               | copied    | fsh/ig-data/input/pagecontent/extensions.xml     |

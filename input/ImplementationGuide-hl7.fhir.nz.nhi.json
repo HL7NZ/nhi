@@ -28,22 +28,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/CommonAddress"
-        },
-        "name": "Common NZ Address datatype",
-        "description": "Adds building name, suburb, domicile code and geocode to the Address datatype",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/CommonPatient"
-        },
-        "name": "Common Patient profiling",
-        "description": "The base Patient resource in NZ. Slices on identifer for NHI numbers (current & old), uses nzAddress and adds sme commonly used extensions",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/NhiAddress"
         },
         "name": "NHI Address",
@@ -56,6 +40,14 @@
         },
         "name": "NHI Patient",
         "description": "The Patient resource exposed by the NHI.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/NzAddress"
+        },
+        "name": "Common NZ Address datatype",
+        "description": "Adds building name, suburb, domicile code and geocode to the Address datatype",
         "exampleBoolean": false
       },
       {

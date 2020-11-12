@@ -4,7 +4,7 @@ Alias: $isPrimaryAddress = http://hl7.org.nz/fhir/StructureDefinition/is-primary
 Alias: $addressDerived = http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived
 
 Profile:        NhiAddress
-Parent:         CommonAddress
+Parent:         NzAddress
 Id:             NhiAddress
 Title:          "NHI Address"
 Description:    "Adds additional, NHI specific extensions"
