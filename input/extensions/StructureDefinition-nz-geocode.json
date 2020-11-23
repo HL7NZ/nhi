@@ -43,25 +43,25 @@
         "min": 2
       },
       {
-        "id": "Extension.extension:latitute",
+        "id": "Extension.extension:latitude",
         "path": "Extension.extension",
-        "sliceName": "latitute",
+        "sliceName": "latitude",
         "definition": "No description",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Extension.extension:latitute.extension",
+        "id": "Extension.extension:latitude.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:latitute.url",
+        "id": "Extension.extension:latitude.url",
         "path": "Extension.extension.url",
-        "fixedUri": "latitute"
+        "fixedUri": "latitude"
       },
       {
-        "id": "Extension.extension:latitute.value[x]",
+        "id": "Extension.extension:latitude.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
