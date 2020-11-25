@@ -9,7 +9,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.nz.nhi
+id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
 version: 0.1.0
 name: NewZealandNHIIG
