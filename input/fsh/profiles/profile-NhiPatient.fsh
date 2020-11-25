@@ -7,7 +7,8 @@ Alias: $originalText = http://hl7.org/fhir/StructureDefinition/originalText
 Alias: $ethnicity = http://hl7.org.nz/fhir/StructureDefinition/ethnicity
 
 Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
-Alias: $addressIsPrimary = http://hl7.org/fhir/nhi/StructureDefinition/addressIsPrimary
+Alias: $addressIsPrimary = http://hl7.org.nz/fhir/nhi/StructureDefinition/addressIsPrimary
+Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/information-source
 
 Profile:        NhiPatient
 //Parent:         CommonPatient
@@ -40,9 +41,9 @@ Description:    "The Patient resource exposed by the NHI."
 //Name is required, and there are extensions for source, and isPreferred
 * name  1..*
 * name.extension contains
-    informationsource 0..1 and
+    information-source named information-source 0..1 and
     $preferred named preferred 0..1
-* name.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
+* name.extension[information-source].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
   
 //The gender has an extension for the original text that was used to establish it (eg from a form)
 * gender.extension contains 
@@ -51,18 +52,18 @@ Description:    "The Patient resource exposed by the NHI."
 //birthdate is required, and has an extension for source, which is bound to the birthdate information source valueset
 * birthDate 1..1
 * birthDate.extension contains  
-//$informationsource named informationsource 0..1 
-    informationsource 0..1 
-* birthDate.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
+    $information-source named information-source 0..1 
+
+* birthDate.extension[information-source].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
 
 //date of death has an extension for source, which is bound to the deathdate information source valueset
 * deceased[x] only dateTime
 * deceasedDateTime.extension contains  
-    //$informationsource named informationsource 0..1 
-    informationsource 0..1
+    $information-source named information-source 0..1 
+
 
 //* deceasedDateTime.extension[informationsource].url = "informationsource" (exactly)
-* deceasedDateTime.extension[informationsource].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
+* deceasedDateTime.extension[information-source].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
 // address is required and has a number of extensions. It uses NhiAddress which takes NzAddress and adds NHI specific extensions...
 * address only NhiAddress
 
