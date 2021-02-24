@@ -22,6 +22,8 @@ Description:    "Adds building name, suburb, domicile code and geocode to the Ad
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>NZ Address datatype profile</div>"
 * ^text.status = #additional
 
+* district 0..0
+* state 0..0
 
 //Needs to be a different geocode as uses a different datum
 * extension contains
