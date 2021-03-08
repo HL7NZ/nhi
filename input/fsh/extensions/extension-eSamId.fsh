@@ -1,6 +1,6 @@
 Extension: ESAMId
 Id: esam-id
-Description: "The eSAM Id for this address"
+Description: " identifier from the eSAM address service"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/esam-id"
 * ^jurisdiction.coding = urn:iso:std:iso:3166#NZ

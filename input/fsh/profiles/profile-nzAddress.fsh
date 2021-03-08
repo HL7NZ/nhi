@@ -8,6 +8,7 @@ Alias: $nzGeocode = http://hl7.org.nz/fhir/StructureDefinition/nz-geocode
 Alias: $suburb = http://hl7.org.nz/fhir/StructureDefinition/suburb
 Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
+Alias: $esamid = http://hl7.org.nz/fhir/StructureDefinition/esam-id
 
 Profile:        NzAddress
 Parent:         Address
@@ -30,7 +31,8 @@ Description:    "Adds building name, suburb, domicile code and geocode to the Ad
     $nzGeocode named nz-geocode 0..1 and
     $suburb named suburb 0..1 and
     $buildingName named building-name 0..1 and 
-    $domicileCode named domicile-code 0..1
+    $domicileCode named domicile-code 0..1 and 
+    $esamid named esam-id 0..1
     
 * extension[nz-geocode] ^short = "A geocode using the NZ specific datum (reference point)"
 * extension[nz-geocode].url = "http://hl7.org.nz/fhir/StructureDefinition/nz-geocode" (exactly)
