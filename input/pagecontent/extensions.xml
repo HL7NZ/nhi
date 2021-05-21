@@ -1,7 +1,7 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 <br/><strong>Extensions defined in this guide</strong><br/><br/>
 <table width='100%' border='1' cellspacing='0' cellpadding='5px'>
-<tr><th>Id</th><th>Url</th><th>Context of Use</th><th>Description</th>
+<tr><th>Id</th><th>Url</th><th>Context of Use</th><th>Description</th><th>Purpose</th>
 <th>FMM</th>
 <th>Status</th>
 </tr>
@@ -12,6 +12,7 @@
 <div>Patient</div>
 </td>
 <td>The country where the person was born</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -22,6 +23,7 @@
 <div>Address</div>
 </td>
 <td>Used on an adddress datatype when a building name is needed</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -32,6 +34,7 @@
 <div>Address</div>
 </td>
 <td>The domicile code. Derived from the address </td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -42,6 +45,7 @@
 <div>Address</div>
 </td>
 <td> identifier from the eSAM address service</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -52,6 +56,7 @@
 <div>Patient</div>
 </td>
 <td>The date that the patient was enrolled with their GP Practicce</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -62,6 +67,7 @@
 <div>Element</div>
 </td>
 <td>The source of the information. Used paricularly in the NHI. Note this not the person but rather than it came from a passport for example</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -72,6 +78,7 @@
 <div>Element</div>
 </td>
 <td>Indicates this is the primary residential address - each patient must have one and only one</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -82,6 +89,7 @@
 <div>Address</div>
 </td>
 <td>Address elements that are directly derived from the actual address</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -92,6 +100,7 @@
 <div>Element</div>
 </td>
 <td>The reason why the address has not been validated</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -102,6 +111,7 @@
 <div>Patient</div>
 </td>
 <td>New Zealand citizenship</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -112,6 +122,7 @@
 <div>Element</div>
 </td>
 <td>The ethnicity of the individual. Uses level 4 codes (most detailed).</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -122,6 +133,7 @@
 <div>Address</div>
 </td>
 <td>The new zealand geocode. This uses a different datum from that defined in the spec for the geocode, so is an extension rather than using the element in the spec. see discussion at https://chat.fhir.org/#narrow/stream/179166-implementers/topic/geocode.20extension</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -132,6 +144,7 @@
 <div>Patient</div>
 </td>
 <td>NZ Residency status</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -142,6 +155,7 @@
 <div>Patient</div>
 </td>
 <td>Persons Iwi affiliation</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -152,6 +166,7 @@
 <div>Patient</div>
 </td>
 <td>The persons sex when born. Is considered to be immutable </td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
@@ -162,6 +177,7 @@
 <div>Address</div>
 </td>
 <td>The suburb of the address. This is not the same as 'district' or 'state.</td>
+<td></td>
 <td>0</td>
 <td>active</td>
 </tr>
