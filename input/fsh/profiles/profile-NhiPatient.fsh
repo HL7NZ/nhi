@@ -10,6 +10,8 @@ Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 Alias: $addressIsPrimary = http://hl7.org.nz/fhir/nhi/StructureDefinition/addressIsPrimary
 Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/information-source
 
+Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
+
 Profile:        NhiPatient
 //Parent:         CommonPatient
 Parent:         Patient
@@ -37,6 +39,10 @@ Description:    "The Patient resource exposed by the NHI."
 
 * deceased[x] only dateTime
 
+* extension contains 
+    $nzCitizen named nzCitizen 0..1
+
+* extension[nzCitizen] ^short = "Is this person a New Zealand citizen"
    
 //Name is required, and there are extensions for source, and isPreferred
 * name  1..*

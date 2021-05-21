@@ -2,7 +2,7 @@
 Alias: $notValidatedAddressReason = http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason
 Alias: $isPrimaryAddress = http://hl7.org.nz/fhir/StructureDefinition/is-primary-address
 Alias: $addressDerived = http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived
-Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
+
 
 Profile:        NhiAddress
 Parent:         NzAddress
@@ -16,8 +16,7 @@ Description:    "Adds additional, NHI specific extensions"
 * extension contains
     $notValidatedAddressReason named notValidatedAddressReason 0..1 and
     $isPrimaryAddress named isPrimaryAddress 0..1 and 
-    $addressDerived named addressDerived 0..1 and
-    $nzCitizen named nzCitizen 0..1
+    $addressDerived named addressDerived 0..1 
     //depCentils 0..1 and
     //depQuintile 0..1 and
     //SAID 0..1 and
