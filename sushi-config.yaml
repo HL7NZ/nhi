@@ -20,6 +20,10 @@ publisher:
   email: mailto:david.hay25@gmail.com
 description: The FHIRb  API for the NHI
 license: CC0-1.0
+
+dependencies:
+  hl7.org.nz.fhir.ig.base: dev
+  
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false

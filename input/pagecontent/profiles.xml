@@ -3,20 +3,5 @@
 <br/><strong>Profiles defined in this guide</strong><br/><br/>
 <table class='table table-bordered table-hover table-sm'>
 <tr><th>Id</th><th>Url</th><th>Description</th></tr>
-<tr>
-<td><a href='StructureDefinition-NhiAddress.html'>NhiAddress</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/NhiAddress</td>
-<td>Adds additional, NHI specific extensions</td>
-</tr>
-<tr>
-<td><a href='StructureDefinition-NhiPatient.html'>NhiPatient</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/NhiPatient</td>
-<td>The Patient resource exposed by the NHI.</td>
-</tr>
-<tr>
-<td><a href='StructureDefinition-NzAddress.html'>NzAddress</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/NzAddress</td>
-<td>Adds building name, suburb, domicile code and geocode to the Address datatype</td>
-</tr>
 </table>
 </div>
