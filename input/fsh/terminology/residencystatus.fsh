@@ -13,6 +13,6 @@ Title: "NZ Residency status"
 Description: "NZ Residency status"
 * ^url = https://standards.digital.health.nz/ns/nz-residency-status-code
 
-* #Y "Yes"
-* #N "No"
-* #U "Unknown"
+* #yes "Yes"
+* #no "No"
+* #unknown "Unknown"

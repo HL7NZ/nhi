@@ -1,16 +1,20 @@
 //Extension urls defined in this IG...
 
 Alias: $dhb = http://hl7.org.nz/fhir/StructureDefinition/dhb
-Alias: $patient-birthPlace = http://hl7.org.nz/fhir/StructureDefinition/patient-birthPlace
+Alias: $birthPlace = http://hl7.org.nz/fhir/StructureDefinition/birth-place
 
-Alias: $originalText = http://hl7.org/fhir/StructureDefinition/originalText
-Alias: $ethnicity = http://hl7.org.nz/fhir/StructureDefinition/ethnicity
+Alias: $originalText = http://hl7.org.nz/fhir/StructureDefinition/gender-original-text
+
+Alias: $ethnicity = http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity
 
 Alias: $preferred = http://hl7.org/fhir/StructureDefinition/iso21090-preferred
 Alias: $addressIsPrimary = http://hl7.org.nz/fhir/nhi/StructureDefinition/addressIsPrimary
 Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/information-source
 
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
+Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
+
+
 
 Profile:        NhiPatient
 //Parent:         CommonPatient
@@ -40,17 +44,21 @@ Description:    "The Patient resource exposed by the NHI."
 * deceased[x] only dateTime
 
 * extension contains 
-    $nzCitizen named nzCitizen 0..1
+    $ethnicity named ethnicity 0..6 and
+    $nzCitizen named nzCitizen 0..1 and
+    $birthPlace named birthPlace 0..1 and
+    $nzResidency named nzResidency 0..1
 
 * extension[nzCitizen] ^short = "Is this person a New Zealand citizen"
    
 //Name is required, and there are extensions for source, and isPreferred
 * name  1..*
 * name.extension contains
-    information-source named information-source 0..1 and
+    $information-source named information-source 0..1 and
     $preferred named preferred 0..1
+
 * name.extension[information-source].valueCodeableConcept from  https://standards.digital.health.nz/fhir/ValueSet/information-source-code
-  
+
 //The gender has an extension for the original text that was used to establish it (eg from a form)
 * gender.extension contains 
     $originalText named originalText 0..1

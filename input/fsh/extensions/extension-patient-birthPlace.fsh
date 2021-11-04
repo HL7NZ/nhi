@@ -12,7 +12,7 @@ Description: "The country where the person was born"
 * extension contains
     country 0..1 and
     place-of-birth 0..1 and
-    source 0..1     //todo - rremove from here and add to NHI
+    source 0..1     //todo - remove from here and add to NHI
 
 // definitions of sub-extensions
 //* extension[country].url = "country" (exactly)

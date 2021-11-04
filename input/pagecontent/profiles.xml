@@ -3,5 +3,15 @@
 <br/><strong>Profiles defined in this guide</strong><br/><br/>
 <table class='table table-bordered table-hover table-sm'>
 <tr><th>Id</th><th>Url</th><th>Description</th></tr>
+<tr>
+<td><a href='StructureDefinition-NhiAddress.html'>NhiAddress</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/NhiAddress</td>
+<td><p>Adds additional, NHI specific extensions</p></td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-NhiPatient.html'>NhiPatient</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/NhiPatient</td>
+<td><p>The Patient resource exposed by the NHI.</p></td>
+</tr>
 </table>
 </div>
