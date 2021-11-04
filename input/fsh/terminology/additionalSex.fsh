@@ -4,7 +4,7 @@ Id:  nz-additional-sex-code
 Title: "Gender codes including Indeterminate"
 Description: "Additional sex values for Patient"
 
-* ^url = https://standards.digital.health.nz/fhir/ValueSet/nz-additional-sex-code
+* ^url = https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code
 
 //all the current gender ones
 * codes from system http://hl7.org/fhir/administrative-gender

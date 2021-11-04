@@ -34,7 +34,7 @@
 <td><a href='StructureDefinition-is-primary-address.html'>is-primary-address</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/is-primary-address</td>
 <td>
-<div>Element</div>
+<div>Address</div>
 </td>
 <td><p>Indicates this is the primary residential address - each patient must have one and only one</p></td>
 <td></td>
@@ -52,7 +52,7 @@
 <td><a href='StructureDefinition-not-validated-address-reason.html'>not-validated-address-reason</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason</td>
 <td>
-<div>Element</div>
+<div>Address</div>
 </td>
 <td><p>The reason why the address has not been validated</p></td>
 <td></td>
@@ -76,7 +76,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/nz-geocode</td>
 <td><p>New Zealand Geocode. This uses a different datum from that defined in the HL7 FHIR specification for a Geocode.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-nz-geocode.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-nz-geocode.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/suburb</td>
 <td><p>Suburb element of a NZ Address.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-suburb.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-suburb.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -92,7 +92,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/building-name</td>
 <td><p>The name of a building cited in an address.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-building-name.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-building-name.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -100,15 +100,17 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/domicile-code</td>
 <td><p>NZ Domicile Code. Derived from a patient&#39;s primary physical, home address.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-domicile-code.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-domicile-code.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
 <td>Patient</td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity</td>
-<td><p>The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group.</p></td>
+<td><p>The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group.</p>
+
+<p>The Stats New Zealand standard can be found <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17">here</a>.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-nz-ethnicity.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-nz-ethnicity.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -116,7 +118,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship</td>
 <td><p>New Zealand citizenship</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-nz-citizenship.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-nz-citizenship.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -124,7 +126,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
 <td><p>The official source of information held about a patient.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-information-source.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -137,7 +139,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
 <td><p>The official source of information held about a patient.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-information-source.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
@@ -145,7 +147,7 @@
 <td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
 <td><p>The official source of information held about a patient.</p></td>
 <td>
-<div><a href='undefinedStructureDefinition-information-source.html'>NZ base</a></div>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-information-source.html'>NZ base</a></div>
 </td>
 </tr>
 </table>
