@@ -1,4 +1,4 @@
-ValueSet: nhiAddressUse
+ValueSet: NhiAddressUse
 Title: "NHI Address Use Codes"
 Description: "Uses of the address supported by the NHI"
 * ^url = https://nzhts.digital.health.nz/fhir/ValueSet/addressUse
