@@ -40,6 +40,8 @@ Description:    "The Patient resource exposed by the NHI."
 * link 0..0
 * maritalStatus 0..0
 * multipleBirth[x] 0..0
+* name.period 0..0
+* telecom 0..0
 
 * deceased[x] only dateTime
 
