@@ -19,6 +19,7 @@ The [FHIR spec](http://hl7.org/fhir/terminology-module.html) has much more detai
 <tr><td width='20%'>NZ Citizenship status</td><td><p>Citizenship status</p></td><td><a href='ValueSet-citizenship-status.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code</a></td></tr>
 <tr><td width='20%'>NZ Residency status</td><td><p>Is the person a NZ resident</p></td><td><a href='ValueSet-nz-residency-status.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-status-code</a></td></tr>
 <tr><td width='20%'>domicileCode</td><td><p>Domicile Code</p></td><td><a href='ValueSet-domicile-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code</a></td></tr>
+<tr><td width='20%'>Datum Code</td><td><p>Identifies the coordinate system used to specify points on a map</p></td><td><a href='ValueSet-datum-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/datum</a></td></tr>
 </table>
 <br/><br/>
 ### CodeSystems

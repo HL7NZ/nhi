@@ -47,6 +47,8 @@ Description:    "Adds additional, NHI specific extensions"
 * state 0..0
 * period 0..0
 
+//restrict address use
+* use from  https://nzhts.digital.health.nz/fhir/ValueSet/addressUse
 
 * extension[notValidatedAddressReason] ^short = "The reason an address was not validated"
 * extension[isPrimaryAddress] ^short = "If true, this is the primary address"

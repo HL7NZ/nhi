@@ -1,3 +1,5 @@
+//Alias: $datumCode = http://hl7.org.nz/fhir/StructureDefinition/datum
+
 
 Extension: NhiNzGeocode
 Id: nhi-nz-geocode
@@ -12,10 +14,12 @@ Description: "Based on http://hl7.org.nz/fhir/StructureDefinition/nz-geocode, bu
     latitude 1..1 and
     longitude 1..1 and
     datumCode 0..1 
+  
 
-* extension[latitude] ^definition = "The latitude of thegeocode"
+* extension[latitude] ^definition = "The latitude of the geocode"
 * extension[latitude].value[x] only decimal
 * extension[longitude] ^definition = "The longitude of the geocode"
 * extension[longitude].value[x] only decimal
-* extension[geo-system] ^definition = "The datum used for the lat/long"
-* extension[datumCode].value[x] only string
+* extension[datumCode] ^definition = "The datum used for the lat/long"
+* extension[datumCode].value[x] only CodeableConcept
+* extension[datumCode].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/datum (preferred)
