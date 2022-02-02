@@ -2,16 +2,40 @@
 ValueSet: InformationSource
 Id: information-source
 Title: "Information Source"
-Description: "The source from where the value of this item was sourced"
+Description: "The source from which the value of this item was obtained"
 
 * ^url = $information-source-vs
+* codes from system $information-source-cs
+
+ValueSet: NameInformationSource
+Id: name-information-source
+Title: "Name Information Source"
+Description: "The source from which the name was obtained"
+
+* ^url = $name-information-source-vs
+* codes from system $information-source-cs
+
+ValueSet: DobInformationSource
+Id: dob-information-source
+Title: "DoB Information Source"
+Description: "The source from which the value of the date of birth was obtained"
+
+* ^url =  $dob-information-source-vs
+* codes from system $information-source-cs
+
+ValueSet: NzResidencyInformationSource
+Id: nz-residency-information-source
+Title: "NZ Residency Information Source"
+Description: "The source from which the NZ residency information  was obtained"
+
+* ^url =  $nz-residency-information-source-vs
 * codes from system $information-source-cs
 
 
 ValueSet: DodInformationSource
 Id: dod-information-source
 Title: "Death date Information Source"
-Description: "The source from where the date of death was sourced"
+Description: "The source from which the date of death was obtained"
 
 * ^url = $dod-information-source-vs
 
@@ -39,7 +63,7 @@ Description: "All possible sources of information"
 * #NZRT "NZ Refugee Travel Document" "Refugee Travel document issued by DIA"
 * #NZET "NZ Emergency Travel Document" "Emergency Travel document issued by DIA"
 * #OTHR "Other" "Other official document provided that is not found in the list provided"
-* #NPRF "Proof not Sighted" "Information (not proof) provided by the patient / whānau verbally communicated. No proof sighted"
+* #NPRF "Proof not Sighted" "Information (not proof) provided by the patient / whÄ�nau verbally communicated. No proof sighted"
 * #NZPV "NZ Permanent Resident Visa" "A New Zealand Permanent Resident Visa (not time bound) issued by Immigration New Zealand"
 * #NZTV "NZ Resident Visa" "A New Zealand Resident Visa (time bound) issued by Immigration New Zealand"
 * #NZMC "NZ Marriage Certificate"

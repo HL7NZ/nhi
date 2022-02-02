@@ -26,7 +26,14 @@ Alias: $condition-on-practice-vs = https://nzhts.digital.health.nz/fhir/ValueSet
 Alias: $alias-type-vs = https://nzhts.digital.health.nz/fhir/ValueSet/alias-type-code
 
 Alias: $pr-status-reason-vs = https://nzhts.digital.health.nz/fhir/ValueSet/hpi-practitioner-role-status-reason-code
-
+Alias: $nhi-name-prefix-vs = https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code
+Alias: $nhi-name-suffix-vs = https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code
+Alias: $country-code-vs = https://nzhts.digital.health.nz/fhir/ValueSet/country-code
+Alias: $country-of-birth-vs = https://nzhts.digital.health.nz/fhir/ValueSet/country-code
+Alias: $dhb-vs = https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code
+Alias: $name-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code
+Alias: $dob-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code
+Alias: $nz-residency-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
 
 //Aliases for CodeSystems
 Alias: $dhb-code-cs = https://standards.digital.health.nz/ns/dhb-code
@@ -40,3 +47,7 @@ Alias: $ethnicity-code-cs = https://standards.digital.health.nz/ns/ethnic-group-
 Alias: $condition-on-practice-cs = https://standards.digital.health.nz/ns/condition-on-practice-code
 Alias: $alias-type-cs = https://standards.digital.health.nz/ns/alias-type-code
 Alias: $pr-status-reason-cs = https://standards.digital.health.nz/ns/hpi-practitioner-role-status-reason-code
+Alias: $name-prefix-cs = https://standards.digital.health.nz/ns/name-prefix-code
+Alias: $name-suffix-cs = https://standards.digital.health.nz/ns/name-suffix-code
+Alias: $country-code-cs = https://standards.digital.health.nz/ns/country-code
+Alias: $dhb-cs = https://standards.digital.health.nz/ns/dhb-code

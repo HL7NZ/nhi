@@ -12,16 +12,21 @@ The [FHIR spec](http://hl7.org/fhir/terminology-module.html) has much more detai
 <table class='table table-bordered table-condensed'>
 <tr><th>ValueSet</th><th>Purpose</th><th>Canonical url</th></tr>
 <tr><td width='20%'>Address Not Validated reason</td><td><p>The reason why the address was not validated</p></td><td><a href='ValueSet-AddressNotValidatedReason.html'>https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code</a></td></tr>
-<tr><td width='20%'>Death date Information Source</td><td><p>The source from where the date of death was sourced</p></td><td><a href='ValueSet-dod-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code</a></td></tr>
+<tr><td width='20%'>Death date Information Source</td><td><p>The source from which the date of death was obtained</p></td><td><a href='ValueSet-dod-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code</a></td></tr>
 <tr><td width='20%'>Ethnicity of a person</td><td><p>Codes to record a person&#39;s ethnicity, drawn from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17">Level 4 of the Ethnicity code system</a></p></td><td><a href='ValueSet-ethnicity.html'>https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code</a></td></tr>
 <tr><td width='20%'>Gender codes including Indeterminate</td><td><p>Additional sex values for Patient</p></td><td><a href='ValueSet-nz-additional-sex-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code</a></td></tr>
-<tr><td width='20%'>Information Source</td><td><p>The source from where the value of this item was sourced</p></td><td><a href='ValueSet-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code</a></td></tr>
+<tr><td width='20%'>Information Source</td><td><p>The source from where the value of this item was obtained</p></td><td><a href='ValueSet-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code</a></td></tr>
 <tr><td width='20%'>NZ Citizenship status</td><td><p>Citizenship status</p></td><td><a href='ValueSet-citizenship-status.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code</a></td></tr>
 <tr><td width='20%'>NZ Residency status</td><td><p>Is the person a NZ resident</p></td><td><a href='ValueSet-nz-residency-status.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-status-code</a></td></tr>
 <tr><td width='20%'>domicileCode</td><td><p>Domicile Code</p></td><td><a href='ValueSet-domicile-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code</a></td></tr>
 <tr><td width='20%'>Datum Code</td><td><p>Identifies the coordinate system used to specify points on a map</p></td><td><a href='ValueSet-datum-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/datum</a></td></tr>
-<tr><td width='20%'>AddressUse</td><td><p>Uses of the address supported by the NHI</p></td><td><a href='ValueSet-datum-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/addressUse</a></td></tr>
-<tr><td width='20%'>AddressUse</td><td><p>Types ofaddress supported by the NHI</p></td><td><a href='ValueSet-datum-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/addressType</a></td></tr>
+<tr><td width='20%'>Address Use</td><td><p>Uses of the address supported by the NHI</p></td><td><a href='ValueSet-address-use-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/addressUse</a></td></tr>
+<tr><td width='20%'>Address Type</td><td><p>Types of address supported by the NHI</p></td><td><a href='ValueSet-address-tytpe-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/addressType</a></td></tr>
+<tr><td width='20%'>DHB Code</td><td><p>District Health Board codes</p></td><td><a href='ValueSet-dhb-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code</a></td></tr>
+<tr><td width='20%'>Name Information Source</td><td><p>The source from which the name was obtained</p></td><td><a href='ValueSet-name-source-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code</a></td></tr>
+<tr><td width='20%'>Date of Birth Information Source</td><td><p>The source from which the value of the date of birth was obtained</p></td><td><a href='ValueSet-dob-source-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code</a></td></tr>
+<tr><td width='20%'>NZ Residency Information Source</td><td><p>The source from which the value of the NZ residency information was obtained</p></td><td><a href='ValueSet-nz-residency-source-code.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code</a></td></tr>
+
 </table>
 <br/><br/>
 ### CodeSystems

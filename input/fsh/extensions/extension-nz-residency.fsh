@@ -18,7 +18,7 @@ Description: "NZ Residency status"
 
 * extension[source] ^definition = "The source of information concerning the residency"
 * extension[source].value[x] only CodeableConcept
-* extension[source].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code (required)
+* extension[source].valueCodeableConcept from $nz-residency-information-source-vs (required)
 
 
 //* value[x] only CodeableConcept

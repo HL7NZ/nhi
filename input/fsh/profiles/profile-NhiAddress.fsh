@@ -49,7 +49,8 @@ Description:    "Adds additional, NHI specific extensions"
 
 //valueset restrictions
 * use from  https://nzhts.digital.health.nz/fhir/ValueSet/addressUse
-* type from  https://nzhts.digital.health.nz/fhir/ValueSet/addressUse
+* type from  https://nzhts.digital.health.nz/fhir/ValueSet/addressType
+* country from https://standards.digital.health.nz/ns/country-code
 
 
 * extension[notValidatedAddressReason] ^short = "The reason an address was not validated"
