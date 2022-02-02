@@ -3,7 +3,6 @@ ValueSet: InformationSource
 Id: information-source
 Title: "Information Source"
 Description: "The source from which the value of this item was obtained"
-
 * ^url = $information-source-vs
 * codes from system $information-source-cs
 
@@ -11,7 +10,6 @@ ValueSet: NameInformationSource
 Id: name-information-source
 Title: "Name Information Source"
 Description: "The source from which the name was obtained"
-
 * ^url = $name-information-source-vs
 * codes from system $information-source-cs
 
@@ -19,15 +17,20 @@ ValueSet: DobInformationSource
 Id: dob-information-source
 Title: "DoB Information Source"
 Description: "The source from which the value of the date of birth was obtained"
-
 * ^url =  $dob-information-source-vs
+* codes from system $information-source-cs
+
+ValueSet: NzCitizenshipInformationSource
+Id: nz-citizenship-information-source
+Title: "NZ Citizenship  Information Source"
+Description: "The source from which the NZ Citizenship status was obtained"
+* ^url =  $nz-citizenship-information-source-vs
 * codes from system $information-source-cs
 
 ValueSet: NzResidencyInformationSource
 Id: nz-residency-information-source
 Title: "NZ Residency Information Source"
 Description: "The source from which the NZ residency information  was obtained"
-
 * ^url =  $nz-residency-information-source-vs
 * codes from system $information-source-cs
 
@@ -36,7 +39,6 @@ ValueSet: DodInformationSource
 Id: dod-information-source
 Title: "Death date Information Source"
 Description: "The source from which the date of death was obtained"
-
 * ^url = $dod-information-source-vs
 
 * $information-source-cs#DREG "Death Register"
