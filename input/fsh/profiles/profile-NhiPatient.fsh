@@ -53,6 +53,8 @@ Description:    "The Patient resource exposed by the NHI."
     $nzResidency named nzResidency 0..1
 
 * extension[nzCitizen] ^short = "Is this person a New Zealand citizen"
+* extension[nzCitizen].extension[source].valueCodeableConcept from $nz-citizenship-information-source-vs
+
 * extension[dhb].value[x] only CodeableConcept
 * extension[dhb].valueCodeableConcept from $dhb-vs
    
