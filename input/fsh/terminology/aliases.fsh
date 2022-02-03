@@ -35,6 +35,7 @@ Alias: $name-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueS
 Alias: $dob-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code
 Alias: $nz-residency-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
 Alias: $nz-citizenship-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
+Alias: $datum-vs = https://nzhts.digital.health.nz/fhir/ValueSetdatum-code
 
 //Aliases for CodeSystems
 Alias: $dhb-code-cs = https://standards.digital.health.nz/ns/dhb-code
@@ -52,3 +53,4 @@ Alias: $name-prefix-cs = https://standards.digital.health.nz/ns/name-prefix-code
 Alias: $name-suffix-cs = https://standards.digital.health.nz/ns/name-suffix-code
 Alias: $country-code-cs = https://standards.digital.health.nz/ns/country-code
 Alias: $dhb-cs = https://standards.digital.health.nz/ns/dhb-code
+Alias: $datum-cs = https://standards.digital.health.nz/ns/datum-code
