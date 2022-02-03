@@ -5,7 +5,7 @@ Extension: NhiNzGeocode
 Id: nhi-nz-geocode
 Title: "NHI NZ Geocode"
 Parent: http://hl7.org.nz/fhir/StructureDefinition/nz-geocode
-Description: " but adds an explicit  datam code"
+Description: " Adds an explicit  datum code to nz-geocode"
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode"
 * ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 * ^context[0].type = #element

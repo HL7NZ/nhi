@@ -23,16 +23,24 @@ Description: "The source from which the value of the date of birth was obtained"
 ValueSet: NzCitizenshipInformationSource
 Id: nz-citizenship-information-source
 Title: "NZ Citizenship  Information Source"
-Description: "The source from which the NZ Citizenship status was obtained"
+Description: "The source from which the NZ Citizenship statuswas obtained"
 * ^url =  $nz-citizenship-information-source-vs
 * codes from system $information-source-cs
 
 ValueSet: NzResidencyInformationSource
 Id: nz-residency-information-source
 Title: "NZ Residency Information Source"
-Description: "The source from which the NZ residency information  was obtained"
+Description: "The source from which the NZ residency information was obtained"
 * ^url =  $nz-residency-information-source-vs
 * codes from system $information-source-cs
+
+ValueSet: CountryOfBirthSource
+Id: country-of-birth-information-source
+Title: "Country Of Birth Information Source"
+Description: "The source from which the country of birth information was obtained"
+* ^url =  $country-of-birth-information-source-vs
+* codes from system $information-source-cs
+
 
 
 ValueSet: DodInformationSource
