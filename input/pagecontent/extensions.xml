@@ -13,12 +13,12 @@
 <td></td>
 </tr>
 <tr>
-<td><a href='StructureDefinition-esam-id.html'>esam-id</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/esam-id</td>
+<td><a href='StructureDefinition-esam-id.html'>nz-address-id</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nz-address-id</td>
 <td>
 <div>Address</div>
 </td>
-<td><p> identifier from the eSAM address service</p></td>
+<td><p> identifier from the MoH address service</p></td>
 <td></td>
 </tr>
 <tr>
@@ -64,6 +64,15 @@
 <div>Patient</div>
 </td>
 <td><p>NZ Residency status</p></td>
+<td></td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-nz-geocode.html'>nhi-nz-geocode</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode</td>
+<td>
+<div>Address</div>
+</td>
+<td><p>Adds an explicit  datum code to nz-geocode</p></td>
 <td></td>
 </tr>
 </table>
