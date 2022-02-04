@@ -18,7 +18,7 @@ Description: "The country where the person was born"
 //* extension[country].url = "country" (exactly)
 * extension[country] ^definition = "The birth country."
 * extension[country].value[x] only CodeableConcept
-* extension[country].valueCodeableConcept from https://standards.digital.health.nz/ns/country-code
+* extension[country].valueCodeableConcept from $country-of-birth-vs
 
 //* extension[place-of-birth].url = "place-of-birth" (exactly)
 * extension[place-of-birth] ^definition = "No description"
