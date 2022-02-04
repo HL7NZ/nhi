@@ -99,6 +99,28 @@ Description:    "The Patient resource exposed by the NHI."
 * generalPractitioner only Reference(PractitionerRole)
 
 
+// The slicing for NHI has been copied from NZ-base v1.1-snapshot> Will need to reafctro when NZPatient profile is released
+
+//slicing for NHI
+
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+
+* identifier ^slicing.description = "Add NHI as a defined identifier type"
+* identifier ^slicing.rules = #openAtEnd
+
+* identifier contains 
+    NHI 0..1 MS 
+
+* identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
+* identifier[NHI].use = #official (exactly)
+* identifier[NHI].use ^short = "fixed to official"
+
+* identifier[NHI] ^short = "The currently active NHI "
+* identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
+
+//-------- end of identifier slicing --------
+
 
 
 
