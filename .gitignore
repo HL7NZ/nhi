@@ -9,3 +9,4 @@ Thumbs.db
 /temp
 /node_modules/
 /localscripts/
+/target/

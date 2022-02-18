@@ -1,14 +1,10 @@
-# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
-# │                                                                                                │
-# │  This file was generated from your existing project files and will be used for SUSHI           │
-# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+
+# ╭────────────────────────────ImplementationGuide-hl7.org.nz.hpi.json─────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭────────────────────────────ImplementationGuide-hl7.org.nz.nhi.json─────────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
 version: 0.1.0
@@ -22,13 +18,14 @@ description: The FHIRb  API for the NHI
 license: CC0-1.0
 
 dependencies:
-  #hl7.org.nz.fhir.ig.base:
-  fhir.org.nz.ig.base:
-   #uri: http://build.fhir.org/ig/HL7NZ/nzbase/branches/master
-   uri: https://fhir.org.nz/ig/base
-   #version: 1.0.0
-   version: 1.0.0
-  
+   fhir.org.nz.ig.base:
+     uri: 'http://fhir.org.nz/ig/base'
+     version: 1.0.0
+     
+   hl7.org.nz.fhir.ig.hip-core:
+     uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
+     version: 1.0.0
+     
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false

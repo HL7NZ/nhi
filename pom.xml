@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>nhi-HL7NZ</groupId>
+	<artifactId>nhi-HL7NZ</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<properties>
+		<revision>0.9-SNAPSHOT</revision>
+		<fhir-common.version>1.0.45</fhir-common.version>
+
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>health.identity.fhir</groupId>
+			<artifactId>hip-fhir-common</artifactId>
+			<version>${fhir-common.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>unpack-codesets</id>
+						<phase>package<!-- or any other valid maven phase --></phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>health.identity.fhi</includeGroupIds>
+							<includeArtifactIds>hip-fhir-common</includeArtifactIds>
+							<outputDirectory>
+								${project.build.directory}/temp2
+								<!-- or: ${project.basedir}/wherever/you/want/it -->
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
