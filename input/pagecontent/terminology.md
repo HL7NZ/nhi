@@ -26,7 +26,7 @@ The [FHIR spec](http://hl7.org/fhir/terminology-module.html) has much more detai
 <tr><td width='20%'>Name Information Source</td><td><p>The source from which the name was obtained</p></td><td><a href='ValueSet-name-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code</a></td></tr>
 <tr><td width='20%'>Date of Birth Information Source</td><td><p>The source from which the value of the date of birth was obtained</p></td><td><a href='ValueSet-dob-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code</a></td></tr>
 <tr><td width='20%'>NZ Residency Information Source</td><td><p>The source from which the value of the NZ residency information was obtained</p></td><td><a href='ValueSet-nz-residency-information-source.html'>https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code</a></td></tr>
-<tr><td width='20%'>Name Prefix codes</td><td><p>Types of name prefixes used by NHI</p></td><td><a href='ValueSet-nhi-name-prefix.html'>https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code</a></td></tr>
+<tr><td width='20%'>Name Prefix codes</td><td><p>Types of name prefixes used by NHI</p></td><td><a href='ValueSet-nhi-name-prefix.html'>https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/ValueSet-name-prefix-2.0</a></td></tr>
 <tr><td width='20%'>Name Suffix codes</td><td><p>Types of name suffixes used by NHI</p></td><td><a href='ValueSet-nhi-name-suffix.html'>https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code</a></td></tr>
 <tr><td width='20%'>Country of birth</td><td><p>Country codes for country of birth</p></td><td><a href='ValueSet-country-of-birth.html'>https://nzhts.digital.health.nz/fhir/ValueSet/country-code</a></td></tr>
 
