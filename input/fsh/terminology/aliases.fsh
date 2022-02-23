@@ -38,7 +38,7 @@ Alias: $nz-residency-information-source-vs = https://nzhts.digital.health.nz/fhi
 Alias: $nz-citizenship-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
 Alias: $datum-vs = https://nzhts.digital.health.nz/fhir/ValueSetdatum-code
 Alias: $nhi-identifier-use-code-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use-code
-Alias: $nhi-address-use = https://nzhts.digital.health.nz/fhir/ValueSet/addressUse
+Alias: $nhi-address-use = https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse
 Alias: $nhi-address-type = https://nzhts.digital.health.nz/fhir/ValueSet/addressType
 
 //Aliases for CodeSystems

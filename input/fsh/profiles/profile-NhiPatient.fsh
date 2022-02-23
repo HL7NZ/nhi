@@ -100,7 +100,7 @@ Description:    "The Patient resource exposed by the NHI."
 
 //slicing for NHI
 
-* identifier.system from https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use 
+* identifier.system from  $nhi-identifier-use-code-vs 
 
 * identifier.use from $nhi-identifier-use-code-vs
 * identifier.use ^short = "official | old"

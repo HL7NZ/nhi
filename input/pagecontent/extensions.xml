@@ -4,21 +4,21 @@
 <tr><th>Id</th><th>Url</th><th>Context of Use</th><th>Description</th><th>Purpose</th>
 </tr>
 <tr>
+<td><a href='StructureDefinition-address-id.html'>address-id</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nz-address-id</td>
+<td>
+<div>Address</div>
+</td>
+<td><p>Uniquely identifies this address as a physical entity. Will remain constant over time even if address administrative data such as DPID change</p></td>
+<td></td>
+</tr>
+<tr>
 <td><a href='StructureDefinition-birth-place.html'>birth-place</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/birth-place</td>
 <td>
 <div>Patient</div>
 </td>
 <td><p>The country where the person was born</p></td>
-<td></td>
-</tr>
-<tr>
-<td><a href='StructureDefinition-esam-id.html'>nz-address-id</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/nz-address-id</td>
-<td>
-<div>Address</div>
-</td>
-<td><p> identifier from the MoH address service</p></td>
 <td></td>
 </tr>
 <tr>
@@ -49,6 +49,15 @@
 <td></td>
 </tr>
 <tr>
+<td><a href='StructureDefinition-nhi-nz-geocode.html'>nhi-nz-geocode</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode</td>
+<td>
+<div>Address</div>
+</td>
+<td><p> Adds an explicit  datum code to nz-geocode</p></td>
+<td></td>
+</tr>
+<tr>
 <td><a href='StructureDefinition-not-validated-address-reason.html'>not-validated-address-reason</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason</td>
 <td>
@@ -66,28 +75,11 @@
 <td><p>NZ Residency status</p></td>
 <td></td>
 </tr>
-<tr>
-<td><a href='StructureDefinition-nz-geocode.html'>nhi-nz-geocode</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode</td>
-<td>
-<div>Address</div>
-</td>
-<td><p>Adds an explicit  datum code to nz-geocode</p></td>
-<td></td>
-</tr>
 </table>
 <a name="externalExtensions"> </a>
 <h3>Extensions used but defined elsewhere</h3>
 <table width='100%' border='1' cellspacing='0' cellpadding='5px'>
 <tr><th>Path</th><th>Url</th><th>Description</th><th>IG where defined</th></tr>
-<tr>
-<td>Address</td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/nz-geocode</td>
-<td><p>New Zealand Geocode. This uses a different datum from that defined in the HL7 FHIR specification for a Geocode.</p></td>
-<td>
-<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-nz-geocode.html'>NZ base</a></div>
-</td>
-</tr>
 <tr>
 <td>Address</td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/suburb</td>
@@ -128,6 +120,14 @@
 <td><p>New Zealand citizenship</p></td>
 <td>
 <div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-nz-citizenship.html'>NZ base</a></div>
+</td>
+</tr>
+<tr>
+<td>Patient</td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/dhb</td>
+<td><p>District Health Board relating to a NZ Healthcare Service, Location (Facility) or Patient (primary, physical home address).</p></td>
+<td>
+<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-dhb.html'>NZ base</a></div>
 </td>
 </tr>
 <tr>
