@@ -16,7 +16,7 @@
 </td>
 </tr>
 <tr>
-<td><a href="ValueSet-Datum.html">https://nzhts.digital.health.nz/fhir/ValueSetdatum-code</a> </td>
+<td><a href="ValueSet-Datum.html">https://nzhts.digital.health.nz/fhir/ValueSet/datum-code</a> </td>
 <td> <p>Identifies the coordinate system used to specify points on a map</p> </td>
 <td>
 <div>Address.extension.extension.value[x]</div>
@@ -55,8 +55,8 @@
 </td>
 </tr>
 <tr>
-<td><a href="ValueSet-nz-residency-information-source.html">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code</a> </td>
-<td> <p>The source from which the NZ residency information was obtained</p> </td>
+<td><a href="ValueSet-nz-citizenship-information-source.html">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code</a> </td>
+<td> <p>The source from which the NZ Citizenship status was obtained</p> </td>
 <td>
 </td>
 </tr>
@@ -156,6 +156,12 @@
 <tr>
 <td><a href="ValueSet-nz-residency-status.html">https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-status-code</a> </td>
 <td> <p>Is the person a NZ resident</p> </td>
+<td>
+</td>
+</tr>
+<tr>
+<td><a href="ValueSet-nz-residency-information-source.html">https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-source-code</a> </td>
+<td> <p>The source from which the NZ residency information was obtained</p> </td>
 <td>
 </td>
 </tr>
