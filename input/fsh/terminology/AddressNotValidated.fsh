@@ -7,7 +7,7 @@ Description: "The reason why the address was not validated"
 CodeSystem: AddressNotValidated
 Title: "Address Not Validated reason"
 Description: "The reason why the address was not validated"
-* ^url = $address-not-validated-reason-code
+* ^url = $nhi-address-not-validated-reason-code
 
 * #OSEA "Overseas address"
 * #UKWN "Address unknown"

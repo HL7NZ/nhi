@@ -23,7 +23,7 @@ Description: "The source from which the value of the date of birth was obtained"
 ValueSet: NzCitizenshipInformationSource
 Id: nz-citizenship-information-source
 Title: "NZ Citizenship  Information Source"
-Description: "The source from which the NZ Citizenship statuswas obtained"
+Description: "The source from which the NZ Citizenship status was obtained"
 * ^url =  $nz-citizenship-information-source-vs
 * codes from system $information-source-cs
 
