@@ -38,11 +38,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <p>Additional sex values for Patient</p> </td>
 <td> <a href="https://standards.digital.health.nz/ns/nz-additional-sex-code">https://standards.digital.health.nz/ns/nz-additional-sex-code</a></td>
 </tr>
-<tr>
-<td><a href="CodeSystem-nz-residency-status.html">NZ Residency status-0.10.0</a> </td>
-<td> <p>NZ Residency status</p> </td>
-<td> <a href="https://standards.digital.health.nz/ns/nz-residency-status-code">https://standards.digital.health.nz/ns/nz-residency-status-code</a></td>
-</tr>
 </table>
 <h3>ValueSets</h3>
 <table class='table table-bordered table-condensed'>
@@ -105,11 +100,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td><a href="ValueSet-nz-additional-sex-code.html">Gender codes including Indeterminate-0.10.0</a> </td>
 <td> <p>Additional sex values for Patient</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-nz-residency-status.html">NZ Residency status-0.10.0</a> </td>
-<td> <p>Is the person a NZ resident</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-status-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-status-code</a></td>
 </tr>
 </table>
 <h3>Concept Maps</h3>
