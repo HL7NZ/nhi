@@ -29,11 +29,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://standards.digital.health.nz/ns/ethnic-group-level-4-code">https://standards.digital.health.nz/ns/ethnic-group-level-4-code</a></td>
 </tr>
 <tr>
-<td><a href="CodeSystem-information-source.html">Information Source-0.10.0</a> </td>
-<td> <p>All possible sources of information</p> </td>
-<td> <a href="https://standards.digital.health.nz/ns/information-source-code">https://standards.digital.health.nz/ns/information-source-code</a></td>
-</tr>
-<tr>
 <td><a href="CodeSystem-name-suffix.html">Name suffix codes-0.10.0</a> </td>
 <td> <p>Types of name suffixes used by NH</p> </td>
 <td> <a href="https://standards.digital.health.nz/ns/name-suffix-code">https://standards.digital.health.nz/ns/name-suffix-code</a></td>
@@ -62,11 +57,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code</a></td>
 </tr>
 <tr>
-<td><a href="ValueSet-country-of-birth-information-source.html">Country Of Birth Information Source-0.10.0</a> </td>
-<td> <p>The source from which the country of birth information was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/country-of-birth-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/country-of-birth-source-code</a></td>
-</tr>
-<tr>
 <td><a href="ValueSet-Datum.html">Datum Code-0.10.0</a> </td>
 <td> <p>Identifies the coordinate system used to specify points on a map</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/datum-code">https://nzhts.digital.health.nz/fhir/ValueSet/datum-code</a></td>
@@ -77,16 +67,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code">https://nzhts.digital.health.nz/fhir/ValueSet/dhb-code</a></td>
 </tr>
 <tr>
-<td><a href="ValueSet-dob-information-source.html">DoB Information Source-0.10.0</a> </td>
-<td> <p>The source from which the value of the date of birth was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-dod-information-source.html">Death date Information Source-0.10.0</a> </td>
-<td> <p>The source from which the date of death was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code</a></td>
-</tr>
-<tr>
 <td><a href="ValueSet-domicile-code.html">domicileCode-0.10.0</a> </td>
 <td> <p>Domicile Code</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code">https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code</a></td>
@@ -95,16 +75,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td><a href="ValueSet-ethnicity.html">Ethnicity of a person-0.10.0</a> </td>
 <td> <p>Codes to record a person&#39;s ethnicity, drawn from <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17">Level 4 of the Ethnicity code system</a></p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code">https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-information-source.html">Information Source-0.10.0</a> </td>
-<td> <p>The source from which the value of this item was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/information-source-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-name-information-source.html">Name Information Source-0.10.0</a> </td>
-<td> <p>The source from which the name was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code</a></td>
 </tr>
 <tr>
 <td><a href="ValueSet-nhi-address-type.html">NHI Address Type Codes-0.10.0</a> </td>
@@ -135,16 +105,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td><a href="ValueSet-nz-additional-sex-code.html">Gender codes including Indeterminate-0.10.0</a> </td>
 <td> <p>Additional sex values for Patient</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-nz-citizenship-information-source.html">NZ Citizenship  Information Source-0.10.0</a> </td>
-<td> <p>The source from which the NZ Citizenship status was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-nz-residency-information-source.html">NZ Residency Information Source-0.10.0</a> </td>
-<td> <p>The source from which the NZ residency information was obtained</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-source-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-residency-source-code</a></td>
 </tr>
 <tr>
 <td><a href="ValueSet-nz-residency-status.html">NZ Residency status-0.10.0</a> </td>

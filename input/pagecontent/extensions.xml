@@ -123,14 +123,6 @@
 </td>
 </tr>
 <tr>
-<td>Patient</td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/dhb</td>
-<td><p>District Health Board relating to a NZ Healthcare Service, Location (Facility) or Patient (primary, physical home address).</p></td>
-<td>
-<div><a href='http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/StructureDefinition-dhb.html'>NZ base</a></div>
-</td>
-</tr>
-<tr>
 <td>Patient.name</td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/information-source</td>
 <td><p>The official source of information held about a patient.</p></td>

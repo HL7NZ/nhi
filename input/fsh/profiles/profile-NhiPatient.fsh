@@ -49,15 +49,15 @@ Description:    "The Patient resource exposed by the NHI."
 * extension contains 
     $ethnicity named ethnicity 0..6 and
     $nzCitizen named nzCitizen 0..1 and
-    $dhb named dhb 0..1 and 
+    //$dhb named dhb 0..1 and 
     $birthPlace named birthPlace 0..1 and
     $nzResidency named nzResidency 0..1
 
 * extension[nzCitizen] ^short = "Is this person a New Zealand citizen"
 * extension[nzCitizen].extension[source].valueCodeableConcept from $nz-citizenship-information-source-vs
 
-* extension[dhb].value[x] only CodeableConcept
-* extension[dhb].valueCodeableConcept from $dhb-vs
+//* extension[dhb].value[x] only CodeableConcept
+//* extension[dhb].valueCodeableConcept from $dhb-vs
    
 //Name is required, and there are extensions for source, and isPreferred
 * name  1..*
@@ -100,7 +100,7 @@ Description:    "The Patient resource exposed by the NHI."
 
 //slicing for NHI
 
-* identifier.system from  $nhi-identifier-use-code-vs 
+* identifier.system from https://standards.digital.health.nz/ns/nhi-id
 
 * identifier.use from $nhi-identifier-use-code-vs
 * identifier.use ^short = "official | old"
