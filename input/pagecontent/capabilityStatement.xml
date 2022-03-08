@@ -25,17 +25,8 @@
 </tr>
 <tr>
 <td>search-type</td>
-<td><p>There are restrictions on use - ie some search elements are required</p>
+<td><p>Not yet enabled</p>
 </td>
-</tr>
-</table>
-<strong>Search Parameters</strong>
-<table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
-<tr>
-<td>birthDate</td>
-<td><a target='_blank' href="http://hl7.org/fhir/search.html#date">date</a></td>
-<td></td>
 </tr>
 </table>
 </div>

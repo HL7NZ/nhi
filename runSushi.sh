@@ -14,7 +14,7 @@ echo "Making terminology summary"   # will copy into IG input folder
 ./localscripts/makeTerminologySummary.js nhi
 
 echo "Making API summary"
-./localscripts/makeCapabilityStatement.js nhi
+./localscripts/makeCapabilityStatement.js .
 
 #echo "Making NamingSystem summary"
 #../scripts/makeNamingSystemSummary.js nhi
