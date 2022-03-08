@@ -12,9 +12,9 @@ Usage: #definition
 * implementation.description = "HPI system"
 * implementationGuide = "http://hl7.org.nz/fhir/StructureDefinition/NHI"
 * publisher = "New Zealand Ministry of Health"
-* contact.name = "David Hay"
+* contact.name = "Pat Ryan"
 * contact.telecom.system = #email
-* contact.telecom.value = "david.hay25@gmail.com"
+* contact.telecom.value = "pat.ryan@health.govt.nz"
 * description = "A FHIR API in front of the New Zealand NHI"
 * rest.mode = #server
 
@@ -26,9 +26,9 @@ Usage: #definition
 * rest.resource.interaction[2].code = #create
 * rest.resource.interaction[2].documentation = "Not yet enabled. Security will be applied to create operations"
 * rest.resource.interaction[3].code = #search-type
-* rest.resource.interaction[3].documentation = "There are restrictions on use - ie some search elements are required"
+* rest.resource.interaction[3].documentation = "Not yet enabled"
 
-* rest.resource.searchParam.name = "name"
-* rest.resource.searchParam.type = #string
-* rest.resource.searchParam.name = "birthDate"
-* rest.resource.searchParam.type = #date
+// * rest.resource.searchParam.name = "name"
+// * rest.resource.searchParam.type = #string
+// * rest.resource.searchParam.name = "birthDate"
+// * rest.resource.searchParam.type = #date

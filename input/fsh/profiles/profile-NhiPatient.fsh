@@ -67,8 +67,8 @@ Description:    "The Patient resource exposed by the NHI."
 
 // using HISO codesets
 * name.extension[information-source].valueCodeableConcept from  $name-information-source-vs
-* name.prefix from $nhi-name-prefix-vs
-* name.suffix from $nhi-name-suffix-vs 
+* name.prefix from $name-prefix-vs
+* name.suffix from $name-suffix-vs 
 
 //The gender has an extension for the original text that was used to establish it (eg from a form)
 * gender.extension contains 
@@ -115,16 +115,17 @@ Description:    "The Patient resource exposed by the NHI."
     NHI 1..1 MS and 
 	dormant 0..* MS
 	 
+* identifier[NHI].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[NHI].use = #official (exactly)
 * identifier[NHI].use ^short = "fixed to official"
 * identifier[NHI] ^short = "The currently active NHI "
 * identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
 
+* identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[dormant].use = #old (exactly)
 * identifier[dormant].use ^short = "fixed to old"
 * identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
 * identifier[dormant] ^definition = "An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant’."
-
 
 
 //-------- end of identifier slicing --------

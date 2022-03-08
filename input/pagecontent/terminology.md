@@ -29,11 +29,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://standards.digital.health.nz/ns/ethnic-group-level-4-code">https://standards.digital.health.nz/ns/ethnic-group-level-4-code</a></td>
 </tr>
 <tr>
-<td><a href="CodeSystem-name-suffix.html">Name suffix codes-0.10.0</a> </td>
-<td> <p>Types of name suffixes used by NH</p> </td>
-<td> <a href="https://standards.digital.health.nz/ns/name-suffix-code">https://standards.digital.health.nz/ns/name-suffix-code</a></td>
-</tr>
-<tr>
 <td><a href="CodeSystem-nz-additional-sex-code.html">Patient citizenship status-0.10.0</a> </td>
 <td> <p>Additional sex values for Patient</p> </td>
 <td> <a href="https://standards.digital.health.nz/ns/nz-additional-sex-code">https://standards.digital.health.nz/ns/nz-additional-sex-code</a></td>
@@ -80,16 +75,6 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td><a href="ValueSet-nhi-address-use.html">NHI Address Use Codes-0.10.0</a> </td>
 <td> <p>Uses of the address supported by the NHI</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse">https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-nhi-name-prefix.html">Name Prefix codes-0.10.0</a> </td>
-<td> <p>Types of name prefixes used by NHI</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code">https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code</a></td>
-</tr>
-<tr>
-<td><a href="ValueSet-nhi-name-suffix.html">Name Suffix codes-0.10.0</a> </td>
-<td> <p>Types of name suffixes used by  NHI</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code">https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code</a></td>
 </tr>
 <tr>
 <td><a href="ValueSet-NhiIdentifierUse.html">NHI Identifier-0.10.0</a> </td>
