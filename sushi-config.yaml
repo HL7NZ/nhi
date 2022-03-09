@@ -12,9 +12,9 @@ name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
 publisher:
-  name: David Hay
-  email: mailto:david.hay25@gmail.com
-description: The FHIRb  API for the NHI
+ name: Ministry of Health
+ email: mailto:integration@health.govt.nz
+description: The FHIR  API for the NHI
 license: CC0-1.0
 
 dependencies:
@@ -24,14 +24,14 @@ dependencies:
      
    hl7.org.nz.fhir.ig.hip-core:
      #uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
-     uri: 'https://dev.d3ox9vcqia2rpj.amplifyapp.com/site'
+     uri: 'https:ig-nhi.hip-uat.digital.health.nz'
      version: 1.0.0
      
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
-releaseLabel: CI Build
+releaseLabel: Release R1
 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
