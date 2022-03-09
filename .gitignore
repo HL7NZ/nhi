@@ -7,3 +7,6 @@ Thumbs.db
 /output
 /template
 /temp
+/node_modules/
+/localscripts/
+/target/

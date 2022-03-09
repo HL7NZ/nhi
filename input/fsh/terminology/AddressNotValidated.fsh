@@ -3,12 +3,11 @@ Title: "Address Not Validated reason"
 Description: "The reason why the address was not validated"
 * ^url = https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code
 
-* codes from system https://standards.digital.health.nz/ns/address-not-validated-reason-code
-
+* codes from system $nhi-address-not-validated-reason-code
 CodeSystem: AddressNotValidated
 Title: "Address Not Validated reason"
 Description: "The reason why the address was not validated"
-* ^url = https://standards.digital.health.nz/ns/address-not-validated-reason-code
+* ^url = $nhi-address-not-validated-reason-code
 
 * #OSEA "Overseas address"
 * #UKWN "Address unknown"

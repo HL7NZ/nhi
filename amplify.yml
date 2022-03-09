@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: 
+        - mkdir ig
+        - cd ig
+        - unzip ../output/full-ig.zip
+        - cp ../output/full-ig.zip ./site/full-ig.zip
+        - ls 
+        - ls ./site
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /ig/site
+    files:
+        - '**/*'
+  cache:
+    paths: []

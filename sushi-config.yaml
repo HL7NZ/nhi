@@ -1,34 +1,37 @@
-# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
-# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
-# │                                                                                                │
-# │  This file was generated from your existing project files and will be used for SUSHI           │
-# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+
+# ╭────────────────────────────ImplementationGuide-hl7.org.nz.hpi.json─────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭────────────────────────────ImplementationGuide-hl7.org.nz.nhi.json─────────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 0.1.0
+version: 0.10.0
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
 publisher:
-  name: David Hay
-  email: mailto:david.hay25@gmail.com
-description: The FHIRb  API for the NHI
+ name: Ministry of Health
+ email: mailto:integration@health.govt.nz
+description: The FHIR  API for the NHI
 license: CC0-1.0
 
 dependencies:
-  hl7.org.nz.fhir.ig.base: dev
-  
+   fhir.org.nz.ig.base:
+     uri: 'http://fhir.org.nz/ig/base'
+     version: 1.0.0
+     
+   hl7.org.nz.fhir.ig.hip-core:
+     #uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
+     uri: 'https:ig-nhi.hip-uat.digital.health.nz'
+     version: 1.0.0
+     
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
-releaseLabel: CI Build
+releaseLabel: Release R1
 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
