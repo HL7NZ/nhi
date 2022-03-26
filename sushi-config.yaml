@@ -39,6 +39,9 @@ releaseLabel: Release R1
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
+  Business View: businessView.html
+  Use cases: usecases.html
+  Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
   API: capabilityStatement.html
   Profiles: profiles.html
   Extensions: extensions.html
