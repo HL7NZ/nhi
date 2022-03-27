@@ -52,3 +52,92 @@ Provide the following details in a test report and email to [integration@health.
 
 #### NHI Patient GET
 
+<h3>NHI Patient GET</h3>
+<table>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+<tr>
+<td>NHI-GET-1</td>
+<td>System displays the minimum patient information required to confirm identity:
+<ul style=“list-style-type:square”>
+
+<li>Preferred name including Given Name, Other Given Name(s), Surname</li>
+<li>Date of Birth</li>
+<li>Gender</li>
+<li>Primary Address</li>
+<li>Date of Death</li>
+</ul>
+</td>
+<td>ZAT2348</td>
+<td>1.	Minimum identity information is displayed for the patient</td>
+<td>Mandatory</td>
+<tr>
+<td>NHI-GET-2</td>
+<td>System can display all other identity data returned by the NHI in a GET response including:
+<ul style=“list-style-type:square”>
+
+<li>All patient names with all name parts</li>
+<li>Name Information Source</li>
+<li>Date of Birth Information Source</li>
+<li>Ethnicity information</li>
+<li>All patient addresses and address parts</li>
+<li>All Contacts</li>
+<li>NZ Citizenship status</li>
+<li>Country of Birth</li>
+<li>Country of Birth source</li>
+<li>Place of Birth</li>
+</ul>
+</td>
+<td>ZAT2364</td>
+<td>1. All identity information is displayed for the patient. The patient:
+<ul style=“list-style-type:square”>
+
+<li>Is alive</li>
+<li>Has 3 names - a ‘baby of’  name, maiden name, preferred name</li>
+<li>The preferred name should have all name parts populated</li>
+<li>Has two residential addresses, the primary address is overseas and the other residential address is in NZ</li>
+<li>Has a mailing address</li>
+<li>Has six ethnicities</li>
+<li>Is an NZ citizen</li>
+</ul>
+</td>
+<td>Mandatory</td>
+<tr>
+<td>NHI-GET-3</td>
+<td>This test is the same as HI-GET-2 but is for a patient that has information not covered in HI-GET-2<br>
+System can display all other identity data returned by the NHI in a GET response including:
+<ul style=“list-style-type:square”>
+<li>A no fixed abode primary address</li>
+<li>A live NHI and two Dormant NHIs</li>
+<li>A year of birth and a year and month of death (partial dates)</li>
+<li>Unknown citizenship</li>
+</ul>
+</td>
+<td>ZAT2496</td>
+<td>1. All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+<ul style=“list-style-type:square”>
+
+<li>A validation status for the primary address</li>
+<li>Domicile code</li>
+<li>Partial date of death</li>
+<li>Partial date of birth</li>
+<li>Citizenship status</li>
+<li>Dormant NHIs displayed</li>
+</ul>
+</td>
+<td>Mandatory</td>
+<tr>
+<td>NHI-GET-4</td>
+<td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.
+</td>
+<td>ZAT2518</td>
+<td><ol>
+<li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+<li>Patient Live NHI returned should be ZAT2496</li>
+<li>Minimum identity information for the live NHI is displayed for the patient</li>
+</ol>
+</td>
+<td>Mandatory</td>
