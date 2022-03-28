@@ -23,19 +23,19 @@
 ### Compliance testing
 Provide the following details in a test report and email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 
-1. Tester details
-   a. Organisation Name
-   b. Application name and version
-   c.	NHI IG Version (New Zealand NHI Implementation Guide 0.10.0 - CI Build (https://0-9-snapshot.d39scuhbqd86l9.amplifyapp.com/index.html)
-   d. Test Script version
-   e. Testing start date and time and end date and time
-   f. Tester name and contact details
+1. Tester details <br />
+   a. Organisation Name <br />
+   b. Application name and version <br />
+   c.	NHI IG Version (New Zealand NHI Implementation Guide 0.10.0 - CI Build (https://0-9-snapshot.d39scuhbqd86l9.amplifyapp.com/index.html) <br />
+   d. Test Script version <br />
+   e. Testing start date and time and end date and time <br />
+   f. Tester name and contact details <br />
    g. List of interactions included in your integration (eg GET Patient)
    
-2. For each test supply screen shots of:
-   a. the input data as entered in the integrating system (“the system”)
-   b. any warnings or error messages presented by the system
-   c. the confirmation or result of the request presented by the system 
+2. For each test supply screen shots of: <br />
+   a. the input data as entered in the integrating system (“the system”) <br />
+   b. any warnings or error messages presented by the system <br />
+   c. the confirmation or result of the request presented by the system  <br />
 
 ### Tests
 
