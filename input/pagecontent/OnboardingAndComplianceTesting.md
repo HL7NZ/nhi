@@ -4,31 +4,20 @@
 
 #### To the test environment:
 
-All organisations and software vendors will be given access to the NHI GET **(and SEARCH TBD)** api operations in the NHI sandpit testing environment after completing the on-boarding process described below.
+**TBD**
 
 
 #### To the production environment:
 
-Access to the NHI GET **(and SEARCH TBD)** interactions is available to all providers listed in [Schedule 2 of the Health Information Privacy Code](https://privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/)
-
-Organisations with existing NHI Data Access and terms of use agreements will be given access to NHI GET (and SEARCH) under those agreements.
-
-Health providers without a terms of use agreement wanting access to NHI GET **(and SEARCH TBD)** will need to apply to the Ministry of Health. All consumers of the NHI are subject to the Privacy Act 1993 and the Health Information Privacy Code 2020. Privacy impact assessments and security assessments should be completed prior to applying for access to the NHI. The application will be assessed by the Ministry of Health Data Governance team and if granted an NHI Data terms of use agreement must be signed prior to credentials being issued to production.
+**TBD**
 
 
 ### On-boarding
 
-1. To apply for access to the NHI test environment email the following forms to integration@health.govt.nz
-   a. privacy impact questionnaire  
-   b. onboarding questionnaire
-   c. access request form
-   
-   The Ministry will issue credentials for the testing endpoint within **tbd** days of receiving your application.
+1. To apply for access to the NHI test environment email the following forms **(TBD)** to integration@health.govt.nz
    
 2. Submit the results of the compliance tests below to [integration@health.govt.nz](mailto:integration@health.govt.nz).
-   (The Ministry will issue a compliance test report within **tbd** days of receiving your results).
 
-3. Each organisation using an application with NHI integrated services must apply individually for access to the production environment by completing an access request form and email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 
 
 ### Compliance testing
@@ -50,35 +39,42 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Tests
 
-#### NHI Patient GET
-
 <h3>NHI Patient GET</h3>
 <table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
 <th>Expected outcome</th>
 <th>Mandatory</th></tr>
 <tr>
+
 <td>NHI-GET-1</td>
 <td>System displays the minimum patient information required to confirm identity:
-<ul style=“list-style-type:square”>
-
 <li>Preferred name including Given Name, Other Given Name(s), Surname</li>
 <li>Date of Birth</li>
 <li>Gender</li>
 <li>Primary Address</li>
-<li>Date of Death</li>
-</ul>
 </td>
 <td>ZAT2348</td>
 <td>1.	Minimum identity information is displayed for the patient</td>
 <td>Mandatory</td>
 <tr>
-<td>NHI-GET-2</td>
-<td>System can display all other identity data returned by the NHI in a GET response including:
-<ul style=“list-style-type:square”>
 
+<td>NHI-GET-2</td>
+<td>System can display the Date of Death</td>
+<td>ZAT2348</td>
+<td>1.	The System alerts the user that the patient is deceased and provides the date of death.</td>
+<td>Mandatory</td>
+<tr>
+ 
+<td>NHI-GET-3</td>
+<td>System can display all other identity data returned by the NHI in a GET response including:
 <li>All patient names with all name parts</li>
 <li>Name Information Source</li>
 <li>Date of Birth Information Source</li>
@@ -89,12 +85,9 @@ Provide the following details in a test report and email to [integration@health.
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
 <li>Place of Birth</li>
-</ul>
 </td>
 <td>ZAT2364</td>
 <td>1. All identity information is displayed for the patient. The patient:
-<ul style=“list-style-type:square”>
-
 <li>Is alive</li>
 <li>Has 3 names - a ‘baby of’  name, maiden name, preferred name</li>
 <li>The preferred name should have all name parts populated</li>
@@ -102,35 +95,31 @@ Provide the following details in a test report and email to [integration@health.
 <li>Has a mailing address</li>
 <li>Has six ethnicities</li>
 <li>Is an NZ citizen</li>
-</ul>
 </td>
 <td>Mandatory</td>
 <tr>
-<td>NHI-GET-3</td>
-<td>This test is the same as HI-GET-2 but is for a patient that has information not covered in HI-GET-2<br>
+
+<td>NHI-GET-4</td>
+<td>This test is the same as HI-GET-3 but is for a patient that has information not covered in HI-GET-3<br>
 System can display all other identity data returned by the NHI in a GET response including:
-<ul style=“list-style-type:square”>
 <li>A no fixed abode primary address</li>
 <li>A live NHI and two Dormant NHIs</li>
 <li>A year of birth and a year and month of death (partial dates)</li>
 <li>Unknown citizenship</li>
-</ul>
 </td>
 <td>ZAT2496</td>
 <td>1. All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
-<ul style=“list-style-type:square”>
-
 <li>A validation status for the primary address</li>
 <li>Domicile code</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li>
 <li>Citizenship status</li>
 <li>Dormant NHIs displayed</li>
-</ul>
 </td>
 <td>Mandatory</td>
 <tr>
-<td>NHI-GET-4</td>
+
+<td>NHI-GET-5</td>
 <td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.
 </td>
 <td>ZAT2518</td>
@@ -141,3 +130,83 @@ System can display all other identity data returned by the NHI in a GET response
 </ol>
 </td>
 <td>Mandatory</td>
+<tr>
+   
+<td>NHI-GET-6</td>
+<td>System can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
+<td>ZBE4905</td>
+<td>1.	Patient information supplied is displayed without loss of data.
+This is for a patient record that has attribute values which are the maximum allowed field length in some fields.
+The patient has the following fields fully populated in the test record (field lengths in parentheses):
+<li>A validation status for the primary address</li>
+<li>Given name (50),</li>
+<li>Other Given Name(s) (100),</li>
+<li>Surname (100),</li>
+<li>Address line 1 (100),</li>
+<li>Address lines 2-5 (50),</li>
+<li>Building name/additional details (255)</li>
+</td>
+<td>Mandatory</td>
+<tr>
+
+<td>NHI-GET-7</td>
+<td>System behaves appropriately when a new format NHI number is produced</td>
+<td>ZZZ00AX<br />
+ZGT56KB<br />
+ZHS91BR<br />
+ZHW58CN<br />
+ZLV86AX<br />
+ZBE4905</td>
+<td>1.	System does not error<br />
+2.	System returns appropriate messaging to user<td>
+<td>Mandatory</td>
+<tr>
+   
+<td>NHI-GET-8</td>
+<td>System can synchronize with local system in response to the NHI version changing.</td>
+<td>ZCX7065</td>
+<td>1.	Do a GET<br />
+2.	Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info).<br />
+3.	Do another GET<br />
+4.	Demonstrate how end use can view the difference then synchronize<td>
+<td>Mandatory</td>
+<tr>
+
+<td>NHI-GET-9</td>
+<td>System presents the address parts appropriately, including multiple addresses.</td>
+<td>ZDW0191</td>
+<td>1.	All address formats are displayed appropriately<td>
+<td>Mandatory</td>
+<tr>
+
+
+### Security and Audit Assessment
+
+All test messages will be assessed for the following
+   
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose</th>
+<th>Mandatory</th></tr>
+<tr>
+
+<td>Security 1</td>
+<td>Credentials match those issued to the testing organisation</td>
+<td>Mandatory</td>
+<tr>
+
+<td>Security 2</td>
+<td>Sending user ID is an end user ID or a CPN.</td>
+<td>Mandatory</td>
+<tr>
+
+<td>Security 3</td>
+<td>Sending user ID changes when different end users are initiating the request</td>
+<td>Mandatory</td>
+<tr>
