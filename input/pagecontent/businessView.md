@@ -11,6 +11,8 @@ The NHI ensures each person is accurately identified whenever they receive healt
 For more information click [here](https://www.health.govt.nz/our-work/health-identity/national-health-index>).
 
 
+
+
 #### What the NHI Contains
 
 The NHI holds the following information:
@@ -26,6 +28,8 @@ The NHI holds the following information:
 * date of death (if appropriate)
 
 
+
+
 #### NHI Number format
 
 **NHI numbers have one of 2 formats**
@@ -33,6 +37,7 @@ The NHI holds the following information:
 * AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2024. 
 
 For more information click [here](https://www.health.govt.nz/our-work/health-identity/national-health-index/upcoming-changes-nhi-numbers).
+
 
 
 #### Context
@@ -44,6 +49,7 @@ To maximise the benefits of the NHI all healthcare providers should;
 * update any new information provided
 
 each time a patient presents for healthcare. 
+
 
 
 #### Access
@@ -59,6 +65,8 @@ All users of the NHI are subject to the Privacy Act 1993 and the Health Informat
 
 A terms of use agreement with user organisations will be signed before access is granted to production services
 For more information see - On-boarding and Compliance IG link...
+
+
 
 
 #### Design Principles
@@ -94,6 +102,8 @@ Vendors implementing NHI web services should be familiar with the following desi
 * Use of the system for identity functions will be supported by agreed, consistent business processes for users.
 
 
+
+
 #### Expectations and Requirements
 
 The Ministry expects:
@@ -106,13 +116,21 @@ The Ministry expects:
 These expectations will be measured with a set of compliance requirements, agreed between the integrator and the Ministry.
 
 
+
+
 #### Linking - Live and Dormant Identifiers
 
 A person may have been registered on the NHI more than once and therefore have been assigned more than one NHI number. When this is discovered the records are ‘linked’. Linking means that two or more NHI numbers will always be associated with a single person. One NHI number is nominated as the LIVE number. The other numbers are referred to as DORMANT. Usually, the earliest issued NHI number is designated as the live number. All relevant information from both records is retained e.g., all names. After linking, a request using either the live or a dormant NHI number will return the same response.
 
+
+
+
 #### Case
 
 Information in the NHI is collected in mixed case and preserved in the format provided by the source.
+
+
+
 
 #### Māori macrons
 
