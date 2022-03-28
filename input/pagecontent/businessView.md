@@ -8,7 +8,7 @@ Since 1979 NHI numbers have been allocated to patients as they enter the public 
 
 The NHI ensures each person is accurately identified whenever they receive health care so that information relevant to their health care needs can be accessed. Being able to accurately identify patients and the information relating to them is crucial to good treatment decision-making by individual clinicians. The NHI ensures test results, prior clinical assessments, immunisation history and, medications etc are stored in the right patient file, and that any key medical warnings can be readily accessed in an emergency. The NHI also protects patient safety by ensuring the information clinicians obtain and act on relates to the right person and is as complete and up-to-date as possible. The NHI is the Ministry’s most widely used system and a cornerstone for the effective and efficient operation of the New Zealand Health and Disability sector. The NHI plays a key strategic role in the ongoing digitisation of healthcare and is essential to the success of interoperability initiatives such as the National Health Information Platform (HIRA).
 
-For more information click [here](https://www.health.govt.nz/our-work/health-identity/national-health-index>).
+For more information click [here](https://www.health.govt.nz/our-work/health-identity/national-health-index/national-health-index-overview).
 
 
 
