@@ -81,6 +81,7 @@
 
 ### FHIR Interactions
 
+<html>
 <h3>Overview</h3>
 <table>
 <style>
@@ -100,13 +101,14 @@ table, th, td {
 <td>**NHI-SEARCH TBD**</td>
 <td>TBD</td>
 <tr>
+</html>
 
-   
-   
+
 #### NHI FHIR interaction GET
 
 The Patient ‘Get’ interaction is initiated by a local system request for the patient record data held in the NHI for a specified NHI ID. This may follow a NHI FHIR SEARCH interaction  where the user has selected a search result and wishes to view full NHI details to confirm the identity, or may follow a local system patient enquiry.
 
+<html>
 <h3>Details</h3>
 <table>
 <style>
@@ -131,22 +133,28 @@ table, th, td {
 <td>Post condition</td>
 <td>|NHI has sent ‘NHI FHIR GET Response to Local System</td>
 <tr>
-
+</html>
+ 
 <img style="width:900px; float:none" src="NHI FHIR GET.png"/>
 
 **NHI FHIR GET processing steps:**
 1. The user supplies an NHI number for a patient to be looked up.
+ 
 2. The integrating application sends an HTTP GET request for the Patient resource using the NHI number to identify the patient whose information is being requested. E.g. GET https://nhi.api.health.govt.nz/patient/ZAT2364
-3. The request is either:
-  1) Validated (Step 4).
-  2) ALT: Validation failure. Interaction Outcome resource returned
-4. The Patient details are either:
-   1) Retrieved from the NHI (Step 5).
-   2) ALT: NHI number not found. Interaction Outcome resource returned
-5. The response either:
-   1) Contains the Patient details and is returned.
-   2) ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.
+ 
+3. The request is either:<br />
+  1) Validated (Step 4).<br />
+  2) ALT: Validation failure. Interaction Outcome resource returned<br />
+ 
+4. The Patient details are either:<br />
+   1) Retrieved from the NHI (Step 5).<br />
+   2) ALT: NHI number not found. Interaction Outcome resource returned<br />
+ 
+5. The response either:<br />
+   1) Contains the Patient details and is returned.<br />
+   2) ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.<br />
 
 
-**NHI FHIR SEARCH processing steps:**
+#### NHI FHIR interaction SEARCH
+
 * TBC
