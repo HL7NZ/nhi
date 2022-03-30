@@ -34,7 +34,7 @@ The NHI holds the following information:
 
 **NHI numbers have one of 2 formats**
 * AAANNNC (3 alpha, 3 numeric and one numeric check digit).
-* AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2024. 
+* AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025. 
 
 For more information click [here](https://www.health.govt.nz/our-work/health-identity/national-health-index/upcoming-changes-nhi-numbers).
 
@@ -74,32 +74,19 @@ For more information see - On-boarding and Compliance IG link...
 Vendors implementing NHI web services should be familiar with the following design principles.
 
 1. **All patient records will have an NHI number**
-
-* All clinical and administrative health records for a patient will have an NHI number.
- 
+  * All clinical and administrative health records for a patient will have an NHI number.
 2. **NHI is the master source of patient identity data**
-
-* The NHI is the master source of identity data for a patient. Health Provider systems will use the NHI as the source of a patient’s identity information and to confirm a patient’s NHI number.
-
-* When providers become aware that a patient’s identity information has changed, the patient’s NHI identity record must be updated. Providers will ensure the identity information in their local systems match the NHI.
-
+  * The NHI is the master source of identity data for a patient. Health Provider systems will use the NHI as the source of a patient’s identity information and to confirm a patient’s NHI number.
+  * When providers become aware that a patient’s identity information has changed, the patient’s NHI identity record must be updated. Providers will ensure the identity information in their local systems match the NHI.
 3. **All NHI users have a stewardship responsibility**
-
-* NHI data integrity is dependent on the community of health providers. All users of the NHI will ensure the patient identity information held in the NHI is current and accurate.
-
-* The Ministry ensures the NHI complies with identity standards and resolves identity conflicts where they are discovered. Every other user has an individual stewardship responsibility to ensure data is current and accurate at all times.
-
+  * NHI data integrity is dependent on the community of health providers. All users of the NHI will ensure the patient identity information held in the NHI is current and accurate.
+  * The Ministry ensures the NHI complies with identity standards and resolves identity conflicts where they are discovered. Every other user has an individual stewardship responsibility to ensure data is current and accurate at all times.
 4. **A patient may have more than one NHI number** 
-
-* A patient may have been assigned more than one NHI number. One of the NHI numbers will be LIVE, any other NHI numbers will be DORMANT. All systems managing patient records will be able to support linking and unlinking NHI identifiers.
-
-* Systems will be able to provide a single view of a patient’s health information even when a patient has more than one NHI number.
-
+  * A patient may have been assigned more than one NHI number. One of the NHI numbers will be LIVE, any other NHI numbers will be DORMANT. All systems managing patient records will be able to support linking and unlinking NHI identifiers.
+  * Systems will be able to provide a single view of a patient’s health information even when a patient has more than one NHI number.
 5. **Provider systems integrate web services to support identity functions**
-
-* Health Provider systems will integrate Patient Identity web services to accurately establish, confirm, and maintain patient identity at every point of care. 
-
-* Use of the system for identity functions will be supported by agreed, consistent business processes for users.
+  * Health Provider systems will integrate Patient Identity web services to accurately establish, confirm, and maintain patient identity at every point of care. 
+  * Use of the system for identity functions will be supported by agreed, consistent business processes for users.
 
 
 
