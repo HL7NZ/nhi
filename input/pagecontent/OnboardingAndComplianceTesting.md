@@ -39,6 +39,7 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Tests
 
+</html>
 <h3>NHI Patient GET</h3>
 <table>
 <style>
@@ -157,16 +158,18 @@ ZHS91BR<br />
 ZHW58CN<br />
 ZLV86AX<br />
 ZBE4905</td>
-<td>1.	System does not error<br />
+<td>
+1.	System does not error<br />
 2.	System returns appropriate messaging to user<td>
 <td>Mandatory</td>
 <tr>
    
 <td>NHI-GET-8</td>
-<td>System can synchronize with local system in response to the NHI version changing.</td>
+<td>System can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
-<td>1.	Do a GET<br />
-2.	Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info).<br />
+<td>
+1.	Do a GET<br />
+2.	Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info)<br />
 3.	Do another GET<br />
 4.	Demonstrate how end use can view the difference then synchronize<td>
 <td>Mandatory</td>
@@ -177,13 +180,14 @@ ZBE4905</td>
 <td>ZDW0191</td>
 <td>1.	All address formats are displayed appropriately<td>
 <td>Mandatory</td>
-<tr>
-
+<tr>  
+</html>
 
 ### Security and Audit Assessment
 
 All test messages will be assessed for the following
-   
+
+</html>
 <table>
 <style>
 table, th, td {
@@ -210,3 +214,4 @@ table, th, td {
 <td>Sending user ID changes when different end users are initiating the request</td>
 <td>Mandatory</td>
 <tr>
+</html>
