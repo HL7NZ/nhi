@@ -39,7 +39,7 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Tests
 
-</html>
+<html>
 <h3>NHI Patient GET</h3>
 <table>
 <style>
@@ -187,7 +187,7 @@ ZBE4905</td>
 
 All test messages will be assessed for the following
 
-</html>
+<html>
 <table>
 <style>
 table, th, td {
