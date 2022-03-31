@@ -9,6 +9,7 @@
 *****************************************************************************************
 {% endcomment %} -->
 
+For information about the Capability Statement click [here](https://0-11-0-snapshot.d39scuhbqd86l9.amplifyapp.com/capabilityStatement.html)
 
 There are 3 main API calls supported in this release:
 
