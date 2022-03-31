@@ -23,8 +23,8 @@ dependencies:
      version: 1.0.0
      
    hl7.org.nz.fhir.ig.hip-core:
-     #uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
-     uri: 'https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/ImplementationGuide/ig.hip.digital.health.nz.base'
+     uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
+     #uri: 'https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/ImplementationGuide/ig.hip.digital.health.nz.base'
      version: 1.0.0
      
 fhirVersion: 4.0.1
