@@ -14,7 +14,7 @@
 
 ### On-boarding
 
-1. To apply for access to the NHI test environment email the following forms **(TBD)** to integration@health.govt.nz
+1. To apply for access to the NHI test environment email the following forms **(TBD)** to [integration@health.govt.nz](mailto:integration@health.govt.nz).
    
 2. Submit the results of the compliance tests below to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 
@@ -39,7 +39,6 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Tests
 
-<html>
 <h3>NHI Patient GET</h3>
 <table>
 <style>
@@ -124,11 +123,10 @@ System can display all other identity data returned by the NHI in a GET response
 <td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.
 </td>
 <td>ZAT2518</td>
-<td><ol>
-<li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
-<li>Patient Live NHI returned should be ZAT2496</li>
-<li>Minimum identity information for the live NHI is displayed for the patient</li>
-</ol>
+<td>
+1. Notification to the user that the requested NHI was dormant and the live NHI has been returned<br />
+2. Patient Live NHI returned should be ZAT2496<br />
+3. Minimum identity information for the live NHI is displayed for the patient<br />
 </td>
 <td>Mandatory</td>
 <tr>
@@ -180,14 +178,13 @@ ZBE4905</td>
 <td>ZDW0191</td>
 <td>1.	All address formats are displayed appropriately<td>
 <td>Mandatory</td>
-<tr>  
-</html>
+<tr>
 
-### Security and Audit Assessment
+
+#### Security and Audit Assessment
 
 All test messages will be assessed for the following
 
-<html>
 <table>
 <style>
 table, th, td {
@@ -214,4 +211,3 @@ table, th, td {
 <td>Sending user ID changes when different end users are initiating the request</td>
 <td>Mandatory</td>
 <tr>
-</html>

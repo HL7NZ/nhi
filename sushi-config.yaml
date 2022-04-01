@@ -42,7 +42,7 @@ menu:
   Business View: businessView.html
   Use cases: usecases.html
   Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
-  API: capabilityStatement.html
+  API: API.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
