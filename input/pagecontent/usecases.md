@@ -81,7 +81,6 @@
 
 ### FHIR Interactions
 
-<html>
 <h3>Overview</h3>
 <table>
 <style>
@@ -97,18 +96,17 @@ table, th, td {
 <td>NHI-GET</td>
 <td>The local system sends a request to the NHI with a patient NHI ID <br /> The NHI locates the NHI ID and returns either the current patient data for the NHI ID (where NHI ID is live) or the current patient data for the linked Live NHI ID (where the NHI ID is dormant)</td>
 <tr>
-  
+
 <td>**NHI-SEARCH TBD**</td>
 <td>TBD</td>
 <tr>
-</html>
 
 
 #### NHI FHIR interaction GET
 
 The Patient ‘Get’ interaction is initiated by a local system request for the patient record data held in the NHI for a specified NHI ID. This may follow a NHI FHIR SEARCH interaction  where the user has selected a search result and wishes to view full NHI details to confirm the identity, or may follow a local system patient enquiry.
 
-<html>
+
 <h3>Details</h3>
 <table>
 <style>
@@ -121,7 +119,7 @@ table, th, td {
 <td>Actors</td>
 <td>**User**: Local System <br /> **System**: National Health Index (NHI)</td>
 <tr>
-  
+
 <td>Precondition(s)</td>
 <td>Local System has created ‘NHI FHIR GET' request</td>
 <tr>
@@ -133,10 +131,12 @@ table, th, td {
 <td>Post condition</td>
 <td>|NHI has sent ‘NHI FHIR GET Response to Local System</td>
 <tr>
-</html>
- 
+
+
 <img style="width:900px; float:none" src="NHI FHIR GET.png"/>
 
+
+<p>
 **NHI FHIR GET processing steps:**
 1. The user supplies an NHI number for a patient to be looked up.
  
@@ -152,9 +152,9 @@ table, th, td {
  
 5. The response either:<br />
    1) Contains the Patient details and is returned.<br />
-   2) ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.<br />
+   2) ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.</p>
 
 
-#### NHI FHIR interaction SEARCH
+<p>#### NHI FHIR interaction SEARCH
 
-* TBC
+* TBC</p>
