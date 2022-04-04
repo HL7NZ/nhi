@@ -15,10 +15,7 @@ The NHI is made up of two resources:
 * [NHIPatient](StructureDefinition-NhiPatient.html), derived from the [HL7 FHIR Patient resource](http://hl7.org/fhir/patient.html).
 * [NHIAddress](StructureDefinition-NhiAddress.html), derived from [HL7 FHIR Address data type](http://hl7.org/fhir/R4/datatypes.html#Address).
 
-This guide uses artifacts from New Zealand Base Implementation Guide.
-
-The [NHI](https://www.health.govt.nz/our-work/health-identity/national-health-index) is a national Patient Identifier system, which has been in continuous use for over 20 years. It is represented using the FHIR [Patient](http://hl7.org/fhir/patient.html) resource.
- 
+This guide uses artifacts from [New Zealand Base Implementation Guide.](http://igs.clinfhir.com/nzbasev1/index.html)
 
 ### Organization of the Guide
 
