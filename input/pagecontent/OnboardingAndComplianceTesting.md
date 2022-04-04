@@ -51,9 +51,9 @@ table, th, td {
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
 <th>Expected outcome</th>
-<th>Mandatory</th></tr>
+<th>Mandatory</th>
+</tr>
 <tr>
-
 <td>NHI-GET-1</td>
 <td>System displays the minimum patient information required to confirm identity:
 <li>Preferred name including Given Name, Other Given Name(s), Surname</li>
@@ -64,15 +64,15 @@ table, th, td {
 <td>ZAT2348</td>
 <td>1.	Minimum identity information is displayed for the patient</td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>NHI-GET-2</td>
 <td>System can display the Date of Death</td>
 <td>ZAT2348</td>
 <td>1.	The System alerts the user that the patient is deceased and provides the date of death.</td>
 <td>Mandatory</td>
+</tr>
 <tr>
- 
 <td>NHI-GET-3</td>
 <td>System can display all other identity data returned by the NHI in a GET response including:
 <li>All patient names with all name parts</li>
@@ -97,8 +97,8 @@ table, th, td {
 <li>Is an NZ citizen</li>
 </td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>NHI-GET-4</td>
 <td>This test is the same as HI-GET-3 but is for a patient that has information not covered in HI-GET-3<br>
 System can display all other identity data returned by the NHI in a GET response including:
@@ -117,8 +117,8 @@ System can display all other identity data returned by the NHI in a GET response
 <li>Dormant NHIs displayed</li>
 </td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>NHI-GET-5</td>
 <td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.
 </td>
@@ -129,8 +129,8 @@ System can display all other identity data returned by the NHI in a GET response
 3. Minimum identity information for the live NHI is displayed for the patient<br />
 </td>
 <td>Mandatory</td>
+</tr>
 <tr>
-   
 <td>NHI-GET-6</td>
 <td>System can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
 <td>ZBE4905</td>
@@ -146,8 +146,8 @@ The patient has the following fields fully populated in the test record (field l
 <li>Building name/additional details (255)</li>
 </td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>NHI-GET-7</td>
 <td>System behaves appropriately when a new format NHI number is produced</td>
 <td>ZZZ00AX<br />
@@ -158,10 +158,10 @@ ZLV86AX<br />
 ZBE4905</td>
 <td>
 1.	System does not error<br />
-2.	System returns appropriate messaging to user<td>
+2.	System returns appropriate messaging to user</td>
 <td>Mandatory</td>
-<tr>
-   
+</tr>
+<tr> 
 <td>NHI-GET-8</td>
 <td>System can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
@@ -169,22 +169,20 @@ ZBE4905</td>
 1.	Do a GET<br />
 2.	Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info)<br />
 3.	Do another GET<br />
-4.	Demonstrate how end use can view the difference then synchronize<td>
+4.	Demonstrate how end user can view the difference then synchronize</td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>NHI-GET-9</td>
 <td>System presents the address parts appropriately, including multiple addresses.</td>
 <td>ZDW0191</td>
-<td>1.	All address formats are displayed appropriately<td>
+<td>All address formats are displayed appropriately</td>
 <td>Mandatory</td>
-<tr>
+</tr>
+</table>
 
 
-#### Security and Audit Assessment
-
-All test messages will be assessed for the following
-
+<h3>Security and Audit Assessment</h3>
 <table>
 <style>
 table, th, td {
@@ -194,20 +192,21 @@ table, th, td {
 </style>
 <tr><th>Reference</th>
 <th>Purpose</th>
-<th>Mandatory</th></tr>
+<th>Mandatory</th>
+</tr>
 <tr>
-
 <td>Security 1</td>
 <td>Credentials match those issued to the testing organisation</td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>Security 2</td>
 <td>Sending user ID is an end user ID or a CPN.</td>
 <td>Mandatory</td>
+</tr>
 <tr>
-
 <td>Security 3</td>
 <td>Sending user ID changes when different end users are initiating the request</td>
 <td>Mandatory</td>
-<tr>
+</tr>
+</table>
