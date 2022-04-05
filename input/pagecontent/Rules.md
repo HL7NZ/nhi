@@ -390,7 +390,7 @@ table, th, td {
 <td>BR GD 100</td>
 <td>Gender</td>
 <td>A Patient must have a current gender</td>
-<td></td>
+<td> </td>
 </tr>
 </table>
 
@@ -414,7 +414,7 @@ table, th, td {
 <td>BR NZ 100</td>
 <td>NZ Citizenship</td>
 <td>A Patient may have an NZ Citizenship status</td>
-<td></td>
+<td> </td>
 </tr>
 
 <tr>
