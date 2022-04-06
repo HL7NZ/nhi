@@ -194,16 +194,19 @@ table, th, td {
 <th>Purpose</th>
 <th>Mandatory</th>
 </tr>
+
 <tr>
 <td>Security 1</td>
 <td>Credentials match those issued to the testing organisation</td>
 <td>Mandatory</td>
 </tr>
+
 <tr>
 <td>Security 2</td>
 <td>Sending user ID is an end user ID or a CPN.</td>
 <td>Mandatory</td>
 </tr>
+
 <tr>
 <td>Security 3</td>
 <td>Sending user ID changes when different end users are initiating the request</td>
