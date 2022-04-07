@@ -41,6 +41,8 @@ Description:    "The Patient resource exposed by the NHI."
 * maritalStatus 0..0
 * multipleBirth[x] 0..0
 * name.period 0..0
+* name.text 0..0
+* identifier.period 0..0
 * telecom 0..0
 * generalPractitioner 0..0
 
