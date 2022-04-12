@@ -13,6 +13,7 @@ Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/informat
 
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
+Alias: $babyof = http://hl7.org.nz/fhir/StructureDefinition/name-use-babyof
 
 
 
@@ -65,7 +66,8 @@ Description:    "The Patient resource exposed by the NHI."
 * name  1..*
 * name.extension contains
     $information-source named information-source 0..1 and
-    $preferred named preferred 0..1
+    $preferred named preferred 0..1 and
+    $babyof named babyof 0..1
 
 // using HISO codesets
 * name.extension[information-source].valueCodeableConcept from  $name-information-source-vs
