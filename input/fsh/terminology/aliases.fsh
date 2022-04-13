@@ -31,6 +31,8 @@ Alias: $dod-information-source-vs = https://nzhts.digital.health.nz/fhir/ValueSe
 Alias: $name-prefix-vs = https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code
 Alias: $name-suffix-vs = https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code
 Alias: $nhi-address-type = https://nzhts.digital.health.nz/fhir/ValueSet/addressType
+Alias: $nhi-name-use-extra-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nhi-name-use-extra
+
 
 //Aliases for CodeSystems
 Alias: $dhb-code-cs = https://standards.digital.health.nz/ns/dhb-code

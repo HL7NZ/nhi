@@ -13,15 +13,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href='StructureDefinition-babyof.html'>babyof</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/name-use-babyof</td>
-<td>
-<div>HumanName.use</div>
-</td>
-<td><p>When the Patient.Name.use value is &#39;temp&#39;, this extension value  can  be used to hold the mother&#39;s name until the baby has been given an official name</p></td>
-<td></td>
-</tr>
-<tr>
 <td><a href='StructureDefinition-birth-place.html'>birth-place</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/birth-place</td>
 <td>
@@ -46,6 +37,15 @@
 <div>Address</div>
 </td>
 <td><p>Indicates this is the primary residential address - each patient must have one and only one</p></td>
+<td></td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-name-use-extra.html'>name-use-extra</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/name-use-extra</td>
+<td>
+<div>Patient</div>
+</td>
+<td><p>Additional name use codes for NHI names</p></td>
 <td></td>
 </tr>
 <tr>
