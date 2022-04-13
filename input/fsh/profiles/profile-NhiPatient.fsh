@@ -105,13 +105,15 @@ Description:    "The Patient resource exposed by the NHI."
 //Note that this might still be a contained resource - that's still supported by this profile
 * generalPractitioner only Reference(PractitionerRole)
 
-//slicing for NHI
 
+//identifier constraints for NHI
 * identifier.system from https://standards.digital.health.nz/ns/nhi-id
-
+* identifier.type 0..0
+* identifier.period 0..0
 * identifier.use from $nhi-identifier-use-code-vs
 * identifier.use ^short = "official | old"
 
+//identifier slicing for NHI
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
 
