@@ -20,7 +20,7 @@ table, th, td {
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
 <th>Title</th>
-<th>Rule description</th></tr>
+<th>Rule description</th>
 <th>Parent</th></tr>
 
 <tr>
@@ -111,7 +111,7 @@ table, th, td {
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
 <th>Title</th>
-<th>Rule description</th></tr>
+<th>Rule description</th>
 <th>Parent</th></tr>
 
 <tr>
@@ -318,7 +318,7 @@ table, th, td {
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
 <th>Title</th>
-<th>Rule description</th></tr>
+<th>Rule description</th>
 <th>Parent</th></tr>
 
 <tr>
@@ -382,7 +382,7 @@ table, th, td {
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
 <th>Title</th>
-<th>Rule description</th></tr>
+<th>Rule description</th>
 <th>Parent</th></tr>
 
 <tr>
@@ -406,7 +406,7 @@ table, th, td {
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
 <th>Title</th>
-<th>Rule description</th></tr>
+<th>Rule description</th>
 <th>Parent</th></tr>
 
 <tr>
@@ -425,3 +425,5 @@ table, th, td {
 <td>BR RQ 700</td>
 </tr>
 </table>
+
+
