@@ -66,13 +66,13 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
 2. The integrating application sends an HTTP GET request for the Patient resource using the NHI number to identify the patient whose information is being requested. E.g. GET https://nhi.api.health.govt.nz/patient/ZAT2364<br />
 
 3. The request is either:<br />
-..1) Validated (Step 4).<br />
-..2) ALT: Validation failure. Interaction Outcome resource returned<br />
+ * Validated (Step 4).<br />
+ * ALT: Validation failure. Interaction Outcome resource returned<br />
  
 4. The Patient details are either:<br />
-..1) Retrieved from the NHI (Step 5).<br />
-..2) ALT: NHI number not found. Interaction Outcome resource returned<br />
+ * Retrieved from the NHI (Step 5).<br />
+ * ALT: NHI number not found. Interaction Outcome resource returned<br />
  
 5. The response either:<br />
-..1) Contains the Patient details and is returned.<br />
-..2) ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.
+ * Contains the Patient details and is returned.<br />
+ * ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.
