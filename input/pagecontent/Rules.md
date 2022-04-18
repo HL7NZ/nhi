@@ -974,7 +974,6 @@ YYYY – less than or equal to the current year</td>
 - not contain unused code 98888 (response out of scope) </td>
 <td>AR ET 1000</td>
 </tr>
-</table>
 
 <tr>
 <td>Core - NZ Citizenship</td>
