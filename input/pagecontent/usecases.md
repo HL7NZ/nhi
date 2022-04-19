@@ -22,7 +22,9 @@ An existing patient known to the hospital or GP practice presents for healthcare
   * Steps involved:
      1. User finds the patient record in local system.
      2. Local system looks up NHI to check if NHI version has changed **(Get Patient).**
-     3. If NHI version has changed or local patient details have been updated user compares the local and NHI details and makes corrections where appropriate **(Update Patient).**
+     3. If NHI version has changed but the local attributes are still in line wth the NHI (the data of interest hasn't changed) update the local version only.
+      * Note: The version will change if the Ministry has linked two NHI records when duplicates have been discovered. The local system should use the live and the list of dormant NHI's to determine if any local records need to be merged. If the local system has their paient under a now dormant NHI number, the local NHI number should be changed to the live NHI number.
+     5. If an NHI patient attribute has changed or the local patient details have been updated user compares the local and NHI details and makes corrections where appropriate **(Update Patient).**
 
 
 #### Scenario 3: Receive notification that patient details have changed.
@@ -46,33 +48,11 @@ Information is received by the hospital or provider that patient information has
      4. Notice discrepancy between local and NHI record.
      5. Ring or email Ministry of Health contact centre so discrepancy can be updated.
 
+#### Scenario 5: Validate NHI number.
 
-### FHIR Interactions
+I don't have access rights to view the NHI details. I want to validate the NHI number and the demographic details I have match the NHI patient details.
 
-#### GET Patient
-
-The local system sends a request to the NHI with a patient NHI ID <br /> The NHI locates the NHI ID and returns either the current patient data for the NHI ID (where NHI ID is live) or the current patient data for the linked Live NHI ID (where the NHI ID is dormant).
-
-The Patient ‘Get’ interaction is initiated by a local system request for the patient record data held in the NHI for a specified NHI ID. This may follow a NHI FHIR SEARCH interaction  where the user has selected a search result and wishes to view full NHI details to confirm the identity, or may follow a local system patient enquiry.  
-
-
-<img style="width:900px; float:none" src="NHI FHIR GET.png"/>
-
-
-**NHI FHIR GET processing steps:**
- 
-1. The user supplies an NHI number for a patient to be looked up.<br />
-
-2. The integrating application sends an HTTP GET request for the Patient resource using the NHI number to identify the patient whose information is being requested. E.g. GET https://nhi.api.health.govt.nz/patient/ZAT2364<br />
-
-3. The request is either:<br />
- * Validated (Step 4).<br />
- * ALT: Validation failure. Interaction Outcome resource returned<br />
- 
-4. The Patient details are either:<br />
- * Retrieved from the NHI (Step 5).<br />
- * ALT: NHI number not found. Interaction Outcome resource returned<br />
- 
-5. The response either:<br />
- * Contains the Patient details and is returned.<br />
- * ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.
+  * Steps involved:
+     1. Find patient in local system.
+     2. Do a ?? TBC $Match ??
+     3. Result will be a true/false/unsure
