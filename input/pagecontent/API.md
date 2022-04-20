@@ -68,7 +68,10 @@ table, th, td {
 <th>Rule ID </th>
 <th>Title</th>
 <th>Rule description</th>
-<th>Parent</th></tr>
+<th>Parent</th>
+<th>Error code</th>
+<th>Error message</th>
+</tr>
 
 <tr>
 <td>Request</td>
