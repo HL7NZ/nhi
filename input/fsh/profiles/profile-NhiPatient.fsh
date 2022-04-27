@@ -48,6 +48,8 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * telecom 0..0
 * generalPractitioner 0..0
+* identifier.period 0..0
+* identifier[NHI].period 0..0
 
 * deceased[x] only dateTime
 
