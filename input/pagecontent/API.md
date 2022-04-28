@@ -66,88 +66,44 @@ table, th, td {
 </style>
 <tr><th>Rule Type</th>
 <th>Rule ID </th>
-<th>Title</th>
-<th>Rule description</th>
-<th>Parent</th>
-<th>Error code</th>
+<th>HTTP Error</th>
+<th>Error/Warning Code</th>
 <th>Error message</th>
 </tr>
 
 <tr>
 <td>Request</td>
-<td>BR RQ 200</td>
-<td>Identity Confusion Definition </td>
-<td>Identity confusion occurs when: <br /> 
-- The identity information held for one patient is so similar to another patient, that the records may belong to the same patient OR <br />
-- The identity information held for a given patient is modified in such a way that the old and new identity information could belong to different patients</td>
-<td></td>
-</tr>
-
-<tr>
-<td>Request</td>
 <td>BR RQ 300</td>
-<td>Duplication of identity</td>
-<td>A request must not create a record which is a duplicate of another Patient’s identity</td>
-<td></td>
+<td>?</td>
+<td>WM02005</td>
+<td>The patient identity information supplied may result in duplication of another identity. Are you sure this update is correct?</td>
 </tr>
 
 <tr>
 <td>Request</td>
-<td>BR RQ 500</td>
-<td>Duplication of patient information</td>
-<td>A request must not result in duplication of information for a Patient</td>
-<td></td>
-</tr>
-
-<tr>
-<td>Request</td>
-<td>BR RQ 800</td>
-<td>Modification of information source</td>
-<td>A request must update the source of information only when the information is also provided.</td>
-<td></td>
-</tr>
-
-<tr>
-<td>Request</td>
-<td>AR RQ 1000</td>
-<td>Update to Registered value</td>
-<td>An update which results in an attribute Status of Registered must only be submitted via an authorised Agency update</td>
-<td>BR RQ 700</td>
-</tr>
-
-<tr>
-<td>Request</td>
-<td>DR RQ 5200</td>
+<td>DR RQ 5210</td>
 <td>Requesting User Information</td>
-<td>A web service request must contain User Attributes:  User ID (CPN)</td>
-<td></td>
+<td>??</td>
+<td>EM0100xx</td>
+<td>The Patient HTTP header UserID is a required field</td>
+</tr>
+
+
+<tr>
+<td>Request</td>
+<td>DR RQ 5220</td>
+<td>??</td>
+<td>EM0100xx</td>
+<td>The HTTP header UserID supplied has a CPN format. The CPN is invalid.</td>
 </tr>
 
 <tr>
 <td>Request</td>
-<td>DR RQ 5300</td>
-<td>Requesting Organisation Information</td>
-<td>A web service request must contain Sending Organisation Attributes: <br /> 
-- Organisation ID, <br />
-- Facility ID, <br />
-- Application, <br />
-- Application Version</td>
+<td>DR RQ 5230</td>
 <td></td>
-</tr>
-
-<tr>
-<td>Request</td>
-<td>DR RQ 5400</td>
-<td>Request Information</td>
-<td>A web service request must contain Request Attributes: <br />
-- Correlation ID, <br />
-- Business Transaction ID, <br />
-- Creation Time, <br />
-- Service Version, <br />
-- Master Code Set Version</td>
 <td></td>
+<td>Note: Rule applied in the integrating system </td>
 </tr>
-</table>
 
 
 <h3>Add Patient - Core rules - Birth and Death</h3>
