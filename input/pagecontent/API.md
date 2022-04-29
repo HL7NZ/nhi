@@ -82,12 +82,10 @@ table, th, td {
 <tr>
 <td>Request</td>
 <td>DR RQ 5210</td>
-<td>Requesting User Information</td>
 <td>??</td>
 <td>EM0100xx</td>
 <td>The Patient HTTP header UserID is a required field</td>
 </tr>
-
 
 <tr>
 <td>Request</td>
@@ -104,7 +102,7 @@ table, th, td {
 <td></td>
 <td>Note: Rule applied in the integrating system </td>
 </tr>
-
+</table>
 
 <h3>Add Patient - Core rules - Birth and Death</h3>
 <table>
