@@ -48,8 +48,6 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * telecom 0..0
 * generalPractitioner 0..0
-* identifier.period 0..0
-* identifier[NHI].period 0..0
 
 * deceased[x] only dateTime
 
@@ -133,12 +131,17 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier[NHI] ^short = "The currently active NHI "
 * identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
 
+* identifier[NHI].type 0..0
+* identifier[NHI].period 0..0
+
 * identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[dormant].use = #old (exactly)
 * identifier[dormant].use ^short = "fixed to old"
 * identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
 * identifier[dormant] ^definition = "An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant’."
 
+* identifier[dormant].type 0..0
+* identifier[dormant].period 0..0
 
 //-------- end of identifier slicing --------
 
