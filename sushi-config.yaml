@@ -42,7 +42,9 @@ menu:
   Business View: businessView.html
   Use cases: usecases.html
   Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
-  API: API.html
+  API:
+    Add patient: addPatient.html
+    Get patient: getPatient.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
