@@ -1,0 +1,33 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title $Match Patient
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "<FHIR API> NHI" as B #CornflowerBlue
+participant "NHI MDM" as C #CornflowerBlue
+|||
+User -> A: Match a patient with a person's details
+activate A
+|||
+A -> B: POST (…)/patient/$Match
+activate B
+|||
+B -> B: Validate[]
+|||
+B -> C: Request
+activate C
+|||
+
+C -[dashed]-> B:  
+deactivate C
+|||
+B -[dashed]-> A:
+deactivate B
+|||
+A -> User: Return bundle of patient records with search score from 0 to 1 
+deactivate A
+|||
+@enduml
