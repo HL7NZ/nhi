@@ -45,6 +45,7 @@ menu:
   API:
     Add patient: addPatient.html
     Get patient: getPatient.html
+    Match patient: matchPatient.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
