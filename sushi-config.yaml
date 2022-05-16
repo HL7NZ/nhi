@@ -43,9 +43,9 @@ menu:
   Use cases: usecases.html
   Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
   API:
-    Add patient: addPatient.html
     Get patient: getPatient.html
     Match patient: matchPatient.html
+    Add patient: addPatient.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
