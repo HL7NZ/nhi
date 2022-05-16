@@ -1,6 +1,6 @@
 
 
-### GET Patient Interaction
+### get Patient Interaction
 
 #### Overview
 
@@ -20,15 +20,15 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
 
 3. The request is either:<br />
  * Validated (Step 4).<br />
- * ALT: Validation failure. Interaction Outcome resource returned<br />
+ * ALT: Validation failure. Operation Outcome resource returned<br />
  
 4. The Patient details are either:<br />
- * Retrieved from the NHI (Step 5).<br />
- * ALT: NHI number not found. Interaction Outcome resource returned<br />
+ * Retrieved from the NHI (Step 5)<br />
+ * ALT: NHI number not found. Operation Outcome resource returned<br />
  
 5. The response either:<br />
- * Contains the Patient details and is returned.<br />
- * ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned.
+ * Contains the Patient details and is returned<br />
+ * ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned
 
 #### Rules and errors
 
@@ -38,13 +38,13 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
  * When a userID has an HPI CPN format it must be a valid HPI CPN number
  * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
  
-_1a. Request errors_
- * _The Patient HTTP header UserID is a required field_
- * _The HTTP header UserID CPN format. The CPN is invalid_
- * _The OAUTH2 userId token is missing or invalid_
+ _1a. Request errors_
+  * _The Patient HTTP header UserID is a required field_
+  * _The HTTP header UserID CPN format. The CPN is invalid_
+  * _The OAUTH2 userId token is missing or invalid_
  
 ---
 
 2.	**Get Patient rules**
 
-   _2a. Get Patient errors_
+ _2a. Get Patient errors_
