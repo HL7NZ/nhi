@@ -7,7 +7,7 @@
 An ‘Add Patient’ interaction is initiated by a user who needs to add a new identity record for a person to the Patient Index.
 The user has sourced the required identity information, and initiates an add request to create a patient identity record in the NHI.
 
-<img style="width:900px; float:none" src="NHI FHIR ADD.PNG"/>
+{% include add-patient.svg %}
 
 **NHI FHIR Add Patient processing steps:**
 
@@ -28,7 +28,7 @@ The user has sourced the required identity information, and initiates an add req
  * Each user must have an individual UserID
  * When a userID has an HPI CPN format it must be a valid HPI CPN number
  * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
- 
+
   _1a. Request errors_
    * _The Patient HTTP header UserID is a required field_
    * _The HTTP header UserID CPN format. The CPN is invalid_
@@ -167,5 +167,3 @@ The user has sourced the required identity information, and initiates an add req
      * _A residential address must have a domicile code. The address validation service was not available to validate this address; and a notional domicile code was not provided for this address, and could not be automatically assigned_
    * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
    * _A address can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)_
-
----
