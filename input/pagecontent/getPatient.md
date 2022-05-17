@@ -1,6 +1,6 @@
 
 
-### get Patient Interaction
+### Get Patient Interaction
 
 #### Overview
 
@@ -12,7 +12,7 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
 <img style="width:900px; float:none" src="NHI FHIR GET.png"/>
 
 
-**NHI FHIR GET processing steps:**
+#### **NHI FHIR GET processing steps:**
  
 1. The user supplies an NHI number for a patient to be looked up.<br />
 
@@ -37,14 +37,15 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
  * Each user must have an individual UserID
  * When a userID has an HPI CPN format it must be a valid HPI CPN number
  * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
- 
- _1a. Request errors_
-  * _The Patient HTTP header UserID is a required field_
-  * _The HTTP header UserID CPN format. The CPN is invalid_
-  * _The OAUTH2 userId token is missing or invalid_
+
+      _1a. Request errors_
+      * _The Patient HTTP header UserID is a required field_
+      * _The HTTP header UserID CPN format. The CPN is invalid_
+      * _The OAUTH2 userId token is missing or invalid_
  
 ---
 
 2.	**Get Patient rules**
-
- _2a. Get Patient errors_
+ * 
+      _2a. Get Patient errors_
+      * 
