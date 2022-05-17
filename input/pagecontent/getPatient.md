@@ -46,6 +46,8 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
 ---
 
 2.	**Get Patient rules**
+
  * 
       _2a. Get Patient errors_
+
       * 
