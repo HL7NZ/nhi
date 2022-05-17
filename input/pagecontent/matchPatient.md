@@ -9,7 +9,7 @@ The NHI does a search and returns a bundle of patient records that represent pos
 
 {% include match-patient.svg %}
 
-**NHI FHIR $match patient processing steps:**
+#### **NHI FHIR $match patient processing steps:**
  
 1. The user supplies patient details to be be matched against the NHI patient records<br />
 
@@ -30,14 +30,17 @@ The NHI does a search and returns a bundle of patient records that represent pos
  * Each user must have an individual UserID
  * When a userID has an HPI CPN format it must be a valid HPI CPN number
  * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
- 
- _1a. Request errors_
-  * _The Patient HTTP header UserID is a required field_
-  * _The HTTP header UserID CPN format. The CPN is invalid_
-  * _The OAUTH2 userId token is missing or invalid_
+
+      _1a. Request errors_
+      * _The Patient HTTP header UserID is a required field_
+      * _The HTTP header UserID CPN format. The CPN is invalid_
+      * _The OAUTH2 userId token is missing or invalid_
  
 ---
 
-2.	**$match Patient rules**
+2.	**$match Patient ruless**
 
- _2a. $match Patient errors_
+ * 
+      _2a. $match Patient errors_
+
+      * 
