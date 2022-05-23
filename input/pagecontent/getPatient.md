@@ -30,24 +30,12 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
  * Contains the Patient details and is returned<br />
  * ALT: Where an NHI is dormant, a response containing the patient details for the live NHI is returned
 
-#### Rules and errors
+#### Get Patient Rules and errors
 
-1. **Request rules**
- * Every request must include an http header item UserId that uniquely identifies the individual initiating the request
- * Each user must have an individual UserID
- * When a userID has an HPI CPN format it must be a valid HPI CPN number
- * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
 
-      _1a. Request errors_
-      * _The Patient HTTP header UserID is a required field_
-      * _The HTTP header UserID CPN format. The CPN is invalid_
-      * _The OAUTH2 userId token is missing or invalid_
- 
----
-
-2.	**Get Patient rules**
+1. **Get Patient rules**
 
  * 
-      _2a. Get Patient errors_
+      _1a. Get Patient errors_
 
       * 
