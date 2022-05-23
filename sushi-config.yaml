@@ -46,6 +46,7 @@ menu:
     Get patient: getPatient.html
     Match patient: matchPatient.html
     Add patient: addPatient.html
+  General Notes: general.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
