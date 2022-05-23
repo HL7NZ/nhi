@@ -21,7 +21,6 @@ B -> B: Validate[]
 B -> C: Add request
 activate C
 |||
-
 C -[dashed]-> B:  
 deactivate C
 |||
