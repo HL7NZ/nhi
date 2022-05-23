@@ -32,6 +32,7 @@ The Patient ‘Get’ interaction is initiated by a local system request for the
 
 #### Get Patient Rules and errors
 
+[For Request rules and errors click here](/pagecontent/general.md#request-rules-and-errors)
 
 1. **Get Patient rules**
 
