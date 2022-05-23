@@ -25,19 +25,6 @@ The NHI does a search and returns a bundle of patient records that represent pos
 
 #### Rules and errors
 
-1. **Request rules**
- * Every request must include an http header item UserId that uniquely identifies the individual initiating the request
- * Each user must have an individual UserID
- * When a userID has an HPI CPN format it must be a valid HPI CPN number
- * The OAUTH2 token contains the requesting organisation and application identifiers that are used for auditing
-
-      _1a. Request errors_
-      * _The Patient HTTP header UserID is a required field_
-      * _The HTTP header UserID CPN format. The CPN is invalid_
-      * _The OAUTH2 userId token is missing or invalid_
- 
----
-
 2.	**$match Patient ruless**
 
  * 
