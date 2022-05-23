@@ -1,5 +1,8 @@
 # Repository for NHI IG
 
+## current release 
+v0.10.0
+
 ## Pre requisites
 
 * Install sushi
