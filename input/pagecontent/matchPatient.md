@@ -25,9 +25,11 @@ The NHI does a search and returns a bundle of patient records that represent pos
 
 #### Rules and errors
 
-2.	**$match Patient ruless**
+[For Request rules and errors click here](/pagecontent/general.md#request-rules-and-errors)
+
+1.	**$match Patient rules**
 
  * 
-      _2a. $match Patient errors_
+      _1a. $match Patient errors_
 
       * 
