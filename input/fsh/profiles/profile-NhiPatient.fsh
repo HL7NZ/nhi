@@ -20,8 +20,8 @@ Alias: $name-use-extra = http://hl7.org.nz/fhir/StructureDefinition/name-use-ext
 
 
 Profile:        NhiPatient
-//Parent:         CommonPatient
-Parent:         Patient
+
+Parent:         NzPatient
 Id:             NhiPatient
 Title:          "NHI Patient"
 Description:    "The Patient resource exposed by the NHI."
@@ -52,14 +52,14 @@ Description:    "The Patient resource exposed by the NHI."
 * deceased[x] only dateTime
 
 * extension contains 
-    $ethnicity named ethnicity 0..6 and
-    $nzCitizen named nzCitizen 0..1 and
+    // $ethnicity named ethnicity 0..6 and
+    // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
     $birthPlace named birthPlace 0..1 and
     $nzResidency named nzResidency 0..1
 
-* extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
-* extension[nzCitizen] ^definition = "This field is usd to indicate the New Zealand citizenship status of the patient"
+//* extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
+// * extension[nzCitizen] ^definition = "This field is usd to indicate the New Zealand citizenship status of the patient"
 * extension[nzCitizen].extension[source].valueCodeableConcept from $nz-citizenship-information-source-vs
 
 //* extension[dhb].value[x] only CodeableConcept
@@ -115,25 +115,12 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.use ^short = "official | old"
 
 //identifier slicing for NHI
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "use"
-
-* identifier ^slicing.description = "Add NHI as a defined identifier type"
-* identifier ^slicing.rules = #openAtEnd
+//* identifier ^slicing.discriminator[1].type = #value
+//* identifier ^slicing.discriminator[1].path = "use"
 
 * identifier contains 
-    NHI 1..1 MS and 
 	dormant 0..* MS
 	 
-* identifier[NHI].system  from https://standards.digital.health.nz/ns/nhi-id
-* identifier[NHI].use = #official (exactly)
-* identifier[NHI].use ^short = "fixed to official"
-* identifier[NHI] ^short = "The currently active NHI "
-* identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
-
-* identifier[NHI].type 0..0
-* identifier[NHI].period 0..0
-
 * identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[dormant].use = #old (exactly)
 * identifier[dormant].use ^short = "fixed to old"
