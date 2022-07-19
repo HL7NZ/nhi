@@ -98,7 +98,7 @@ paths:
             content:
               application/fhir+json:
                 schema:
-                  $ref: '#/components/schemas/readPatient'
+                  $ref: '#/components/schemas/Patient'
               
           '400':
             description: Error, with details
@@ -696,7 +696,8 @@ components:
           items:
             anyOf:
               - $ref: '#/components/schemas/NzEthnicityExtension'
-              - $ref: '#/components/schemas/NzCitizenShip'
+              - $ref: '#/components/schemas/NzCitizenshipExtension'
+              - $ref: '#/components/schemas/BirthPlaceExtension'
           type: array
           
       additionalProperties: false
@@ -717,7 +718,73 @@ components:
       required:
         - url
         - valueCodeableConcept
+      additionalProperties: false
     
+    
+    NzCitizenshipExtension:
+       type: object
+       properties:
+          url:
+            enum:
+              - http://hl7.org/fhir/StructureDefinition/patient-citizenship
+          extension:
+            type: array
+            items:
+              anyOf:
+                - type: object
+                  properties:
+                    url:
+                      enum:
+                        - http://hl7.org/fhir/StructureDefinition/patient-citizenship#source
+                    valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              system:
+                                enum:
+                                  - https://standards.digital.health.nz/ns/information-source-code
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                            required:
+                              - system            
+                            additionalProperties: false
+                        text:    
+                            $ref: '#/components/schemas/string'
+                      additionalProperties: false
+                        
+                  required:
+                    - url            
+                  additionalProperties: false
+                
+                - type: object
+                  properties:
+                    url:
+                      enum:
+                        - http://hl7.org/fhir/StructureDefinition/patient-citizenship#status
+                    valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:                        
+                            $ref: '#/components/schemas/Coding'
+                        text:    
+                            $ref: '#/components/schemas/string'                            
+                      additionalProperties: false
+                        
+                  required:
+                    - url            
+                  additionalProperties: false
+              
+       
     BirthPlaceExtension:
       type: object
       properties:
@@ -727,46 +794,80 @@ components:
         extension:
          type: array
          items:
-            type: object
-            properties:
-              url:
-                enum:
-                  - http://hl7.org.nz/fhir/StructureDefinition/birth-place#country
-              valueCodeableConcept:
-                type: object
-                properties:
-                  coding:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        system:
-                          enum:  
-                            - urn:iso:std:iso:3166
-                        version:
-                            $ref: '#/components/schemas/string'
-                        code:
-                            $ref: '#/components/schemas/code'
-                        display:
-                            $ref: '#/components/schemas/string'
-            type: object
-            properties:   
-                 url:
+           anyOf:
+            - type: object
+              properties:
+                url:
                   enum:
-                    - http://hl7.org.nz/fhir/StructureDefinition/birth-place#placeofbirth
-                 valueString:
-                     $ref: '#/components/schemas/string'
-              
-        valueCodeableConcept:
-          type: object
-          properties:
-            coding:
-              type: array
-              items:
-                $ref: '#/components/schemas/Coding'
+                    - http://hl7.org.nz/fhir/StructureDefinition/birth-place#country
+                valueCodeableConcept:
+                  type: object
+                  properties:
+                    coding:
+                      type: array
+                      items:
+                        anyOf:
+                          - type: object
+                            properties:
+                              system:
+                                enum:
+                                  - urn:iso:std:iso:3166
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                            required:
+                              - system
+                            additionalProperties: false                   
+                  additionalProperties: false
+                  
+            - type: object
+              properties:
+                url:
+                  enum:
+                    -  http://hl7.org.nz/fhir/StructureDefinition/birth-place#placeofbirth
+                valueString:
+                  $ref: '#/components/schemas/string'
+              required:
+                - url
+              additionalProperties: false
+                  
+            - type: object
+              properties:
+                url:
+                  enum:
+                    -  http://hl7.org.nz/fhir/StructureDefinition/birth-place#source
+                valueCodeableConcept:
+                   type: object
+                   properties:
+                      coding:  
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            system:
+                              enum:  
+                                - https://standards.digital.health.nz/ns/information-source-code
+                            version:
+                                $ref: '#/components/schemas/string'
+                            code:
+                                $ref: '#/components/schemas/code'
+                            display:
+                                $ref: '#/components/schemas/string'
+                          required:
+                            - system
+                          additionalProperties: false
+              required:
+                - url 
+              additionalProperties: false    
       required:
-        - url
-        - valueCodeableConcept
+          - url            
+      additionalProperties: false
+            
+              
+      
   parameters:
     rid:
       name: rid
