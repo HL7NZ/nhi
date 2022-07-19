@@ -13,6 +13,9 @@ Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/informat
 
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
+Alias: $name-use-extra = http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
+
+
 
 
 
@@ -41,6 +44,8 @@ Description:    "The Patient resource exposed by the NHI."
 * maritalStatus 0..0
 * multipleBirth[x] 0..0
 * name.period 0..0
+* name.text 0..0
+* identifier.period 0..0
 * telecom 0..0
 * generalPractitioner 0..0
 
@@ -53,7 +58,8 @@ Description:    "The Patient resource exposed by the NHI."
     $birthPlace named birthPlace 0..1 and
     $nzResidency named nzResidency 0..1
 
-* extension[nzCitizen] ^short = "Is this person a New Zealand citizen"
+* extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
+* extension[nzCitizen] ^definition = "This field is usd to indicate the New Zealand citizenship status of the patient"
 * extension[nzCitizen].extension[source].valueCodeableConcept from $nz-citizenship-information-source-vs
 
 //* extension[dhb].value[x] only CodeableConcept
@@ -63,12 +69,14 @@ Description:    "The Patient resource exposed by the NHI."
 * name  1..*
 * name.extension contains
     $information-source named information-source 0..1 and
-    $preferred named preferred 0..1
+    $preferred named preferred 0..1 and
+   	$name-use-extra named nhi-name-use-extra 0..1
 
 // using HISO codesets
 * name.extension[information-source].valueCodeableConcept from  $name-information-source-vs
 * name.prefix from $name-prefix-vs
 * name.suffix from $name-suffix-vs 
+
 
 //The gender has an extension for the original text that was used to establish it (eg from a form)
 * gender.extension contains 
@@ -98,13 +106,15 @@ Description:    "The Patient resource exposed by the NHI."
 //Note that this might still be a contained resource - that's still supported by this profile
 * generalPractitioner only Reference(PractitionerRole)
 
-//slicing for NHI
 
+//identifier constraints for NHI
 * identifier.system from https://standards.digital.health.nz/ns/nhi-id
-
+* identifier.type 0..0
+* identifier.period 0..0
 * identifier.use from $nhi-identifier-use-code-vs
 * identifier.use ^short = "official | old"
 
+//identifier slicing for NHI
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
 
@@ -121,12 +131,17 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier[NHI] ^short = "The currently active NHI "
 * identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
 
+* identifier[NHI].type 0..0
+* identifier[NHI].period 0..0
+
 * identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[dormant].use = #old (exactly)
 * identifier[dormant].use ^short = "fixed to old"
 * identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
 * identifier[dormant] ^definition = "An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant’."
 
+* identifier[dormant].type 0..0
+* identifier[dormant].period 0..0
 
 //-------- end of identifier slicing --------
 
