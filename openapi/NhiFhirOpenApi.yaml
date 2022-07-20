@@ -362,7 +362,7 @@ components:
                 properties:
                   url:
                     enum:
-                      - http://hl7.org/fhir/StructureDefinition/iso21090-preferred
+                      - 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred'
                   valueBoolean:
                     type: boolean
                 required:
@@ -372,7 +372,7 @@ components:
                 properties:
                   url:
                     enum:
-                      - http://hl7.org.nz/fhir/StructureDefinition/information-source
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/information-source'
                   valueCodeableConcept:
                       type: object
                       properties:
@@ -384,7 +384,7 @@ components:
                               system:
                                 #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code
                                 enum:
-                                  - https://standards.digital.health.nz/ns/information-source-code
+                                  - 'https://standards.digital.health.nz/ns/information-source-code'
                               version:
                                   $ref: '#/components/schemas/string'
                               code:
@@ -405,7 +405,7 @@ components:
                 properties:
                   url:
                     enum:
-                      - http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/name-use-extra'
                   valueCodeableConcept:
                       type: object
                       properties:
@@ -417,7 +417,7 @@ components:
                               system:
                                 #required binding:https://nzhts.digital.health.nz/fhir/ValueSet/nhi-name-use-extra-code
                                 enum:
-                                  - https://standards.digital.health.nz/ns/nhi-name-use-extra-code
+                                  - 'https://standards.digital.health.nz/ns/nhi-name-use-extra-code'
                               version:
                                   $ref: '#/components/schemas/string'
                               code:
@@ -449,7 +449,7 @@ components:
             properties:
               url:
                 enum:
-                  - http://hl7.org.nz/fhir/StructureDefinition/information-source
+                  - 'http://hl7.org.nz/fhir/StructureDefinition/information-source'
               valueCodeableConcept:
                       type: object
                       properties:
@@ -461,7 +461,7 @@ components:
                               system:
                                 #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code
                                 enum:
-                                  - https://standards.digital.health.nz/ns/information-source-cod
+                                  - 'https://standards.digital.health.nz/ns/information-source-cod'
                               version:
                                   $ref: '#/components/schemas/string'
                               code:
@@ -919,7 +919,7 @@ components:
                     properties:
                       url:
                         enum:
-                          - http://hl7.org.nz/fhir/StructureDefinition/notValidatedReason
+                          - 'http://hl7.org.nz/fhir/StructureDefinition/notValidatedReason'
                       valueCodeableConcept:
                         type: object
                         description: The reason why the address has not been validated
@@ -941,19 +941,21 @@ components:
                     properties:
                       url:
                         enum:
-                          - http://hl7.org.nz/fhir/StructureDefinition/address-isPrimary
+                          - 'http://hl7.org.nz/fhir/StructureDefinition/address-isPrimary'
                       valueBoolean:
                         $ref: '#/components/schemas/boolean'
                     required:
                       - url 
                     additionalProperties: false 
                   
+                  - $ref: '#/components/schemas/NzGeocode'
+                                    
                   - type: object
                     description: Suburb element of a NZ Address
                     properties:
                       url:
                         enum:
-                          - suburb
+                          - 'http://hl7.org.nz/fhir/StructureDefinition/suburb'
                       valueBoolean:
                         $ref: '#/components/schemas/string'
                     required:
@@ -965,21 +967,87 @@ components:
                     properties:
                         url:
                           enum:
-                            - building-name
+                            - 'http://hl7.org.nz/fhir/StructureDefinition/building-name'
                         valueBoolean:
                           $ref: '#/components/schemas/string'
                     required:
                         - url 
                     additionalProperties: false    
-                   
-      
-                     
+                  
+                  - type: object
+                    description: Uniquely identifies this address as a physical entity. Will remain constant over time even if address administrative data such as DPID change
+                    properties:
+                      url:
+                        enum:
+                          - 'http://hl7.org.nz/fhir/StructureDefinition/nz-address-id'
+                      valueBoolean:
+                        $ref: '#/components/schemas/string'
+                    required:
+                      - url 
+                    additionalProperties: false 
+                    
+                    
+                  - type: object
+                    properties:
+                      url:
+                        enum:
+                          - 'http://hl7.org.nz/fhir/StructureDefinition/domicile-code'
+                      valueCodeableConcept:
+                        type: object
+                        description: NZ Domicile Code. Derived from a patient's primary physical, home address.
+                        properties:
+                          #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code
+                           coding:
+                              $ref: '#/components/schemas/Coding'
+                        additionalProperties: false 
+                    required:
+                      - url       
+                    additionalProperties: false 
+                  
+    NzGeocode:
+      type: object
+      properties:
+        url: 
+          enum:
+            - 'http://hl7.org.nz/fhir/StructureDefinition/nz-geocode'
+        latitude:
+          type: object
+          properties:
+            url:
+              enum:
+                - latitude
+            valueDecimal: 
+              $ref: '#/components/schemas/decimal'
+        longitude:
+          type: object
+          properties:
+            url:
+              enum:
+                - longitude
+            valueDecimal: 
+              $ref: '#/components/schemas/decimal'   
+         
+        datumCode:
+           type: object
+           properties:
+              url:
+                enum:
+                  - 'datumCode'
+              valueCodeableConcept:
+                type: object
+                properties:
+                  # preferred binding: https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code
+                  coding:
+                     $ref: '#/components/schemas/Coding'
+                additionalProperties: false
+       
+         
     NzEthnicityExtension:
       type: object
       properties:
         url:
           enum:
-            - http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity
+            - 'http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity'
         valueCodeableConcept:
           type: object
           properties:
@@ -999,7 +1067,7 @@ components:
        properties:
           url:
             enum:
-              - http://hl7.org/fhir/StructureDefinition/patient-citizenship
+              - 'http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship'
           extension:
             type: array
             items:
@@ -1008,7 +1076,7 @@ components:
                   properties:
                     url:
                       enum:
-                        - http://hl7.org/fhir/StructureDefinition/patient-citizenship#source
+                        - source
                     valueCodeableConcept:
                       type: object
                       properties:
@@ -1017,9 +1085,10 @@ components:
                           items:
                             type: object
                             properties:
+                              # required nbinding: https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
                               system:
                                 enum:
-                                  - https://standards.digital.health.nz/ns/information-source-code
+                                  - 'https://standards.digital.health.nz/ns/information-source-code'
                               version:
                                   $ref: '#/components/schemas/string'
                               code:
@@ -1041,7 +1110,7 @@ components:
                   properties:
                     url:
                       enum:
-                        - http://hl7.org/fhir/StructureDefinition/patient-citizenship#status
+                        - status
                     valueCodeableConcept:
                       type: object
                       properties:
@@ -1062,7 +1131,7 @@ components:
        properties:
           url:
             enum:
-              - http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status
+              - 'http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status'
           extension:
             type: array
             items:
@@ -1076,22 +1145,9 @@ components:
                     valueCodeableConcept:
                       type: object
                       properties:
+                        #preferred binding: http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html                        
                         coding:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                              system:
-                                #preferred binding: http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html
-                                $ref: '#/components/schemas/string'
-                              version:
-                                  $ref: '#/components/schemas/string'
-                              code:
-                                  $ref: '#/components/schemas/code'
-                              display:
-                                  $ref: '#/components/schemas/string'
-                                     
-                            additionalProperties: false                       
+                          $ref: '#/components/schemas/Coding'                                                                         
                       additionalProperties: false
                         
                   required:
@@ -1106,27 +1162,13 @@ components:
                     valueCodeableConcept:
                       type: object
                       properties:
+                        #preferred binding:http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html
                         coding:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                               #preferred binding:http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html
-                              system:
-                                 $ref: '#/components/schemas/string'
-                              version:
-                                  $ref: '#/components/schemas/string'
-                              code:
-                                  $ref: '#/components/schemas/code'
-                              display:
-                                  $ref: '#/components/schemas/string'                            
-                            additionalProperties: false                       
-                      additionalProperties: false
-                        
+                          $ref: '#/components/schemas/Coding'                   
+                      additionalProperties: false                       
                   required:
                     - url            
-                  additionalProperties: false
-              
+                  additionalProperties: false            
        required:
           - url            
        additionalProperties: false     
@@ -1136,7 +1178,7 @@ components:
       properties:
         url:
           enum:
-            - http://hl7.org.nz/fhir/StructureDefinition/birth-place
+            - 'http://hl7.org.nz/fhir/StructureDefinition/birth-place'
         extension:
          type: array
          items:
@@ -1145,7 +1187,7 @@ components:
               properties:
                 url:
                   enum:
-                    - http://hl7.org.nz/fhir/StructureDefinition/birth-place#country
+                    - 'country'
                 valueCodeableConcept:
                   type: object
                   properties:
@@ -1173,7 +1215,7 @@ components:
               properties:
                 url:
                   enum:
-                    -  http://hl7.org.nz/fhir/StructureDefinition/birth-place#placeofbirth
+                    -  'placeofbirth'
                 valueString:
                   $ref: '#/components/schemas/string'
               required:
@@ -1184,7 +1226,7 @@ components:
               properties:
                 url:
                   enum:
-                    -  http://hl7.org.nz/fhir/StructureDefinition/birth-place#source
+                    -  'source'
                 valueCodeableConcept:
                    type: object
                    properties:
@@ -1195,7 +1237,7 @@ components:
                           properties:
                             system:
                               enum:  
-                                - https://standards.digital.health.nz/ns/information-source-code
+                                - 'https://standards.digital.health.nz/ns/information-source-code'
                             version:
                                 $ref: '#/components/schemas/string'
                             code:
