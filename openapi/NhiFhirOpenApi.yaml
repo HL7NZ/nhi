@@ -297,8 +297,10 @@ components:
             - usual
             - official
             - temp
-            - secondary
+            - nickname
+            - anonymous
             - old
+            - maiden
         type:
           $ref: '#/components/schemas/CodeableConcept'
         system:
@@ -310,7 +312,8 @@ components:
         assigner:
           $ref: '#/components/schemas/Reference'
       additionalProperties: false
-    HPIHumanName:
+      
+    NhiHumanName:
       type: object
       description: A human's name with the ability to identify parts and usage.
       properties:
@@ -337,6 +340,7 @@ components:
             employment or nobility status, etc. and that appears at the start of
             the name.
           items:
+            # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/name-prefix-code            
             $ref: '#/components/schemas/string'
           type: array
         suffix:
@@ -344,15 +348,135 @@ components:
             Part of the name that is acquired as a title due to academic, legal,
             employment or nobility status, etc. and that appears at the end of
             the name.
+          # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/name-suffix-code
           items:
             $ref: '#/components/schemas/string'
           type: array
         period:
           $ref: '#/components/schemas/Period'
+        extension:
+          type: array
+          items:
+            anyOf:
+              - type: object
+                properties:
+                  url:
+                    enum:
+                      - http://hl7.org/fhir/StructureDefinition/iso21090-preferred
+                  valueBoolean:
+                    type: boolean
+                required:
+                  - url
+                additionalProperties: false
+              - type: object
+                properties:
+                  url:
+                    enum:
+                      - http://hl7.org.nz/fhir/StructureDefinition/information-source
+                  valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              system:
+                                #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code
+                                enum:
+                                  - https://standards.digital.health.nz/ns/information-source-code
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                            required:
+                              - system            
+                            additionalProperties: false
+                        text:    
+                            $ref: '#/components/schemas/string'
+                      additionalProperties: false
+                additionalProperties: false
+                required:
+                  - url
+                  
+              - type: object
+                properties:
+                  url:
+                    enum:
+                      - http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
+                  valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              system:
+                                #required binding:https://nzhts.digital.health.nz/fhir/ValueSet/nhi-name-use-extra-code
+                                enum:
+                                  - https://standards.digital.health.nz/ns/nhi-name-use-extra-code
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                            required:
+                              - system            
+                            additionalProperties: false
+                        text:    
+                            $ref: '#/components/schemas/string'
+                      additionalProperties: false                            
+                additionalProperties: false
+                required:
+                  - url
+             
+                    
+            
       additionalProperties: false
       
   
-      
+    NhiBirthDateInformationsource:
+      type: object
+      properties:
+        extension:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                enum:
+                  - http://hl7.org.nz/fhir/StructureDefinition/information-source
+              valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              system:
+                                #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code
+                                enum:
+                                  - https://standards.digital.health.nz/ns/information-source-cod
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                            required:
+                              - system            
+                            additionalProperties: false
+                        text:    
+                            $ref: '#/components/schemas/string'
+                      additionalProperties: false              
+              
+            
+       
     Period:
       type: object
       description: A time period defined by a start and end date and optionally time.
@@ -700,9 +824,17 @@ components:
                 items:
                   anyOf:
                     - $ref: '#/components/schemas/NHIIdentifer'
-                    - $ref: '#/components/schemasNHIDormantIdentifer'
+                    - $ref: '#/components/schemas/NHIDormantIdentifer'
                    
-                    
+        name:
+          $ref: '#/components/schemas/NhiHumanName'  
+        
+        # The date of birth for the individual
+        birthdate:
+           $ref:  '#/components/schemas/date'
+        _birthdate:   
+          $ref:  '#/components/schemas/NhiBirthDateInformationsource'
+                  
         extension:
           items:
             anyOf:
@@ -760,6 +892,7 @@ components:
         - url
         - valueCodeableConcept
       additionalProperties: false
+
     
     
     NzCitizenshipExtension:
