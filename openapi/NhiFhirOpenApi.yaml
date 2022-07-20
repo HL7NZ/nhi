@@ -692,6 +692,17 @@ components:
         meta:
           $ref: '#/components/schemas/Meta'
         #The base language in which the resource is written.
+        identifier:
+                description: >-
+                  An identifier that applies to this person\u0027s qualification
+                  in this role
+                type: array
+                items:
+                  anyOf:
+                    - $ref: '#/components/schemas/NHIIdentifer'
+                    - $ref: '#/components/schemasNHIDormantIdentifer'
+                   
+                    
         extension:
           items:
             anyOf:
@@ -701,7 +712,37 @@ components:
           type: array
           
       additionalProperties: false
+      
+    NHIIdentifer:
+      type: object
+      properties:
+        use:
+          enum:
+            - official
+        system:
+          enum:
+            - https://standards.digital.health.nz/ns/nhi-id 
+        value:
+          type: string
+      required:
+        - use
+        - system
+      additionalProperties: false
     
+    NHIDormantIdentifer:
+      type: object
+      properties:
+        use:
+          enum:
+            - old
+        system:
+          type: string
+        value:
+          type: string      
+      required:
+        - use
+      additionalProperties: false
+      
     NzEthnicityExtension:
       type: object
       properties:
@@ -783,7 +824,80 @@ components:
                   required:
                     - url            
                   additionalProperties: false
+    
+    NZResidencyStatus Extension:
+       type: object
+       properties:
+          url:
+            enum:
+              - http://hl7.org.nz/fhir/StructureDefinition/nz-residency-status
+          extension:
+            type: array
+            items:
+              anyOf:
+               
+                - type: object
+                  properties:
+                    url:
+                      enum:
+                        - status
+                    valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              system:
+                                #preferred binding: http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html
+                                $ref: '#/components/schemas/string'
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'
+                                     
+                            additionalProperties: false                       
+                      additionalProperties: false
+                        
+                  required:
+                    - url            
+                  additionalProperties: false
+                             
+                - type: object
+                  properties:
+                    url:
+                      enum:
+                        - source
+                    valueCodeableConcept:
+                      type: object
+                      properties:
+                        coding:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                               #preferred binding:http://build.fhir.org/ig/HL7NZ/nzbase/branches/master/ValueSet-nz-residency-status.html
+                              system:
+                                 $ref: '#/components/schemas/string'
+                              version:
+                                  $ref: '#/components/schemas/string'
+                              code:
+                                  $ref: '#/components/schemas/code'
+                              display:
+                                  $ref: '#/components/schemas/string'                            
+                            additionalProperties: false                       
+                      additionalProperties: false
+                        
+                  required:
+                    - url            
+                  additionalProperties: false
               
+       required:
+          - url            
+       additionalProperties: false     
        
     BirthPlaceExtension:
       type: object
