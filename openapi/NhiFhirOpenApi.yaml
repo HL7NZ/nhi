@@ -875,6 +875,105 @@ components:
         - use
       additionalProperties: false
       
+    Address:
+      type: object
+      properties:
+        # The purpose of this address
+        # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse        
+        use: 
+          $ref: '#/components/schemas/code'
+          
+        # Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/addressType
+        type:
+           $ref: '#/components/schemas/code' 
+       
+        # This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
+        line:       
+          type: array
+          items:
+            $ref: '#/components/schemas/string'
+        
+        # Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
+        text:
+             $ref: '#/components/schemas/string'
+        
+        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/country-code
+        country:
+             $ref: '#/components/schemas/string'
+                 
+      required:
+        - type        
+      additionalProperties: false
+    
+    NhiAddress:
+      allOf:     
+        - $ref: '#/components/schemas/Address'
+        - type: object  
+          properties:
+            extension:
+              type: array
+              items:
+                anyOf:
+                  - type: object
+                    properties:
+                      url:
+                        enum:
+                          - http://hl7.org.nz/fhir/StructureDefinition/notValidatedReason
+                      valueCodeableConcept:
+                        type: object
+                        description: The reason why the address has not been validated
+                        properties:
+                          #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code
+                          coding:
+                            type: array
+                            items:
+                             $ref: '#/components/schemas/Coding'
+                          text:
+                            $ref: '#/components/schemas/string'
+                        additionalProperties: false 
+                    required:
+                      - url       
+                    additionalProperties: false
+                    
+                  - type: object
+                    description: Indicates this is the primary residential address - each patient must have one and only one
+                    properties:
+                      url:
+                        enum:
+                          - http://hl7.org.nz/fhir/StructureDefinition/address-isPrimary
+                      valueBoolean:
+                        $ref: '#/components/schemas/boolean'
+                    required:
+                      - url 
+                    additionalProperties: false 
+                  
+                  - type: object
+                    description: Suburb element of a NZ Address
+                    properties:
+                      url:
+                        enum:
+                          - suburb
+                      valueBoolean:
+                        $ref: '#/components/schemas/string'
+                    required:
+                      - url 
+                    additionalProperties: false 
+                  
+                  - type: object
+                    description:  The name of a building cited in an address
+                    properties:
+                        url:
+                          enum:
+                            - building-name
+                        valueBoolean:
+                          $ref: '#/components/schemas/string'
+                    required:
+                        - url 
+                    additionalProperties: false    
+                   
+      
+                     
     NzEthnicityExtension:
       type: object
       properties:
