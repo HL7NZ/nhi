@@ -2,9 +2,6 @@ Instance:   patient2
 InstanceOf: NhiPatient
 Usage: #example
 
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Test patient 2</div>"
-* text.status = #additional
-
 //name. The source of the name was a NZ Visa
 * name.family = "Doe"
 * name.given = "John"
@@ -13,6 +10,7 @@ Usage: #example
 
 * deceasedDateTime = "2020-01-01"
 * deceasedDateTime.extension[Information_source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/ns/information-source-code"
+* deceasedDateTime.extension[Information_source].valueCodeableConcept.coding.code = #CORONER
 
 
 * address[0].line[0] = "my house"
@@ -29,7 +27,7 @@ Usage: #example
 * birthDate = "1989-12-12"
 
 
-* deceasedDateTime = "2020-01-01"
+
 
 //the current NHI
 * identifier[0].use = #official
