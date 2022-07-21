@@ -1152,7 +1152,7 @@ components:
                           items:
                             type: object
                             properties:
-                              # required nbinding: https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
+                              # required binding: https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code
                               system:
                                 enum:
                                   - 'https://standards.digital.health.nz/ns/information-source-code'

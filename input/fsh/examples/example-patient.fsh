@@ -12,12 +12,15 @@ Usage: #example
 * name.extension[preferred].valueBoolean = true
 
 * deceasedDateTime = "2020-01-01"
-* deceasedDateTime.extension[Information_source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+* deceasedDateTime.extension[Information_source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/ns/information-source-code"
 
 
 * address[0].line[0] = "my house"
 * address[0].type = #physical
 * address[0].extension[isPrimaryAddress].valueBoolean = true
+
+* address[0].extension[notValidatedAddressReason].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/ns/address-not-validated-reason-code"
+* address[0].extension[notValidatedAddressReason].valueCodeableConcept.coding.code = #OSEA
 
 * gender = #male
 * gender.extension[originalText].valueString = "Bloke"
@@ -29,14 +32,14 @@ Usage: #example
 * deceasedDateTime = "2020-01-01"
 
 //the current NHI
-* identifier.use = #official
-* identifier.system = "https://standards.digital.health.nz/id/nhi"
-* identifier.value = "WER4568"
+* identifier[0].use = #official
+* identifier[0].system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier[0].value = "WER4568"
 
 //a dormant (replaced)  NHI
-* identifier.use = #old
-* identifier.system = "https://standards.digital.health.nz/id/nhi"
-* identifier.value = "ABC1234"
+* identifier[1].use = #old
+* identifier[1].system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier[1].value = "ABC1234"
 
 
 //birth country New Zealand
@@ -44,3 +47,8 @@ Usage: #example
 * extension[birthPlace].extension[country].valueCodeableConcept.coding.code = #NZ
 * extension[birthPlace].extension[country].valueCodeableConcept.coding.display = "New Zealand"
 
+//citizenship
+* extension[nzCitizen].extension[status].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/ns/nz-citizenship-status-code"
+* extension[nzCitizen].extension[status].valueCodeableConcept.coding.code =  #yes
+* extension[nzCitizen].extension[source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/ns/information-source-code"
+* extension[nzCitizen].extension[source].valueCodeableConcept.coding.code = #DIA
