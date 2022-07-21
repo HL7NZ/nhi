@@ -11,6 +11,10 @@ Usage: #example
 * name.given[1] = "Albertus"
 * name.extension[preferred].valueBoolean = true
 
+* deceasedDateTime = "2020-01-01"
+* deceasedDateTime.extension[Information_source].valueCodeableConcept.coding.system = "https://standards.digital.health.nz/cs/informationsource"
+
+
 * address[0].line[0] = "my house"
 * address[0].type = #physical
 * address[0].extension[isPrimaryAddress].valueBoolean = true

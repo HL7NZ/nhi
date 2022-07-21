@@ -809,12 +809,15 @@ components:
           description: This is a Practitioner resource
           enum:
               - Patient
-          #The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        
+        #The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.
         id:
           $ref: '#/components/schemas/id'
-        #The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+        
+        #The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
         meta:
           $ref: '#/components/schemas/Meta'
+        
         #The base language in which the resource is written.
         identifier:
                 description: >-
@@ -825,7 +828,8 @@ components:
                   anyOf:
                     - $ref: '#/components/schemas/NHIIdentifer'
                     - $ref: '#/components/schemas/NHIDormantIdentifer'
-                   
+        
+        # A name associated with the individual.           
         name:
           $ref: '#/components/schemas/NhiHumanName'  
         
@@ -835,6 +839,7 @@ components:
         _birthdate:   
           $ref:  '#/components/schemas/NhiBirthDateInformationsource'
         
+        # Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes
         gender:
            $ref:  '#/components/schemas/string'
         _gender:
@@ -855,6 +860,7 @@ components:
                 additionalProperties: false
            additionalProperties: false 
         
+        # Indicates if the individual is deceased or not.
         deceasedDateTime:
            $ref:  '#/components/schemas/dateTime'
         _deceasedDateTime:
@@ -900,6 +906,7 @@ components:
       
     NHIIdentifer:
       type: object
+      description: The NHI number is a unique number for all New Zealanders, assigned at birth
       properties:
         use:
           enum:
@@ -916,6 +923,7 @@ components:
     
     NHIDormantIdentifer:
       type: object
+      description: An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant'
       properties:
         use:
           enum:
@@ -930,6 +938,7 @@ components:
       
     Address:
       type: object
+      description: An address expressed using postal conventions (as opposed to GPS or other location definition formats)
       properties:
         # The purpose of this address
         # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse        
@@ -960,6 +969,7 @@ components:
       additionalProperties: false
     
     NhiAddress:
+      description: Adds additional, NHI specific extensions
       allOf:     
         - $ref: '#/components/schemas/Address'
         - type: object  
@@ -1059,12 +1069,14 @@ components:
                   
     NzGeocode:
       type: object
+      description:  New Zealand Geocode. This uses a different datum from that defined in the HL7 FHIR specification for a Geocode.
       properties:
         url: 
           enum:
             - 'http://hl7.org.nz/fhir/StructureDefinition/nz-geocode'
         latitude:
           type: object
+          description: The latitude of the geocode
           properties:
             url:
               enum:
@@ -1073,8 +1085,9 @@ components:
               $ref: '#/components/schemas/decimal'
         longitude:
           type: object
+          description: The longitude of the geocode
           properties:
-            url:
+            url:            
               enum:
                 - longitude
             valueDecimal: 
@@ -1082,6 +1095,7 @@ components:
          
         datumCode:
            type: object
+           description: Datum codes used
            properties:
               url:
                 enum:
@@ -1097,6 +1111,7 @@ components:
          
     NzEthnicityExtension:
       type: object
+      description: The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group.
       properties:
         url:
           enum:
@@ -1111,12 +1126,11 @@ components:
       required:
         - url
         - valueCodeableConcept
-      additionalProperties: false
-
-    
+      additionalProperties: false   
     
     NzCitizenshipExtension:
        type: object
+       description: New Zealand citizenship
        properties:
           url:
             enum:
@@ -1181,6 +1195,7 @@ components:
     
     NZResidencyStatus Extension:
        type: object
+       description : NZ Residency status
        properties:
           url:
             enum:
@@ -1191,6 +1206,7 @@ components:
               anyOf:
                
                 - type: object
+                  description: Residency Status
                   properties:
                     url:
                       enum:
@@ -1208,6 +1224,7 @@ components:
                   additionalProperties: false
                              
                 - type: object
+                  description: The source of information concerning the residency
                   properties:
                     url:
                       enum:
@@ -1228,6 +1245,7 @@ components:
        
     BirthPlaceExtension:
       type: object
+      description: The country where the person was born 
       properties:
         url:
           enum:
@@ -1237,6 +1255,7 @@ components:
          items:
            anyOf:
             - type: object
+              description: The birth country.
               properties:
                 url:
                   enum:
@@ -1276,7 +1295,8 @@ components:
               additionalProperties: false
                   
             - type: object
-              properties:
+              description: The source of information concerning the country of birth
+              properties:               
                 url:
                   enum:
                     -  'source'
