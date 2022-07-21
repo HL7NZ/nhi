@@ -744,9 +744,12 @@ components:
           
          
         # An address expressed using postal conventions (as opposed to GPS or other location definition formats)       
-        address:   
-          $ref: '#/components/schemas/NhiAddress'    
-          
+        address:           
+          type: array
+          items:
+            $ref: '#/components/schemas/NhiAddress' 
+          minItems: 1
+            
         extension:
           type: array
           items:
@@ -770,6 +773,8 @@ components:
             - https://standards.digital.health.nz/ns/nhi-id 
         value:
           type: string
+        assigner:
+          $ref: '#/components/schemas/Reference'
       required:
         - use
         - system
@@ -785,41 +790,11 @@ components:
         system:
           type: string
         value:
-          type: string      
+          type: string  
+        assigner:
+          $ref: '#/components/schemas/Reference'    
       required:
         - use
-      additionalProperties: false
-      
-    Address:
-      type: object
-      description: An address expressed using postal conventions (as opposed to GPS or other location definition formats)
-      properties:
-        # The purpose of this address
-        # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse        
-        use: 
-          $ref: '#/components/schemas/code'
-          
-        # Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
-        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/addressType
-        type:
-           $ref: '#/components/schemas/code' 
-       
-        # This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
-        line:       
-          type: array
-          items:
-            $ref: '#/components/schemas/string'
-        
-        # Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
-        text:
-             $ref: '#/components/schemas/string'
-        
-        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/country-code
-        country:
-             $ref: '#/components/schemas/string'
-                 
-      required:
-        - type        
       additionalProperties: false
       
     NhiHumanName:
@@ -833,7 +808,11 @@ components:
           enum:
             - usual
             - official
+            - temp
+            - nickname
+            - anonymous
             - old
+            - maiden
         text:
           $ref: '#/components/schemas/string'
         family:
@@ -967,7 +946,7 @@ components:
                               system:
                                 #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code
                                 enum:
-                                  - 'https://standards.digital.health.nz/ns/information-source-cod'
+                                  - 'https://standards.digital.health.nz/ns/information-source-code'
                               version:
                                   $ref: '#/components/schemas/string'
                               code:
@@ -986,102 +965,126 @@ components:
     
     NhiAddress:
       description: Adds additional, NHI specific extensions
-      allOf:     
-        - $ref: '#/components/schemas/Address'
-        - type: object  
-          properties:
-            extension:
-              type: array
-              items:
-                anyOf:
-                  - type: object
+      type: object
+      properties:
+        # The purpose of this address
+        # required binding : https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse        
+        use: 
+          $ref: '#/components/schemas/code'
+          
+        # Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/addressType
+        type:
+           $ref: '#/components/schemas/code' 
+       
+        # This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.
+        line:       
+          type: array
+          items:
+            $ref: '#/components/schemas/string'
+        
+        # Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.
+        text:
+             $ref: '#/components/schemas/string'
+        
+        # required binding :  https://nzhts.digital.health.nz/fhir/ValueSet/country-code
+        country:
+             $ref: '#/components/schemas/string'                     
+        extension:
+          type: array
+          items:
+            anyOf:
+              - type: object
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason'
+                  valueCodeableConcept:
+                    type: object
+                    description: The reason why the address has not been validated
                     properties:
-                      url:
-                        enum:
-                          - 'http://hl7.org.nz/fhir/StructureDefinition/notValidatedReason'
-                      valueCodeableConcept:
-                        type: object
-                        description: The reason why the address has not been validated
-                        properties:
-                          #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code
-                          coding:
-                            type: array
-                            items:
-                             $ref: '#/components/schemas/Coding'
-                          text:
-                            $ref: '#/components/schemas/string'
-                        additionalProperties: false 
-                    required:
-                      - url       
-                    additionalProperties: false
-                    
-                  - type: object
-                    description: Indicates this is the primary residential address - each patient must have one and only one
-                    properties:
-                      url:
-                        enum:
-                          - 'http://hl7.org.nz/fhir/StructureDefinition/address-isPrimary'
-                      valueBoolean:
-                        $ref: '#/components/schemas/boolean'
-                    required:
-                      - url 
-                    additionalProperties: false 
-                  
-                  - $ref: '#/components/schemas/NzGeocode'
-                                    
-                  - type: object
-                    description: Suburb element of a NZ Address
-                    properties:
-                      url:
-                        enum:
-                          - 'http://hl7.org.nz/fhir/StructureDefinition/suburb'
-                      valueBoolean:
+                      #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code
+                      coding:
+                        type: array
+                        items:
+                         $ref: '#/components/schemas/Coding'
+                      text:
                         $ref: '#/components/schemas/string'
-                    required:
-                      - url 
                     additionalProperties: false 
-                  
-                  - type: object
-                    description:  The name of a building cited in an address
+                required:
+                  - url       
+                additionalProperties: false
+                
+              - type: object
+                description: Indicates this is the primary residential address - each patient must have one and only one
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/is-primary-address'
+                  valueBoolean:
+                    $ref: '#/components/schemas/boolean'
+                required:
+                  - url 
+                additionalProperties: false 
+              
+              - $ref: '#/components/schemas/NzGeocode'
+                                
+              - type: object
+                description: Suburb element of a NZ Address
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/suburb'
+                  valueBoolean:
+                    $ref: '#/components/schemas/string'
+                required:
+                  - url 
+                additionalProperties: false 
+              
+              - type: object
+                description:  The name of a building cited in an address
+                properties:
+                    url:
+                      enum:
+                        - 'http://hl7.org.nz/fhir/StructureDefinition/building-name'
+                    valueBoolean:
+                      $ref: '#/components/schemas/string'
+                required:
+                    - url 
+                additionalProperties: false    
+              
+              - type: object
+                description: Uniquely identifies this address as a physical entity. Will remain constant over time even if address administrative data such as DPID change
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/nz-address-id'
+                  valueBoolean:
+                    $ref: '#/components/schemas/string'
+                required:
+                  - url 
+                additionalProperties: false 
+                
+                
+              - type: object
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/domicile-code'
+                  valueCodeableConcept:
+                    type: object
+                    description: NZ Domicile Code. Derived from a patient's primary physical, home address.
                     properties:
-                        url:
-                          enum:
-                            - 'http://hl7.org.nz/fhir/StructureDefinition/building-name'
-                        valueBoolean:
-                          $ref: '#/components/schemas/string'
-                    required:
-                        - url 
-                    additionalProperties: false    
-                  
-                  - type: object
-                    description: Uniquely identifies this address as a physical entity. Will remain constant over time even if address administrative data such as DPID change
-                    properties:
-                      url:
-                        enum:
-                          - 'http://hl7.org.nz/fhir/StructureDefinition/nz-address-id'
-                      valueBoolean:
-                        $ref: '#/components/schemas/string'
-                    required:
-                      - url 
+                      #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code
+                       coding:
+                          $ref: '#/components/schemas/Coding'
                     additionalProperties: false 
-                    
-                    
-                  - type: object
-                    properties:
-                      url:
-                        enum:
-                          - 'http://hl7.org.nz/fhir/StructureDefinition/domicile-code'
-                      valueCodeableConcept:
-                        type: object
-                        description: NZ Domicile Code. Derived from a patient's primary physical, home address.
-                        properties:
-                          #preferred binding:  https://nzhts.digital.health.nz/fhir/ValueSet/domicile-code
-                           coding:
-                              $ref: '#/components/schemas/Coding'
-                        additionalProperties: false 
-                    required:
+                required:
                       - url       
-                    additionalProperties: false 
+                additionalProperties: false 
+      required:
+        - type
+      additionalProperties: false
                   
     NzGeocode:
       type: object
