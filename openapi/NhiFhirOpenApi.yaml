@@ -855,7 +855,38 @@ components:
                 additionalProperties: false
            additionalProperties: false 
         
-              
+        deceasedDateTime:
+           $ref:  '#/components/schemas/dateTime'
+        _deceasedDateTime:
+          type: object
+          properties:
+            extension:
+              type: array
+              items:
+                type: object
+                properties:
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/information-source'
+                  #preferred binding: 
+                  valueCodeableConcept:
+                    type: object
+                    properties:
+                      system:
+                        #required binding: https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code
+                        enum:
+                          - 'https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code'
+                      version:
+                          $ref: '#/components/schemas/string'
+                      code:
+                          $ref: '#/components/schemas/code'
+                      display:
+                          $ref: '#/components/schemas/string'
+                    required:
+                      - system            
+                    additionalProperties: false
+          additionalProperties: false
+           
         extension:
           items:
             anyOf:
