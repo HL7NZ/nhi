@@ -834,13 +834,35 @@ components:
            $ref:  '#/components/schemas/date'
         _birthdate:   
           $ref:  '#/components/schemas/NhiBirthDateInformationsource'
-                  
+        
+        gender:
+           $ref:  '#/components/schemas/string'
+        _gender:
+           type: object
+           properties:
+            extension:
+              type: array
+              items:
+                type: object
+                properties:                    
+                  url:
+                    enum:
+                      - 'http://hl7.org.nz/fhir/StructureDefinition/gender-original-text'
+                  valueString:
+                    $ref:  '#/components/schemas/string'
+                required:
+                  - url       
+                additionalProperties: false
+           additionalProperties: false 
+        
+              
         extension:
           items:
             anyOf:
               - $ref: '#/components/schemas/NzEthnicityExtension'
               - $ref: '#/components/schemas/NzCitizenshipExtension'
               - $ref: '#/components/schemas/BirthPlaceExtension'
+              - $ref: '#/components/schemas/NhiAddress'
           type: array
           
       additionalProperties: false
