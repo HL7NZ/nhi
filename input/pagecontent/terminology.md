@@ -3,11 +3,6 @@ This page provides a list of the FHIR terminology artifacts defined as part of t
 <table class='table table-bordered table-condensed'>
 <tr><th>Title</th><th>Description</th><th>Canonical url</th></tr>
 <tr>
-<td><a href="CodeSystem-AddressNotValidated.html">Address Not Validated reason-0.10.0</a> </td>
-<td> <p>The reason why the address was not validated</p> </td>
-<td> <a href="https://standards.digital.health.nz/ns/nhi-address-not-validated-reason-code">https://standards.digital.health.nz/ns/nhi-address-not-validated-reason-code</a></td>
-</tr>
-<tr>
 <td><a href="CodeSystem-Datum.html">Datum Code-0.10.0</a> </td>
 <td> <p>Identifies the coordinate system used to specify points on a map</p> </td>
 <td> <a href="https://standards.digital.health.nz/ns/datum-code">https://standards.digital.health.nz/ns/datum-code</a></td>
@@ -29,6 +24,11 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://standards.digital.health.nz/ns/ethnic-group-level-4-code">https://standards.digital.health.nz/ns/ethnic-group-level-4-code</a></td>
 </tr>
 <tr>
+<td><a href="CodeSystem-AddressNotValidated.html">Address Not Validated reason-0.10.0</a> </td>
+<td> <p>The reason why the address was not validated</p> </td>
+<td> <a href="https://standards.digital.health.nz/ns/nhi-address-not-validated-reason-code">https://standards.digital.health.nz/ns/nhi-address-not-validated-reason-code</a></td>
+</tr>
+<tr>
 <td><a href="CodeSystem-nz-additional-sex-code.html">Patient citizenship status-0.10.0</a> </td>
 <td> <p>Additional sex values for Patient</p> </td>
 <td> <a href="https://standards.digital.health.nz/ns/nz-additional-sex-code">https://standards.digital.health.nz/ns/nz-additional-sex-code</a></td>
@@ -42,9 +42,9 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code">https://nzhts.digital.health.nz/fhir/ValueSet/address-not-validated-reason-code</a></td>
 </tr>
 <tr>
-<td><a href="ValueSet-citizenship-status.html">NZ Citizenship status-0.10.0</a> </td>
-<td> <p>Citizenship status</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code</a></td>
+<td><a href="ValueSet-nhi-address-type.html">NHI Address Type Codes-0.10.0</a> </td>
+<td> <p>Types of address supported by the NHI</p></td>
+<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">https://nzhts.digital.health.nz/fhir/ValueSet/addressType</a></td>
 </tr>
 <tr>
 <td><a href="ValueSet-Datum.html">Datum Code-0.10.0</a> </td>
@@ -67,9 +67,9 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code">https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code</a></td>
 </tr>
 <tr>
-<td><a href="ValueSet-nhi-address-type.html">NHI Address Type Codes-0.10.0</a> </td>
-<td> <p>Types of address supported by the NHI</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">https://nzhts.digital.health.nz/fhir/ValueSet/addressType</a></td>
+<td><a href="ValueSet-NhiIdentifierUse.html">NHI Identifier-0.10.0</a> </td>
+<td> <p>NHI Identifier</p></td>
+<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use-code">https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use-code</a></td>
 </tr>
 <tr>
 <td><a href="ValueSet-nhi-address-use.html">NHI Address Use Codes-0.10.0</a> </td>
@@ -77,14 +77,14 @@ described <a href="http://aria.stats.govt.nz/aria/#ClassificationView:uri=http:/
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse">https://nzhts.digital.health.nz/fhir/ValueSet/nhiaddressUse</a></td>
 </tr>
 <tr>
-<td><a href="ValueSet-NhiIdentifierUse.html">NHI Identifier-0.10.0</a> </td>
-<td> <p>NHI Identifier</p></td>
-<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use-code">https://nzhts.digital.health.nz/fhir/ValueSet/nhi-identifier-use-code</a></td>
-</tr>
-<tr>
 <td><a href="ValueSet-nz-additional-sex-code.html">Gender codes including Indeterminate-0.10.0</a> </td>
 <td> <p>Additional sex values for Patient</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-additional-sex-code</a></td>
+</tr>
+<tr>
+<td><a href="ValueSet-citizenship-status.html">NZ Citizenship status-0.10.0</a> </td>
+<td> <p>Citizenship status</p></td>
+<td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code">https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-status-code</a></td>
 </tr>
 </table>
 <h3>Concept Maps</h3>
