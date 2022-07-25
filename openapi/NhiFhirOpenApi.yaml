@@ -1486,7 +1486,6 @@ components:
       description: NHI number
       required: true
       allowEmptyValue: false
-      style: simple
       schema:
         type: string
         
