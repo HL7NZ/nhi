@@ -77,12 +77,43 @@ paths:
             application/fhir+json:
               schema:
                 $ref: '#/components/schemas/OperationOutcome'
-      parameters:
-        - $ref: '#/components/parameters/format'
-        - $ref: '#/components/parameters/pretty'
-        - $ref: '#/components/parameters/summary'
-        - $ref: '#/components/parameters/elements'
-        - $ref: '#/components/parameters/userid_header'
+    post:
+        summary: match operation
+        operationId: match
+        requestBody:
+          description: patient attribute styo match on
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientMatchRequest'
+        responses:
+          '200':
+            description: the resource being returned
+            content:
+              application/fhir+json:
+                schema:
+                  $ref: '#/components/schemas/PatientMatchResponse'
+             
+          '400':
+            description: Error, with details
+            content:
+              application/fhir+json:
+                schema:
+                  $ref: '#/components/schemas/OperationOutcome'
+          '401':
+            description: Not Authorized
+            content:
+              application/fhir+json:
+                schema:
+                  $ref: '#/components/schemas/OperationOutcome'
+        parameters:
+            # $match path is required
+            - $ref: '#/components/parameters/match'
+            - $ref: '#/components/parameters/pretty'
+            - $ref: '#/components/parameters/summary'
+            - $ref: '#/components/parameters/elements'
+            - $ref: '#/components/parameters/userid_header'
        
            
   /fhir/hpi/v1/Patient/{rid}:
@@ -1345,10 +1376,90 @@ components:
       required:
           - url            
       additionalProperties: false
-            
-              
+      
+    PatientMatchRequest:
+      type: object
+      properties:
+        resourceType:
+          enum:
+            - 'Parameters'
+        id:
+          $ref: '#/components/schemas/string'
+        parameter:
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/ParameterResource'
+              - $ref: '#/components/schemas/ParameterCount'
+              - $ref: '#/components/schemas/ParameterOnlyCertainMatches'
+      required:
+          - resourceType            
+      additionalProperties: false
+           
+                 
+    ParameterResource:
+      type: object
+      properties:
+        name:
+          enum:
+            - 'resource'
+        resource:
+           $ref: '#/components/schemas/Patient'
+      required:
+          - name            
+      additionalProperties: false
+           
+    ParameterCount:
+      type: object
+      properties:
+        name:
+          enum:
+            - 'count'
+        valueInteger:
+           $ref: '#/components/schemas/integer'
+      required:
+          - name            
+      additionalProperties: false
+      
+    ParameterOnlyCertainMatches:
+      type: object
+      properties:
+        name:
+          enum:
+            - 'onlyCertainMatches'
+        valueBoolean:
+           $ref: '#/components/schemas/boolean'         
+      
+    PatientMatchResponse:
+      type: object
+      properties:        
+        resourceType:
+          enum:
+            - 'Bundle'
+        type:
+          enum:
+            - 'searchset'
+        entry:
+          type: array
+          items:
+            type: object
+            properties:
+               resource:                
+                  $ref: '#/components/schemas/Patient'                              
       
   parameters:
+    match:
+      name: match
+      in: path
+      description: patient match operation
+      required: true
+      allowEmptyValue: false
+      style: simple
+      schema:
+        type: string
+        enum:
+          - '$match'
+        
     rid:
       name: rid
       in: path
