@@ -1394,21 +1394,25 @@ components:
           enum:
             - 'Parameters'
         id:
-          $ref: '#/components/schemas/string'
+          $ref: '#/components/schemas/string'          
         parameter:
+          description: An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values
           type: array
           items:
             anyOf:
               - $ref: '#/components/schemas/ParameterResource'
               - $ref: '#/components/schemas/ParameterCount'
               - $ref: '#/components/schemas/ParameterOnlyCertainMatches'
-      required:
+          minItems: 1
+          maxItems: 3
+      required:      
           - resourceType            
       additionalProperties: false
            
                  
     ParameterResource:
       type: object
+      description: Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match).
       properties:
         name:
           enum:
@@ -1419,8 +1423,9 @@ components:
           - name            
       additionalProperties: false
            
-    ParameterCount:
+    ParameterCount:    
       type: object
+      description: The maximum number of records to return. If no value is provided, the server decides how many matches to return. Note that clients should be careful when using this, as it may prevent probable - and valid - matches from being returned
       properties:
         name:
           enum:
@@ -1433,6 +1438,7 @@ components:
       
     ParameterOnlyCertainMatches:
       type: object
+      description: If there are multiple potential matches, then the match should not return the results with this flag set to true. When false, the server may return multiple results with each result graded accordingly.
       properties:
         name:
           enum:
