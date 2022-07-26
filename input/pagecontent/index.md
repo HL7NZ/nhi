@@ -9,25 +9,26 @@
 *****************************************************************************************
 {% endcomment %} -->
 
-This is the Implementation Guide for a [HL7&reg; FHIR&copy;](http://hl7.org/fhir/) interface  for the  interface to the New Zealand NHI - National Health Identifier. It brings together all the artifacts that are necessary to understand and use this API. 
+This is the Implementation Guide for a [HL7&reg; FHIR&copy;](http://hl7.org/fhir/) interface  for the  interface to the New Zealand National Health Index [NHI](https://www.health.govt.nz/our-work/health-identity/national-health-index). It brings together all the artifacts that are necessary to understand and use the NHI FHIR API.
 
+The NHI is made up of two resources:
+* [NHIPatient](StructureDefinition-NhiPatient.html), derived from the [HL7 FHIR Patient resource](http://hl7.org/fhir/patient.html).
+* [NHIAddress](StructureDefinition-NhiAddress.html), derived from [HL7 FHIR Address data type](http://hl7.org/fhir/R4/datatypes.html#Address).
 
-The [NHI](https://www.health.govt.nz/our-work/health-identity/national-health-index) is a national Patient Identifier system, which
- has been in continuous use for over 20 years. It is represented using the FHIR [Patient](http://hl7.org/fhir/patient.html) resource.
- 
-The NHI serves 2 primary purposes:
-
-* A **unique identifier** for each individual
-* The **source of truth** for the key information about that individual. 
-
-Note that the NHI  is not the actual source of information, rather it is the central registry from where a client can access (or update) it.
+This guide uses artifacts from [New Zealand Base Implementation Guide.](http://igs.clinfhir.com/nzbasev1/index.html)
 
 ### Organization of the Guide
 
-This guide defines a profile on a single resource - the [Patient](http://hl7.org/fhir/patient.html) resource and the API that can access it. This was created by first defining an [Information model](NhiPatientLM.html) that defines the actual information in the model, and then subsequently the [FHIR profile](StructureDefinition-NhiPatient.html).
-
-### API
-
-The [API page](API.html) describes how a client can retrieve Patients from the NHI. Write operations are not (yet) supported.
+* **Business view:** The Business context of the NHI
+* **Use Cases:**  The expected Use Cases including the FHIR interactions that the NHI supports.
+* **Onboarding and Compliance:** Information on the process for onboarding and compliance, and the specific tests for each of the NHI FHIR interactions.
+* **API:** Information on the specific features supported by the API.
+* **Profiles:** Details of the data elements included in the NHI Patient and NHI Address profiles.
+* **Extensions:** List of extensions defined by the guide.
+* **Identifiers:** Provides details of the NHI-ID.
+* **Terminology:** List of the FHIR terminology artifacts defined within this implementation guide [For other FHIR terminology see the HL7® FHIR® New Zealand Base Implementation Guide](https://fhir.org.nz/ig/base/index.html). Links can be found from each of the artifacts in the patient and address profiles).
+* **FAQ:** Frequently Asked Questions (TBD)
+* **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
+* **Support** Links to the FHIR spec and downloads.
 
 > Need a comment / page on security

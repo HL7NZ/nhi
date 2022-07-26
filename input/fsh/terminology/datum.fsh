@@ -10,6 +10,6 @@ Title: "Datum Code"
 Description: "Identifies the coordinate system used to specify points on a map"
 
 * ^url = $datum-cs
-
+* ^version = "1.0.0"
 * #NZGD2000 "NZ offical datum, used by MoH address service"
 * #WGS84 "global datum,  used by google maps"
