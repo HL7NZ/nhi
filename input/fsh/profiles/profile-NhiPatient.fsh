@@ -107,10 +107,6 @@ Description:    "The Patient resource exposed by the NHI."
 * generalPractitioner only Reference(PractitionerRole)
 
 
-//identifier constraints for NHI
-* identifier.system from https://standards.digital.health.nz/ns/nhi-id
-* identifier.type 0..0
-* identifier.period 0..0
 * identifier.use from $nhi-identifier-use-code-vs
 * identifier.use ^short = "official | old"
 
@@ -125,16 +121,13 @@ Description:    "The Patient resource exposed by the NHI."
     NHI 1..1 MS and 
 	dormant 0..* MS
 	 
-* identifier[NHI].system  from https://standards.digital.health.nz/ns/nhi-id
+* identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
 * identifier[NHI].use = #official (exactly)
 * identifier[NHI].use ^short = "fixed to official"
 * identifier[NHI] ^short = "The currently active NHI "
 * identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
 
-* identifier[NHI].type 0..0
-* identifier[NHI].period 0..0
 
-* identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
 * identifier[dormant].use = #old (exactly)
 * identifier[dormant].use ^short = "fixed to old"
 * identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
