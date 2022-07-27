@@ -1,0 +1,33 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Validate Patient
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "<FHIR API> NHI" as B #CornflowerBlue
+participant "NHI MDM" as C #CornflowerBlue
+|||
+User -> A: Provide Patient record for NHI to validate
+activate A
+|||
+A -> B: POST (…)/patient/$Match (onlyCertainMatches set to True)
+activate B
+|||
+B -> B: Validate[]
+|||
+B -> C: Request
+activate C
+|||
+
+C -[dashed]-> B:
+deactivate C
+|||
+B -[dashed]-> A: Return Patient record with only NHI number
+deactivate B
+|||
+A -> User: Display confirmation to user
+deactivate A
+|||
+@enduml
