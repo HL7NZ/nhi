@@ -9,7 +9,7 @@ participant "Integrating application" as A #CornflowerBlue
 participant "<FHIR API> NHI" as B #CornflowerBlue
 participant "NHI MDM" as C #CornflowerBlue
 |||
-User -> A: Provide Patient record for NHI to validate
+User -> A: Provide resource with Patient details for NHI to validate
 activate A
 |||
 A -> B: POST (…)/patient/$Match (onlyCertainMatches set to True)
