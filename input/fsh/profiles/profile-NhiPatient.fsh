@@ -108,30 +108,16 @@ Description:    "The Patient resource exposed by the NHI."
 
 
 //identifier constraints for NHI
-* identifier.system from https://standards.digital.health.nz/ns/nhi-id
+//* identifier.system from https://standards.digital.health.nz/ns/nhi-id
 * identifier.type 0..0
 * identifier.period 0..0
-* identifier.use from $nhi-identifier-use-code-vs
-* identifier.use ^short = "official | old"
+//* identifier.use from $nhi-identifier-use-code-vs
+//* identifier.use ^short = "official | old"
 
-//identifier slicing for NHI
-//* identifier ^slicing.discriminator[1].type = #value
-//* identifier ^slicing.discriminator[1].path = "use"
+* identifier[NHI].period 0..0 
+* identifier[NHI].type 0..0 
 
-* identifier contains 
-	dormant 0..* MS
-	 
-* identifier[dormant].system  from https://standards.digital.health.nz/ns/nhi-id
-* identifier[dormant].use = #old (exactly)
-* identifier[dormant].use ^short = "fixed to old"
-* identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
-* identifier[dormant] ^definition = "An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant’."
-
-* identifier[dormant].type 0..0
-* identifier[dormant].period 0..0
-
-//-------- end of identifier slicing --------
-
-
+* identifier[dormant].period 0..0 
+* identifier[dormant].type 0..0 
 
 
