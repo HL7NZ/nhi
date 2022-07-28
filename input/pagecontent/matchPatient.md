@@ -4,9 +4,9 @@
 
 #### Overview
 
-The local system sends a request to the NHI with patient details to match <br />
-The NHI does a search and returns a bundle of patient records that represent possible matches <br />
-These are ordered from most likely (1) to least likely (0)
+* The local system sends a request to the NHI with patient details to match
+* The NHI does a search and returns a bundle of patient records that represent possible matches
+* These are ordered from most likely (1) to least likely (0)
 
 <div>
 {% include match-patient.svg %}
