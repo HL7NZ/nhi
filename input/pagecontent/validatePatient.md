@@ -6,7 +6,7 @@
 {% include validate-patient.plantuml.svg %}
 </div>
 
-Validate Pactient processing steps:
+Validate Patient processing steps:
 
 1. The user initiates a validate request in the integrating application
 2. The integrating application sends an HTTP POST request using a $Match operation to the NHI with onlyCertainMatches set to True
