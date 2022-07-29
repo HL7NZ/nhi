@@ -40,6 +40,15 @@
 <td></td>
 </tr>
 <tr>
+<td><a href='StructureDefinition-name-use-extra.html'>name-use-extra</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/name-use-extra</td>
+<td>
+<div>Patient</div>
+</td>
+<td><p>Additional name use codes for NHI names</p></td>
+<td></td>
+</tr>
+<tr>
 <td><a href='StructureDefinition-nhi-address-derived.html'>nhi-address-derived</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived</td>
 <td>

@@ -19,6 +19,7 @@ Usage: #definition
 * rest.mode = #server
 
 * rest.resource.type = #Patient
+* rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
 * rest.resource.interaction.documentation = "The id is the same as the current NHI value"
 * rest.resource.interaction[1].code = #patch

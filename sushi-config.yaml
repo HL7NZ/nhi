@@ -7,7 +7,7 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 0.10.0
+version: 0.11.0 snapshot
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
@@ -19,19 +19,19 @@ license: CC0-1.0
 
 dependencies:
    fhir.org.nz.ig.base:
-     uri: 'http://fhir.org.nz/ig/base'
+     uri: 'http://hl7.org.nz/fhir/ig/base/ImplementationGuide/hl7.org.nz.fhir.ig.base'
      version: 1.0.0
      
    hl7.org.nz.fhir.ig.hip-core:
-     #uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
-     uri: 'https:ig-nhi.hip-uat.digital.health.nz'
-     version: 1.0.0
+     uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
+     #uri: 'https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/ImplementationGuide/ig.hip.digital.health.nz.base'
+     version: dev
      
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
-releaseLabel: Release R1
+releaseLabel: Release R2
 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -39,7 +39,14 @@ releaseLabel: Release R1
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
-  API: capabilityStatement.html
+  Business View: businessView.html
+  Use cases: usecases.html
+  Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
+  API:
+    Get patient: getPatient.html
+    Match patient: matchPatient.html
+    Add patient: addPatient.html
+  General Notes: general.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
@@ -48,6 +55,8 @@ menu:
   Artifact Index: artifacts.html
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
+    Artifacts (Json): definitions.json.zip
+    Artifacts (Xml): definitions.xml.zip
 
 
 
