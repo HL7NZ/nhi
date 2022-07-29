@@ -20,7 +20,7 @@ license: CC0-1.0
 dependencies:
    fhir.org.nz.ig.base:
      uri: 'http://hl7.org.nz/fhir/ig/base/ImplementationGuide/hl7.org.nz.fhir.ig.base'
-     version: 1.0.0
+     version: dev
      
    hl7.org.nz.fhir.ig.hip-core:
      uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'

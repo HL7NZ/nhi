@@ -58,15 +58,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href='StructureDefinition-nhi-nz-geocode.html'>nhi-nz-geocode</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode</td>
-<td>
-<div>Address</div>
-</td>
-<td><p> Adds an explicit  datum code to nz-geocode</p></td>
-<td></td>
-</tr>
-<tr>
 <td><a href='StructureDefinition-not-validated-address-reason.html'>not-validated-address-reason</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/not-validated-address-reason</td>
 <td>
