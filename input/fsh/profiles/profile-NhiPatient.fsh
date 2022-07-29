@@ -107,6 +107,7 @@ Description:    "The Patient resource exposed by the NHI."
 * generalPractitioner only Reference(PractitionerRole)
 
 
+
 //identifier constraints for NHI
 //* identifier.system from https://standards.digital.health.nz/ns/nhi-id
 * identifier.type 0..0
@@ -119,5 +120,4 @@ Description:    "The Patient resource exposed by the NHI."
 
 * identifier[dormant].period 0..0 
 * identifier[dormant].type 0..0 
-
 
