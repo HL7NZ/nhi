@@ -51,7 +51,7 @@ paths:
         - $ref: '#/components/parameters/elements'
         - $ref: '#/components/parameters/userid_header'
   
-  /fhir/hpi/v1/Patient:
+  /fhir/nhi/v1/Patient:
     summary: manage the collection of resources of type Patient
     description: >-
      The Manager for resources of type Patient: provides services to manage the collection of all the Patient instances
@@ -88,7 +88,7 @@ paths:
     
   
            
-  /fhir/hpi/v1/Patient/{rid}:
+  /fhir/nhi/v1/Patient/{rid}:
       summary: Read/Write/etc resource instance of type Patient
       description: >-
         Access to services to manage the state of a single resource of type Patient
@@ -123,7 +123,7 @@ paths:
           - $ref: '#/components/parameters/elements'
           - $ref: '#/components/parameters/userid_header'
         
-  /fhir/hpi/v1/Patient/{match}:
+  
       post:
         summary: match operation
         operationId: match
@@ -155,7 +155,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/OperationOutcome'
         parameters: 
-            - $ref: '#/components/parameters/match'             
+            - $ref: '#/components/parameters/rid'             
             - $ref: '#/components/parameters/pretty'
             - $ref: '#/components/parameters/summary'
             - $ref: '#/components/parameters/elements'
@@ -1464,18 +1464,7 @@ components:
                   $ref: '#/components/schemas/Patient'                              
       
   parameters:
-    match:
-      name: match
-      in: path
-      description: patient match operation
-      required: true
-      allowEmptyValue: false
-      style: simple
-      schema:
-        type: string
-        enum:
-          - '$match'
-        
+          
     rid:
       name: rid
       in: path
@@ -1486,6 +1475,7 @@ components:
       schema:
         type: string
         
+               
     nhi:
       name: nhi
       in: query
