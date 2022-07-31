@@ -40,13 +40,16 @@ releaseLabel: Release R2
 menu:
   IG Home: index.html
   Business View: businessView.html
-  Use cases: usecases.html
-  Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
-  API:
+  Use cases:
+    Use cases: usecases.html
     Get patient: getPatient.html
     Match patient: matchPatient.html
     Add patient: addPatient.html
-  General Notes: general.html
+  Important information:
+    Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
+    General Notes: general.html
+    FAQ: FAQ.html
+  API: capabilityStatement.html
   Profiles: profiles.html
   Extensions: extensions.html
   Identifiers: namingSystems.html
