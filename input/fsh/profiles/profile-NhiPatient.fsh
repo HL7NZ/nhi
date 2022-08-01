@@ -121,5 +121,13 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier[dormant].period 0..0 
 * identifier[dormant].type 0..0 
 
+//other constraints
+* extension[dhb] 0..0
+* extension[pho] 0..0
+* extension[iwi] 0..0
+* extension[sex-at-birth] 0..0
+* extension[domicile-code] 0..0
+
+
 
 
