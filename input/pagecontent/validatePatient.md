@@ -3,7 +3,7 @@
 ### Validate Pactient
 
 <div>
-{% include validate-patient.plantuml.svg %}
+{% include validate-patient.svg %}
 </div>
 
 Validate Patient processing steps:
