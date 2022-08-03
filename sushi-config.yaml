@@ -20,8 +20,13 @@ license: CC0-1.0
 dependencies:
    fhir.org.nz.ig.base:
      uri: 'http://hl7.org.nz/fhir/ig/base/ImplementationGuide/hl7.org.nz.fhir.ig.base'
+<<<<<<< HEAD
+     #version: 1.0.0
+     version: dev
+=======
      version: dev
      
+>>>>>>> master
    hl7.org.nz.fhir.ig.hip-core:
      uri: 'https://nzhts.digital.health.nz/ig/hip-common-terminology'
      #uri: 'https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/ImplementationGuide/ig.hip.digital.health.nz.base'
