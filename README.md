@@ -1,6 +1,6 @@
 # Repository for NHI IG
 
-## Pre requisites
+## Pre requisites 
 
 * Install sushi
 * Install Node.js (used by scripts)
