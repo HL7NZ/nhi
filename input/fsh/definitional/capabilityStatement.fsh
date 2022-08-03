@@ -21,16 +21,16 @@ Usage: #definition
 * rest.resource.type = #Patient
 * rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
-* rest.resource.interaction.documentation = "The id is the same as the current NHI value"
-* rest.resource.interaction[1].code = #patch
-* rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
-* rest.resource.interaction[2].code = #create
-* rest.resource.interaction[2].documentation = "Not yet enabled. Security will be applied to create operations"
-* rest.resource.interaction[3].code = #search-type
-* rest.resource.interaction[3].documentation = "Not yet enabled"
-* rest.operation.name = "$match"
-* rest.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
-
+* rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id."
+// * rest.resource.interaction[1].code = #patch
+// * rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
+// * rest.resource.interaction[2].code = #create
+// * rest.resource.interaction[2].documentation = "Not yet enabled. Security will be applied to create operations"
+// * rest.resource.interaction[3].code = #search-type
+// * rest.resource.interaction[3].documentation = "Not yet enabled"
+* rest.resource.operation.name = "$match"
+* rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
+* rest.resource.operation.documentation = "An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores"
 
 // * rest.resource.searchParam.name = "name"
 // * rest.resource.searchParam.type = #string
