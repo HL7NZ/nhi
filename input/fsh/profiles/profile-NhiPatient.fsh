@@ -109,6 +109,10 @@ Description:    "The Patient resource exposed by the NHI."
 
 
 //identifier constraints for NHI
+
+//don't allow other identifiers
+* identifier ^slicing.rules = #closed
+
 //* identifier.system from https://standards.digital.health.nz/ns/nhi-id
 * identifier.type 0..0
 * identifier.period 0..0
