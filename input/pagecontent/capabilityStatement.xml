@@ -10,25 +10,8 @@
 <tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td><p>The id is the same as the current NHI value</p>
-</td>
-</tr>
-<tr>
-<td>patch</td>
-<td><p>Not yet enabled. Security will be applied to patch updates</p>
-</td>
-</tr>
-<tr>
-<td>create</td>
-<td><p>Not yet enabled. Security will be applied to create operations</p>
-</td>
-</tr>
-<tr>
-<td>search-type</td>
-<td><p>Not yet enabled</p>
+<td><p>Used to retrieve a Patient resource by Id.</p>
 </td>
 </tr>
 </table>
-<h3>Contained Resources</h3>
-<p>When a resource contains a reference to another resource, the  HPI server will not render the reference as a contained resource,  only the reference links themselves will be included in responses.</p>
 </div>
