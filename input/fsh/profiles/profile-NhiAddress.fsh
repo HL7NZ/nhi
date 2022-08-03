@@ -7,13 +7,15 @@ Alias: $nzAddressId = http://hl7.org.nz/fhir/StructureDefinition/nz-address-id
 
 //defined in NZ Base
 Alias: $suburb = http://hl7.org.nz/fhir/StructureDefinition/suburb
-Alias: $nhiNZGeocode = http://hl7.org.nz/fhir/StructureDefinition/nhi-nz-geocode
+Alias: $NZGeocode = http://hl7.org.nz/fhir/StructureDefinition/nz-geocode
 Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
 
 
 Profile:        NhiAddress
+
 Parent:         NzAddress         
+
 Id:             NhiAddress
 Title:          "NHI Address"
 Description:    "Adds additional, NHI specific extensions"

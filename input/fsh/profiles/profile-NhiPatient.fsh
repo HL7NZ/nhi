@@ -58,7 +58,11 @@ Description:    "The Patient resource exposed by the NHI."
     $birthPlace named birthPlace 0..1 and
     $nzResidency named nzResidency 0..1
 
+<<<<<<< HEAD
 //* extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
+=======
+// * extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
+>>>>>>> master
 // * extension[nzCitizen] ^definition = "This field is usd to indicate the New Zealand citizenship status of the patient"
 * extension[nzCitizen].extension[source].valueCodeableConcept from $nz-citizenship-information-source-vs
 
@@ -120,4 +124,12 @@ Description:    "The Patient resource exposed by the NHI."
 
 * identifier[dormant].period 0..0 
 * identifier[dormant].type 0..0 
+
+//other constraints
+* extension[dhb] 0..0
+* extension[pho] 0..0
+* extension[iwi] 0..0
+* extension[sex-at-birth] 0..0
+* extension[domicile-code] 0..0
+
 
