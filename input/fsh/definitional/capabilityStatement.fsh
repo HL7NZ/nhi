@@ -6,8 +6,7 @@ Usage: #definition
 * date = "2020-04-21"
 * kind = #instance
 * fhirVersion = #4.0.1
-* format = #xml
-* format[1] = #json
+* format = #json
 * patchFormat = #json
 * implementation.description = "HPI system"
 * implementationGuide = "http://hl7.org.nz/fhir/StructureDefinition/NHI"
