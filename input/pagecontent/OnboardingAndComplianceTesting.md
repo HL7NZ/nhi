@@ -3,21 +3,22 @@
 ### Who can apply for access?
 
 #### To the test environment:
-
-**TBD**
+All health providers listed in [Schedule 2 of the Health Information Privacy Code](https://privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/) and software vendors will be given access to all the NHI api operations in the HIP Compliance environment for testing and training after completing the on-boarding process described below.
 
 
 #### To the production environment:
-
-**TBD**
+Access to NHI operations is available to all health providers listed in [Schedule 2 of the Health Information Privacy Code](https://privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/)
 
 
 ### On-boarding
 
-1. To apply for access to the NHI test environment email the following forms **(TBD)** to [integration@health.govt.nz](mailto:integration@health.govt.nz).
-   
-2. Submit the results of the compliance tests below to [integration@health.govt.nz](mailto:integration@health.govt.nz).
-
+1. To apply for access to the NHI test environment email [integration@health.govt.nz](mailto:integration@health.govt.nz). 
+2. The Integration team will send you the relevant forms to complete.
+3. Send the forms back to [integration@health.govt.nz](mailto:integration@health.govt.nz).
+4. You will receive your credentials and the testing endpoint by email. Complete your development and testing.
+5. Submit the results of the compliance tests by email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
+6. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
+7. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the [form](TBC).
 
 
 ### Compliance testing
@@ -26,16 +27,21 @@ Provide the following details in a test report and email to [integration@health.
 1. Tester details <br />
    a. Organisation Name <br />
    b. Application name and version <br />
-   c.	NHI IG Version (New Zealand NHI Implementation Guide 0.10.0 - CI Build (https://0-9-snapshot.d39scuhbqd86l9.amplifyapp.com/index.html) <br />
+   c.	NHI IG Version <br />
    d. Test Script version <br />
-   e. Testing start date and time and end date and time <br />
-   f. Tester name and contact details <br />
-   g. List of interactions included in your integration (eg GET Patient)
+   e. FHIR release version (Get(...)/metadata) <br />
+   f. Testing start date and time and end date and time <br />
+   g. Tester name and contact details <br />
+   h. List of operations included in your integration (eg GET Patient, Search(Match) Patient)
    
-2. For each test supply screen shots of: <br />
-   a. the input data as entered in the integrating system (“the system”) <br />
-   b. any warnings or error messages presented by the system <br />
-   c. the confirmation or result of the request presented by the system  <br />
+2. For each test supply screen shots of the user interface for:
+    * the input data as entered in the integrating system (“the system”)
+    * any warnings or error messages presented by the system
+    * the confirmation or result of the request presented by the system
+
+3. For each test supply a screenshot of what is being logged in the integrating system.
+
+4. For each test supply a text file with the json request (update / add) or response (get/search).
 
 ### Tests
 
