@@ -16,7 +16,7 @@ From a bash shell, run the
 
 script from the project root,.. This will create the full-ig.zip file which contains the IG site
 'hip-fhir-common\src\main\fsh\output\full-ig.zip'
-
+ 
 
 ###  Deploying the IG
 Check in your changes including the new full-ig,.zip to github. Amplify will autobuild on commit
