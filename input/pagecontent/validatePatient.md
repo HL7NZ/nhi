@@ -1,6 +1,6 @@
 
 
-### Validate Pactient
+### Validate Patient
 
 <div>
 {% include validate-patient.plantuml.svg %}
