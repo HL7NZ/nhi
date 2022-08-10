@@ -1,43 +1,90 @@
-
-
 ### Who can apply for access?
 
 #### To the test environment:
-
-**TBD**
+All health providers listed in [Schedule 2 of the Health Information Privacy Code](https://privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/) and software vendors will be given access to all the NHI api operations in the HIP Compliance environment for testing and training after completing the on-boarding process described below.
 
 
 #### To the production environment:
-
-**TBD**
+Access to NHI operations is available to all health providers listed in [Schedule 2 of the Health Information Privacy Code](https://privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/)
 
 
 ### On-boarding
 
-1. To apply for access to the NHI test environment email the following forms **(TBD)** to [integration@health.govt.nz](mailto:integration@health.govt.nz).
-   
-2. Submit the results of the compliance tests below to [integration@health.govt.nz](mailto:integration@health.govt.nz).
-
+1. To apply for access to the NHI test environment email [integration@health.govt.nz](mailto:integration@health.govt.nz). 
+2. The Integration team will send you the relevant forms to complete.
+3. Send the forms back to [integration@health.govt.nz](mailto:integration@health.govt.nz).
+4. You will receive your credentials in seperate emails, one of which has a blank subject.
+5. You will also recieve the access token url, provided scopes, and the UAT endpoint.
+6. Complete your development and testing.
+7. Submit the results of the compliance tests by email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
+8. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
+9. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form[Click here for more infrmation](https://www.health.govt.nz/our-work/health-identity/national-health-index/nhi-information-health-providers).
 
 
 ### Compliance testing
+
 Provide the following details in a test report and email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 
 1. Tester details <br />
    a. Organisation Name <br />
    b. Application name and version <br />
-   c.	NHI IG Version (New Zealand NHI Implementation Guide 0.10.0 - CI Build (https://0-9-snapshot.d39scuhbqd86l9.amplifyapp.com/index.html) <br />
+   c.	NHI IG Version <br />
    d. Test Script version <br />
-   e. Testing start date and time and end date and time <br />
-   f. Tester name and contact details <br />
-   g. List of interactions included in your integration (eg GET Patient)
+   e. FHIR release version (Get(...)/metadata) <br />
+   f. Testing start date and time and end date and time <br />
+   g. Tester name and contact details <br />
+   h. List of operations included in your integration (eg GET Patient, Search(Match) Patient)
    
-2. For each test supply screen shots of: <br />
-   a. the input data as entered in the integrating system (“the system”) <br />
-   b. any warnings or error messages presented by the system <br />
-   c. the confirmation or result of the request presented by the system  <br />
+2. For each test supply screen shots of the user interface for:
+    * the input data as entered in the integrating system (“the system”)
+    * any warnings or error messages presented by the system
+    * the confirmation or result of the request presented by the system
+
+3. For each test supply a screenshot of what is being logged in the integrating system.
+
+4. For each test supply a text file with the json request (update/add) or response (get/search).
 
 ### Tests
+
+<h3>Security and Audit Assessment</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption>All test messages will be assessed against the security criteria in the table below</caption>
+<tr><th>Reference</th>
+<th>Purpose</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>Security 1</td>
+<td>Credentials match those issued to the testing organisation <br /> and their orgID and appID are auditing correctly</td>
+<td>Checked against all tests</td>
+<td>MoH will check internal logs</td>
+<td>Mandatory</td></tr>
+
+<tr><td>Security 2</td>
+<td>Sending user ID is an end user ID or a CPN</td>
+<td>Checked against all tests</td>
+<td>MoH will check internal logs</td>
+<td>Mandatory</td></tr>
+
+<tr><td>Security 3</td>
+<td>Sending user ID changes when different end users are initiating the request (Please make sure a seperate user creates a request)</td>
+<td>Checked against all tests</td>
+<td>MoH will check internal logs</td>
+<td>Mandatory</td></tr>
+
+<tr><td>Security 4</td>
+<td>Each request has a unique request/transaction id in the X-Correlation-Id field</td>
+<td>Checked against all tests</td>
+<td>MoH will check internal logs</td>
+<td>Mandatory</td></tr>
+</table>
 
 <h3>NHI Patient GET tests</h3>
 <table>
@@ -63,7 +110,7 @@ table, th, td {
 <li>Primary Address</li>
 </td>
 <td>ZAT2348</td>
-<td>1.	Minimum identity information is displayed for the patient</td>
+<td>Minimum identity information is displayed for the patient</td>
 <td>Mandatory</td>
 </tr>
 
@@ -71,7 +118,7 @@ table, th, td {
 <td>NHI-GET-2</td>
 <td>System can display the Date of Death</td>
 <td>ZAT2348</td>
-<td>1.	The System alerts the user that the patient is deceased and provides the date of death.</td>
+<td>The System alerts the user that the patient is deceased and provides the date of death.</td>
 <td>Mandatory</td>
 </tr>
 
@@ -90,7 +137,7 @@ table, th, td {
 <li>Place of Birth</li>
 </td>
 <td>ZAT2364</td>
-<td>1. All identity information is displayed for the patient. The patient:
+<td>All identity information is displayed for the patient. The patient:
 <li>Is alive</li>
 <li>Has 3 names - a ‘baby of’  name, maiden name, preferred name</li>
 <li>The preferred name should have all name parts populated</li>
@@ -104,7 +151,7 @@ table, th, td {
 
 <tr>
 <td>NHI-GET-4</td>
-<td>This test is the same as HI-GET-3 but is for a patient that has information not covered in HI-GET-3<br>
+<td>This test is the same as NHI-GET-3 but is for a patient that has information not covered in NHI-GET-3<br>
 System can display all other identity data returned by the NHI in a GET response including:
 <li>A no fixed abode primary address</li>
 <li>A live NHI and two Dormant NHIs</li>
@@ -112,7 +159,7 @@ System can display all other identity data returned by the NHI in a GET response
 <li>Unknown citizenship</li>
 </td>
 <td>ZAT2496</td>
-<td>1. All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+<td>All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
 <li>A validation status for the primary address</li>
 <li>Domicile code</li>
 <li>Partial date of death</li>
@@ -129,9 +176,9 @@ System can display all other identity data returned by the NHI in a GET response
 </td>
 <td>ZAT2518</td>
 <td>
-1. Notification to the user that the requested NHI was dormant and the live NHI has been returned<br />
-2. Patient Live NHI returned should be ZAT2496<br />
-3. Minimum identity information for the live NHI is displayed for the patient<br />
+<li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+<li>Patient Live NHI returned should be ZAT2496</li>
+<li>Minimum identity information for the live NHI is displayed for the patient</li>
 </td>
 <td>Mandatory</td>
 </tr>
@@ -140,15 +187,15 @@ System can display all other identity data returned by the NHI in a GET response
 <td>NHI-GET-6</td>
 <td>System can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
 <td>ZBE4905</td>
-<td>1.	Patient information supplied is displayed without loss of data.
+<td>Patient information supplied is displayed without loss of data.
 This is for a patient record that has attribute values which are the maximum allowed field length in some fields.
 The patient has the following fields fully populated in the test record (field lengths in parentheses):
 <li>A validation status for the primary address</li>
-<li>Given name (50),</li>
-<li>Other Given Name(s) (100),</li>
-<li>Surname (100),</li>
-<li>Address line 1 (100),</li>
-<li>Address lines 2-5 (50),</li>
+<li>Given name (50)</li>
+<li>Other Given Name(s) (100)</li>
+<li>Surname (100)</li>
+<li>Address line 1 (100)</li>
+<li>Address lines 2-5 (50)</li>
 <li>Building name/additional details (255)</li>
 </td>
 <td>Mandatory</td>
@@ -164,8 +211,9 @@ ZHW58CN<br />
 ZLV86AX<br />
 ZBE4905</td>
 <td>
-1.	System does not error<br />
-2.	System returns appropriate messaging to user</td>
+<li>System does not error</li>
+<li>System returns appropriate messaging to user</li>
+</td>
 <td>Mandatory</td>
 </tr>
 
@@ -174,10 +222,10 @@ ZBE4905</td>
 <td>System can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
 <td>
-1.	Do a GET<br />
-2.	Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info)<br />
-3.	Do another GET<br />
-4.	Demonstrate how end user can view the difference then synchronize</td>
+<li>Do a GET</li>
+<li>Use HealthUI to do an update to patient details (to simulate a 3rd party updating the NHI info)</li>
+<li>Do another GET</li>
+<li>Demonstrate how end user can view the difference then synchronize</li>
 <td>Mandatory</td>
 </tr>
 
@@ -521,38 +569,6 @@ Do not supply a country of birth </td>
 <td>Application will show the correct error when attempting to add a patient with a NZ Citizenship information source without a NZ Citizenship status </td>
 <td>Choose an NZ Citizenship information source to supply but do not add NZ Citizenship status </td>
 <td>The format of the message is invalid (EM01002)</td>
-<td>Mandatory</td>
-</tr>
-</table>
-
-<h3>Security and Audit Assessment</h3>
-<table>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
-<tr><th>Reference</th>
-<th>Purpose</th>
-<th>Mandatory</th>
-</tr>
-
-<tr>
-<td>Security 1</td>
-<td>Credentials match those issued to the testing organisation</td>
-<td>Mandatory</td>
-</tr>
-
-<tr>
-<td>Security 2</td>
-<td>Sending user ID is an end user ID or a CPN.</td>
-<td>Mandatory</td>
-</tr>
-
-<tr>
-<td>Security 3</td>
-<td>Sending user ID changes when different end users are initiating the request</td>
 <td>Mandatory</td>
 </tr>
 </table>
