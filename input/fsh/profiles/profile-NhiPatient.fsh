@@ -123,8 +123,6 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier[NHI].period 0..0 
 * identifier[NHI].type 0..0 
 
-* identifier[dormant].period 0..0 
-* identifier[dormant].type 0..0 
 
 //other constraints
 * extension[dhb] 0..0
