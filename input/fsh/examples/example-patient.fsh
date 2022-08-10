@@ -30,14 +30,14 @@ Usage: #example
 
 
 //the current NHI
-* identifier[0].use = #official
-* identifier[0].system = "https://standards.digital.health.nz/ns/nhi-id"
-* identifier[0].value = "WER4568"
+* identifier[NHI].use = #official
+* identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier[NHI].value = "WER4568"
 
 //a dormant (replaced)  NHI
-* identifier[1].use = #old
-* identifier[1].system = "https://standards.digital.health.nz/ns/nhi-id"
-* identifier[1].value = "ABC1234"
+* identifier[NHI].use = #old
+* identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier[NHI].value = "ABC1234"
 
 
 //birth country New Zealand
