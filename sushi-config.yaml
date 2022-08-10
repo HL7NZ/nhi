@@ -19,7 +19,7 @@ license: CC0-1.0
 
 dependencies:
    fhir.org.nz.ig.base:
-     uri: 'http://hl7.org.nz/fhir/ig/base/ImplementationGuide/hl7.org.nz.fhir.ig.base'
+     uri: 'http://fhir.org.nz/ig/base'
      #version: 1.0.0
      version: dev
 
