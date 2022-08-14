@@ -236,6 +236,12 @@ ZBE4905</td>
 <td>All address formats are displayed appropriately</td>
 <td>Mandatory</td>
 </tr>
+
+<td>NHI-GET-10</td>
+<td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
+<td> <b>Do all</b> <br /> ZDW0191 <br /> TBC <br /> ZHS7524 </td>
+<td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<td>mandatory</td></tr>
 </table>
 
 <h3>NHI Patient Add tests</h3>
