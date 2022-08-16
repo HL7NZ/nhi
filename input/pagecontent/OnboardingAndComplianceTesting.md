@@ -64,25 +64,25 @@ table, th, td {
 <tr><td>Security 1</td>
 <td>Credentials match those issued to the testing organisation <br /> and their orgID and appID are auditing correctly</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 2</td>
 <td>Sending user ID is an end user ID or a CPN</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 3</td>
 <td>Sending user ID changes when different end users are initiating the request (Please make sure a seperate user creates a request)</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 4</td>
 <td>Each request has a unique request/transaction id in the X-Correlation-Id field</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 </table>
 
