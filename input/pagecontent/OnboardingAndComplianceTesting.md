@@ -84,7 +84,7 @@ table, th, td {
 If present this will be returned in the response</td>
 <td>Checked against all tests</td>
 <td>Te Whatu Ora will check internal logs</td>
-<td>Mandatory</td></tr>
+<td>Optional</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
