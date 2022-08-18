@@ -64,26 +64,27 @@ table, th, td {
 <tr><td>Security 1</td>
 <td>Credentials match those issued to the testing organisation <br /> and their orgID and appID are auditing correctly</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 2</td>
 <td>Sending user ID is an end user ID or a CPN</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 3</td>
 <td>Sending user ID changes when different end users are initiating the request (Please make sure a seperate user creates a request)</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
+<td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
 
 <tr><td>Security 4</td>
-<td>Each request has a unique request/transaction id in the X-Correlation-Id field</td>
+<td>Each request has a unique request/transaction id in the X-Correlation-Id field <br />
+If present this will be returned in the response</td>
 <td>Checked against all tests</td>
-<td>MoH will check internal logs</td>
-<td>Mandatory</td></tr>
+<td>Te Whatu Ora will check internal logs</td>
+<td>Optional</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
@@ -236,6 +237,12 @@ ZBE4905</td>
 <td>All address formats are displayed appropriately</td>
 <td>Mandatory</td>
 </tr>
+
+<td>NHI-GET-10</td>
+<td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
+<td> <b>Do all</b> <br /> ZDW0191 <br /> ZJL1013 <br /> ZHS7524 </td>
+<td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<td>mandatory</td></tr>
 </table>
 
 <h3>NHI Patient Add tests</h3>
