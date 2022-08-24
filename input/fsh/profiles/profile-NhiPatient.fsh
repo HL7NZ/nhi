@@ -52,7 +52,7 @@ Description:    "The Patient resource exposed by the NHI."
 * deceased[x] only dateTime
 
 * extension contains 
-    // $ethnicity named ethnicity 0..6 and
+    $ethnicity named ethnicity 0..6 and
     // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
     $birthPlace named birthPlace 0..1 and
@@ -67,7 +67,7 @@ Description:    "The Patient resource exposed by the NHI."
 //* extension[dhb].valueCodeableConcept from $dhb-vs
    
 //Name is required, and there are extensions for source, and isPreferred
-* name  1..*
+* name  0..*
 * name.extension contains
     $information-source named information-source 0..1 and
     $preferred named preferred 0..1 and
@@ -84,7 +84,7 @@ Description:    "The Patient resource exposed by the NHI."
     $originalText named originalText 0..1
 
 //birthdate is required, and has an extension for source, which is bound to the birthdate information source valueset
-* birthDate 1..1
+* birthDate 0..1
 * birthDate.extension contains  
     $information-source named information-source 0..1 
 
@@ -100,7 +100,7 @@ Description:    "The Patient resource exposed by the NHI."
 * address only NhiAddress
 
 
-* address 1..*
+* address 0..*
 * address.line 1..*     //there will always be at least 1 line
 
 //Limit the possible resources for generalPractitioner only to a PractitionerRole
