@@ -11,7 +11,7 @@ This page provides a list of the FHIR terminology artifacts defined as part of t
 <h3>ValueSets</h3>
 <table class='table table-bordered table-condensed'>
 <tr>
-<td><a href="ValueSet-Datum.html">Datum Code-0.11.0 snapshot</a> </td>
+<td><a href="ValueSet-Datum.html">Datum Code-1.0.0</a> </td>
 <td> <p>Identifies the coordinate system used to specify points on a map</p></td>
 <td> <a href="https://nzhts.digital.health.nz/fhir/ValueSet/datum-code">https://nzhts.digital.health.nz/fhir/ValueSet/datum-code</a></td>
 </tr>
