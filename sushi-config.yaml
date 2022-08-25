@@ -7,7 +7,7 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 1.0.0
+version: 1.0.1
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
@@ -63,7 +63,7 @@ menu:
     Download IG : full-ig.zip
     Artifacts (Json): definitions.json.zip
     Artifacts (Xml): definitions.xml.zip
-
+    "OpenApi 3 spec": NhiFhirOpenApi.zip
 
 
 
