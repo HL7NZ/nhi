@@ -30,6 +30,8 @@ Example:
 
 Get(Endpoint)/Resource/Resource-identifier
 
+Get(Endpoint)/Patient/ZAT2348
+
 For more information look at the __Get patient Use case__ in the menu
 
 
