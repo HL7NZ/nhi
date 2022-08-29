@@ -37,19 +37,21 @@ Match Patient processing steps:
     * name (Either family or given) 
     * birthdate (this can be a partial birthdate i.e. year only)
  
-* Minimum details to be presented by the integrator in the user interface to allow for adequate confirmation of identity (if present on the patient record):
-  * preferred name (given name, other given names and family name).
-  * birthdate
-  * gender
-  * nhi-id (live)
-  * address (primary resedential)
-  * match score
+  * Minimum details to be presented by the integrator in the user interface to allow for adequate confirmation of identity (if present on the patient record):
+    * preferred name (given name, other given names and family name).
+    * birthdate
+    * gender
+    * nhi-id (live)
+    * address (primary resedential)
+    * match score
 
-* Other details to consider presenting:
-  *  birth-place (Place and Country of birth)
-  *  other names a person has
-  *  nhi-id (dormant/s)
+  * Other details to consider presenting:
+    *  birth-place (Place and Country of birth)
+    *  other names a person has
+    *  nhi-id (dormant/s)
 
-      _1a. Match Patient errors_
-
-      * 
+* _Match Patient errors_
+  * _Name is required_
+  * _Birth date is a required field_
+  * _No results were found matching the search criteria provided_
+  * _Criteria too wide to perform a successful match. Please narrow your criteria and re-submit_
