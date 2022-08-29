@@ -1,10 +1,8 @@
 
 
-### Add Patient Interaction
+### Add Patient Overview
 
-#### Overview
-
-An ‘Add Patient’ interaction is initiated by a user who needs to add a new identity record for a person to the Patient Index.
+An ‘Add Patient’ interaction is initiated by a user who needs to add a new identity record for a person to the Patient Index. <br />
 The user has sourced the required identity information, and initiates an add request to create a patient identity record in the NHI.
 
 <div>
@@ -15,13 +13,11 @@ The user has sourced the required identity information, and initiates an add req
 
 1. The user initiates creating a new Patient in the integrating application
 2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details
-3. The request is either:
- * Validated (Step 4)
- * ALT: Validation failure. OperationOutcome resource returned
-4. A Patient record is created and a Patient ID (NHI number) is issued
-5. The NHPI FHIR API confirms a successful update – HTTP 200
+3. The request is validated - ALT: Validation failure. OperationOutcome resource returned
+4. A Patient record is created and a Patient ID (nhi-id) is issued
+5. The NHPI FHIR API confirms a successful update – HTTP 201 Created status code
 6. The integrating application indicates to the user the create has been successful
-7. The integrating application retains the Patient NHI ID for subsequent update requests
+7. The integrating application retains the nhi-id and version number for future requests relating to this record
 
 #### Rules and errors
 
