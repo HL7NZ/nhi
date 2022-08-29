@@ -51,7 +51,7 @@ Match Patient processing steps:
     *  nhi-id (dormant/s)
 
 * _Match Patient errors_
-  * _Name is required_
-  * _Birth date is a required field_
+  * _Patient name is a required field_
+  * _Patient birthdate is a required field_
   * _No results were found matching the search criteria provided_
   * _Criteria too wide to perform a successful match. Please narrow your criteria and re-submit_
