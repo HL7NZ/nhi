@@ -12,7 +12,7 @@ name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
 publisher:
- name: Ministry of Health
+ name: Te Whatu Ora
  email: mailto:integration@health.govt.nz
 description: The FHIR  API for the NHI
 license: CC0-1.0
