@@ -3,6 +3,7 @@
 ### Validate Patient Overview
 
 * The local system sends a validate request to the NHI with and nhi-id and patient details
+  * if a 'dormant’ nhi-id is used, the response will include the 'live' nhi-id
 * In Parameters:
   * Patient resource
   * onlyCertainMatches: 1 (True)
