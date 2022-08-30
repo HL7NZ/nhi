@@ -25,4 +25,4 @@ The local system sends a request to the NHI with a patient NHI number (nhi-id) <
   * A Patient read request must include a valid nhi-id
 
 * _1a. Get Patient errors_
-  * "Invalid nhi-id" (HTTP 404 Not found, Error, Processing)
+  * _"Invalid nhi-id" (HTTP 404 Not found, Error, Processing)_
