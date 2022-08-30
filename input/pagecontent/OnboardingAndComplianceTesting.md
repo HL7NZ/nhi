@@ -39,10 +39,9 @@ Provide the following details in a test report and email to [integration@health.
     * the input data as entered in the integrating system (“the system”)
     * any warnings or error messages presented by the system
     * the confirmation or result of the request presented by the system
+    * **Note**: If non-interactive, please provide JSON request (update / add) or response (get/search).
 
-3. For each test supply a screenshot of what is being logged in the integrating system.
-
-4. For each test supply a text file with the json request (update/add) or response (get/search).
+3. For each test supply a timestamp when each request is sent.
 
 ### Tests
 
