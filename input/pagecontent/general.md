@@ -26,8 +26,13 @@ This design allows an implementer to retrieve a resource from the NHI and save i
 
 Extract the value of the identifier where the value of the __use__ element is ‘official’, and use that as the id for a direct read from the server. 
 
+Example:
 
-https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
+Get{{Endpoint}}/Resource/identifier
+
+Get{{Endpoint}}/Patient/ZAT2348
+
+For more information look at the __Get patient Use case__ in the menu
 
 
 ### Merging resource and Dormant identifiers
@@ -56,7 +61,7 @@ For example, assume that there are 2 Patient resources exposed by the NHI, each 
 ```
 
 
-(returned by GET [host]/Patient/ZAT2534)
+(returned by GET{{Endpoint}}/Patient/ZAT2534)
 
 And 
 
@@ -78,11 +83,11 @@ And
 ```
 
 
-(returned by GET [host]/Patient/ZAT2518)
+(returned by GET{{Endpoint}}/Patient/ZAT2518)
 
 They are determined to be the same person, and the identifier ZAT2518 ismade dormant in favour of ZAT2534.
 
-A GET call of GET [host]/Patient/ZAT2534 or GET [host]/Patient/ZAT2518 will return the same response
+A GET call of GET{{Endpoint}}/Patient/ZAT2534 or GET{{Endpoint}}/Patient/ZAT2518 will return the same response
 
 
 ```
@@ -118,7 +123,10 @@ A GET call of GET [host]/Patient/ZAT2534 or GET [host]/Patient/ZAT2518 will retu
  
 ### HTTP Header Details
 
-All requests for all resources must include an http header **userid** that uniquely identifies the individual initiating the request. Preferably the hpi-person-id of the user would be provided if known, otherwise a userid that allows the authenticated organisation to identify the individual.
+All requests for all resources must include an http header __userid__ that uniquely identifies the individual initiating the request. Preferably the hpi-person-id of the user would be provided if known, otherwise a userid that allows the authenticated organisation to identify the individual.
+
+All requests __may__ contain a unique transaction id in the __X-Correlation-Id__ field. If present in the request this will be returned in the response, and can be used to track API calls.
+
 
 ### Security
 The HPI server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services

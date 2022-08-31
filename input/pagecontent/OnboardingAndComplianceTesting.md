@@ -30,7 +30,7 @@ Provide the following details in a test report and email to [integration@health.
    b. Application name and version <br />
    c.	NHI IG Version <br />
    d. Test Script version <br />
-   e. FHIR release version (Get(...)/metadata) <br />
+   e. FHIR release version (Get(Endpoint)/metadata) <br />
    f. Testing start date and time and end date and time <br />
    g. Tester name and contact details <br />
    h. List of operations included in your integration (eg GET Patient, Search(Match) Patient)
@@ -39,10 +39,9 @@ Provide the following details in a test report and email to [integration@health.
     * the input data as entered in the integrating system (“the system”)
     * any warnings or error messages presented by the system
     * the confirmation or result of the request presented by the system
+    * **Note**: If non-interactive, please provide JSON request (update / add) or response (get/search).
 
-3. For each test supply a screenshot of what is being logged in the integrating system.
-
-4. For each test supply a text file with the json request (update/add) or response (get/search).
+3. For each test supply a timestamp when each request is sent.
 
 ### Tests
 
@@ -78,13 +77,6 @@ table, th, td {
 <td>Checked against all tests</td>
 <td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
-
-<tr><td>Security 4</td>
-<td>Each request has a unique request/transaction id in the X-Correlation-Id field <br />
-If present this will be returned in the response</td>
-<td>Checked against all tests</td>
-<td>Te Whatu Ora will check internal logs</td>
-<td>Optional</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
@@ -238,7 +230,7 @@ ZBE4905</td>
 <td>Mandatory</td>
 </tr>
 
-<td>NHI-GET-10</td>
+<tr><td>NHI-GET-10</td>
 <td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
 <td> <b>Do all</b> <br /> ZDW0191 <br /> ZJL1013 <br /> ZHS7524 </td>
 <td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
