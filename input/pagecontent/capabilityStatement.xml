@@ -16,7 +16,7 @@
 </table>
 <strong>Operations</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Name</th><th width='70%'>Definition</th><th width='70%'>Documentation</th></tr>
+<tr><th width='30%'>Name</th><th width='30%'>Definition</th><th width='40%'>Documentation</th></tr>
 <tr>
 <td>match</td>
 <td>http://hl7.org/fhir/OperationDefinition/Patient-match</td>
