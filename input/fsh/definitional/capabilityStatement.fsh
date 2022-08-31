@@ -27,7 +27,7 @@ Usage: #definition
 // * rest.resource.interaction[2].documentation = "Not yet enabled. Security will be applied to create operations"
 // * rest.resource.interaction[3].code = #search-type
 // * rest.resource.interaction[3].documentation = "Not yet enabled"
-* rest.resource.operation.name = "$match"
+* rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
 * rest.resource.operation.documentation = "An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores"
 
