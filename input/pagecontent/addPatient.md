@@ -12,7 +12,7 @@ The user has sourced the required identity information, and initiates an add req
 #### **NHI FHIR Add Patient processing steps:**
 
 1. The user initiates creating a new Patient in the integrating application
-2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details E.g. Post\<Endpoint>/Patient
+2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details E.g. Post\{{Endpoint}}/Patient
 3. The request is validated - ALT: Validation failure. OperationOutcome resource returned
 4. A Patient record is created and a Patient ID (nhi-id) is issued
 5. The NHPI FHIR API confirms a successful update – HTTP 201 Created status code
