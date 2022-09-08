@@ -21,7 +21,7 @@
 Match Patient processing steps:
  
 1. The user supplies patient details to be be matched against the NHI patient records
-2. The integrating application sends an HTTP Post request using a $Match operation to the NHI with 'In parameter' onlyCertainMatches set to False E.g.Post\{{Endpoint}}/Patient/$Match
+2. The integrating application sends an HTTP Post request using a $Match operation to the NHI with 'In parameter' onlyCertainMatches set to False E.g. Post\{{Endpoint}}/Patient/$Match
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 4. The matching patients are retrieved from the NHI.
 5. The response containing a bundle of matching patient resources is returned to the integrating application - ALT: Empty bundle returned
