@@ -6,7 +6,9 @@
 
 The local system sends a request to the NHI with a patient NHI number (nhi-id) <br /> The NHI locates the nhi-id and returns either the current patient data for the nhi-id (where nhi-id is live) or the current patient data for the linked live nhi-id (where the nhi-id is dormant).
 
-<img style="width:900px; float:none" src="NHI FHIR GET.png"/>
+<div>
+{% include get-patient.svg %}
+</div>
 
 
 #### **NHI FHIR GET Patient processing steps:**
