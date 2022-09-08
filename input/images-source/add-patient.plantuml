@@ -13,7 +13,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: User enters Patient details
 activate A
 |||
-A -> B: POST(...)/patient
+A -> B: POST\{{Endpoint}}/Patient
 activate B
 |||
 B -> B: Validate[]
