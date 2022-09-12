@@ -1,4 +1,4 @@
-Instance: example
+Instance: Example $Match validate request
 InstanceOf: Parameters
 Description: "Example $Match (Validate) Request"
 Usage: #example
