@@ -1,4 +1,4 @@
-Instance: example
+Instance: Example $Match find request
 InstanceOf: Parameters
 Description: "Example $Match (Find NHI) Request"
 Usage: #example
