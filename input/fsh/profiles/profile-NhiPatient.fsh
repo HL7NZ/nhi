@@ -48,7 +48,6 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * telecom 0..0
 * generalPractitioner 0..0
-* $dhb named dhb 0..1 and 
 * deceased[x] only dateTime
 
 * extension contains 
@@ -56,7 +55,8 @@ Description:    "The Patient resource exposed by the NHI."
     // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
     $birthPlace named birthPlace 0..1 and
-    $nzResidency named nzResidency 0..1
+    $nzResidency named nzResidency 0..1 and 
+    $dhb named dhb 0..1
 
 
 // * extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
