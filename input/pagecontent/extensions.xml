@@ -66,14 +66,5 @@
 <td><p>The reason why the address has not been validated</p></td>
 <td></td>
 </tr>
-<tr>
-<td><a href='StructureDefinition-nz-residency.html'>nz-residency</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/nz-residency</td>
-<td>
-<div>Patient</div>
-</td>
-<td><p>NZ Residency status</p></td>
-<td></td>
-</tr>
 </table>
 </div>
