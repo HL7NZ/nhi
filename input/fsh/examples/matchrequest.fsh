@@ -30,6 +30,6 @@ Usage: #example
 * parameter[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/birth-place#placeofbirth"
 * parameter[=].extension[=].extension[=].valueString = "Sydney"
 * parameter[+].name = "count"
-* parameter[=].valueInteger = 1
+* parameter[=].valueInteger = 10
 * parameter[+].name = "onlyCertainMatches"
 * parameter[=].valueBoolean = false
