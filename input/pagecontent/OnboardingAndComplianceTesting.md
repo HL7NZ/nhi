@@ -77,6 +77,7 @@ table, th, td {
 <td>Checked against all tests</td>
 <td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
+
 </table>
 
 <h3>NHI Patient GET tests</h3>
@@ -93,21 +94,27 @@ table, th, td {
 <th>Expected outcome</th>
 <th>Mandatory</th></tr>
 
-<tr><td>NHI-GET-1</td>
+<tr>
+<td>NHI-GET-1</td>
 <td>System displays the minimum patient information required to confirm identity:
 <li>Preferred name including Given Name, Other Given Name(s), Surname</li>
 <li>Date of Birth</li>
 <li>Gender</li>
-<li>Primary Address</li></td>
+<li>Primary Address</li>
+</td>
 <td>ZAT2348</td>
 <td>Minimum identity information is displayed for the patient</td>
-<td>Mandatory</td></tr>
+<td>Mandatory</td>
+</tr>
 
-<tr><td>NHI-GET-2</td>
+<tr>
+<td>NHI-GET-2</td>
 <td>System can display the Date of Death</td>
 <td>ZAT2348</td>
 <td>The System alerts the user that the patient is deceased and provides the date of death.</td>
-<td>Mandatory</td></tr>
+<td>Mandatory</td>
+</tr>
+
 
 <tr><td>NHI-GET-3</td>
 <td>System can display all other identity data returned by the NHI in a GET response including:
@@ -144,6 +151,7 @@ table, th, td {
 <li>Partial date of birth</li>
 <li>Citizenship status</li></td>
 <td>Mandatory</td></tr>
+
 
 <tr>
 <td>NHI-GET-5</td>
@@ -186,7 +194,7 @@ ZBE4905</td>
 <td><li>Do a GET</li>
 <li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
 <li>Do another GET</li>
-<li>Demonstrate how end user can view the difference then synchronize</li>
+<li>Demonstrate how end user can view the difference then synchronize</li></td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-9</td>
