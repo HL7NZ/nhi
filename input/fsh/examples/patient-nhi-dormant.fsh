@@ -6,8 +6,8 @@ Usage: #example
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * extension.url = "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
 * extension.valueCodeableConcept.coding.version = "2.0"
-* extension.valueCodeableConcept.coding = https://standards.digital.health.nz/ns/ethnic-group-level-4-code#52100 "Latin American nfd"
-* extension.valueCodeableConcept.text = "Latin American nfd"
+* extension.valueCodeableConcept.coding = https://standards.digital.health.nz/ns/ethnic-group-level-4-code#52100 "Latin American / Hispanic NFD"
+* extension.valueCodeableConcept.text = "Latin American / Hispanic NFD"
 * identifier[0].use = #official
 * identifier[=].system = "https://standards.digital.health.nz/ns/nhi-id"
 * identifier[=].value = "ZAT2534"
@@ -22,7 +22,6 @@ Usage: #example
 * name.extension[=].valueCodeableConcept.text = "Proof not Sighted"
 * name.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name.extension[=].valueBoolean = true
-* name.text = "Washington, Irving"
 * name.family = "Washington"
 * name.given = "Irving"
 * gender = #male
