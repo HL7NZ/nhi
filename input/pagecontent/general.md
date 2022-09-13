@@ -28,9 +28,9 @@ Extract the value of the identifier where the value of the __use__ element is â€
 
 Example:
 
-Get{{Endpoint}}/Resource/identifier
+Get\<Endpoint>/Resource/identifier
 
-Get{{Endpoint}}/Patient/ZAT2348
+Get\<Endpoint>/Patient/ZAT2348
 
 For more information look at the __Get patient Use case__ in the menu
 
@@ -61,7 +61,7 @@ For example, assume that there are 2 Patient resources exposed by the NHI, each 
 ```
 
 
-(returned by GET{{Endpoint}}/Patient/ZAT2534)
+(returned by GET\<Endpoint>/Patient/ZAT2534)
 
 And 
 
@@ -83,11 +83,11 @@ And
 ```
 
 
-(returned by GET{{Endpoint}}/Patient/ZAT2518)
+(returned by GET\<Endpoint>/Patient/ZAT2518)
 
-They are determined to be the same person, and the identifier ZAT2518 ismade dormant in favour of ZAT2534.
+They are determined to be the same person, and the identifier ZAT2518 is made dormant in favour of ZAT2534.
 
-A GET call of GET{{Endpoint}}/Patient/ZAT2534 or GET{{Endpoint}}/Patient/ZAT2518 will return the same response
+A GET call of GET\<Endpoint>/Patient/ZAT2534 or GET\<Endpoint>/Patient/ZAT2518 will return the same response
 
 
 ```
