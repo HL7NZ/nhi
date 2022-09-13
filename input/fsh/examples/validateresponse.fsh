@@ -1,4 +1,4 @@
-Instance: Example $Match validate response
+Instance: validate-response
 InstanceOf: Bundle
 Description: "Example $Match (Validate) Response"
 Usage: #example

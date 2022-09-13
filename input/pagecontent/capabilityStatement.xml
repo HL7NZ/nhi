@@ -20,7 +20,7 @@
 <tr>
 <td>match</td>
 <td>http://hl7.org/fhir/OperationDefinition/Patient-match</td>
-<td><p>An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores</p>
+<td><p>$Match (Find NHI) with in parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores, $Match (Validate) with in parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id</p>
 </td>
 </tr>
 </table>
