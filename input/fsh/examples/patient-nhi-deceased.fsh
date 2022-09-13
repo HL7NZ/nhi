@@ -22,12 +22,10 @@ Usage: #example
 * identifier.assigner = Reference(Organization/G00001-G)
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name[=].extension.valueBoolean = false
-* name[=].text = "Moh, Petal"
 * name[=].family = "Moh"
 * name[=].given = "Petal"
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name[=].extension.valueBoolean = true
-* name[=].text = "MARTIN, LAURA ROSE"
 * name[=].family = "MARTIN"
 * name[=].given[0] = "LAURA"
 * name[=].given[+] = "ROSE"
@@ -37,20 +35,18 @@ Usage: #example
 * name[=].extension[=].valueCodeableConcept.text = "Proof not Sighted"
 * name[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name[=].extension[=].valueBoolean = false
-* name[=].text = "Othername, Rose"
 * name[=].family = "Othername"
 * name[=].given = "Rose"
-* name[=].prefix = "MRS"
+* name[=].prefix = "mrs"
 * name[+].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/information-source"
 * name[=].extension[=].valueCodeableConcept.coding.version = "1.0"
 * name[=].extension[=].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#NPRF "Proof not Sighted"
 * name[=].extension[=].valueCodeableConcept.text = "Proof not Sighted"
 * name[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name[=].extension[=].valueBoolean = false
-* name[=].text = "Smith-Martin, Laura"
 * name[=].family = "Smith-Martin"
 * name[=].given = "Laura"
-* name[=].prefix = "MS"
+* name[=].prefix = "ms"
 * gender = #female
 * birthDate = "1970-07-14"
 * birthDate.extension.url = "http://hl7.org.nz/fhir/StructureDefinition/information-source"
