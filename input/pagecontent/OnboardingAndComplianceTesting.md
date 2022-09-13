@@ -238,6 +238,7 @@ ZBE4905</td>
 <td>Mandatory</td>
 </tr>
 
+<tr>
 <td>NHI-GET-10</td>
 <td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
 <td> <b>Do all</b> <br /> ZDW0191 <br /> ZJL1013 <br /> ZHS7524 </td>
