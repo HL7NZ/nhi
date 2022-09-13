@@ -9,12 +9,8 @@
   * onlyCertainMatches: 1 (True)
 * The NHI does validtaes the nhi-id and provided details against patient records held on the NHI
 * The NHI returns a bundle with an nhi-id if a validation has been successful
-* The bundle will also include:
-  * A search score most likely (1) to least likely (0)
-  * A "match-grade":
-    * Certain Match
-    * Possible Match (Further details are required)
-    * Certainly Not a Match
+* The bundle will also include a search score.
+* For an example Validate request body [click here](/artifacts.html#example-example-instances)
 
 <div>
 {% include validate-patient.svg %}
