@@ -13,6 +13,7 @@
     * Certain Match
     * Possible Match
 * A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request.
+* For an example Match request body [click here](/artifacts.html#example-example-instances)
 
 <div>
 {% include match-patient.svg %}
