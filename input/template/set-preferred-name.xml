@@ -13,7 +13,7 @@
 			</div>
 			<p>URL: [base]/Patient/$set-preferred-name</p>
 			<p>Parameters</p>
-			<table class="grid">
+			<table class='table table-bordered table-condensed'>
 				<tr>
 					<td>
 						<b>Use</b>
@@ -36,51 +36,43 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>resource</td>
+					<td>patient.NHI</td>
+					<td>q..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The Patient's NHI number</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>patient.meta.versionId</td>
 					<td>1..1</td>
 					<td>
-						<a href="resource.html">Resource</a>
+						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>Use this to provide an entire set of patient details for the
-								MPI to match against (e.g. POST a patient record to
-								Patient/$match).</p>
+							<p>The current value of the patient resources meta.versionId</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>onlyCertainMatches</td>
-					<td>0..1</td>
+					<td>patient.name.id</td>
+					<td>1..1</td>
 					<td>
-						<a href="datatypes.html#boolean">boolean</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>If there are multiple potential matches, then the match should
-								not return the results with this flag set to true. When false,
-								the server may return multiple results with each result graded
-								accordingly.</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>count</td>
-					<td>0..1</td>
-					<td>
-						<a href="datatypes.html#integer">integer</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The maximum number of records to return. If no value is
-								provided, the server decides how many matches to return. Note
-								that clients should be careful when using this, as it may
-								prevent probable - and valid - matches from being returned</p>
+							<p>The id of the name element to be set to be the preferred name (patient.name.id)</p>
 						</div>
 					</td>
 				</tr>
@@ -89,35 +81,18 @@
 					<td>return</td>
 					<td>1..1</td>
 					<td>
-						<a href="bundle.html">Bundle</a>
+						<a href="http://hl7.org/fhir/R4/patient.htmll">patient</a>
 					</td>
 					<td/>
 					<td>
 						<div>
-							<p>A bundle contain a set of Patient records that represent
-								possible matches, optionally it may also contain an
-								OperationOutcome with further information about the search
-								results (such as warnings or information messages, such as a
-								count of records that were close but eliminated) If the
-								operation was unsuccessful, then an OperationOutcome may be
-								returned along with a BadRequest status Code (e.g. security
-								issue, or insufficient properties in patient fragment - check
-								against profile)</p>
+							<p>The upfated patient resource</p>
 						</div>
 					</td>
 				</tr>
 			</table>
 			<div>
-				<p>The
-					response from an &quot;mpi&quot; query is a bundle containing
-					patient records, ordered from most likely to least likely. If there
-					are no patient matches, the MPI SHALL return an empty search set
-					with no error, but may include an operation outcome with further
-					advice regarding patient selection. All patient records SHALL have
-					a search score from 0 to 1, where 1 is the most certain match,
-					along with an extension &quot;
-					<a href="extension-match-grade.html">match-grade</a>
-					&quot; that indicates the MPI's position on the match quality.
+				<p>The NHI is validated, the versionId is validated, the name.id is validated. If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name. 
 				</p>
 			</div>
 		</div>

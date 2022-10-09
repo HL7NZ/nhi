@@ -25,7 +25,7 @@
 </tr>
 <tr>
 <td>set-preferred-name</td>
-<td><a href="url">http://./set-preferred-name.xml</a></td>
+<td><a href="set-preferred-name.xml">set-preferred-name.xml</a></td>
 <td><p>$set-preferred-name - Set patient's preferred name</p></td>
 </tr>
 </table>
