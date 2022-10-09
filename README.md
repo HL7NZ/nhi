@@ -19,4 +19,4 @@ script from the project root,.. This will create the full-ig.zip file which cont
  
 
 ###  Deploying the IG
-Check in your changes including the new full-ig,.zip to github. Amplify will autobuild on commit
+Check in your changes including the new full-ig,.zip to github. Amplify will autobuild on commit 

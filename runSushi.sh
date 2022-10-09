@@ -19,6 +19,15 @@ echo "Making API summary"
 #echo "Making NamingSystem summary"
 #../scripts/makeNamingSystemSummary.js nhi
 
+echo "validating examples against openapi"
+cd ./openapi
+validate.sh
+
+echo copying NhiFhirOpenApi.yaml into template content so it can be accesses from menu
+#zip it first so we can download it
+7z a ./NhiFhirOpenApi.zip ./NhiFhirOpenApi.yaml
+cp ./NhiFhirOpenApi.zip $HOME/.fhir/packages/fhir.base.template#current/package/content
+cd ..
 
 else 
 echo

@@ -7,12 +7,12 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 1.0.0
+version: 1.0.2
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
 publisher:
- name: Ministry of Health
+ name: Te Whatu Ora
  email: mailto:integration@health.govt.nz
 description: The FHIR  API for the NHI
 license: CC0-1.0
@@ -63,7 +63,7 @@ menu:
     Download IG : full-ig.zip
     Artifacts (Json): definitions.json.zip
     Artifacts (Xml): definitions.xml.zip
-
+    "OpenApi 3 spec": NhiFhirOpenApi.zip
 
 
 

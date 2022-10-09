@@ -14,4 +14,19 @@
 </td>
 </tr>
 </table>
+<strong>Operations</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='30%'>Name</th><th width='30%'>Definition</th><th width='40%'>Documentation</th></tr>
+<tr>
+<td>match</td>
+<td><a href="url">http://hl7.org/fhir/R4B/patient-operation-match.html</a></td>
+<td><p>$Match (Find NHI) with in parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores, $Match (Validate) with in parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id</p>
+</td>
+</tr>
+<tr>
+<td>set-preferred-name</td>
+<td><a href="url">./set-preferred-name.xml</a></td>
+<td><p>$set-preferred-name - Set patient's preferred name</p></td>
+</tr>
+</table>
 </div>
