@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="funded-programme"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/funded-programme-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">DENTAL_CHILD<a name="funded-programme-DENTAL_CHILD"> </a></td><td>Dental Care - Children up to age 13</td></tr><tr><td style="white-space:nowrap">DENTAL_ADULT_EMERGENCY<a name="funded-programme-DENTAL_ADULT_EMERGENCY"> </a></td><td>Dental Care – Adult Emergency</td></tr><tr><td style="white-space:nowrap">ENROLLING_GP_PRACTICE<a name="funded-programme-ENROLLING_GP_PRACTICE"> </a></td><td>General Practice Enrollment</td></tr><tr><td style="white-space:nowrap">OTHER<a name="funded-programme-OTHER"> </a></td><td>Some other funded programme not otherwise defined</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/funded-programme-code"/>
+  <version value="1.0.0"/>
+  <name value="FundedProgramme"/>
+  <title value="Funded Programme"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="Some sort of funded programme"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="DENTAL_CHILD"/>
+    <display value="Dental Care - Children up to age 13"/>
+  </concept>
+  <concept>
+    <code value="DENTAL_ADULT_EMERGENCY"/>
+    <display value="Dental Care – Adult Emergency"/>
+  </concept>
+  <concept>
+    <code value="ENROLLING_GP_PRACTICE"/>
+    <display value="General Practice Enrollment"/>
+  </concept>
+  <concept>
+    <code value="OTHER"/>
+    <display value="Some other funded programme not otherwise defined"/>
+  </concept>
+</CodeSystem>

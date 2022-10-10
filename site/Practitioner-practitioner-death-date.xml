@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-death-date"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Practitioner</b><a name="practitioner-death-date"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner "practitioner-death-date" </p></div><blockquote><p><b>Date of death</b></p><p><b>value</b>: 2021-01-01</p><p><b>value</b>: Death Register <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-information-source.html">Information Source</a>#DREG)</span></p></blockquote><p><b>name</b>: Marcus Welby</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1998-01-01</p></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/death-date">
+    <extension url="date">
+      <valueDateTime value="2021-01-01"/>
+    </extension>
+    <extension url="source">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/information-source-code"/>
+          <code value="DREG"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <name>
+    <text value="Marcus Welby"/>
+    <family value="Welby"/>
+    <given value="Marcus"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Practitioner>

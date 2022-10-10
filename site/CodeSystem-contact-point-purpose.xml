@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="contact-point-purpose"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/contact-point-purpose-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">rx<a name="contact-point-purpose-rx"> </a></td><td>Prescription</td></tr><tr><td style="white-space:nowrap">vc<a name="contact-point-purpose-vc"> </a></td><td>Video Conference</td></tr><tr><td style="white-space:nowrap">wf<a name="contact-point-purpose-wf"> </a></td><td>Web forum</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/contact-point-purpose-code"/>
+  <version value="1.0.0"/>
+  <name value="ContactPointPurpose"/>
+  <title value="ContactPoint purpose"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="The purpose of a ContactPoint - what it is used for."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="rx"/>
+    <display value="Prescription"/>
+  </concept>
+  <concept>
+    <code value="vc"/>
+    <display value="Video Conference"/>
+  </concept>
+  <concept>
+    <code value="wf"/>
+    <display value="Web forum"/>
+  </concept>
+</CodeSystem>

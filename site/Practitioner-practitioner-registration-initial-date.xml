@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-registration-initial-date"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Practitioner</b><a name="practitioner-registration-initial-date"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner "practitioner-registration-initial-date" </p></div><p><b>name</b>: John Doe</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1998-01-01</p><h3>Qualifications</h3><table class="grid"><tr><td>-</td><td><b>Extension</b></td><td><b>Code</b></td></tr><tr><td>*</td><td></td><td>Bachelor of Science <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v2-0360.html">degreeLicenseCertificate</a>#BS)</span></td></tr></table></div>
+  </text>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+  <qualification>
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/registration-initial-date">
+      <valueDate value="2009-10-02"/>
+    </extension>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+        <code value="BS"/>
+      </coding>
+    </code>
+  </qualification>
+</Practitioner>

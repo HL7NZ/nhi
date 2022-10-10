@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="iwi-code"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/iwi-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">01<a name="iwi-code-01"> </a></td><td>Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi</td></tr><tr><td style="white-space:nowrap">0101<a name="iwi-code-0101"> </a></td><td>Te Aupōuri</td></tr><tr><td style="white-space:nowrap">0102<a name="iwi-code-0102"> </a></td><td>Ngāti Kahu</td></tr><tr><td style="white-space:nowrap">0103<a name="iwi-code-0103"> </a></td><td>Ngāti Kurī</td></tr><tr><td style="white-space:nowrap">0104<a name="iwi-code-0104"> </a></td><td>Ngāpuhi</td></tr><tr><td style="white-space:nowrap">0105<a name="iwi-code-0105"> </a></td><td>Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa</td></tr><tr><td style="white-space:nowrap">0106<a name="iwi-code-0106"> </a></td><td>Te Rarawa</td></tr><tr><td style="white-space:nowrap">0107<a name="iwi-code-0107"> </a></td><td>Ngāi Takoto</td></tr><tr><td style="white-space:nowrap">0108<a name="iwi-code-0108"> </a></td><td>Ngāti Wai</td></tr><tr><td style="white-space:nowrap">0109<a name="iwi-code-0109"> </a></td><td>Ngāti Whātua (not Ōrākei or Kaipara)</td></tr><tr><td style="white-space:nowrap">0110<a name="iwi-code-0110"> </a></td><td>Te Kawerau ā Maki</td></tr><tr><td style="white-space:nowrap">0111<a name="iwi-code-0111"> </a></td><td>Te Uri-o-Hau</td></tr><tr><td style="white-space:nowrap">0112<a name="iwi-code-0112"> </a></td><td>Te Roroa</td></tr><tr><td style="white-space:nowrap">0113<a name="iwi-code-0113"> </a></td><td>Ngāti Whātua o Kaipara</td></tr><tr><td style="white-space:nowrap">0114<a name="iwi-code-0114"> </a></td><td>Ngāti Whātua o Ōrākei</td></tr><tr><td style="white-space:nowrap">0115<a name="iwi-code-0115"> </a></td><td>Ngāi Tai ki Tāmaki</td></tr><tr><td style="white-space:nowrap">0116<a name="iwi-code-0116"> </a></td><td>Ngāti Hine (Te Tai Tokerau)</td></tr><tr><td style="white-space:nowrap">0117<a name="iwi-code-0117"> </a></td><td>Te Paatu</td></tr><tr><td style="white-space:nowrap">0118<a name="iwi-code-0118"> </a></td><td>Ngāti Manuhiri</td></tr><tr><td style="white-space:nowrap">0119<a name="iwi-code-0119"> </a></td><td>Ngāti Rehua</td></tr><tr><td style="white-space:nowrap">0120<a name="iwi-code-0120"> </a></td><td>Ngāti Torehina ki Mata-ure ō Hau</td></tr><tr><td style="white-space:nowrap">02<a name="iwi-code-02"> </a></td><td>Hauraki (Coromandel) Region Iwi</td></tr><tr><td style="white-space:nowrap">0201<a name="iwi-code-0201"> </a></td><td>Ngāti Hako</td></tr><tr><td style="white-space:nowrap">0202<a name="iwi-code-0202"> </a></td><td>Ngāti Hei</td></tr><tr><td style="white-space:nowrap">0203<a name="iwi-code-0203"> </a></td><td>Ngāti Maru (Hauraki)</td></tr><tr><td style="white-space:nowrap">0204<a name="iwi-code-0204"> </a></td><td>Ngāti Paoa</td></tr><tr><td style="white-space:nowrap">0205<a name="iwi-code-0205"> </a></td><td>Patukirikiri</td></tr><tr><td style="white-space:nowrap">0206<a name="iwi-code-0206"> </a></td><td>Ngāti Porou ki Harataunga ki Mataora</td></tr><tr><td style="white-space:nowrap">0207<a name="iwi-code-0207"> </a></td><td>Ngāti Pūkenga ki Waiau</td></tr><tr><td style="white-space:nowrap">0208<a name="iwi-code-0208"> </a></td><td>Ngāti Rāhiri Tumutumu</td></tr><tr><td style="white-space:nowrap">0210<a name="iwi-code-0210"> </a></td><td>Ngāti Tamaterā</td></tr><tr><td style="white-space:nowrap">0211<a name="iwi-code-0211"> </a></td><td>Ngāti Tara Tokanui</td></tr><tr><td style="white-space:nowrap">0212<a name="iwi-code-0212"> </a></td><td>Ngāti Whanaunga</td></tr><tr><td style="white-space:nowrap">0213<a name="iwi-code-0213"> </a></td><td>Ngāti Huarere</td></tr><tr><td style="white-space:nowrap">03<a name="iwi-code-03"> </a></td><td>Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi</td></tr><tr><td style="white-space:nowrap">0301<a name="iwi-code-0301"> </a></td><td>Ngāti Haua (Waikato)</td></tr><tr><td style="white-space:nowrap">0302<a name="iwi-code-0302"> </a></td><td>Ngāti Maniapoto</td></tr><tr><td style="white-space:nowrap">0303<a name="iwi-code-0303"> </a></td><td>Raukawa (Waikato)</td></tr><tr><td style="white-space:nowrap">0304<a name="iwi-code-0304"> </a></td><td>Waikato</td></tr><tr><td style="white-space:nowrap">0305<a name="iwi-code-0305"> </a></td><td>Ngāti Te Ata</td></tr><tr><td style="white-space:nowrap">0306<a name="iwi-code-0306"> </a></td><td>Ngāti Hīkairo</td></tr><tr><td style="white-space:nowrap">0307<a name="iwi-code-0307"> </a></td><td>Rereahu</td></tr><tr><td style="white-space:nowrap">0308<a name="iwi-code-0308"> </a></td><td>Ngāti Tiipa</td></tr><tr><td style="white-space:nowrap">0309<a name="iwi-code-0309"> </a></td><td>Ngāti Korokī Kahukura</td></tr><tr><td style="white-space:nowrap">0310<a name="iwi-code-0310"> </a></td><td>Ngāti Tamaoho</td></tr><tr><td style="white-space:nowrap">0311<a name="iwi-code-0311"> </a></td><td>Te Ākitai-Waiohua</td></tr><tr><td style="white-space:nowrap">0312<a name="iwi-code-0312"> </a></td><td>Tainui Awhiro</td></tr><tr><td style="white-space:nowrap">04<a name="iwi-code-04"> </a></td><td>Te Arawa/Taupō (Rotorua/Taupō) Region Iwi</td></tr><tr><td style="white-space:nowrap">0401<a name="iwi-code-0401"> </a></td><td>Ngāti Pikiao (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0402<a name="iwi-code-0402"> </a></td><td>Ngāti Rangiteaorere (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0403<a name="iwi-code-0403"> </a></td><td>Ngāti Rangitihi (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0404<a name="iwi-code-0404"> </a></td><td>Ngāti Rangiwewehi (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0405<a name="iwi-code-0405"> </a></td><td>Tapuika (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0406<a name="iwi-code-0406"> </a></td><td>Ngāti Tarāwhai (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0407<a name="iwi-code-0407"> </a></td><td>Tūhourangi (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0408<a name="iwi-code-0408"> </a></td><td>Uenuku-Kōpako (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0409<a name="iwi-code-0409"> </a></td><td>Waitaha (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0410<a name="iwi-code-0410"> </a></td><td>Ngāti Whakaue (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0411<a name="iwi-code-0411"> </a></td><td>Ngāti Tūwharetoa (ki Taupō)</td></tr><tr><td style="white-space:nowrap">0412<a name="iwi-code-0412"> </a></td><td>Ngāti Tahu-Ngāti Whaoa (Te Arawa)</td></tr><tr><td style="white-space:nowrap">0413<a name="iwi-code-0413"> </a></td><td>Ngāti Mākino</td></tr><tr><td style="white-space:nowrap">0414<a name="iwi-code-0414"> </a></td><td>Ngāti Kearoa / Ngāti Tuarā</td></tr><tr><td style="white-space:nowrap">0415<a name="iwi-code-0415"> </a></td><td>Ngāti Rongomai (Te Arawa)</td></tr><tr><td style="white-space:nowrap">05<a name="iwi-code-05"> </a></td><td>Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi</td></tr><tr><td style="white-space:nowrap">0501<a name="iwi-code-0501"> </a></td><td>Ngāti Pūkenga</td></tr><tr><td style="white-space:nowrap">0502<a name="iwi-code-0502"> </a></td><td>Ngāi Te Rangi</td></tr><tr><td style="white-space:nowrap">0503<a name="iwi-code-0503"> </a></td><td>Ngāti Ranginui</td></tr><tr><td style="white-space:nowrap">0504<a name="iwi-code-0504"> </a></td><td>Ngāti Awa</td></tr><tr><td style="white-space:nowrap">0505<a name="iwi-code-0505"> </a></td><td>Ngāti Manawa</td></tr><tr><td style="white-space:nowrap">0506<a name="iwi-code-0506"> </a></td><td>Ngāi Tai (Tauranga Moana/Mātaatua)</td></tr><tr><td style="white-space:nowrap">0507<a name="iwi-code-0507"> </a></td><td>Tūhoe</td></tr><tr><td style="white-space:nowrap">0508<a name="iwi-code-0508"> </a></td><td>Whakatōhea</td></tr><tr><td style="white-space:nowrap">0509<a name="iwi-code-0509"> </a></td><td>Te Whānau-ā-Apanui</td></tr><tr><td style="white-space:nowrap">0510<a name="iwi-code-0510"> </a></td><td>Ngāti Whare</td></tr><tr><td style="white-space:nowrap">0511<a name="iwi-code-0511"> </a></td><td>Ngā Pōtiki ā Tamapahore</td></tr><tr><td style="white-space:nowrap">0512<a name="iwi-code-0512"> </a></td><td>Te Upokorehe</td></tr><tr><td style="white-space:nowrap">0513<a name="iwi-code-0513"> </a></td><td>Ngāti Tūwharetoa ki Kawerau</td></tr><tr><td style="white-space:nowrap">06<a name="iwi-code-06"> </a></td><td>Te Tai Rāwhiti (East Coast) Region Iwi</td></tr><tr><td style="white-space:nowrap">0601<a name="iwi-code-0601"> </a></td><td>Ngāti Porou</td></tr><tr><td style="white-space:nowrap">0602<a name="iwi-code-0602"> </a></td><td>Te Aitanga-a-Māhaki</td></tr><tr><td style="white-space:nowrap">0603<a name="iwi-code-0603"> </a></td><td>Rongowhakaata</td></tr><tr><td style="white-space:nowrap">0604<a name="iwi-code-0604"> </a></td><td>Ngāi Tāmanuhiri</td></tr><tr><td style="white-space:nowrap">0605<a name="iwi-code-0605"> </a></td><td>Te Aitanga ā Hauiti</td></tr><tr><td style="white-space:nowrap">07<a name="iwi-code-07"> </a></td><td>Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region iwi</td></tr><tr><td style="white-space:nowrap">0701<a name="iwi-code-0701"> </a></td><td>Rongomaiwahine (Te Māhia)</td></tr><tr><td style="white-space:nowrap">0702<a name="iwi-code-0702"> </a></td><td>Ngāti Kahungunu ki Te Wairoa</td></tr><tr><td style="white-space:nowrap">0703<a name="iwi-code-0703"> </a></td><td>Ngāti Kahungunu ki Heretaunga</td></tr><tr><td style="white-space:nowrap">0704<a name="iwi-code-0704"> </a></td><td>Ngāti Kahungunu ki Wairarapa</td></tr><tr><td style="white-space:nowrap">0706<a name="iwi-code-0706"> </a></td><td>Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)</td></tr><tr><td style="white-space:nowrap">0707<a name="iwi-code-0707"> </a></td><td>Ngāti Kahungunu ki Te Whanganui-a-Orotu</td></tr><tr><td style="white-space:nowrap">0708<a name="iwi-code-0708"> </a></td><td>Ngāti Kahungunu ki Tamatea</td></tr><tr><td style="white-space:nowrap">0709<a name="iwi-code-0709"> </a></td><td>Ngāti Kahungunu ki Tamakinui a Rua</td></tr><tr><td style="white-space:nowrap">0710<a name="iwi-code-0710"> </a></td><td>Ngāti Pāhauwera</td></tr><tr><td style="white-space:nowrap">0711<a name="iwi-code-0711"> </a></td><td>Ngāti Rākaipaaka</td></tr><tr><td style="white-space:nowrap">0712<a name="iwi-code-0712"> </a></td><td>Ngāti Hineuru</td></tr><tr><td style="white-space:nowrap">0713<a name="iwi-code-0713"> </a></td><td>Maungaharuru Tangitū</td></tr><tr><td style="white-space:nowrap">0714<a name="iwi-code-0714"> </a></td><td>Rangitāne o Tamaki nui ā Rua</td></tr><tr><td style="white-space:nowrap">0715<a name="iwi-code-0715"> </a></td><td>Ngāti Ruapani ki Waikaremoana</td></tr><tr><td style="white-space:nowrap">0716<a name="iwi-code-0716"> </a></td><td>Te Hika o Pāpāuma</td></tr><tr><td style="white-space:nowrap">0717<a name="iwi-code-0717"> </a></td><td>Ngāti Hinemanu (Heretaunga)</td></tr><tr><td style="white-space:nowrap">08<a name="iwi-code-08"> </a></td><td>Taranaki Region Iwi</td></tr><tr><td style="white-space:nowrap">0801<a name="iwi-code-0801"> </a></td><td>Te Atiawa (Taranaki)</td></tr><tr><td style="white-space:nowrap">0802<a name="iwi-code-0802"> </a></td><td>Ngāti Maru (Taranaki)</td></tr><tr><td style="white-space:nowrap">0803<a name="iwi-code-0803"> </a></td><td>Ngāti Mutunga (Taranaki)</td></tr><tr><td style="white-space:nowrap">0804<a name="iwi-code-0804"> </a></td><td>Ngā Rauru</td></tr><tr><td style="white-space:nowrap">0805<a name="iwi-code-0805"> </a></td><td>Ngā Ruahine</td></tr><tr><td style="white-space:nowrap">0806<a name="iwi-code-0806"> </a></td><td>Ngāti Ruanui</td></tr><tr><td style="white-space:nowrap">0807<a name="iwi-code-0807"> </a></td><td>Ngāti Tama (Taranaki)</td></tr><tr><td style="white-space:nowrap">0808<a name="iwi-code-0808"> </a></td><td>Taranaki</td></tr><tr><td style="white-space:nowrap">0809<a name="iwi-code-0809"> </a></td><td>Tangāhoe</td></tr><tr><td style="white-space:nowrap">0810<a name="iwi-code-0810"> </a></td><td>Pakakohi</td></tr><tr><td style="white-space:nowrap">09<a name="iwi-code-09"> </a></td><td>Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi</td></tr><tr><td style="white-space:nowrap">0901<a name="iwi-code-0901"> </a></td><td>Ngāti Apa (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">0902<a name="iwi-code-0902"> </a></td><td>Te Ati Haunui-a-Pāpārangi</td></tr><tr><td style="white-space:nowrap">0903<a name="iwi-code-0903"> </a></td><td>Ngāti Haua (Taumarunui)</td></tr><tr><td style="white-space:nowrap">0904<a name="iwi-code-0904"> </a></td><td>Ngāti Hauiti (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">0905<a name="iwi-code-0905"> </a></td><td>Ngāti Whitikaupeka (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">0906<a name="iwi-code-0906"> </a></td><td>Ngāi Te Ohuake (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">0907<a name="iwi-code-0907"> </a></td><td>Ngāti Tamakōpiri (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">0908<a name="iwi-code-0908"> </a></td><td>Ngāti Rangi (Ruapehu, Whanganui)</td></tr><tr><td style="white-space:nowrap">0909<a name="iwi-code-0909"> </a></td><td>Uenuku (Ruapehu, Waimarino)</td></tr><tr><td style="white-space:nowrap">0910<a name="iwi-code-0910"> </a></td><td>Tamahaki (Ruapehu, Waimarino)</td></tr><tr><td style="white-space:nowrap">0911<a name="iwi-code-0911"> </a></td><td>Tamakana (Ruapehu, Waimarino)</td></tr><tr><td style="white-space:nowrap">0912<a name="iwi-code-0912"> </a></td><td>Ngāti Hinemanu (Rangitīkei)</td></tr><tr><td style="white-space:nowrap">10<a name="iwi-code-10"> </a></td><td>Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi</td></tr><tr><td style="white-space:nowrap">1001<a name="iwi-code-1001"> </a></td><td>Te Atiawa (Te Whanganui-a-Tara/Wellington)</td></tr><tr><td style="white-space:nowrap">1002<a name="iwi-code-1002"> </a></td><td>Muaūpoko</td></tr><tr><td style="white-space:nowrap">1003<a name="iwi-code-1003"> </a></td><td>Rangitāne (Manawatū)</td></tr><tr><td style="white-space:nowrap">1004<a name="iwi-code-1004"> </a></td><td>Ngāti Raukawa (Horowhenua/Manawatū)</td></tr><tr><td style="white-space:nowrap">1005<a name="iwi-code-1005"> </a></td><td>Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)</td></tr><tr><td style="white-space:nowrap">1006<a name="iwi-code-1006"> </a></td><td>Te Atiawa ki Whakarongotai</td></tr><tr><td style="white-space:nowrap">1007<a name="iwi-code-1007"> </a></td><td>Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)</td></tr><tr><td style="white-space:nowrap">1008<a name="iwi-code-1008"> </a></td><td>Ngāti Kauwhata</td></tr><tr><td style="white-space:nowrap">1009<a name="iwi-code-1009"> </a></td><td>Ngāti Tukorehe</td></tr><tr><td style="white-space:nowrap">11<a name="iwi-code-11"> </a></td><td>Te Waipounamu (South Island) Region Iwi</td></tr><tr><td style="white-space:nowrap">1101<a name="iwi-code-1101"> </a></td><td>Te Atiawa (Te Waipounamu/South Island)</td></tr><tr><td style="white-space:nowrap">1102<a name="iwi-code-1102"> </a></td><td>Ngāti Koata</td></tr><tr><td style="white-space:nowrap">1103<a name="iwi-code-1103"> </a></td><td>Ngāti Kuia</td></tr><tr><td style="white-space:nowrap">1104<a name="iwi-code-1104"> </a></td><td>Kāti Māmoe</td></tr><tr><td style="white-space:nowrap">1107<a name="iwi-code-1107"> </a></td><td>Rangitāne (Te Waipounamu/South Island)</td></tr><tr><td style="white-space:nowrap">1108<a name="iwi-code-1108"> </a></td><td>Ngāti Rārua</td></tr><tr><td style="white-space:nowrap">1109<a name="iwi-code-1109"> </a></td><td>Ngāi Tahu / Kāi Tahu</td></tr><tr><td style="white-space:nowrap">1110<a name="iwi-code-1110"> </a></td><td>Ngāti Tama ki Te Tauihu</td></tr><tr><td style="white-space:nowrap">1111<a name="iwi-code-1111"> </a></td><td>Ngāti Toarangatira (Te Waipounamu/South Island)</td></tr><tr><td style="white-space:nowrap">1112<a name="iwi-code-1112"> </a></td><td>Waitaha (Te Waipounamu/South Island)</td></tr><tr><td style="white-space:nowrap">1113<a name="iwi-code-1113"> </a></td><td>Ngāti Apa ki Te Rā Tō</td></tr><tr><td style="white-space:nowrap">12<a name="iwi-code-12"> </a></td><td>Rēkohu/Wharekauri (Chatham Islands) Region Imi/Iwi</td></tr><tr><td style="white-space:nowrap">1201<a name="iwi-code-1201"> </a></td><td>Moriori</td></tr><tr><td style="white-space:nowrap">1202<a name="iwi-code-1202"> </a></td><td>Ngāti Mutunga (Wharekauri/Chatham Islands)</td></tr><tr><td style="white-space:nowrap">20<a name="iwi-code-20"> </a></td><td>Confederations and Waka, iwi not named</td></tr><tr><td style="white-space:nowrap">2001<a name="iwi-code-2001"> </a></td><td>Tainui, iwi not named</td></tr><tr><td style="white-space:nowrap">2002<a name="iwi-code-2002"> </a></td><td>Te Arawa, iwi not named</td></tr><tr><td style="white-space:nowrap">2003<a name="iwi-code-2003"> </a></td><td>Tākitimu, iwi not named</td></tr><tr><td style="white-space:nowrap">2004<a name="iwi-code-2004"> </a></td><td>Aotea, iwi not named</td></tr><tr><td style="white-space:nowrap">2005<a name="iwi-code-2005"> </a></td><td>Mātaatua, iwi not named</td></tr><tr><td style="white-space:nowrap">2006<a name="iwi-code-2006"> </a></td><td>Mahuru, iwi not named</td></tr><tr><td style="white-space:nowrap">2007<a name="iwi-code-2007"> </a></td><td>Māmari, iwi not named</td></tr><tr><td style="white-space:nowrap">2008<a name="iwi-code-2008"> </a></td><td>Ngātokimatawhaorua, iwi not named</td></tr><tr><td style="white-space:nowrap">2009<a name="iwi-code-2009"> </a></td><td>Nukutere, iwi not named</td></tr><tr><td style="white-space:nowrap">2010<a name="iwi-code-2010"> </a></td><td>Tokomaru, iwi not named</td></tr><tr><td style="white-space:nowrap">2011<a name="iwi-code-2011"> </a></td><td>Kurahaupō, iwi not named</td></tr><tr><td style="white-space:nowrap">2012<a name="iwi-code-2012"> </a></td><td>Muriwhenua, iwi not named</td></tr><tr><td style="white-space:nowrap">2013<a name="iwi-code-2013"> </a></td><td>Hauraki / Pare Hauraki, iwi not named</td></tr><tr><td style="white-space:nowrap">2014<a name="iwi-code-2014"> </a></td><td>Tūranganui a Kiwa, iwi not named</td></tr><tr><td style="white-space:nowrap">2015<a name="iwi-code-2015"> </a></td><td>Te Tauihu o Te Waka a Māui, iwi not named</td></tr><tr><td style="white-space:nowrap">2016<a name="iwi-code-2016"> </a></td><td>Tauranga Moana, iwi not named</td></tr><tr><td style="white-space:nowrap">2017<a name="iwi-code-2017"> </a></td><td>Horouta, iwi not named</td></tr><tr><td style="white-space:nowrap">2018<a name="iwi-code-2018"> </a></td><td>Mōkai Pātea, iwi not named</td></tr><tr><td style="white-space:nowrap">21<a name="iwi-code-21"> </a></td><td>Iwi named, region not known</td></tr><tr><td style="white-space:nowrap">2101<a name="iwi-code-2101"> </a></td><td>Te Atiawa, region not known</td></tr><tr><td style="white-space:nowrap">2102<a name="iwi-code-2102"> </a></td><td>Ngāti Haua, region not known</td></tr><tr><td style="white-space:nowrap">2103<a name="iwi-code-2103"> </a></td><td>Ngāti Maru, region not known</td></tr><tr><td style="white-space:nowrap">2104<a name="iwi-code-2104"> </a></td><td>Ngāti Mutunga, region not known</td></tr><tr><td style="white-space:nowrap">2105<a name="iwi-code-2105"> </a></td><td>Rangitāne, region not known</td></tr><tr><td style="white-space:nowrap">2106<a name="iwi-code-2106"> </a></td><td>Ngāti Raukawa, region not known</td></tr><tr><td style="white-space:nowrap">2107<a name="iwi-code-2107"> </a></td><td>Ngāti Tama, region not known</td></tr><tr><td style="white-space:nowrap">2108<a name="iwi-code-2108"> </a></td><td>Ngāti Toa, region not known</td></tr><tr><td style="white-space:nowrap">2109<a name="iwi-code-2109"> </a></td><td>Waitaha, region not known</td></tr><tr><td style="white-space:nowrap">2110<a name="iwi-code-2110"> </a></td><td>Ngāti Apa, region not known</td></tr><tr><td style="white-space:nowrap">2111<a name="iwi-code-2111"> </a></td><td>Ngāi Tai, region not known</td></tr><tr><td style="white-space:nowrap">2112<a name="iwi-code-2112"> </a></td><td>Ngāti Kahungunu, region not known</td></tr><tr><td style="white-space:nowrap">2113<a name="iwi-code-2113"> </a></td><td>Ngāti Tūwharetoa, region not known</td></tr><tr><td style="white-space:nowrap">2114<a name="iwi-code-2114"> </a></td><td>Ngāti Hinemanu, region not known</td></tr><tr><td style="white-space:nowrap">22<a name="iwi-code-22"> </a></td><td>Hapū affiliated to more than one iwi</td></tr><tr><td style="white-space:nowrap">2201<a name="iwi-code-2201"> </a></td><td>Hapū affiliated to more than one iwi</td></tr><tr><td style="white-space:nowrap">23<a name="iwi-code-23"> </a></td><td>Region known, Iwi not named</td></tr><tr><td style="white-space:nowrap">2301<a name="iwi-code-2301"> </a></td><td>Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2302<a name="iwi-code-2302"> </a></td><td>Hauraki Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2303<a name="iwi-code-2303"> </a></td><td>Waikato/Te Rohe Pōtae Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2304<a name="iwi-code-2304"> </a></td><td>Te Arawa/Taupō Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2305<a name="iwi-code-2305"> </a></td><td>Tauranga Moana/Mātaatua Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2306<a name="iwi-code-2306"> </a></td><td>Te Tai Rāwhiti Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2307<a name="iwi-code-2307"> </a></td><td>Te Matau-a-Māui/Wairarapa Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2308<a name="iwi-code-2308"> </a></td><td>Taranaki Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2309<a name="iwi-code-2309"> </a></td><td>Whanganui/Rangitīkei Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2310<a name="iwi-code-2310"> </a></td><td>Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2311<a name="iwi-code-2311"> </a></td><td>Te Waipounamu Region, Iwi not named</td></tr><tr><td style="white-space:nowrap">2312<a name="iwi-code-2312"> </a></td><td>Rēkohu/Wharekauri Region, Imi/Iwi not named</td></tr><tr><td style="white-space:nowrap">44<a name="iwi-code-44"> </a></td><td>Don't Know</td></tr><tr><td style="white-space:nowrap">4444<a name="iwi-code-4444"> </a></td><td>Don't Know</td></tr><tr><td style="white-space:nowrap">55<a name="iwi-code-55"> </a></td><td>Refused To Answer</td></tr><tr><td style="white-space:nowrap">5555<a name="iwi-code-5555"> </a></td><td>Refused To Answer</td></tr><tr><td style="white-space:nowrap">77<a name="iwi-code-77"> </a></td><td>Response Unidentifiable</td></tr><tr><td style="white-space:nowrap">7777<a name="iwi-code-7777"> </a></td><td>Response Unidentifiable</td></tr><tr><td style="white-space:nowrap">88<a name="iwi-code-88"> </a></td><td>Response Outside Scope</td></tr><tr><td style="white-space:nowrap">8888<a name="iwi-code-8888"> </a></td><td>Response Outside Scope</td></tr><tr><td style="white-space:nowrap">99<a name="iwi-code-99"> </a></td><td>Not Stated</td></tr><tr><td style="white-space:nowrap">9999<a name="iwi-code-9999"> </a></td><td>Not Stated</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/iwi-code"/>
+  <version value="2.0.0"/>
+  <name value="Iwi_code"/>
+  <title value="NZ Iwi"/>
+  <status value="active"/>
+  <date value="2022-05-10"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="NZ Iwi Statistical Standard: 27 May 2022."/>
+  <copyright value="© 2017+ Stats NZ"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://nzhts.digital.health.nz/fhir/ValueSet/iwi-code"/>
+  <compositional value="false"/>
+  <versionNeeded value="false"/>
+  <content value="complete"/>
+  <count value="208"/>
+  <concept>
+    <code value="01"/>
+    <display value="Te Tai Tokerau/Tāmaki-makaurau (Northland/Auckland) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0101"/>
+    <display value="Te Aupōuri"/>
+  </concept>
+  <concept>
+    <code value="0102"/>
+    <display value="Ngāti Kahu"/>
+  </concept>
+  <concept>
+    <code value="0103"/>
+    <display value="Ngāti Kurī"/>
+  </concept>
+  <concept>
+    <code value="0104"/>
+    <display value="Ngāpuhi"/>
+  </concept>
+  <concept>
+    <code value="0105"/>
+    <display value="Ngāpuhi ki Whaingaroa-Ngāti Kahu ki Whaingaroa"/>
+  </concept>
+  <concept>
+    <code value="0106"/>
+    <display value="Te Rarawa"/>
+  </concept>
+  <concept>
+    <code value="0107"/>
+    <display value="Ngāi Takoto"/>
+  </concept>
+  <concept>
+    <code value="0108"/>
+    <display value="Ngāti Wai"/>
+  </concept>
+  <concept>
+    <code value="0109"/>
+    <display value="Ngāti Whātua (not Ōrākei or Kaipara)"/>
+  </concept>
+  <concept>
+    <code value="0110"/>
+    <display value="Te Kawerau ā Maki"/>
+  </concept>
+  <concept>
+    <code value="0111"/>
+    <display value="Te Uri-o-Hau"/>
+  </concept>
+  <concept>
+    <code value="0112"/>
+    <display value="Te Roroa"/>
+  </concept>
+  <concept>
+    <code value="0113"/>
+    <display value="Ngāti Whātua o Kaipara"/>
+  </concept>
+  <concept>
+    <code value="0114"/>
+    <display value="Ngāti Whātua o Ōrākei"/>
+  </concept>
+  <concept>
+    <code value="0115"/>
+    <display value="Ngāi Tai ki Tāmaki"/>
+  </concept>
+  <concept>
+    <code value="0116"/>
+    <display value="Ngāti Hine (Te Tai Tokerau)"/>
+  </concept>
+  <concept>
+    <code value="0117"/>
+    <display value="Te Paatu"/>
+  </concept>
+  <concept>
+    <code value="0118"/>
+    <display value="Ngāti Manuhiri"/>
+  </concept>
+  <concept>
+    <code value="0119"/>
+    <display value="Ngāti Rehua"/>
+  </concept>
+  <concept>
+    <code value="0120"/>
+    <display value="Ngāti Torehina ki Mata-ure ō Hau"/>
+  </concept>
+  <concept>
+    <code value="02"/>
+    <display value="Hauraki (Coromandel) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0201"/>
+    <display value="Ngāti Hako"/>
+  </concept>
+  <concept>
+    <code value="0202"/>
+    <display value="Ngāti Hei"/>
+  </concept>
+  <concept>
+    <code value="0203"/>
+    <display value="Ngāti Maru (Hauraki)"/>
+  </concept>
+  <concept>
+    <code value="0204"/>
+    <display value="Ngāti Paoa"/>
+  </concept>
+  <concept>
+    <code value="0205"/>
+    <display value="Patukirikiri"/>
+  </concept>
+  <concept>
+    <code value="0206"/>
+    <display value="Ngāti Porou ki Harataunga ki Mataora"/>
+  </concept>
+  <concept>
+    <code value="0207"/>
+    <display value="Ngāti Pūkenga ki Waiau"/>
+  </concept>
+  <concept>
+    <code value="0208"/>
+    <display value="Ngāti Rāhiri Tumutumu"/>
+  </concept>
+  <concept>
+    <code value="0210"/>
+    <display value="Ngāti Tamaterā"/>
+  </concept>
+  <concept>
+    <code value="0211"/>
+    <display value="Ngāti Tara Tokanui"/>
+  </concept>
+  <concept>
+    <code value="0212"/>
+    <display value="Ngāti Whanaunga"/>
+  </concept>
+  <concept>
+    <code value="0213"/>
+    <display value="Ngāti Huarere"/>
+  </concept>
+  <concept>
+    <code value="03"/>
+    <display value="Waikato/Te Rohe Pōtae (Waikato/King Country) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0301"/>
+    <display value="Ngāti Haua (Waikato)"/>
+  </concept>
+  <concept>
+    <code value="0302"/>
+    <display value="Ngāti Maniapoto"/>
+  </concept>
+  <concept>
+    <code value="0303"/>
+    <display value="Raukawa (Waikato)"/>
+  </concept>
+  <concept>
+    <code value="0304"/>
+    <display value="Waikato"/>
+  </concept>
+  <concept>
+    <code value="0305"/>
+    <display value="Ngāti Te Ata"/>
+  </concept>
+  <concept>
+    <code value="0306"/>
+    <display value="Ngāti Hīkairo"/>
+  </concept>
+  <concept>
+    <code value="0307"/>
+    <display value="Rereahu"/>
+  </concept>
+  <concept>
+    <code value="0308"/>
+    <display value="Ngāti Tiipa"/>
+  </concept>
+  <concept>
+    <code value="0309"/>
+    <display value="Ngāti Korokī Kahukura"/>
+  </concept>
+  <concept>
+    <code value="0310"/>
+    <display value="Ngāti Tamaoho"/>
+  </concept>
+  <concept>
+    <code value="0311"/>
+    <display value="Te Ākitai-Waiohua"/>
+  </concept>
+  <concept>
+    <code value="0312"/>
+    <display value="Tainui Awhiro"/>
+  </concept>
+  <concept>
+    <code value="04"/>
+    <display value="Te Arawa/Taupō (Rotorua/Taupō) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0401"/>
+    <display value="Ngāti Pikiao (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0402"/>
+    <display value="Ngāti Rangiteaorere (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0403"/>
+    <display value="Ngāti Rangitihi (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0404"/>
+    <display value="Ngāti Rangiwewehi (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0405"/>
+    <display value="Tapuika (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0406"/>
+    <display value="Ngāti Tarāwhai (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0407"/>
+    <display value="Tūhourangi (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0408"/>
+    <display value="Uenuku-Kōpako (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0409"/>
+    <display value="Waitaha (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0410"/>
+    <display value="Ngāti Whakaue (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0411"/>
+    <display value="Ngāti Tūwharetoa (ki Taupō)"/>
+  </concept>
+  <concept>
+    <code value="0412"/>
+    <display value="Ngāti Tahu-Ngāti Whaoa (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="0413"/>
+    <display value="Ngāti Mākino"/>
+  </concept>
+  <concept>
+    <code value="0414"/>
+    <display value="Ngāti Kearoa / Ngāti Tuarā"/>
+  </concept>
+  <concept>
+    <code value="0415"/>
+    <display value="Ngāti Rongomai (Te Arawa)"/>
+  </concept>
+  <concept>
+    <code value="05"/>
+    <display value="Tauranga Moana/Mātaatua (Bay of Plenty) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0501"/>
+    <display value="Ngāti Pūkenga"/>
+  </concept>
+  <concept>
+    <code value="0502"/>
+    <display value="Ngāi Te Rangi"/>
+  </concept>
+  <concept>
+    <code value="0503"/>
+    <display value="Ngāti Ranginui"/>
+  </concept>
+  <concept>
+    <code value="0504"/>
+    <display value="Ngāti Awa"/>
+  </concept>
+  <concept>
+    <code value="0505"/>
+    <display value="Ngāti Manawa"/>
+  </concept>
+  <concept>
+    <code value="0506"/>
+    <display value="Ngāi Tai (Tauranga Moana/Mātaatua)"/>
+  </concept>
+  <concept>
+    <code value="0507"/>
+    <display value="Tūhoe"/>
+  </concept>
+  <concept>
+    <code value="0508"/>
+    <display value="Whakatōhea"/>
+  </concept>
+  <concept>
+    <code value="0509"/>
+    <display value="Te Whānau-ā-Apanui"/>
+  </concept>
+  <concept>
+    <code value="0510"/>
+    <display value="Ngāti Whare"/>
+  </concept>
+  <concept>
+    <code value="0511"/>
+    <display value="Ngā Pōtiki ā Tamapahore"/>
+  </concept>
+  <concept>
+    <code value="0512"/>
+    <display value="Te Upokorehe"/>
+  </concept>
+  <concept>
+    <code value="0513"/>
+    <display value="Ngāti Tūwharetoa ki Kawerau"/>
+  </concept>
+  <concept>
+    <code value="06"/>
+    <display value="Te Tai Rāwhiti (East Coast) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0601"/>
+    <display value="Ngāti Porou"/>
+  </concept>
+  <concept>
+    <code value="0602"/>
+    <display value="Te Aitanga-a-Māhaki"/>
+  </concept>
+  <concept>
+    <code value="0603"/>
+    <display value="Rongowhakaata"/>
+  </concept>
+  <concept>
+    <code value="0604"/>
+    <display value="Ngāi Tāmanuhiri"/>
+  </concept>
+  <concept>
+    <code value="0605"/>
+    <display value="Te Aitanga ā Hauiti"/>
+  </concept>
+  <concept>
+    <code value="07"/>
+    <display value="Te Matau-a-Māui/Wairarapa (Hawke's Bay/Wairarapa) Region iwi"/>
+  </concept>
+  <concept>
+    <code value="0701"/>
+    <display value="Rongomaiwahine (Te Māhia)"/>
+  </concept>
+  <concept>
+    <code value="0702"/>
+    <display value="Ngāti Kahungunu ki Te Wairoa"/>
+  </concept>
+  <concept>
+    <code value="0703"/>
+    <display value="Ngāti Kahungunu ki Heretaunga"/>
+  </concept>
+  <concept>
+    <code value="0704"/>
+    <display value="Ngāti Kahungunu ki Wairarapa"/>
+  </concept>
+  <concept>
+    <code value="0706"/>
+    <display value="Rangitāne (Te Matau-a-Māui/Hawke's Bay/Wairarapa)"/>
+  </concept>
+  <concept>
+    <code value="0707"/>
+    <display value="Ngāti Kahungunu ki Te Whanganui-a-Orotu"/>
+  </concept>
+  <concept>
+    <code value="0708"/>
+    <display value="Ngāti Kahungunu ki Tamatea"/>
+  </concept>
+  <concept>
+    <code value="0709"/>
+    <display value="Ngāti Kahungunu ki Tamakinui a Rua"/>
+  </concept>
+  <concept>
+    <code value="0710"/>
+    <display value="Ngāti Pāhauwera"/>
+  </concept>
+  <concept>
+    <code value="0711"/>
+    <display value="Ngāti Rākaipaaka"/>
+  </concept>
+  <concept>
+    <code value="0712"/>
+    <display value="Ngāti Hineuru"/>
+  </concept>
+  <concept>
+    <code value="0713"/>
+    <display value="Maungaharuru Tangitū"/>
+  </concept>
+  <concept>
+    <code value="0714"/>
+    <display value="Rangitāne o Tamaki nui ā Rua"/>
+  </concept>
+  <concept>
+    <code value="0715"/>
+    <display value="Ngāti Ruapani ki Waikaremoana"/>
+  </concept>
+  <concept>
+    <code value="0716"/>
+    <display value="Te Hika o Pāpāuma"/>
+  </concept>
+  <concept>
+    <code value="0717"/>
+    <display value="Ngāti Hinemanu (Heretaunga)"/>
+  </concept>
+  <concept>
+    <code value="08"/>
+    <display value="Taranaki Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0801"/>
+    <display value="Te Atiawa (Taranaki)"/>
+  </concept>
+  <concept>
+    <code value="0802"/>
+    <display value="Ngāti Maru (Taranaki)"/>
+  </concept>
+  <concept>
+    <code value="0803"/>
+    <display value="Ngāti Mutunga (Taranaki)"/>
+  </concept>
+  <concept>
+    <code value="0804"/>
+    <display value="Ngā Rauru"/>
+  </concept>
+  <concept>
+    <code value="0805"/>
+    <display value="Ngā Ruahine"/>
+  </concept>
+  <concept>
+    <code value="0806"/>
+    <display value="Ngāti Ruanui"/>
+  </concept>
+  <concept>
+    <code value="0807"/>
+    <display value="Ngāti Tama (Taranaki)"/>
+  </concept>
+  <concept>
+    <code value="0808"/>
+    <display value="Taranaki"/>
+  </concept>
+  <concept>
+    <code value="0809"/>
+    <display value="Tangāhoe"/>
+  </concept>
+  <concept>
+    <code value="0810"/>
+    <display value="Pakakohi"/>
+  </concept>
+  <concept>
+    <code value="09"/>
+    <display value="Whanganui/Rangitīkei (Wanganui/Rangitīkei) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="0901"/>
+    <display value="Ngāti Apa (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="0902"/>
+    <display value="Te Ati Haunui-a-Pāpārangi"/>
+  </concept>
+  <concept>
+    <code value="0903"/>
+    <display value="Ngāti Haua (Taumarunui)"/>
+  </concept>
+  <concept>
+    <code value="0904"/>
+    <display value="Ngāti Hauiti (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="0905"/>
+    <display value="Ngāti Whitikaupeka (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="0906"/>
+    <display value="Ngāi Te Ohuake (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="0907"/>
+    <display value="Ngāti Tamakōpiri (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="0908"/>
+    <display value="Ngāti Rangi (Ruapehu, Whanganui)"/>
+  </concept>
+  <concept>
+    <code value="0909"/>
+    <display value="Uenuku (Ruapehu, Waimarino)"/>
+  </concept>
+  <concept>
+    <code value="0910"/>
+    <display value="Tamahaki (Ruapehu, Waimarino)"/>
+  </concept>
+  <concept>
+    <code value="0911"/>
+    <display value="Tamakana (Ruapehu, Waimarino)"/>
+  </concept>
+  <concept>
+    <code value="0912"/>
+    <display value="Ngāti Hinemanu (Rangitīkei)"/>
+  </concept>
+  <concept>
+    <code value="10"/>
+    <display value="Manawatū/Horowhenua/Te Whanganui-a-Tara (Manawatū/Horowhenua/Wellington) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="1001"/>
+    <display value="Te Atiawa (Te Whanganui-a-Tara/Wellington)"/>
+  </concept>
+  <concept>
+    <code value="1002"/>
+    <display value="Muaūpoko"/>
+  </concept>
+  <concept>
+    <code value="1003"/>
+    <display value="Rangitāne (Manawatū)"/>
+  </concept>
+  <concept>
+    <code value="1004"/>
+    <display value="Ngāti Raukawa (Horowhenua/Manawatū)"/>
+  </concept>
+  <concept>
+    <code value="1005"/>
+    <display value="Ngāti Toarangatira (Te Whanganui-a-Tara/Wellington)"/>
+  </concept>
+  <concept>
+    <code value="1006"/>
+    <display value="Te Atiawa ki Whakarongotai"/>
+  </concept>
+  <concept>
+    <code value="1007"/>
+    <display value="Ngāti Tama ki Te Upoko o Te Ika (Te Whanganui-a-Tara/Wellington)"/>
+  </concept>
+  <concept>
+    <code value="1008"/>
+    <display value="Ngāti Kauwhata"/>
+  </concept>
+  <concept>
+    <code value="1009"/>
+    <display value="Ngāti Tukorehe"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="Te Waipounamu (South Island) Region Iwi"/>
+  </concept>
+  <concept>
+    <code value="1101"/>
+    <display value="Te Atiawa (Te Waipounamu/South Island)"/>
+  </concept>
+  <concept>
+    <code value="1102"/>
+    <display value="Ngāti Koata"/>
+  </concept>
+  <concept>
+    <code value="1103"/>
+    <display value="Ngāti Kuia"/>
+  </concept>
+  <concept>
+    <code value="1104"/>
+    <display value="Kāti Māmoe"/>
+  </concept>
+  <concept>
+    <code value="1107"/>
+    <display value="Rangitāne (Te Waipounamu/South Island)"/>
+  </concept>
+  <concept>
+    <code value="1108"/>
+    <display value="Ngāti Rārua"/>
+  </concept>
+  <concept>
+    <code value="1109"/>
+    <display value="Ngāi Tahu / Kāi Tahu"/>
+  </concept>
+  <concept>
+    <code value="1110"/>
+    <display value="Ngāti Tama ki Te Tauihu"/>
+  </concept>
+  <concept>
+    <code value="1111"/>
+    <display value="Ngāti Toarangatira (Te Waipounamu/South Island)"/>
+  </concept>
+  <concept>
+    <code value="1112"/>
+    <display value="Waitaha (Te Waipounamu/South Island)"/>
+  </concept>
+  <concept>
+    <code value="1113"/>
+    <display value="Ngāti Apa ki Te Rā Tō"/>
+  </concept>
+  <concept>
+    <code value="12"/>
+    <display value="Rēkohu/Wharekauri (Chatham Islands) Region Imi/Iwi"/>
+  </concept>
+  <concept>
+    <code value="1201"/>
+    <display value="Moriori"/>
+  </concept>
+  <concept>
+    <code value="1202"/>
+    <display value="Ngāti Mutunga (Wharekauri/Chatham Islands)"/>
+  </concept>
+  <concept>
+    <code value="20"/>
+    <display value="Confederations and Waka, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2001"/>
+    <display value="Tainui, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2002"/>
+    <display value="Te Arawa, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2003"/>
+    <display value="Tākitimu, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2004"/>
+    <display value="Aotea, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2005"/>
+    <display value="Mātaatua, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2006"/>
+    <display value="Mahuru, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2007"/>
+    <display value="Māmari, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2008"/>
+    <display value="Ngātokimatawhaorua, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2009"/>
+    <display value="Nukutere, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2010"/>
+    <display value="Tokomaru, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2011"/>
+    <display value="Kurahaupō, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2012"/>
+    <display value="Muriwhenua, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2013"/>
+    <display value="Hauraki / Pare Hauraki, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2014"/>
+    <display value="Tūranganui a Kiwa, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2015"/>
+    <display value="Te Tauihu o Te Waka a Māui, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2016"/>
+    <display value="Tauranga Moana, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2017"/>
+    <display value="Horouta, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2018"/>
+    <display value="Mōkai Pātea, iwi not named"/>
+  </concept>
+  <concept>
+    <code value="21"/>
+    <display value="Iwi named, region not known"/>
+  </concept>
+  <concept>
+    <code value="2101"/>
+    <display value="Te Atiawa, region not known"/>
+  </concept>
+  <concept>
+    <code value="2102"/>
+    <display value="Ngāti Haua, region not known"/>
+  </concept>
+  <concept>
+    <code value="2103"/>
+    <display value="Ngāti Maru, region not known"/>
+  </concept>
+  <concept>
+    <code value="2104"/>
+    <display value="Ngāti Mutunga, region not known"/>
+  </concept>
+  <concept>
+    <code value="2105"/>
+    <display value="Rangitāne, region not known"/>
+  </concept>
+  <concept>
+    <code value="2106"/>
+    <display value="Ngāti Raukawa, region not known"/>
+  </concept>
+  <concept>
+    <code value="2107"/>
+    <display value="Ngāti Tama, region not known"/>
+  </concept>
+  <concept>
+    <code value="2108"/>
+    <display value="Ngāti Toa, region not known"/>
+  </concept>
+  <concept>
+    <code value="2109"/>
+    <display value="Waitaha, region not known"/>
+  </concept>
+  <concept>
+    <code value="2110"/>
+    <display value="Ngāti Apa, region not known"/>
+  </concept>
+  <concept>
+    <code value="2111"/>
+    <display value="Ngāi Tai, region not known"/>
+  </concept>
+  <concept>
+    <code value="2112"/>
+    <display value="Ngāti Kahungunu, region not known"/>
+  </concept>
+  <concept>
+    <code value="2113"/>
+    <display value="Ngāti Tūwharetoa, region not known"/>
+  </concept>
+  <concept>
+    <code value="2114"/>
+    <display value="Ngāti Hinemanu, region not known"/>
+  </concept>
+  <concept>
+    <code value="22"/>
+    <display value="Hapū affiliated to more than one iwi"/>
+  </concept>
+  <concept>
+    <code value="2201"/>
+    <display value="Hapū affiliated to more than one iwi"/>
+  </concept>
+  <concept>
+    <code value="23"/>
+    <display value="Region known, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2301"/>
+    <display value="Te Tai Tokerau/Tāmaki-makaurau Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2302"/>
+    <display value="Hauraki Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2303"/>
+    <display value="Waikato/Te Rohe Pōtae Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2304"/>
+    <display value="Te Arawa/Taupō Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2305"/>
+    <display value="Tauranga Moana/Mātaatua Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2306"/>
+    <display value="Te Tai Rāwhiti Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2307"/>
+    <display value="Te Matau-a-Māui/Wairarapa Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2308"/>
+    <display value="Taranaki Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2309"/>
+    <display value="Whanganui/Rangitīkei Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2310"/>
+    <display value="Manawatū/Horowhenua/Te Whanganui-a-Tara Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2311"/>
+    <display value="Te Waipounamu Region, Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="2312"/>
+    <display value="Rēkohu/Wharekauri Region, Imi/Iwi not named"/>
+  </concept>
+  <concept>
+    <code value="44"/>
+    <display value="Don't Know"/>
+  </concept>
+  <concept>
+    <code value="4444"/>
+    <display value="Don't Know"/>
+  </concept>
+  <concept>
+    <code value="55"/>
+    <display value="Refused To Answer"/>
+  </concept>
+  <concept>
+    <code value="5555"/>
+    <display value="Refused To Answer"/>
+  </concept>
+  <concept>
+    <code value="77"/>
+    <display value="Response Unidentifiable"/>
+  </concept>
+  <concept>
+    <code value="7777"/>
+    <display value="Response Unidentifiable"/>
+  </concept>
+  <concept>
+    <code value="88"/>
+    <display value="Response Outside Scope"/>
+  </concept>
+  <concept>
+    <code value="8888"/>
+    <display value="Response Outside Scope"/>
+  </concept>
+  <concept>
+    <code value="99"/>
+    <display value="Not Stated"/>
+  </concept>
+  <concept>
+    <code value="9999"/>
+    <display value="Not Stated"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="coverage-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/coverage-type-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">gms<a name="coverage-type-gms"> </a></td><td>General Medical Subsidy</td></tr><tr><td style="white-space:nowrap">acc<a name="coverage-type-acc"> </a></td><td>Accident Compensation Corporation</td></tr><tr><td style="white-space:nowrap">csc<a name="coverage-type-csc"> </a></td><td>Community Services Card</td></tr><tr><td style="white-space:nowrap">huhc<a name="coverage-type-huhc"> </a></td><td>High User Health Card</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/coverage-type-code"/>
+  <version value="1.0.0"/>
+  <name value="CoverageType"/>
+  <title value="Coverage type"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="New Zealand codes for Coverage Types"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="gms"/>
+    <display value="General Medical Subsidy"/>
+  </concept>
+  <concept>
+    <code value="acc"/>
+    <display value="Accident Compensation Corporation"/>
+  </concept>
+  <concept>
+    <code value="csc"/>
+    <display value="Community Services Card"/>
+  </concept>
+  <concept>
+    <code value="huhc"/>
+    <display value="High User Health Card"/>
+  </concept>
+</CodeSystem>

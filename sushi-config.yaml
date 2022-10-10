@@ -19,7 +19,8 @@ license: CC0-1.0
 
 dependencies:
    fhir.org.nz.ig.base:
-     uri: 'http://fhir.org.nz/ig/base'
+     #uri: 'http://fhir.org.nz/ig/base'
+     uri: 'http://build.fhir.org/ig/HL7NZ/nzbase/branches/master'
      #version: 1.0.0
      version: dev
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="coverage-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/coverage-category-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">under6<a name="coverage-category-under6"> </a></td><td>A child under 6 years of age</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/coverage-category-code"/>
+  <version value="1.0.0"/>
+  <name value="CoverageCategory"/>
+  <title value="Coverage category"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="New Zealand codes for Coverage category types"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="under6"/>
+    <display value="A child under 6 years of age"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location-alias-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="location-alias-type"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location "location-alias-type" </p></div><p><b>name</b>: Daves health centre</p><p><b>alias</b>: Best health</p></div>
+  </text>
+  <name value="Daves health centre"/>
+  <alias value="Best health">
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/alias-type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/alias-type-code"/>
+          <code value="short"/>
+          <display value="Short"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </alias>
+</Location>

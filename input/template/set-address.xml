@@ -93,7 +93,7 @@
 				<tr>
 					<td>IN</td>
 					<td>address-line</td>
-					<td>0..1</td>
+					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
@@ -134,14 +134,14 @@
 				</tr>
 			</table>
 			<div>
-				<p>The NHI is validated, the versionId is validated, the name.id is validated. If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name. 
+				<p>Update a patient address 
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-set-preferred-name" />
+	<id value="Set-Address" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -151,67 +151,94 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
 	<version value="1.0.0" />
-	<name value="Set Preferred Name" />
-	<title value="Set patient's preferred name" />
+	<name value="Set Address" />
+	<title value="Update a patient address" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
 	<date value="2022-05-28T12:47:40+10:00" />
 	<publisher value="Te Whatu Ora" />
-	<contact>
-		
+	<contact>		
 		<telecom>
 			<system value="email" />
 			<value value="integration@health.govt.nz" />
 		</telecom>
 	</contact>
 	<description
-		value="Set patient's preferred name"/>
+		value="Update a patient address"/>
 	<affectsState value="true" />
-	<code value="set-preferred-name" />
+	<code value="set-address" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the name.id is validated. If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name. " />
+		value="The address is validate and the patient address is updated" />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
 	<instance value="true" />
 	<parameter>
-		<name value="resource" />
+		<name value="patient.NHI" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match)." />
-		<type value="Resource" />
+			value="UThe Patient's NHI number" />
+		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="onlyCertainMatches" />
+		<name value="patient.meta.versionId" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="he current value of the patient resources meta.versionId" />
+		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
+	</parameter>
+	
+	<parameter>
+		<name value="address-type" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="must be physical or postal" />
+		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/addressType" />
+	</parameter>
+	<parameter>
+		<name value="nz-address-id" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="If there are multiple potential matches, then the match should not return the results with this flag set to true.  When false, the server may return multiple results with each result graded accordingly." />
-		<type value="boolean" />
+		 value="The id of the validated address as retuned by the eSAM address service" />
+		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="count" />
+		<name value="address-line" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+		 value="The first line of the validated address as returned by eSAM" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="building-name" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The maximum number of records to return. If no value is provided, the server decides how many matches to return. Note that clients should be careful when using this, as it may prevent probable - and valid - matches from being returned" />
-		<type value="integer" />
+		 value="building name if required as additional address information" />
+		<type value="string" />
 	</parameter>
 	<parameter>
 		<name value="return" />
 		<use value="out" />
-		<min value="1" />
+		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="A bundle contain a set of Patient records that represent possible matches, optionally it may also contain an OperationOutcome with further information about the search results (such as warnings or information messages, such as a count of records that were close but eliminated)  If the operation was unsuccessful, then an OperationOutcome may be returned along with a BadRequest status Code (e.g. security issue, or insufficient properties in patient fragment - check against profile)" />
-		<type value="Bundle" />
+			value="The updated patient resource" />
+		<type value="http://hl7.org/fhir/R4/patient.html" />
 	</parameter>
 </OperationDefinition>
 </div>

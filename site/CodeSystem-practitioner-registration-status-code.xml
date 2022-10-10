@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="practitioner-registration-status-code"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/practitioner-registration-status-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">current<a name="practitioner-registration-status-code-current"> </a></td><td>A provider who holds or is deemed to hold a current practising certificate.</td></tr><tr><td style="white-space:nowrap">inactive<a name="practitioner-registration-status-code-inactive"> </a></td><td>A provider who is not practising</td></tr><tr><td style="white-space:nowrap">removed<a name="practitioner-registration-status-code-removed"> </a></td><td>A provider who has been removed from the register – this includes voluntary removal, de-registration and deceased</td></tr><tr><td style="white-space:nowrap">suspended<a name="practitioner-registration-status-code-suspended"> </a></td><td>A provider who is suspended from practising by a Responsible Authority</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/practitioner-registration-status-code"/>
+  <version value="2.0"/>
+  <name value="PractitionerRegistrationStatusCode"/>
+  <title value="Registration Status of Practitioners"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="The code list represents the current practicing status of the Provider Person as per their registration with an RA."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NZ"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="current"/>
+    <display value="A provider who holds or is deemed to hold a current practising certificate."/>
+  </concept>
+  <concept>
+    <code value="inactive"/>
+    <display value="A provider who is not practising"/>
+  </concept>
+  <concept>
+    <code value="removed"/>
+    <display value="A provider who has been removed from the register – this includes voluntary removal, de-registration and deceased"/>
+  </concept>
+  <concept>
+    <code value="suspended"/>
+    <display value="A provider who is suspended from practising by a Responsible Authority"/>
+  </concept>
+</CodeSystem>

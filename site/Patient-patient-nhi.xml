@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-nhi"/>
+  <meta>
+    <profile value="http://hl7.org.nz/fhir/StructureDefinition/NzPatient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01 ( id: activeIdent (OFFICIAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li>id: dormant (OLD)</li><li>id: dormant2 (OLD)</li><li>id: other system id (OFFICIAL)</li><li>id: other system id2 (TEMP)</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="https://standards.digital.health.nz/ns/nhi-id"/>
+    <value value="activeIdent"/>
+  </identifier>
+  <identifier>
+    <use value="old"/>
+    <system value="https://standards.digital.health.nz/ns/nhi-id"/>
+    <value value="dormant"/>
+  </identifier>
+  <identifier>
+    <use value="old"/>
+    <system value="https://standards.digital.health.nz/ns/nhi-id"/>
+    <value value="dormant2"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <system value="https://example.com/mysystem"/>
+    <value value="other system id"/>
+  </identifier>
+  <identifier>
+    <use value="temp"/>
+    <system value="https://example.com/mysystem"/>
+    <value value="other system id2"/>
+  </identifier>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Patient>

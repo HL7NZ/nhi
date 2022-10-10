@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-nz-ethnicity"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group.
+
+The Stats New Zealand standard can be found [here](http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17)."><a href="StructureDefinition-nz-ethnicity.html">NZ Ethnicity:</a></td><td colspan="3"><span title="Codes: {https://standards.digital.health.nz/ns/ethnic-group-level-4-code 21111}">Māori</span></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/ethnic-group-level-4-code"/>
+        <code value="21111"/>
+        <display value="Māori"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/ethnic-group-level-4-code"/>
+        <code value="12116"/>
+        <display value="Irish"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Patient>

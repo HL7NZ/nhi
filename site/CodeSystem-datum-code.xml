@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="datum-code"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/nz-datum-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">WGS84<a name="datum-code-WGS84"> </a></td><td>global datum, used by google maps</td></tr><tr><td style="white-space:nowrap">NZGD2000<a name="datum-code-NZGD2000"> </a></td><td>Nz official datum, used by MoH address service</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/nz-datum-code"/>
+  <version value="2.1-rc1"/>
+  <name value="DatumCode"/>
+  <title value="Datum codes"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="Possible datum codes"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="WGS84"/>
+    <display value="WGS84"/>
+    <definition value="global datum, used by google maps"/>
+  </concept>
+  <concept>
+    <code value="NZGD2000"/>
+    <display value="NZGD2000"/>
+    <definition value="Nz official datum, used by MoH address service"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-deceased-information-source"/>
+  <meta>
+    <profile value="http://hl7.org.nz/fhir/StructureDefinition/NzPatient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB Unknown</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td colspan="3">1998-01-01</td></tr></table></div>
+  </text>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <deceasedDateTime value="1998-01-01">
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/information-source">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/information-source-code"/>
+          <code value="PPRT"/>
+          <display value="Passport"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </deceasedDateTime>
+</Patient>

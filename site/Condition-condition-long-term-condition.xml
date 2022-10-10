@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="condition-long-term-condition"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="condition-long-term-condition"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "condition-long-term-condition" </p></div><p><b>Long Term Condition Indicator</b>: true</p><p><b>code</b>: Benign essential hypertension (disorder) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#1201005)</span></p><p><b>subject</b>: <a href="Patient-patient-dhb.html">Patient/patient-dhb</a> " DOE"</p></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/long-term-condition">
+    <valueBoolean value="true"/>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1201005"/>
+      <display value="Benign essential hypertension (disorder)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-dhb"/>
+  </subject>
+</Condition>
