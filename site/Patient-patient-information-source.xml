@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-information-source"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/></div>
+  </text>
+  <name>
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/information-source">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/information-source-code"/>
+          <code value="BRCT"/>
+          <display value="Birth Certificate"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01">
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/information-source">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/information-source-code"/>
+          <code value="PPRT"/>
+          <display value="Passport"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </birthDate>
+</Patient>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-pho"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Primary Healthcare Organisation associated with a General Practice linked to a NZ Healthcare Service, Location (Facility) or Patient (GP)."><a href="StructureDefinition-pho.html">Primary Healthcare Organisation:</a></td><td colspan="3"><ul><li><span title="Codes: {https://standards.digital.health.nz/ns/pho-code G05533-K}">Procare Networks Limited</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/pho">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/pho-code"/>
+        <code value="G05533-K"/>
+        <display value="Procare Networks Limited"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Patient>

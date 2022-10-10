@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="CoverageGMS"/>
+  <meta>
+    <profile value="http://hl7.org.nz/fhir/StructureDefinition/NzCoverage"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">GMS Entitlement for Raewyn Joseph<br/>NHI ZZZ0032<br/></div>
+  </text>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="https://standards.digital.health.nz/ns/coverage-type-code"/>
+      <code value="gms"/>
+      <display value="General Medical Subsidy"/>
+    </coding>
+  </type>
+  <subscriber>
+    <reference value="Patient/patient-dhb"/>
+  </subscriber>
+  <beneficiary>
+    <reference value="Patient/patient-dhb"/>
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+    </coding>
+  </relationship>
+  <payor>
+    <reference value="Organization/organization-moh"/>
+  </payor>
+  <class>
+    <type>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/coverage-category-code"/>
+        <code value="under6"/>
+        <display value="A child under 6 years of age"/>
+      </coding>
+    </type>
+    <value value="Baby"/>
+  </class>
+</Coverage>

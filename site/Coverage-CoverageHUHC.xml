@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="CoverageHUHC"/>
+  <meta>
+    <profile value="http://hl7.org.nz/fhir/StructureDefinition/NzCoverage"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">High User Health Card for Raewyn Joseph<br/>NHI ZZZ0032<br/>HUHC number 12345689<br/></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="https://standards.digital.health.nz/ns/huhc-id"/>
+    <value value="123456789"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="https://standards.digital.health.nz/ns/coverage-type-code"/>
+      <code value="huhc"/>
+      <display value="High user health card"/>
+    </coding>
+  </type>
+  <subscriber>
+    <reference value="Patient/patient-dhb"/>
+  </subscriber>
+  <beneficiary>
+    <reference value="Patient/patient-dhb"/>
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+    </coding>
+  </relationship>
+  <period>
+    <end value="2023-09-17"/>
+  </period>
+  <payor>
+    <reference value="Organization/organization-moh"/>
+  </payor>
+</Coverage>

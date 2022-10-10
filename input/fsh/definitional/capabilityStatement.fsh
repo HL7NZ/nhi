@@ -30,10 +30,11 @@ Usage: #definition
 * rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
 * rest.resource.operation.documentation = "$Match (Find NHI) with in parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores, $Match (Validate) with in parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id"
-* rest.resource.operation.name = "set-preferred-name"
-* rest.resource.operation.definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
-* rest.resource.operation.documentation = "an operation to set the patient.name.preferred boolean to True. 
-// * rest.resource.searchParam.name = "name"
-// * rest.resource.searchParam.type = #string
-// * rest.resource.searchParam.name = "birthDate"
-// * rest.resource.searchParam.type = #date
+
+* rest.resource.operation[1].name = "set-preferred-name"
+* rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
+* rest.resource.operation[1].documentation = "an operation to set the patient.name.preferred boolean to True." 
+
+* rest.resource.operation[2].name = "set-address"
+* rest.resource.operation[2].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
+* rest.resource.operation[2].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address" 

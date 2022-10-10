@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-sex-at-birth"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="A person’s sex at the time of their birth (considered to be immutable)."><a href="StructureDefinition-sex-at-birth.html">Sex At Birth:</a></td><td colspan="3"><ul><li><span title="Codes: {http://hl7.org/fhir/administrative-gender female}">Female</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/sex-at-birth">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/administrative-gender"/>
+        <code value="female"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Patient>

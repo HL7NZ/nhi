@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location-established"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="location-established"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location "location-established" </p></div><p><b>Established</b>: 2010-01-01 --&gt; (ongoing)</p><p><b>name</b>: Daves health centre</p><p><b>alias</b>: Best health</p></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/established">
+    <valuePeriod>
+      <start value="2010-01-01"/>
+    </valuePeriod>
+  </extension>
+  <name value="Daves health centre"/>
+  <alias value="Best health"/>
+</Location>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="hpi-practitionerrole-status-reason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-hpi-practitionerRole-status-reason.html"><code>https://standards.digital.health.nz/ns/hpi-practitioner-role-status-reason-code</code></a></li></ul></div>
+  </text>
+  <url value="https://nzhts.digital.health.nz/fhir/ValueSet/hpi-practitioner-role-status-reason-code"/>
+  <version value="1.0.0"/>
+  <name value="PractitionerRoleStatusReason"/>
+  <title value="PractitionerRole status reason"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="The reason for the current status of PractitionerRole"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NZ"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://standards.digital.health.nz/ns/hpi-practitioner-role-status-reason-code"/>
+    </include>
+  </compose>
+</ValueSet>

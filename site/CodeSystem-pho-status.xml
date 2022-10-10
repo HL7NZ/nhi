@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="pho-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/pho-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">G04587-F<a name="pho-status-G04587-F"> </a></td><td>Alliance Health Plus Trust</td></tr><tr><td style="white-space:nowrap">G05487-G<a name="pho-status-G05487-G"> </a></td><td>Auckland PHO Limited</td></tr><tr><td style="white-space:nowrap">G05491-J<a name="pho-status-G05491-J"> </a></td><td>Christchurch PHO</td></tr><tr><td style="white-space:nowrap">G02384-D<a name="pho-status-G02384-D"> </a></td><td>Central Primary Health Organisation</td></tr><tr><td style="white-space:nowrap">G00755-C<a name="pho-status-G00755-C"> </a></td><td>Compass Health</td></tr><tr><td style="white-space:nowrap">G05272-H<a name="pho-status-G05272-H"> </a></td><td>Comprehensive Care PHO Limited</td></tr><tr><td style="white-space:nowrap">G05493-B<a name="pho-status-G05493-B"> </a></td><td>Cosine Primary Care Network Trust</td></tr><tr><td style="white-space:nowrap">G05495-F<a name="pho-status-G05495-F"> </a></td><td>Eastern Bay Primary Health Alliance</td></tr><tr><td style="white-space:nowrap">G05494-D<a name="pho-status-G05494-D"> </a></td><td>East Health Trust Board</td></tr><tr><td style="white-space:nowrap">G09738-D<a name="pho-status-G09738-D"> </a></td><td>Hauraki PHO</td></tr><tr><td style="white-space:nowrap">G05498-A<a name="pho-status-G05498-A"> </a></td><td>Health Hawke's Bay Limited</td></tr><tr><td style="white-space:nowrap">G0F252-G<a name="pho-status-G0F252-G"> </a></td><td>Te Kaupapa Mahitahi Hauora - Papa o Te Raki Trust</td></tr><tr><td style="white-space:nowrap">G04639-K<a name="pho-status-G04639-K"> </a></td><td>Marlborough PHO Trust</td></tr><tr><td style="white-space:nowrap">G05484-A<a name="pho-status-G05484-A"> </a></td><td>Midlands Health Network Limited</td></tr><tr><td style="white-space:nowrap">G05507-J<a name="pho-status-G05507-J"> </a></td><td>National Hauora Coalition Limited</td></tr><tr><td style="white-space:nowrap">G05454-C<a name="pho-status-G05454-C"> </a></td><td>Nelson Bays Primary Health Trust</td></tr><tr><td style="white-space:nowrap">G00246-D<a name="pho-status-G00246-D"> </a></td><td>Nga Mataapuna Oranga Limited</td></tr><tr><td style="white-space:nowrap">G04805-A<a name="pho-status-G04805-A"> </a></td><td>Ngati Porou Hauora Charitable Trust Board</td></tr><tr><td style="white-space:nowrap">G04764-B<a name="pho-status-G04764-B"> </a></td><td>Ora Toa PHO Limited</td></tr><tr><td style="white-space:nowrap">G03310-B<a name="pho-status-G03310-B"> </a></td><td>Pegasus Health (Charitable) Limited</td></tr><tr><td style="white-space:nowrap">G05533-K<a name="pho-status-G05533-K"> </a></td><td>Procare Networks Limited</td></tr><tr><td style="white-space:nowrap">G08550-C<a name="pho-status-G08550-C"> </a></td><td>Rotorua Area Primary Health Services Ltd</td></tr><tr><td style="white-space:nowrap">G00886-G<a name="pho-status-G00886-G"> </a></td><td>Rural Canterbury PHO Limited</td></tr><tr><td style="white-space:nowrap">G00025-K<a name="pho-status-G00025-K"> </a></td><td>South Canterbury Primary and Community</td></tr><tr><td style="white-space:nowrap">G05589-D<a name="pho-status-G05589-D"> </a></td><td>Te Awakairangi Health Network</td></tr><tr><td style="white-space:nowrap">G05596-A<a name="pho-status-G05596-A"> </a></td><td>Total Healthcare Charitable Trust</td></tr><tr><td style="white-space:nowrap">G05569-J<a name="pho-status-G05569-J"> </a></td><td>Wellsouth Primary Health Network</td></tr><tr><td style="white-space:nowrap">G00039-K<a name="pho-status-G00039-K"> </a></td><td>West Coast PHO</td></tr><tr><td style="white-space:nowrap">G00507-F<a name="pho-status-G00507-F"> </a></td><td>Western Bay of Plenty Primary Healthcare Organisation Limited</td></tr><tr><td style="white-space:nowrap">G01220-B<a name="pho-status-G01220-B"> </a></td><td>Whanganui Regional Health Network</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/pho-code"/>
+  <version value="1.0.0"/>
+  <name value="PHO"/>
+  <title value="PHO"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="Primary Healthcare Organization"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="30"/>
+  <concept>
+    <code value="G04587-F"/>
+    <display value="Alliance Health Plus Trust"/>
+  </concept>
+  <concept>
+    <code value="G05487-G"/>
+    <display value="Auckland PHO Limited"/>
+  </concept>
+  <concept>
+    <code value="G05491-J"/>
+    <display value="Christchurch PHO"/>
+  </concept>
+  <concept>
+    <code value="G02384-D"/>
+    <display value="Central Primary Health Organisation"/>
+  </concept>
+  <concept>
+    <code value="G00755-C"/>
+    <display value="Compass Health"/>
+  </concept>
+  <concept>
+    <code value="G05272-H"/>
+    <display value="Comprehensive Care PHO Limited"/>
+  </concept>
+  <concept>
+    <code value="G05493-B"/>
+    <display value="Cosine Primary Care Network Trust"/>
+  </concept>
+  <concept>
+    <code value="G05495-F"/>
+    <display value="Eastern Bay Primary Health Alliance"/>
+  </concept>
+  <concept>
+    <code value="G05494-D"/>
+    <display value="East Health Trust Board"/>
+  </concept>
+  <concept>
+    <code value="G09738-D"/>
+    <display value="Hauraki PHO"/>
+  </concept>
+  <concept>
+    <code value="G05498-A"/>
+    <display value="Health Hawke's Bay Limited"/>
+  </concept>
+  <concept>
+    <code value="G0F252-G"/>
+    <display value="Te Kaupapa Mahitahi Hauora - Papa o Te Raki Trust"/>
+  </concept>
+  <concept>
+    <code value="G04639-K"/>
+    <display value="Marlborough PHO Trust"/>
+  </concept>
+  <concept>
+    <code value="G05484-A"/>
+    <display value="Midlands Health Network Limited"/>
+  </concept>
+  <concept>
+    <code value="G05507-J"/>
+    <display value="National Hauora Coalition Limited"/>
+  </concept>
+  <concept>
+    <code value="G05454-C"/>
+    <display value="Nelson Bays Primary Health Trust"/>
+  </concept>
+  <concept>
+    <code value="G00246-D"/>
+    <display value="Nga Mataapuna Oranga Limited"/>
+  </concept>
+  <concept>
+    <code value="G04805-A"/>
+    <display value="Ngati Porou Hauora Charitable Trust Board"/>
+  </concept>
+  <concept>
+    <code value="G04764-B"/>
+    <display value="Ora Toa PHO Limited"/>
+  </concept>
+  <concept>
+    <code value="G03310-B"/>
+    <display value="Pegasus Health (Charitable) Limited"/>
+  </concept>
+  <concept>
+    <code value="G05533-K"/>
+    <display value="Procare Networks Limited"/>
+  </concept>
+  <concept>
+    <code value="G08550-C"/>
+    <display value="Rotorua Area Primary Health Services Ltd"/>
+  </concept>
+  <concept>
+    <code value="G00886-G"/>
+    <display value="Rural Canterbury PHO Limited"/>
+  </concept>
+  <concept>
+    <code value="G00025-K"/>
+    <display value="South Canterbury Primary and Community"/>
+  </concept>
+  <concept>
+    <code value="G05589-D"/>
+    <display value="Te Awakairangi Health Network"/>
+  </concept>
+  <concept>
+    <code value="G05596-A"/>
+    <display value="Total Healthcare Charitable Trust"/>
+  </concept>
+  <concept>
+    <code value="G05569-J"/>
+    <display value="Wellsouth Primary Health Network"/>
+  </concept>
+  <concept>
+    <code value="G00039-K"/>
+    <display value="West Coast PHO"/>
+  </concept>
+  <concept>
+    <code value="G00507-F"/>
+    <display value="Western Bay of Plenty Primary Healthcare Organisation Limited"/>
+  </concept>
+  <concept>
+    <code value="G01220-B"/>
+    <display value="Whanganui Regional Health Network"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="citizenship-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/nz-citizenship-status-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">yes<a name="citizenship-status-yes"> </a></td><td>Yes</td><td>This patient is a citizen.</td></tr><tr><td style="white-space:nowrap">no<a name="citizenship-status-no"> </a></td><td>No</td><td>This patient is not a citizen.</td></tr><tr><td style="white-space:nowrap">unknown<a name="citizenship-status-unknown"> </a></td><td>The citizenship status is unknown</td><td/></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/nz-citizenship-status-code"/>
+  <version value="1.1.0"/>
+  <name value="CitizenshipStatus"/>
+  <title value="NZ Citizenship status"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="Is this person a NZ Citizen"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="yes"/>
+    <display value="Yes"/>
+    <definition value="This patient is a citizen."/>
+  </concept>
+  <concept>
+    <code value="no"/>
+    <display value="No"/>
+    <definition value="This patient is not a citizen."/>
+  </concept>
+  <concept>
+    <code value="unknown"/>
+    <display value="The citizenship status is unknown"/>
+  </concept>
+</CodeSystem>

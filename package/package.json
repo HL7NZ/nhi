@@ -1,0 +1,32 @@
+{
+  "name": "fhir.org.nz.ig.base",
+  "version": "2.1-rc1",
+  "tools-version": 3,
+  "type": "IG",
+  "date": "20221006224421",
+  "license": "CC0-1.0",
+  "canonical": "http://fhir.org.nz/ig/base",
+  "notForPublication": true,
+  "url": "http://build.fhir.org/ig/HL7NZ/nzbase/branches/master",
+  "title": "HL7® FHIR® New Zealand Base Implementation Guide",
+  "description": "New Zealand base profiles (built Thu, Oct 6, 2022 22:44+0000+00:00)",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.uv.tools": "current",
+    "hl7.terminology.r4": "4.0.0"
+  },
+  "author": "HL7 New Zealand",
+  "maintainers": [
+    {
+      "name": "HL7 New Zealand",
+      "email": "mailto:admin@hl7.org.nz"
+    }
+  ],
+  "directories": {
+    "lib": "package",
+    "example": "example"
+  }
+}

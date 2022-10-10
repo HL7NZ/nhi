@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerRole-messaging-address"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PractitionerRole</b><a name="practitionerRole-messaging-address"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PractitionerRole "practitionerRole-messaging-address" </p></div><blockquote><p><b>Messaging Address</b></p><p><b>value</b>: healthLink</p><p><b>value</b>: abc123</p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/messaging-address">
+    <extension url="provider">
+      <valueString value="healthLink"/>
+    </extension>
+    <extension url="value">
+      <valueString value="abc123"/>
+    </extension>
+  </extension>
+</PractitionerRole>

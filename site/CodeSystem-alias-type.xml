@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="alias-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://standards.digital.health.nz/ns/alias-type-code</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">aka<a name="alias-type-aka"> </a></td><td>Aka</td><td>The name by which the organisation or facility is also known as.</td></tr><tr><td style="white-space:nowrap">old<a name="alias-type-old"> </a></td><td>Old</td><td>The previous legal name(s) of the organisation/facility.</td></tr><tr><td style="white-space:nowrap">maori<a name="alias-type-maori"> </a></td><td>Māori</td><td>The Māori name of the organisation or facility.</td></tr><tr><td style="white-space:nowrap">legal<a name="alias-type-legal"> </a></td><td>Legal</td><td>The name as recorded in the official register eg Register of Companies.</td></tr><tr><td style="white-space:nowrap">short<a name="alias-type-short"> </a></td><td>Short</td><td>An abbreviated name by which the organisation or facility is known.</td></tr><tr><td style="white-space:nowrap">trade-as<a name="alias-type-trade-as"> </a></td><td>Trading as</td><td>Used when the organisation/facility has a separate trading name.</td></tr><tr><td style="white-space:nowrap">current<a name="alias-type-current"> </a></td><td>Current unverified or unofficial name</td><td>The name currently used for a facility.</td></tr></table></div>
+  </text>
+  <url value="https://standards.digital.health.nz/ns/alias-type-code"/>
+  <version value="1.0.0"/>
+  <name value="AliasType"/>
+  <title value="Type of Alias"/>
+  <status value="active"/>
+  <date value="2022-10-06T22:45:00+00:00"/>
+  <publisher value="HL7 New Zealand"/>
+  <contact>
+    <name value="HL7 New Zealand"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:admin@hl7.org.nz"/>
+    </telecom>
+  </contact>
+  <description value="Used in Organization and Location to indicate what is the type of Alias"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="aka"/>
+    <display value="Aka"/>
+    <definition value="The name by which the organisation or facility is also known as."/>
+  </concept>
+  <concept>
+    <code value="old"/>
+    <display value="Old"/>
+    <definition value="The previous legal name(s) of the organisation/facility."/>
+  </concept>
+  <concept>
+    <code value="maori"/>
+    <display value="Māori"/>
+    <definition value="The Māori name of the organisation or facility."/>
+  </concept>
+  <concept>
+    <code value="legal"/>
+    <display value="Legal"/>
+    <definition value="The name as recorded in the official register eg Register of Companies."/>
+  </concept>
+  <concept>
+    <code value="short"/>
+    <display value="Short"/>
+    <definition value="An abbreviated name by which the organisation or facility is known."/>
+  </concept>
+  <concept>
+    <code value="trade-as"/>
+    <display value="Trading as"/>
+    <definition value="Used when the organisation/facility has a separate trading name."/>
+  </concept>
+  <concept>
+    <code value="current"/>
+    <display value="Current unverified or unofficial name"/>
+    <definition value="The name currently used for a facility."/>
+  </concept>
+</CodeSystem>

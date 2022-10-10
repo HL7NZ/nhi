@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerRole-creator"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PractitionerRole</b><a name="practitionerRole-creator"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PractitionerRole "practitionerRole-creator" </p></div><blockquote><p><b>PractitionerRoleCreator</b></p><p><b>value</b>: <a name="administrator"> </a></p><blockquote><p></p><p><a name="administrator"> </a></p><p><b>name</b>: Amy Administrator</p></blockquote><p><b>value</b>: <a name="mmh"> </a></p><blockquote><p></p><p><a name="mmh"> </a></p><p><b>identifier</b>: id: mmh</p><p><b>name</b>: Middlemore Hospital</p></blockquote></blockquote></div>
+  </text>
+  <contained>
+    <Organization>
+      <id value="mmh"/>
+      <identifier>
+        <system value="https://standards.digital.health.nz/ns/hpi-organisation-id"/>
+        <value value="mmh"/>
+      </identifier>
+      <name value="Middlemore Hospital"/>
+    </Organization>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="administrator"/>
+      <name>
+        <text value="Amy Administrator"/>
+      </name>
+    </Practitioner>
+  </contained>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-creator">
+    <extension url="person">
+      <valueReference>
+        <reference value="#administrator"/>
+      </valueReference>
+    </extension>
+    <extension url="organization">
+      <valueReference>
+        <reference value="#mmh"/>
+      </valueReference>
+    </extension>
+  </extension>
+</PractitionerRole>

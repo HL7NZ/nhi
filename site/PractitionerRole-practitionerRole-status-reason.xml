@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerRole-status-reason"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PractitionerRole</b><a name="practitionerRole-status-reason"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PractitionerRole "practitionerRole-status-reason" </p></div><p><b>PractitionerRoleStatusReason</b>: duplicate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-hpi-practitionerRole-status-reason.html">PractitionerRole status reason</a>#duplicate)</span></p><p><b>active</b>: false</p></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/practitionerRole-status-reason">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/hpi-practitioner-role-status-reason-code"/>
+        <code value="duplicate"/>
+        <display value="duplicate"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <active value="false"/>
+</PractitionerRole>

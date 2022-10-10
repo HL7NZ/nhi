@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-nz-citizenship"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="New Zealand citizenship">NZ Citizenship:</td><td colspan="3"><ul><li>status: <span title="Codes: {https://standards.digital.health.nz/ns/nz-citizenship-status-code yes}">Yes</span></li><li>source: <span title="Codes: {https://standards.digital.health.nz/ns/information-source-code BREG}">Birth Register</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship">
+    <extension url="status">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/nz-citizenship-status-code"/>
+          <code value="yes"/>
+          <display value="Yes"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="source">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/information-source-code"/>
+          <code value="BREG"/>
+          <display value="Birth Register"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+</Patient>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="CoverageCSC"/>
+  <meta>
+    <profile value="http://hl7.org.nz/fhir/StructureDefinition/NzCoverage"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Community Services Card for Raewyn Joseph<br/>NHI ZZZ0032<br/>CSC number 12345689<br/></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="https://standards.digital.health.nz/ns/csc-id"/>
+    <value value="123456789"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="https://standards.digital.health.nz/ns/coverage-type-code"/>
+      <code value="csc"/>
+      <display value="Community Services Card"/>
+    </coding>
+  </type>
+  <beneficiary>
+    <reference value="Patient/patient-dhb"/>
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+    </coding>
+  </relationship>
+  <period>
+    <start value="2022-04-01"/>
+    <end value="2023-04-01"/>
+  </period>
+  <payor>
+    <reference value="Organization/organization-moh"/>
+  </payor>
+</Coverage>

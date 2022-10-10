@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-address-building-name"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>John Doe</b> male, DoB: 1998-01-01</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail:</td><td colspan="3">23 thule st NZL </td></tr><tr><td style="background-color: #f3f5da" title="District Health Board relating to a NZ Healthcare Service, Location (Facility) or Patient (primary, physical home address)."><a href="StructureDefinition-dhb.html">District Health Board linked to a NZ Healthcare Service, Location or Patient:</a></td><td colspan="3"><ul><li><span title="Codes: {https://standards.digital.health.nz/ns/dhb-code G00026-A}">Northland District Health Board</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/dhb">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://standards.digital.health.nz/ns/dhb-code"/>
+        <code value="G00026-A"/>
+        <display value="Northland District Health Board"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <name>
+    <text value="John Doe"/>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1998-01-01"/>
+  <address>
+    <extension url="http://hl7.org.nz/fhir/StructureDefinition/building-name">
+      <valueString value="Big Red Shed"/>
+    </extension>
+    <line value="23 thule st"/>
+    <country value="NZL"/>
+  </address>
+</Patient>

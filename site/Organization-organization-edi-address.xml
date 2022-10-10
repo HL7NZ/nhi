@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-edi-address"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="organization-edi-address"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization "organization-edi-address" </p></div><p><b>name</b>: Health R Us</p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>HealthLink EDI account</td><td>-unknown-</td></tr></table></div>
+  </text>
+  <name value="Health R Us"/>
+  <contact>
+    <name>
+      <text value="HealthLink EDI account"/>
+    </name>
+    <telecom>
+      <system value="other">
+        <extension url="http://hl7.org.nz/fhir/StructureDefinition/edi-address">
+          <valueString value="ABC-876"/>
+        </extension>
+      </system>
+    </telecom>
+  </contact>
+</Organization>

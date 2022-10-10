@@ -1,0 +1,244 @@
+<div xmlns='http://www.w3.org/1999/xhtml'>
+
+<div>
+			<h2>Set Address</h2>
+			<p>OPERATION: Set Address</p>
+			<p>The official URL for this operation definition is: </p>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
+			<div>
+				<p>
+					 Update a patient address. 
+				</p>
+				
+			</div>
+			<p>URL: [base]/Patient/$set-address</p>
+			<p>Parameters</p>
+			<table class='table table-bordered table-condensed'>
+				<tr>
+					<td>
+						<b>Use</b>
+					</td>
+					<td>
+						<b>Name</b>
+					</td>
+					<td>
+						<b>Cardinality</b>
+					</td>
+					<td>
+						<b>Type</b>
+					</td>
+					<td>
+						<b>Binding</b>
+					</td>
+					<td>
+						<b>Documentation</b>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>patient.NHI</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The Patient's NHI number</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>patient.meta.versionId</td>
+					<td>1..1</td>
+					<td>
+						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The current value of the patient resources meta.versionId</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>address-type</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>must be physical or postal</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>nz-address-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The id of the validated address as retuned by the eSAM address service</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>address-line</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The first line of the validated address as returned by eSAM</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>building-name</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>building name if required as additional address information</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>OUT</td>
+					<td>return</td>
+					<td>1..1</td>
+					<td>
+						<a href="http://hl7.org/fhir/R4/patient.html">patient</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The updated patient resource</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div>
+				<p>Update a patient address 
+				</p>
+			</div>
+		</div>
+		
+		
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<id value="Set-Address" />
+	
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="5" />
+	</extension>
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="trial-use" />
+	</extension>
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
+	<version value="1.0.0" />
+	<name value="Set Address" />
+	<title value="Update a patient address" />
+	<status value="draft" />
+	<kind value="operation" />
+	<experimental value="false" />
+	<date value="2022-05-28T12:47:40+10:00" />
+	<publisher value="Te Whatu Ora" />
+	<contact>		
+		<telecom>
+			<system value="email" />
+			<value value="integration@health.govt.nz" />
+		</telecom>
+	</contact>
+	<description
+		value="Update a patient address"/>
+	<affectsState value="true" />
+	<code value="set-address" />
+	<comment
+		value="The address is validate and the patient address is updated" />
+	<resource value="Patient" />
+	<system value="false" />
+	<type value="false" />
+	<instance value="true" />
+	<parameter>
+		<name value="patient.NHI" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="UThe Patient's NHI number" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="patient.meta.versionId" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="he current value of the patient resources meta.versionId" />
+		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
+	</parameter>
+	
+	<parameter>
+		<name value="address-type" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="must be physical or postal" />
+		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/addressType" />
+	</parameter>
+	<parameter>
+		<name value="nz-address-id" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+		 value="The id of the validated address as retuned by the eSAM address service" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="address-line" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+		 value="The first line of the validated address as returned by eSAM" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="building-name" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+		 value="building name if required as additional address information" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="return" />
+		<use value="out" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The updated patient resource" />
+		<type value="http://hl7.org/fhir/R4/patient.html" />
+	</parameter>
+</OperationDefinition>
+</div>

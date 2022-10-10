@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-funded-programme"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Organization</b><a name="organization-funded-programme"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization "organization-funded-programme" </p></div><blockquote><p><b>Funded Healthcare Programme</b></p><p><b>value</b>: Dental Care - Children up to age 13 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-funded-programme.html">Funded Programme</a>#DENTAL_CHILD)</span></p><p><b>value</b>: true</p><p><b>value</b>: Dental care is only free on referral. Your child’s care will normally be managed by the Auckland Regional Dental Services (ARDs).</p></blockquote><p><b>name</b>: Dianes Dental care</p></div>
+  </text>
+  <extension url="http://hl7.org.nz/fhir/StructureDefinition/funded-programme">
+    <extension url="fundedProgramme">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://standards.digital.health.nz/ns/funded-programme-code"/>
+          <code value="DENTAL_CHILD"/>
+          <display value="Dental Care - Children up to age 13"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="currentAvailability">
+      <valueBoolean value="true"/>
+    </extension>
+    <extension url="notes">
+      <valueString value="Dental care is only free on referral. Your child’s care will normally be managed by the Auckland Regional Dental Services (ARDs)."/>
+    </extension>
+  </extension>
+  <name value="Dianes Dental care"/>
+</Organization>
