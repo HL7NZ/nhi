@@ -28,5 +28,10 @@
 <td><a href="set-preferred-name.xml">set-preferred-name.xml</a></td>
 <td><p>$set-preferred-name - Set patient's preferred name</p></td>
 </tr>
+<tr>
+<td>set-address</td>
+<td><a href="set-address.xml">set-address.xml</a></td>
+<td><p>$set-preferred-name - Update a patient addresse</p></td>
+</tr>
 </table>
 </div>

@@ -33,6 +33,10 @@ Usage: #definition
 * rest.resource.operation.name = "set-preferred-name"
 * rest.resource.operation.definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
 * rest.resource.operation.documentation = "an operation to set the patient.name.preferred boolean to True. 
+* rest.resource.operation.name = "set-address"
+* rest.resource.operation.definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
+* rest.resource.operation.documentation = "Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address" 
+
 // * rest.resource.searchParam.name = "name"
 // * rest.resource.searchParam.type = #string
 // * rest.resource.searchParam.name = "birthDate"

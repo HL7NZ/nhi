@@ -1,17 +1,17 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Set Preferred Name</h2>
-			<p>OPERATION: Set Preferred Name</p>
+			<h2>Set Address</h2>
+			<p>OPERATION: Set Address</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
 			<div>
 				<p>
-					 Indicate which of the patient's names is preferred. 
+					 Update a patient address. 
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$set-preferred-name</p>
+			<p>URL: [base]/Patient/$set-address</p>
 			<p>Parameters</p>
 			<table class='table table-bordered table-condensed'>
 				<tr>
@@ -64,15 +64,57 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.name.id</td>
+					<td>address-type</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>The id of the name element to be set to be the preferred name (patient.name.id)</p>
+							<p>must be physical or postal</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>nz-address-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The id of the validated address as retuned by the eSAM address service</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>address-line</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The first line of the validated address as returned by eSAM</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>building-name</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>building name if required as additional address information</p>
 						</div>
 					</td>
 				</tr>
