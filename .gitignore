@@ -10,3 +10,5 @@ Thumbs.db
 /node_modules/
 /localscripts/
 /target/
+/site/
+/package/
