@@ -38,3 +38,7 @@ Usage: #definition
 * rest.resource.operation[2].name = "set-address"
 * rest.resource.operation[2].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
 * rest.resource.operation[2].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address" 
+
+* rest.resource.operation[3].name = "set-unvalidated-address"
+* rest.resource.operation[3].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address"
+* rest.resource.operation[3].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address" 
