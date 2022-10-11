@@ -9,7 +9,7 @@ participant "Integrating application" as A #CornflowerBlue
 participant "<FHIR API> NHI" as B #CornflowerBlue
 participant "NHI MDM" as C #CornflowerBlue
 |||
-User -> A: Provide Patient details to update
+User -> A: Select name (that exists on NHI) to become the new preferred name
 activate A
 |||
 A -> B: POST<Endpoint>/Patient$set-preferred-name
