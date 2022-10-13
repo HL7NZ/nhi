@@ -35,5 +35,11 @@
 <td><p>Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address</p>
 </td>
 </tr>
+<tr>
+<td>set-unvalidated-address</td>
+<td><a href ="set-unvalidated-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address </a></td>
+<td><p>Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address</p>
+</td>
+</tr>
 </table>
 </div>

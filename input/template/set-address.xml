@@ -171,7 +171,7 @@
 	<affectsState value="true" />
 	<code value="set-address" />
 	<comment
-		value="The address is validate and the patient address is updated" />
+		value="The address is validated and the patient address is updated" />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
