@@ -1,0 +1,39 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title $set-address
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "Address valiation service" as B #CornflowerBlue
+participant "<FHIR API> NHI" as C #CornflowerBlue
+participant "NHI MDM" as D #CornflowerBlue
+|||
+User -> A: Provide patient address
+activate A
+|||
+A -> B: Get address
+activate B
+|||
+B -> A: Return validated address
+deactivate B
+|||
+A -> C: POST<Endpoint>/Patient$set-address
+activate C
+|||
+C -> C: Validate[]
+|||
+C -> D: Request
+activate D
+|||
+D -[dashed]-> C
+deactivate D
+|||
+C -[dashed]-> A: Return updated Patient record
+deactivate C
+|||
+A -> User: Display updated Patient record to user
+deactivate A
+|||
+@enduml
