@@ -1,17 +1,17 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Set Address</h2>
+			<h2>Remove Postal Address</h2>
 			<p>OPERATION: Set Address</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address</pre>
 			<div>
 				<p>
-					 Update a patient address. 
+					 Remove a patient postal address. 
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$set-address</p>
+			<p>URL: [base]/Patient/$remove-postal-address</p>
 			<p>Parameters</p>
 			<table class='table table-bordered table-condensed'>
 				<tr>
@@ -62,62 +62,8 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
-					<td>IN</td>
-					<td>address-type</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>must be physical or postal</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>nz-address-id</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>The id of the validated address as retuned by the eSAM address service</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>address-line</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>The first line of the validated address as returned by eSAM</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>building-name</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>building name if required as additional address information</p>
-						</div>
-					</td>
-				</tr>
+				
+								
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
@@ -125,7 +71,7 @@
 					<td>
 						<a href="http://hl7.org/fhir/R4/patient.html">patient</a>
 					</td>
-					<td/>
+				
 					<td>
 						<div>
 							<p>The updated patient resource</p>
@@ -141,7 +87,7 @@
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-set-address" />
+	<id value="Patient-remove-postal-address" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -151,10 +97,10 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address" />
 	<version value="1.0.0" />
-	<name value="Set Address" />
-	<title value="Update a patient address" />
+	<name value="Remove Postal Address" />
+	<title value="Remove a patient postal address" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -167,11 +113,11 @@
 		</telecom>
 	</contact>
 	<description
-		value="Update a patient address"/>
+		value="Remove a patient postal address"/>
 	<affectsState value="true" />
-	<code value="set-address" />
+	<code value="remove-postal-address" />
 	<comment
-		value="The address is validated and the patient address is updated" />
+		value="The parameters are validated.  The postal address on the nhi record is made inactive." />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
@@ -193,44 +139,7 @@
 		<documentation
 			value="he current value of the patient resources meta.versionId" />
 		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
-	</parameter>
-	
-	<parameter>
-		<name value="address-type" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-			value="must be physical or postal" />
-		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/addressType" />
-	</parameter>
-	<parameter>
-		<name value="nz-address-id" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-		 value="The id of the validated address as retuned by the eSAM address service" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="address-line" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-		 value="The first line of the validated address as returned by eSAM" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="building-name" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-		 value="building name if required as additional address information" />
-		<type value="string" />
-	</parameter>
+	</parameter>	
 	<parameter>
 		<name value="return" />
 		<use value="out" />
