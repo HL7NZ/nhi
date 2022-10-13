@@ -19,7 +19,7 @@ activate B
 B -> A: Return validated address
 deactivate B
 |||
-A -> C: POST<Endpoint>/Patient$set-address
+A -> C: POST<Endpoint>/Patient/$set-address
 activate C
 |||
 C -> C: Validate[]
