@@ -2,7 +2,7 @@
 
 <div>
 			<h2>Remove Postal Address</h2>
-			<p>OPERATION: Set Address</p>
+			<p>OPERATION: Remove Postal Address</p>
 			<p>The official URL for this operation definition is: </p>
 			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address</pre>
 			<div>
