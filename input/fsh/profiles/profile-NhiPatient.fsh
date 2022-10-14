@@ -71,13 +71,14 @@ Description:    "The Patient resource exposed by the NHI."
 * name  0..*
 * name.extension contains
     $information-source named information-source 0..1 and
-    $preferred named preferred 0..1 and
+    $preferred named preferred 1..1 and
    	$name-use-extra named nhi-name-use-extra 0..1
 
 // using HISO codesets
 * name.extension[information-source].valueCodeableConcept from  $name-information-source-vs
 * name.prefix from $name-prefix-vs
-* name.suffix from $name-suffix-vs 
+//* name.suffix from $name-suffix-vs 
+* name.suffix 0..0
 
 
 //The gender has an extension for the original text that was used to establish it (eg from a form)
