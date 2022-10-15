@@ -4,7 +4,7 @@
 
 The update name operations allow an authorised user to update a persons name on an identity record for a person on the Patient Index.
 
-Update name has four sub-operations available.
+Update name has four sub-operations available
 * set-preferred-name – Select the Preferred Name for this NHI number
 * add-name – Add a new Name to the set of Patient Names for this NHI number
 * update-name – Modify some of the information associated with a specific name
