@@ -140,9 +140,9 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Scope</th><th>Description</th></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:read   </td><td> Read access to all Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:search </td><td> Search (Match) access to Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:validate </td><td> Access to Patient resources to vaidate a patient only </td></tr>
+<tr><th>V1 Scope</th><th>SMART on FHIR Scope</th><th>Description</th></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/patient:read   </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.r </td><td> Read access to all Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/patient:search </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/patient:validate </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
 </table>
 
