@@ -31,7 +31,7 @@ Description:    "Adds additional, NHI specific extensions"
     $notValidatedAddressReason named notValidatedAddressReason 0..1 and
     //$isPrimaryAddress named isPrimaryAddress 1..1 and 
     $nzAddressId named nz-address-id 0..1 and
-    $nzAddressDerived named nzAddressDerived 0..1
+    $nzAddressDerived named nz-address-derived 0..1
 
 
 // type is mandatory
