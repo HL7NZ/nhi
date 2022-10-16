@@ -137,7 +137,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="he current value of the patient resources meta.versionId" />
+			value="The current value of the patient resources meta.versionId" />
 		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
 	</parameter>	
 	<parameter>
