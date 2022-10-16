@@ -8,20 +8,18 @@ Description: "Address elements that are directly derived from the actual address
 * ^context.type = #element
 * ^context.expression = "Address"
 
-* extension contains
-    depCentile 0..1 and
-    depQuintile 0..1 and
-    SAID 0..1 and
+* extension contains   
+    depQuintile 0..1 and   
     meshBlock 0..1 
 
-* extension[depCentile].value[x] only decimal
-* extension[depCentile] ^short = "The deprivation centile"
+//* extension[depCentile].value[x] only decimal
+//.* extension[depCentile] ^short = "The deprivation centile"
 
 * extension[depQuintile].value[x] only decimal
 * extension[depQuintile] ^short = "The deprivation quintile"
 
-* extension[SAID].value[x] only decimal
-* extension[SAID] ^short = "An interrnal id for this address"
+//* extension[SAID].value[x] only decimal
+//* extension[SAID] ^short = "An interrnal id for this address"
 
 * extension[meshBlock].value[x] only decimal
 * extension[meshBlock] ^short = "The meshblock for this address"
