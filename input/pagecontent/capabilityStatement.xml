@@ -41,5 +41,11 @@
 <td><p>Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address</p>
 </td>
 </tr>
+<tr>
+<td>remove-postal-address</td>
+<td><a href ="remove-postal-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address </a></td>
+<td><p>Allows a user to remove a postal address from the nhi record</p>
+</td>
+</tr>
 </table>
 </div>
