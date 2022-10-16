@@ -3,16 +3,16 @@ skinparam sequenceArrowThickness 2
 skinparam roundcorner 5
 skinparam maxmessagesize 180
 skinparam sequenceParticipant bold
-title Validate Patient
+title $set-preferred-name
 actor "Integrating application user" as User #CornflowerBlue
 participant "Integrating application" as A #CornflowerBlue
 participant "<FHIR API> NHI" as B #CornflowerBlue
 participant "NHI MDM" as C #CornflowerBlue
 |||
-User -> A: Provide resource with Patient details for NHI to validate
+User -> A: Select name (that exists on NHI) to become the new preferred name
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$match (onlyCertainMatches set to True)
+A -> B: POST<Endpoint>/Patient/$set-preferred-name
 activate B
 |||
 B -> B: Validate[]
@@ -21,13 +21,13 @@ B -> C: Request
 activate C
 |||
 
-C -[dashed]-> B:
+C -[dashed]-> B
 deactivate C
 |||
-B -[dashed]-> A: Return Patient record with only NHI number
+B -[dashed]-> A: Return updated Patient record
 deactivate B
 |||
-A -> User: Display confirmation to user
+A -> User: Display updated Patient record to user
 deactivate A
 |||
 @enduml
