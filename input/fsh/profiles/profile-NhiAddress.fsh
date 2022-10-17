@@ -49,4 +49,4 @@ Description:    "Adds additional, NHI specific extensions"
 
 
 * extension[notValidatedAddressReason] ^short = "The reason an address was not validated"
-* extension[isPrimaryAddress] ^short = "If true, this is the primary address"
+//* extension[isPrimaryAddress] ^short = "If true, this is the primary address"
