@@ -26,17 +26,17 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td>nhi</td>
-<td>Mandatory</td>
-<td>The patients nhi number</td>></tr>
+<tr><td> nhi </td>
+<td> Mandatory </td>
+<td> The patients nhi number </td>></tr>
 
-<tr><td>version-id</td>
-<td>Mandatory</td>
-<td>The current patient version number</td></tr>
+<tr><td> version-id </td>
+<td> Mandatory </td>
+<td> The current patient version number </td></tr>
 
-<tr><td>preferred-id</td>
-<td>Mandatory</td>
-<td>The id for the name to set the preferred name flag against</td>></tr>
+<tr><td> preferred-id </td>
+<td> Mandatory </td>
+<td> The id for the name to set the preferred name flag against </td></tr>
 </table>
 
 
@@ -83,7 +83,7 @@ set-preferred-name processing steps:
 5. The updated patient record is returned with an HTTP 200 ok response
 6. The integrating application displays the updated patient details to the user
 
-##### set-preferred-name Rules and errors
+#### set-preferred-name Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
