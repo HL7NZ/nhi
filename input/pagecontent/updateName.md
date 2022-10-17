@@ -14,7 +14,7 @@ Update name has four sub-operations available
 
 * Allows an authorised user to select the Preferred Name for this NHI number
 
-<h3>In Parameters</h3>
+<h3> In Parameters </h3>
 <table>
 <style>
 table, th, td {
@@ -22,9 +22,9 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Parameter name</th>
-<th>Mandatory / Optional</th>
-<th>Description</th></tr>
+<tr><th> Parameter name </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
 
 <tr><td>nhi</td>
 <td>Mandatory</td>
@@ -42,12 +42,12 @@ table, th, td {
 
 * Behaviour:
   * The NHI is validated
-  * The Patient versionId is validated
-  * The name.id is validated
+  * The Patient version-id is validated
+  * The name preferred-id is validated
   * If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name
 
 
-See example below:
+set-preferred-name example request:
 
 ```  
 {
@@ -62,7 +62,7 @@ See example below:
         "name" : "preferred-id",
         "valueInteger" : 56
     },
-     "name" : "versionNumber",
+     "name" : "version-id",
         "valueInteger" : 123445
     },
   ]
