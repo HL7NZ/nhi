@@ -23,7 +23,7 @@ Title:          "NHI Address"
 Description:    "Adds additional, NHI specific extensions"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/NhiAddress"
-* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+//* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 
 
 

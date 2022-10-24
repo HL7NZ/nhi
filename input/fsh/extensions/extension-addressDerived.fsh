@@ -3,7 +3,7 @@ Id: nhi-address-derived
 Description: "Address elements that are directly derived from the actual address"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived"
-* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+//* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 
 * ^context.type = #element
 * ^context.expression = "Address"

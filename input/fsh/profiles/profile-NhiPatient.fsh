@@ -27,7 +27,7 @@ Title:          "NHI Patient"
 Description:    "The Patient resource exposed by the NHI."
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
-* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+//* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 
 
 * ^purpose = "Describe the Patient resource exposed by the NHI"
