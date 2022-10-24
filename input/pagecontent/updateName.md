@@ -14,7 +14,7 @@ Update name has four sub-operations available
 
 * Allows an authorised user to select the Preferred Name for this NHI number
 
-<h3>In Parameters</h3>
+<h3> In Parameters </h3>
 <table>
 <style>
 table, th, td {
@@ -22,32 +22,32 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Parameter name</th>
-<th>Mandatory / Optional</th>
-<th>Description</th></tr>
+<tr><th> Parameter name </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
 
-<tr><td>nhi</td>
-<td>Mandatory</td>
-<td>The patients nhi number</td>></tr>
+<tr><td> nhi </td>
+<td> Mandatory </td>
+<td> The patients nhi number </td>></tr>
 
-<tr><td>version-id</td>
-<td>Mandatory</td>
-<td>The current patient version number</td></tr>
+<tr><td> version-id </td>
+<td> Mandatory </td>
+<td> The current patient version number </td></tr>
 
-<tr><td>preferred-id</td>
-<td>Mandatory</td>
-<td>The id for the name to set the preferred name flag against</td>></tr>
+<tr><td> preferred-id </td>
+<td> Mandatory </td>
+<td> The id for the name to set the preferred name flag against </td></tr>
 </table>
 
 
 * Behaviour:
   * The NHI is validated
-  * The Patient versionId is validated
-  * The name.id is validated
+  * The Patient version-id is validated
+  * The name preferred-id is validated
   * If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name
 
 
-See example below:
+set-preferred-name example request:
 
 ```  
 {
@@ -62,7 +62,7 @@ See example below:
         "name" : "preferred-id",
         "valueInteger" : 56
     },
-     "name" : "versionNumber",
+     "name" : "version-id",
         "valueInteger" : 123445
     },
   ]
@@ -83,7 +83,7 @@ set-preferred-name processing steps:
 5. The updated patient record is returned with an HTTP 200 ok response
 6. The integrating application displays the updated patient details to the user
 
-##### set-preferred-name Rules and errors
+#### set-preferred-name Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
