@@ -36,19 +36,19 @@ table, th, td {
 
 <tr><td> address-type </td>
 <td> Mandatory </td>
-<td> postal or physical </td>></tr>
+<td> postal or physical </td></tr>
 
 <tr><td> nz-address-id </td>
 <td> Mandatory </td>
-<td> eSAM validated address id </td>></tr>
+<td> eSAM validated address id </td></tr>
 
 <tr><td> address-line </td>
 <td> Mandatory </td>
-<td> first line of the address as returned by eSAM </td>></tr>
+<td> first line of the address as returned by eSAM </td></tr>
 
 <tr><td> address-building-name </td>
 <td> Optional </td>
-<td></td>> </tr>
+<td></td> </tr>
 </table>
 
 * Behaviour:
@@ -128,61 +128,61 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Parameter name</th>
-<th>Mandatory / Optional</th>
-<th>Description</th></tr>
+<tr><th> Parameter name </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
 
-<tr><td>nhi</td>
-<td>Mandatory</td>
-<td>The patients nhi number</td>></tr>
+<tr><td> nhi </td>
+<td> Mandatory </td>
+<td> The patients nhi number </td></tr>
 
-<tr><td>version-id</td>
-<td>Mandatory</td>
-<td>The current patient version number</td></tr>
+<tr><td> version-id </td>
+<td> Mandatory </td>
+<td> The current patient version number </td></tr>
 
-<tr><td>address-type</td>
-<td>Mandatory</td>
-<td>postal or physical</td>></tr>
+<tr><td> address-type </td>
+<td> Mandatory </td>
+<td> postal or physical</td> </tr>
 
-<tr><td>not-validated-address-reason</td>
-<td>Mandatory</td>
-<td></td>></tr>
+<tr><td> not-validated-address-reason </td>
+<td> Mandatory </td>
+<td></td> </tr>
 
-<tr><td>address-building-name</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> address-building-name </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>address-line (1)</td>
-<td>Mandatory</td>
-<td>first line of the address</td>></tr>
+<tr><td> address-line (1) </td>
+<td> Mandatory </td>
+<td> first line of the address </td></tr>
 
-<tr><td>address-line (2)</td>
-<td>Optional</td>
-<td>second line of the address</td>></tr>
+<tr><td> address-line (2) </td>
+<td> Optional </td>
+<td> second line of the address</td></tr>
 
-<tr><td>suburb</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> suburb </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>city</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> city </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>postal-code</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> postal-code </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>country-code</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> country-code </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>domicile-code</td>
-<td>Optional</td>
-<td></td>></tr>
+<tr><td> domicile-code </td>
+<td> Optional </td>
+<td></td> </tr>
 
-<tr><td>nz-geocode</td>
-<td>Optional</td>
-<td>datum-code, latitude, longitude</td>></tr>
+<tr><td> nz-geocode </td>
+<td> Optional </td>
+<td> datum-code, latitude, longitude </td></tr>
 </table>
 
 * Behaviour:
@@ -280,22 +280,22 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Parameter name</th>
-<th>Mandatory / Optional</th>
-<th>Description</th></tr>
+<tr><th> Parameter name </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
 
-<tr><td>nhi</td>
-<td>Mandatory</td>
-<td>The patients nhi number</td>></tr>
+<tr><td> nhi </td>
+<td> Mandatory </td>
+<td> The patients nhi number </td></tr>
 
-<tr><td>version-id</td>
-<td>Mandatory</td>
-<td>The current patient version number</td></tr>
+<tr><td> version-id </td>
+<td> Mandatory </td>
+<td> The current patient version number </td></tr>
 </table>
 
 * Behaviour:
   * The NHI is validated
-  * The Patient versionId is validated
+  * The Patient version-id is validated
   * The postal address on the nhi record is made inactive
 
 remove-postal-address example request:
@@ -310,7 +310,7 @@ remove-postal-address example request:
         "valueString" : "ZAD2481"
     },
     {
-        "name" : "version",
+        "name" : "version-id",
         "valueInteger" : 19232
     }
   ]
