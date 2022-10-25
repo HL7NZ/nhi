@@ -187,7 +187,7 @@ We’re transitioning to the following operation outcome
         "display": "Record version provided is out of date. The record cannot be updated"
       } ]
     },
-    "expression": [ "Practitioner.identifier:HPI" ]
+    "expression": [ "Patient.identifier:NHI" ]
   } ]
 }
 
@@ -209,7 +209,7 @@ But not all errors have been converted or assigned error codes, the unconverted 
 
 ### HTTP Header Details
 
-* This list is any additions to standard HTTP header protocol
+* This is a list of any additions to standard HTTP header protocol
 
 <h3>Request Headers</h3>
 <table>
@@ -220,24 +220,24 @@ table, th, td {
 }
 </style>
 <tr><th> HTTP Header (Key) </th>
-<th>HTTP Header (Value)</th>
-<th>Description</th>
-<th>Mandatory / Recommended / Optional</th></tr>
+<th> HTTP Header (Value) </th>
+<th> Description </th>
+<th> Mandatory / Recommended / Optional </th></tr>
 
 <tr><td> Authorization </td>
-<td> Bearer <_string_> </td>
+<td> Bearer {string} </td>
 <td> The OAuth2 access token </td>
 <td> Mandatory </td></tr>
 
 <tr><td> userid </td>
-<td> Bearer <_string_> </td>
+<td> Bearer {string} </td>
 <td> Client provided <br />
 All requests for all resources must include an http header userid that uniquely identifies the individual initiating the request <br />
 Preferably the hpi-person-id of the user would be provided if known, otherwise a userid that allows the authenticated organisation to identify the individual </td>
 <td>Mandatory</td></tr>
 
 <tr><td> X-Correlation-Id </td>
-<td> <_string_> </td>
+<td> {string} </td>
 <td> Client provided <br />
 All requests should contain a unique transaction id in the X-Correlation-Id field <br />
 If present in the request this will be returned in the response, and can be used to track API calls <br />
@@ -250,7 +250,7 @@ Preferred less than 64 characters <br /> </td>
 <td> Mandatory </td></tr>
 
 <tr><td> x-api-key </td>
-<td> <_string_> </td>
+<td> {string} </td>
 <td> Te Whatu Ora Provided – issued with client credentials </td>
 <td> Mandatory </td></tr>
 </table>
@@ -268,15 +268,15 @@ table, th, td {
 <th> Description </th></tr>
 
 <tr><td> X-Correlation-Id </td>
-<td> <_string_> </td>
+<td> {string} </td>
 <td> Returned if provided </td></tr>
 
 <tr><td> X-request-Id </td>
-<td> <_string_> </td>
+<td> {string} </td>
 <td> Unique identifier for the request within the NHI </td></tr>
 
 <tr><td> ETag </td>
-<td> <_string_> </td>
+<td> {string} </td>
 <td> The resource version number, returned on a Get </td></tr>
 </table>
 
@@ -306,9 +306,9 @@ table, th, td {
 
 #### API Keys and Usage Plans
 
-Clients will be emailed their API key, which should be treated as confidential information and not shared with other parties.
+Clients will be emailed their API key, which should be treated as confidential information and not shared with other parties
 
-An api-key associates the client with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned.
+An api-key associates the client with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned
 
 Clients will need to add there api key to the x-api-key header in each API request. If no API key is included in the request header, a “Forbidden” error will be returned
 
