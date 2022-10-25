@@ -131,7 +131,7 @@ set-address example request:
 {% include set-unvalidated-address.svg %}
 </div>
 
-set-unvalidated-address processing steps:
+**set-unvalidated-address processing steps:**
  
 1. The user provides details for a new address to add
 2. The integrating application sends an HTTP Post request using the $set-unvalidated-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-unvalidated-address
@@ -292,7 +292,7 @@ set-unvalidated-address example request:
 {% include remove-postal-address.svg %}
 </div>
 
-remove-postal-address processing steps:
+**remove-postal-address processing steps:**
  
 1. The user requests to remove a postal address
 2. The integrating application sends an HTTP Post request using the $remove-postal-address operation to the NHI E.g. Post\<Endpoint>/Patient/$remove-postal-address
