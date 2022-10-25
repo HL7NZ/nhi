@@ -5,14 +5,30 @@
 The update address operations allow an authorised user to update a persons address on a persons identity record
 
 Update address has three sub-operations available:
-* set-address -  Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
-* set-unvalidated-address - Allows a user to replace a physical or add or replace a postal address with an unvalidated address
-* remove-postal-address - Allows a user to remove a postal adddress from a persons identity record.
+* **set-address** -  Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
+* **set-unvalidated-address** - Allows a user to replace a physical or add or replace a postal address with an unvalidated address
+* **remove-postal-address** - Allows a user to remove a postal adddress from a persons identity record.
 
 
-#### set-address
+### set-address
 
 * Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
+
+<div>
+{% include set-address.svg %}
+</div>
+
+**set-address processing steps:**
+ 
+1. The user provides details for a new address to add
+2. The system requests address validation from the address validation service
+3. eSAM returns a validated address - Alt: Address not found
+4. The integrating application sends an HTTP Post request using the $set-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-address
+3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+4. The new address is added to the NHI and the existing address made inactive
+5. The updated patient record is returned with an HTTP 200 ok response
+6. The integrating application displays the updated patient details to the user
+
 
 <h3>In Parameters</h3>
 <table>
@@ -46,16 +62,16 @@ table, th, td {
 <td> Mandatory </td>
 <td> first line of the address as returned by eSAM </td></tr>
 
-<tr><td> address-building-name </td>
+<tr><td> building-name </td>
 <td> Optional </td>
 <td></td> </tr>
 </table>
 
 * Behaviour:
   * The NHI is validated
-  * The Patient versionId is validated
+  * The Patient version-id is validated
   * The parameters are validated
-  * The eSAM details are retrieved for the address-id supplied
+  * The eSAM details are retrieved for the nz-address-id supplied
   * If the eSAM address returned matches the address-line supplied, the new address is added to the NHI and the existing address made inactive
 
 
@@ -68,43 +84,34 @@ set-address example request:
   "parameter": [
     {
         "name" : "nhi",
-        "valueString" : "ZAD2481"
+        "valueString" : "ZGD9203"
     },
     {
-        "name" : "version",
-        "valueInteger" : 19232
+        "name" : "version-id",
+        "valueInteger" : 3321540
     },
      {
         "name" : "address-type",
-        "valueString" : "postal"
+        "valueString" : "physical"
     },
- {
+{
         "name" : "nz-address-id",
-        "valueString" : "1112139"
+        "valueString" : "2843216"
     },
     {
         "name" : "address-line",
-        "valueString" : "67 nowhere street"
+        "valueString" : "20 Aitken Street"
+    },
+        {
+        "name" : "building-name",
+        "valueString" : "Freyberg House"
     }
   ]
 }
 
 ```
 
-<div>
-{% include set-address.svg %}
-</div>
 
-set-address processing steps:
- 
-1. The user provides details for a new address to add
-2. The system requests address validation from the address validation service
-3. eSAM returns a validated address - Alt: Address not found
-4. The integrating application sends an HTTP Post request using the $set-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-address
-3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-4. The new address is added to the NHI and the existing address made inactive
-5. The updated patient record is returned with an HTTP 200 ok response
-6. The integrating application displays the updated patient details to the user
 
 ##### set-address Rules and errors
 
@@ -116,9 +123,23 @@ set-address processing steps:
 
 
 
-#### set-unvalidated-address
+### set-unvalidated-address
 
 * Allows a user to replace a physical or add or replace a postal address with an unvalidated address
+
+<div>
+{% include set-unvalidated-address.svg %}
+</div>
+
+set-unvalidated-address processing steps:
+ 
+1. The user provides details for a new address to add
+2. The integrating application sends an HTTP Post request using the $set-unvalidated-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-unvalidated-address
+3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+4. The new address is added to the NHI and the existing address made inactive
+5. The updated patient record is returned with an HTTP 200 ok response
+6. The integrating application displays the updated patient details to the user
+
 
 <h3>In Parameters</h3>
 <table>
@@ -140,47 +161,47 @@ table, th, td {
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
-<tr><td> address-type </td>
-<td> Mandatory </td>
-<td> postal or physical</td> </tr>
-
 <tr><td> not-validated-address-reason </td>
 <td> Mandatory </td>
 <td></td> </tr>
+
+<tr><td> address-type </td>
+<td> Mandatory </td>
+<td> postal or physical</td> </tr>
 
 <tr><td> address-building-name </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> address-line (1) </td>
+<tr><td> address-line-1 </td>
 <td> Mandatory </td>
 <td> first line of the address </td></tr>
 
-<tr><td> address-line (2) </td>
+<tr><td> address-line-2 </td>
 <td> Optional </td>
 <td> second line of the address</td></tr>
 
-<tr><td> suburb </td>
+<tr><td> address-suburb </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> city </td>
+<tr><td> address-city </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> postal-code </td>
+<tr><td> address-postal-code </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> country-code </td>
+<tr><td> address-country-code </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> domicile-code </td>
+<tr><td> address-domicile-code </td>
 <td> Optional </td>
 <td></td> </tr>
 
-<tr><td> nz-geocode </td>
+<tr><td> address-nz-geocode </td>
 <td> Optional </td>
 <td> datum-code, latitude, longitude </td></tr>
 </table>
@@ -205,7 +226,7 @@ set-unvalidated-address example request:
         "valueString" : "ZAD2481"
     },
     {
-        "name" : "version",
+        "name" : "version-id",
         "valueInteger" : 19232
     },
      {
@@ -221,8 +242,12 @@ set-unvalidated-address example request:
         "valueString" : "Building 11"
     },
     {
-        "name" : "address-line",
+        "name" : "address-line-1",
         "valueString" : "67 nowhere street"
+    },
+    {
+        "name" : "address-line-2",
+        "valueString" : "nowhere"
     },
  {
         "name" : "address-suburb",
@@ -239,24 +264,15 @@ set-unvalidated-address example request:
      {
         "name" : "address-country-code",
         "valueString" : "NZ"
+    },
+     {
+        "name" : "address-domicile-code",
+        "valueString" : "NZ"
     }
   ]
 }
 
 ```
-
-<div>
-{% include set-unvalidated-address.svg %}
-</div>
-
-set-unvalidated-address processing steps:
- 
-1. The user provides details for a new address to add
-2. The integrating application sends an HTTP Post request using the $set-unvalidated-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-unvalidated-address
-3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-4. The new address is added to the NHI and the existing address made inactive
-5. The updated patient record is returned with an HTTP 200 ok response
-6. The integrating application displays the updated patient details to the user
 
 
 ##### set-unvalidated-address Rules and errors
@@ -268,9 +284,23 @@ set-unvalidated-address processing steps:
 * _Patient set-unvalidated-address errors_
 
 
-#### remove-postal-address
+### remove-postal-address
 
 * Allows a user to remove a postal adddress from a persons identity record.
+
+<div>
+{% include remove-postal-address.svg %}
+</div>
+
+remove-postal-address processing steps:
+ 
+1. The user requests to remove a postal address
+2. The integrating application sends an HTTP Post request using the $remove-postal-address operation to the NHI E.g. Post\<Endpoint>/Patient/$remove-postal-address
+3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+4. The postal address is made inactive
+5. The updated patient record is returned with an HTTP 200 ok response
+6. The integrating application displays the updated patient details to the user
+
 
 <h3>In Parameters</h3>
 <table>
@@ -318,18 +348,6 @@ remove-postal-address example request:
 
 ```
 
-<div>
-{% include remove-postal-address.svg %}
-</div>
-
-remove-postal-address processing steps:
- 
-1. The user requests to remove a postal address
-2. The integrating application sends an HTTP Post request using the $remove-postal-address operation to the NHI E.g. Post\<Endpoint>/Patient/$remove-postal-address
-3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-4. The postal address is made inactive
-5. The updated patient record is returned with an HTTP 200 ok response
-6. The integrating application displays the updated patient details to the user
 
 ##### remove-postal-address Rules and errors
 
