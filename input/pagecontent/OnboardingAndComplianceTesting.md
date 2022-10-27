@@ -203,12 +203,7 @@ ZBE4905</td>
 <td>All address formats are displayed appropriately</td>
 <td>Mandatory</td></tr>
 
-<<<<<<< HEAD
 <tr><td>NHI-GET-10</td>
-=======
-<tr>
-<td>NHI-GET-10</td>
->>>>>>> master
 <td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
 <td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
 <td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
