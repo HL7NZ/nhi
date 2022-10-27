@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    GITHUB_TOKEN: "secrets.nhi-igrepo:token"
+    
 phases:
   install:
     runtime-versions:   
@@ -24,35 +28,21 @@ phases:
       - sushi -v
       - jekyll -v
       - java -jar ./publisher.jar -v
-      - git clone https://github.com/HL7NZ/nhi
-      - cd nhi
+     
+     
   build:
     commands:
+      - git clone https://pat-ryan-health:$GITHUB_TOKEN@github.com/HL7NZ/nhi
+      - cd nhi
+      - ls
       - echo building IG
       - sudo chmod +x ./build-ig-cicd.sh
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
       - echo building maven conformance artifacts package
-      - mvn deploy 
+     
 artifacts:
   files:
-    - 'output/full-ig.zip'
-    - 'target/*.zip'
-    - 'build-ig.log'
-  
-
-reports:
-  surefire:
-    files:
-      - '**/*'
-    base-directory: ./target/surefire-reports
-    file-format: JunitXml
-  jacoco:
-    files:
-      - './site/jacoco/jacoco.xml'
-    base-directory: './target'
-    file-format: JACOCOXML
-cache:
-  paths:
-    - '/root/.m2/repository/**/*'
-
-  
+    - 'nhi/output/full-ig.zip'
+    - 'nhi/target/*.zip'
+    - 'nhi/build-ig.log'
+ 
