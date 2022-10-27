@@ -1,8 +1,8 @@
 version: 0.2
 
 env:
-  secrets-manager:
-    GITHUB_TOKEN: "secrets.nhi-igrepo:token"
+  #secrets-manager:
+   #  GITHUB_TOKEN: "secrets.hip-nhi-ig-repo:token"
     
 phases:
   install:
@@ -32,13 +32,18 @@ phases:
      
   build:
     commands:
-      - git clone https://pat-ryan-health:$GITHUB_TOKEN@github.com/HL7NZ/nhi
+      #- git clone https://pat-ryan-health:$GITHUB_TOKEN@github.com/HL7NZ/nhi
+      - git clone https://pat-ryan-health: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@github.com/HL7NZ/nhi
       - cd nhi
       - ls
       - echo building IG
       - sudo chmod +x ./build-ig-cicd.sh
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
-      - echo building maven conformance artifacts package
+      - echo pushing new buidlfile to git
+      - git add ./output/full-ig.zip
+      - git commit -m "new ig build"
+      - git push
+      
      
 artifacts:
   files:

@@ -16,14 +16,16 @@ From a bash shell, run the
 
 script from the project root,.. This will create the full-ig.zip file which contains the IG site
 'hip-fhir-common\src\main\fsh\output\full-ig.zip'
- 
+
  ## Building with CodeBuild
 Log in to AWS as HipCoderRole and run the CodeBuild project hip-nhi-ig-build
 This should output the build logs and full-ig.zip to the S3 bucket
-s3://nz-govt-moh-hip-build/hip-nhi-fhir-ig/nhi/
+`s3://nz-govt-moh-hip-build/hip-nhi-fhir-ig/nhi/`
+**Note** - the buildspec.yaml file mastered in this project is referenced by codebuild from the S3 bucket. If you change it, you need to copy it to the s3 bucket for the changes to take effect:
+`s3://nz-govt-moh-hip-build/hip-nhi-fhir-ig/buildspec.yml`
 
-To do : get credentials from secrets
- 
+
+
 
 ###  Deploying the IG
 Check in your changes including the new full-ig.zip to github. Amplify will autobuild on commit 
