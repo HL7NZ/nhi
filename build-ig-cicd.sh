@@ -44,9 +44,11 @@ tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages//hl7.org.nz.fhir.ig.
 pwd
 ls ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
 
-echo running sushi ...
 
+sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
+
+echo running sushi ...
 sushi -o .
 
 echo running local scripts
