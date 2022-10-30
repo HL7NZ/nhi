@@ -2,28 +2,13 @@
 
 ### Match Patient Overview
 
-* The local system sends a request to the NHI with patient details to match
-
-* In Parameters:
-  * Patient resource
-  * onlyCertainMatches: 0 (False)
-
-* The NHI does a search and returns a bundle of patient records that represent possible matches
-* Each record will have:
-  * A search score most likely (1) to least likely (0)
-  * A "match-grade":
-    * Certain Match
-    * Possible Match
-
-* A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request.
-
-* For an example Match request body [click here](/artifacts.html#example-example-instances)
+* The match patient operation allows a user to search the locate a Patient record with known Patient demographics.
 
 <div>
 {% include match-patient.svg %}
 </div>
 
-Match Patient processing steps:
+**Match Patient processing steps:**
  
 1. The user supplies patient details to be be matched against the NHI patient records
 2. The integrating application sends an HTTP Post request using a $match operation to the NHI with 'In parameter' onlyCertainMatches set to False E.g. Post\<Endpoint>/Patient/$match
@@ -32,6 +17,37 @@ Match Patient processing steps:
 5. The response containing a bundle of matching patient resources is returned to the integrating application - ALT: Empty bundle returned
 6. The integrating application displays the matching patients to the user.
 
+<h3>In Parameters</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th> Parameter name </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
+
+<tr><td> 'Patient resource' </td>
+<td> Mandatory </td>
+<td> See match request example (link below) </td></tr>
+
+<tr><td> onlyCertainMatches: 0 (False) </td>
+<td> Mandatory </td>
+<td> Must be set to false </td></tr>
+</table>
+ 
+
+* Behaviour
+  * The NHI does a search and returns a bundle of patient records that represent possible matches
+  * Each record will have:
+    * A search score most likely (1) to least likely (0)
+    * A "match-grade": (Certain Match / Possible Match)
+
+* A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request.
+
+* For an example Match request body [click here](/artifacts.html#example-example-instances)
 
 #### Match Patient Rules and errors
 
