@@ -39,13 +39,19 @@ table, th, td {
 </table>
  
 
-* Behaviour
-  * The NHI does a search and returns a bundle of patient records that represent possible matches
+* Behaviour:
+  * The NHI does a search using supplied Patient demographics
+  * A bundle of patient records that represent possible matches is returned
   * Each record will have:
     * A search score most likely (1) to least likely (0)
     * A "match-grade": (Certain Match / Possible Match)
 
-* A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request.
+* A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request
+
+**Privcy requirements**
+* Te Whatu Ora does not require a Get to be done after a match request
+* Te Whatu Ora will log details of each NHI returned by a match operation so that any privacy requests from people wanting to know which organisations and users have retrieved their NHI record, can be responded to
+* Integrating systems should also ensure they have sufficient logging in place to respond to similar requests
 
 * For an example Match request body [click here](/artifacts.html#example-example-instances)
 
