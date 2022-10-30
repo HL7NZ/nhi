@@ -88,7 +88,7 @@ set-address example request:
     },
     {
         "name" : "version-id",
-        "valueInteger" : 3321540
+        "valueString" : 3321540
     },
      {
         "name" : "address-type",
@@ -227,7 +227,7 @@ set-unvalidated-address example request:
     },
     {
         "name" : "version-id",
-        "valueInteger" : 19232
+        "valueString" : 19232
     },
      {
         "name" : "not-validated-address-reason",
@@ -341,7 +341,7 @@ remove-postal-address example request:
     },
     {
         "name" : "version-id",
-        "valueInteger" : 19232
+        "valueString" : 19232
     }
   ]
 }
