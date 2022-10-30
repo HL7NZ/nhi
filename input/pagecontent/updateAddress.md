@@ -113,7 +113,7 @@ set-address example request:
 
 
 
-##### set-address Rules and errors
+#### set-address Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
@@ -275,7 +275,7 @@ set-unvalidated-address example request:
 ```
 
 
-##### set-unvalidated-address Rules and errors
+#### set-unvalidated-address Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
@@ -349,7 +349,7 @@ remove-postal-address example request:
 ```
 
 
-##### remove-postal-address Rules and errors
+#### remove-postal-address Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
