@@ -4,7 +4,7 @@ The NHI is made up of two resources:
 * [NHIPatient](StructureDefinition-NhiPatient.html), derived from the [HL7 FHIR Patient resource](http://hl7.org/fhir/patient.html).
 * [NHIAddress](StructureDefinition-NhiAddress.html), derived from [HL7 FHIR Address data type](http://hl7.org/fhir/R4/datatypes.html#Address).
 
-This guide uses artifacts from [New Zealand Base Implementation Guide.](http://igs.clinfhir.com/nzbasev1/index.html)
+This guide uses artifacts from [New Zealand Base Implementation Guide.](https://fhir.org.nz/ig/base/index.html)
 
 ### Organization of the Guide
 
