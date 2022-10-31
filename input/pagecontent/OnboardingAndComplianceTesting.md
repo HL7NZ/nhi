@@ -77,7 +77,28 @@ table, th, td {
 <td>Checked against all tests</td>
 <td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
+</table>
 
+<h3>General tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption>These tests apply to all integrations </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory / Optional / Recommended</th></tr>
+
+<tr><td>General 1</td>
+<td>Application can handle an HTTP 429 error in a graceful way</td>
+<td>The application reaches its usage plan limit and is returned an HTTP 429 error [See](/general.html#usage-plans)</td>
+<td>The application will retry several times with an exponentially increasing delay</td>
+<td>Recommended</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
