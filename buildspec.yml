@@ -8,6 +8,7 @@ phases:
       nodejs: 16
       ruby: 3.1
     commands:
+      - env
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/settings-clean.xml - | envsubst > /root/.m2/settings.xml
       - export HTTP_PROXY="WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128"
       - export HTTPS_PROXY="WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128"
@@ -34,16 +35,20 @@ phases:
     commands:
       - ls 
       - rm -r nhi 
-      - git clone https://pat-ryan-health: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@github.com/HL7NZ/nhi
+      - git clone https://pat-ryan-health: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@github.com/HL7NZ/nhi      
       - cd nhi
+      - git checkout $BRANCH
       - ls
       - echo building IG
-      - sudo chmod +x ./build-ig-cicd.sh
+      - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
+
+     
       
 artifacts:
   files:
     - 'nhi/output/full-ig.zip'
     - 'nhi/target/*.zip'
     - 'nhi/build-ig.log'
+  name: $BRANCH
  
