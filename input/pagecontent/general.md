@@ -339,4 +339,6 @@ table, th, td {
 
 All test accounts will be assigned to the bronze usage plan
 
-Production accounts will be assigned to the silver usage plan. If a client wished to be assigned to the gold usage plan, they should contact the integration team
+All production accounts will be assigned to the silver usage plan. If a client wished to be assigned to the gold usage plan, they should contact the integration team
+
+If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
