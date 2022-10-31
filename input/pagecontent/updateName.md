@@ -42,7 +42,7 @@ table, th, td {
 
 <tr><td> nhi </td>
 <td> Mandatory </td>
-<td> The patients nhi number </td>></tr>
+<td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
 <td> Mandatory </td>
