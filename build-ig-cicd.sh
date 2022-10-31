@@ -22,7 +22,8 @@ unzip ./full-ig.zip site/package.tgz
 
 tar zxvf ./site/package.tgz
 #fix the package url:
-jq --arg url $nzbase_url '.url |= $url' ./package/package.json
+jq --arg url $nzbase_url '.url |= $url' ./package/package.json > temp.json
+mv temp.json ./package/package.json 
 
 
 #cp nz packages  into user's .fhir cache 
@@ -45,7 +46,8 @@ aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hi
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
 tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
-jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
+jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json > temp2.json
+mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
 cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
