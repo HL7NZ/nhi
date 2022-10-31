@@ -36,7 +36,7 @@ sudo mkdir ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/
 
 
-echo getting nzbase dependencies...
+echo getting common dependencies...
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
@@ -45,7 +45,7 @@ aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hi
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
 tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
-jq --arg url $common_url '.url |= $url' . ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
+jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
 
 
