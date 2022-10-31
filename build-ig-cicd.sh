@@ -47,14 +47,14 @@ tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.h
 #fix the package url:
 jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
-
+cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
 pwd
 ls ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
 
 
 sudo chmod +x ./localscripts/makeTerminologySummary.js
-./localscripts/makeTerminologySummary.js
+
 
 echo running sushi ...
 sushi -o .
