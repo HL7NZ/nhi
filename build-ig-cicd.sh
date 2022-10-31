@@ -9,7 +9,7 @@ echo running sushi ...
 
 ./localscripts/makeTerminologySummary.js
 
-echo getting dependencies...
+echo getting nzbase dependencies...
 nzbase_url=$(yq '.dependencies."fhir.org.nz.ig.base".uri' ./sushi-config.yaml)
 nzbase_version=$(yq '.dependencies."fhir.org.nz.ig.base".version' ./sushi-config.yaml)
 
@@ -35,11 +35,19 @@ aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.
 sudo mkdir ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/
 
-#cp hpi-fhir-common packages into  .fhir cache
 
-aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#dev/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
-sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
-tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
+echo getting nzbase dependencies...
+common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
+common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
+
+#workaround till we add full-ig.zip download to hip-fhir-common site
+aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
+sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
+tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
+#fix the package url:
+jq --arg url $common_url '.url |= $url' . ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
+
+
 
 pwd
 ls ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
