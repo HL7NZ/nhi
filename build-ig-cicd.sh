@@ -43,7 +43,7 @@ common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sush
 
 #workaround till we add full-ig.zip download to hip-fhir-common site
 # aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
-s
+
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
 tar zxvf  ./package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
