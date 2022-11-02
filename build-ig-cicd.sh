@@ -34,7 +34,7 @@ sudo  cp -r ./package ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version
 #cp hl7 packages into user's .fhir cache 
 aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.1/package.zip ./hl7-package.zip
 sudo mkdir ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
-unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/
+unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/ >/dev/null 2>&1
 
 
 echo getting common dependencies...
@@ -42,9 +42,10 @@ common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
 #workaround till we add full-ig.zip download to hip-fhir-common site
-aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
+# aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
+
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
-tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
+tar zxvf  ./package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
 jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json > temp2.json
 mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
@@ -52,7 +53,7 @@ mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/pack
 cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
 pwd
-ls ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
+ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 
 sudo chmod +x ./localscripts/makeTerminologySummary.js
