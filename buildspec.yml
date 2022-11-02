@@ -39,6 +39,8 @@ phases:
       - cd nhi
       - git checkout $BRANCH
       - ls
+      - echo getting depenencdies
+      - mvn package
       - echo building IG
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log

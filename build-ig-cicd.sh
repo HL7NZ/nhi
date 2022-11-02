@@ -42,9 +42,10 @@ common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
 #workaround till we add full-ig.zip download to hip-fhir-common site
-aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
+# aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
+x
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
-tar zxvf ./hip-fhir-common-package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
+tar zxvf  ./package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
 jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json > temp2.json
 mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
