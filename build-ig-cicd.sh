@@ -34,7 +34,7 @@ sudo  cp -r ./package ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version
 #cp hl7 packages into user's .fhir cache 
 aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.1/package.zip ./hl7-package.zip
 sudo mkdir ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
-unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/
+unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/ >/dev/null 2>&1
 
 
 echo getting common dependencies...
@@ -53,7 +53,7 @@ mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/pack
 cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
 
 pwd
-ls ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#dev
+ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 
 sudo chmod +x ./localscripts/makeTerminologySummary.js
