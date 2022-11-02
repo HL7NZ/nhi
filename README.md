@@ -25,7 +25,7 @@ This should output the build logs and full-ig.zip to the S3 bucket
 `s3://nz-govt-moh-hip-build/hip-nhi-fhir-ig/buildspec.yml`
 
 
-
+ 
 
 ###  Deploying the IG
 Check in your changes including the new full-ig.zip to github. Amplify will autobuild on commit 
