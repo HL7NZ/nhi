@@ -7,7 +7,7 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 1.1.0 Snapshot
+version: 1.2.0 Snapshot
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
