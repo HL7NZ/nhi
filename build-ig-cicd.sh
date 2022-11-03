@@ -50,9 +50,10 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-VERSION="$BRANCH"_"${GIT_COMMIT_ID: -8}"
-echo setting build version to  $VERSION
-yq w sushi-config.yaml version $VERSION -i
+DESCRIPTION="NHI Patient Profile. Built from "$BRANCH"_"${GIT_COMMIT_ID: -8}"
+echo setting build description to  $DESCRIPTION
+
+yq eval ".description:  |= \"$DESCRIPTION\"" -i sushi-config.yaml
 
 echo running sushi ...
 sushi -o .
