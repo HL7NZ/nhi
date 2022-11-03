@@ -55,9 +55,8 @@ cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package
 pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
-
-sudo chmod +x ./localscripts/makeTerminologySummary.js
-
+echo setting build version to $CODEBUILD_SOURCE_VERSION
+yq w sushi-config.yaml version $CODEBUILD_SOURCE_VERSION
 
 echo running sushi ...
 sushi -o .
