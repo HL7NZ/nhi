@@ -55,8 +55,8 @@ cat ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package
 pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
-echo setting build version to $CODEBUILD_SOURCE_VERSION
-yq w sushi-config.yaml version $CODEBUILD_SOURCE_VERSION
+echo setting build version to $BRANCH
+yq w sushi-config.yaml version $BRANCH
 
 echo running sushi ...
 sushi -o .
