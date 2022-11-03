@@ -56,9 +56,9 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-
-echo setting build version to <BRANCH>_<COMMIT_ID>: $BRANCH $GIT_COMMIT_ID
-yq w sushi-config.yaml version $BRANCH $GIT_COMMIT_ID
+VERSION="$BRANCH"_"{GIT_COMMIT_ID: -8}"
+echo setting build version to <BRANCH>_<COMMIT_ID>: $VERSION
+yq w sushi-config.yaml version $VERSION}
 
 echo running sushi ...
 sushi -o .
