@@ -5,9 +5,6 @@ set -x #echo on
 echo cleaning up temp directory ...
 rm -r  ./temp
 
-
-./localscripts/makeTerminologySummary.js
-
 echo getting nzbase dependencies...
 nzbase_url=$(yq '.dependencies."fhir.org.nz.ig.base".uri' ./sushi-config.yaml)
 nzbase_version=$(yq '.dependencies."fhir.org.nz.ig.base".version' ./sushi-config.yaml)
@@ -40,9 +37,6 @@ echo getting common dependencies...
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
-#workaround till we add full-ig.zip download to hip-fhir-common site
-# aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
-
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
 ls -l ./hfc_package/hip-fhir-common*/package/package.tgz
 tar zxvf  ./hfc_package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
@@ -57,7 +51,7 @@ ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
 VERSION="$BRANCH"_"${GIT_COMMIT_ID: -8}"
-echo setting build version to <BRANCH>_<COMMIT_ID>: $VERSION
+echo setting build version to  $VERSION
 yq w sushi-config.yaml version $VERSION -i
 
 echo running sushi ...
