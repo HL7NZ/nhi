@@ -44,8 +44,8 @@ common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sush
 # aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.org.nz.fhir.ig.hip-core#$common_version/hip-fhir-common-package.tgz ./hip-fhir-common-package.tgz
 
 sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
-ls -l ./package/hip-fhir-common*/package/package.tgz
-tar zxvf  ./package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
+ls -l ./hfc_package/hip-fhir-common*/package/package.tgz
+tar zxvf  ./hfc_package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 #fix the package url:
 jq --arg url $common_url '.url |= $url' ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json > temp2.json
 mv temp2.json  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version/package/package.json
@@ -58,7 +58,7 @@ ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 GIT_COMMIT_ID=$(git rev-parse HEAD)
 VERSION="$BRANCH"_"${GIT_COMMIT_ID: -8}"
 echo setting build version to <BRANCH>_<COMMIT_ID>: $VERSION
-yq w sushi-config.yaml version $VERSION
+yq w sushi-config.yaml version $VERSION -i
 
 echo running sushi ...
 sushi -o .

@@ -44,7 +44,7 @@
 							<includeGroupIds>health.identity.fhir</includeGroupIds>
 							<includeArtifactIds>hip-fhir-common</includeArtifactIds>
 							<outputDirectory>
-								${project.basedir}/package
+								${project.basedir}/hfc_package
 							</outputDirectory>
 							<includes>**/package/package.tgz</includes>
 
