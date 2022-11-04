@@ -50,11 +50,11 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-RELEASE="\" $BRANCH ${GIT_COMMIT_ID: -8} \""
+RELEASE="New Zealand NHI IG - $BRANCH ${GIT_COMMIT_ID: -8} "
 echo setting build description to  $DESCRIPTION
 
-newtag="$RELEASE" yq e --inplace  '.version |= strenv(newtag)'  sushi-config.yaml
-cat sushi-config.yaml | grep version
+newtag="$RELEASE" yq e --inplace  '.title |= strenv(newtag)'  sushi-config.yaml
+cat sushi-config.yaml | grep title
 
 echo running sushi ...
 sushi -o .
