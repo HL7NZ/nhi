@@ -50,10 +50,10 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-DESCRIPTION="\" NHI Patient Profile. Built from $BRANCH_  ${GIT_COMMIT_ID: -8} \""
+RELEASE="\" $BRANCH ${GIT_COMMIT_ID: -8} \""
 echo setting build description to  $DESCRIPTION
 
-newtag="$DESCRIPTION" yq e --inplace  '.description |= strenv(newtag)'  sushi-config.yaml
+newtag="$RELEASE" yq e --inplace  '.releaseLabel |= strenv(newtag)'  sushi-config.yaml
 
 echo running sushi ...
 sushi -o .
