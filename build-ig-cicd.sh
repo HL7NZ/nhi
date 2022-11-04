@@ -53,8 +53,8 @@ GIT_COMMIT_ID=$(git rev-parse HEAD)
 RELEASE="\" $BRANCH ${GIT_COMMIT_ID: -8} \""
 echo setting build description to  $DESCRIPTION
 
-newtag="$RELEASE" yq e --inplace  '.releaseLabel |= strenv(newtag)'  sushi-config.yaml
-cat sushi-config.yaml | grep releaseLabel
+newtag="$RELEASE" yq e --inplace  '.version |= strenv(newtag)'  sushi-config.yaml
+cat sushi-config.yaml | grep version
 
 echo running sushi ...
 sushi -o .
