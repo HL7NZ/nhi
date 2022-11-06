@@ -19,3 +19,6 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 * **FAQ:** Frequently Asked Questions (TBD)
 * **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
 * **Support** Links to the FHIR spec and downloads.
+
+`This IG was built from _SOURCE_`
+

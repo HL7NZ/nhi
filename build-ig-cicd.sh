@@ -50,11 +50,9 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-RELEASE="New Zealand NHI IG - $BRANCH ${GIT_COMMIT_ID: -8} "
-echo setting build description to  $DESCRIPTION
-
-newtag="$RELEASE" yq e --inplace  '.title |= strenv(newtag)'  sushi-config.yaml
-cat sushi-config.yaml | grep title
+SOURCE="IG Source: $CODEBUILD_SOURCE_REPO_URL : Branch: $BRANCH Commit ${GIT_COMMIT_ID: -8}"
+echo adding source $SOURCE to index.mad
+sed -i "s/_SOURCE_/$SOURCE/g"  ./input/pagecontent/index.md
 
 echo running sushi ...
 sushi -o .
