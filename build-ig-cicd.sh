@@ -50,9 +50,10 @@ pwd
 ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
-SOURCE="IG Source: $CODEBUILD_SOURCE_REPO_URL : Branch: $BRANCH Commit ${GIT_COMMIT_ID: -8}"
-echo adding source $SOURCE to index.mad
-sed -i "s/_SOURCE_/$SOURCE/g"  ./input/pagecontent/index.md
+echo adding source info to index.md
+sed -i "s/_CODEBUILD_SOURCE__REPO_URL/$CODEBUILD_SOURCE_REPO_URL/g"  ./input/pagecontent/index.md
+sed -i "s/_BRANCH_/$BRANCH/g"  ./input/pagecontent/index.md
+sed -i "s/_GIT_COMMIT_ID/$GIT_COMMIT_ID/g"  ./input/pagecontent/index.md
 
 echo running sushi ...
 sushi -o .
