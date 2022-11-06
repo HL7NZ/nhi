@@ -51,9 +51,8 @@ ls ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#dev
 
 GIT_COMMIT_ID=$(git rev-parse HEAD)
 echo adding source info to index.md
-sed -i "s/_CODEBUILD_SOURCE__REPO_URL/$CODEBUILD_SOURCE_REPO_URL/g"  ./input/pagecontent/index.md
 sed -i "s/_BRANCH_/$BRANCH/g"  ./input/pagecontent/index.md
-sed -i "s/_GIT_COMMIT_ID/$GIT_COMMIT_ID/g"  ./input/pagecontent/index.md
+sed -i "s/_GIT_COMMIT_ID_/$GIT_COMMIT_ID/g"  ./input/pagecontent/index.md
 
 echo running sushi ...
 sushi -o .

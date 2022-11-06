@@ -20,5 +20,5 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 * **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
 * **Support** Links to the FHIR spec and downloads.
 
-`This IG was built from github: _CODEBUILD_SOURCE_REPO_URL_  branch: _BRANCH_  commit id: _GIT_COMMIT_ID  `
+`This IG was built from [github](https://github.com/HL7NZ/nhi) branch: _BRANCH_  commit id: _GIT_COMMIT_ID_  `
 
