@@ -19,6 +19,7 @@ script from the project root,.. This will create the full-ig.zip file which cont
 
  ## Building with CodeBuild
 Log in to AWS as HipCoderRole and run the CodeBuild project hip-nhi-ig-build
+Note : Set the codebuild project's environment variable 'BRANCH" to the name of the branch you want to build from (e.g "master")
 This should output the build logs and full-ig.zip to the S3 bucket
 `s3://nz-govt-moh-hip-build/hip-nhi-fhir-ig/nhi/`
 **Note** - the buildspec.yaml file mastered in this project is referenced by codebuild from the S3 bucket. If you change it, you need to copy it to the s3 bucket for the changes to take effect:
