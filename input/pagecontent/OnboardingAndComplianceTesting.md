@@ -53,7 +53,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>All test messages will be assessed against the security criteria in the table below</caption>
+<caption>**All test messages will be assessed against the security criteria in the table below**</caption>
 <tr><th>Reference</th>
 <th>Purpose</th>
 <th>Input values</th>
@@ -87,14 +87,14 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>These tests apply to all integrations </caption>
+<caption>**These tests apply to all integrations** </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
 <th>Expected outcome</th>
 <th>Mandatory / Optional / Recommended</th></tr>
 
-<tr><td>General 1</td>
+<tr><td>General-1</td>
 <td>Application can handle an HTTP 429 error in a graceful way</td>
 <td>The application reaches its usage plan limit and is returned an HTTP 429 error (See 'Usage Plans' in the 'General Notes')</td>
 <td>The application will retry several times with an exponentially increasing delay</td>
@@ -118,12 +118,12 @@ table, th, td {
 <tr>
 <td>NHI-GET-1</td>
 <td>System displays the minimum patient information required to confirm identity:
-<li>Preferred name including Given Name, Other Given Name(s), Surname</li>
+<li>Preferred name including Given Name(s), Surname</li>
 <li>Date of Birth</li>
 <li>Gender</li>
 <li>Primary Address</li>
 </td>
-<td>ZAT2348</td>
+<td>ZJS7596</td>
 <td>Minimum identity information is displayed for the patient</td>
 <td>Mandatory</td>
 </tr>
@@ -135,7 +135,6 @@ table, th, td {
 <td>The System alerts the user that the patient is deceased and provides the date of death.</td>
 <td>Mandatory</td>
 </tr>
-
 
 <tr><td>NHI-GET-3</td>
 <td>System can display all other identity data returned by the NHI in a GET response including:
@@ -173,9 +172,7 @@ table, th, td {
 <li>Citizenship status</li></td>
 <td>Mandatory</td></tr>
 
-
-<tr>
-<td>NHI-GET-5</td>
+<tr><td>NHI-GET-5</td>
 <td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.</td>
 <td>ZAT2518</td>
 <td><li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
@@ -229,6 +226,168 @@ ZBE4905</td>
 <td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
 <td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
 <td>mandatory</td></tr>
+</table>
+
+<h3>NHI Patient Match tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Match-1</td>
+<td>application allows the user to search using the following attributes:
+<li>Given Name(s), Surname</li>
+<li>Gender</li>
+<li>Partial or full date of birth</li>
+And to show that the application displays at least the minimum required attributes in a search result:
+<li>Given Name(s), Surname</li>
+<li>Gender</li>
+<li>Birthdate</li>
+<li>Primary Address</li>
+<li>Date of Death</li>
+<li>NHI Identifier</li>
+<li>Match Score</li>
+<li>Display a flag/indicate when a patient in the search result has multiple names</li>
+The system must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
+<td>Given Name: Noah <br />
+Middle Name: James <br />
+Surname: Owen <br />
+Gender: M <br />
+DOB: 1949-10-30 (30th October 1949)</td>
+<td>Input: Minimum search criteria can be entered <br />
+Output: The top result returned in the search should be NHI ZBH6793 <br />
+Output: Minimum search result identity attributes are all present in result list
+</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Match-2 (if applicable)</td>
+<td> application allows the user to search with additional match criteria <br />
+If the application is populating any of these other parameters in your Match request then do this one too <br />
+The additional criteria includes:
+<li>Address</li>
+<li>Date of Death</li>
+<li>Place of Birth</li>
+<li>Country of Birth</li>
+<li>Building name</li> </td>
+<td>Given Name: Summer <br />
+Middle Name: Barbara <br />
+Surname: MacKenzie <br />
+Gender: F <br />
+Date of Birth: 28-09-1954 <br />
+Street: 167 Springfield Road <br />
+Suburb: St Albans <br />
+townOrCity: Christchurch <br />
+dateOfDeath:  1975-05 <br />
+Place of Birth: Wellington <br />
+Country of Birth: India (Code ‘IN’) <br />
+Building name: Buildingnametest</td>
+<td>Input: Additional Search Criteria can be populated <br />
+Output: First result returned in the search result list should be NHI ZAT4642</td>
+<td>mandatory (if applicable) </td></tr>
+
+<tr><td>NHI-Match-3</td>
+<td> application can manage many NHI resources in the response bundle and that results are presented in descending order of the match score </td>
+<td> Given Name: Test <br />
+Middle Name: <br />
+Surname: Test <br />
+Gender: M <br />
+DOB: 31-12-1999 </td>
+<td>Input: Above criteria can be entered <br />
+Output: 10 results are returned <br />
+Output: The top result returned is NHI: ZAX6965 Score: 99
+</td>
+<td>mandatory</td></tr>
+</table>
+
+<h3>NHI Patient Match tests - if not implementing Patient read</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption> **Only complete these if you are not completing the ‘NHI Patient GET tests’** </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Match-4 (NHI-Get-1)</td>
+<td> the application displays the minimum patient information required to confirm identity:
+<li>Preferred name including Given Name(s), Surname</li>
+<li>Date of Birth</li>
+<li>Gender</li>
+<li>Primary Address</li></td>
+<td>Use a Match request to retrieve ZJS7596 and demonstrate how you display the NHI details <br />
+Family Name: Maraka <br />
+Given Names: Jamie, Susan
+Birthdate:25-08-1977 <br />
+Gender: Female
+Address: 2 Tennyson Street, Napier South, Napier, 4110 <br />
+Use - Home <br />
+Type - Physical </td>
+<td>Input: Above criteria can be entered <br />
+Output: The top result returned is NHI: ZJS7596 <br />
+Output: Minimum identity information is displayed for the patient</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Match-5 (NHI-Get-2)</td>
+<td> application can display the Date of Death </td>
+<td>Use a Match request to retrieve ZAT2348 and demonstrate how you display the NHI details <br />
+Family Name: Smith-Martin <br />
+Given Names: Laura, Rose <br />
+Birthdate:14-07-1970 <br />
+Gender: Female
+Address: <br />
+Not validated-address-reason - No Fixed Abode, <br />
+Domicile code - D091, <br />
+Use - Home, <br />
+Type - Physical </td>
+<td>Input: Above criteria can be entered <br />
+Output: The top result returned is NHI: ZAT2348 <br />
+Output: Minimum identity information and deceased date is displayed for the patient</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Match-6 (NHI-Get-3)</td>
+<td>application can display all other identity data returned by the NHI in a GET response including:
+<li>All patient names with all name parts</li>
+<li>Name Information Source</li>
+<li>Date of Birth Information Source</li>
+<li>Ethnicity information</li>
+<li>All patient addresses and address parts</li>
+<li>All Contacts</li>
+<li>NZ Citizenship status</li>
+<li>Country of Birth</li>
+<li>Country of Birth source</li>
+<li>Place of Birth</li></td>
+<td>Use a Match request to retrieve ZAT2364 and demonstrate how you display the NHI details <br />
+Family Name: John <br />
+Given Names: Levi, Sands <br />
+Birthdate:26-02-1995 <br />
+Gender: Male </td>
+<td>Input: Above criteria can be entered All identity information is displayed for the patient. The patient:
+<li>Is alive</li>
+<li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
+<li>The preferred name should have all name parts populated</li>
+<li>Has two residential addresses, the primary address is overseas and the other residential address is in NZ</li>
+<li>Has a mailing address</li>
+<li>Has six ethnicities</li>
+<li>Is an NZ citizen</li></td>
+<td>Mandatory</td></tr>
+
+
+
+
 </table>
 
 <h3>NHI Patient Add tests</h3>
