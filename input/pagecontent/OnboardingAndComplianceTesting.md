@@ -151,12 +151,11 @@ table, th, td {
 <td>ZAT2364</td>
 <td>All identity information is displayed for the patient. The patient:
 <li>Is alive</li>
-<li>Has 3 names - a ‘baby of’  name, maiden name, preferred name</li>
+<li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
-<li>Has two residential addresses, the primary address is overseas and the other residential address is in NZ</li>
-<li>Has a mailing address</li>
-<li>Has six ethnicities</li>
-<li>Is an NZ citizen</li></td>
+<li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
+<li>Has three ethnicities</li>
+<li>Is a NZ citizen</li></td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-4</td>
@@ -166,10 +165,9 @@ table, th, td {
 <li>Unknown citizenship</li></td>
 <td>ZAT2496</td>
 <td>All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
-<li>Domicile code</li>
+<li>A not validated physical address</li>
 <li>Partial date of death</li>
-<li>Partial date of birth</li>
-<li>Citizenship status</li></td>
+<li>Partial date of birth</li></td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-5</td>
@@ -375,19 +373,116 @@ Family Name: John <br />
 Given Names: Levi, Sands <br />
 Birthdate:26-02-1995 <br />
 Gender: Male </td>
-<td>Input: Above criteria can be entered All identity information is displayed for the patient. The patient:
+<td>Input: Above criteria can be entered <br />
+Output: All identity information is displayed for the patient. The patient:
 <li>Is alive</li>
 <li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
-<li>Has two residential addresses, the primary address is overseas and the other residential address is in NZ</li>
-<li>Has a mailing address</li>
-<li>Has six ethnicities</li>
-<li>Is an NZ citizen</li></td>
+<li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
+<li>Has three ethnicities</li>
+<li>Is a NZ citizen</li></td>
 <td>Mandatory</td></tr>
 
+<tr><td>NHI-Match-7 (NHI-Get-4)</td>
+<td>application can display all other identity data returned by the NHI in a GET response including:
+<li>A non validated primary address</li>
+<li>A year of birth and a year and month of death (partial dates)</li>
+<li>Unknown citizenship</li></td>
+<td>Use a Match request to retrieve ZAT2496 and demonstrate how you display the NHI details <br />
+Family Name: Yossarian <br />
+Given Names: John, Test <br />
+Birthdate:01-01-1914 <br />
+Gender: Male </td>
+<td>Input: Above criteria can be entered <br />
+Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+<li>A not validated physical address</li>
+<li>Partial date of death</li>
+<li>Partial date of birth</li></td>
+<td>Mandatory</td></tr>
 
+<tr><td>NHI-Match-8 (NHI-Get-6)</td>
+<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
+<td>Use a Match request to retrieve ZBE4905 and demonstrate how you display the NHI details <br />
+Family Name: SurnameVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
+Given Names: GivenVeryVeryLongLongLongnamewithtoomanycharacters, MiddleVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
+Birthdate:01-01-1974 <br />
+Gender: Female </td>
+<td>Input: Above criteria can be entered <br />
+Output: The application can manage a patient record that has attribute values which are the maximum allowed field length in some fields <br />
+The patient has the following fields fully populated in the test record (field lengths in parentheses):
+<li>Given name (50)</li>
+<li>Other Given Name(s) (100)</li>
+<li>Surname (100)</li>
+<li>Address line 1 (100)</li>
+<li>Address lines 2-5 (50)</li>
+<li>Building name/additional details (255)</li></td>
+<td>Mandatory</td></tr>
 
+<tr><td>NHI-Match-9 (NHI-Get-7)</td>
+<td>application behaves appropriately when a new format NHI number is produced</td>
+<td>Use a Match request to retrieve either ZZZ00AX or ZGT56KB and demonstrate how you display the NHI details <br />
+1. <b>ZZZ00AX</b> <br />
+Family Name: Newnhi <br />
+Given Name: Format <br />
+Birthdate:28-08-2020 <br />
+Gender: Female <br />
+2. <b>ZGT56KB</b> <br />
+Family Name: Kucharski <br />
+Given Names: Markus, Christoff <br />
+Birthdate:06-09-2013 <br />
+Gender: Male </td>
+<td>Input: Above criteria can be entered <br />
+Output: Application does not error</td>
+<td>Mandatory</td></tr>
 
+<tr><td>NHI-Match-10 (NHI-Get-8)</td>
+<td>application can synchronize with local system in response to the NHI version changing</td>
+<td>Use a Match request to retrieve ZCX7065, using details:
+Family Name: ALLEN <br />
+Given Name: JOSEPH <br />
+Birthdate:01-04-1950 <br />
+Gender: Female </td>
+<td><li>Do a Match</li>
+<li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
+<li>Do another Match</li>
+<li>Demonstrate how end user can view the difference then synchronize</li></td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-Match-11 (NHI-Get-9)</td>
+<td>application presents the address parts appropriately, including multiple addresses</td>
+<td>Use a Match request to retrieve ZJM9567 and demonstrate how you display the NHI details <br />
+Family Name: MultipleAddress <br />
+Given Name: Francis <br />
+Birthdate:12-12-1982 <br />
+Gender: Male </td>
+<td><td>Input: Above criteria can be entered <br />
+Output: All address formats are displayed appropriately</td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-Match-12 (NHI-Get-10)</td>
+<td>application can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
+<td> Use a Match request to retrieve <b>all of the following</b> and demonstrate how you display the NHI details <br />
+1. <b>ZAU8023</b> <br />
+Family Name: Magi <br />
+Birthdate:01-01-2012 <br />
+Gender: Unknown <br />
+2. <b>ZAV8657</b> <br />
+Given Name: Cambridge <br />
+Birthdate:12-04-1960 <br />
+Gender: Male <br />
+3. <b>ZHS7524</b> <br />
+Family Name: MultipleAddress <br />
+Given Name: Francis <br />
+Birthdate:12-12-1982 <br />
+Gender: Male <br /> </td>
+<td>Input: Above criteria can be entered for the 3 Match scenarios <br />
+1. Output: The top result returned is NHI: ZAU8023 <br />
+Output: only a surname is present <br />
+2. Output: The top result returned is NHI: ZAV8657 <br />
+Output: only a given name is present <br />
+3. Output: The top result returned is NHI: ZHS7524 <br />
+Output: multiple names present</td>
+<td>Mandatory</td></tr>
 </table>
 
 <h3>NHI Patient Add tests</h3>
