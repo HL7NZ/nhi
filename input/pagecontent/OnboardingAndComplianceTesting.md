@@ -36,9 +36,9 @@ Provide the following details in a test report and email to [integration@health.
    h. List of operations included in your integration (eg GET Patient, Search(Match) Patient)
    
 2. For each test supply screen shots of the user interface for:
-    * the input data as entered in the integrating system (“the system”)
-    * any warnings or error messages presented by the system
-    * the confirmation or result of the request presented by the system
+    * the input data as entered in the integrating application (“the application”)
+    * any warnings or error messages presented by the application
+    * the confirmation or result of the request presented by the application
     * **Note**: If non-interactive, please provide JSON request (update / add) or response (get/search).
 
 3. For each test supply a timestamp when each request is sent.
@@ -117,27 +117,27 @@ table, th, td {
 
 <tr>
 <td>NHI-GET-1</td>
-<td>System displays the minimum patient information required to confirm identity:
+<td>application displays the minimum patient information required to confirm identity:
 <li>Preferred name including Given Name(s), Surname</li>
 <li>Date of Birth</li>
 <li>Gender</li>
 <li>Primary Address</li>
 </td>
 <td>ZJS7596</td>
-<td>Minimum identity information is displayed for the patient</td>
+<td>Output: Minimum identity information is displayed for the patient</td>
 <td>Mandatory</td>
 </tr>
 
 <tr>
 <td>NHI-GET-2</td>
-<td>System can display the Date of Death</td>
+<td>application can display the Date of Death</td>
 <td>ZAT2348</td>
-<td>The System alerts the user that the patient is deceased and provides the date of death.</td>
+<td>Output: The application alerts the user that the patient is deceased and provides the date of death</td>
 <td>Mandatory</td>
 </tr>
 
 <tr><td>NHI-GET-3</td>
-<td>System can display all other identity data returned by the NHI in a GET response including:
+<td>application can display all other identity data returned by the NHI in a GET response including:
 <li>All patient names with all name parts</li>
 <li>Name Information Source</li>
 <li>Date of Birth Information Source</li>
@@ -149,7 +149,7 @@ table, th, td {
 <li>Country of Birth source</li>
 <li>Place of Birth</li></td>
 <td>ZAT2364</td>
-<td>All identity information is displayed for the patient. The patient:
+<td>Output: All identity information is displayed for the patient. The patient:
 <li>Is alive</li>
 <li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
@@ -159,30 +159,30 @@ table, th, td {
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-4</td>
-<td>System can display all other identity data returned by the NHI in a GET response including:
+<td>application can display all other identity data returned by the NHI in a GET response including:
 <li>A non validated primary address</li>
 <li>A year of birth and a year and month of death (partial dates)</li>
 <li>Unknown citizenship</li></td>
 <td>ZAT2496</td>
-<td>All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+<td>Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
 <li>A not validated physical address</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li></td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-5</td>
-<td>System alerts the user that a requested NHI is dormant, and that the live NHI has been returned.</td>
+<td>application alerts the user that a requested NHI is dormant, and that the live NHI has been returned.</td>
 <td>ZAT2518</td>
-<td><li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
-<li>Patient Live NHI returned should be ZAT2496</li>
-<li>Minimum identity information for the live NHI is displayed for the patient</li></td>
+<td>Outout: Notification to the user that the requested NHI was dormant and the live NHI has been returned <br />
+Output: Patient Live NHI returned should be ZAT2496 <br />
+Output: Minimum identity information for the live NHI is displayed for the patient</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-6</td>
-<td>System can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
+<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
 <td>ZBE4905</td>
-<td>Patient information supplied is displayed without loss of data.
-This is for a patient record that has attribute values which are the maximum allowed field length in some fields.
+<td>Output: Patient information supplied is displayed without loss of data <br />
+This is for a patient record that has attribute values which are the maximum allowed field length in some fields <br />
 The patient has the following fields fully populated in the test record (field lengths in parentheses):
 <li>Given name (50)</li>
 <li>Other Given Name(s) (100)</li>
@@ -193,19 +193,18 @@ The patient has the following fields fully populated in the test record (field l
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-7</td>
-<td>System behaves appropriately when a new format NHI number is produced</td>
+<td>application behaves appropriately when a new format NHI number is produced</td>
 <td>ZZZ00AX<br />
 ZGT56KB<br />
 ZHS91BR<br />
 ZHW58CN<br />
 ZLV86AX<br />
 ZBE4905</td>
-<td><li>System does not error</li>
-<li>System returns appropriate messaging to user</li></td>
+<td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-8</td>
-<td>System can synchronize with local system in response to the NHI version changing</td>
+<td>application can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
 <td><li>Do a GET</li>
 <li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
@@ -214,15 +213,15 @@ ZBE4905</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-9</td>
-<td>System presents the address parts appropriately, including multiple addresses.</td>
+<td>application presents the address parts appropriately, including multiple addresses.</td>
 <td>ZJM9567</td>
-<td>All address formats are displayed appropriately</td>
+<td>Output: All address formats are displayed appropriately</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-10</td>
-<td>System can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
+<td>application can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
 <td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
-<td>System does not error <br /> System returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<td>Output: application does not error <br /> application returns all name parts when present <br /> Order of name parts is clear to the user</td>
 <td>mandatory</td></tr>
 </table>
 
@@ -254,7 +253,7 @@ And to show that the application displays at least the minimum required attribut
 <li>NHI Identifier</li>
 <li>Match Score</li>
 <li>Display a flag/indicate when a patient in the search result has multiple names</li>
-The system must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
+The application must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
 <td>Given Name: Noah <br />
 Middle Name: James <br />
 Surname: Owen <br />
@@ -305,7 +304,7 @@ Output: The top result returned is NHI: ZAX6965 Score: 99
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient Match tests - if not implementing Patient read</h3>
+<h3>NHI Patient Match tests - These tests are only required if the application is not implementing Patient Read</h3>
 <table>
 <style>
 table, th, td {
@@ -337,7 +336,7 @@ Type - Physical </td>
 <td>Input: Above criteria can be entered <br />
 Output: The top result returned is NHI: ZJS7596 <br />
 Output: Minimum identity information is displayed for the patient</td>
-<td>mandatory</td></tr>
+<td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-5 (NHI-Get-2)</td>
 <td> application can display the Date of Death </td>
@@ -353,8 +352,8 @@ Use - Home, <br />
 Type - Physical </td>
 <td>Input: Above criteria can be entered <br />
 Output: The top result returned is NHI: ZAT2348 <br />
-Output: Minimum identity information and deceased date is displayed for the patient</td>
-<td>mandatory</td></tr>
+Output: The application alerts the user that the patient is deceased and provides the date of death</td>
+<td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-6 (NHI-Get-3)</td>
 <td>application can display all other identity data returned by the NHI in a GET response including:
@@ -477,11 +476,9 @@ Birthdate:12-12-1982 <br />
 Gender: Male <br /> </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
 1. Output: The top result returned is NHI: ZAU8023 <br />
-Output: only a surname is present <br />
 2. Output: The top result returned is NHI: ZAV8657 <br />
-Output: only a given name is present <br />
 3. Output: The top result returned is NHI: ZHS7524 <br />
-Output: multiple names present</td>
+Output: Application does not error <br /> Application returns all name parts when present <br /> Order of name parts is clear to the user</td>
 <td>Mandatory</td></tr>
 </table>
 
