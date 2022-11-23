@@ -302,6 +302,18 @@ Output: 10 results are returned <br />
 Output: The top result returned is NHI: ZAX6965 Score: 99
 </td>
 <td>mandatory</td></tr>
+
+<tr><td>NHI-Match-Error-1</td>
+<td> application can return the appropriate error message to the user </td>
+<td> Use a Match request to try and retrieve a record with Given Name: Rhetoric </td>
+<td> Output: Expected error message: Date of Birth is a required </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Match-Error-2</td>
+<td> application can return the appropriate error message to the user </td>
+<td> Use a Match request to try and retrieve a record with birthdate Date of Birth: 28-09-1954 </td>
+<td> Output: Expected error message: Name is required </td>
+<td>mandatory</td></tr>
 </table>
 
 <h3>NHI Patient Match tests - These tests are only required if the application is not implementing Patient Read</h3>
