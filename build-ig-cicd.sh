@@ -62,6 +62,7 @@ sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
 pwd
 
+cp ./template/* $HOME/.fhir/packages/fhir.base.template#current/package/content
 echo running ig publisher
 java -jar ~/publisher.jar -ig . -proxy WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 -no-sushi
 
