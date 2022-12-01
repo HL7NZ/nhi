@@ -329,14 +329,6 @@ Output: The address that is displayed to the end user is the address that is ret
 <li> Remove the <b>postal address</b> from the patient record using the [$remove-postal-address](/updateAddress.html#remove-postal-address)</li></td>
 <td>Output: The patient record has Postal address removed.</td>
 <td>mandatory</td></tr>  
-
-<tr><td>NHI-Maintain-Error-1</td>
-<td>application can remove the <b>postal address</b> on a patient record</td>
-<td><li>Use selected NHI number</li>
-<li> Remove the <b>postal address</b> from the patient record using the [$remove-postal-address](/updateAddress.html#remove-postal-address)</li></td>
-<td>Output: The patient record has Postal address removed.</td>
-<td>mandatory</td></tr>  
-
 </table>
 
 
