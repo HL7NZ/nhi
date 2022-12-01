@@ -64,7 +64,7 @@ table, th, td {
 
 <tr><td> building-name </td>
 <td> Optional </td>
-<td></td> </tr>
+<td> not part of the eSAM addresses, entered manually by the user </td> </tr>
 </table>
 
 * Behaviour:
