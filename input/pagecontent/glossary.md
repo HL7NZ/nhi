@@ -102,7 +102,7 @@
     * DREG - Has been confirmed with a match to the Death Register
 
 * **Verified Deceased date status Definition**
-  * A verified deceased date is deceased date for a death taking place in New Zealand, or that has been notified by an official overseas source
+  * A verified deceased date is a deceased date for a death taking place in New Zealand for which acceptable documentary evidence has been sighted, or for an overseas death that has been notified by an official overseas source
   * This would be a source of:
     *  MCCOD   - Medical Certificate Cause of Death
     *  CORONER - Coroner Notification
