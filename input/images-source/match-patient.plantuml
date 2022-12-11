@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Provide resource with Patient details
 activate A
 |||
-A -> B: POST<Endpoint>/Patient$match (onlyCertainMatches set to False)
+A -> B: POST<Endpoint>/Patient/$match (onlyCertainMatches set to False)
 activate B
 |||
 B -> B: Validate[]
