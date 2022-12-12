@@ -5,6 +5,11 @@
 An ‘Add Patient’ interaction is initiated by a user who needs to add a new identity record for a person to the Patient Index. <br />
 The user has sourced the required identity information, and initiates an add request to create a patient identity record in the NHI.
 
+**Expectations**
+* Prior to adding a new identity record to the NHI an authorised user must complete a thorough [search of the NHI](/matchPatient.html) to ensure the patient does not already exist.
+* Duplicate NHI records will not be checked upfront, but will create a task for a potential duplicate to be resolved.
+* If the Patient is found in the NHI, then an _update operation_ is required. If not found then a new identitiy record may be added, see below.
+
 <div>
 {% include add-patient.svg %}
 </div>
