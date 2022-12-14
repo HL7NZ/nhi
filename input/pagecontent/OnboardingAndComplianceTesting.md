@@ -316,7 +316,7 @@ Output: The top result returned is NHI: ZAX6965 Score: 99
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient Match tests - These tests are only required if the application is not implementing Patient Read</h3>
+<h3>NHI Patient Match tests (Minimum data requirements)</h3>
 <table>
 <style>
 table, th, td {
@@ -324,7 +324,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you are not completing the ‘NHI Patient GET tests’** </caption>
+<caption> **Only complete these if you are not implementing Patient Read and completing the ‘NHI Patient GET tests’** </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -339,9 +339,9 @@ table, th, td {
 <li>Primary Address</li></td>
 <td>Use a Match request to retrieve ZJS7596 and demonstrate how you display the NHI details <br />
 Family Name: Maraka <br />
-Given Names: Jamie, Susan
+Given Names: Jamie, Susan <br />
 Birthdate:25-08-1977 <br />
-Gender: Female
+Gender: Female <br />
 Address: 2 Tennyson Street, Napier South, Napier, 4110 <br />
 Use - Home <br />
 Type - Physical </td>
@@ -356,7 +356,7 @@ Output: Minimum identity information is displayed for the patient</td>
 Family Name: Smith-Martin <br />
 Given Names: Laura, Rose <br />
 Birthdate:14-07-1970 <br />
-Gender: Female
+Gender: Female <br />
 Address: <br />
 Not validated-address-reason - No Fixed Abode, <br />
 Domicile code - D091, <br />
@@ -385,7 +385,8 @@ Given Names: Levi, Sands <br />
 Birthdate:26-02-1995 <br />
 Gender: Male </td>
 <td>Input: Above criteria can be entered <br />
-Output: All identity information is displayed for the patient. The patient:
+Output: All identity information is displayed for the patient. <br />
+The patient: <br />
 <li>Is alive</li>
 <li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
@@ -405,7 +406,7 @@ Given Names: John, Test <br />
 Birthdate:01-01-1914 <br />
 Gender: Male </td>
 <td>Input: Above criteria can be entered <br />
-Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has: <br />
 <li>A not validated physical address</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li></td>
@@ -420,7 +421,7 @@ Birthdate:01-01-1974 <br />
 Gender: Female </td>
 <td>Input: Above criteria can be entered <br />
 Output: The application can manage a patient record that has attribute values which are the maximum allowed field length in some fields <br />
-The patient has the following fields fully populated in the test record (field lengths in parentheses):
+The patient has the following fields fully populated in the test record (field lengths in parentheses): <br />
 <li>Given name (50)</li>
 <li>Other Given Name(s) (100)</li>
 <li>Surname (100)</li>
@@ -448,7 +449,7 @@ Output: Application does not error</td>
 
 <tr><td>NHI-Match-10 (NHI-Get-8)</td>
 <td>application can synchronize with local system in response to the NHI version changing</td>
-<td>Use a Match request to retrieve ZCX7065, using details:
+<td>Use a Match request to retrieve ZCX7065, using details: <br />
 Family Name: ALLEN <br />
 Given Name: JOSEPH <br />
 Birthdate:01-04-1950 <br />
@@ -466,31 +467,33 @@ Family Name: MultipleAddress <br />
 Given Name: Francis <br />
 Birthdate:12-12-1982 <br />
 Gender: Male </td>
-<td><td>Input: Above criteria can be entered <br />
+<td>Input: Above criteria can be entered <br />
 Output: All address formats are displayed appropriately</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-12 (NHI-Get-10)</td>
 <td>application can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
 <td> Use a Match request to retrieve <b>all of the following</b> and demonstrate how you display the NHI details <br />
-1. <b>ZAU8023</b> <br />
+<b>1. ZAU8023</b> <br />
 Family Name: Magi <br />
 Birthdate:01-01-2012 <br />
 Gender: Unknown <br />
-2. <b>ZAV8657</b> <br />
+<b>2. ZAV8657</b> <br />
 Given Name: Cambridge <br />
 Birthdate:12-04-1960 <br />
 Gender: Male <br />
-3. <b>ZHS7524</b> <br />
+<b>3. ZHS7524</b> <br />
 Family Name: MultipleAddress <br />
 Given Name: Francis <br />
 Birthdate:12-12-1982 <br />
-Gender: Male <br /> </td>
+Gender: Male </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
-1. Output: The top result returned is NHI: ZAU8023 <br />
-2. Output: The top result returned is NHI: ZAV8657 <br />
-3. Output: The top result returned is NHI: ZHS7524 <br />
-Output: Application does not error <br /> Application returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<b>1. Output: The top result returned is NHI: ZAU8023 </b> <br />
+<b>2. Output: The top result returned is NHI: ZAV8657 </b> <br />
+<b>3. Output: The top result returned is NHI: ZHS7524 </b> <br />
+Output: Application does not error <br />
+Output: Application returns all name parts when present <br />
+Output: Order of name parts is clear to the user</td>
 <td>Mandatory</td></tr>
 </table>
 
