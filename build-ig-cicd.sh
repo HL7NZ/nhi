@@ -60,6 +60,9 @@ sushi -o .
 echo running local scripts
 sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
+
+echo "Making API summary"
+./localscripts/makeCapabilityStatement.js nhi
 pwd
 
 cp ./template/* $HOME/.fhir/packages/fhir.base.template#current/package/content
