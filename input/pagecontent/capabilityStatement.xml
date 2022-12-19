@@ -10,7 +10,7 @@
 <tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td><p>Used to retrieve a Patient resource by Id.</p>
+<td><p>Used to retrieve a Patient resource by Id.  HTTP Request 'GET'  Scope required: patient:read / Patient.r</p>
 </td>
 </tr>
 </table>
@@ -20,31 +20,31 @@
 <tr>
 <td>match</td>
 <td><a href ="match.xml"> http://hl7.org/fhir/OperationDefinition/Patient-match </a></td>
-<td><p>$Match (Find NHI) with in parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores, $Match (Validate) with in parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id</p>
+<td><p><strong>$Match (Find NHI)</strong> with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  HTTP Request 'POST'.  Scope required: patient:search / Patient.s.  <strong>$Match (Validate)</strong> with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id.  HTTP Request 'POST'.  Scope required: patient:validate / Patient.v</p>
 </td>
 </tr>
 <tr>
 <td>set-preferred-name</td>
 <td><a href ="set-preferred-name.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name </a></td>
-<td><p>an operation to set the patient.name.preferred boolean to True.</p>
+<td><p>An operation to set the patient.name.preferred boolean to True.  HTTP Request 'POST'.  Scope required: patient:write / Patient.u</p>
 </td>
 </tr>
 <tr>
 <td>set-address</td>
 <td><a href ="set-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address </a></td>
-<td><p>Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address</p>
+<td><p>Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address.  HTTP Request 'POST'.  Scope required: patient:write / Patient.u</p>
 </td>
 </tr>
 <tr>
 <td>set-unvalidated-address</td>
 <td><a href ="set-unvalidated-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address </a></td>
-<td><p>Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address</p>
+<td><p>Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address.  HTTP Request 'POST'.  Scope required: patient:write / Patient.u</p>
 </td>
 </tr>
 <tr>
 <td>remove-postal-address</td>
 <td><a href ="remove-postal-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address </a></td>
-<td><p>Allows a user to remove a postal address from the nhi record</p>
+<td><p>Allows a user to remove a postal address from the nhi record.  HTTP Request 'POST'.  Scope required: patient:write / Patient.u</p>
 </td>
 </tr>
 </table>
