@@ -58,7 +58,7 @@
   * An Unknown NZ Citizenship status is a patient who is unable or unwilling to provide any information about their NZ Citizenship status
 
 
-h3>**TBC** - Valid combinations of nz-citizenship and nz-residency status</h3>
+<h3>**TBC** - Valid combinations of nz-citizenship and nz-residency status</h3>
 <table>
 <style>
 table, th, td {
