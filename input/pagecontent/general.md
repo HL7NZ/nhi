@@ -154,20 +154,6 @@ table, th, td {
 </table>
 
 
-#### Request Rules and Errors
-
-* **Request rules**
-  * Every request must include an:
-    * http header item UserId that uniquely identifies the individual initiating the request.
-    * OAuth 2 access token
-    * An api-key
-  * Each user must have an individual userID
-
-* _Request errors_
-  * _Authentication: missing userid header_,  _HTTP401, Processing_
-  * _Unauthorized_,  _HTTP401_
-  * _Forbidden, HTTP403_
-
 #### Error Format
 
 Error responses may contain a FHIR operation outcome:
@@ -206,6 +192,22 @@ But not all errors have been converted or assigned error codes, the unconverted 
   }
 
 ```
+
+
+#### Request Rules and Errors
+
+* **Request rules**
+  * Every request must include an:
+    * http header item UserId that uniquely identifies the individual initiating the request.
+    * OAuth 2 access token
+    * An api-key
+  * Each user must have an individual userID
+
+* _Request errors_
+  * _Authentication: missing userid header_,  _HTTP401, Processing_
+  * _Unauthorized_,  _HTTP401_
+  * _Forbidden, HTTP403_
+
 
 ### HTTP Header Details
 
