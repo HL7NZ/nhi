@@ -206,7 +206,6 @@ table, th, td {
 * **Verified NZ Residency Status Definition**
   * A Verified NZ Residency Status is a patient who holds NZ Residency for which acceptable documentary evidence has been sighted by the person recording the NZ Residency status
   * This is a source of:
-    * PPRT - Passport
     * NZPV - NZ Permanent Resident Visa
     * NZTV - NZ Resident Visa
 
