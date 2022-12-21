@@ -58,6 +58,34 @@
   * An Unknown NZ Citizenship status is a patient who is unable or unwilling to provide any information about their NZ Citizenship status
 
 
+h3>**TBC** - Valid combinations of nz-citizenship and nz-residency status</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th></th>
+<th>Citizenship status = yes</th>
+<th>Citizenship status = no</th>
+<th>Citizenship status = unknown</th></tr>
+
+<tr><td>Res status = yes</td>
+<td>X</td>
+<td>OK</td>
+<td>X</td></tr>
+
+<tr><td>Res status = no</td>
+<td>OK</td>
+<td>OK</td>
+<td>OK</td></tr>
+
+<tr><td>Res status = unknown</td>
+<td>X</td>
+<td>OK</td>
+<td>OK</td></tr>
+</table>
 
 
 ### Birthplace definitions
