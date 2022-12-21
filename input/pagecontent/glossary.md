@@ -31,7 +31,7 @@
 
 
 
-### Citizenship definitions
+### NZ Citizenship definitions
 
 * **Registered NZ Citizenship Status Definition**
   * A Registered NZ Citizenship status is a patient who holds NZ Citizenship and the citizenship status has been verified by a Government Agency.
@@ -67,21 +67,21 @@ table, th, td {
 }
 </style>
 <tr><th></th>
-<th>Citizenship status = yes</th>
-<th>Citizenship status = no</th>
-<th>Citizenship status = unknown</th></tr>
+<th>NZ Citizenship status = yes</th>
+<th>NZ Citizenship status = no</th>
+<th>NZ Citizenship status = unknown</th></tr>
 
-<tr><td>Res status = yes</td>
+<tr><td>NZ Residency status = yes</td>
 <td>X</td>
 <td>OK</td>
 <td>X</td></tr>
 
-<tr><td>Res status = no</td>
+<tr><td>NZ Residency status = no</td>
 <td>OK</td>
 <td>OK</td>
 <td>OK</td></tr>
 
-<tr><td>Res status = unknown</td>
+<tr><td>NZ Residency status = unknown</td>
 <td>X</td>
 <td>OK</td>
 <td>OK</td></tr>
