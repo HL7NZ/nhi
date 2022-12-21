@@ -78,7 +78,7 @@ The user has sourced the required identity information, and initiates an add req
   *  Unallocated names can only be set by an authorised agency
 
 
-* _Name errors_
+* _Add Patient Name errors_
   * _A Patient name must contain either a Given name or a Surname and a Name type_
   * _Patient Given Name is required when Patient Other Given Names is present_
   * _A Patient Given Name, Other Given Names, and Family Name must not contain special characters (TBC)_
@@ -96,7 +96,7 @@ The user has sourced the required identity information, and initiates an add req
   * _An ‘unallocated’ Name must have Name Use = Temp_
 
 
-* **Birthdate rules**
+* **Add Patient Birthdate rules**
   * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
   * A birthdate must be a complete date and formatted either:
     * YYYYMMDD - DOB less than or equal to the current date;
@@ -104,7 +104,7 @@ The user has sourced the required identity information, and initiates an add req
     * YYYY – less than or equal to the current year
   
   
-  * _Birthdate errors_
+  * _Add Patient Birthdate errors_
   * _Birthdate cannot be in the future_
   * _A patient Date of Birth is required when a patient Date of Birth information source is present_
   * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
@@ -113,54 +113,54 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Ethnicity rules**
+* **Add Patient Ethnicity rules**
   * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
   * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
 
-* _Ethnicity errors_
+* _Add Patient Ethnicity errors_
   * _A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code_
 
 
 ---
 
 
-* **Citizenship rules**
+* **Add Patient Citizenship rules**
   *  [NZ Citizenship](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzCitizen)
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
 
-* _Citizenship errors_
+* _Add Patient Citizenship errors_
   * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
 
 
 ---
 
 
-* **Residency rules**
+* **Add Patient Residency rules**
   *  [NZ Residency](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzResidency)
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
 
-* _Residency errors_
+* _Add Patient Residency errors_
   * _An NZ Residency status is required when an NZ Residency Information Source is present_
 
 
 ---
 
 
-* **Birthplace rules**
+* **Add Patient Birthplace rules**
   * A place of birth must only be populated if a country of birth is present
 
-* _Birthplace errors_
+* _Add Patient Birthplace errors_
   * _Country of birth is required when a place of birth is present_
   * _A Country of birth is required when a Country of Birth Information Source is present_
 
 
 ---
 
-* **Deceased date rules**
+* **Add Patient Deceased date rules**
   * If present, a [date of death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be after 1 January 1800 and not in the future
   * The [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be less than or equal to the [Date of Death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x])
 
-* _Deceased date errors_
+* _Add Patient Deceased date errors_
   * _Patient Date of death cannot be a future date_
   * _A patient Date of Death is required when a patient Date of Death information source is present_
   * _Deceased date can only be set to ‘Registered’ by an authorised Agency_
@@ -170,13 +170,13 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Address rules**
+* **Add Patient Address rules**
   * Must have one address with:
     * use = home
     * type = physical
 *  An address may be validated or not validated see [address rules](/updateAddress.html) for validated vs unvalidated address requirements
 
-* _Address errors_
+* _Add Patient Address errors_
   * _A Patient must have a primary residential address_
   * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
   * _Patient street address contains invalid text_
