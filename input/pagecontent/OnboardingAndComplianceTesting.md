@@ -553,8 +553,8 @@ Output: The address that is displayed to the end user is the address that is ret
 <li> <b>'unknown' unvalidated address</b>
 <li> <b>'no fixed abode' unvalidated address</b>
 <li> <b>'other' unvalidated address</b></td>
-<td>Input: An address request can be populated with the unvalidated address information<br />
-Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html)
+<td>Input: An address request can be populated with the unvalidated address information <br />
+Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html) <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
