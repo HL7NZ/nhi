@@ -598,6 +598,32 @@ Output: The address that is displayed to the end user is the address that is ret
 </table>
 
 
+<h3>NHI Patient Maintain Name tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Maintain-Name-1</td>
+<td>application can set the patients preferred name</td>
+<td>
+
+<li>Use NHI number ZZK09PQ</li>
+<li>Do a Get Patient request to see active patient names</li>
+<li>Change the preferred name from the current name to another active name for the patient using the [$set-preferred-name](/updateName.html#set-preferred-name)</li></td>
+<td>Input: An application can select a Patients preferred name from the active names list<br />
+Output: The preferred name that is displayed to the end user is name that was selected in the abovre operation and is presented as it is returned in the response</td>
+<td>mandatory</td></tr>
+</table>
+
 <h3>NHI Patient Add tests</h3>
 <table>
 <style>
