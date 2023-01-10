@@ -39,7 +39,7 @@ phases:
       - cd nhi
       - git checkout $BRANCH
       - ls
-      - echo getting depenencdies
+      - echo getting dependencies
       #- mvn package -ntp
       - mvn package
       - echo building IG
