@@ -620,7 +620,8 @@ table, th, td {
 <li>Do a Get Patient request to see active patient names</li>
 <li>Change the preferred name from the current name to another active name for the patient using the [$set-preferred-name](/updateName.html#set-preferred-name)</li></td>
 <td>Input: An application can select a Patients preferred name from the active names list<br />
-Output: The preferred name that is displayed to the end user is name that was selected in the abovre operation and is presented as it is returned in the response</td>
+Output: The preferred name that is displayed to the end user is the name that was selected in the operation<br />
+Output: The name is presented to the user with all name parts</td>
 <td>mandatory</td></tr>
 </table>
 
