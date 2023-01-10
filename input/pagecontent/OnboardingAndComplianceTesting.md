@@ -553,8 +553,8 @@ Output: The address that is displayed to the end user is the address that is ret
 <li> <b>'unknown' unvalidated address</b>
 <li> <b>'no fixed abode' unvalidated address</b>
 <li> <b>'other' unvalidated address</b></td>
-<td>Input: An address request can be populated with the unvalidated address information<br />
-Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html)
+<td>Input: An address request can be populated with the unvalidated address information <br />
+Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html) <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
@@ -597,6 +597,33 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>mandatory</td></tr>  
 </table>
 
+
+<h3>NHI Patient Maintain Name tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Maintain-Name-1</td>
+<td>application can set the patients preferred name</td>
+<td>
+
+<li>Use NHI number ZZK09PQ</li>
+<li>Do a Get Patient request to see active patient names</li>
+<li>Change the preferred name from the current name to another active name for the patient using the [$set-preferred-name](/updateName.html#set-preferred-name)</li></td>
+<td>Input: An application can select a Patients preferred name from the active names list<br />
+Output: The preferred name that is displayed to the end user is the name that was selected in the operation<br />
+Output: The name is presented to the user with all name parts</td>
+<td>mandatory</td></tr>
+</table>
 
 <h3>NHI Patient Add tests</h3>
 <table>
