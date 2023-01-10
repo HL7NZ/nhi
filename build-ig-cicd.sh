@@ -13,8 +13,8 @@ echo nzbase url =$nzbase_url
 echo nzbase version =$nzbase_version
 
 
-wget -e use_proxy=yes -e http_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  $nzbase_url"/full-ig.zip"
-unzip ./full-ig.zip site/package.tgz
+wget -e use_proxy=yes -e http_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  $nzbase_url"package.tgz"
+mv ./package.tgz site/package.tgz
 
 tar zxvf ./site/package.tgz
 #fix the package url:
