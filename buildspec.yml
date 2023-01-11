@@ -35,7 +35,7 @@ phases:
     commands:
       - ls 
       - rm -r nhi 
-      - git clone https://$GITCREDS@github.com/HL7NZ/nhi      
+      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi      
       - cd nhi
       - git checkout $BRANCH
       - ls
