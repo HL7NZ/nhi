@@ -25,7 +25,6 @@ mv temp.json ./package/package.json
 sudo mkdir -p  ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version/package
 sudo  cp -r ./package ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version
 cd ..
-.
 
 #cp hl7 packages into user's .fhir cache 
 aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.1/package.zip ./hl7-package.zip
