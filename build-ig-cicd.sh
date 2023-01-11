@@ -21,7 +21,7 @@ tar zxvf package.tgz
 jq --arg url $nzbase_url '.url |= $url' ./package/package.json > temp.json
 mv temp.json ./package/package.json 
 
-#cp nz packages  into user's .fhir cache 
+##cp nz packages  into user's .fhir cache 
 sudo mkdir -p  ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version/package
 sudo  cp -r ./package ~/.fhir/packages/fhir.org.nz.ig.base#$nzbase_version
 cd ..
