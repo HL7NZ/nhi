@@ -413,7 +413,7 @@ Output: All identity information is displayed for the patient. This is for a pat
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-8 (NHI-Get-6)</td>
-<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
+<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters)</td>
 <td>Use a Match request to retrieve ZBE4905 and demonstrate how you display the NHI details <br />
 Family Name: SurnameVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
 Given Names: GivenVeryVeryLongLongLongnamewithtoomanycharacters, MiddleVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
@@ -472,28 +472,31 @@ Output: All address formats are displayed appropriately</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-12 (NHI-Get-10)</td>
-<td>application can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
-<td> Use a Match request to retrieve <b>all of the following</b> and demonstrate how you display the NHI details <br />
-<b>1. ZAU8023</b> <br />
+<td>application can handle a response when a patient has <br />
+only a surname; <br />
+only a given name; <br />
+multiple names</td>
+<td> Use a Match request to retrieve <b> all of the following </b> and demonstrate how you display the NHI details <br />
+<b> 1. ZAU8023 </b> <br />
 Family Name: Magi <br />
 Birthdate:01-01-2012 <br />
 Gender: Unknown <br />
-<b>2. ZAV8657</b> <br />
+<b> 2. ZAV8657 </b> <br />
 Given Name: Cambridge <br />
 Birthdate:12-04-1960 <br />
 Gender: Male <br />
-<b>3. ZHS7524</b> <br />
+<b> 3. ZHS7524 </b> <br />
 Family Name: MultipleAddress <br />
 Given Name: Francis <br />
 Birthdate:12-12-1982 <br />
 Gender: Male </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
-<b>1. Output: The top result returned is NHI: ZAU8023 </b> <br />
-<b>2. Output: The top result returned is NHI: ZAV8657 </b> <br />
-<b>3. Output: The top result returned is NHI: ZHS7524 </b> <br />
+<b> 1. Output: The top result returned is NHI: ZAU8023 </b> <br />
+<b> 2. Output: The top result returned is NHI: ZAV8657 </b> <br />
+<b> 3. Output: The top result returned is NHI: ZHS7524 </b> <br />
 Output: Application does not error <br />
 Output: Application returns all name parts when present <br />
-Output: Order of name parts is clear to the user</td>
+Output: Order of name parts is clear to the user </td>
 <td>Mandatory</td></tr>
 </table>
 
@@ -513,66 +516,62 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-Maintain-Address-1</td>
-<td>application can replace the <b>primary residential address</b> on a patient record with a validated address</td>
-<td>
-<li>Use selected NHI number</li>
-<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI</li>
-<li>Add a new <b>primary residential address</b> to the patient record using the [$set-addresss operation](/updateAddress.html#set-address)</li></td>
+<td>application can replace the <b> primary residential address </b> on a patient record with a validated address </td>
+<td><li>Use selected NHI number</li>
+<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI </li>
+<li>Add a new <b> primary residential address </b> to the patient record using the set-addresss operation</li></td>
 <td>Input: Application can validate an address via e-SAM (using suggest or search)<br />
 Input: An address request can be populated with appropriate information<br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-2</td>
-<td>application can add (or replace) the <b>postal address</b> on a patient record with a validated address</td>
-<td>
-<li>Use selected NHI number</li>
-<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI</li>
-<li>Add a new <b>postal address</b> to the patient record using the [$set-addresss operation](/updateAddress.html#set-address)</li></td>
+<td>application can add (or replace) the <b> postal address </b> on a patient record with a validated address</td>
+<td><li>Use selected NHI number</li>
+<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI </li>
+<li>Add a new <b> postal address </b> to the patient record using the set-addresss operation</li></td>
 <td>Input: Application can validate an address via e-SAM (using suggest or search)<br />
 Input: An address request can be populated with appropriate information<br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-3</td>
-<td>application can replace the <b>primary residential address</b> on a patient record with an <b>overseas</b> unvalidated address</td>
-<td>
-<li>Use selected NHI number</li>
-<li>Add a new <b>primary residential address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
-<td>Input: An address request can be populated with overseas unvalidated address information<br />
-Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>application can replace the <b> primary residential address </b> on a patient record with an <b> overseas </b> unvalidated address </td>
+<td><li>Use selected NHI number</li>
+<li>Add a new <b> primary residential address </b> to the patient record using the set-unvalidated-address operation </li></td>
+<td>Input: An address request can be populated with overseas unvalidated address information <br />
+Output: The address that is displayed to the end user is the address that is returned in the update response </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-4</td>
-<td>application can replace the <b>primary residential address</b> on a patient record with an:
-<li> <b>'unknown' unvalidated address</b>
-<li> <b>'no fixed abode' unvalidated address</b>
-<li> <b>'other' unvalidated address</b></td>
-<td><li>Use selected NHI number</li>
-<li>Add a new <b>primary residential address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li><li><b>Do ALL</b></li>
-<li> <b>'unknown' unvalidated address</b>
-<li> <b>'no fixed abode' unvalidated address</b>
-<li> <b>'other' unvalidated address</b></td>
+<td>application can replace the <b> primary residential address </b> on a patient record with an:
+<li> <b> 'unknown' unvalidated address </b> </li>
+<li> <b> 'no fixed abode' unvalidated address </b> </li>
+<li> <b> 'other' unvalidated address </b> </li> </td>
+<td> <li> Use selected NHI number</li>
+<li>Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li>
+<b>Do ALL</b><
+<li> <b> 'unknown' unvalidated address </b> </li>
+<li> <b> 'no fixed abode' unvalidated address </b> </li>
+<li> <b> 'other' unvalidated address </b></li> </td>
 <td>Input: An address request can be populated with the unvalidated address information <br />
 Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html) <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-5</td>
-<td>application can replace the <b>primary residential address</b> on a patient record with an <b>Address Service Unavailable</b> unvalidated address</td>
-<td>
-<li>Use selected NHI number</li>
+<td>application can replace the <b> primary residential address </b> on a patient record with an <b> Address Service Unavailable </b> unvalidated address </td>
+<td><li>Use selected NHI number</li>
 <li> Disable the external Address Service lookup</li>
 <li> Show Address Service error </li>
-<li> Add a new <b>primary residential address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
+<li> Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
 <td>Input: An address request can be populated with NOSVC unvalidated address information<br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-6</td>
 <td>application can replace the <b>postal address</b> on a patient record with an <b>Address Service Unavailable</b> unvalidated address</td>
-<td>
-<li>Use selected NHI number</li>
+<td><li>Use selected NHI number</li>
 <li> Disable the external Address Service lookup</li>
 <li> Show Address Service error </li>
 <li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
@@ -582,8 +581,7 @@ Output: The address that is displayed to the end user is the address that is ret
 
 <tr><td>NHI-Maintain-Address-7</td>
 <td>application can replace the <b>postal address</b> on a patient record with an <b>Overseas</b> unvalidated address</td>
-<td>
-<li>Use selected NHI number</li>
+<td><li>Use selected NHI number</li>
 <li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
 <td>Input: An address request can be populated with overseas unvalidated address information<br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
@@ -593,7 +591,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>application can remove the <b>postal address</b> on a patient record</td>
 <td><li>Use selected NHI number</li>
 <li> Remove the <b>postal address</b> from the patient record using the [$remove-postal-address](/updateAddress.html#remove-postal-address)</li></td>
-<td>Output: The patient record has Postal address removed.</td>
+<td>Output: The patient record has Postal address removed</td>
 <td>mandatory</td></tr>  
 </table>
 
@@ -614,9 +612,7 @@ table, th, td {
 
 <tr><td>NHI-Maintain-Name-1</td>
 <td>application can set the patients preferred name</td>
-<td>
-
-<li>Use NHI number ZZK09PQ</li>
+<td><li>Use NHI number ZZK09PQ</li>
 <li>Do a Get Patient request to see active patient names</li>
 <li>Change the preferred name from the current name to another active name for the patient using the [$set-preferred-name](/updateName.html#set-preferred-name)</li></td>
 <td>Input: An application can select a Patients preferred name from the active names list<br />
