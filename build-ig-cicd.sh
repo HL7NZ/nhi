@@ -2,6 +2,7 @@
 set -x #echo on
 # this script is intended to be run from code build, it should build the IG using the Hl7 IG Publisher
 
+rm ./output/full-ig.zip
 echo cleaning up temp directory ...
 rm -r  ./temp
 
