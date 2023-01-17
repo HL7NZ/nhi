@@ -61,6 +61,7 @@ sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
 
 echo "Making API summary"
+sudo chmod +x ./localscripts/makeCapabilityStatement.js
 ./localscripts/makeCapabilityStatement.js nhi
 pwd
 
