@@ -47,7 +47,6 @@ Description:    "The Patient resource exposed by the NHI."
 * name.text 0..0
 * identifier.period 0..0
 * telecom 0..0
-* generalPractitioner 0..0
 * deceased[x] only dateTime
 
 * extension contains 
@@ -105,11 +104,6 @@ Description:    "The Patient resource exposed by the NHI."
 * address 0..*
 * address.line 1..*     //there will always be at least 1 line
 
-//Limit the possible resources for generalPractitioner only to a PractitionerRole
-//Note that this might still be a contained resource - that's still supported by this profile
-* generalPractitioner only Reference(PractitionerRole)
-
-
 
 //identifier constraints for NHI
 
@@ -132,4 +126,22 @@ Description:    "The Patient resource exposed by the NHI."
 * extension[sex-at-birth] 0..0
 * extension[domicile-code] 0..0
 
+
+// GP
+
+//Limit the possible resources for generalPractitioner only to a PractitionerRole
+//Note that this might still be a contained resource - that's still supported by this profile
+* generalPractitioner only Reference(PractitionerRole)
+
+* generalPractitioner 0..1
+
+// slice for contained practitionerRole
+* contained ^slicing.discriminator.type = #type
+* contained ^slicing.discriminator.path = "$this"
+* contained ^slicing.rules = #closed
+* contained ^slicing.description = "Slicing to specifiy a PractitionerRole resource may be returned as a contained resource for the Patient's General Practitioner information"
+* contained contains GP 0..1
+* contained[GP] only http://hl7.org/fhir/StructureDefinition/PractitionerRole
+* contained[GP] ^short = "Patient's GP"
+* contained[GP] ^definition = "Contained resource for the patient's GP"
 
