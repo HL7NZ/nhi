@@ -157,9 +157,8 @@ table, th, td {
 ### Name Definitions
 
 * **Duplicate Name Definition**
-  * A Name is a duplicate name for a given NHI number if all name identity attribute values match the values for an existing name for that NHI.
+  * A Name is a duplicate name for a given NHI number if the name identity attribute values below match the values for an existing active name for that NHI.
   * Name identity attributes are:
-    * Name Prefix (Title), 
     * Given Name, 
     * Other Given Names, 
     * Family Name, 
