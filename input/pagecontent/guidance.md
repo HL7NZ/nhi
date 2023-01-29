@@ -69,7 +69,7 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
   1. User finds the patient record in local system.
   2. Local system looks up NHI [Get Patient.](/getPatient.html)
   3. If the user has the correct permissions the details for the General Practice that the Patient is enrolled with will be returned as a contained resource.
-  4. For additional information the user could search the HPI using the hpi-facility-id, hpi-organization-id or the hpi-person-id. See example (Ref below TBC) for how this would work for to lookup EDI for an enrolled patient’s General Practice
+  4. For additional information the user could search the HPI using the hpi-facility-id, hpi-organisation-id or the hpi-person-id. See example (Ref below TBC) for how this would work for to lookup EDI for an enrolled patient’s General Practice
   5. Note: 
     * The version number for the Patient record does not change when the General Practitioner details change (See NHI Profile for more information)
     * To update the General Practitioner details the user will need to access the SOAP Enrolment web services
