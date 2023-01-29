@@ -142,6 +142,6 @@ Description:    "The Patient resource exposed by the NHI."
 * contained ^slicing.description = "Slicing to specifiy a PractitionerRole resource may be returned as a contained resource for the Patient's General Practitioner information"
 * contained contains GP 0..1
 * contained[GP] only http://hl7.org/fhir/StructureDefinition/PractitionerRole
-* contained[GP] ^short = "Patient's GP"
-* contained[GP] ^definition = "Contained resource for the patient's GP"
+* contained[GP] ^short = "Patient's enrolled general Practitionr"
+* contained[GP] ^definition = "Contained resource for the General Practice that the patient is enrolled with"
 
