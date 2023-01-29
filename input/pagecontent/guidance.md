@@ -3,7 +3,7 @@
 ### Patient resource use cases
 
 
-#### New Patient presents for healthcare.
+#### A new Patient presents for healthcare.
 
 A new patient presents for healthcare e.g. A casual patient books an appointment with GP, a new patient seeks to enrol at a GP, a patient presents at an Accident and Emergency department or afterhours clinic, a referral is received for a patient from a health provider. <br />
 This is a new patient not yet registered in the hospital or providers system.
@@ -17,7 +17,7 @@ This is a new patient not yet registered in the hospital or providers system.
      6. System assigns NHI number and version to local record.
 
 
-#### Returning patient presents for healthcare.
+#### A returning patient presents for healthcare.
 
 An existing patient known to the hospital or GP practice presents for healthcare e.g. Enrolled patient books or attends an appointment, a patient presents for an outpatient appointment, a patient presents for planned admission. <br />
 The patient details are already in the local system and an NHI number and version have previously been assigned.
@@ -30,7 +30,7 @@ The patient details are already in the local system and an NHI number and versio
      5. If an NHI patient attribute has changed or the local patient details have been updated, the user compares the local and NHI details and makes corrections where appropriate using _Update core_, [Update name](/updateName.html) or [Update address.](/updateAddress.html)
 
 
-#### Receive notification that patient details have changed.
+#### A notification is received that patient details have changed.
 
 Information is received by the hospital or provider that patient information has changed. This may be a Notification from National enrolment service that the patient has died, the patient may contact the hospital or provider to provide a new address (Future notification service).
 
@@ -41,7 +41,7 @@ Information is received by the hospital or provider that patient information has
      4. Compare local with NHI and update as required using _Update core_, [Update name](/updateName.html) or [Update address.](/updateAddress.html)
 
 
-#### Provider notices a discrepancy between local and NHI record, but does not have update access.
+#### A provider notices a discrepancy between local and NHI record, but does not have update access.
 
   * Steps involved:
      1. Find patient in local system.
@@ -50,7 +50,8 @@ Information is received by the hospital or provider that patient information has
      4. Notice discrepancy between local and NHI record.
      5. Ring or email Te Whatu Ora contact centre so discrepancy can be updated.
 
-#### Validate NHI number.
+
+#### A user needs to Validate an NHI number.
 
 I don't have access rights to view the NHI details. I want to validate the NHI number and the demographic details I have match the NHI patient details.
 
