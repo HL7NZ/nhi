@@ -164,12 +164,13 @@ Description: "Types of contact use supported  by the NHI"
 * ^publisher = "Te Whatu Ora"
 * codes from system http://hl7.org/fhir/contact-point-use
 * exclude ContactPointUse#temp
-* exclude ContactPointUse#contact-point-use#old
+* exclude ContactPointUse#old
+* exclude ContactPointUse#work
 
 
 ValueSet: NhiContactPointSystem
 Id: nhi-contact-point-system-code-1.0
-Title: "NHI ContactPoint System  odes"
+Title: "NHI ContactPoint System Codes"
 Description: "System values for a ContactPoint supported  by the NHI"
 * ^url = "https://nzhts.digital.health.nz/fhir/ValueSet/nhi-contact-point-system-code"
 * ^version = "1.0"
@@ -177,6 +178,5 @@ Description: "System values for a ContactPoint supported  by the NHI"
 * ^experimental = false
 * ^date = "2023-01-30T00:00:00+13:00"
 * ^publisher = "Te Whatu Ora"
-* codes from system  http://hl7.org/fhir/contact-point-system
 * include ContactPointSystem#phone
 * include ContactPointSystem#email
