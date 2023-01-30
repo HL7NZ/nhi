@@ -46,7 +46,6 @@ Description:    "The Patient resource exposed by the NHI."
 * name.period 0..0
 * name.text 0..0
 * identifier.period 0..0
-* telecom 0..0
 * deceased[x] only dateTime
 
 * extension contains 
@@ -126,6 +125,13 @@ Description:    "The Patient resource exposed by the NHI."
 * extension[sex-at-birth] 0..0
 * extension[domicile-code] 0..0
 
+// Contact
+
+* telecom 0..1
+* telecom.use from https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
+* telecom.system from https://nzhts.digital.health.nz/fhir/ValueSet/nhi-contact-point-system-code
+* telecom.rank 0..0
+* telecom.period 0..0
 
 // GP
 
@@ -145,3 +151,32 @@ Description:    "The Patient resource exposed by the NHI."
 * contained[GP] ^short = "Patient's GP"
 * contained[GP] ^definition = "Contained resource for the patient's GP"
 
+
+ValueSet: NhiContactPointUse
+Title: "NHI ContactPoint Use Codes"
+Id: nhi-address-type
+Description: "Types of contact use supported  by the NHI"
+* ^url = https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
+* ^version = "1.0"
+* ^status = #active
+* ^experimental = false
+* ^date = "2023-01-30T00:00:00+13:00"
+* ^publisher = "Te Whatu Ora"
+* codes from system http://hl7.org/fhir/contact-point-use
+* exclude ContactPointUse#temp
+* exclude ContactPointUse#contact-point-use#old
+
+
+ValueSet: NhiContactPointSystem
+Id: nhi-contact-point-system-code-1.0
+Title: "NHI ContactPoint System  odes"
+Description: "System values for a ContactPoint supported  by the NHI"
+* ^url = "https://nzhts.digital.health.nz/fhir/ValueSet/nhi-contact-point-system-code"
+* ^version = "1.0"
+* ^status = #active
+* ^experimental = false
+* ^date = "2023-01-30T00:00:00+13:00"
+* ^publisher = "Te Whatu Ora"
+* codes from system  http://hl7.org/fhir/contact-point-system
+* include ContactPointSystem#phone
+* include ContactPointSystem#email
