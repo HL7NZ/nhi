@@ -90,8 +90,13 @@ set-preferred-name example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient set-preferred-name rules**
+  * A set-preferred-name request must include:
+     * a valid NHI number
+     * the current patient version number
+     * the preferred-id
 
 * _Patient set-preferred-name errors_
+  * _Patient NHI, preferred ID and version number are required_ 
 
 
 
