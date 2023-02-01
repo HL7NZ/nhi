@@ -225,6 +225,43 @@ ZBE4905</td>
 <td>mandatory</td></tr>
 </table>
 
+<h3>NHI Patient GET tests (GP and Contact permissions)</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption> **Only complete these if you have either permission to vew a Patients GP or Contact details** </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-GET-11</td>
+<td>application can display the Patients's enrolled General Practice details returned by the NHI in a GET response including
+<li>The NES enrolment id</li>
+<li>enrolment.startDate</li>
+<li>enrolment.expiryDate</li>
+<li>Practitioner identifier (CPN) and name</li>
+<li>enrolling organisation ID and name</li>
+<li>Facility ID and name</li></td>
+<td> **TBC** </td>
+<td>Output: application does not error <br /> application returns all General Practice details when present </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-GET-12</td>
+<td>application can display the Patients's contact details returned by the NHI in a GET response including:
+<li>Home phone</li>
+<li>Mobile phone</li>
+<li>Email address</li></td>
+<td> **TBC** </td>
+<td>Output: application does not error <br /> application returns all Contact details when present </td>
+<td>mandatory</td></tr>
+</table>
+
 <h3>NHI Patient Match tests</h3>
 <table>
 <style>
