@@ -1,5 +1,7 @@
 
 
+### Core NHI Profile attributes
+
 The NHI Patient resource represents the nationally held identity data for a patient.
 
 This includes the core NHI Profile attributes:
@@ -17,7 +19,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 
 
 
-### Key differences from spec
+### Key differences from HL7 FHIR Patient specification
 
 * Ethnicity extension
 * NZ Citizenship and Residency extension
@@ -44,7 +46,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 
 ### Patients enrolled General Practice
 
-The details for the Patient’s enrolled General Practice (GP) are returned in the NHI Patient Profile to users who have permission to view a Patient’s National Enrolment Service (NES) information (TBC). This is an additional permission required on your NHI FHIR account.
+The details for the Patient’s enrolled General Practice (GP) are returned in the NHI Patient Profile to users who have permission to view a Patient’s National Enrolment Service (NES) information. This is an additional permission required on your NHI FHIR account.
 
 The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their Enrolling GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the patients usual doctor (hpi-person-id / CPN).
 
@@ -93,13 +95,13 @@ This will change when a patient transfers to a new practice, but will not reflec
 
 The generalPractitioner is only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
 
-For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please prescribe to the NES service (link TBC)
+For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please prescribe to the NES service
 
 
 
 ### Patient Contact details
 
-The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences (link TBC). This is an additional permission required on your NHI FHIR account (TBC). 
+The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account. 
 
 The contact details are only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
 
