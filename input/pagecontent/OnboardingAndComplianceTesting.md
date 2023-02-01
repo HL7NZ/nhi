@@ -156,7 +156,7 @@ table, th, td {
 <li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
 <li>Has three ethnicities</li>
 <li>Is a NZ citizen</li></td>
-<td>Mandatory</td></tr>
+<td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-4</td>
 <td>application can display all other identity data returned by the NHI in a GET response including:
@@ -250,7 +250,7 @@ table, th, td {
 <li>Facility ID and name</li></td>
 <td> **TBC** </td>
 <td>Output: application does not error <br /> application returns all General Practice details when present </td>
-<td>mandatory</td></tr>
+<td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-12</td>
 <td>application can display the Patients's contact details returned by the NHI in a GET response including:
@@ -259,7 +259,7 @@ table, th, td {
 <li>Email address</li></td>
 <td> **TBC** </td>
 <td>Output: application does not error <br /> application returns all Contact details when present </td>
-<td>mandatory</td></tr>
+<td>*Mandatory if </td></tr>
 </table>
 
 <h3>NHI Patient Match tests</h3>
