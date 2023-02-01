@@ -46,7 +46,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 
 ### Patients enrolled General Practice
 
-The details for the Patient’s enrolled General Practice (GP) are returned in the NHI Patient Profile to users who have permission to view a Patient’s National Enrolment Service (NES) information. This is an additional permission required on your NHI FHIR account.
+The details for the Patient’s enrolled General Practice (GP) are returned in the NHI Patient Profile to users who have permission to access a Patient’s National Enrolment Service (NES) information. This is an additional permission required on your NHI FHIR account.
 
 The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their Enrolling GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the patients usual doctor (hpi-person-id / CPN).
 
