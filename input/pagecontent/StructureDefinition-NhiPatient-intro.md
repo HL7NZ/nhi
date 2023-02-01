@@ -53,7 +53,7 @@ A subset of the NES enrolment information is returned in the NHI FHIR GET respon
 -	Health Service code = FLS
 -	Only active (un-ended) enrolments
 
-<h3>Security and Audit Assessment</h3>
+<h3>Patients enrolled GP FHIR mapping</h3>
 <table>
 <style>
 table, th, td {
