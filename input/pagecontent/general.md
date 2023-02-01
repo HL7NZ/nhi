@@ -306,6 +306,8 @@ table, th, td {
 <tr><td> https://api.hip.digital.health.nz/fhir/patient:write </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
 </table>
 
+* Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
+
 #### API Keys and Usage Plans
 
 Clients will be emailed their API key, which should be treated as confidential information and not shared with other parties
