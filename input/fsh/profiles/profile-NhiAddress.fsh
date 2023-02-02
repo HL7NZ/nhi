@@ -37,7 +37,7 @@ Description:    "Adds additional, NHI specific extensions"
 // type is mandatory
 * type 1..1
 * type ^short = "postal | physical"
-* type ^definition = "Distinguishes between Residential (physical) and Postal (mailing) addresses
+* type ^definition = "Distinguishes between Residential (physical) and Postal (mailing) addresses"
 
 //excluded
 * district 0..0

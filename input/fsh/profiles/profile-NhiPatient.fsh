@@ -126,7 +126,7 @@ Description:    "The Patient resource exposed by the NHI."
 
 // Contact
 
-* telecom 0..1
+* telecom 0..3
 * telecom.use from https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
 * telecom.use ^short = "home | mobile"
 * telecom.use ^definition = "The purpose of this contact point - constrained to home | mobile"
@@ -136,6 +136,7 @@ Description:    "The Patient resource exposed by the NHI."
 
 * telecom.rank 0..0
 * telecom.period 0..0
+* telecom.extension[cp-purpose] 0..0
 
 
 // GP
