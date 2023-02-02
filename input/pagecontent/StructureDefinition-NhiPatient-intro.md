@@ -55,7 +55,7 @@ A subset of the NES enrolment information is returned in the NHI FHIR GET respon
 -	Health Service code = FLS
 -	Only active (un-ended) enrolments
 
-<h3>Patients enrolled GP FHIR mapping</h3>
+<h3>Patient's enrolled GP NES to FHIR mapping</h3>
 <table>
 <style>
 table, th, td {
@@ -93,9 +93,39 @@ This will change when a patient transfers to a new practice, but will not reflec
 <td> The hpi-facility-id and name of the Facility where the patient primarily receives the service. </td></tr>
 </table>
 
+
+#### Example of contained resource
+
+```
+"contained": [
+        {
+            "resourceType": "PractitionerRole",
+            "id": "525599",
+            "period": {
+                "start": "2023-01-26T00:00:00+13:00",
+                "end": "2026-01-26T00:00:00+13:00"
+            },
+            "practitioner": {
+                "reference": "Practitioner/25ADNX",
+                "display": "Dr Nick"
+            },
+            "organization": {
+                "reference": "Organization/GAAAAA-0"
+                "display": "Riviera Health Care"
+            },
+            "location": [
+                {
+                    "reference": "Location/FZZ862-H",
+                    "display": "Dr Nick's Guaranteed Health Clinic"
+                }
+            ]
+        }
+    ],
+```
+
 The generalPractitioner is only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
 
-For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please prescribe to the NES service
+For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES service
 
 
 
