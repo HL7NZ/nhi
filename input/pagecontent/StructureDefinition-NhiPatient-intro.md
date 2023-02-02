@@ -44,7 +44,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 
 
 
-### Patients enrolled General Practice
+### Patient's enrolled General Practice
 
 The details for the Patient’s enrolled General Practice (GP) are returned in the NHI Patient Profile to users who have permission to access a Patient’s National Enrolment Service (NES) information. This is an additional permission required on your NHI FHIR account.
 
@@ -99,7 +99,7 @@ For information on enrolment history, re-enrolment dates, enrolment status, or t
 
 
 
-### Patient Contact details
+### Patient's Contact details
 
 The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account. 
 
