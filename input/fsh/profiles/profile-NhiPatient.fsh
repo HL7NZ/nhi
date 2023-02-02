@@ -127,6 +127,7 @@ Description:    "The Patient resource exposed by the NHI."
 // Contact
 
 * telecom 0..3
+* telecom ^short = "The Paient's contact details"
 * telecom.use from https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
 * telecom.use ^short = "home | mobile"
 * telecom.use ^definition = "The purpose of this contact point - constrained to home | mobile"
