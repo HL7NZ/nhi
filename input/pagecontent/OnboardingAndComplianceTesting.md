@@ -278,11 +278,10 @@ table, th, td {
 
 <tr><td>NHI-Match-1</td>
 <td>application allows the user to search using the following attributes:
-<li>Given Name(s), Surname</li>
-<li>Gender</li>
-<li>Partial or full date of birth</li>
-And to show that the application displays at least the minimum required attributes in a search result:
-<li>Given Name(s), Surname</li>
+<li>Name (Given Name(s) and/or Surname)</li>
+<li>Birthdate (Full or partial)</li>
+And to show that the application can present the minimum details to allow for adequate confirmation of identity (if present on the patient record): 
+<li>Name (Given Name(s), Surname)</li>
 <li>Gender</li>
 <li>Birthdate</li>
 <li>Primary Address</li>
@@ -290,14 +289,16 @@ And to show that the application displays at least the minimum required attribut
 <li>NHI Identifier</li>
 <li>Match Score</li>
 <li>Display a flag/indicate when a patient in the search result has multiple names</li>
-The application must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
+Note:
+<li>The application must display multiple results if they are returned.</li>
+<li>Results must be presented in descending order of the match score.</li></td>
 <td>Given Name: Noah <br />
 Middle Name: James <br />
 Surname: Owen <br />
 Gender: M <br />
 DOB: 1949-10-30 (30th October 1949)</td>
 <td>Input: Minimum search criteria can be entered <br />
-Output: The top result returned in the search should be NHI ZBH6793 <br />
+Output: The top result returned in the search should be NHI ZAT4626 <br />
 Output: Minimum search result identity attributes are all present in result list
 </td>
 <td>mandatory</td></tr>
