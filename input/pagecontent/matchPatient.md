@@ -2,7 +2,8 @@
 
 ### Match Patient Overview
 
-* The match patient operation allows a user to search the locate a Patient record with known Patient demographics.
+* The match patient operation allows a user to search and locate a Patient record with known Patient demographics.
+
 
 <div>
 {% include match-patient.svg %}
