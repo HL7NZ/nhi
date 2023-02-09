@@ -88,7 +88,7 @@ paths:
     
   
            
-  /fhir/nhi/v1/Patient/{rid}:
+  /fhir/nhi/v1/Patient/{nhiOpId}:
       summary: Read/Write/etc resource instance of type Patient
       description: >-
         Access to services to manage the state of a single resource of type Patient
@@ -116,7 +116,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/OperationOutcome'
         parameters:
-          - $ref: '#/components/parameters/rid'          
+          - $ref: '#/components/parameters/nhiOpId'          
           - $ref: '#/components/parameters/format'
           - $ref: '#/components/parameters/pretty'
           - $ref: '#/components/parameters/summary'
@@ -125,22 +125,26 @@ paths:
         
   
       post:
-        summary: match operation
-        operationId: match
+        summary: custom operation
+        operationId: custom
         requestBody:
-          description: patient attributes to match against
+          description: one of $match or $set-preferred-name
           required: true
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PatientMatchRequest'
+                oneOf:
+                  - $ref: '#/components/schemas/PatientMatchRequest'
+                  - $ref: '#/components/schemas/SetPreferredNameRequest'
         responses:
           '200':
             description: the resource being returned
             content:
               application/fhir+json:
                 schema:
-                  $ref: '#/components/schemas/PatientMatchResponse'
+                  oneOf:
+                    - $ref: '#/components/schemas/PatientMatchResponse'
+                    - $ref: '#/components/schemas/Patient'
              
           '400':
             description: Error, with details
@@ -155,7 +159,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/OperationOutcome'
         parameters: 
-            - $ref: '#/components/parameters/rid'             
+            - $ref: '#/components/parameters/nhiOpId'             
             - $ref: '#/components/parameters/pretty'
             - $ref: '#/components/parameters/summary'
             - $ref: '#/components/parameters/elements'
@@ -802,6 +806,12 @@ components:
           
       additionalProperties: false
       
+    NhiAddressType:
+      type: string
+      enum:
+        - postal
+        - physical
+      
     NHIIdentifer:
       type: object
       description: The NHI number is a unique number for all New Zealanders, assigned at birth
@@ -1409,7 +1419,108 @@ components:
           - resourceType            
       additionalProperties: false
            
-                 
+    SetPreferredNameRequest:
+      type: object
+      properties:
+        resourceType:
+          enum:
+            - 'Parameters'
+        id:
+          $ref: '#/components/schemas/string'          
+        parameter:
+          description: An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/ParameterNhi'
+              - $ref: '#/components/schemas/ParameterVersionId'
+              - $ref: '#/components/schemas/ParameterPreferredId'
+          minItems: 3
+          maxItems: 3
+      required:      
+          - resourceType            
+      additionalProperties: false
+      
+      
+    SetAddressRequest:
+      type: object
+      properties:
+        resourceType:
+          enum:
+            - 'Parameters'
+        id:
+          $ref: '#/components/schemas/string'          
+        parameter:
+          description: An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values
+          type: array
+          items:
+            anyOf:
+              - $ref: '#/components/schemas/ParameterNhi'
+              - $ref: '#/components/schemas/ParameterVersionId'
+              - $ref: '#/components/schemas/ParameterAddressType'
+              - $ref: '#/components/schemas/ParameterNzAddressId'
+              - $ref: '#/components/schemas/ParameterAddressLine'
+              - $ref: '#/components/schemas/ParameterBuildingName'
+          minItems: 5
+          maxItems: 6
+      required:      
+          - resourceType            
+      additionalProperties: false
+      
+
+
+    ParameterAddressType:
+      type: object
+      description: type of addeses - postal or physical
+      properties:       
+        name:
+          enum:
+            - 'address-type'
+        valueInteger:
+           $ref: '#/components/schemas/NhiAddressType'
+      required:
+          - name            
+      additionalProperties: false
+      
+    ParameterNzAddressId:
+      type: object
+      description: eSAM validated address id
+      properties:       
+        name:
+          enum:
+            - 'nz-address-id'
+        valueInteger:
+           $ref: '#/components/schemas/string'
+      required:
+          - name            
+      additionalProperties: false
+      
+    ParameterAddressLine:
+      type: object
+      description: first line of the address as returned by eSAM
+      properties:       
+        name:
+          enum:
+            - 'address-line'
+        valueInteger:
+           $ref: '#/components/schemas/string'
+      required:
+          - name            
+      additionalProperties: false
+      
+    ParameterBuildingName:
+      type: object     
+      properties:       
+        name:
+          enum:
+            - 'building-name'
+        valueInteger:
+           $ref: '#/components/schemas/string'
+      required:
+          - name            
+      additionalProperties: false
+      
+                    
     ParameterResource:
       type: object
       description: Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match).
@@ -1444,7 +1555,46 @@ components:
           enum:
             - 'onlyCertainMatches'
         valueBoolean:
-           $ref: '#/components/schemas/boolean'         
+           $ref: '#/components/schemas/boolean'   
+    
+    ParameterNhi:    
+      type: object
+      description:  patient identifier
+      properties:
+        name:
+          enum:
+            - 'nhi'
+        valueInteger:
+           $ref: '#/components/schemas/string'
+      required:
+          - name            
+      additionalProperties: false   
+      
+    ParameterVersionId:    
+      type: object
+      description:  patient version
+      properties:
+        name:
+          enum:
+            - 'version-id'
+        valueInteger:
+           $ref: '#/components/schemas/integer'
+      required:
+          - name            
+      additionalProperties: false   
+      
+    ParameterPreferredId:    
+      type: object
+      description:  Id of the preferred element
+      properties:
+        name:
+          enum:
+            - 'preferred-id'
+        valueInteger:
+           $ref: '#/components/schemas/integer'
+      required:
+          - name            
+      additionalProperties: false   
       
     PatientMatchResponse:
       type: object
@@ -1461,9 +1611,35 @@ components:
             type: object
             properties:
                resource:                
-                  $ref: '#/components/schemas/Patient'                              
+                  $ref: '#/components/schemas/Patient'   
+                  
+    CustomOperationName:      
+        type: string
+        enum:
+          - '$match'
+          - '$set-preferred-name'     
+    Rid:      
+        type: string
+        enum:
+          - '$match'
+          - '$set-preferred-name'  
+          - '$set-address'
       
   parameters:
+  
+    nhiOpId:
+      name: nhiOpId
+      in: path
+      description: id identifies the kind of post operation
+      required: true
+      allowEmptyValue: false
+      style: simple
+      schema:
+       oneOf:
+              - $ref: '#/components/schemas/Rid'
+              - $ref: '#/components/schemas/CustomOperationName'  
+
+    
           
     rid:
       name: rid
