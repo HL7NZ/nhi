@@ -42,11 +42,9 @@ table, th, td {
 * Behaviour:
   * The NHI does a search using supplied Patient demographics
   * A bundle of patient records that represent possible matches is returned
-  * Each record will have:
-    * A search score most likely (1) to least likely (0)
-    * A "match-grade": (Certain Match / Possible Match)
-
-* A match-grade "Certain Match" should always be checked for accuracy when a human is involved in the match request
+  * Each record will have a match score from 40 (least likely) - 140 (most likely)
+    * Scores below 40 are not returned.
+  * The highest scoring records are returned first in the bundle
 
 **Privcy requirements**
 * Te Whatu Ora does not require a Get to be done after a match request
@@ -69,7 +67,7 @@ table, th, td {
     * birthdate
     * gender
     * nhi-id (live)
-    * address (primary resedential)
+    * address (primary residential)
     * match score
 
   * Other details to consider presenting:
@@ -80,5 +78,3 @@ table, th, td {
 * _Match Patient errors_
   * _Patient name is a required field_
   * _Patient birthdate is a required field_
-  * _No results were found matching the search criteria provided_
-  * _Criteria too wide to perform a successful match. Please narrow your criteria and re-submit_

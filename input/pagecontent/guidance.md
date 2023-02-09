@@ -11,7 +11,7 @@ This is a new patient not yet registered in the hospital or providers system.
 * Steps involved:
   1. User searches the local system for patient.
   2. User Adds the patient to the local system.
-  3. Local system searches the NHI for the patient [(Match Patient.](/matchPatient.html)
+  3. Local system searches the NHI for the patient [Match Patient.](/matchPatient.html)
   4. User selects a record from the search results OR patient is not found in NHI and user adds new record to NHI [Add Patient.](/addPatient.html)
   5. User compares the local and NHI details, confirms with the patient and makes corrections where appropriate using _Update core_, [Update name](/updateName.html) or [Update address.](/updateAddress.html)
   6. System assigns NHI number and version to local record.

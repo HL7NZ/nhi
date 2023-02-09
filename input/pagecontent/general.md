@@ -35,13 +35,13 @@ Get\<Endpoint>/Patient/ZAT2348
 For more information look at the __Get patient Use case__ in the menu
 
 
-### Merging resource and Dormant identifiers
+### Linking resources and Dormant identifiers
 
-In some cases, a single entity may have been accidentally assigned multiple identifiers. When this is discovered to have occurred, one of the identifiers becomes a ‘dormant’ identifier, leaving the other as the active one. Both identifiers will appear in the resource identifier list, with the dormant identifiers having a _use_ value of ‘old’ and the active having a _use_ value of ‘official’. 
+Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers.
 
-When reading the resource, if the 'dormant' identifier is used, the resource returned will be the live resource, an include both the identifiers, the 'active' with a *use* value of ‘official’ and the dormant with a *use* value of ‘old’.)
+All the NHI numbers will appear in the resource identifier list, the live or active NHI number will have a use value of ‘official’ and the dormant identifiers will all have a use value of ‘old’.
 
-For example, assume that there are 2 Patient resources exposed by the NHI, each with a single identifier. The id of the resource matches the identifier value.
+When using a Get operation, if the ‘dormant’ identifier is used in the request, the resource returned will be the live resource and will include all the identifiers, the ‘live’ or ‘active’ with a use value of ‘official’ and the dormants with a use value of ‘old’.
 
 
 ```
