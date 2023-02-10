@@ -67,6 +67,9 @@ Description:    "The Patient resource exposed by the NHI."
    
 //Name is required, and there are extensions for source, and isPreferred
 * name  0..*
+* name.given  0..2
+* name.given ^short = "Given name and other given name(s)"
+* name.given ^definition = "The given name and other given name(s) for the patient"
 * name.extension contains
     $information-source named information-source 0..1 and
     $preferred named preferred 1..1 and
