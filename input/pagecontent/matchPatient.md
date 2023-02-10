@@ -2,22 +2,26 @@
 
 ### Match Patient Overview
 
-* When an NHI number is not known a match by demographics can be used to find the patient record. For the patient match service, the name and birthdate are required at a minimum. Other demographics such as gender, birthplace and address can be used to improve the match results. The NHI search uses a probabilistic search and returns results in order of their match score with the highest scoring result returned as the first in the bundle. The more match criteria provided, in as complete a form as is known, the more accurate the results returned will be. It is better to enter the complete name even if spelling is not accurate, than entering just part of the name.
+When an NHI number is not known, a match by demographics can be used to find the patient record. For the patient match service, the name and birthdate are required at a minimum. Other demographics such as gender, birthplace and address can be used to improve the match results. 
+
+The NHI search uses a probabilistic search and returns results in order of their match score with the highest scoring result returned as the first in the bundle. The more match criteria provided, in as complete a form as is known, the more accurate the results returned will be. It is better to enter the complete name even if spelling is not accurate, than entering just part of the name.
+
 Results are scored on the following basis:
-•	A score is assigned to each record that represents how closely it matches the match parameters
-•	Each match parameter (e.g., Surname, year of birth, month of birth etc) is assigned a score, and weighted for importance. The sum of the individual scores makes up the overall score.
-•	The weightings vary based on a tuning process, with names weighted approximately twice as highly as a date of birth.
+* A score is assigned to each record that represents how closely it matches the match parameters
+* Each match parameter (e.g., Surname, year of birth, month of birth etc) is assigned a score, and weighted for importance. The sum of the individual scores makes up the overall score.
+* The weightings vary based on a tuning process, with names weighted approximately twice as highly as a date of birth.
 
 Other notes on matches:
-•	All names including active and inactive names (names that have previously been used) are considered by the match.
-•	Phonetic similarities are considered (spellings and variations that sound the same).
-•	The match ignores differences between upper and lower case, punctuation, diacritics and dashes.
-•	The popularity of a name will impact the score e.g., a match on Jack will score lower than a match on Edwin because there are more people in the index named Jack than Edwin.
-•	When names are in the same order as the match criteria, they will score slightly better than when the order is different e.g. Jane Mary Smith vs. Mary Jane Smith
-•	Names with similar spelling are considered for scoring. Minor spelling mistakes are catered for. E.g. If Sasha is being searched for then Sahsa would get some score and so would Sarah but Raewyn would not.”
+* All names including active and inactive names (names that have previously been used) are considered by the match.
+* Phonetic similarities are considered (spellings and variations that sound the same).
+* The match ignores differences between upper and lower case, punctuation, diacritics and dashes.
+* The popularity of a name will impact the score e.g., a match on Jack will score lower than a match on Edwin because there are more people in the index named Jack than Edwin.
+* When names are in the same order as the match criteria, they will score slightly better than when the order is different e.g. Jane Mary Smith vs. Mary Jane Smith
+* Names with similar spelling are considered for scoring. Minor spelling mistakes are catered for. E.g. If Sasha is being searched for then Sahsa would get some score and so would Sarah but Raewyn would not.”
 
 **Note to testers:**
-Patient $Match does not enable searching in the same way that  Patient Search does. You cannot expect results like a usual string search would provide for a search on patient name. The NHI search is tuned and tested specifically for the kinds of names typically found in the NZ population, the test data you are using is unlikely to reflect the make up of names in the production NHI.  Our compliance tests for $Match Patient will indicate what NHI should be the highest scoring result and the score you should expect if you use the input criteria as indicated in the test. Variations of + or -5 points in the indictive score should not be considered a test failure.
+
+Patient $Match does not enable searching in the same way that  Patient Search does. You cannot expect results like a usual string search would provide for a search on patient name. The NHI search is tuned and tested specifically for the kinds of names typically found in the NZ population, the test data you are using is unlikely to reflect the make up of names in the production NHI.  Our compliance tests for $Match Patient will indicate what NHI should be the highest scoring result and the score you should expect if you use the input criteria as indicated in the test.
 
 
 
