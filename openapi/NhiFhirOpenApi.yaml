@@ -270,12 +270,15 @@ components:
         pattern: "^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?$"
         description: Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
     
-    valueDateTime: 
-        type: string        
-        pattern: "^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$"
-        description: Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
-        
-    
+    AddressString:
+      pattern: ^([a-zA-Z0-9'\s\.\-\/,])+$
+      type: string
+      
+    NhiNumber:
+      pattern: ^[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][0-9][0-9]|[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][A-HJ-NP-Z][A-HJ-NP-Z]$
+      type: string
+      description:  unique 7-character identification number, assigned to a patient by the Patient Index. 
+            
     Meta:
       type: object
       description: >-
@@ -1503,7 +1506,7 @@ components:
           enum:
             - 'address-line'
         valueInteger:
-           $ref: '#/components/schemas/string'
+           $ref: '#/components/schemas/AddressString'
       required:
           - name            
       additionalProperties: false
@@ -1515,7 +1518,7 @@ components:
           enum:
             - 'building-name'
         valueInteger:
-           $ref: '#/components/schemas/string'
+           $ref: '#/components/schemas/AddressString'
       required:
           - name            
       additionalProperties: false
@@ -1565,7 +1568,7 @@ components:
           enum:
             - 'nhi'
         valueInteger:
-           $ref: '#/components/schemas/string'
+           $ref: '#/components/schemas/NhiNumber'
       required:
           - name            
       additionalProperties: false   
@@ -1617,13 +1620,12 @@ components:
         type: string
         enum:
           - '$match'
-          - '$set-preferred-name'     
+          - '$set-preferred-name' 
+          - '$set-address'       
+          
     Rid:      
         type: string
-        enum:
-          - '$match'
-          - '$set-preferred-name'  
-          - '$set-address'
+       
       
   parameters:
   
@@ -1649,7 +1651,7 @@ components:
       allowEmptyValue: false
       style: simple
       schema:
-        type: string
+        $ref: '#/components/schemas/string'
         
                
     nhi:
@@ -1659,7 +1661,7 @@ components:
       required: true
       allowEmptyValue: false
       schema:
-        type: string
+        $ref: '#/components/schemas/string'
         
     summary:
       name: _summary
