@@ -143,7 +143,6 @@ table, th, td {
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
@@ -412,7 +411,6 @@ Output: The application alerts the user that the patient is deceased and provide
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
