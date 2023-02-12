@@ -39,30 +39,37 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> address-type </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> postal or physical </td></tr>
 
 <tr><td> nz-address-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> eSAM validated address id </td></tr>
 
 <tr><td> address-line </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> first line of the address as returned by eSAM </td></tr>
 
 <tr><td> building-name </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 </table>
@@ -164,58 +171,72 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> not-validated-address-reason </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td></td> </tr>
 
 <tr><td> address-type </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> postal or physical</td> </tr>
 
 <tr><td> address-building-name </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-line-1 </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> first line of the address </td></tr>
 
 <tr><td> address-line-2 </td>
+<td> valueString </td>
 <td> Optional </td>
 <td> second line of the address</td></tr>
 
 <tr><td> address-suburb </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-city </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-postal-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-country-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-domicile-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-nz-geocode </td>
+<td> valueString </td>
 <td> Optional </td>
 <td> datum-code, latitude, longitude </td></tr>
 </table>
@@ -334,14 +355,17 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 </table>
