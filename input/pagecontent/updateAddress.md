@@ -71,7 +71,7 @@ table, th, td {
 <tr><td> building-name </td>
 <td> valueString </td>
 <td> Optional </td>
-<td></td> </tr>
+<td> The building name is not returned as part of the e-SAM address </td> </tr>
 </table>
 
 * Behaviour:
