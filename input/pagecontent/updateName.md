@@ -5,18 +5,25 @@
 The update name operations allow an authorised user to update a name on a persons identity record
 
 Update name has four sub-operations available
-* **set-preferred-name – Select the Preferred Name for this NHI number**
-* **add-name – Add a new Name to the set of Patient Names for this NHI number**
-* **update-name – Modify some of the information associated with a specific name**
+* **set-preferred-name – Set the Preferred Name the person wishes to be identied as**
+* **add-name – Add a new Name to the set of Patient Names for this NHI record**
+* **replace-name – Replace a name that is currently on the patients NHI record**
 * **inactivate-name – Remove a Name from the set of Patient Names returned to users**
+
+
+
 
 ### set-preferred-name
 
 * Allows an authorised user to select the Preferred Name for this NHI number
 
+
+
 <div>
 {% include set-preferred-name.svg %}
 </div>
+
+
 
 **set-preferred-name processing steps:**
  
@@ -26,6 +33,7 @@ Update name has four sub-operations available
 4. The preferred name flag is set to false on the existing preferred name and true on the requested name
 5. The updated patient record is returned with an HTTP 200 ok response
 6. The integrating application displays the updated patient details to the user
+
 
 
 <h3> In Parameters </h3>
@@ -56,6 +64,7 @@ table, th, td {
 <td> Mandatory </td>
 <td> The id for the name to set the preferred name flag for </td></tr>
 </table>
+
 
 
 * Behaviour:
