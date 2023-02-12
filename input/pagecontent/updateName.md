@@ -42,6 +42,7 @@ table, th, td {
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
