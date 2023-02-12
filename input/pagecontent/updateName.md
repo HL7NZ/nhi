@@ -37,6 +37,7 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
@@ -45,12 +46,14 @@ table, th, td {
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> preferred-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
-<td> The id for the name to set the preferred name flag against </td></tr>
+<td> The id for the name to set the preferred name flag for </td></tr>
 </table>
 
 
