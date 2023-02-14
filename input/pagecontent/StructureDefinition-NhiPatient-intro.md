@@ -15,7 +15,7 @@ This includes the core NHI Profile attributes:
 * ethnicity
 * date of death
 
-The core NHI Profile attributes are returned to all users that have read and/or $match access to the NHI (link scopes)
+The core NHI Profile attributes are returned to all users that have read and/or $match access to the NHI
 
 
 
@@ -131,7 +131,7 @@ For information on enrolment history, re-enrolment dates, enrolment status, or t
 
 ### Patient's Contact details
 
-The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account. 
+The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account.
 
 The contact details are only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
 
