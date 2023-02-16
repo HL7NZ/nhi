@@ -68,7 +68,7 @@ table, th, td {
 <td> Mandatory </td>
 <td> first line of the address as returned by eSAM </td></tr>
 
-<tr><td> building-name </td>
+<tr><td> address-building-name </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The building name is not returned as part of the e-SAM address </td> </tr>
@@ -126,15 +126,9 @@ set-address example request:
 
 * **Patient set-address rules**
   * All add address rules apply, and
-  * A validated address request must include:
-    * a valid NHI number
-    * the current patient version number 
-    * an nz-address-id (validated address id from the address validation service)
-    * an address type = physical or postal
-    * an address-line that matches the first line of the address supplied by the address validation service 
-  * A validated address may have a building-name
-  * A validated address _must not_ have a not-validated-address-reason
-
+  * A Patient Update request must contain the live NHI number for the Patient Record
+  * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
+  * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
 
 * _Patient set-address errors_
   * _Patient NHI, version number, address type and address-id are all required_
@@ -316,16 +310,15 @@ set-unvalidated-address example request:
 
 * **Patient set-unvalidated-address rules**
   * All add address rules apply, and
-  * An un-validated address request must include:
-    * a valid NHI number
-    * the current patient version number 
-    * not-validated-address-reason
-    * address-type = either	postal or physical
- 
-* _Patient set-unvalidated-address errors_
-  * _Patient NHI and version number are both required_ 
-  * _address type must be postal or physical_
-  * _Patient address-line-1 is required_
+  * A Patient Update request must contain the live NHI number for the Patient Record
+  * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
+  * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
+
+* _Patient set-address errors_
+  * _Patient NHI, version number, address type and address-id are all required_
+  * _Version number is incorrect_
+  * _address type must be a postal or physical_
+  * _address-line must match the espatial value: \<value>_
 
 
 ### remove-postal-address
@@ -401,9 +394,10 @@ remove-postal-address example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient remove-postal-address rules**
-* The remove-postal-adddress request must include:
-    * a valid NHI number
-    * the current patient version number
+  * All add address rules apply, and
+  * A Patient Update request must contain the live NHI number for the Patient Record
+  * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
 
-* _Patient remove-postal-address errors_
-  * _Patient NHI and version number are both required_
+* _Patient set-address errors_
+  * _Patient NHI, version number, address type and address-id are all required_
+  * _Version number is incorrect_
