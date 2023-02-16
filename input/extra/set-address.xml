@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.NHI</td>
+					<td>nhi</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -44,16 +44,16 @@
 					
 					<td>
 						<div>
-							<p>The Patient's NHI number</p>
+							<p>The Patient's nhi number</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.meta.versionId</td>
+					<td>version-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					
 					<td>
@@ -67,12 +67,15 @@
 					<td>address-type</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>must be physical or postal</p>
+							<p>must be physical or postal
+							<br /> 
+							[Must be a valid code from](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html)
+							</p>
 						</div>
 					</td>
 				</tr>
@@ -106,7 +109,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>building-name</td>
+					<td>address-building-name</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -114,7 +117,9 @@
 					<td/>
 					<td>
 						<div>
-							<p>building name if required as additional address information</p>
+							<p>building name if required as additional address information
+							 <br />
+							not part of the esam response</p>
 						</div>
 					</td>
 				</tr>
