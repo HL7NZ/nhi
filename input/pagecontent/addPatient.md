@@ -107,6 +107,9 @@ The user has sourced the required identity information, and initiates an add req
   * _A source of HL7 or MIGR can only be submitted by a legacy update_
 
 
+---
+
+
 * **Add Patient Birthdate rules**
   * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
   * A birthdate must be a complete date and formatted either:
@@ -232,26 +235,21 @@ The user has sourced the required identity information, and initiates an add req
     * may contain any of [A-Z, a-z, 0-9 and these special characters - /',]
 
 * _Add Patient Address errors_
-  d
-   
-
-
-
-
   * _A Patient must have a primary residential address_
-  * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
+  * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
+  * _A residential address must have a notional domicile code_
+  * _Validated address_  
+    * _Nz-address-id, Address line 1 and address type are required._
+    * _Address-type is a required field and must be postal or physical_
+    * address-line must match the espatial value: <>
+  * _Unvalidated address_
+    * Address line 1, address type, and not-validated-address-reason are required.
+    * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
   * _Patient street address contains invalid text_
-  * _Address protection can only be changed by an authorised user_
-  * _Duplicate address:_
-    * _The patient address already exists for this patient_
-    * _The patient address already exists for this patient as a protected address_
-    * _This Address has been removed from the Patient record – are you sure this address should be reinstated?_
-    * _This Address was protected, and has been removed from the Patient record – are you sure this Address should be reinstated?_
-    * _The Patient address requested has been removed from the Patient record by the Ministry of Health_
-    * _A validated mailing address must be an address at which mail can be delivered_
+
     * _Domicile / notional domicile code:_
       * _A residential address must have a notional domicile code_
       * _A residential address must have a domicile code_
       * _The address validation service was not available to validate this address; and a notional domicile code was not provided for this address, and could not be automatically assigned_
-    * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
-    * _A address can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)_
+  * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
+  * _Patient Address contains invalid text_
