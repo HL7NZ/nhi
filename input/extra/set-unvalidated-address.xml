@@ -106,7 +106,9 @@
 					<td/>
 					<td>
 						<div>
-							<p>building name if required as additional address information</p>
+							<p>building name if required as additional address information
+							 <br />
+							not part of the esam response</p>
 						</div>
 					</td>
 				</tr>
@@ -280,22 +282,22 @@
 	<type value="false" />
 	<instance value="true" />
 	<parameter>
-		<name value="patient.NHI" />
+		<name value="nhi" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="UThe Patient's NHI number" />
+			value="The Patient's nhi number" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="patient.meta.versionId" />
+		<name value="version-id" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="he current value of the patient resources meta.versionId" />
-		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
+			value="The current value of the patient resources meta.versionId" />
+		<type value="string" />
 	</parameter>
 	<parameter>
 		<name value="not-validated-address-reason" />
@@ -304,7 +306,7 @@
 		<max value="1" />
 		<documentation
 		 	value="The reason the address could not be validated" />
-		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/nhi-address-not-validated-reason-code" />
+		<type value="string" />
 	</parameter>
 	<parameter>
 		<name value="address-type" />
@@ -313,15 +315,15 @@
 		<max value="1" />
 		<documentation
 			value="must be physical or postal" />
-		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/addressType" />
+		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="building-name" />
+		<name value="address-building-name" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 	value="building name if required as additional address information" />
+		 	value="building name if required as additional address information <br /> not part of the esam response" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -379,30 +381,7 @@
 		<max value="1" />	
 		<documentation
 			value= "When supplied it must be a valid code in domicile-code valueset. When not supplied, the suburb and city are used to derive a domicile code from the streets file. If a suburb/city combination is not found in the streets file an error is returned  (note the client end-user can then enter a domicile code or client system can supply a default district domicile code)" />	
-		<type value="https://standards.digital.health.nz/ns/domicile-code" />
-	</parameter>
-	<parameter>
-		<name value="datum-code" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />	
-		<documentation
-			value="Indicates the cordinate system used to represent the lat/long values" />	
-		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code" />
-	</parameter>
-	<parameter>
-		<name value="latitude" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />		 	
-		<type value="decimal" />
-	</parameter>
-	<parameter>
-		<name value="longitude" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />		 	
-		<type value="decimal" />
+		<type value="string" />
 	</parameter>
 	<parameter>
 		<name value="return" />
