@@ -12,28 +12,22 @@
 				
 			</div>
 			<p>URL: [base]/Patient/$set-unvalidated-address</p>
-			<p>Parameters</p>
-			<table class='table table-bordered table-condensed'>
-				<tr>
-					<td>
-						<b>Use</b>
-					</td>
-					<td>
-						<b>Name</b>
-					</td>
-					<td>
-						<b>Cardinality</b>
-					</td>
-					<td>
-						<b>Type</b>
-					</td>
-					<td>
-						<b>Binding</b>
-					</td>
-					<td>
-						<b>Documentation</b>
-					</td>
-				</tr>
+			
+	
+			<h3>Parameters</h3>
+        		<table>
+       			<style>
+        		table, th, td {
+        		border: 1px solid black;
+        		border-collapse: collapse;
+        		}
+        		</style>
+        		<tr><th>Use</th>
+        		<th>Name</th>
+        		<th>Cardinality</th>
+        		<th>Type</th>
+        		<th>Binding</th>
+			<th>Documentation</th></tr>
 				<tr>
 					<td>IN</td>
 					<td>nhi</td>
