@@ -106,9 +106,7 @@
 					<td/>
 					<td>
 						<div>
-							<p>building name if required as additional address information
-							 <br />
-							not part of the esam response</p>
+							<p>building name if required as additional address information</p>
 						</div>
 					</td>
 				</tr>
