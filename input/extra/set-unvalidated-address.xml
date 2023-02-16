@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.NHI</td>
+					<td>nhi</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -44,16 +44,16 @@
 					<td />
 					<td>
 						<div>
-							<p>The Patient's NHI number</p>
+							<p>The Patient's nhi number</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.meta.versionId</td>
+					<td>version-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
@@ -67,12 +67,15 @@
 					<td>not-validated-address-reason</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/nhi-address-not-validated-reason-code">Nhi_address_not_validated_reason</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>The reason the address could not be validated</p>
+							<p>The reason the address could not be validated
+								<br />
+								Must be a valid code from [notValidatedAddressReason](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-address-not-validated-reason-1.1.html)
+							</p>
 						</div>
 					</td>
 				</tr>
@@ -81,18 +84,21 @@
 					<td>address-type</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>must be physical or postal</p>
+							<p>must be physical or postal
+							<br /> 
+							[Must be a valid code from](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html)
+							</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>building-name</td>
+					<td>address-building-name</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -101,20 +107,6 @@
 					<td>
 						<div>
 							<p>building name if required as additional address information</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>nz-address-id</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>The id of the validated address as retuned by the eSAM address service</p>
 						</div>
 					</td>
 				</tr>
@@ -155,7 +147,9 @@
 					</td>
 					<td/>
 					<td>
-						
+						<div>
+							<p>The suburb for the address</p>
+						</div>						
 					</td>
 				</tr>
 				<tr>
@@ -167,7 +161,9 @@
 					</td>
 					<td/>
 					<td>
-						
+						<div>
+							<p>The city for the address</p>
+						</div>							
 					</td>
 				</tr>
 				<tr>
@@ -179,7 +175,9 @@
 					</td>
 					<td/>
 					<td>
-						
+						<div>
+							<p>The address postcode</p>
+						</div>							
 					</td>
 				</tr>
 				<tr>
@@ -192,7 +190,13 @@
 					<td/>
 					<td>
 						<div>
-							<p>must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’. When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ </p>
+							<p>The address country code
+								<br /> 
+								Must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’.
+							<br /> 	
+							When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ </p>
+							<br /> 
+							Must be valid value from [ISO 3166-1:2013 (2-alpha country code](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-country-code-1.0.html)
 						</div>
 					</td>
 				</tr>
@@ -201,47 +205,20 @@
 					<td>domicile-code</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://standards.digital.health.nz/ns/domicile-code">Domicile_code</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td/>
 					<td>
 						<div>
-							<p>When supplied it must be a valid code in domicile-code valueset. When not supplied, the suburb and city are used to derive a domicile code from the streets file. 
-							If a suburb/city combination is not found in the streets file an error is returned  (note the client end-user can then enter a domicile code or client system can supply a default district domicile code) </p>
+							<p>When supplied it must be a valid code in domicile-code valueset.
+								<br /> 
+							When not supplied, the suburb and city are used to derive a domicile code from the streets file.
+								<br />
+							If a suburb/city combination is not found in the streets file an error is returned  (note the client end-user can then enter a domicile code or client system can supply a default district domicile code)
+							<br />
+							Must be valid value from [Domicile Code](https://fhir.org.nz/ig/base//ValueSet-domicile-code.html)</p>
 						</div>
 					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>datum-code</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/nz-datum-code">DatumCode</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>Indicates the cordinate system used to represent the lat/long values </p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>latitude</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#decimal">decimal</a>
-					</td>
-					<td/>					
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>longitude</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#decimal">decimal</a>
-					</td>
-					<td/>					
 				</tr>
 				
 				<tr>
