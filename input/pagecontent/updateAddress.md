@@ -68,10 +68,10 @@ table, th, td {
 <td> Mandatory </td>
 <td> first line of the address as returned by eSAM </td></tr>
 
-<tr><td> building-name </td>
+<tr><td> address-building-name </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The building name is not returned as part of the e-SAM address </td> </tr>
+<td> The building name, this is additional information and is not returned as part of the eSAM address </td> </tr>
 </table>
 
 * Behaviour:
@@ -110,7 +110,7 @@ set-address example request:
         "valueString" : "20 Aitken Street"
     },
         {
-        "name" : "building-name",
+        "name" : "address-building-name",
         "valueString" : "Freyberg House"
     }
   ]
@@ -234,11 +234,6 @@ table, th, td {
 <td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
-
-<tr><td> address-nz-geocode </td>
-<td> valueString </td>
-<td> Optional </td>
-<td> datum-code, latitude, longitude </td></tr>
 </table>
 
 * Behaviour:
@@ -298,10 +293,6 @@ set-unvalidated-address example request:
     },
      {
         "name" : "address-country-code",
-        "valueString" : "NZ"
-    },
-     {
-        "name" : "address-domicile-code",
         "valueString" : "NZ"
     }
   ]
