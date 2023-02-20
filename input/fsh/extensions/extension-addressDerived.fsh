@@ -1,6 +1,6 @@
 Extension: NhiAddressDerived
 Id: nhi-address-derived
-Description: "Address elements that are directly derived from the actual address"
+Description: "Address elements that are directly derived from the address validation service"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-address-derived"
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
