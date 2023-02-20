@@ -99,11 +99,11 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
 </div>
 
 * Steps involved:
-  1.	The user initiates searching for an EDI number for a patient’s General Practitioner
+  1.	The user initiates searching for an EDI number for a patient’s General Practice
   2.	The integrating application sends a read request for the Patient Resource using the nhi-id to the NHI FHIR API E.g. GET\<Endpoint>/Patient/ZZZ0008
-  3.	The requested is validated - ALT: Validation failure. OperationOutcome resource returned
+  3.	The request is validated - ALT: Validation failure. OperationOutcome resource returned
   4.	The Patient resource (containing the Patients enrolled General Practice details) is returned from the HPI
   5.	The integrating application sends a read request for the Facility details (Location resource) using the hpi-facility-id to the HPI FHIR API E.g. GET\<Endpoint>/Location/F99999B
-  6.	The requested is validated - ALT: Validation failure. OperationOutcome resource returned
+  6.	The request is validated - ALT: Validation failure. OperationOutcome resource returned
   7.	The Location resource is returned from the HPI
   8.	The integrating application extracts the messaging address containing the EDI number for the GP clinic
