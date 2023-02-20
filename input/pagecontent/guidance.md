@@ -3,7 +3,7 @@
 ### Patient resource use cases
 
 
-#### A new Patient presents for healthcare.
+#### A new patient presents for healthcare.
 
 A new patient presents for healthcare e.g. A casual patient books an appointment with GP, a new patient seeks to enrol at a GP, a patient presents at an Accident and Emergency department or afterhours clinic, a referral is received for a patient from a health provider. <br />
 This is a new patient not yet registered in the hospital or providers system.
@@ -51,7 +51,7 @@ Information is received by the hospital or provider that patient information has
   5. Ring or email Te Whatu Ora contact centre so discrepancy can be updated.
 
 
-#### A user needs to Validate an NHI number.
+#### A user needs to validate an NHI number.
 
 I don't have access rights to view the NHI details. I want to validate the NHI number and the demographic details I have match the NHI patient details.
 
@@ -61,20 +61,20 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
   3. Result will be a Certain Match / Possible Match / Certainly Not a Match
 
 
-#### Look up the Patient's enrolled General Practice
+#### Look up the patient's enrolled General Practice (GP)
 
 * This use case requires permission to access a Patients NES enrollment information
 
 * Steps involved:
   1. User finds the patient record in local system.
   2. Local system looks up NHI [Get Patient.](/getPatient.html)
-  3. If the user has the correct permissions the details for the General Practice that the Patient is enrolled with will be returned as a contained resource.
+  3. If the user has the correct permissions the details for the general practice that the patient is enrolled with will be returned as a contained resource.
   4. For additional information the user could search the HPI using the hpi-facility-id, hpi-organisation-id or the hpi-person-id. [Example below for how this would work for to lookup EDI for an enrolled patient’s General Practice](/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)
   5. Note: 
-    * The version number for the Patient record does not change when the General Practitioner details change (See NHI Profile for more information)
+    * The version number for the Patient record does not change when the enrolled GP details change (See NHI Profile for more information)
     * To update the General Practitioner details the user will need to access the Enrolment web services
 
-#### Look up Patient's contact details
+#### Look up patient's contact details
 
 * This use case requires permission to access the Patient Preferences information
 
@@ -83,7 +83,7 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
   2. Local system looks up NHI [Get Patient.](/getPatient.html)
   3. If the user has the correct permissions the Patient Preferences details will be returned in the Patient resource.
   4. Note:
-    * The version number for the Patient record does not change when the Patients Preferences details change (See NHI Profile for more information)
+    * The version number for the patient record does not change when the patient's contact details change (See NHI Profile for more information)
     * To update the Patient Preferences the user will need to access the Patient Preference web services
 
 
