@@ -224,7 +224,7 @@ ZBE4905</td>
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient GET tests (GP and Contact permissions)</h3>
+<h3>NHI Patient GET tests (Enrolled GP and Contact details permissions)</h3>
 <table>
 <style>
 table, th, td {
@@ -247,7 +247,7 @@ table, th, td {
 <li>Practitioner identifier (CPN) and name</li>
 <li>enrolling organisation ID and name</li>
 <li>Facility ID and name</li></td>
-<td> **TBC** </td>
+<td> Enrolled GP - ZKC4641 <br /> Enrolled GP and Contact details ZKC4633 </td>
 <td>Output: application does not error <br /> application returns all General Practice details when present </td>
 <td>*Mandatory if</td></tr>
 
@@ -256,7 +256,7 @@ table, th, td {
 <li>Home phone</li>
 <li>Mobile phone</li>
 <li>Email address</li></td>
-<td> **TBC** </td>
+<td> Contact details - ZKC4650 <br /> Enrolled GP and Contact details ZKC4633 </td>
 <td>Output: application does not error <br /> application returns all Contact details when present </td>
 <td>*Mandatory if </td></tr>
 </table>
