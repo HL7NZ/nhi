@@ -51,7 +51,7 @@ The NES details are maintained in real time in the NES database, which holds the
 
 The enrolled GP is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
 
-The version number for the Patient record does not change when the Patients enrolled GP changes. This is because the Patients enrolled GP is not part of a Patients core identity information. 
+The patient version-id does not change when the patient's enrolled GP changes. This is because the patient's enrolled GP is not held in the NHI but is retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The patient Version-id only reflects changes to details held on the NHI.
 
 For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES service
 
@@ -140,7 +140,7 @@ The patient’s contact details are returned in the Patient.telecom attribute to
 
 The contact details are only returned with a read on the resource. They are not returned in the $match response – even if a user has the correct permissions.
 
-The version number for the Patient record does not change when the Patients Contact details change. This is because the contact details are not part of a Patients core identity information. 
+The patient version-id does not change when the patient's contact details change. This is because the patient's contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The Patient Version-id only reflects changes to details held on the NHI.
 
 The information returned may include:
 -	Email address
