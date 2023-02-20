@@ -49,13 +49,15 @@ The details for the Patient’s enrolled General Practice (GP) are returned in t
 
 The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their Enrolling GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the patients usual doctor (hpi-person-id / CPN).
 
-The generalPractitioner is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
+The enrolled GP is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
+
+The version number for the Patient record does not change when the Patients enrolled GP changes. This is because the Patients enrolled GP is not part of a Patients core identity information. 
 
 For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES service
 
 A subset of the NES enrolment information is returned in the NHI FHIR GET response.
 
-Enrolment information is returned in two parts of the NHI patient profile:
+Enrolment information is returned in two places in the NHI patient profile:
 * the "generalPractitioner" attribute: 	This is the NES enrolment id.
 * the "contained" PractitionerRole resource: This holds the NES enrolment information as described below.
 
@@ -136,7 +138,9 @@ This will change when a patient transfers to a new practice, but will not reflec
 
 The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account.
 
-The contact details are only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
+The contact details are only returned with a read on the resource. They are not returned in the $match response – even if a user has the correct permissions.
+
+The version number for the Patient record does not change when the Patients Contact details change. This is because the contact details are not part of a Patients core identity information. 
 
 The information returned may include:
 -	Email address
