@@ -224,7 +224,7 @@ ZBE4905</td>
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient GET tests (Enrolled GP and Contact details permissions)</h3>
+<h3>NHI Patient GET tests (enrolled GP and contact details only)</h3>
 <table>
 <style>
 table, th, td {
@@ -232,7 +232,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you have either permission to vew a Patients GP or Contact details** </caption>
+<caption> **Only complete these if you have either permission to vew a patient's enrolled GP or contact details** </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -240,7 +240,7 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-GET-11</td>
-<td>application can display the Patients's enrolled General Practice details returned by the NHI in a GET response including
+<td>application can display the patients's enrolled General Practice details returned by the NHI in a GET response including
 <li>The NES enrolment id</li>
 <li>enrolment.startDate</li>
 <li>enrolment.expiryDate</li>
@@ -252,7 +252,7 @@ table, th, td {
 <td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-12</td>
-<td>application can display the Patients's contact details returned by the NHI in a GET response including:
+<td>application can display the patients's contact details returned by the NHI in a GET response including:
 <li>Home phone</li>
 <li>Mobile phone</li>
 <li>Email address</li></td>
