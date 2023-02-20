@@ -31,6 +31,7 @@ The NHI holds the following information:
 * ethnicity
 * date of death
 
+The patient’s general practice and their phone and email contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the above NHI details in the NHI Patient profile. 
 
 #### NHI Number format
 
