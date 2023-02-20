@@ -10,29 +10,12 @@ Only Json is supported by this implementation.
 
 ### Id and Identifiers
 
-All of the FHIR resources in this implementation have both an id and an identifier.
+In this implementation, **the id of the resource will always be the same as the value of the identifier assigned by the NHI with a use value of ‘official’**. (There will only ever be a single identifier with this use type and system in a resource).
 
-The id is the ‘physical’ identity of the resource, and the identifier is the business identifier. 
-
-In this implementation, **the id of the resource will always be the same as the value of the identifier assigned by the HPI with a use value of ‘official’**. (There will only ever be a single identifier with this use type and system in a resource). Thus the id for the resource below would be ‘ZAT2348’, and the url something like:
+Thus the id for the resource below would be ‘ZAT2348’, and the url to read the resource something like:
 
 https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
 
-This design allows an implementer to retrieve a resource from the NHI and save it on their own system, but still be able to retrieve the original to check for updates.
-
-
-#### Read resource by id
-
-
-Extract the value of the identifier where the value of the __use__ element is ‘official’, and use that as the id for a direct read from the server. 
-
-Example:
-
-Get\<Endpoint>/Resource/identifier
-
-Get\<Endpoint>/Patient/ZAT2348
-
-For more information look at the __Get patient Use case__ in the menu
 
 
 ### Linking resources and Dormant identifiers
@@ -201,7 +184,6 @@ But not all errors have been converted or assigned error codes, the unconverted 
     * http header item UserId that uniquely identifies the individual initiating the request.
     * OAuth 2 access token
     * An api-key
-  * Each user must have an individual userID
 
 * _Request errors_
   * _Authentication: missing userid header_,  _HTTP401, Processing_
@@ -314,7 +296,7 @@ Clients will be emailed their API key, which should be treated as confidential i
 
 An api-key associates the client with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned
 
-Clients will need to add there api key to the x-api-key header in each API request. If no API key is included in the request header, a “Forbidden” error will be returned
+Clients will need to add their api key to the x-api-key header in each API request. If no API key is included in the request header, a “Forbidden” error will be returned
 
 <h3>Usage Plans</h3>
 <table>
