@@ -29,7 +29,7 @@ Usage: #definition
 // * rest.resource.interaction[3].documentation = "Not yet enabled"
 * rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
-* rest.resource.operation.documentation = "**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id.  **HTTP Request** 'POST'.  **Scope required:** patient:validate / Patient.v"
+* rest.resource.operation.documentation = "**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.  **HTTP Request** 'POST'.  **Scope required:** patient:validate / Patient.v"
 
 * rest.resource.operation[1].name = "set-preferred-name"
 * rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
