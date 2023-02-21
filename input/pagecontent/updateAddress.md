@@ -39,32 +39,39 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> address-type </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> postal or physical </td></tr>
 
 <tr><td> nz-address-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> eSAM validated address id </td></tr>
 
 <tr><td> address-line </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> first line of the address as returned by eSAM </td></tr>
 
-<tr><td> building-name </td>
+<tr><td> address-building-name </td>
+<td> valueString </td>
 <td> Optional </td>
-<td> not part of the eSAM addresses, entered manually by the user </td> </tr>
+<td> The building name, this is additional information and is not returned as part of the eSAM address </td> </tr>
 </table>
 
 * Behaviour:
@@ -88,7 +95,7 @@ set-address example request:
     },
     {
         "name" : "version-id",
-        "valueString" : 3321540
+        "valueString" : "3321540"
     },
      {
         "name" : "address-type",
@@ -103,7 +110,7 @@ set-address example request:
         "valueString" : "20 Aitken Street"
     },
         {
-        "name" : "building-name",
+        "name" : "address-building-name",
         "valueString" : "Freyberg House"
     }
   ]
@@ -118,13 +125,27 @@ set-address example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient set-address rules**
+  * All add address rules apply, and
+  * A validated address request must include:
+    * a valid NHI number
+    * the current patient version number 
+    * an nz-address-id (validated address id from the address validation service)
+    * an address type = physical or postal
+    * an address-line that matches the first line of the address supplied by the address validation service 
+  * A validated address may have a building-name
+  * A validated address _must not_ have a not-validated-address-reason
+
 
 * _Patient set-address errors_
+  * _Patient NHI, version number, address type and address-id are all required_
+  * _Version number is incorrect_
+  * _address type must be a postal or physical_
+  * _address-line must match the espatial value: \<value>_
 
 
 
 ### set-unvalidated-address
-
+ 
 * Allows a user to replace a physical or add or replace a postal address with an unvalidated address
 
 <div>
@@ -150,60 +171,69 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> not-validated-address-reason </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td></td> </tr>
 
 <tr><td> address-type </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> postal or physical</td> </tr>
 
 <tr><td> address-building-name </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-line-1 </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> first line of the address </td></tr>
 
 <tr><td> address-line-2 </td>
+<td> valueString </td>
 <td> Optional </td>
 <td> second line of the address</td></tr>
 
 <tr><td> address-suburb </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-city </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-postal-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-country-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
 
 <tr><td> address-domicile-code </td>
+<td> valueString </td>
 <td> Optional </td>
 <td></td> </tr>
-
-<tr><td> address-nz-geocode </td>
-<td> Optional </td>
-<td> datum-code, latitude, longitude </td></tr>
 </table>
 
 * Behaviour:
@@ -227,7 +257,7 @@ set-unvalidated-address example request:
     },
     {
         "name" : "version-id",
-        "valueString" : 19232
+        "valueString" : "19232"
     },
      {
         "name" : "not-validated-address-reason",
@@ -264,10 +294,6 @@ set-unvalidated-address example request:
      {
         "name" : "address-country-code",
         "valueString" : "NZ"
-    },
-     {
-        "name" : "address-domicile-code",
-        "valueString" : "NZ"
     }
   ]
 }
@@ -280,8 +306,17 @@ set-unvalidated-address example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient set-unvalidated-address rules**
-
+  * All add address rules apply, and
+  * An un-validated address request must include:
+    * a valid NHI number
+    * the current patient version number 
+    * not-validated-address-reason
+    * address-type = either	postal or physical
+ 
 * _Patient set-unvalidated-address errors_
+  * _Patient NHI and version number are both required_ 
+  * _address type must be postal or physical_
+  * _Patient address-line-1 is required_
 
 
 ### remove-postal-address
@@ -311,14 +346,17 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 </table>
@@ -341,7 +379,7 @@ remove-postal-address example request:
     },
     {
         "name" : "version-id",
-        "valueString" : 19232
+        "valueString" : "19232"
     }
   ]
 }
@@ -354,5 +392,9 @@ remove-postal-address example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient remove-postal-address rules**
+* The remove-postal-adddress request must include:
+    * a valid NHI number
+    * the current patient version number
 
 * _Patient remove-postal-address errors_
+  * _Patient NHI and version number are both required_

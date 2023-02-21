@@ -10,7 +10,7 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 1.12-SAPSHOT
+version: 1.2.0
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
@@ -21,7 +21,7 @@ description: The FHIR  API for the NHI
 license: CC0-1.0
 dependencies:
   fhir.org.nz.ig.base:
-    uri: 'http://build.fhir.org/ig/HL7NZ/nzbase/branches/master'
+    uri: 'https://fhir.org.nz/ig/base/'
     #version: 1.0.0
 
     #uri: 'http://fhir.org.nz/ig/base'
@@ -54,6 +54,7 @@ menu:
     Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
     General Notes: general.html
     FAQ: FAQ.html
+    Glossary: glossary.html
   API: capabilityStatement.html
   Profiles: profiles.html
   Extensions: extensions.html

@@ -10,38 +10,21 @@ Only Json is supported by this implementation.
 
 ### Id and Identifiers
 
-All of the FHIR resources in this implementation have both an id and an identifier.
+In this implementation, **the id of the resource will always be the same as the value of the identifier assigned by the NHI with a use value of ‘official’**. (There will only ever be a single identifier with this use type and system in a resource).
 
-The id is the ‘physical’ identity of the resource, and the identifier is the business identifier. 
-
-In this implementation, **the id of the resource will always be the same as the value of the identifier assigned by the HPI with a use value of ‘official’**. (There will only ever be a single identifier with this use type and system in a resource). Thus the id for the resource below would be ‘ZAT2348’, and the url something like:
+Thus the id for the resource below would be ‘ZAT2348’, and the url to read the resource something like:
 
 https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
 
-This design allows an implementer to retrieve a resource from the NHI and save it on their own system, but still be able to retrieve the original to check for updates.
 
 
-#### Read resource by id
+### Linking resources and Dormant identifiers
 
+Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers.
 
-Extract the value of the identifier where the value of the __use__ element is ‘official’, and use that as the id for a direct read from the server. 
+All the NHI numbers will appear in the resource identifier list, the live or active NHI number will have a use value of ‘official’ and the dormant identifiers will all have a use value of ‘old’.
 
-Example:
-
-Get\<Endpoint>/Resource/identifier
-
-Get\<Endpoint>/Patient/ZAT2348
-
-For more information look at the __Get patient Use case__ in the menu
-
-
-### Merging resource and Dormant identifiers
-
-In some cases, a single entity may have been accidentally assigned multiple identifiers. When this is discovered to have occurred, one of the identifiers becomes a ‘dormant’ identifier, leaving the other as the active one. Both identifiers will appear in the resource identifier list, with the dormant identifiers having a _use_ value of ‘old’ and the active having a _use_ value of ‘official’. 
-
-When reading the resource, if the 'dormant' identifier is used, the resource returned will be the live resource, an include both the identifiers, the 'active' with a *use* value of ‘official’ and the dormant with a *use* value of ‘old’.)
-
-For example, assume that there are 2 Patient resources exposed by the NHI, each with a single identifier. The id of the resource matches the identifier value.
+When using a Get operation, if the ‘dormant’ identifier is used in the request, the resource returned will be the live resource and will include all the identifiers, the ‘live’ or ‘active’ with a use value of ‘official’ and the dormants with a use value of ‘old’.
 
 
 ```
@@ -154,20 +137,6 @@ table, th, td {
 </table>
 
 
-#### Request Rules and Errors
-
-* **Request rules**
-  * Every request must include an:
-    * http header item UserId that uniquely identifies the individual initiating the request.
-    * OAuth 2 access token
-    * An api-key
-  * Each user must have an individual userID
-
-* _Request errors_
-  * _Authentication: missing userid header_,  _HTTP401, Processing_
-  * _Unauthorized_,  _HTTP401_
-  * _Forbidden, HTTP403_
-
 #### Error Format
 
 Error responses may contain a FHIR operation outcome:
@@ -207,6 +176,21 @@ But not all errors have been converted or assigned error codes, the unconverted 
 
 ```
 
+
+#### Request Rules and Errors
+
+* **Request rules**
+  * Every request must include an:
+    * http header item UserId that uniquely identifies the individual initiating the request.
+    * OAuth 2 access token
+    * An api-key
+
+* _Request errors_
+  * _Authentication: missing userid header_,  _HTTP401, Processing_
+  * _Unauthorized_,  _HTTP401_
+  * _Forbidden, HTTP403_
+
+
 ### HTTP Header Details
 
 * This is a list of any additions to standard HTTP header protocol
@@ -230,7 +214,7 @@ table, th, td {
 <td> Mandatory </td></tr>
 
 <tr><td> userid </td>
-<td> Bearer {string} </td>
+<td> {string} </td>
 <td> Client provided <br />
 All requests for all resources must include an http header userid that uniquely identifies the individual initiating the request <br />
 Preferably the hpi-person-id of the user would be provided if known, otherwise a userid that allows the authenticated organisation to identify the individual </td>
@@ -304,13 +288,15 @@ table, th, td {
 <tr><td> https://api.hip.digital.health.nz/fhir/patient:write </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
 </table>
 
+* Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
+
 #### API Keys and Usage Plans
 
 Clients will be emailed their API key, which should be treated as confidential information and not shared with other parties
 
 An api-key associates the client with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned
 
-Clients will need to add there api key to the x-api-key header in each API request. If no API key is included in the request header, a “Forbidden” error will be returned
+Clients will need to add their api key to the x-api-key header in each API request. If no API key is included in the request header, a “Forbidden” error will be returned
 
 <h3>Usage Plans</h3>
 <table>
@@ -322,23 +308,27 @@ table, th, td {
 </style>
 <tr><th> Plan </th>
 <th> Rate </th>
+<th> Burst </th>
 <th> Quota </th></tr>
 
 <tr><td> bronze </td>
 <td> 1 request per second </td>
-<td> 1,000 requests per month </td></tr>
+<td> 5 </td>
+<td> 10,000 requests per day </td></tr>
 
 <tr><td> silver </td>
 <td> 5 requests per second </td>
+<td> 25 </td>
 <td> 250,000 requests per day </td></tr>
 
 <tr><td> gold </td>
 <td> 10 requests per second </td>
+<td> 50 </td>
 <td> 500,000 requests per day </td></tr>
 </table>
 
 All test accounts will be assigned to the bronze usage plan
 
-All production accounts will be assigned to the silver usage plan. If a client wished to be assigned to the gold usage plan, they should contact the integration team
+Production accounts will be assigned to the silver usage plan. If an Organisation wished to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](NHI_Access@health.govt.nz)
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay

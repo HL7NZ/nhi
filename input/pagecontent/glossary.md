@@ -33,9 +33,29 @@
     * YYYY - 1 January in the specified year of Birth (e.g. 2010 is interpreted as 1 January 2010)"
 
 
+### Birthplace definitions
+
+* **Registered birthplace definition**
+  * A Registered birthplace is either a place of birth and country of birth, or a country of birth only, which has been verified by a Government Agency
+  * This would be a source of BREG - Has been confirmed with a match to the Birth Register
+
+* **Verified birthplace definition**
+  * A Verified birthplace is either a place of birth and country of birth, or a country of birth only, for which acceptable documentary evidence has been sighted by the person recording the birthplace
+  * This would be a source of:
+    * BRCT - Birth Certificate, 
+    * NZCI - NZ Certificate of Identity, 
+    * NZCT - NZ Citizenship Certificate, 
+    * NZET - NZ Emergency Travel Document, 
+    * NZPV - NZ Permanent Resident Visa A New Zealand Permanent Resident Visa (not time bound) issued by Immigration New Zealand, 
+    * NZTV - NZ Resident Visa A New Zealand Resident Visa (time bound) issued by Immigration New Zealand, 
+    * NZRT - NZ Refugee Travel Document,
+    * PPRT - Passport
+
+* **Unverified birthplace definition**
+  * An Unverified Country of Birth is either a place and country of birth, or a country of birth only, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the birthplace
 
 
-### Citizenship definitions
+### NZ Citizenship definitions
 
 * **Registered NZ Citizenship Status Definition**
   * A Registered NZ Citizenship status is a patient who holds NZ Citizenship and the citizenship status has been verified by a Government Agency.
@@ -66,6 +86,37 @@
 
 
 
+<h3>**TBC** - Valid combinations of nz-citizenship and nz-residency status</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th></th>
+<th>NZ Citizenship status = yes</th>
+<th>NZ Citizenship status = no</th>
+<th>NZ Citizenship status = unknown</th></tr>
+
+<tr><td>NZ Residency status = yes</td>
+<td>X</td>
+<td>OK</td>
+<td>X</td></tr>
+
+<tr><td>NZ Residency status = no</td>
+<td>OK</td>
+<td>OK</td>
+<td>OK</td></tr>
+
+<tr><td>NZ Residency status = unknown</td>
+<td>X</td>
+<td>OK</td>
+<td>OK</td></tr>
+</table>
+
+
+
 ### Birthplace definitions
 
 * **Registered birthplace definition**
@@ -90,7 +141,6 @@
   * This would be a source of:
     * NPRF - No Proof Information provided (no proof) by patient/whanau, 
     * OTHR - Other official document
-
 
 
 
@@ -148,7 +198,9 @@
 ### Name Definitions
 
 * **Duplicate Name Definition**
+
   * A Name is a duplicate name for a given NHI number if the 'Given Name', 'Other Given Names', and 'Family Name' match the values for an existing name for that NHI.
+
     
 * **Registered Name Definition**
   * A Registered Name is a name which has been verified by a Government Agency
@@ -183,3 +235,37 @@
     * contains only one of: {Given Name; Family Name}, AND 
     * is not Verified AND 
     * is not Registered
+
+
+* **Legacy Name Definition**
+ * A Legacy Name is a name for which the most recent update:was requested via a Legacy HL7 request, OR was the automated database migration process from the Legacy NHI database to the IBM Initiate NHI database
+
+
+### NZ Residency Definitions
+
+* **Registered NZ Residency Status Definition**
+  * A Registered NZ Residency status is a patient who holds NZ Residency and the Residency status has been verified by a Government Agency.
+  * This is a source of
+    * INZ – Immigration NZ (The code is added only by Te Whatu Ora from information provided by Immigration NZ data sharing)
+
+* **Verified NZ Residency Status Definition**
+  * A Verified NZ Residency Status is a patient who holds NZ Residency for which acceptable documentary evidence has been sighted by the person recording the NZ Residency status
+  * This is a source of:
+    * NZPV - NZ Permanent Resident Visa
+    * NZTV - NZ Resident Visa
+
+
+* **Unverified NZ Residency Status Definition**
+  * An Unverified NZ Residency status is a patient who states they hold NZ Residency, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the NZ Residency status
+  * This is a source of
+    * MIGR - From the legacy NHI System with no known external source
+    * HL7 -  Data has been applied via HL7 message
+    * NPRF - Proof not Sighted
+
+* **Non Resident NZ Residency status Definition**
+  * A Non Resident NZ Residency status is a patient who states they do not hold NZ Residency, with or without documentary evidence
+
+* **Unknown NZ Residency Status Definition**
+  * An Unknown NZ Residency status is a patient who is unable or unwilling to provide any information about their NZ Residency status
+
+* [Click here valid combinations of nz-citizenship and nz-residency status](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status)

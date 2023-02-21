@@ -24,19 +24,28 @@ The user has sourced the required identity information, and initiates an add req
 6. The integrating application indicates to the user the create has been successful
 7. The integrating application retains the nhi-id and version number for future requests relating to this record
 
-#### Rules and errors
+#### Add Patient rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Add Patient rules**
   * An add Patient request must include a:
-    * [name](/StructureDefinition-NhiPatient-definitions.html#Patient.name),
-    * [address](/StructureDefinition-NhiPatient-definitions.html#Patient.address),
+    * [preferred name](/StructureDefinition-NhiPatient-definitions.html#Patient.name),
     * [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate),
-    * [gender](/StructureDefinition-NhiPatient-definitions.html#Patient.gender), and
-    * [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity)
-  * A request cannot create an NHI record which is a duplicate of another Patient’s identity
-  * When an element is supplied that has an information source then both the element and source must be present together
+    * [gender](/StructureDefinition-NhiPatient-definitions.html#Patient.gender),
+    * [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity),
+    * NZ Citizenship status (TBC),
+    * NZ Residency status (TBC),
+    * [Primary residential address](/StructureDefinition-NhiPatient-definitions.html#Patient.address), and
+    * An information source for each of the following items if they are present; birthdate, country of birth, citizenship, residency, deceased date, and name.
+      * Note:  A status of registered can only be added by an authorised agency [See glossary for definitions](/glossary.html).
+
+  * An add Patient request may include a:
+    *  birthplace
+    *  deceased date
+    *  postal address (TBC)
+
+  * An Add Patient request must not create an NHI record which is a duplicate of another Patient’s identity
  
 * _Add Patient errors_
   * _Name is required_
@@ -44,74 +53,32 @@ The user has sourced the required identity information, and initiates an add req
   * _birth date is a required field_
   * _Gender is a required field_
   * _Ethnicity is required_
+  * _A source of registered can only be updated by an authorised agency_
   * _The patient identity information supplied may result in duplication of another identity. Are you sure this update is correct?_
 
 
 ---
 
-* **Birth and Death rules**
-  * A patient must have a [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate), that is after 1 January 1800 and not in the future
-  * If present, a [date of death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be after 1 January 1800 and not in the future
-  * The [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be less than or equal to the [Date of Death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x])
-  * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate), [Date of Death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]), and [Country of Birth](/StructureDefinition-birth-place-definitions.html#Extension.extension:country) source can only be set to registered by an authorised agency
 
-* _Birth and Death errors_
-  * _Patient Date of birth  cannot be a future date_
-  * _Patient Date of death cannot be a future date_
-  * _A patient Date of Birth is required when a patient Date of Birth information source is present_
-  * _A patient Date of Death is required when a patient Date of Death information source is present_
-  * _A patient is required when a patient Country of Birth information source is present_
-  * _Birth and death information can only be set to a ‘Registered’ value by an authorised Agency_
-  * _The Date of Birth must be less than or equal to the Date of Death_
-  * _A Patient Country of Birth is required when Patient Place of Birth is present_
-
-
----
-
-
-* **Ethnicity rules**
-  * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information 
-  * A valid set of Ethnicity information:
-    * contains at least one, and up to 6, level 4 ethnic groups, AND 
-    * each code appears only once in the set (i.e. no duplicate values), AND 
-    * contains a maximum of one residual code (9xxxx), AND 
-    * does not contain code 96666 (repeated value), AND 
-    * does not contain code 98888 (TBC?)
-  * **Add ethnicity text rules here TBD**
-
-* _Ethnicity errors_
-  * _A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code_
-
-
----
-
-
-* **Citizenship rules**
-  * [NZ Citizenship](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzCitizen) - See add patient information source rule
-
-* _Citizenship errors_
-  * _A Patients NZ Citizenship status value is required when a Patients NZ Citizenship Information Source is present_
-
-
----
-
-
-* **Name rules**
-  * A patient must have one name that is the [preferred name](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:preferred)
-  * A name must have either a [first](/StructureDefinition-NhiPatient-definitions.html#Patient.name.given) or [surname](/StructureDefinition-NhiPatient-definitions.html#Patient.name.family) at minimum
-  * A given name is required when an ‘other given name’ is present
-  * **A name can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)**
+* **Add Patient Name rules**
+  * A name must have:
+    * a [given](/StructureDefinition-NhiPatient-definitions.html#Patient.name.given) or a [family](/StructureDefinition-NhiPatient-definitions.html#Patient.name.family) at minimum.
+    * a [preferred name flag](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:preferred) - set to true
+  * A name may have:
+    * prefix (title),
+    * ‘other’ given name (1)
+    * use
+  * A name cannot be added with a name use = old.
+  * A name can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)
   * The first character of a name must be an Alpha (A-Z or a-z) or apostrophe
-  * A name field must include at least one Alphas (A-Z or a-z) character
-  * A request must not create a duplicate of an existing name
-  * A [name information source](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:information-source) can only be set to registered by an authorised agency 
-  * A [‘baby of’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) name must have source set to NPRF
-  * A [‘baby of’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) name must have a name use = temp
-  * An [unallocated](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) NHI must have a name use = temp
- 
+  * A name field must include at least one Alpha (A-Z or a-z) character
+  * A request must not create a duplicate of an existing name 
+  * A [‘baby of name’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have source = NPRF, name use = temp, name-use-extra = 'baby of. 
+  * A [‘baby of name’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have a name use = temp
+  *  Unallocated names can only be set by an authorised agency
 
 
-* _Name errors_
+* _Add Patient Name errors_
   * _A Patient name must contain either a Given name or a Surname and a Name type_
   * _Patient Given Name is required when Patient Other Given Names is present_
   * _A Patient Given Name, Other Given Names, and Family Name must not contain special characters (TBC)_
@@ -129,22 +96,87 @@ The user has sourced the required identity information, and initiates an add req
   * _An ‘unallocated’ Name must have Name Use = Temp_
 
 
+* **Add Patient Birthdate rules**
+  * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
+  * A birthdate must be a complete date and formatted either:
+    * YYYYMMDD - DOB less than or equal to the current date;
+    * YYYYMM – less than or equal to the current month and year;
+    * YYYY – less than or equal to the current year
+  
+  
+  * _Add Patient Birthdate errors_
+  * _Birthdate cannot be in the future_
+  * _A patient Date of Birth is required when a patient Date of Birth information source is present_
+  * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
+
+
 ---
 
 
-* **Address rules**
-  * A Patient must have a single [Primary](/StructureDefinition-NhiPatient-definitions.html#Patient.address.extension:isPrimaryAddress) [Residential](/StructureDefinition-NhiPatient-definitions.html#Patient.address.type) Address
-  * An address must include, Street Address [Address line 1](/StructureDefinition-NhiPatient-definitions.html#Patient.address.line), [Address Type](/StructureDefinition-NhiPatient-definitions.html#Patient.address.type), [Primary Address Flag](/StructureDefinition-NhiPatient-definitions.html#Patient.address.extension:isPrimaryAddress).
-  * A street address must contain one alphanumeric character
-  * A Residential Address must be a [Physical address](/StructureDefinition-NhiPatient-definitions.html#Patient.address.type).
-  * Must not create a duplicate of an existing address.
-  * Validated Mailing Address must be Deliverable
-  * A Residential Address must have [domicile or notional domicile code](/StructureDefinition-NhiPatient-definitions.html#Patient.address.extension:domicile-code)
-  * An address must either validate or have an acceptable [non-validation reason](/StructureDefinition-NhiPatient-definitions.html#Patient.address.extension:notValidatedAddressReason)
-  * Only A-Z, 0-9, spaces, apostrophes, slashes or dashes are allowed (TBC)??
+* **Add Patient Ethnicity rules**
+  * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
+  * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
+
+* _Add Patient Ethnicity errors_
+  * _A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code_
 
 
-* _Address errors_
+---
+
+
+* **Add Patient Citizenship rules**
+  *  [NZ Citizenship](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzCitizen)
+  *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
+
+* _Add Patient Citizenship errors_
+  * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
+
+
+---
+
+
+* **Add Patient Residency rules**
+  *  [NZ Residency](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzResidency)
+  *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
+
+* _Add Patient Residency errors_
+  * _An NZ Residency status is required when an NZ Residency Information Source is present_
+
+
+---
+
+
+* **Add Patient Birthplace rules**
+  * A place of birth must only be populated if a country of birth is present
+
+* _Add Patient Birthplace errors_
+  * _Country of birth is required when a place of birth is present_
+  * _A Country of birth is required when a Country of Birth Information Source is present_
+
+
+---
+
+* **Add Patient Deceased date rules**
+  * If present, a [date of death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be after 1 January 1800 and not in the future
+  * The [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be less than or equal to the [Date of Death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x])
+
+* _Add Patient Deceased date errors_
+  * _Patient Date of death cannot be a future date_
+  * _A patient Date of Death is required when a patient Date of Death information source is present_
+  * _Deceased date can only be set to ‘Registered’ by an authorised Agency_
+  * _The Date of Birth must be less than or equal to the Date of Death_
+
+
+---
+
+
+* **Add Patient Address rules**
+  * Must have one address with:
+    * use = home
+    * type = physical
+*  An address may be validated or not validated see [address rules](/updateAddress.html) for validated vs unvalidated address requirements
+
+* _Add Patient Address errors_
   * _A Patient must have a primary residential address_
   * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
   * _Patient street address contains invalid text_

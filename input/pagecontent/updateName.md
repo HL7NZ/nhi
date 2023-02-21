@@ -5,18 +5,25 @@
 The update name operations allow an authorised user to update a name on a persons identity record
 
 Update name has four sub-operations available
-* **set-preferred-name – Select the Preferred Name for this NHI number**
-* **add-name – Add a new Name to the set of Patient Names for this NHI number**
-* **update-name – Modify some of the information associated with a specific name**
+* **set-preferred-name – Set the Preferred Name the person wishes to be identied as**
+* **add-name – Add a new Name to the set of Patient Names for this NHI record**
+* **replace-name – Replace a name that is currently on the patients NHI record**
 * **inactivate-name – Remove a Name from the set of Patient Names returned to users**
+
+
+
 
 ### set-preferred-name
 
 * Allows an authorised user to select the Preferred Name for this NHI number
 
+
+
 <div>
 {% include set-preferred-name.svg %}
 </div>
+
+
 
 **set-preferred-name processing steps:**
  
@@ -28,6 +35,7 @@ Update name has four sub-operations available
 6. The integrating application displays the updated patient details to the user
 
 
+
 <h3> In Parameters </h3>
 <table>
 <style>
@@ -37,21 +45,26 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> nhi </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
 <tr><td> version-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
 <tr><td> preferred-id </td>
+<td> valueString </td>
 <td> Mandatory </td>
-<td> The id for the name to set the preferred name flag against </td></tr>
+<td> The id for the name to set the preferred name flag for </td></tr>
 </table>
+
 
 
 * Behaviour:
@@ -90,8 +103,13 @@ set-preferred-name example request:
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Patient set-preferred-name rules**
+  * A set-preferred-name request must include:
+     * a valid NHI number
+     * the current patient version number
+     * the preferred-id
 
 * _Patient set-preferred-name errors_
+  * _Patient NHI, preferred ID and version number are required_ 
 
 
 

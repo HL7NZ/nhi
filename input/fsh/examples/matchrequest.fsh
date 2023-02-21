@@ -4,7 +4,7 @@ Description: "Example $Match (Find NHI) Request"
 Usage: #example
 * parameter[0].name = "resource"
 * parameter[=].resource.resourceType = "Patient"
-* parameter[=].resource.meta.versionId = "111"
+* parameter[=].resource.meta.versionId = "123"
 * parameter[=].resource.name.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * parameter[=].resource.name.extension.valueBoolean = true
 * parameter[=].resource.name.use = #nickname

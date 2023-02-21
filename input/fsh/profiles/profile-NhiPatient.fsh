@@ -46,8 +46,6 @@ Description:    "The Patient resource exposed by the NHI."
 * name.period 0..0
 * name.text 0..0
 * identifier.period 0..0
-* telecom 0..0
-* generalPractitioner 0..0
 * deceased[x] only dateTime
 
 * extension contains 
@@ -69,6 +67,9 @@ Description:    "The Patient resource exposed by the NHI."
    
 //Name is required, and there are extensions for source, and isPreferred
 * name  0..*
+* name.given  0..2
+* name.given ^short = "Given name and other given name(s)"
+* name.given ^definition = "The given name and other given name(s) for the patient"
 * name.extension contains
     $information-source named information-source 0..1 and
     $preferred named preferred 1..1 and
@@ -105,12 +106,6 @@ Description:    "The Patient resource exposed by the NHI."
 * address 0..*
 * address.line 1..*     //there will always be at least 1 line
 
-//Limit the possible resources for generalPractitioner only to a PractitionerRole
-//Note that this might still be a contained resource - that's still supported by this profile
-* generalPractitioner only Reference(PractitionerRole)
-
-
-
 //identifier constraints for NHI
 
 //don't allow other identifiers
@@ -132,4 +127,68 @@ Description:    "The Patient resource exposed by the NHI."
 * extension[sex-at-birth] 0..0
 * extension[domicile-code] 0..0
 
+// Contact
 
+* telecom 0..3
+* telecom ^short = "The Paient's contact details"
+* telecom.use from https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
+* telecom.use ^short = "home | mobile"
+* telecom.use ^definition = "The purpose of this contact point - constrained to home | mobile"
+* telecom.system from https://nzhts.digital.health.nz/fhir/ValueSet/nhi-contact-point-system-code
+* telecom.system ^short = "phone | email"
+* telecom.system ^definition = "The system for this contact point - constrained to phone | email"
+
+* telecom.rank 0..0
+* telecom.period 0..0
+* telecom.extension[cp-purpose] 0..0
+
+
+// GP
+
+//Limit the possible resources for generalPractitioner only to a PractitionerRole
+//Note that this might still be a contained resource - that's still supported by this profile
+* generalPractitioner only Reference(PractitionerRole)
+
+* generalPractitioner 0..1
+* generalPractitioner ^short = "Reference for the Patient's enrolled general Practitioner"
+* generalPractitioner ^definition = "The reference for the General Practice that the patient is enrolled with"
+
+// slice for contained practitionerRole
+* contained ^slicing.discriminator.type = #type
+* contained ^slicing.discriminator.path = "$this"
+* contained ^slicing.rules = #closed
+* contained ^slicing.description = "Slicing to specifiy a PractitionerRole resource may be returned as a contained resource for the Patient's General Practitioner information"
+* contained contains GP 0..1
+* contained[GP] only http://hl7.org/fhir/StructureDefinition/PractitionerRole
+* contained[GP] ^short = "Contained resource for the Patient's enrolled general Practitioner"
+* contained[GP] ^definition = "Contained resource for the General Practice that the patient is enrolled with"
+
+
+ValueSet: NhiContactPointUse
+Title: "NHI ContactPoint Use Codes"
+Id: nhi-address-type
+Description: "Types of contact use supported  by the NHI"
+* ^url = https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
+* ^version = "1.0"
+* ^status = #active
+* ^experimental = false
+* ^date = "2023-01-30T00:00:00+13:00"
+* ^publisher = "Te Whatu Ora"
+* codes from system http://hl7.org/fhir/contact-point-use
+* exclude ContactPointUse#temp
+* exclude ContactPointUse#old
+* exclude ContactPointUse#work
+
+
+ValueSet: NhiContactPointSystem
+Id: nhi-contact-point-system-code-1.0
+Title: "NHI ContactPoint System Codes"
+Description: "System values for a ContactPoint supported  by the NHI"
+* ^url = "https://nzhts.digital.health.nz/fhir/ValueSet/nhi-contact-point-system-code"
+* ^version = "1.0"
+* ^status = #active
+* ^experimental = false
+* ^date = "2023-01-30T00:00:00+13:00"
+* ^publisher = "Te Whatu Ora"
+* include ContactPointSystem#phone
+* include ContactPointSystem#email

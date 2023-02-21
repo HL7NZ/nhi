@@ -143,7 +143,6 @@ table, th, td {
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
@@ -156,7 +155,7 @@ table, th, td {
 <li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
 <li>Has three ethnicities</li>
 <li>Is a NZ citizen</li></td>
-<td>Mandatory</td></tr>
+<td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-4</td>
 <td>application can display all other identity data returned by the NHI in a GET response including:
@@ -225,6 +224,43 @@ ZBE4905</td>
 <td>mandatory</td></tr>
 </table>
 
+<h3>NHI Patient GET tests (enrolled GP and contact details only)</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption> **Only complete these if you have either permission to vew a patient's enrolled GP or contact details** </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-GET-11</td>
+<td>application can display the patients's enrolled General Practice details returned by the NHI in a GET response including
+<li>The NES enrolment id</li>
+<li>enrolment.startDate</li>
+<li>enrolment.expiryDate</li>
+<li>Practitioner identifier (CPN) and name</li>
+<li>enrolling organisation ID and name</li>
+<li>Facility ID and name</li></td>
+<td> Enrolled GP - ZKC4641 <br /> Enrolled GP and Contact details ZKC4633 </td>
+<td>Output: application does not error <br /> application returns all General Practice details when present </td>
+<td>*Mandatory if</td></tr>
+
+<tr><td>NHI-GET-12</td>
+<td>application can display the patients's contact details returned by the NHI in a GET response including:
+<li>Home phone</li>
+<li>Mobile phone</li>
+<li>Email address</li></td>
+<td> Contact details - ZKC4650 <br /> Enrolled GP and Contact details ZKC4633 </td>
+<td>Output: application does not error <br /> application returns all Contact details when present </td>
+<td>*Mandatory if </td></tr>
+</table>
+
 <h3>NHI Patient Match tests</h3>
 <table>
 <style>
@@ -241,11 +277,10 @@ table, th, td {
 
 <tr><td>NHI-Match-1</td>
 <td>application allows the user to search using the following attributes:
-<li>Given Name(s), Surname</li>
-<li>Gender</li>
-<li>Partial or full date of birth</li>
-And to show that the application displays at least the minimum required attributes in a search result:
-<li>Given Name(s), Surname</li>
+<li>Name (Given Name(s) and/or Surname)</li>
+<li>Birthdate (Full or partial)</li>
+And to show that the application can present the minimum details to allow for adequate confirmation of identity (if present on the patient record): 
+<li>Name (Given Name(s), Surname)</li>
 <li>Gender</li>
 <li>Birthdate</li>
 <li>Primary Address</li>
@@ -253,14 +288,16 @@ And to show that the application displays at least the minimum required attribut
 <li>NHI Identifier</li>
 <li>Match Score</li>
 <li>Display a flag/indicate when a patient in the search result has multiple names</li>
-The application must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
+Note:
+<li>The application must display multiple results if they are returned.</li>
+<li>Results must be presented in descending order of the match score.</li></td>
 <td>Given Name: Noah <br />
 Middle Name: James <br />
 Surname: Owen <br />
 Gender: M <br />
 DOB: 1949-10-30 (30th October 1949)</td>
 <td>Input: Minimum search criteria can be entered <br />
-Output: The top result returned in the search should be NHI ZBH6793 <br />
+Output: The top result returned in the search should be NHI ZAT4626 <br />
 Output: Minimum search result identity attributes are all present in result list
 </td>
 <td>mandatory</td></tr>
@@ -316,7 +353,7 @@ Output: The top result returned is NHI: ZAX6965 Score: 99
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient Match tests - These tests are only required if the application is not implementing Patient Read</h3>
+<h3>NHI Patient Match tests (Minimum data requirements)</h3>
 <table>
 <style>
 table, th, td {
@@ -324,7 +361,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you are not completing the ‘NHI Patient GET tests’** </caption>
+<caption> **Only complete these if you are not implementing Patient Read and completing the ‘NHI Patient GET tests’** </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -339,9 +376,9 @@ table, th, td {
 <li>Primary Address</li></td>
 <td>Use a Match request to retrieve ZJS7596 and demonstrate how you display the NHI details <br />
 Family Name: Maraka <br />
-Given Names: Jamie, Susan
+Given Names: Jamie, Susan <br />
 Birthdate:25-08-1977 <br />
-Gender: Female
+Gender: Female <br />
 Address: 2 Tennyson Street, Napier South, Napier, 4110 <br />
 Use - Home <br />
 Type - Physical </td>
@@ -356,7 +393,7 @@ Output: Minimum identity information is displayed for the patient</td>
 Family Name: Smith-Martin <br />
 Given Names: Laura, Rose <br />
 Birthdate:14-07-1970 <br />
-Gender: Female
+Gender: Female <br />
 Address: <br />
 Not validated-address-reason - No Fixed Abode, <br />
 Domicile code - D091, <br />
@@ -374,7 +411,6 @@ Output: The application alerts the user that the patient is deceased and provide
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
@@ -385,7 +421,8 @@ Given Names: Levi, Sands <br />
 Birthdate:26-02-1995 <br />
 Gender: Male </td>
 <td>Input: Above criteria can be entered <br />
-Output: All identity information is displayed for the patient. The patient:
+Output: All identity information is displayed for the patient. <br />
+The patient: <br />
 <li>Is alive</li>
 <li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
@@ -405,14 +442,14 @@ Given Names: John, Test <br />
 Birthdate:01-01-1914 <br />
 Gender: Male </td>
 <td>Input: Above criteria can be entered <br />
-Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
+Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has: <br />
 <li>A not validated physical address</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li></td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-8 (NHI-Get-6)</td>
-<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters).</td>
+<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters)</td>
 <td>Use a Match request to retrieve ZBE4905 and demonstrate how you display the NHI details <br />
 Family Name: SurnameVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
 Given Names: GivenVeryVeryLongLongLongnamewithtoomanycharacters, MiddleVeryLongLongLongnamewithtoomanycharactersVeryVeryVeryLongLongLongnamewithtoomanycharacters <br />
@@ -420,7 +457,7 @@ Birthdate:01-01-1974 <br />
 Gender: Female </td>
 <td>Input: Above criteria can be entered <br />
 Output: The application can manage a patient record that has attribute values which are the maximum allowed field length in some fields <br />
-The patient has the following fields fully populated in the test record (field lengths in parentheses):
+The patient has the following fields fully populated in the test record (field lengths in parentheses): <br />
 <li>Given name (50)</li>
 <li>Other Given Name(s) (100)</li>
 <li>Surname (100)</li>
@@ -448,7 +485,7 @@ Output: Application does not error</td>
 
 <tr><td>NHI-Match-10 (NHI-Get-8)</td>
 <td>application can synchronize with local system in response to the NHI version changing</td>
-<td>Use a Match request to retrieve ZCX7065, using details:
+<td>Use a Match request to retrieve ZCX7065, using details: <br />
 Family Name: ALLEN <br />
 Given Name: JOSEPH <br />
 Birthdate:01-04-1950 <br />
@@ -466,32 +503,158 @@ Family Name: MultipleAddress <br />
 Given Name: Francis <br />
 Birthdate:12-12-1982 <br />
 Gender: Male </td>
-<td><td>Input: Above criteria can be entered <br />
+<td>Input: Above criteria can be entered <br />
 Output: All address formats are displayed appropriately</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-12 (NHI-Get-10)</td>
-<td>application can handle a response when a patient has <br /> only a surname; <br /> only a given name; <br /> multiple names</td>
-<td> Use a Match request to retrieve <b>all of the following</b> and demonstrate how you display the NHI details <br />
-1. <b>ZAU8023</b> <br />
+<td>application can handle a response when a patient has <br />
+only a surname; <br />
+only a given name; <br />
+multiple names</td>
+<td> Use a Match request to retrieve <b> all of the following </b> and demonstrate how you display the NHI details <br />
+<b> 1. ZAU8023 </b> <br />
 Family Name: Magi <br />
 Birthdate:01-01-2012 <br />
 Gender: Unknown <br />
-2. <b>ZAV8657</b> <br />
+<b> 2. ZAV8657 </b> <br />
 Given Name: Cambridge <br />
 Birthdate:12-04-1960 <br />
 Gender: Male <br />
-3. <b>ZHS7524</b> <br />
+<b> 3. ZHS7524 </b> <br />
 Family Name: MultipleAddress <br />
 Given Name: Francis <br />
 Birthdate:12-12-1982 <br />
-Gender: Male <br /> </td>
+Gender: Male </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
-1. Output: The top result returned is NHI: ZAU8023 <br />
-2. Output: The top result returned is NHI: ZAV8657 <br />
-3. Output: The top result returned is NHI: ZHS7524 <br />
-Output: Application does not error <br /> Application returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<b> 1. Output: The top result returned is NHI: ZAU8023 </b> <br />
+<b> 2. Output: The top result returned is NHI: ZAV8657 </b> <br />
+<b> 3. Output: The top result returned is NHI: ZHS7524 </b> <br />
+Output: Application does not error <br />
+Output: Application returns all name parts when present <br />
+Output: Order of name parts is clear to the user </td>
 <td>Mandatory</td></tr>
+</table>
+
+
+<h3>NHI Patient Maintain Address tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Maintain-Address-1</td>
+<td>application can replace the <b> primary residential address </b> on a patient record with a validated address </td>
+<td><li>Use selected NHI number</li>
+<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI </li>
+<li>Add a new <b> primary residential address </b> to the patient record using the set-addresss operation</li></td>
+<td>Input: Application can validate an address via e-SAM (using suggest or search)<br />
+Input: An address request can be populated with appropriate information<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-2</td>
+<td>application can add (or replace) the <b> postal address </b> on a patient record with a validated address</td>
+<td><li>Use selected NHI number</li>
+<li>Locate a validated address to use (this can be done using https://www.nzpost.co.nz/tools/address-postcode-finder) or use Health_UI </li>
+<li>Add a new <b> postal address </b> to the patient record using the set-addresss operation</li></td>
+<td>Input: Application can validate an address via e-SAM (using suggest or search)<br />
+Input: An address request can be populated with appropriate information<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-3</td>
+<td>application can replace the <b> primary residential address </b> on a patient record with an <b> overseas </b> unvalidated address </td>
+<td><li>Use selected NHI number</li>
+<li>Add a new <b> primary residential address </b> to the patient record using the set-unvalidated-address operation </li></td>
+<td>Input: An address request can be populated with overseas unvalidated address information <br />
+Output: The address that is displayed to the end user is the address that is returned in the update response </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-4</td>
+<td>application can replace the <b> primary residential address </b> on a patient record with an:
+<li> <b> 'unknown' unvalidated address </b> </li>
+<li> <b> 'no fixed abode' unvalidated address </b> </li>
+<li> <b> 'other' unvalidated address </b> </li> </td>
+<td> <li> Use selected NHI number</li>
+<li>Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li>
+<b>Do ALL</b><
+<li> <b> 'unknown' unvalidated address </b> </li>
+<li> <b> 'no fixed abode' unvalidated address </b> </li>
+<li> <b> 'other' unvalidated address </b></li> </td>
+<td>Input: An address request can be populated with the unvalidated address information <br />
+Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html) <br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-5</td>
+<td>application can replace the <b> primary residential address </b> on a patient record with an <b> Address Service Unavailable </b> unvalidated address </td>
+<td><li>Use selected NHI number</li>
+<li> Disable the external Address Service lookup</li>
+<li> Show Address Service error </li>
+<li> Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
+<td>Input: An address request can be populated with NOSVC unvalidated address information<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-6</td>
+<td>application can replace the <b>postal address</b> on a patient record with an <b>Address Service Unavailable</b> unvalidated address</td>
+<td><li>Use selected NHI number</li>
+<li> Disable the external Address Service lookup</li>
+<li> Show Address Service error </li>
+<li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
+<td>Input: An address request can be populated with NOSVC unvalidated address information<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-7</td>
+<td>application can replace the <b>postal address</b> on a patient record with an <b>Overseas</b> unvalidated address</td>
+<td><li>Use selected NHI number</li>
+<li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
+<td>Input: An address request can be populated with overseas unvalidated address information<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-8</td>
+<td>application can remove the <b>postal address</b> on a patient record</td>
+<td><li>Use selected NHI number</li>
+<li> Remove the <b>postal address</b> from the patient record using the [$remove-postal-address](/updateAddress.html#remove-postal-address)</li></td>
+<td>Output: The patient record has Postal address removed</td>
+<td>mandatory</td></tr>  
+</table>
+
+
+<h3>NHI Patient Maintain Name tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Maintain-Name-1</td>
+<td>application can set the patients preferred name</td>
+<td><li>Use NHI number ZZK09PQ</li>
+<li>Do a Get Patient request to see active patient names</li>
+<li>Change the preferred name from the current name to another active name for the patient using the [$set-preferred-name](/updateName.html#set-preferred-name)</li></td>
+<td>Input: An application can select a Patients preferred name from the active names list<br />
+Output: The preferred name that is displayed to the end user is the name that was selected in the operation<br />
+Output: The name is presented to the user with all name parts</td>
+<td>mandatory</td></tr>
 </table>
 
 <h3>NHI Patient Add tests</h3>
@@ -502,6 +665,8 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption> For the NHI Maintain address tests. Please select one of the following NHI numbers and use this for all tests <br />
+ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>

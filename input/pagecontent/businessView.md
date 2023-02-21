@@ -31,6 +31,7 @@ The NHI holds the following information:
 * ethnicity
 * date of death
 
+The patient’s general practice and their phone and email contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the above NHI details in the NHI Patient profile. 
 
 #### NHI Number format
 
@@ -121,4 +122,6 @@ Information in the NHI is collected in mixed case and preserved in the format pr
 
 #### Māori macrons
 
-Updates to the NHI using the FHIR interfaces allows information supplied to the NHI to include UTF-8 encoded Maori accented characters.
+Māori macrons are not currently able to be updated in FHIR.
+
+Future development will allow updates to the NHI using the FHIR interfaces to include UTF-8 encoded Maori accented characters.

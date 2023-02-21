@@ -20,7 +20,7 @@ Usage: #definition
 * rest.resource.type = #Patient
 * rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
-* rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id."
+* rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id.  **HTTP Request** 'GET'  **Scope required:** patient:read / Patient.r"
 // * rest.resource.interaction[1].code = #patch
 // * rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
 // * rest.resource.interaction[2].code = #create
@@ -29,20 +29,20 @@ Usage: #definition
 // * rest.resource.interaction[3].documentation = "Not yet enabled"
 * rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
-* rest.resource.operation.documentation = "$Match (Find NHI) with in parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores, $Match (Validate) with in parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id"
+* rest.resource.operation.documentation = "**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.  **HTTP Request** 'POST'.  **Scope required:** patient:validate / Patient.v"
 
 * rest.resource.operation[1].name = "set-preferred-name"
 * rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
-* rest.resource.operation[1].documentation = "an operation to set the patient.name.preferred boolean to True." 
+* rest.resource.operation[1].documentation = "An operation to set the patient.name.preferred boolean to True.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u"
 
 * rest.resource.operation[2].name = "set-address"
 * rest.resource.operation[2].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
-* rest.resource.operation[2].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address" 
+* rest.resource.operation[2].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u" 
 
 * rest.resource.operation[3].name = "set-unvalidated-address"
 * rest.resource.operation[3].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address"
-* rest.resource.operation[3].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address" 
+* rest.resource.operation[3].documentation = "Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u" 
 
 * rest.resource.operation[4].name = "remove-postal-address"
 * rest.resource.operation[4].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address"
-* rest.resource.operation[4].documentation = "Allows a user to remove a postal address from the nhi record" 
+* rest.resource.operation[4].documentation = "Allows a user to remove a postal address from the nhi record.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u" 
