@@ -198,7 +198,6 @@ table, th, td {
 ### Name Definitions
 
 * **Duplicate Name Definition**
-
   * A Name is a duplicate name for a given NHI number if the 'Given Name', 'Other Given Names', and 'Family Name' match the values for an existing name for that NHI.
 
     
@@ -268,4 +267,4 @@ table, th, td {
 * **Unknown NZ Residency Status Definition**
   * An Unknown NZ Residency status is a patient who is unable or unwilling to provide any information about their NZ Residency status
 
-* [Click here valid combinations of nz-citizenship and nz-residency status](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status)
+* [Click here valid combinations of nz-citizenship and nz-residency status](/glossary.html#tbc-valid-combinations-of-nz-citizenship-and-nz-residency-statu)
