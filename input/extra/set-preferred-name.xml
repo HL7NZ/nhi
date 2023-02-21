@@ -86,7 +86,7 @@
 				</tr>
 			</table>
 			<div>
-				<p>Update patient name. Set the preferrd name to TRUE on the preferred name, FALS on the current preferred name.
+				<p>Update patient name. Set the preferrd name in the request to TRUE, and update the current preferred name to FALSE.
 				</p>
 			</div>
 		</div>
