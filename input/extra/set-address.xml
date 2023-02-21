@@ -12,50 +12,44 @@
 				
 			</div>
 			<p>URL: [base]/Patient/$set-address</p>
-			<p>Parameters</p>
-			<table class='table table-bordered table-condensed'>
-				<tr>
-					<td>
-						<b>Use</b>
-					</td>
-					<td>
-						<b>Name</b>
-					</td>
-					<td>
-						<b>Cardinality</b>
-					</td>
-					<td>
-						<b>Type</b>
-					</td>
-					<td>
-						<b>Binding</b>
-					</td>
-					<td>
-						<b>Documentation</b>
-					</td>
-				</tr>
+
+
+			<h3>Parameters</h3>
+        		<table>
+       			<style>
+        		table, th, td {
+        		border: 1px solid black;
+        		border-collapse: collapse;
+        		}
+        		</style>
+        		<tr><th>Use</th>
+        		<th>Name</th>
+        		<th>Cardinality</th>
+        		<th>Type</th>
+        		<th>Binding</th>
+			<th>Documentation</th></tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.NHI</td>
+					<td>nhi</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					
+					<td />
 					<td>
 						<div>
-							<p>The Patient's NHI number</p>
+							<p>The Patient's nhi number</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.meta.versionId</td>
+					<td>version-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					
+					<td />
 					<td>
 						<div>
 							<p>The current value of the patient resources meta.versionId</p>
@@ -67,12 +61,15 @@
 					<td>address-type</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://nzhts.digital.health.nz/fhir/ValueSet/addressType">NhiAddressType</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>must be physical or postal</p>
+							<p>Must be physical or postal
+							<br /> 
+							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html
+							</p>
 						</div>
 					</td>
 				</tr>
@@ -86,7 +83,7 @@
 					<td/>
 					<td>
 						<div>
-							<p>The id of the validated address as retuned by the eSAM address service</p>
+							<p>The id of the validated address as returned by the eSAM address service</p>
 						</div>
 					</td>
 				</tr>
@@ -106,7 +103,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>building-name</td>
+					<td>address-building-name</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -114,7 +111,9 @@
 					<td/>
 					<td>
 						<div>
-							<p>building name if required as additional address information</p>
+							<p>Building name if required as additional address information
+							 <br />
+							Not part of the esam response</p>
 						</div>
 					</td>
 				</tr>
@@ -134,7 +133,7 @@
 				</tr>
 			</table>
 			<div>
-				<p>Update a patient address 
+				<p>Update a patient address. Set a validated address. 
 				</p>
 			</div>
 		</div>
@@ -177,22 +176,22 @@
 	<type value="false" />
 	<instance value="true" />
 	<parameter>
-		<name value="patient.NHI" />
+		<name value="nhi" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="The Patient's NHI number" />
+			value="The Patient's nhi number" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="patient.meta.versionId" />
+		<name value="version-id" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="he current value of the patient resources meta.versionId" />
-		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
+			value="The current value of the patient resources meta.versionId" />
+		<type value="string" />
 	</parameter>
 	
 	<parameter>
@@ -201,8 +200,8 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="must be physical or postal" />
-		<type value="https://nzhts.digital.health.nz/fhir/ValueSet/addressType" />
+			value="Must be physical or postal" />
+		<type value="string" />
 	</parameter>
 	<parameter>
 		<name value="nz-address-id" />
@@ -223,12 +222,12 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="building-name" />
+		<name value="address-building-name" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 value="building name if required as additional address information" />
+		 value="Building name if required as additional address information, not returned by eSAM" />
 		<type value="string" />
 	</parameter>
 	<parameter>
