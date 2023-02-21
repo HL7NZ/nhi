@@ -35,7 +35,7 @@ Patient $Match does not enable searching in the same way that  Patient Search do
 **Match Patient processing steps:**
  
 1. The user supplies patient details to be be matched against the NHI patient records
-2. The integrating application sends an HTTP Post request (E.g. Post\<Endpoint>/Patient/$match) using the $match operation to the NHI with 'In Parameters' (A Patient record, onlyCertainMatches set to False, and a count (optional)).
+2. The integrating application sends an HTTP Post request (E.g. Post\<Endpoint>/Patient/$match) using the $match operation to the NHI with 'In Parameters' (A Patient resource, onlyCertainMatches set to False, and a count (optional)).
 6. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 7. The matching patients are retrieved from the NHI.
 8. The response containing a bundle of matching patient resources is returned to the integrating application - ALT: Empty bundle returned
@@ -50,18 +50,22 @@ table, th, td {
 }
 </style>
 <tr><th> Parameter name </th>
+<th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> 'Patient resource' </td>
+<td> Resource </td>
 <td> Mandatory </td>
 <td> See match request example (link below) </td></tr>
 
 <tr><td> onlyCertainMatches: 0 (False) </td>
+<td> boolean </td>
 <td> Mandatory </td>
 <td> Must be set to false </td></tr>
 
 <tr><td> count </td>
+<td> valueInteger </td>
 <td> Optional </td>
 <td> The maximum number of records to return. Note that interators should be careful when using this, as it may prevent probable - and valid - matches from being returned </td></tr>
 </table>
