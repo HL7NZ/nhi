@@ -5,12 +5,12 @@
 The update address operations allow an authorised user to update a persons address on a persons identity record
 
 Update address has three sub-operations available:
-* **set-address** -  Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
-* **set-unvalidated-address** - Allows a user to replace a physical or add or replace a postal address with an unvalidated address
-* **remove-postal-address** - Allows a user to remove a postal adddress from a persons identity record.
+* **Set-address** -  Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
+* **Set-unvalidated-address** - Allows a user to replace a physical or add or replace a postal address with an unvalidated address
+* **Remove-postal-address** - Allows a user to remove a postal adddress from a persons identity record.
 
 
-### set-address
+### Set-address
 
 * Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address
 
@@ -18,7 +18,7 @@ Update address has three sub-operations available:
 {% include set-address.svg %}
 </div>
 
-**set-address processing steps:**
+**Set-address - Processing steps:**
  
 1. The user provides details for a new address to add
 2. The system requests address validation from the address validation service
@@ -30,7 +30,7 @@ Update address has three sub-operations available:
 6. The integrating application displays the updated patient details to the user
 
 
-<h3>In Parameters</h3>
+<h4>Set-address - In Parameters</h4>
 <table>
 <style>
 table, th, td {
@@ -74,7 +74,7 @@ table, th, td {
 <td> The building name, this is additional information and is not returned as part of the eSAM address </td> </tr>
 </table>
 
-* Behaviour:
+#### Set-address - Behaviour
   * The NHI is validated
   * The Patient version-id is validated
   * The parameters are validated
@@ -82,7 +82,7 @@ table, th, td {
   * If the eSAM address returned matches the address-line supplied, the new address is added to the NHI and the existing address made inactive
 
 
-set-address example request:
+#### Set-address - Example request
 
 ```  
 {
@@ -120,7 +120,7 @@ set-address example request:
 
 
 
-#### set-address Rules and errors
+#### Set-address - Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
@@ -138,7 +138,7 @@ set-address example request:
 
 
 
-### set-unvalidated-address
+### Set-unvalidated-address
  
 * Allows a user to replace a physical or add or replace a postal address with an unvalidated address
 
@@ -146,7 +146,7 @@ set-address example request:
 {% include set-unvalidated-address.svg %}
 </div>
 
-**set-unvalidated-address processing steps:**
+**Set-unvalidated-address - Processing steps:**
  
 1. The user provides details for a new address to add
 2. The integrating application sends an HTTP Post request using the $set-unvalidated-address operation to the NHI E.g. Post\<Endpoint>/Patient/$set-unvalidated-address
@@ -156,7 +156,7 @@ set-address example request:
 6. The integrating application displays the updated patient details to the user
 
 
-<h3>In Parameters</h3>
+<h4>Set-unvalidated-address - In Parameters</h4>
 <table>
 <style>
 table, th, td {
@@ -230,7 +230,7 @@ table, th, td {
 <td></td> </tr>
 </table>
 
-* Behaviour:
+#### Set-unvalidated-address - Behaviour
   * The NHI is validated
   * The Patient versionId is validated
   * The parameters are validated
@@ -238,7 +238,7 @@ table, th, td {
   * With a succcesful address add, the new address is added to the NHI and the existing address made inactive
 
 
-set-unvalidated-address example request:
+#### Set-unvalidated-address - Example request
 
 ```  
 {
@@ -295,7 +295,7 @@ set-unvalidated-address example request:
 ```
 
 
-#### set-unvalidated-address Rules and errors
+#### Set-unvalidated-address - Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
@@ -305,14 +305,14 @@ set-unvalidated-address example request:
   * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
   * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
 
-* _Patient set-address errors_
+* _Patient set-unvalidated-address errors_
   * _Patient NHI, version number, address type and address-id are all required_
   * _Version number is incorrect_
   * _address type must be a postal or physical_
   * _address-line must match the espatial value: \<value>_
 
 
-### remove-postal-address
+### Remove-postal-address
 
 * Allows a user to remove a postal adddress from a persons identity record.
 
@@ -320,7 +320,7 @@ set-unvalidated-address example request:
 {% include remove-postal-address.svg %}
 </div>
 
-**remove-postal-address processing steps:**
+**Remove-postal-address - Processing steps:**
  
 1. The user requests to remove a postal address
 2. The integrating application sends an HTTP Post request using the $remove-postal-address operation to the NHI E.g. Post\<Endpoint>/Patient/$remove-postal-address
@@ -330,7 +330,7 @@ set-unvalidated-address example request:
 6. The integrating application displays the updated patient details to the user
 
 
-<h3>In Parameters</h3>
+<h4>Remove-postal-address - In Parameters</h4>
 <table>
 <style>
 table, th, td {
@@ -354,12 +354,12 @@ table, th, td {
 <td> The current patient version number </td></tr>
 </table>
 
-* Behaviour:
+#### Remove-postal-address - Behaviour
   * The NHI is validated
   * The Patient version-id is validated
   * The postal address on the nhi record is made inactive
 
-remove-postal-address example request:
+#### Remove-postal-address - Example request
 
 ```  
 {
@@ -380,7 +380,7 @@ remove-postal-address example request:
 ```
 
 
-#### remove-postal-address Rules and errors
+#### Remove-postal-address - Rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
@@ -389,6 +389,6 @@ remove-postal-address example request:
   * A Patient Update request must contain the live NHI number for the Patient Record
   * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
 
-* _Patient set-address errors_
+* _Patient remove-postal-address errors_
   * _Patient NHI, version number, address type and address-id are all required_
   * _Version number is incorrect_
