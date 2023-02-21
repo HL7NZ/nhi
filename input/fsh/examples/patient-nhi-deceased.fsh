@@ -1,6 +1,6 @@
 Instance: ZAT2348
 InstanceOf: Patient
-Description: "Example Patient deceased"
+Description: "Example Patient - deceased"
 Usage: #example
 * meta.versionId = "3368229"
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
