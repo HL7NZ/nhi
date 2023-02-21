@@ -92,9 +92,7 @@
 				</tr>
 			</table>
 			<div>
-				<p>The NHI is validated, the version-id is validated, the preferred-id is validated.
-				<br />
-				If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name.
+				<p>Update patient name. Set the preferrd name to TRUE on the preferred name, FALS on the current preferred name.
 				</p>
 			</div>
 		</div>
