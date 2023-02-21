@@ -1,6 +1,6 @@
 Instance: ZJM9397
 InstanceOf: Patient
-Description: "Patient with validated residential and mailing addresses"
+Description: "Example Patient - with validated residential and mailing addresses"
 Usage: #example
 * meta.versionId = "3368249"
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
