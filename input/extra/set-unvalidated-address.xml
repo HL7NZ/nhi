@@ -68,7 +68,7 @@
 						<div>
 							<p>The reason the address could not be validated
 								<br />
-								Must be a valid code from [notValidatedAddressReason](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-address-not-validated-reason-1.1.html)
+							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-address-not-validated-reason-1.1.html
 							</p>
 						</div>
 					</td>
@@ -83,9 +83,9 @@
 					<td />
 					<td>
 						<div>
-							<p>must be physical or postal
-							<br /> 
-							[Must be a valid code from](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html)
+							<p>Must be physical or postal
+								<br /> 
+							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html
 							</p>
 						</div>
 					</td>
@@ -100,7 +100,7 @@
 					<td/>
 					<td>
 						<div>
-							<p>building name if required as additional address information</p>
+							<p>Building name if required as additional address information</p>
 						</div>
 					</td>
 				</tr>
@@ -186,11 +186,11 @@
 						<div>
 							<p>The address country code
 								<br /> 
-								Must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’.
-							<br /> 	
+							Must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’.
+								<br /> 	
 							When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ </p>
-							<br /> 
-							Must be valid value from [ISO 3166-1:2013 (2-alpha country code](https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-country-code-1.0.html)
+								<br />
+							Must be valid value from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-country-code-1.0.html
 						</div>
 					</td>
 				</tr>
@@ -209,8 +209,8 @@
 							When not supplied, the suburb and city are used to derive a domicile code from the streets file.
 								<br />
 							If a suburb/city combination is not found in the streets file an error is returned  (note the client end-user can then enter a domicile code or client system can supply a default district domicile code)
-							<br />
-							Must be valid value from [Domicile Code](https://fhir.org.nz/ig/base//ValueSet-domicile-code.html)</p>
+								<br />
+							Must be valid value https://fhir.org.nz/ig/base//ValueSet-domicile-code.html</p>
 						</div>
 					</td>
 				</tr>
@@ -306,7 +306,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="must be physical or postal" />
+			value="Must be physical or postal" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -315,7 +315,7 @@
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 	value="building name if required as additional address information <br /> not part of the esam response" />
+		 	value="Building name if required as additional address information." />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -363,7 +363,7 @@
 		<min value="0" />
 		<max value="1" />	
 		<documentation
-		 	value="must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’. When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ " />	
+		 	value="Must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’. When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ " />	
 		<type value="string" />
 	</parameter>
 	<parameter>
