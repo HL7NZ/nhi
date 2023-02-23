@@ -6,6 +6,12 @@ The NHI is made up of two resources:
 
 This guide uses artifacts from [New Zealand Base Implementation Guide.](https://fhir.org.nz/ig/base/index.html)
 
+### NHI FHIR Introduction videos
+
+* [Introduction and overview]()
+* 
+
+
 ### Organization of the Guide
 
 * **Business view:** The Business context of the NHI
