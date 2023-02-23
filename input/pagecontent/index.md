@@ -8,8 +8,8 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 
 ### NHI FHIR Introduction videos
 
-* [Introduction and overview]()
-* 
+* [Introduction and overview](./NHIFHIRIG-IntroductionAndOverview.mp4)
+* [Use cases] (./NHIFHIRIG-DeepDive-UseCases.mp4)
 
 
 ### Organization of the Guide
@@ -30,7 +30,6 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 
 * **Terminology:** List of the FHIR terminology artifacts defined within this implementation guide [For other FHIR terminology see the HL7® FHIR® New Zealand Base Implementation Guide](https://fhir.org.nz/ig/base/index.html). Links can be found from each of the artifacts in the patient and address profiles).
 
-* **FAQ:** Frequently Asked Questions (TBD)
 
 * **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
 
