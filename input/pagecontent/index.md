@@ -9,7 +9,7 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 ### NHI FHIR Introduction videos
 
 * [Introduction and overview](./NHIFHIRIG-IntroductionAndOverview.mp4)
-* [Use cases] (./NHIFHIRIG-DeepDive-UseCases.mp4)
+* [Use cases](./NHIFHIRIG-DeepDive-UseCases.mp4)
 
 
 ### Organization of the Guide
