@@ -10,6 +10,9 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 
 * [Introduction and overview](./NHIFHIRIG-IntroductionAndOverview.mp4)
 * [Use cases](./NHIFHIRIG-DeepDive-UseCases.mp4)
+* [Patient Profile 1](./NHIFHIRIG-DeepDive-PatientProfile1.mp4)
+* [Patient Profile 2](./NHIFHIRIG-DeepDive-PatintProfile2.mp4)
+* [Patient Profile 3](./NHIFHIRIG-DeepDive-PatintProfile3.mp4)
 
 
 ### Organization of the Guide
