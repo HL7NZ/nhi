@@ -136,6 +136,7 @@ paths:
                 oneOf:
                   - $ref: '#/components/schemas/PatientMatchRequest'
                   - $ref: '#/components/schemas/SetPreferredNameRequest'
+                  - $ref: '#/components/schemas/SetAddressRequest'
         responses:
           '200':
             description: the resource being returned
@@ -1464,8 +1465,6 @@ components:
               - $ref: '#/components/schemas/ParameterNzAddressId'
               - $ref: '#/components/schemas/ParameterAddressLine'
               - $ref: '#/components/schemas/ParameterBuildingName'
-          minItems: 5
-          maxItems: 6
       required:      
           - resourceType            
       additionalProperties: false
@@ -1493,7 +1492,7 @@ components:
           enum:
             - 'nz-address-id'
         valueInteger:
-           $ref: '#/components/schemas/string'
+           $ref: '#/components/schemas/id'
       required:
           - name            
       additionalProperties: false
