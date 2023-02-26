@@ -9,6 +9,7 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 ### NHI FHIR Introduction videos
 
 * [Introduction and overview](./NHIFHIRIG-IntroductionAndOverview.mp4)
+* [Important information](./NHIFHIRIG-DeepDive-ImportantInformation.mp4)
 * [Use cases](./NHIFHIRIG-DeepDive-UseCases.mp4)
 * [Patient Profile 1](./NHIFHIRIG-DeepDive-PatientProfile1.mp4)
 * [Patient Profile 2](./NHIFHIRIG-DeepDive-PatintProfile2.mp4)
