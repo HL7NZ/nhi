@@ -6,6 +6,16 @@ The NHI is made up of two resources:
 
 This guide uses artifacts from [New Zealand Base Implementation Guide.](https://fhir.org.nz/ig/base/index.html)
 
+### NHI FHIR Introduction videos
+
+* [Introduction and overview](./NHIFHIRIG-IntroductionAndOverview.mp4)
+* [Important information](./NHIFHIRIG-DeepDive-ImportantInformation.mp4)
+* [Use cases](./NHIFHIRIG-DeepDive-UseCases.mp4)
+* [Patient Profile 1](./NHIFHIRIG-DeepDive-PatientProfile1.mp4)
+* [Patient Profile 2](./NHIFHIRIG-DeepDive-PatintProfile2.mp4)
+* [Patient Profile 3](./NHIFHIRIG-DeepDive-PatintProfile3.mp4)
+
+
 ### Organization of the Guide
 
 * **Business view:** The Business context of the NHI
@@ -24,7 +34,6 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 
 * **Terminology:** List of the FHIR terminology artifacts defined within this implementation guide [For other FHIR terminology see the HL7® FHIR® New Zealand Base Implementation Guide](https://fhir.org.nz/ig/base/index.html). Links can be found from each of the artifacts in the patient and address profiles).
 
-* **FAQ:** Frequently Asked Questions (TBD)
 
 * **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
 
