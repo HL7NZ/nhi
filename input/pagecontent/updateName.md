@@ -110,7 +110,7 @@ table, th, td {
 
 * _Patient set-preferred-name errors_
   * _Patient NHI, preferred ID and version number are required_ 
-
+  * _Patient Name Set ID provided is invalid or inactive_
 
 
 ### Add-name 
