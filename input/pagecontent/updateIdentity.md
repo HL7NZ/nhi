@@ -2,7 +2,14 @@
 
 ### Update Identity
 
-The update identity operations allow an authorised user to update a persons self-identified attributes on a persons identity record
+The update identity operations allow an authorised user to update a persons self-identified attributes on a persons identity record.
+
+This includes:
+* Gender
+* Ethnicity
+* Pronoun - future scope
+* Language - future scope
+* Iwi - future scope
 
 ### Update-identity
 
@@ -114,7 +121,7 @@ table, th, td {
     * All add rules apply and,
     * An update request will replace the current gender or gender original text.
   
-  * Update-identity Gender rules
+  * Update-identity Ethnicity rules
     * All add rules apply and,
     * A full set of ethnicities is required for an update and will replace the current set.
 
