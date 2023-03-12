@@ -15,7 +15,7 @@ This includes the core NHI Profile attributes:
 * ethnicity
 * date of death
 
-The core NHI Profile attributes are returned to all users that have read and/or $match access to the NHI (link scopes)
+The core NHI Profile attributes are returned to all users that have read and/or $match access to the NHI
 
 
 
@@ -31,7 +31,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
   * nhi-name-use-extra extension
 * Gender original text extension
 * Birthdate information source extension
-* Deceased date extension
+* Deceased date information source extension
 * Address
   * nz-geocode extension
   * suburb extension
@@ -40,7 +40,6 @@ The core NHI Profile attributes are returned to all users that have read and/or 
   * notValidatedAddressReason extension
   * nz-address-id extension
   * nz-address-derived extension
-* contained:GP extension
 
 
 
@@ -50,12 +49,20 @@ The details for the Patient’s enrolled General Practice (GP) are returned in t
 
 The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their Enrolling GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the patients usual doctor (hpi-person-id / CPN).
 
-A subset of the NES enrolment information is returned in the NHI FHIR GET response. It is returned in the patient generalPractitioner attribute as a contained PractitionerRole resource:
+The enrolled GP is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
 
--	Health Service code = FLS
--	Only active (un-ended) enrolments
+The patient version-id does not change when the patient's enrolled GP changes. This is because the patient's enrolled GP is not held in the NHI but is retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The patient Version-id only reflects changes to details held on the NHI.
 
-<h3>Patient's enrolled GP NES to FHIR mapping</h3>
+For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES service
+
+A subset of the NES enrolment information is returned in the NHI FHIR GET response.
+
+Enrolment information is returned in two places in the NHI patient profile:
+* the "generalPractitioner" attribute: 	This is the NES enrolment id.
+* the "contained" PractitionerRole resource: This holds the NES enrolment information as described below.
+
+
+<h4>NES to FHIR mapping</h4>
 <table>
 <style>
 table, th, td {
@@ -120,23 +127,43 @@ This will change when a patient transfers to a new practice, but will not reflec
                 }
             ]
         }
-    ],
+    ]
 ```
 
-The generalPractitioner is only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
 
-For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES service
 
 
 
 ### Patient's Contact details
 
-The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account. 
+The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account.
 
-The contact details are only returned with a read on the resource (not returned with a $match – even if a user has the correct permissions).
+The contact details are only returned with a read on the resource. They are not returned in the $match response – even if a user has the correct permissions.
+
+The patient version-id does not change when the patient's contact details change. This is because the patient's contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The Patient Version-id only reflects changes to details held on the NHI.
 
 The information returned may include:
--	Preferred email address
--	Preferred home phone number
--	Preferred mobile phone number
+-	Email address
+-	Home phone number
+-	Mobile phone number
 
+#### Example of Patient contact details
+
+```
+    "telecom": [
+        {
+            "system": "email",
+            "value": "test.contact@testContact.com",
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "0275151510",
+            "use": "mobile"
+        },
+        {
+            "system": "phone",
+            "value": "045882334",
+            "use": "home"
+        }
+```

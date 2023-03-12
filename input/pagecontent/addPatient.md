@@ -29,6 +29,9 @@ The user has sourced the required identity information, and initiates an add req
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Add Patient rules**
+
+  * An Add Patient request must not create an NHI record which is a duplicate of another Patient’s identity
+
   * An add Patient request must include a:
     * [preferred name](/StructureDefinition-NhiPatient-definitions.html#Patient.name),
     * [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate),
@@ -37,63 +40,74 @@ The user has sourced the required identity information, and initiates an add req
     * NZ Citizenship status (TBC),
     * NZ Residency status (TBC),
     * [Primary residential address](/StructureDefinition-NhiPatient-definitions.html#Patient.address), and
-    * An information source for each of the following items if they are present; birthdate, country of birth, citizenship, residency, deceased date, and name.
+    * An information source for each of the following items if they are present; birthdate, country of birth, citizenship, residency, deceased date, name.
       * Note:  A status of registered can only be added by an authorised agency [See glossary for definitions](/glossary.html).
+  
+  * A request must update the source of information only when the information is also provided (birthdate, country of birth, citizenship, residency, deceased date, name). 
 
   * An add Patient request may include a:
     *  birthplace
     *  deceased date
-    *  postal address (TBC)
-
-  * An Add Patient request must not create an NHI record which is a duplicate of another Patient’s identity
+    *  postal address (TBC) 
  
 * _Add Patient errors_
   * _Name is required_
-  * _Address is required_
   * _birth date is a required field_
   * _Gender is a required field_
   * _Ethnicity is required_
+  * _NZ Citizenship is required_
+  * _NZ Residency is required_
+  * _Address is required_
+  * _Information source is a required field (birthdate, country of birth, citizenship, residency, deceased date, and name)_
   * _A source of registered can only be updated by an authorised agency_
-  * _The patient identity information supplied may result in duplication of another identity. Are you sure this update is correct?_
 
 
 ---
 
 
 * **Add Patient Name rules**
+  * A Patient must have:
+    * at least one Active Name
+    * one, and only one, Active Name which is preferred.
   * A name must have:
     * a [given](/StructureDefinition-NhiPatient-definitions.html#Patient.name.given) or a [family](/StructureDefinition-NhiPatient-definitions.html#Patient.name.family) at minimum.
-    * a [preferred name flag](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:preferred) - set to true
+    * a [preferred name flag](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:preferred) (set to true - for add patient only)
+    * an information source.
   * A name may have:
     * prefix (title),
     * ‘other’ given name (1)
     * use
+    * name-use-extra (baby-of and unallocated)
   * A name cannot be added with a name use = old.
   * A name can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)
   * The first character of a name must be an Alpha (A-Z or a-z) or apostrophe
   * A name field must include at least one Alpha (A-Z or a-z) character
   * A request must not create a duplicate of an existing name 
-  * A [‘baby of name’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have source = NPRF, name use = temp, name-use-extra = 'baby of. 
-  * A [‘baby of name’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have a name use = temp
+  * [‘babyof and unallocated names’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have:
+    * source = NPRF
+    * name use = temp
+    * name-use-extra ('babyof' or 'unallocated'). 
   *  Unallocated names can only be set by an authorised agency
+  *  The first character of a name must be an Alpha (A-Z or a-z) or apostrophe.
+  *  A name field which is not null must contain at least one alphabetic character.
+  *  Allowed name characters alpha, a-z, A-Z, space, hyphen - and apostrophe.
+  *  A Name update which results in a Name Status of Registered must only be submitted via an authorised Agency
+  *  A 'Legacy Name' must only be submitted via a legacy HL7 update request
 
 
 * _Add Patient Name errors_
-  * _A Patient name must contain either a Given name or a Surname and a Name type_
-  * _Patient Given Name is required when Patient Other Given Names is present_
-  * _A Patient Given Name, Other Given Names, and Family Name must not contain special characters (TBC)_
-  * _A Patient’s Given Name and Surname must start with a letter of the alphabet or an apostrophe_
+  * A Patient must have only one active Preferred Name
+  * _A Patient name must contain either a Given name or a Surname and a Name Type, a preferred name flag and an information source_
+  * _A Baby of name must have source = NPRF, name use = temp_
+  * _Unallocted names can only be set by an authorised Agency_
+  * _A Patient’s given name and surname must start with a letter of the alphabet or an apostrophe_
   * _Each populated Patient Name field must contain at least one letter_
-  * _Duplicate name:_
-    * _The patient name already exists for this patient_
-    * _The Patient name already exists for this patient as a protected name_
-    * _This Name has been removed from the Patient record – are you sure this name should be reinstated?_
-    * _This Name was protected, and has been removed from the Patient record – are you sure this name should be reinstated?_
-    * _The patient name requested has been removed from the Patient record by the Ministry of Health_
-  * _You are not authorised to set the name source to registered_
-  * _A ‘baby of’ Name Source must be set to ‘NPRF - Proof not Sighted_
-  * _A ‘baby of’ Name must have Name Use = Temp_
-  * _An ‘unallocated’ Name must have Name Use = Temp_
+  * _Patient Name must not contain special characters_
+  * _Name can only be set to a ‘Registered’ value by an authorised Agency_
+  * _A source of HL7 or MIGR can only be submitted by a legacy update_
+
+
+---
 
 
 * **Add Patient Birthdate rules**
@@ -102,11 +116,13 @@ The user has sourced the required identity information, and initiates an add req
     * YYYYMMDD - DOB less than or equal to the current date;
     * YYYYMM – less than or equal to the current month and year;
     * YYYY – less than or equal to the current year
+  * A request to populate the Date of Birth Information Source must also populate the Date of Birth
+  * A web service request must not add any birth and death information with a Status of Registered, i.e. Registered Date of Birth, Registered Date of Death, Registered Country of Birth
   
   
   * _Add Patient Birthdate errors_
-  * _Birthdate cannot be in the future_
-  * _A patient Date of Birth is required when a patient Date of Birth information source is present_
+  * _Patient Birthdate must be after After 1 January 1900 AND cannot be a future date_
+  * _A patient Birthdate is required when a patient Birthdate information source is present_
   * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
 
 
@@ -115,6 +131,7 @@ The user has sourced the required identity information, and initiates an add req
 
 * **Add Patient Ethnicity rules**
   * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
+  * A Patient must supply all ethnicities identified with when supplying ethnicity information
   * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
 
 * _Add Patient Ethnicity errors_
@@ -125,7 +142,8 @@ The user has sourced the required identity information, and initiates an add req
 
 
 * **Add Patient Citizenship rules**
-  *  [NZ Citizenship](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzCitizen)
+  *  A Patient must have a NZ citizenship status
+  *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
 
 * _Add Patient Citizenship errors_
@@ -136,7 +154,7 @@ The user has sourced the required identity information, and initiates an add req
 
 
 * **Add Patient Residency rules**
-  *  [NZ Residency](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:nzResidency)
+  *  A Patient must have a NZ residency status
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
 
 * _Add Patient Residency errors_
@@ -148,6 +166,7 @@ The user has sourced the required identity information, and initiates an add req
 
 * **Add Patient Birthplace rules**
   * A place of birth must only be populated if a country of birth is present
+  * A request to populate the Country of Birth Information Source must also populate the Country of Birth
 
 * _Add Patient Birthplace errors_
   * _Country of birth is required when a place of birth is present_
@@ -157,8 +176,13 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 * **Add Patient Deceased date rules**
-  * If present, a [date of death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be after 1 January 1800 and not in the future
-  * The [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be less than or equal to the [Date of Death](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x])
+  * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
+  * deceased date must be a complete date and formatted either;
+    * YYYYMMDD - DOD less than or equal to the current date;
+    * YYYYMM – less than or equal to the current month and year;
+    * YYYY – less than or equal to the current year.
+  * A request to populate the Date of Death Information Source must also populate the Date of Death
+  * A web service request must not add any birth and death information with a Status of Registered, i.e. Registered Date of Birth, Registered Date of Death, Registered Country of Birth
 
 * _Add Patient Deceased date errors_
   * _Patient Date of death cannot be a future date_
@@ -166,31 +190,66 @@ The user has sourced the required identity information, and initiates an add req
   * _Deceased date can only be set to ‘Registered’ by an authorised Agency_
   * _The Date of Birth must be less than or equal to the Date of Death_
 
+* **Add Patient Gender Rules**
+*  A Patient must have a current gender
+* Gender can be submitted as a gender code or gender original text
 
 ---
 
 
 * **Add Patient Address rules**
-  * Must have one address with:
+  * A Patient must have a single Primary Residential Address
     * use = home
     * type = physical
-*  An address may be validated or not validated see [address rules](/updateAddress.html) for validated vs unvalidated address requirements
+  * An acceptable Patient Address must be: 
+    * Validated by an Address Service; OR 
+    * User Qualified with a NotValidatedAddressReason 
+  * A Patient can have a maximum of one residential and one mailing address (1 x address type=physical and 1 x type= postal)
+  * A residential address must have at least one of: 
+    * domicile code (source - eSAM domicile code), 
+    * notional domicile code (source – web service call to location lookup file using address parameters), 
+    * notional domicile code (source - optional web service request address parameter)}
+  * A Validated Address must include:
+    * a valid nz-address-id
+    * Address-line-1 (that matches the address-line-1 returned by eSAM)
+    * Address Type (physical or postal)
+  * The result of an address service 'find address' request using the values provided for the first line of the Address Location must: 
+    * result in a single validated address with a match score exceeding the match threshold, AND 
+    * have a unique nz-address-id matching the ID provided in the request
+  * A Validated Address may include:
+    * address-building-name (this is additional to address data returned by eSAM)
+  * An unvalidated-address must include:
+    * not-validated-address-reason
+    * address-type
+    * address-line-1 
+  * An unvalidated-address may include:
+    * address-building-name
+    * address-line-2
+    * address-suburb
+    * address-city
+    * address-postal-code
+    * address-country-code
+    * address-domicile-code
+  * The street address: (suburb, building-name, line, city, country)
+    * must contain an alphanumeric first character,
+    * may contain any of [A-Z, a-z, 0-9 and these special characters - /',]
 
 * _Add Patient Address errors_
   * _A Patient must have a primary residential address_
-  * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
+  * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
+  * _A residential address must have a notional domicile code_
+  * _Validated address_  
+    * _Nz-address-id, Address line 1 and address type are required._
+    * _Address-type is a required field and must be postal or physical_
+    * address-line must match the espatial value: <>
+  * _Unvalidated address_
+    * Address line 1, address type, and not-validated-address-reason are required.
+    * _A Patient address must contain Address line 1, identify whether the address is residential or mailing, and whether it is the primary residential address_
   * _Patient street address contains invalid text_
-  * _Address protection can only be changed by an authorised user_
-  * _Duplicate address:_
-    * _The patient address already exists for this patient_
-    * _The patient address already exists for this patient as a protected address_
-    * _This Address has been removed from the Patient record – are you sure this address should be reinstated?_
-    * _This Address was protected, and has been removed from the Patient record – are you sure this Address should be reinstated?_
-    * _The Patient address requested has been removed from the Patient record by the Ministry of Health_
-    * _A validated mailing address must be an address at which mail can be delivered_
+
     * _Domicile / notional domicile code:_
       * _A residential address must have a notional domicile code_
       * _A residential address must have a domicile code_
       * _The address validation service was not available to validate this address; and a notional domicile code was not provided for this address, and could not be automatically assigned_
-    * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
-    * _A address can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)_
+  * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
+  * _Patient Address contains invalid text_

@@ -3,7 +3,7 @@
 ### Patient resource use cases
 
 
-#### A new Patient presents for healthcare.
+#### A new patient presents for healthcare.
 
 A new patient presents for healthcare e.g. A casual patient books an appointment with GP, a new patient seeks to enrol at a GP, a patient presents at an Accident and Emergency department or afterhours clinic, a referral is received for a patient from a health provider. <br />
 This is a new patient not yet registered in the hospital or providers system.
@@ -11,7 +11,7 @@ This is a new patient not yet registered in the hospital or providers system.
 * Steps involved:
   1. User searches the local system for patient.
   2. User Adds the patient to the local system.
-  3. Local system searches the NHI for the patient [(Match Patient.](/matchPatient.html)
+  3. Local system searches the NHI for the patient [Match Patient.](/matchPatient.html)
   4. User selects a record from the search results OR patient is not found in NHI and user adds new record to NHI [Add Patient.](/addPatient.html)
   5. User compares the local and NHI details, confirms with the patient and makes corrections where appropriate using _Update core_, [Update name](/updateName.html) or [Update address.](/updateAddress.html)
   6. System assigns NHI number and version to local record.
@@ -51,7 +51,7 @@ Information is received by the hospital or provider that patient information has
   5. Ring or email Te Whatu Ora contact centre so discrepancy can be updated.
 
 
-#### A user needs to Validate an NHI number.
+#### A user needs to validate an NHI number.
 
 I don't have access rights to view the NHI details. I want to validate the NHI number and the demographic details I have match the NHI patient details.
 
@@ -61,20 +61,20 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
   3. Result will be a Certain Match / Possible Match / Certainly Not a Match
 
 
-#### Look up the Patient's enrolled General Practice
+#### Look up the patient's enrolled General Practice (GP)
 
 * This use case requires permission to access a Patients NES enrollment information
 
 * Steps involved:
   1. User finds the patient record in local system.
   2. Local system looks up NHI [Get Patient.](/getPatient.html)
-  3. If the user has the correct permissions the details for the General Practice that the Patient is enrolled with will be returned as a contained resource.
+  3. If the user has the correct permissions the details for the general practice that the patient is enrolled with will be returned as a contained resource.
   4. For additional information the user could search the HPI using the hpi-facility-id, hpi-organisation-id or the hpi-person-id. [Example below for how this would work for to lookup EDI for an enrolled patient’s General Practice](/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)
   5. Note: 
-    * The version number for the Patient record does not change when the General Practitioner details change (See NHI Profile for more information)
+    * The version number for the Patient record does not change when the enrolled GP details change (See NHI Profile for more information)
     * To update the General Practitioner details the user will need to access the Enrolment web services
 
-#### Look up Patient's contact details
+#### Look up patient's contact details
 
 * This use case requires permission to access the Patient Preferences information
 
@@ -83,7 +83,7 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
   2. Local system looks up NHI [Get Patient.](/getPatient.html)
   3. If the user has the correct permissions the Patient Preferences details will be returned in the Patient resource.
   4. Note:
-    * The version number for the Patient record does not change when the Patients Preferences details change (See NHI Profile for more information)
+    * The version number for the patient record does not change when the patient's contact details change (See NHI Profile for more information)
     * To update the Patient Preferences the user will need to access the Patient Preference web services
 
 
@@ -99,11 +99,11 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
 </div>
 
 * Steps involved:
-  1.	The user initiates searching for an EDI number for a patient’s General Practitioner
+  1.	The user initiates searching for an EDI number for a patient’s General Practice
   2.	The integrating application sends a read request for the Patient Resource using the nhi-id to the NHI FHIR API E.g. GET\<Endpoint>/Patient/ZZZ0008
-  3.	The requested is validated - ALT: Validation failure. OperationOutcome resource returned
+  3.	The request is validated - ALT: Validation failure. OperationOutcome resource returned
   4.	The Patient resource (containing the Patients enrolled General Practice details) is returned from the HPI
   5.	The integrating application sends a read request for the Facility details (Location resource) using the hpi-facility-id to the HPI FHIR API E.g. GET\<Endpoint>/Location/F99999B
-  6.	The requested is validated - ALT: Validation failure. OperationOutcome resource returned
+  6.	The request is validated - ALT: Validation failure. OperationOutcome resource returned
   7.	The Location resource is returned from the HPI
   8.	The integrating application extracts the messaging address containing the EDI number for the GP clinic

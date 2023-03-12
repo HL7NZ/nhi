@@ -3,7 +3,8 @@
 ### Birthdate definitions
 * **Registered birthdate Status Definition**
   * A Registered birthdate is a date of birth which has been verified by a Government Agency
-  * This is a source of BREG - This code is added only after verification via MOH/DIA birth register matching
+  * This is a source of:
+    *  BREG - This code is added only after verification via MOH/DIA birth register matching
 
 * **Verified birthdate Status Definition**
   * A Verified birthdate is a birthdate for which acceptable documentary evidence has been sighted by the person recording the birthdate
@@ -16,12 +17,15 @@
     * NZTV - NZ Resident Visa A New Zealand Resident Visa (time bound) issued by Immigration New Zealand, 
     * NZRT - NZ Refugee Travel Document,
     * PPRT - Passport
+    * NZDL - NZ Driver Licence 
 
 * **Unverified birthdate Status Definition**
   * A Unverified birthdate is a birthdate for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the birthdate
   * This would be a. source is one of:
     * NPRF - No Proof Information provided (no proof) by patient/whanau, 
     * OTHR - Other official document
+    * HL7  - Data has been applied via HL7 message
+    * MIGR - From the legacy NHI System with no known external source
 
 * **Partial DOB Definition**
   * When assessing data against rules, a partial date of birth  will be interpreted as follows: 
@@ -55,7 +59,9 @@
 
 * **Registered NZ Citizenship Status Definition**
   * A Registered NZ Citizenship status is a patient who holds NZ Citizenship and the citizenship status has been verified by a Government Agency.
-  * This is a source of DIA (DIA data share - The code is added only after DHB or MOH/DIA data matching).
+  * This has only been available sinse 2013
+  * This is a source of:
+    * DIA - DIA data share - The code is added only after DHB or MOH/DIA data matching
 
 * **Verified NZ Citizenship Status Definition**
   * A Verified NZ Citizenship Status is a patient who holds NZ Citizenship for which acceptable documentary evidence has been sighted by the person recording the NZ Citizenship status
@@ -66,7 +72,8 @@
 
 * **Unverified NZ Citizenship Status Definition**
   * A Unverified NZ Citizenship status is a patient who states they hold NZ Citizenship, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the NZ Citizenship status
-  * This is a source of NPRF - Proof not Sighted
+  * This is a source of
+    * NPRF - Proof not Sighted
 
 * **Derived NZ Citizenship status Definition**
   * A Derived NZ Citizenship Status is a patient who was born in New Zealand prior to 1 January 2006
@@ -76,6 +83,7 @@
 
 * **Unknown NZ Citizenship Status Definition**
   * An Unknown NZ Citizenship status is a patient who is unable or unwilling to provide any information about their NZ Citizenship status
+
 
 
 <h3>**TBC** - Valid combinations of nz-citizenship and nz-residency status</h3>
@@ -108,19 +116,55 @@ table, th, td {
 </table>
 
 
+
+### Birthplace definitions
+
+* **Registered birthplace definition**
+  * A Registered birthplace is either a place of birth and country of birth, or a country of birth only, which has been verified by a Government Agency
+  * This would be a source of:
+    * BREG - Has been confirmed with a match to the Birth Register
+
+* **Verified birthplace definition**
+  * A Verified birthplace is either a place of birth and country of birth, or a country of birth only, for which acceptable documentary evidence has been sighted by the person recording the birthplace
+  * This would be a source of:
+    * BRCT - Birth Certificate, 
+    * NZCI - NZ Certificate of Identity, 
+    * NZCT - NZ Citizenship Certificate, 
+    * NZET - NZ Emergency Travel Document, 
+    * NZPV - NZ Permanent Resident Visa A New Zealand Permanent Resident Visa (not time bound) issued by Immigration New Zealand, 
+    * NZTV - NZ Resident Visa A New Zealand Resident Visa (time bound) issued by Immigration New Zealand, 
+    * NZRT - NZ Refugee Travel Document,
+    * PPRT - Passport
+
+* **Unverified birthplace definition**
+  * An Unverified Country of Birth is either a place and country of birth, or a country of birth only, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the birthplace
+  * This would be a source of:
+    * NPRF - No Proof Information provided (no proof) by patient/whanau, 
+    * OTHR - Other official document
+
+
+
 ### Deceased date definitions
 
 * **Registered Deceased date Status Definition**
   * A Registered deceased date is a Deceased date which has been verified by a Government Agency
-  * This would be a Deceased date which has a source of DREG - Has been confirmed with a match to the Death Register
+  * This would be a source of:
+    * DREG - Has been confirmed with a match to the Death Register
 
-* **Provisional Deceased date status Definition**
-  * A Provisional deceased date is an unverified Deceased date for a death taking place in New Zealand
-  * This would be a Deceased date which has a source of PROV - Has been recorded, and not yet registered
+* **Verified Deceased date status Definition**
+  * A verified deceased date is a deceased date for a death taking place in New Zealand for which acceptable documentary evidence has been sighted, or for an overseas death that has been notified by an official overseas source
+  * This would be a source of:
+    *  MCCOD   - Medical Certificate Cause of Death
+    *  CORONER - Coroner Notification
+    *  OSEAOFF - Death Overseas Official
 
 * **Unverifiable Deceased date status Definition**
-  * An unverifiable deceased date is a deceased date for a death taking place outside New Zealand, which will not appear on the death register
-  * This would be a deceased date which has a source of OSEA - Overseas (i.e. has been notified by a third party)
+  * An unverifiable deceased date is a deceased date for a death that has been notified by a non official source or that has taken place outside New Zealand, which will not appear on the death register
+  * This would be a source of:
+    * OSEA - Overseas (i.e. has been notified by a third party),
+    * NPRF - No Proof Information provided (no proof) by patient/whanau,
+    * HL7  - Data has been applied via HL7 message
+    * MIGR - From the legacy NHI System with no known external source
 
 * **Partial DOD Definition**
   * When assessing data against rules, a partial date of death will be interpreted as follows: 
@@ -148,20 +192,14 @@ table, th, td {
     * The identity information held for one patient is so similar to another patient, that the records may belong to the same patient OR 
     * The identity information held for a given patient is modified in such a way that the old and new identity information could belong to different patients
 
-* **Identity Divergence Definition**
-  * When a record is modified to the extent that the patient identity describes a different patient
-
 
 
 
 ### Name Definitions
 
 * **Duplicate Name Definition**
-  * A Name is a duplicate name for a given NHI number if the name identity attribute values below match the values for an existing active name for that NHI.
-  * Name identity attributes are:
-    * Given Name, 
-    * Other Given Names, 
-    * Family Name, 
+  * A Name is a duplicate name for a given NHI number if the 'Given Name', 'Other Given Names', and 'Family Name' match the values for an existing name for that NHI.
+
     
 * **Registered Name Definition**
   * A Registered Name is a name which has been verified by a Government Agency
@@ -178,6 +216,12 @@ table, th, td {
     * NZTV - NZ Resident Visa (A New Zealand Resident Visa (time bound) issued by Immigration New Zealand),
     * NZRT - NZ Refugee Travel Document,
     * PPRT - Passport
+    * NZMC - NZ Marriage Certificate
+    * NZCU - NZ Civil Union Certificate
+    * NZNC - NZ Name Change Certificate or Deed Poll
+    * NZDL - NZ Driver Licence
+    * CSC  - Community Services Card
+
 
 * **Unverified Name Definition**
   * A Unverified Name is a name for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the name
@@ -190,6 +234,7 @@ table, th, td {
     * contains only one of: {Given Name; Family Name}, AND 
     * is not Verified AND 
     * is not Registered
+
 
 * **Legacy Name Definition**
  * A Legacy Name is a name for which the most recent update:was requested via a Legacy HL7 request, OR was the automated database migration process from the Legacy NHI database to the IBM Initiate NHI database
@@ -222,4 +267,4 @@ table, th, td {
 * **Unknown NZ Residency Status Definition**
   * An Unknown NZ Residency status is a patient who is unable or unwilling to provide any information about their NZ Residency status
 
-* [Click here valid combinations of nz-citizenship and nz-residency status](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status)
+* [Click here valid combinations of nz-citizenship and nz-residency status](/glossary.html#tbc-valid-combinations-of-nz-citizenship-and-nz-residency-statu)

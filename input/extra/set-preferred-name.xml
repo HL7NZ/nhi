@@ -12,31 +12,25 @@
 				
 			</div>
 			<p>URL: [base]/Patient/$set-preferred-name</p>
-			<p>Parameters</p>
-			<table class='table table-bordered table-condensed'>
-				<tr>
-					<td>
-						<b>Use</b>
-					</td>
-					<td>
-						<b>Name</b>
-					</td>
-					<td>
-						<b>Cardinality</b>
-					</td>
-					<td>
-						<b>Type</b>
-					</td>
-					<td>
-						<b>Binding</b>
-					</td>
-					<td>
-						<b>Documentation</b>
-					</td>
-				</tr>
+	
+	
+			<h3>Parameters</h3>
+        		<table>
+       			<style>
+        		table, th, td {
+        		border: 1px solid black;
+        		border-collapse: collapse;
+        		}
+        		</style>
+        		<tr><th>Use</th>
+        		<th>Name</th>
+        		<th>Cardinality</th>
+        		<th>Type</th>
+        		<th>Binding</th>
+			<th>Documentation</th></tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.NHI</td>
+					<td>nhi</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -44,16 +38,16 @@
 					<td />
 					<td>
 						<div>
-							<p>The Patient's NHI number</p>
+							<p>The Patient's nhi number</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.meta.versionId</td>
+					<td>version-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
@@ -64,10 +58,10 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>patient.name.id</td>
+					<td>preferred-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">integer</a>
 					</td>
 					<td />
 					<td>
@@ -92,7 +86,7 @@
 				</tr>
 			</table>
 			<div>
-				<p>The NHI is validated, the versionId is validated, the name.id is validated. If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name. 
+				<p>Update patient name. Set the preferrd name in the request to TRUE, and update the current preferred name to FALSE.
 				</p>
 			</div>
 		</div>
@@ -136,31 +130,31 @@
 	<type value="false" />
 	<instance value="true" />
 	<parameter>
-		<name value="patient.NHI" />
+		<name value="nhi" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="UThe Patient's NHI number" />
+			value="The Patient's nhi number" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="patient.meta.versionId" />
+		<name value="version-id" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="he current value of the patient resources meta.versionId" />
-		<type value="http://hl7.org/fhir/R4/datatypes.html#id" />
+			value="The current value of the patient resources meta.versionId" />
+		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="patient.name.id" />
+		<name value="preferred-id" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
 			value="The id of the name element to be set to be the preferred name (patient.name.id)" />
-		<type value="string" />
+		<type value="integer" />
 	</parameter>
 	<parameter>
 		<name value="return" />

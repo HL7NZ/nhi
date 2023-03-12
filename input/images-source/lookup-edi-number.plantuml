@@ -25,7 +25,7 @@ activate D
 D -[dashed]-> B:  
 deactivate D
 |||
-B -> A: Return Patient resource (including Patients enrolled General Practitioner details)
+B -> A: Return Patient resource (including Patients enrolled General Practice)
 deactivate B
 |||
 A -> C: Use hpi-facility-id to get EDI Get<Endpoint>/Location/[hpi-facility-id]

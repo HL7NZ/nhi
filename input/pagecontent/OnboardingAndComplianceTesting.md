@@ -143,7 +143,6 @@ table, th, td {
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
@@ -225,7 +224,7 @@ ZBE4905</td>
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient GET tests (GP and Contact permissions)</h3>
+<h3>NHI Patient GET tests (enrolled GP and contact details only)</h3>
 <table>
 <style>
 table, th, td {
@@ -233,7 +232,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you have either permission to vew a Patients GP or Contact details** </caption>
+<caption> **Only complete these if you have either permission to vew a patient's enrolled GP or contact details** </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -241,23 +240,23 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-GET-11</td>
-<td>application can display the Patients's enrolled General Practice details returned by the NHI in a GET response including
+<td>application can display the patients's enrolled General Practice details returned by the NHI in a GET response including
 <li>The NES enrolment id</li>
 <li>enrolment.startDate</li>
 <li>enrolment.expiryDate</li>
 <li>Practitioner identifier (CPN) and name</li>
 <li>enrolling organisation ID and name</li>
 <li>Facility ID and name</li></td>
-<td> **TBC** </td>
+<td> Enrolled GP - ZKC4641 <br /> Enrolled GP and Contact details ZKC4633 </td>
 <td>Output: application does not error <br /> application returns all General Practice details when present </td>
 <td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-12</td>
-<td>application can display the Patients's contact details returned by the NHI in a GET response including:
+<td>application can display the patients's contact details returned by the NHI in a GET response including:
 <li>Home phone</li>
 <li>Mobile phone</li>
 <li>Email address</li></td>
-<td> **TBC** </td>
+<td> Contact details - ZKC4650 <br /> Enrolled GP and Contact details ZKC4633 </td>
 <td>Output: application does not error <br /> application returns all Contact details when present </td>
 <td>*Mandatory if </td></tr>
 </table>
@@ -278,11 +277,10 @@ table, th, td {
 
 <tr><td>NHI-Match-1</td>
 <td>application allows the user to search using the following attributes:
-<li>Given Name(s), Surname</li>
-<li>Gender</li>
-<li>Partial or full date of birth</li>
-And to show that the application displays at least the minimum required attributes in a search result:
-<li>Given Name(s), Surname</li>
+<li>Name (Given Name(s) and/or Surname)</li>
+<li>Birthdate (Full or partial)</li>
+And to show that the application can present the minimum details to allow for adequate confirmation of identity (if present on the patient record): 
+<li>Name (Given Name(s), Surname)</li>
 <li>Gender</li>
 <li>Birthdate</li>
 <li>Primary Address</li>
@@ -290,14 +288,16 @@ And to show that the application displays at least the minimum required attribut
 <li>NHI Identifier</li>
 <li>Match Score</li>
 <li>Display a flag/indicate when a patient in the search result has multiple names</li>
-The application must display multiple results if they are returned. Results must be presented in descending order of the match score</td>
+Note:
+<li>The application must display multiple results if they are returned.</li>
+<li>Results must be presented in descending order of the match score.</li></td>
 <td>Given Name: Noah <br />
 Middle Name: James <br />
 Surname: Owen <br />
 Gender: M <br />
 DOB: 1949-10-30 (30th October 1949)</td>
 <td>Input: Minimum search criteria can be entered <br />
-Output: The top result returned in the search should be NHI ZBH6793 <br />
+Output: The top result returned in the search should be NHI ZAT4626 <br />
 Output: Minimum search result identity attributes are all present in result list
 </td>
 <td>mandatory</td></tr>
@@ -411,7 +411,6 @@ Output: The application alerts the user that the patient is deceased and provide
 <li>Date of Birth Information Source</li>
 <li>Ethnicity information</li>
 <li>All patient addresses and address parts</li>
-<li>All Contacts</li>
 <li>NZ Citizenship status</li>
 <li>Country of Birth</li>
 <li>Country of Birth source</li>
