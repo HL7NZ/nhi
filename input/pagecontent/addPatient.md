@@ -191,8 +191,9 @@ The user has sourced the required identity information, and initiates an add req
   * _The Date of Birth must be less than or equal to the Date of Death_
 
 * **Add Patient Gender Rules**
-*  A Patient must have a current gender
-* Gender can be submitted as a gender code or gender original text
+*  A Patient must have a current gender, supplied as a valid gender code.
+*  A Patient may have a gender-original-text response
+  * If supplied, both gender code and gender-original-text will be recorded in the NHI.
 
 ---
 
