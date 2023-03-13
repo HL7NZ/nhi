@@ -2,7 +2,7 @@
 
 ### Update Identity
 
-The update identity operations allow an authorised user to update a persons self-identified attributes on a persons identity record.
+The update identity operation allow an authorised user to update a persons self-identified attributes on a persons identity record.
 
 This includes:
 * Gender
@@ -63,7 +63,7 @@ table, th, td {
 <tr><td> gender-original-text </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The text response provided by the patient </td></tr>
+<td> The gender text response provided by the patient </td></tr>
 </table>
 
 #### Update-identity - Behaviour
@@ -108,18 +108,18 @@ table, th, td {
 
 
 * **Patient update-identity rules**
-  * All add Patient ethnicity and gender rules appy, and
-  * A update request must contain
+  * All add Patient ethnicity and gender rules apply, and
+  * An update request must contain:
     * the live NHI number for the Patient Record
-    * the version number of the current Patient Record, and
-  * A update request must not delete/inactivate mandatory information.
-  * A update request may:
+    * the version number of the current Patient Record
+  * An update request must not delete/inactivate mandatory information.
+  * An update request may:
     * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
     * Not populate the request parameter to retain the existing NHI value for that parameter
 
   * Update-identity Gender rules
     * All add rules apply and,
-    * An update request will replace the current gender or gender original text.
+    * An update request will replace the current gender code or gender original text.
   
   * Update-identity Ethnicity rules
     * All add rules apply and,
