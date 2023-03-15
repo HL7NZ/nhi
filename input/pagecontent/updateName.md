@@ -60,9 +60,9 @@ table, th, td {
 <td> The current patient version number </td></tr>
 
 <tr><td> preferred-id </td>
-<td> valueString </td>
+<td> valueInteger </td>
 <td> Mandatory </td>
-<td> The id for the name to set the preferred name flag for </td></tr>
+<td> The id for the name that will be preferred </td></tr>
 </table>
 
 
