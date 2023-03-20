@@ -68,3 +68,12 @@ Local role based access should limit the updating of eligibility attributes to u
 ### Does my system have to update the information source codes for citizenship, birthdate, residency, name, deceased date?
 
 [See above](/FAQ.html#what-is-the-information-source-attribute-and-why-is-it-used)
+
+
+### What is the NZ Citizenship status attribute?
+
+NZ Citizenship is an attribute that was introduced with the NHI SOAP services (Not used in the HL7 legacy). It is populated from a DIA share of all births since approximately 1930, where data could be successfully matched to an NHI. Where matching occured, the NZ Citizenship status was updated to Yes and the NZ Citizenship status Information Source to DIA. 
+
+Providers can update the NZ Citizenship status if there is no data on the NHI yet, or the source is not DIA. GP PMS systems display this to their users but don’t have update capability implemented.
+
+Organisations may want to limit update capability of these fields to only a team that assesses eligibility. 
