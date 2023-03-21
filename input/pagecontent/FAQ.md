@@ -72,8 +72,6 @@ Local role based access should limit the updating of eligibility attributes to u
 
 ### What is the NZ Citizenship status attribute?
 
-NZ Citizenship is an attribute that was introduced with the NHI SOAP services (Not used in the HL7 legacy). It is populated from a DIA share of all births since approximately 1930, where data could be successfully matched to an NHI. Where matching occured, the NZ Citizenship status was updated to Yes and the NZ Citizenship status Information Source to DIA. 
+NZ Citizenship is an attribute that was introduced with the NHI SOAP services in 2016 (It is not available in HL7 legacy). It is mostly populated from a DIA share of historic births since approximately 1930. Where data could be successfully matched to an NHI, the NZ Citizenship status was updated to Yes and the NZ Citizenship status Information Source to DIA. The absence of NZ Citizenship status does not mean a person is not a Citizen, only that we have not received or processed information to update the Citizenship status value.
 
-Providers can update the NZ Citizenship status if there is no data on the NHI yet, or the source is not DIA. GP PMS systems display this to their users but don’t have update capability implemented.
-
-Organisations may want to limit update capability of these fields to only a team that assesses eligibility. 
+Providers can update the NZ Citizenship status if there is no data on the NHI for their patient and the source is not DIA.  Evidence of citizenship should be sighted before updating the NHI. Organisations may want to limit update capability of these fields to users who have a good understanding of the eligibility rules. 
