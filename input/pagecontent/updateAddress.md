@@ -95,6 +95,10 @@ table, th, td {
   "id": "example",
   "parameter": [
     {
+        "name" : "operation-type",
+        "valueString" : "$set-address"
+    },
+    {
         "name" : "nhi",
         "valueString" : "ZGD9203"
     },
@@ -256,6 +260,10 @@ table, th, td {
   "id": "example",
   "parameter": [
     {
+        "name" : "operation-type",
+        "valueString" : "$set-unvalidated-address"
+    },
+    {
         "name" : "nhi",
         "valueString" : "ZAD2481"
     },
@@ -381,6 +389,10 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
+    {
+        "name" : "operation-type",
+        "valueString" : "$remove-postal-address"
+    },
     {
         "name" : "nhi",
         "valueString" : "ZAD2481"
