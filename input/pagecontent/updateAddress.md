@@ -43,6 +43,11 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $set-address </td></tr>
+
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -168,6 +173,11 @@ table, th, td {
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
+
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $set-unvalidated-address </td></tr>
 
 <tr><td> nhi </td>
 <td> valueString </td>
@@ -342,6 +352,11 @@ table, th, td {
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
+
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $remove-postal-address </td></tr>
 
 <tr><td> nhi </td>
 <td> valueString </td>
