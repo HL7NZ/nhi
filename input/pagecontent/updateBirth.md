@@ -58,27 +58,27 @@ table, th, td {
 <td> Mandatory </td>
 <td> The patients date of birth </td></tr>
 
-<tr><td> birth-date </td>
+<tr><td> birthdate </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The patients ethnicity <br /> May contain up to six </td></tr>
 
-<tr><td> birth-date-information-source </td>
+<tr><td> birthdate-information-source </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The information source for the patients date of birth </td></tr>
 
-<tr><td> birthplace-country-code </td>
+<tr><td> birth-place-country-code </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The patient's country of birth </td></tr>
 
-<tr><td> birthplace-information-source </td>
+<tr><td> birth-place-information-source </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The information source for the patient's country of birth </td></tr>
 
-<tr><td> birthplace-place-of-birth </td>
+<tr><td> birth-place-place-of-birth </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated </td></tr>
@@ -111,11 +111,11 @@ table, th, td {
         "valueString" : "3321540"
     },
     {
-        "name" : "birth-date",
+        "name" : "birthdate",
         "valueString" : "2015-09-09" 
     },
     {
-        "name" : "birth-date-information-source",
+        "name" : "birthdate-information-source",
         "valueString" : "BREG" 
     },
     {
