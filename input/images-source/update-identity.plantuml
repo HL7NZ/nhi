@@ -26,7 +26,7 @@ deactivate C
 B -[dashed]-> A: Return updated Patient record
 deactivate B
 |||
-A -> User: Display updated Patient details to user
+A -> User: Display updated patient details to user
 deactivate A
 |||
 @enduml
