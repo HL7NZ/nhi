@@ -14,13 +14,13 @@ This includes:
 ### Update-identity
 
 <div>
-{% include update-identity.svg %}
+{% include update-birth.svg %}
 </div>
 
-**Update-identity - Processing steps:**
+**Update-birth - Processing steps:**
 
 1. The user provides patient details to be updated
-2. The integrating application sends an HTTP Post request using the $update-identity operation to the NHI E.g. Post\<Endpoint>/Patient/$update-identity
+2. The integrating application sends an HTTP Post request using the $update-birth operation to the NHI E.g. Post\<Endpoint>/Patient/$update-birth
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 4. The provided patient attributes are updated
 5. The updated record is returned with an HTTP 200 ok response
@@ -39,6 +39,11 @@ table, th, td {
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
+
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $update-identity </td></tr>
 
 <tr><td> nhi </td>
 <td> valueString </td>
