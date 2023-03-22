@@ -55,11 +55,6 @@ table, th, td {
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
-<tr><td> ethnicity </td>
-<td> valueString </td>
-<td> Optional </td>
-<td> The patients ethnicity <br /> May contain up to six </td></tr>
-
 <tr><td> gender </td>
 <td> valueString </td>
 <td> Optional </td>
@@ -69,6 +64,36 @@ table, th, td {
 <td> valueString </td>
 <td> Optional </td>
 <td> The gender text response provided by the patient </td></tr>
+
+<tr><td> ethnicity-1 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> one of up to six </td></tr>
+
+<tr><td> ethnicity-2 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> two of up to six </td></tr>
+
+<tr><td> ethnicity-3 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> three of up to six </td></tr>
+
+<tr><td> ethnicity-4 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> four of up to six </td></tr>
+
+<tr><td> ethnicity-5 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> five of up to six </td></tr>
+
+<tr><td> ethnicity-6 </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> six of up to six </td></tr>
 </table>
 
 #### Update-identity - Behaviour
