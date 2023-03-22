@@ -68,17 +68,17 @@ table, th, td {
 <td> Optional </td>
 <td> The information source for the patients date of birth </td></tr>
 
-<tr><td> birth-place-country-code </td>
+<tr><td> birthplace-country-code </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The patient's country of birth </td></tr>
 
-<tr><td> birth-place-information-source </td>
+<tr><td> birthplace-information-source </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The information source for the patient's country of birth </td></tr>
 
-<tr><td> birth-place-place-of-birth </td>
+<tr><td> birthplace-place-of-birth </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated </td></tr>
