@@ -51,6 +51,7 @@ menu:
     Update name: updateName.html
     Update address: updateAddress.html
     Update identity: updateIdentity.html
+    Update birth: updateBirth.html
   Important information:
     Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
     General Notes: general.html
