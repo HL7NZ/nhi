@@ -111,6 +111,10 @@ table, th, td {
   "id": "example",
   "parameter": [
     {
+        "name" : "operation-type",
+        "valueString" : "$update-identity"
+    },
+    {
         "name" : "nhi",
         "valueString" : "ZGD9203"
     },
