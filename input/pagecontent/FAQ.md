@@ -70,8 +70,71 @@ Local role based access should limit the updating of eligibility attributes to u
 [See above](/FAQ.html#what-is-the-information-source-attribute-and-why-is-it-used)
 
 
+
 ### What is the NZ Citizenship status attribute?
 
 NZ Citizenship is an attribute that was introduced with the NHI SOAP services in 2016 (It is not available in HL7 legacy). It is mostly populated from a DIA share of historic births since approximately 1930. Where data could be successfully matched to an NHI, the NZ Citizenship status was updated to Yes and the NZ Citizenship status Information Source to DIA. The absence of NZ Citizenship status does not mean a person is not a Citizen, only that we have not received or processed information to update the Citizenship status value.
 
-Providers can update the NZ Citizenship status if there is no data on the NHI for their patient and the source is not DIA.  Evidence of citizenship should be sighted before updating the NHI. Organisations may want to limit update capability of these fields to users who have a good understanding of the eligibility rules. 
+Providers can update the NZ Citizenship status if there is no data on the NHI for their patient and the source is not DIA.  Evidence of citizenship should be sighted before updating the NHI. Organisations may want to limit update capability of these fields to users who have a good understanding of the eligibility rules.
+
+<h4>NZ Current Citizenship status numbers in the NHI</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Status of the record</th>
+<th>Percentage of records</th>
+<th>Breakdown of source <br /> for yes reponses</th></tr>
+
+<tr><td>NHIs with no citizenship details</td>
+<td>67%</td>
+<td></td></tr>
+
+<tr><td>Unknown</td>
+<td>6%</td>
+<td></td></tr>
+
+<tr><td>No</td>
+<td>2%</td>
+<td></td></tr>
+
+<tr><td>Yes</td>
+<td>25%</td>
+<td>BREG 84% <br />
+BRCT 7% <br />
+NPRF 7%<br />
+PPRT 1%<br />
+NZCT <1%</td></tr>
+</table>
+
+
+### What is the NZ Residency status attribute?
+
+The New Zealand residency status attribute was introduced in HL7 Legacy to capture permanent resident status:
+* 'Y' = Permanent resident (New Zealand citizen or classified as ‘ordinarily resident in New Zealand’)
+* 'N' = Temporary (not a New Zealand citizen, does not have New Zealand ‘ordinarily resident’ status)
+
+This was discontinued in SOAP... However is still used today ...
+
+There is still work to do to determine how this attribute should be used going forward.
+
+<h4>NZ Current Residency status on the NHI</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Status on record</th>
+<th>Percentage of records</th></tr>
+
+<tr><td>No </td>
+<td>19.4%</td></tr>
+
+<tr><td>Yes</td>
+<td>80.6%</td></tr>
+</table>
