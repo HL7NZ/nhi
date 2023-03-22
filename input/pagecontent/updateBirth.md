@@ -99,6 +99,10 @@ table, th, td {
   "id": "example",
   "parameter": [
     {
+        "name" : "operation-type",
+        "valueString" : "$update-birth"
+    },
+    {
         "name" : "nhi",
         "valueString" : "ZGD9203"
     },
