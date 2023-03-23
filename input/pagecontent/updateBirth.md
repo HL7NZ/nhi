@@ -1,0 +1,186 @@
+
+
+### Update Birth
+
+The update birth operation allows an authorised user to update a persons birthdate and birthplace information on a persons identity record.
+
+This includes:
+* Bithdate
+* Birthdate information source
+* Birthplace:
+  * Country
+  * information source
+  * place of birth
+  
+
+
+### Update-birth
+
+<div>
+{% include update-identity.svg %}
+</div>
+
+**Update-identity - Processing steps:**
+
+1. The user provides patient details to be updated
+2. The integrating application sends an HTTP Post request using the $update-identity operation to the NHI E.g. Post\<Endpoint>/Patient/$update-identity
+3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+4. The provided patient attributes are updated
+5. The updated record is returned with an HTTP 200 ok response
+6. The integrating application displays the updated details to the user
+
+
+<h4>Update-birth - In Parameters</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th> Parameter name </th>
+<th> Parameter type </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
+
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $update-birth </td></tr>
+
+<tr><td> nhi </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> The patients nhi number </td></tr>
+
+<tr><td> version-id </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> The patients date of birth </td></tr>
+
+<tr><td> birthdate </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patients ethnicity <br /> May contain up to six </td></tr>
+
+<tr><td> birthdate-information-source </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The information source for the patients date of birth </td></tr>
+
+<tr><td> birth-place-country-code </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The patient's country of birth </td></tr>
+
+<tr><td> birth-place-information-source </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The information source for the patient's country of birth </td></tr>
+
+<tr><td> birth-place-place-of-birth </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated </td></tr>
+</table>
+
+#### Update-identity - Behaviour
+  * The NHI is validated
+  * The Patient version-id is validated
+  * The parameters are validated
+  * If all request parameters are valid, the attributes are updated on the NHI.
+
+
+#### Update-birth - Example request - TBC
+
+```  
+{
+  "resourceType": "Parameters",
+  "id": "example",
+  "parameter": [
+    {
+        "name" : "operation-type",
+        "valueString" : "$update-birth"
+    },
+    {
+        "name" : "nhi",
+        "valueString" : "ZGD9203"
+    },
+    {
+        "name" : "version-id",
+        "valueString" : "3321540"
+    },
+    {
+        "name" : "birthdate",
+        "valueString" : "2015-09-09" 
+    },
+    {
+        "name" : "birthdate-information-source",
+        "valueString" : "BREG" 
+    },
+    {
+        "name" : "birth-place-country-code",
+        "valueString" : "NZ" 
+    },
+    {
+        "name" : "birth-place-information-source",
+        "valueString" : "BREG" 
+    },
+    {
+        "name" : "birth-place-place-of-birth",
+        "valueString" : "Whangarei" 
+    },
+  ]
+}
+
+```
+
+#### Update-birth - Rules and errors
+  
+[For Request rules and errors click here](/general.html#request-rules-and-errors)
+
+
+* **Patient update-identity rules**
+  * An update request must contain:
+    * the live NHI number for the Patient Record.
+    * the version number of the current Patient Record.
+  * An update request must not:
+    * delete/inactivate mandatory information.
+    * modify or delete any information with a Status of Registered.
+  * An update request may:
+    * populate the request parameter with the required value(s) to modify the existing NHI value for that parameter.
+    * not populate the request parameter to retain the existing NHI value for that parameter.
+    * modify active patient information which is not ‘registered’ or verified’ information.
+    * modify active patient information for which evidence has been sighted (“verified” information) Can modify a verified source to another verified source or verified to Registered.
+  * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
+  * An update request must not modify a record to the extent that the patient identity describes a different patient.
+  * An update requestt to update the value for a core identity field must also update the information source.
+  * An update request must update the source of information only when the information is also provided.
+
+  * Update-birth birthplace rules
+    * All add patient birthplace rules apply and,
+    * A request to update place-of-birth must also update country-of-birth
+    * A request to update country of birth must also update country-of-birth-information-source
+    * birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
+    * birth-place can only be updated to registered by an authorised agency
+    * A verified birthplace can be updated by another verified source, not by an unverified source.
+  
+  * Update-birth birthdate rules
+    * All add patient birth-date rules apply and,
+    * An update will replace the current value
+
+* _Patient update-birth errors_
+  * _Patient NHI and version number are required_
+  * _Version number is incorrect_
+  * _The NHI Identifier provided is dormant. This record cannot be updated
+  * birth-date has been validated against a verified source, and must only be modified by authorised users
+  * birth-place has been validated against a verified source, and must only be modified by authorised users
+  * Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)
+  * birth-date can only be set to a ‘Registered’ value by an authorised Agency
+  * birth-place can only be set to a ‘Registered’ value by an authorised Agency
+  * The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration.
+  * Cannot delete mandatory data
+  * country-of-birth-information-source is required when country-of-birth is present
+  * birth-date-information-source is required when birth-date is present
+  * country-of-birth is required when country-of-birth-information-source is present.
+  * birth-date is required when birth-date-information-source is present.

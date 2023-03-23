@@ -1,0 +1,32 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title $add-name
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "<FHIR API> NHI" as B #CornflowerBlue
+participant "NHI MDM" as C #CornflowerBlue
+|||
+User -> A: Provide new patient name to be added to a patient record
+activate A
+|||
+A -> B: POST<Endpoint>/Patient/$add-name
+activate B
+|||
+B -> B: Validate[]
+|||
+B -> C: Request
+activate C
+|||
+C -[dashed]-> B
+deactivate C
+|||
+B -[dashed]-> A: Return updated Patient record
+deactivate B
+|||
+A -> User: Display updated patient details to user
+deactivate A
+|||
+@enduml

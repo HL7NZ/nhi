@@ -43,6 +43,11 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $set-address </td></tr>
+
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -89,6 +94,10 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
+    {
+        "name" : "operation-type",
+        "valueString" : "$set-address"
+    },
     {
         "name" : "nhi",
         "valueString" : "ZGD9203"
@@ -169,6 +178,11 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $set-unvalidated-address </td></tr>
+
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -245,6 +259,10 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
+    {
+        "name" : "operation-type",
+        "valueString" : "$set-unvalidated-address"
+    },
     {
         "name" : "nhi",
         "valueString" : "ZAD2481"
@@ -343,6 +361,11 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
+<tr><td> operation-type </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> $remove-postal-address </td></tr>
+
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -366,6 +389,10 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
+    {
+        "name" : "operation-type",
+        "valueString" : "$remove-postal-address"
+    },
     {
         "name" : "nhi",
         "valueString" : "ZAD2481"
