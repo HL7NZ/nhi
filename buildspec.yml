@@ -1,5 +1,9 @@
 version: 0.2
-
+env:
+    secrets-manager:
+      GITUSERNAME: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:username'
+      GITTOKEN: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:token'
+    
     
 phases:
   install:
@@ -12,7 +16,7 @@ phases:
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/settings-clean.xml - | envsubst > /root/.m2/settings.xml  
       - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar  >/dev/null 2>&1
       - cp publisher.jar ~/publisher.jar
-      # gettign  a 404 from githunb so getting htis from s3
+      # gettign  a 404 from githunb so getting this from s3
       # - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar  >/dev/null 2>&1     
       # - cp validator_cli.jar ~/validator_cli.jar 
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/validator_cli.jar ~/validator_cli.jar
