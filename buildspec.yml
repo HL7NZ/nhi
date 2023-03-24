@@ -50,6 +50,10 @@ phases:
       - ls -l ./hfc_package
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
+      - echo checking in full-ig.zip
+      - git add ./output/full-ig.zip
+      - git commit -m "new IG build"
+      
 
      
       
