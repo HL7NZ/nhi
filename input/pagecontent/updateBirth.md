@@ -1,6 +1,6 @@
 
 
-### Update Birth
+### Update Birth Overview
 
 The update birth operation allows an authorised user to update a persons birthdate and birthplace information on a persons identity record.
 
@@ -13,17 +13,14 @@ This includes:
   * place of birth
   
 
-
-### Update-birth
-
 <div>
-{% include update-identity.svg %}
+{% include update-birth.svg %}
 </div>
 
-**Update-identity - Processing steps:**
+**Update-birth - Processing steps:**
 
 1. The user provides patient details to be updated
-2. The integrating application sends an HTTP Post request using the $update-identity operation to the NHI E.g. Post\<Endpoint>/Patient/$update-identity
+2. The integrating application sends an HTTP Post request using the $update-birth operation to the NHI E.g. Post\<Endpoint>/Patient/$update-birth
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 4. The provided patient attributes are updated
 5. The updated record is returned with an HTTP 200 ok response
@@ -139,8 +136,7 @@ table, th, td {
   
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-
-* **Patient update-identity rules**
+* **Patient update-birth rules**
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -157,6 +153,31 @@ table, th, td {
   * An update requestt to update the value for a core identity field must also update the information source.
   * An update request must update the source of information only when the information is also provided.
 
+* _Patient update-birth errors_
+  * _Patient NHI and version number are required_
+  * _Version number is incorrect_
+  * _The NHI Identifier provided is dormant. This record cannot be updated
+  * _Cannot delete mandatory data_
+
+
+--
+
+
+  * Update-birth birthdate rules
+    * All add patient birth-date rules apply and,
+    * An update will replace the current value
+
+* _Patient update-birth birthdate errors_
+  * birth-date has been validated against a verified source, and must only be modified by authorised users
+  * birth-date can only be set to a ‘Registered’ value by an authorised Agency
+  * The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration.
+  * birth-date-information-source is required when birth-date is present
+  * birth-date is required when birth-date-information-source is present.
+
+
+--
+
+
   * Update-birth birthplace rules
     * All add patient birthplace rules apply and,
     * A request to update place-of-birth must also update country-of-birth
@@ -165,22 +186,11 @@ table, th, td {
     * birth-place can only be updated to registered by an authorised agency
     * A verified birthplace can be updated by another verified source, not by an unverified source.
   
-  * Update-birth birthdate rules
-    * All add patient birth-date rules apply and,
-    * An update will replace the current value
-
-* _Patient update-birth errors_
-  * _Patient NHI and version number are required_
-  * _Version number is incorrect_
-  * _The NHI Identifier provided is dormant. This record cannot be updated
-  * birth-date has been validated against a verified source, and must only be modified by authorised users
+* _Patient update-birth birthdate errors_
   * birth-place has been validated against a verified source, and must only be modified by authorised users
   * Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)
-  * birth-date can only be set to a ‘Registered’ value by an authorised Agency
   * birth-place can only be set to a ‘Registered’ value by an authorised Agency
-  * The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration.
   * Cannot delete mandatory data
   * country-of-birth-information-source is required when country-of-birth is present
-  * birth-date-information-source is required when birth-date is present
   * country-of-birth is required when country-of-birth-information-source is present.
-  * birth-date is required when birth-date-information-source is present.
+  
