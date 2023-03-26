@@ -13,7 +13,7 @@ The update has four sub-operations available:
 
 
 
-### Set-preferred-name
+### Set-preferred-name Overview
 
 * Allows an authorised user to select the Preferred Name for this NHI number.
 
@@ -123,7 +123,7 @@ table, th, td {
 
 
 
-### Add-name 
+### Add-name Overview
 
 * Allows an authorised user to add a new name to the set of patient names for this NHI number.
 
@@ -238,8 +238,32 @@ table, th, td {
         "valueString" : "3357591"
     },
     {
-        "name" : "TBC,
-        "valueString" : "TBC"
+        "name" : "use",
+        "valueString" : "Official"
+    },
+    {
+        "name" : "prefix",
+        "valueString" : "mr"
+    },
+    {
+        "name" : "given-1",
+        "valueString" : "James"
+    },
+    {
+        "name" : "given-2",
+        "valueString" : "George Joseph"
+    },
+    {
+        "name" : "family",
+        "valueString" : "Granger"
+    },
+    {
+        "name" : "preferred",
+        "valueString" : "true"
+    },
+    {
+        "name" : "name-information-source",
+        "valueString" : "NPRF"
     }
   ]
 }
@@ -251,7 +275,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Add-name rules**
-  * All add Patient name rules apply, and
+  * All Add Patient [name rules](/addPatient.md#add-patient-name-rules) apply, and
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -273,7 +297,7 @@ table, th, td {
 
 
 
-### Replace-name
+### Replace-name Overview
 
 * Allows an authorised user to replace a patients name on an NHI record.
 
@@ -392,8 +416,36 @@ table, th, td {
         "valueString" : "3357591"
     },
     {
-        "name" : "TBC,
-        "valueString" : "TBC"
+        "name" : "replace-id,
+        "valueString" : "22"
+    },
+    {
+        "name" : "use",
+        "valueString" : "Official"
+    },
+    {
+        "name" : "prefix",
+        "valueString" : "mr"
+    },
+    {
+        "name" : "given-1",
+        "valueString" : "James"
+    },
+    {
+        "name" : "given-2",
+        "valueString" : "George Joseph"
+    },
+    {
+        "name" : "family",
+        "valueString" : "Granger"
+    },
+    {
+        "name" : "preferred",
+        "valueString" : "true"
+    },
+    {
+        "name" : "name-information-source",
+        "valueString" : "NPRF"
     }
   ]
 }
@@ -405,7 +457,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Replace-name rules**
-  * All add Patient name rules apply, and
+  * All Add Patient [name rules](/addPatient.md#add-patient-name-rules) apply, and
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -435,7 +487,7 @@ table, th, td {
  
  
 
-### Inactivate-name 
+### Inactivate-name Overview
 
 * Allows an authorised user to remove a name from the set of Patient Names returned to users
 
