@@ -1,31 +1,30 @@
 
 
-### Update Identity
+### Update Identity Overview
 
-The update identity operation allow an authorised user to update a persons self-identified attributes on a persons identity record.
+The update identity operation allow an authorised user to update the self-identified attributes on a persons identity record.
 
 This includes:
 * Gender
 * Ethnicity
 * Pronoun - future scope
 * Language - future scope
-* Iwi - future scope
+* Iwi affiliation - future scope
 
-### Update-identity
 
 <div>
-{% include update-birth.svg %}
+{% include update-identity.svg %}
 </div>
 
-**Update-birth - Processing steps:**
+
+**Update-identity - Processing steps:**
 
 1. The user provides patient details to be updated
-2. The integrating application sends an HTTP Post request using the $update-birth operation to the NHI E.g. Post\<Endpoint>/Patient/$update-birth
+2. The integrating application sends an HTTP Post request using the $update-identity operation to the NHI E.g. Post\<Endpoint>/Patient/$update-identity
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 4. The provided patient attributes are updated
 5. The updated record is returned with an HTTP 200 ok response
 6. The integrating application displays the updated details to the user
-
 
 <h4>Update-identity - In Parameters</h4>
 <table>
@@ -123,13 +122,31 @@ table, th, td {
         "valueString" : "3321540"
     },
     {
-        Ethnicity - TBC
+        "name" : "gender",
+        "valueString" : "M"
     },
     {
-        Gender - TBC
+        "name" : "gender-original-text",
+        "valueString" : "male"
     },
     {
-        Gender-original-textEthnicity - TBC
+        "name" : "ethnicity-1",
+        "valueString" : "21111"
+    },
+        "name" : "ethnicity-2",
+        "valueString" : "12113"
+    },
+        "name" : "ethnicity-3",
+        "valueString" : "12116"
+    },
+        "name" : "ethnicity-4",
+        "valueString" : "12411"
+    },
+        "name" : "ethnicity-5",
+        "valueString" : "12913"
+    },
+        "name" : "ethnicity-6",
+        "valueString" : "12114"
     }
   ]
 }
@@ -142,7 +159,7 @@ table, th, td {
 
 
 * **Patient update-identity rules**
-  * All add Patient ethnicity and gender rules apply, and
+  * All add Patient [ethnicity](/addPatient.md#add-patient-ethnicity-rules) and [gender](/addPatient.md#add-patient-gender-rules) rules apply, and
   * An update request must contain:
     * the live NHI number for the Patient Record
     * the version number of the current Patient Record
