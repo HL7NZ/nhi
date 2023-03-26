@@ -28,7 +28,7 @@ The user has sourced the required identity information, and initiates an add req
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Add Patient rules**
+##### Add Patient rules
 
   * An Add Patient request must not create an NHI record which is a duplicate of another Patient’s identity
 
@@ -65,7 +65,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Name rules**
+##### Add Patient Name rules
   * A Patient must have:
     * at least one Active Name
     * one, and only one, Active Name which is preferred.
@@ -110,7 +110,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Birthdate rules**
+##### Add Patient Birthdate rules
   * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
   * A birthdate must be a complete date and formatted either:
     * YYYYMMDD - DOB less than or equal to the current date;
@@ -129,7 +129,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Ethnicity rules**
+##### Add Patient Ethnicity rules
   * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
   * A Patient must supply all ethnicities identified with when supplying ethnicity information
   * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
@@ -141,7 +141,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Citizenship rules**
+##### Add Patient Citizenship rules
   *  A Patient must have a NZ citizenship status
   *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
@@ -153,7 +153,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Residency rules**
+##### Add Patient Residency rules
   *  A Patient must have a NZ residency status
   *  See the [glossary](/glossary.html#tbc---valid-combinations-of-nz-citizenship-and-nz-residency-status) for acceptable Citizenship / residency status combinations
 
@@ -164,7 +164,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* **Add Patient Birthplace rules**
+##### Add Patient Birthplace rules
   * A place of birth must only be populated if a country of birth is present
   * A request to populate the Country of Birth Information Source must also populate the Country of Birth
 
@@ -175,7 +175,8 @@ The user has sourced the required identity information, and initiates an add req
 
 ---
 
-* **Add Patient Deceased date rules**
+
+##### Add Patient Deceased date rules
   * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
   * deceased date must be a complete date and formatted either;
     * YYYYMMDD - DOD less than or equal to the current date;
@@ -190,15 +191,20 @@ The user has sourced the required identity information, and initiates an add req
   * _Deceased date can only be set to ‘Registered’ by an authorised Agency_
   * _The Date of Birth must be less than or equal to the Date of Death_
 
-* **Add Patient Gender Rules**
-*  A Patient must have a current gender, supplied as a valid gender code.
-*  A Patient may have a gender-original-text response
-  * If supplied, both gender code and gender-original-text will be recorded in the NHI.
 
 ---
 
 
-* **Add Patient Address rules**
+##### Add Patient Gender Rules
+*  A Patient must have a current gender, supplied as a valid gender code.
+*  A Patient may have a gender-original-text response
+  * If supplied, both gender code and gender-original-text will be recorded in the NHI.
+
+
+---
+
+
+##### Add Patient Address rules
   * A Patient must have a single Primary Residential Address
     * use = home
     * type = physical
