@@ -46,3 +46,7 @@ Usage: #definition
 * rest.resource.operation[4].name = "remove-postal-address"
 * rest.resource.operation[4].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address"
 * rest.resource.operation[4].documentation = "Allows a user to remove a postal address from the nhi record.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u" 
+
+* rest.resource.operation[4].name = "update-birth"
+* rest.resource.operation[4].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth"
+* rest.resource.operation[4].documentation = "An operation to update a patients birth details.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
