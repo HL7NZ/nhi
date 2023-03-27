@@ -1,0 +1,287 @@
+<div xmlns='http://www.w3.org/1999/xhtml'>
+
+<div>
+			<h2>Update Birth Details </h2>
+			<p>OPERATION: Update Birth</p>
+			<p>The official URL for this operation definition is: </p>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth</pre>
+			<div>
+				<p>
+					 An operation to update a patients birth details
+				</p>
+				
+			</div>
+			<p>URL: [base]/Patient/$update-birth</p>
+	
+	
+			<h3>Parameters</h3>
+        		<table>
+       			<style>
+        		table, th, td {
+        		border: 1px solid black;
+        		border-collapse: collapse;
+        		}
+        		</style>
+        		<tr><th>Use</th>
+        		<th>Name</th>
+        		<th>Cardinality</th>
+        		<th>Type</th>
+        		<th>Binding</th>
+			<th>Documentation</th></tr>
+			    
+			    <tr>
+					<td>IN</td>
+					<td>operation-type</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>$update-birth</p>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>IN</td>
+					<td>nhi</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The Patient's nhi number</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>version-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The current value of the patient resources meta.versionId</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>birthdate</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The patient's date of birth</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>birthdate-information-source</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The information source for the patient's date of birth</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>birth-place-country-code</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The patient's country of birth</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>birth-place-information-source</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The information source for the patient's country of birth</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>birth-place-place-of-birth</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The place where the person as born, E.g. Whangārei. Only populate if country-of-birth is populated</p>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>OUT</td>
+					<td>return</td>
+					<td>1..1</td>
+					<td>
+						<a href="http://hl7.org/fhir/R4/patient.html">patient</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The updated patient resource</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div>
+				<p>An operation to update a patient's birth details
+				</p>
+			</div>
+		</div>
+		
+		
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<id value="Patient-update-birth" />
+	
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="5" />
+	</extension>
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="trial-use" />
+	</extension>
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name" />
+	<version value="1.0.0" />
+	<name value="Update Birth Details " />
+	<title value="Update patient's birth details" />
+	<status value="draft" />
+	<kind value="operation" />
+	<experimental value="false" />
+	<date value="2022-05-28T12:47:40+10:00" />
+	<publisher value="Te Whatu Ora" />
+	<contact>
+		
+		<telecom>
+			<system value="email" />
+			<value value="integration@health.govt.nz" />
+		</telecom>
+	</contact>
+	<description
+		value="Update patient's birth detailse"/>
+	<affectsState value="true" />
+	<code value="set-preferred-name" />
+	<comment
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record.. " />
+	<resource value="Patient" />
+	<system value="false" />
+	<type value="false" />
+	<instance value="true" />
+	<parameter>
+		<name value="operation-type" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="Must be $update-birth" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="nhi" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The Patient's nhi number" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="version-id" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The current value of the patient resources meta.versionId" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="birthdate" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The patient's date of birth" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="birthdate-information-source" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The information source for the patient's date of birth" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="birth-place-country-code" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The patient's country of birth" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="birth-place-information-source" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The information source for the patient's country of birth" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="birth-place-place-of-birth" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="return" />
+		<use value="out" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The updated patient resource" />
+		<type value="http://hl7.org/fhir/R4/patient.html" />
+	</parameter>
+</OperationDefinition>
+</div>
