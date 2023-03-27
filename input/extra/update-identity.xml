@@ -1,17 +1,17 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Update Birth Details </h2>
-			<p>OPERATION: Update Birth</p>
+			<h2>Update Identity </h2>
+			<p>OPERATION: Update Identity</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity</pre>
 			<div>
 				<p>
-					 An operation to update a patients birth details
+					An operation to update a patients self-identified demographic information.
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$update-birth</p>
+			<p>URL: [base]/Patient/$update-identity</p>
 	
 	
 			<h3>Parameters</h3>
@@ -39,7 +39,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$update-birth</p>
+							<p>$update-identity</p>
 						</div>
 					</td>
 				</tr>
@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birthdate</td>
+					<td>gender</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -82,13 +82,13 @@
 					<td />
 					<td>
 						<div>
-							<p>The patient's date of birth</p>
+							<p>Patient's gender code</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birthdate-information-source</td>
+					<td>gender-original-text</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -96,53 +96,95 @@
 					<td />
 					<td>
 						<div>
-							<p>The information source for the patient's date of birth</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-country-code</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The patient's country of birth</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-information-source</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The information source for the patient's country of birth</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-place-of-birth</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The place where the person as born, E.g. Whangārei. Only populate if country-of-birth is populated</p>
+							<p>Patient's gender text response</p>
 						</div>
 					</td>
 				</tr>
 				
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-1</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>				
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-2</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-3</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-4</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-5</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-6</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
@@ -166,7 +208,7 @@
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-update-birth" />
+	<id value="Patient-update-identity" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -176,10 +218,10 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity" />
 	<version value="1.0.0" />
-	<name value="Update Birth Details " />
-	<title value="Update patient's birth details" />
+	<name value="Update Identity " />
+	<title value="Update patient's self-identified demographic information." />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -193,11 +235,11 @@
 		</telecom>
 	</contact>
 	<description
-		value="Update patient's birth details"/>
+		value="Update patient's  self-identified demographic information"/>
 	<affectsState value="true" />
 	<code value="set-preferred-name" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record." />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record. " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
@@ -208,7 +250,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $update-birth" />
+			value="Must be $update-identity" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -230,48 +272,76 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birthdate" />
+		<name value="gender" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The patient's date of birth" />
+			value="Patient's gender code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birthdate-information-source" />
+		<name value="gender-original-text" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The information source for the patient's date of birth" />
+			value="Patient's gender text response" />
+		<type value="string" />
+	</parameter>
+	
+	<parameter>
+		<name value="ethnicity-1" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-country-code" />
+		<name value="ethnicity-2" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The patient's country of birth" />
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-information-source" />
+		<name value="ethnicity-3" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The information source for the patient's country of birth" />
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-place-of-birth" />
+		<name value="ethnicity-4" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated" />
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-5" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-6" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
