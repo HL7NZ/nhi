@@ -1,17 +1,17 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Update Birth Details </h2>
+			<h2>Update Death Details </h2>
 			<p>OPERATION: Update Birth</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death</pre>
 			<div>
 				<p>
-					 An operation to update a patients birth details
+					 An operation to update a patients death details
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$update-birth</p>
+			<p>URL: [base]/Patient/$update-death</p>
 	
 	
 			<h3>Parameters</h3>
@@ -38,8 +38,8 @@
 					</td>
 					<td />
 					<td>
-						<div>
-							<p>$update-birth</p>
+						<divd
+							<p>$update-death</p>
 						</div>
 					</td>
 				</tr>
@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birthdate</td>
+					<td>death-date</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -82,13 +82,13 @@
 					<td />
 					<td>
 						<div>
-							<p>The patient's date of birth</p>
+							<p>The patient's date of death</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birthdate-information-source</td>
+					<td>date-of-death-information-source</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -96,52 +96,11 @@
 					<td />
 					<td>
 						<div>
-							<p>The information source for the patient's date of birth</p>
+							<p>The information source for the patient's date of death</p>
 						</div>
 					</td>
 				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-country-code</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The patient's country of birth</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-information-source</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The information source for the patient's country of birth</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>birth-place-place-of-birth</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>The place where the person as born, E.g. Whangārei. Only populate if country-of-birth is populated</p>
-						</div>
-					</td>
-				</tr>
+				
 				
 				<tr>
 					<td>OUT</td>
@@ -166,7 +125,7 @@
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-update-birth" />
+	<id value="Patient-update-death" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -176,10 +135,10 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death" />
 	<version value="1.0.0" />
-	<name value="Update Birth Details " />
-	<title value="Update patient's birth details" />
+	<name value="Update Death Details " />
+	<title value="Update patient's death details" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -193,9 +152,9 @@
 		</telecom>
 	</contact>
 	<description
-		value="Update patient's birth details"/>
+		value="Update patient's death details"/>
 	<affectsState value="true" />
-	<code value="update-birth" />
+	<code value="update-death" />
 	<comment
 		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record." />
 	<resource value="Patient" />
@@ -208,7 +167,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $update-birth" />
+			value="Must be $update-death" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -230,50 +189,25 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birthdate" />
+		<name value="death-date" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The patient's date of birth" />
+			value="The patient's date of death" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birthdate-information-source" />
+		<name value="date-of-death-information-source" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The information source for the patient's date of birth" />
+			value="The information source for the patient's date of death" />
 		<type value="string" />
 	</parameter>
-	<parameter>
-		<name value="birth-place-country-code" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="The patient's country of birth" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="birth-place-information-source" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="The information source for the patient's country of birth" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="birth-place-place-of-birth" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated" />
-		<type value="string" />
-	</parameter>
+	
+	
 	<parameter>
 		<name value="return" />
 		<use value="out" />

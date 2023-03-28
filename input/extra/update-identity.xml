@@ -237,7 +237,7 @@
 	<description
 		value="Update patient's  self-identified demographic information"/>
 	<affectsState value="true" />
-	<code value="set-preferred-name" />
+	<code value="update-identity" />
 	<comment
 		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record. " />
 	<resource value="Patient" />
