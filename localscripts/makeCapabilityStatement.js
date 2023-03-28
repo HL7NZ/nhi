@@ -59,9 +59,9 @@ if (fs.existsSync(rootPath)) {
                     ar.push(`<a name="${res.type}"> </a>`)   
                     
                     ar.push(`<h3>${res.type}</h3>`)   
-
+					
                     if (res.documentation) {
-                        let documentation = cleanText(res.documentation) || ""
+                        let documentation = cleanText(res.documentation) || ""                        
                         ar.push(`<div>${documentation}</div>`)
                         ar.push("<br></br>")
                     }
@@ -91,7 +91,8 @@ if (fs.existsSync(rootPath)) {
                             ar.push("<tr>")
                             ar.push(`<td>${int.name}</td>`)
                             ar.push(`<td><a href ="${int.name}.xml"> ${int.definition} </a></td>`)
-                            let documentation = cleanText(int.documentation) || hashInteraction[int.name]                          
+                            let documentation = cleanText(int.documentation) || hashInteraction[int.name]   
+                            console.log("operation:"+documentation)                       
                             ar.push(`<td>${documentation}</td>`)
                             
                             ar.push("</tr>")
