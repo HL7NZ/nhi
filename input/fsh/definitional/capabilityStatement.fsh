@@ -58,3 +58,7 @@ Usage: #definition
 * rest.resource.operation[7].name = "update-death"
 * rest.resource.operation[7].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death"
 * rest.resource.operation[7].documentation = "An operation to update a patient's death details.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[7].name = "add-name"
+* rest.resource.operation[7].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-namme"
+* rest.resource.operation[7].documentation = "An operation to add a name to a patient's NHI record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 

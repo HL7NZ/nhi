@@ -20,7 +20,7 @@
 <tr>
 <td>match</td>
 <td><a href ="match.xml"> http://hl7.org/fhir/OperationDefinition/Patient-match </a></td>
-<td><p><strong>$Match (Find NHI)</strong> with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong> patient:search / Patient.s.  <strong>$Match (Validate)</strong> with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that includes the live nhi-id.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong> patient:validate / Patient.v</p>
+<td><p><strong>$Match (Find NHI)</strong> with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong> patient:search / Patient.s.  <strong>$Match (Validate)</strong> with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong> patient:validate / Patient.v</p>
 </td>
 </tr>
 <tr>
@@ -45,6 +45,24 @@
 <td>remove-postal-address</td>
 <td><a href ="remove-postal-address.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address </a></td>
 <td><p>Allows a user to remove a postal address from the nhi record.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong> patient:write / Patient.u</p>
+</td>
+</tr>
+<tr>
+<td>update-birth</td>
+<td><a href ="update-birth.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth </a></td>
+<td><p>An operation to update a patient's birth details.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+</td>
+</tr>
+<tr>
+<td>update-identity</td>
+<td><a href ="update-identity.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity </a></td>
+<td><p>An operation to update a patient's identity details.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+</td>
+</tr>
+<tr>
+<td>update-death</td>
+<td><a href ="update-death.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death </a></td>
+<td><p>An operation to update a patient's death details.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
 </td>
 </tr>
 </table>
