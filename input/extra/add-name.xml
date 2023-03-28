@@ -15,7 +15,7 @@
 	
 	
 			<h3>Parameters</h3>
-        		<table  class='table table-bordered table-condensed'>
+        		<table>
        			<style>
         		table, th, td {
         		border: 1px solid black;
