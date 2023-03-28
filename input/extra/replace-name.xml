@@ -2,20 +2,20 @@
 
 <div>
 			<h2>Add Name</h2>
-			<p>OPERATION: Add Name</p>
+			<p>OPERATION: Replace Name</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name</pre>
 			<div>
 				<p>
-					An operation to add a name to a patient's NHI record.
+					An operation to to replace a name on a patient's record..
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$add-name</p>
+			<p>URL: [base]/Patient/$replace-name</p>
 	
 	
 			<h3>Parameters</h3>
-        		<table  class='table table-bordered table-condensed'>
+        		<table>
        			<style>
         		table, th, td {
         		border: 1px solid black;
@@ -39,7 +39,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$add-name</p>
+							<p>$replace-name</p>
 						</div>
 					</td>
 				</tr>
@@ -69,6 +69,20 @@
 					<td>
 						<div>
 							<p>The current value of the patient resources meta.versionId</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>replace-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The id for the name on the nhi to be replaced</p>
 						</div>
 					</td>
 				</tr>
@@ -185,16 +199,16 @@
 						</div>
 					</td>
 				</tr>
-			</table>
+			   </table>
 			<div>
-				<p>An operation to add  a name to a patient's record.
+				<p>An operation to  replace a name on a patient's record
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-add-name" />
+	<id value="Patient-replae-name" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -206,8 +220,8 @@
 	</extension>
 	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name" />
 	<version value="1.0.0" />
-	<name value="Add Name " />
-	<title value="Add a name to a patient's NHI record.." />
+	<name value="Replace Name " />
+	<title value="Replace a nameon a patient's NHI record.." />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -221,11 +235,11 @@
 		</telecom>
 	</contact>
 	<description
-		value="An operation to add a name to a patient's NHI record."/>
+		value="An operation to to replace a name on a patient's record.."/>
 	<affectsState value="true" />
 	<code value="add-name" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record. . " />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record, and the old one is removed " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
@@ -236,7 +250,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $add-name" />
+			value="Must be $replace-name" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -258,6 +272,15 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
+		<name value="replace-id" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The id for the name on the nhi to be replaced" />
+		<type value="integer" />
+	</parameter>
+	<parameter>
 		<name value="use" />
 		<use value="in" />
 		<min value="0" />
@@ -276,7 +299,15 @@
 		<type value="string" />
 	</parameter>
 	
-	
+	<parameter>
+		<name value="ethnicity-1" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
 	<parameter>
 		<name value="given-1" />
 		<use value="in" />
