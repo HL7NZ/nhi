@@ -168,7 +168,7 @@ ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
 Id: nhi-address-type
 Description: "Types of contact use supported  by the NHI"
-* ^url = https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
+* ^url = "https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType"
 * ^version = "1.0"
 * ^status = #active
 * ^experimental = false
