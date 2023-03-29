@@ -28,6 +28,22 @@
         		<th>Type</th>
         		<th>Binding</th>
 			<th>Documentation</th></tr>
+			
+				 <tr>
+					<td>IN</td>
+					<td>operation-type</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>$set-preferred-name</p>
+						</div>
+					</td>
+				</tr>
+				
 				<tr>
 					<td>IN</td>
 					<td>nhi</td>
@@ -164,6 +180,15 @@
 		<documentation
 			value="The updated patient resource" />
 		<type value="http://hl7.org/fhir/R4/patient.html" />
+	</parameter>
+	<parameter>
+		<name value="operation-type" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="Must be $set-preferred-name" />
+		<type value="string" />
 	</parameter>
 </OperationDefinition>
 </div>

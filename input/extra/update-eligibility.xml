@@ -1,21 +1,21 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Add Name</h2>
-			<p>OPERATION: Replace Name</p>
+			<h2>Update Eligibility</h2>
+			<p>OPERATION: Inactivate Name</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility</pre>
 			<div>
 				<p>
-					An operation to to replace a name on a patient's record..
+					An operation to update a patients residency and citizensip information 
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$replace-name</p>
+			<p>URL: [base]/Patient/$update-eligibility</p>
 	
 	
 			<h3>Parameters</h3>
-        		<table>
+        		<table  class='table table-bordered table-condensed'>
        			<style>
         		table, th, td {
         		border: 1px solid black;
@@ -28,8 +28,8 @@
         		<th>Type</th>
         		<th>Binding</th>
 			<th>Documentation</th></tr>
-			    
-			    <tr>
+			
+			     <tr>
 					<td>IN</td>
 					<td>operation-type</td>
 					<td>1..1</td>
@@ -39,7 +39,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$replace-name</p>
+							<p>$update-eligibility</p>
 						</div>
 					</td>
 				</tr>
@@ -74,114 +74,57 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>replace-id</td>
-					<td>1..1</td>
+					<td>nz-citizenship-status</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>The id for the name on the nhi to be replaced</p>
+							<p>NZ citizenship status</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>use</td>
+					<td>nz-citizenship-source</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>the name use qualifier for a name</p>
+							<p>NZ citizenship status information source</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>prefix</td>
+					<td>nz-residency-status</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>the name prefixe</p>
-						</div>
-					</td>
-				</tr>
-				
-				<tr>
-					<td>IN</td>
-					<td>given-1</td>
-					<td>0..*</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>the first or given name</p>
-						</div>
-					</td>
-				</tr>				
-				<tr>
-					<td>IN</td>
-					<td>given-2</td>
-					<td>0..*</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>the middle or second given name/s</p>
+							<p>NZ residency status</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>family</td>
+					<td>nz-residency-source</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>the family name</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>preferred</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>attribute used to indicate whether the name is preferred or not</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>information-source</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>the information source sighted when adding the name</p>
+							<p>NZ residency status - information source</p>
 						</div>
 					</td>
 				</tr>
@@ -198,17 +141,17 @@
 							<p>The updated patient resource</p>
 						</div>
 					</td>
-				</tr>>
-			   </table>
+				</tr>
+			</table>
 			<div>
-				<p>An operation to  replace a name on a patient's record
+				<p>The NHI is validated. The version-id is validated. Parameters are validated. If all request parameters are valid then the included items are updated on the Patients NHI record.
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-replace-name" />
+	<id value="Patient-update-eligibility" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -218,10 +161,10 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility" />
 	<version value="1.0.0" />
-	<name value="Replace Name " />
-	<title value="Replace a name on a patient's NHI record.." />
+	<name value="Inactivate Name" />
+	<title value="An operation to update a patients residency and citizensip information" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -235,11 +178,11 @@
 		</telecom>
 	</contact>
 	<description
-		value="An operation to to replace a name on a patient's record.."/>
+		value="Update eligibility"/>
 	<affectsState value="true" />
-	<code value="add-name" />
+	<code value="update-eligibility" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record, and the old one is removed " />
+		value="The NHI is validated. The version-id is validated. Parameters are validated. If all request parameters are valid then the included items are updated on the Patients NHI record. " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
@@ -250,7 +193,7 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $replace-name" />
+			value="Must be $update-eligibility" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -272,85 +215,39 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="replace-id" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-			value="The id for the name on the nhi to be replaced" />
-		<type value="integer" />
-	</parameter>
-	<parameter>
-		<name value="use" />
+		<name value="nz-citizenship-status" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="the name use qualifier for a name" />
+			value="NZ citizenship status" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="prefix" />
+		<name value="nz-citizenship-source" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="the name prefix" />
+			value="NZ citizenship status information source" />
 		<type value="string" />
 	</parameter>
-	
 	<parameter>
-		<name value="ethnicity-1" />
+		<name value="nz-residency-status" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="Patient's ethnicty code" />
+			value="NZ residency status" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="given-1" />
-		<use value="in" />
-		<min value="0" />
-		<max value="*" />
-		<documentation
-			value="the first or given name" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="given-2" />
-		<use value="in" />
-		<min value="0" />
-		<max value="*" />
-		<documentation
-			value="the middle or second given name" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="family" />
+		<name value="nz-residency-source" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="the family name" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="preferred" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="attribute used to indicate whether the name is preferred or not" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="information-source" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-			value="the information source sighted when adding the name " />
+			value="NZ residency status - information source" />
 		<type value="string" />
 	</parameter>
 	<parameter>
