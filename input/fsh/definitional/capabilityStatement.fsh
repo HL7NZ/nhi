@@ -66,3 +66,7 @@ Usage: #definition
 * rest.resource.operation[9].name = "replace-name"
 * rest.resource.operation[9].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-namme"
 * rest.resource.operation[9].documentation = "An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[10].name = "inactivate-name"
+* rest.resource.operation[10].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-namme"
+* rest.resource.operation[10].documentation = "An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 

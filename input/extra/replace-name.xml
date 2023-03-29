@@ -185,7 +185,7 @@
 						</div>
 					</td>
 				</tr>
-				
+				<tr>
 					<td>OUT</td>
 					<td>return</td>
 					<td>1..1</td>
@@ -198,7 +198,7 @@
 							<p>The updated patient resource</p>
 						</div>
 					</td>
-				</tr>
+				</tr>>
 			   </table>
 			<div>
 				<p>An operation to  replace a name on a patient's record

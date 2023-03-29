@@ -1,0 +1,169 @@
+<div xmlns='http://www.w3.org/1999/xhtml'>
+
+<div>
+			<h2>Inactivate Name</h2>
+			<p>OPERATION: Inactivate Name</p>
+			<p>The official URL for this operation definition is: </p>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name</pre>
+			<div>
+				<p>
+					 An operation to inactivate a name that is currently active on a patients record  
+				</p>
+				
+			</div>
+			<p>URL: [base]/Patient/$inactivate-name</p>
+	
+	
+			<h3>Parameters</h3>
+        		<table  class='table table-bordered table-condensed'>
+       			<style>
+        		table, th, td {
+        		border: 1px solid black;
+        		border-collapse: collapse;
+        		}
+        		</style>
+        		<tr><th>Use</th>
+        		<th>Name</th>
+        		<th>Cardinality</th>
+        		<th>Type</th>
+        		<th>Binding</th>
+			<th>Documentation</th></tr>
+				<tr>
+					<td>IN</td>
+					<td>nhi</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The Patient's nhi number</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>version-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The current value of the patient resources meta.versionId</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>inactivate-id</td>
+					<td>1..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">integer</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>The id of the name element to be inactivated (patient.name.id)</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>OUT</td>
+					<td>return</td>
+					<td>1..1</td>
+					<td>
+						<a href="http://hl7.org/fhir/R4/patient.html">patient</a>
+					</td>
+					<td/>
+					<td>
+						<div>
+							<p>The updated patient resource</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div>
+				<p>The NHI is validated. The version-id is validated. The inactivate-id is validated. If all request parameters are valid the name is made inactive on the patient record.
+				</p>
+			</div>
+		</div>
+		
+		
+<OperationDefinition xmlns="http://hl7.org/fhir">
+	<id value="Patient-inactivate-name" />
+	
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="5" />
+	</extension>
+	<extension
+		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="trial-use" />
+	</extension>
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name" />
+	<version value="1.0.0" />
+	<name value="Inactivate Name" />
+	<title value="An operation to inactivate a name that is currently active on a patients record" />
+	<status value="draft" />
+	<kind value="operation" />
+	<experimental value="false" />
+	<date value="2022-05-28T12:47:40+10:00" />
+	<publisher value="Te Whatu Ora" />
+	<contact>
+		
+		<telecom>
+			<system value="email" />
+			<value value="integration@health.govt.nz" />
+		</telecom>
+	</contact>
+	<description
+		value="Inactivate name"/>
+	<affectsState value="true" />
+	<code value="inactivate-name" />
+	<comment
+		value="The NHI is validated. The version-id is validated. The inactivate-id is validated. If all request parameters are valid the name is made inactive on the patient record. " />
+	<resource value="Patient" />
+	<system value="false" />
+	<type value="false" />
+	<instance value="true" />
+	<parameter>
+		<name value="nhi" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The Patient's nhi number" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="version-id" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The current value of the patient resources meta.versionId" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="inactivate-id" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="The id of the name element to be inactivated (patient.name.id))" />
+		<type value="integer" />
+	</parameter>
+	<parameter>
+		<name value="return" />
+		<use value="out" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="The updated patient resource" />
+		<type value="http://hl7.org/fhir/R4/patient.html" />
+	</parameter>
+</OperationDefinition>
+</div>
