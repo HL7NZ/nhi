@@ -522,10 +522,10 @@ Given Name: Cambridge <br />
 Birthdate:12-04-1960 <br />
 Gender: Male <br />
 <b> 3. ZHS7524 </b> <br />
-Family Name: MultipleAddress <br />
-Given Name: Francis <br />
-Birthdate:12-12-1982 <br />
-Gender: Male </td>
+Family Name: WILLIS <br />
+Given Names: ELIZABETH, MARGARET <br />
+Birthdate:15-06-2002 <br />
+Gender: Female </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
 <b> 1. Output: The top result returned is NHI: ZAU8023 </b> <br />
 <b> 2. Output: The top result returned is NHI: ZAV8657 </b> <br />
