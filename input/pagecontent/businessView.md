@@ -122,6 +122,9 @@ Information in the NHI is collected in mixed case and preserved in the format pr
 
 #### Māori macrons
 
-Māori macrons are not currently able to be updated in FHIR.
+Māori macrons are not currently supported by the HIP FHIR service.
+
+This is due to the effect macrons would have on downstream systems and update conflicts that would occur between the HL7 legacy, SOAP and FHIR services.
 
 Future development will allow updates to the NHI using the FHIR interfaces to include UTF-8 encoded Maori accented characters.
+
