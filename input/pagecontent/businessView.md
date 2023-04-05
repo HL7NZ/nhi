@@ -126,5 +126,5 @@ Māori macrons are not currently supported by the HIP FHIR service.
 
 This is due to the effect macrons would have on downstream systems and update conflicts that would occur between the HL7 legacy, SOAP and FHIR services.
 
-Future development will allow updates to the NHI using the FHIR interfaces to include UTF-8 encoded Maori accented characters.
+Future development will allow updates to the NHI using the FHIR interfaces to include UTF-8 encoded Maori accented characters. This is dependent on the source systems supplying these.
 
