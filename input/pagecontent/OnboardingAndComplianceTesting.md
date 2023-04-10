@@ -18,7 +18,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
 6. Complete your development and testing.
 7. Submit the results of the compliance tests by email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 8. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
-9. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form[Click here for more infrmation](https://www.health.govt.nz/our-work/health-identity/national-health-index/nhi-information-health-providers) **Getting access to production credentials for the NHI may take up to 5 days so please give yourself sufficient time prior to go live date**.
+9. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form [Click here for more infrmation](https://www.health.govt.nz/our-work/health-identity/national-health-index/nhi-information-health-providers) **Please allow at least 5 working days for these applications to be processed and production credentials issued. If your product is to be used by many different organisations please get in touch to discuss your rollout plans and how we might assist.**
 
 
 ### Compliance testing
