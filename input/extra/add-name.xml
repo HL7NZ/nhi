@@ -104,7 +104,7 @@
 				<tr>
 					<td>IN</td>
 					<td>given-1</td>
-					<td>0..*</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
@@ -118,14 +118,14 @@
 				<tr>
 					<td>IN</td>
 					<td>given-2</td>
-					<td>0..*</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>the middle or second given name/s</p>
+							<p>the middle or other given name/s</p>
 						</div>
 					</td>
 				</tr>
@@ -146,7 +146,7 @@
 				<tr>
 					<td>IN</td>
 					<td>preferred</td>
-					<td>0..1</td>
+					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
@@ -171,6 +171,20 @@
 						</div>
 					</td>
 				</tr>
+				<tr>
+					<td>IN</td>
+					<td>nhi-name-use-extra</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>an attribute used to qualify pre-allocated and babyof names</p>
+						</div>
+					</td>
+				</tr>				
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
@@ -281,7 +295,7 @@
 		<name value="given-1" />
 		<use value="in" />
 		<min value="0" />
-		<max value="*" />
+		<max value="1" />
 		<documentation
 			value="the first or given name" />
 		<type value="string" />
@@ -290,9 +304,9 @@
 		<name value="given-2" />
 		<use value="in" />
 		<min value="0" />
-		<max value="*" />
+		<max value="1*" />
 		<documentation
-			value="the middle or second given name" />
+			value="the middle or other given name(s)" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -307,7 +321,7 @@
 	<parameter>
 		<name value="preferred" />
 		<use value="in" />
-		<min value="0" />
+		<min value="1" />
 		<max value="1" />
 		<documentation
 			value="attribute used to indicate whether the name is preferred or not" />
@@ -319,9 +333,18 @@
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="the information source sighted when adding the name " />
+			value="the information source sighted when adding the name" />
 		<type value="string" />
 	</parameter>
+	<parameter>
+		<name value="nhi-name-use-extra" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="an attribute used to qualify pre-allocated and babyof names" />
+		<type value="string" />
+	</parameter>	
 	<parameter>
 		<name value="return" />
 		<use value="out" />
