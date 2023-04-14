@@ -239,7 +239,7 @@
 	<affectsState value="true" />
 	<code value="update-identity" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record. " />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are replaced on the Patients NHI record. " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
