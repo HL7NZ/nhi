@@ -131,7 +131,7 @@
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
-					<td>1..1</td>
+					<td>0..1</td>
 					<td>
 						<a href="http://hl7.org/fhir/R4/patient.html">patient</a>
 					</td>
