@@ -7,7 +7,7 @@
 			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name</pre>
 			<div>
 				<p>
-					An operation to to replace a name on a patient's record..
+					An operation to to replace a name on a patient's record.
 				</p>
 				
 			</div>
@@ -118,7 +118,7 @@
 				<tr>
 					<td>IN</td>
 					<td>given-1</td>
-					<td>0..*</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
@@ -132,14 +132,14 @@
 				<tr>
 					<td>IN</td>
 					<td>given-2</td>
-					<td>0..*</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>the middle or second given name/s</p>
+							<p>the middle or other given given name/s</p>
 						</div>
 					</td>
 				</tr>
@@ -160,7 +160,7 @@
 				<tr>
 					<td>IN</td>
 					<td>preferred</td>
-					<td>0..1</td>
+					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
@@ -185,6 +185,20 @@
 						</div>
 					</td>
 				</tr>
+				<tr>
+					<td>IN</td>
+					<td>nhi-name-use-extra</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>an attribute used to qualify pre-allocated and babyof names</p>
+						</div>
+					</td>
+				</tr>				
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
@@ -235,11 +249,11 @@
 		</telecom>
 	</contact>
 	<description
-		value="An operation to to replace a name on a patient's record.."/>
+		value="An operation to to replace a name on a patient's record."/>
 	<affectsState value="true" />
 	<code value="add-name" />
 	<comment
-		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record, and the old one is removed " />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record, and the old one is removed" />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
@@ -298,21 +312,11 @@
 			value="the name prefix" />
 		<type value="string" />
 	</parameter>
-	
-	<parameter>
-		<name value="ethnicity-1" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="Patient's ethnicty code" />
-		<type value="string" />
-	</parameter>
 	<parameter>
 		<name value="given-1" />
 		<use value="in" />
 		<min value="0" />
-		<max value="*" />
+		<max value="1" />
 		<documentation
 			value="the first or given name" />
 		<type value="string" />
@@ -321,9 +325,9 @@
 		<name value="given-2" />
 		<use value="in" />
 		<min value="0" />
-		<max value="*" />
+		<max value="1" />
 		<documentation
-			value="the middle or second given name" />
+			value="the middle or other given given name/s" />
 		<type value="string" />
 	</parameter>
 	<parameter>
@@ -338,7 +342,7 @@
 	<parameter>
 		<name value="preferred" />
 		<use value="in" />
-		<min value="0" />
+		<min value="1" />
 		<max value="1" />
 		<documentation
 			value="attribute used to indicate whether the name is preferred or not" />
@@ -353,6 +357,15 @@
 			value="the information source sighted when adding the name " />
 		<type value="string" />
 	</parameter>
+	<parameter>
+		<name value="nhi-name-use-extra" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="an attribute used to qualify pre-allocated and babyof names" />
+		<type value="string" />
+	</parameter>	
 	<parameter>
 		<name value="return" />
 		<use value="out" />
