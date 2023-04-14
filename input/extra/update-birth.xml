@@ -102,7 +102,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birth-place-country-code</td>
+					<td>country-of-birth</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -116,7 +116,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birth-place-information-source</td>
+					<td>country-of-birth-information-source</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -130,7 +130,7 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>birth-place-place-of-birth</td>
+					<td>place-of-birth</td>
 					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -248,7 +248,7 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-country-code" />
+		<name value="country-of-birth" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
@@ -257,7 +257,7 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-information-source" />
+		<name value="country-of-birth-information-source" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
@@ -266,12 +266,12 @@
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="birth-place-place-of-birth" />
+		<name value="place-of-birth" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-			value="The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated" />
+			value="The place where the person as born, E.g. Whangārei. Only populate if country-of-birth is populated" />
 		<type value="string" />
 	</parameter>
 	<parameter>
