@@ -65,17 +65,17 @@ table, th, td {
 <td> Optional </td>
 <td> The information source for the patients date of birth </td></tr>
 
-<tr><td> birth-place-country-code </td>
+<tr><td> country-of-birth </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The patient's country of birth </td></tr>
 
-<tr><td> birth-place-information-source </td>
+<tr><td> country-of-birth-information-source </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The information source for the patient's country of birth </td></tr>
 
-<tr><td> birth-place-place-of-birth </td>
+<tr><td> place-of-birth </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated </td></tr>
@@ -116,15 +116,15 @@ table, th, td {
         "valueString" : "BREG" 
     },
     {
-        "name" : "birth-place-country-code",
+        "name" : "country-of-birth",
         "valueString" : "NZ" 
     },
     {
-        "name" : "birth-place-information-source",
+        "name" : "country-of-birth-information-source",
         "valueString" : "BREG" 
     },
     {
-        "name" : "birth-place-place-of-birth",
+        "name" : "place-of-birth",
         "valueString" : "Whangarei" 
     },
   ]
