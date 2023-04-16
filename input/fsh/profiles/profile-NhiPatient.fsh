@@ -65,7 +65,7 @@ Description:    "The Patient resource exposed by the NHI."
 //* extension[dhb].value[x] only CodeableConcept
 //* extension[dhb].valueCodeableConcept from $dhb-vs
    
-//Name is required, and there are extensions for source, and isPreferred
+//Name is required, and there are extensions for source, and Preferred
 * name  0..*
 * name.given  0..2
 * name.given ^short = "Given name and other given name(s)"
@@ -74,6 +74,7 @@ Description:    "The Patient resource exposed by the NHI."
     $information-source named information-source 0..1 and
     $preferred named preferred 1..1 and
    	$name-use-extra named nhi-name-use-extra 0..1
+* name.use ^short = "temp | nickname | maiden"
 
 // using HISO codesets
 * name.extension[information-source].valueCodeableConcept from  $name-information-source-vs
