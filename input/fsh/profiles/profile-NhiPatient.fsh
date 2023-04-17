@@ -163,6 +163,13 @@ Description:    "The Patient resource exposed by the NHI."
 * contained[GP] ^short = "Contained resource for the Patient's enrolled general Practitioner"
 * contained[GP] ^definition = "Contained resource for the General Practice that the patient is enrolled with"
 
+* obeys nhi-nz-pat-1
+
+Invariant: nhi-nz-pat-1
+Expression: "Patient.name.where( (use.empty()) or (use='nickname') or (use = 'maiden') or (use = 'temp') )"
+Severity: #error
+Description: "only allows certain name name use values"
+
 
 ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
