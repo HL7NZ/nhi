@@ -59,7 +59,7 @@ Usage: #example
 * name[=].extension[=].valueCodeableConcept.text = "Proof not Sighted"
 * name[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name[=].extension[=].valueBoolean = false
-* name[=].use = #nickname
+* name[=].use = #official
 * name[=].family = "Ryan"
 * name[=].given = "Chewea"
 * name[=].prefix = "MR"
