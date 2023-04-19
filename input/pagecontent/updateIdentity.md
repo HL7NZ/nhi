@@ -123,11 +123,11 @@ table, th, td {
     },
     {
         "name" : "gender",
-        "valueString" : "M"
+        "valueString" : "female"
     },
     {
         "name" : "gender-original-text",
-        "valueString" : "male"
+        "valueString" : "wahine"
     },
     {
         "name" : "ethnicity-1",
