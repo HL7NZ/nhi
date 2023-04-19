@@ -46,3 +46,31 @@ Usage: #definition
 * rest.resource.operation[4].name = "remove-postal-address"
 * rest.resource.operation[4].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address"
 * rest.resource.operation[4].documentation = "Allows a user to remove a postal address from the nhi record.  **HTTP Request** 'POST'.  **Scope required:** patient:write / Patient.u" 
+
+* rest.resource.operation[5].name = "update-birth"
+* rest.resource.operation[5].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth"
+* rest.resource.operation[5].documentation = "An operation to update a patient's birth details.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[6].name = "update-identity"
+* rest.resource.operation[6].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity"
+* rest.resource.operation[6].documentation = "An operation to update a patient's identity details.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[7].name = "add-name"
+* rest.resource.operation[7].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name"
+* rest.resource.operation[7].documentation = "An operation to add a name to a patient's NHI record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[8].name = "replace-name"
+* rest.resource.operation[8].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name"
+* rest.resource.operation[8].documentation = "An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[9].name = "inactivate-name"
+* rest.resource.operation[9].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name"
+* rest.resource.operation[9].documentation = "An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+// * rest.resource.operation[10].name = "update-eligibility"
+// * rest.resource.operation[10].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility"
+// * rest.resource.operation[10].documentation = "An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 
+
+// * rest.resource.operation[11].name = "update-death"
+// * rest.resource.operation[11].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death"
+// * rest.resource.operation[11].documentation = "An operation to update a patient's death details.  **HTTP Request** 'POST'.  **Scope required:**  system/Patient.u, system/Patient.a" 

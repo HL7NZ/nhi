@@ -1,21 +1,21 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Set Address</h2>
-			<p>OPERATION: Set Address</p>
+			<h2>Inactivate Name</h2>
+			<p>OPERATION: Inactivate Name</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name</pre>
 			<div>
 				<p>
-					 Update a patient address. 
+					 An operation to inactivate a name that is currently active on a patients record  
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$set-address</p>
-
-
+			<p>URL: [base]/Patient/$inactivate-name</p>
+	
+	
 			<h3>Parameters</h3>
-        		<table>
+        		<table  class='table table-bordered table-condensed'>
        			<style>
         		table, th, td {
         		border: 1px solid black;
@@ -28,8 +28,7 @@
         		<th>Type</th>
         		<th>Binding</th>
 			<th>Documentation</th></tr>
-			
-			    <tr>
+			      <tr>
 					<td>IN</td>
 					<td>operation-type</td>
 					<td>1..1</td>
@@ -39,7 +38,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$set-address</p>
+							<p>$inactivate-name</p>
 						</div>
 					</td>
 				</tr>
@@ -74,62 +73,15 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-type</td>
+					<td>inactivate-id</td>
 					<td>1..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#integer">integer</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>Must be physical or postal
-							<br /> 
-							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html
-							</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>nz-address-id</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>The id of the validated address as returned by the eSAM address service</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>address-line</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>The first line of the validated address as returned by eSAM</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>address-building-name</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>Building name if required as additional address information
-							 <br />
-							Not part of the esam response</p>
+							<p>The id of the name element to be inactivated (patient.name.id)</p>
 						</div>
 					</td>
 				</tr>
@@ -149,14 +101,14 @@
 				</tr>
 			</table>
 			<div>
-				<p>Update a patient address. Set a validated address. 
+				<p>The NHI is validated. The version-id is validated. The inactivate-id is validated. If all request parameters are valid the name is made inactive on the patient record.
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-set-address" />
+	<id value="Patient-inactivate-name" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -166,42 +118,41 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name" />
 	<version value="1.0.0" />
-	<name value="Set Address" />
-	<title value="Update a patient address" />
+	<name value="Inactivate Name" />
+	<title value="An operation to inactivate a name that is currently active on a patients record" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
 	<date value="2022-05-28T12:47:40+10:00" />
 	<publisher value="Te Whatu Ora" />
-	<contact>		
+	<contact>
+		
 		<telecom>
 			<system value="email" />
 			<value value="integration@health.govt.nz" />
 		</telecom>
 	</contact>
 	<description
-		value="Update a patient address"/>
+		value="Inactivate name"/>
 	<affectsState value="true" />
-	<code value="set-address" />
+	<code value="inactivate-name" />
 	<comment
-		value="The address is validated and the patient address is updated" />
+		value="The NHI is validated. The version-id is validated. The inactivate-id is validated. If all request parameters are valid the name is made inactive on the patient record. " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
 	<instance value="true" />
-	
 	<parameter>
 		<name value="operation-type" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $set-address" />
+			value="Must be $inactivate-name" />
 		<type value="string" />
 	</parameter>
-	
 	<parameter>
 		<name value="nhi" />
 		<use value="in" />
@@ -220,42 +171,14 @@
 			value="The current value of the patient resources meta.versionId" />
 		<type value="string" />
 	</parameter>
-	
 	<parameter>
-		<name value="address-type" />
+		<name value="inactivate-id" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be physical or postal" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="nz-address-id" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-		 value="The id of the validated address as retuned by the eSAM address service" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="address-line" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-		 value="The first line of the validated address as returned by eSAM" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="address-building-name" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-		 value="Building name if required as additional address information, not returned by eSAM" />
-		<type value="string" />
+			value="The id of the name element to be inactivated (patient.name.id))" />
+		<type value="integer" />
 	</parameter>
 	<parameter>
 		<name value="return" />

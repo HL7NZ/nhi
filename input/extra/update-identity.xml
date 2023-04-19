@@ -1,21 +1,21 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Set Address</h2>
-			<p>OPERATION: Set Address</p>
+			<h2>Update Identity </h2>
+			<p>OPERATION: Update Identity</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity</pre>
 			<div>
 				<p>
-					 Update a patient address. 
+					An operation to update a patients self-identified demographic information.
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$set-address</p>
-
-
+			<p>URL: [base]/Patient/$update-identity</p>
+	
+	
 			<h3>Parameters</h3>
-        		<table>
+        		<table  class='table table-bordered table-condensed'>
        			<style>
         		table, th, td {
         		border: 1px solid black;
@@ -28,7 +28,7 @@
         		<th>Type</th>
         		<th>Binding</th>
 			<th>Documentation</th></tr>
-			
+			    
 			    <tr>
 					<td>IN</td>
 					<td>operation-type</td>
@@ -39,7 +39,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$set-address</p>
+							<p>$update-identity</p>
 						</div>
 					</td>
 				</tr>
@@ -74,62 +74,114 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-type</td>
-					<td>1..1</td>
+					<td>gender</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
-							<p>Must be physical or postal
-							<br /> 
-							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html
-							</p>
+							<p>Patient's gender code</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>nz-address-id</td>
-					<td>1..1</td>
+					<td>gender-original-text</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					<td/>
+					<td />
 					<td>
 						<div>
-							<p>The id of the validated address as returned by the eSAM address service</p>
+							<p>Patient's gender text response</p>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-1</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>				
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-2</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-line</td>
-					<td>1..1</td>
+					<td>ethnicity-3</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					<td/>
+					<td />
 					<td>
 						<div>
-							<p>The first line of the validated address as returned by eSAM</p>
+							<p>Patient's ethnicity code</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-building-name</td>
-					<td>1..1</td>
+					<td>ethnicity-4</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					<td/>
+					<td />
 					<td>
 						<div>
-							<p>Building name if required as additional address information
-							 <br />
-							Not part of the esam response</p>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-5</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>ethnicity-6</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>Patient's ethnicity code</p>
 						</div>
 					</td>
 				</tr>
@@ -149,14 +201,14 @@
 				</tr>
 			</table>
 			<div>
-				<p>Update a patient address. Set a validated address. 
+				<p>An operation to update a patient's birth details
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-set-address" />
+	<id value="Patient-update-identity" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -166,42 +218,41 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity" />
 	<version value="1.0.0" />
-	<name value="Set Address" />
-	<title value="Update a patient address" />
+	<name value="Update Identity " />
+	<title value="Update patient's self-identified demographic information." />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
 	<date value="2022-05-28T12:47:40+10:00" />
 	<publisher value="Te Whatu Ora" />
-	<contact>		
+	<contact>
+		
 		<telecom>
 			<system value="email" />
 			<value value="integration@health.govt.nz" />
 		</telecom>
 	</contact>
 	<description
-		value="Update a patient address"/>
+		value="Update patient's  self-identified demographic information"/>
 	<affectsState value="true" />
-	<code value="set-address" />
+	<code value="update-identity" />
 	<comment
-		value="The address is validated and the patient address is updated" />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are replaced on the Patients NHI record. " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
 	<instance value="true" />
-	
 	<parameter>
 		<name value="operation-type" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $set-address" />
+			value="Must be $update-identity" />
 		<type value="string" />
 	</parameter>
-	
 	<parameter>
 		<name value="nhi" />
 		<use value="in" />
@@ -220,41 +271,77 @@
 			value="The current value of the patient resources meta.versionId" />
 		<type value="string" />
 	</parameter>
+	<parameter>
+		<name value="gender" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's gender code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="gender-original-text" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's gender text response" />
+		<type value="string" />
+	</parameter>
 	
 	<parameter>
-		<name value="address-type" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-			value="Must be physical or postal" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="nz-address-id" />
+		<name value="ethnicity-1" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 value="The id of the validated address as retuned by the eSAM address service" />
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="address-line" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-		 value="The first line of the validated address as returned by eSAM" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="address-building-name" />
+		<name value="ethnicity-2" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 value="Building name if required as additional address information, not returned by eSAM" />
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-3" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-4" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-5" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="ethnicity-6" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="Patient's ethnicty code" />
 		<type value="string" />
 	</parameter>
 	<parameter>

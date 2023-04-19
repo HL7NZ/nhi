@@ -1,19 +1,19 @@
 <div xmlns='http://www.w3.org/1999/xhtml'>
 
 <div>
-			<h2>Set Address</h2>
-			<p>OPERATION: Set Address</p>
+			<h2>Add Name</h2>
+			<p>OPERATION: Add Name</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address</pre>
+			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name</pre>
 			<div>
 				<p>
-					 Update a patient address. 
+					An operation to add a name to a patient's NHI record.
 				</p>
 				
 			</div>
-			<p>URL: [base]/Patient/$set-address</p>
-
-
+			<p>URL: [base]/Patient/$add-name</p>
+	
+	
 			<h3>Parameters</h3>
         		<table>
        			<style>
@@ -28,7 +28,7 @@
         		<th>Type</th>
         		<th>Binding</th>
 			<th>Documentation</th></tr>
-			
+			    
 			    <tr>
 					<td>IN</td>
 					<td>operation-type</td>
@@ -39,7 +39,7 @@
 					<td />
 					<td>
 						<div>
-							<p>$set-address</p>
+							<p>$add-name</p>
 						</div>
 					</td>
 				</tr>
@@ -74,7 +74,78 @@
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-type</td>
+					<td>use</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>the name use qualifier for a name</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>prefix</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>the name prefixe</p>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>IN</td>
+					<td>given-1</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>the first or given name</p>
+						</div>
+					</td>
+				</tr>				
+				<tr>
+					<td>IN</td>
+					<td>given-2</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>the middle or other given name/s</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>family</td>
+					<td>0..1</td>
+					<td>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
+					</td>
+					<td />
+					<td>
+						<div>
+							<p>the family name</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>IN</td>
+					<td>preferred</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
@@ -82,57 +153,38 @@
 					<td />
 					<td>
 						<div>
-							<p>Must be physical or postal
-							<br /> 
-							Must be a valid code from https://common-ig-v1-1-0.hip.digital.health.nz/site/ValueSet-nhi-address-type.html
-							</p>
+							<p>attribute used to indicate whether the name is preferred or not</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>nz-address-id</td>
+					<td>information-source</td>
 					<td>1..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					<td/>
+					<td />
 					<td>
 						<div>
-							<p>The id of the validated address as returned by the eSAM address service</p>
+							<p>the information source sighted when adding the name</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>IN</td>
-					<td>address-line</td>
-					<td>1..1</td>
+					<td>nhi-name-use-extra</td>
+					<td>0..1</td>
 					<td>
 						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
-					<td/>
+					<td />
 					<td>
 						<div>
-							<p>The first line of the validated address as returned by eSAM</p>
+							<p>an attribute used to qualify pre-allocated and babyof names</p>
 						</div>
 					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>address-building-name</td>
-					<td>1..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
-					</td>
-					<td/>
-					<td>
-						<div>
-							<p>Building name if required as additional address information
-							 <br />
-							Not part of the esam response</p>
-						</div>
-					</td>
-				</tr>
+				</tr>				
 				<tr>
 					<td>OUT</td>
 					<td>return</td>
@@ -149,14 +201,14 @@
 				</tr>
 			</table>
 			<div>
-				<p>Update a patient address. Set a validated address. 
+				<p>An operation to add  a name to a patient's record.
 				</p>
 			</div>
 		</div>
 		
 		
 <OperationDefinition xmlns="http://hl7.org/fhir">
-	<id value="Patient-set-address" />
+	<id value="Patient-add-name" />
 	
 	<extension
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
@@ -166,42 +218,41 @@
 		url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
 		<valueCode value="trial-use" />
 	</extension>
-	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address" />
+	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name" />
 	<version value="1.0.0" />
-	<name value="Set Address" />
-	<title value="Update a patient address" />
+	<name value="Add Name " />
+	<title value="Add a name to a patient's NHI record.." />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
 	<date value="2022-05-28T12:47:40+10:00" />
 	<publisher value="Te Whatu Ora" />
-	<contact>		
+	<contact>
+		
 		<telecom>
 			<system value="email" />
 			<value value="integration@health.govt.nz" />
 		</telecom>
 	</contact>
 	<description
-		value="Update a patient address"/>
+		value="An operation to add a name to a patient's NHI record."/>
 	<affectsState value="true" />
-	<code value="set-address" />
+	<code value="add-name" />
 	<comment
-		value="The address is validated and the patient address is updated" />
+		value="The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the new name is added to the nhi record. . " />
 	<resource value="Patient" />
 	<system value="false" />
 	<type value="false" />
 	<instance value="true" />
-	
 	<parameter>
 		<name value="operation-type" />
 		<use value="in" />
 		<min value="1" />
 		<max value="1" />
 		<documentation
-			value="Must be $set-address" />
+			value="Must be $add-name" />
 		<type value="string" />
 	</parameter>
-	
 	<parameter>
 		<name value="nhi" />
 		<use value="in" />
@@ -220,43 +271,80 @@
 			value="The current value of the patient resources meta.versionId" />
 		<type value="string" />
 	</parameter>
+	<parameter>
+		<name value="use" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="the name use qualifier for a name" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="prefix" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="the name prefix" />
+		<type value="string" />
+	</parameter>
+	
 	
 	<parameter>
-		<name value="address-type" />
-		<use value="in" />
-		<min value="1" />
-		<max value="1" />
-		<documentation
-			value="Must be physical or postal" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="nz-address-id" />
+		<name value="given-1" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 value="The id of the validated address as retuned by the eSAM address service" />
+			value="the first or given name" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="address-line" />
+		<name value="given-2" />
 		<use value="in" />
-		<min value="1" />
-		<max value="1" />
+		<min value="0" />
+		<max value="1*" />
 		<documentation
-		 value="The first line of the validated address as returned by eSAM" />
+			value="the middle or other given name(s)" />
 		<type value="string" />
 	</parameter>
 	<parameter>
-		<name value="address-building-name" />
+		<name value="family" />
 		<use value="in" />
 		<min value="0" />
 		<max value="1" />
 		<documentation
-		 value="Building name if required as additional address information, not returned by eSAM" />
+			value="the family name" />
 		<type value="string" />
 	</parameter>
+	<parameter>
+		<name value="preferred" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="attribute used to indicate whether the name is preferred or not" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="information-source" />
+		<use value="in" />
+		<min value="1" />
+		<max value="1" />
+		<documentation
+			value="the information source sighted when adding the name" />
+		<type value="string" />
+	</parameter>
+	<parameter>
+		<name value="nhi-name-use-extra" />
+		<use value="in" />
+		<min value="0" />
+		<max value="1" />
+		<documentation
+			value="an attribute used to qualify pre-allocated and babyof names" />
+		<type value="string" />
+	</parameter>	
 	<parameter>
 		<name value="return" />
 		<use value="out" />
