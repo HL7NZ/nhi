@@ -843,6 +843,87 @@ Name use = nickname, source = PPRT.</td>
 </table>
 
 
+<h3>NHI Patient Maintain 'Core' tests</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption> For the NHI Maintain 'core'tests. Please select one of the following NHI numbers and use this for all tests unless stated otherwise <br />
+ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-update-core-1 <br /> $update-identity</td>
+<td>application can correctly update ethnicity values on a patient's record</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
+<img style="width:900px; float:none" src=update-core-1.png"/>
+</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be: 
+* 11111
+* 21111
+* 31111</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-2 <br /> $update-identity</td>
+<td>application can correctly update ethnicity values on a patient's record</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
+<img style="width:900px; float:none" src=update-core-2.png"/>
+</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be:
+* 11111
+* 34111
+* 51120
+*  4211 </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-3 <br /> $update-identity</td>
+<td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
+<img style="width:900px; float:none" src=update-core-3.png"/>
+</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be:
+* 97777 </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-4 <br /> $update-identity</td>
+<td>application can correctly update ethnicity values on a patient's record</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
+<img style="width:900px; float:none" src=update-core-4.png"/>
+</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be:
+* 12211
+* 12920 </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-5 <br /> $update-identity</td>
+<td>application can correctly update ethnicity values on a patient's record</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
+<img style="width:900px; float:none" src=update-core-5.png"/>
+</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be:
+* 61118 </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-6 <br /> $update-identity-error</td>
+<td>application can display an error when ethnicity information invalid</td>
+<td>Update the set of ethnicity information for Patient to update: ZAA0261 <br />
+Ethnicities to use: 97777 (response unidentifiable) and 99999 (not stated).</td>
+<td>Output: EM07225 - " </td>
+<td>mandatory</td></tr>
+
+
+</table>
 
 
 
@@ -1129,3 +1210,4 @@ Do not supply a country of birth </td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 </table>
+
