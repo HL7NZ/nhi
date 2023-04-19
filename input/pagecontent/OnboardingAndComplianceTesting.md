@@ -645,8 +645,68 @@ table, th, td {
 <th>Input values</th>
 <th>Expected outcome</th>
 <th>Mandatory</th></tr>
+   
+<tr><td>NHI-$add-name-1</td>
+<td>application can add a name to a patient record</td>
+<td>Add a nem to the selected NHI from list above with:
+<li>a family name; AND</li>
+<li>a given name; AND</li>
+<li>one or more other given name(s); AND</li>
+<li>preferred set to true; AND</li>
+<li>name use 'nickname'; AND</li>
+<li>a name prefix; AND</li>
+<li>a name source (e.g. a passport – ‘PPRT’)</li></td>
+<td>Input: An application can add a name to the patient record <br />
+Output: The name is added to the patient record <br />
+Output: The name is presented to the user with all name parts</td>
+<td>mandatory</td></tr>
 
-<tr><td>NHI-Maintain-Name-1</td>
+<tr><td>NHI-$add-name-2</td>
+<td>application can add a name to a patient record</td>
+<td>Add a name to the selected NHI from list above with:
+<li>a family name only (no given name); AND</li>
+<li>preferred set to false; AND</li>
+<li>a name source (e.g. a birth certificate – ‘BRCT’)</li></td>
+<td>Input: An application can add a name to the patient record <br />
+Output: The name is added to the patient record <br />
+Output: The name is presented to the user with all name parts</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-$add-name-3</td>
+<td>application can add a name to a patient record</td>
+<td>Add a nem to the selected NHI from list above with:
+<li>a given name only (no family name); AND</li>
+<li>preferred set to false; AND</li>
+<li>a name source (e.g. a birth certificate – ‘BRCT’)</li></td>
+<td>Input: An application can add a name to the patient record <br />
+Output: The name is added to the patient record <br />
+Output: The name is presented to the user with all name parts</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-$replace-name-1</td>
+<td>application can set the patients preferred name</td>
+<td>Replace a non-preferred name on a selected NHI from list above with a fictitious name that includes:
+<li>a family name; AND</li>
+<li>a given name; AND</li>
+<li>one or more other given name(s); AND</li>
+<li>preferred set to true; AND</li>
+<li>name use 'maiden'; AND</li>
+<li>a name prefix; AND</li>
+<li>a name source (e.g. a passport – ‘PPRT’)</li></td>
+</td>
+<td>Input: An application can replace a non-preferred name from the active names list with a verified name<br />
+Output: The preferred name that is displayed to the end user is the name that was selected in the operation with all name parts<br />
+Output: The replaced name is not returned to the user</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-$inactivate-name-1</td>
+<td>application can inactivate a patients name</td>
+<td>Inactivate a non-verified / non-preferred name on a selected NHI from list above</td>
+<td>Input: Use $inactivate-name operation<br />
+Output: The selected name is made inctive and not returned to the user</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-$set-preferred-name-1</td>
 <td>application can set the patients preferred name</td>
 <td><li>Use NHI number ZZK09PQ</li>
 <li>Do a Get Patient request to see active patient names</li>
@@ -655,7 +715,131 @@ table, th, td {
 Output: The preferred name that is displayed to the end user is the name that was selected in the operation<br />
 Output: The name is presented to the user with all name parts</td>
 <td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-1 <br /> $add-name </td>
+<td>application can display an error when the patient version is not current</td>
+<td><li>Requires two users to update a name on the provided patient record</li>
+<li>Use selected NHI number</li>
+<li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record using the <b>$add-name operation</b> and then pauses</li>
+<li>User two retrieves the patient record and adds a fictitious name to the record using the $add-name operation</li>
+<li>User one then completes their update to the name and should receive the error message</li></td>
+<td>Output: EM02007 "Version number is incorrect"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-2 <br /> $add-name </td>
+<td>application can display an error when the NHI provided in dormant</td>
+<td>Attempt to add a fictitious name, using the <b>$add-name operation</b>, to NHI ZDV8901 </td>
+<td>Output: EM02004 "The NHI Identifier provided is dormant. This record cannot be updated"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-3 <br /> $add-name </td>
+<td>application can display an error when the patient has too many names</td>
+<td><li>Attempt a add a fictitious name, using the <b>$add-name operation</b>, to NHI ZDJ6518. Given Name: John Charles Surname: Achilles</td>
+<td>Output: EM02105 "A Patient must not have more than 200 active names"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-4 <br /> $add-name </td>
+<td>application can display an error when an attempt to add a name that exists as an active name for that patient</td>
+<td><li>Attempt to add the Given: RA, Family: Lumbago name to NHI ZKE9687 using the <b>$add-name operation</td>
+<td>Output: EM07222 "The Patient Name already exists for this Patient"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-5 <br /> $add-name </td>
+<td>application can display an error when adding a name that has been deleted from the patient record</td>
+<td><li>Attempt to add a name to ZAD0152. Given Name: Amy. Surname: Alesana <br />
+Name to add: Given Name: Amy. Surname: Johnson </td>
+<td>Output: EM07008 - "The Patient name requested has been removed from the Patient record by NHI administration"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-6 <br /> $add-name </td>
+<td>application can display an error when an invalid source is provided</td>
+<td>Attempt to add a fictitious name to the patient provided where Name Source is Birth Register. <br />
+Attempt to add a name to ZAA1578. Given Name: Keith. Surname: Gordon. Name Source: Birth Register</td>
+<td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-7 <br /> $add-name </td>
+<td>application can display an error when an invalid source is provided</td>
+<td>Attempt to add a fictitious name to the patient provided where Name Source is Birth Register. <br />
+Attempt to add a name to ZAA1578. Given Name: Keith. Surname: Gordon. Name Source: Birth Register</td>
+<td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-8 <br /> $add-name </td>
+<td>application can display an error when a Babyof name is supplied with a use other than temp and a source other than NPRF</td>
+<td>Attempt to add a fictitious babyof name to the patient ZDM4902. Given Name: Sarah-Jayne, Margaret. Surname: Thomas. <br />
+Name use = nickname, source = PPRT.</td>
+<td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp."</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-9 <br /> $add-name </td>
+<td>application can display an error when no given or family name is present</td>
+<td>Attempt to add a fictitious name to the patient ZDM4902. Given Name: Sarah-Jayne, Margaret. Surname: Thomas. <br />
+Name use = nickname, source = PPRT.</td>
+<td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-10 <br /> $add-name </td>
+<td>application can display an error when the given or family name contains special characters e.g. # @ %</td>
+<td>Attempt to add a fictitious name (with special character) to the patient. ZAZ1913. Given Name: Alan. Surname: Abbot </td>
+<td>Output: "Invalid request body"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-11 <br /> $add-name </td>
+<td>application can display an error when a given or family name begins with a number e.g. 1Smith </td>
+<td>Attempt to add a fictitious name (with a number as the first character) to the patient. ZCV7765. Given Name: Sandra. Surname: Anderson</td>
+<td>Output: EM02107 "A Patient’s given and family name must start with a letter of the alphabet or an apostrophe"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-12 <br /> $add-name </td>
+<td>application can display an error when a given or family name contains only whitespace/s </td>
+<td>Attempt to add a name (containing only whitespace) to the patient. ZDC0959. Given Name: Mary. Surname: Alansmore</td>
+<td>Output: EM02110 "Each populated Patient Name field must contain at least one letter"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-13 <br /> $add-name </td>
+<td>application can display an error when an attempt is made to add a name that already exists as an active name for the patient on the NHI</td>
+<td>Attempt to add the name Sarah Adams, to the NHI, ZAG8796. Given Name: Sonya. Other Name: James. Surname: Adams </td>
+<td>Output: EM07222 "The patient name already exists for this patient"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-14 <br /> $replace-name</td>
+<td>application can display an error when an attempt to replace a verified name with an unverified</td>
+<td>Attempt to replace the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-15 <br /> $inactivate-name</td>
+<td>application can display an error when an authorised name is modified</td>
+<td><li>Attempt to inactivate a name with source BREG on NHI ZKE9393. Given Name: Jonathan Joseph. Surname: Savage</td>
+<td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-16 <br /> $inactivate-name</td>
+<td>application can display an error when attempting to inactivate a verified name</td>
+<td><li>Attempt to inactivate a name with source BCRT on NHI ZKE9687. Given Name: RA. Family name: Lumbago</td>
+<td>Output: EM0XXXX "This information has a verified source and cannot be made inactive"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-17 <br /> $inactivate-name</td>
+<td>application can display an error when attempting to modify an inactive name</td>
+<td><li>Attempt to inactivate a name set id X on NHI X. Given Name: XX. Surname: X</td>
+<td>Output: EM07223 "The <Patient> <Name> is not active and cannot be updated"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-18 <br /> $inactivate-name</td>
+<td>application can display an error when an attempt is made to inactivate a preferred name </td>
+<td>Attempt to inactivate preferred name Rosemary Alexander. ZBJ3544.Given Name: Rosemary, Thyme. Surname: Smith </td>
+<td>Output: EM02104 "An active Patient Preferred Name must not be deleted"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-name-error-19 <br /> $inactivate-name</td>
+<td>application can display an error when an attempt is made to inactivate a name with a verified source</td>
+<td>Attempt to inactivate the name Michaela Aldom, from the NHI, ZDW1872. Given Name: Leslie. Surname: SULLIVAN </td>
+<td>Output: EM07230 "Patient Name has been validated by a public Agency, and cannot be updated"</td>
+<td>mandatory</td></tr>
 </table>
+
 
 <h3>NHI Patient Add tests</h3>
 <table>
