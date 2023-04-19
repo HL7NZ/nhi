@@ -199,6 +199,8 @@ table, th, td {
 
 * **Duplicate Name Definition**
   * A Name is a duplicate name for a given NHI number if the 'Given Name', 'Other Given Names', and 'Family Name' match the values for an existing name for that NHI.
+  * Concatenated names are included as duplicates.
+  * Duplicates are case sensitive (mark Fraser and Mark Fraser are not considered duplicates).
 
     
 * **Registered Name Definition**

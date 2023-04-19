@@ -18,7 +18,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
 6. Complete your development and testing.
 7. Submit the results of the compliance tests by email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 8. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
-9. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form[Click here for more infrmation](https://www.health.govt.nz/our-work/health-identity/national-health-index/nhi-information-health-providers).
+9. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form [Click here for more infrmation](https://www.health.govt.nz/our-work/health-identity/national-health-index/nhi-information-health-providers) **Please allow at least 5 working days for these applications to be processed and production credentials issued. If your product is to be used by many different organisations please get in touch to discuss your rollout plans and how we might assist.**
 
 
 ### Compliance testing
@@ -522,10 +522,10 @@ Given Name: Cambridge <br />
 Birthdate:12-04-1960 <br />
 Gender: Male <br />
 <b> 3. ZHS7524 </b> <br />
-Family Name: MultipleAddress <br />
-Given Name: Francis <br />
-Birthdate:12-12-1982 <br />
-Gender: Male </td>
+Family Name: WILLIS <br />
+Given Names: ELIZABETH, MARGARET <br />
+Birthdate:15-06-2002 <br />
+Gender: Female </td>
 <td>Input: Above criteria can be entered for the 3 Match scenarios <br />
 <b> 1. Output: The top result returned is NHI: ZAU8023 </b> <br />
 <b> 2. Output: The top result returned is NHI: ZAV8657 </b> <br />
