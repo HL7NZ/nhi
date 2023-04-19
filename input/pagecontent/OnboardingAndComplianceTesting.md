@@ -640,6 +640,8 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption> For the NHI Maintain 'core'tests. Please select one of the following NHI numbers and use this for all tests unless stated otherwise <br />
+ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -841,6 +843,10 @@ Name use = nickname, source = PPRT.</td>
 </table>
 
 
+
+
+
+
 <h3>NHI Patient Add tests</h3>
 <table>
 <style>
@@ -849,8 +855,6 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> For the NHI Maintain address tests. Please select one of the following NHI numbers and use this for all tests <br />
-ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
