@@ -917,17 +917,43 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-6 <br /> $update-identity-error</td>
 <td>application can display an error when ethnicity information invalid</td>
-<td>Update the set of ethnicity information for Patient to update: ZAA0261 <br />
+<td>Update the ethnicity information for Patient: ZAA0261 <br />
 Ethnicities to use: 97777 (response unidentifiable) and 99999 (not stated).</td>
-<td>Output: EM07225 - " </td>
+<td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
+<tr><td>NHI-update-core-7 <br /> $update-identity-error</td>
+<td>application can display an error when ethnicity information invalid</td>
+<td>Update the ethnicity information for Patient: ZAA1063 <br />
+Ethnicities to use:<br />
+<li>32100 (Cook Islands Maori) and,</li>
+<li>12948 (South African) and,</li>
+<li>32100 (Cook Islands Maori)</li></td>
+<td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
+<td>mandatory</td></tr>
 
+<tr><td>NHI-update-core-8 <br /> $update-identity</td>
+<td>application can correctly update a gender value on a patient's record </td>
+<td>Update the gender for Patient: ZAA1063 <br />
+Do a Get patient request <br />
+Change gender from current gender to one of the four acceptable gender codes</td>
+<td>Output: Patients gender coded updated and presented to user</td>
+<td>mandatory</td></tr>
 
+<tr><td>NHI-update-core-9 <br /> $update-identity</td>
+<td>application can correctly update the gender value and gender-original-text on a patient record</td>
+<td>Update the gender for Patient: ZAA1063 <br />
+Do a Get patient request <br />
+Change gender from current gender to one of the four acceptable gender codes, include an original text reponse that a patient might submit </td>
+<td>Output: Patients gender coded and gender original text updated and presented to user</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-10 <br /> $update-identity-error</td>
+<td>application can display an error when gender-original-text updated without a gender value</td>
+<td>Update the gender-original-text for Patient: ZAA1063</td>
+<td>Output: EM07201 - "Is a required field - Patient.gender" </td>
+<td>mandatory</td></tr>
 </table>
-
-
-
 
 <h3>NHI Patient Add tests</h3>
 <table>
