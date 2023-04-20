@@ -239,7 +239,7 @@ table, th, td {
     },
     {
         "name" : "use",
-        "valueString" : "Official"
+        "valueString" : "maiden"
     },
     {
         "name" : "prefix",
@@ -279,8 +279,8 @@ table, th, td {
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
-  * An update name request must not create a duplicate of an existing name for an NHI number.
-  * A request must not result in information, removed from a Patient Record by NHI Administration, being added (A name that has been deleted by HealthNZ cannot be added i.e. family name, given(1) and given(2) match a name with a ‘deleted’ status).
+  * An update name request must not create a duplicate of an existing name for an NHI number [see glossary for name definitions](/glossary.html)
+  * A request must not result in information removed from a Patient Record by NHI Administration, being added (A name that has been deleted by HealthNZ cannot be added i.e. family name, given(1) and given(2) match a name with a ‘deleted’ status).
   * A request must update the source of information only when the information is also provided.
   * An update which results in an attribute Status of Registered must only be submitted via an authorised Agency update.
   * A Patient must have one, and only one, Active Name which is preferred.
@@ -458,10 +458,11 @@ table, th, td {
 
 * **Replace-name rules**
   * All Add Patient [name rules](/addPatient.md#add-patient-name-rules) apply, and
-  * An update request must contain:
+  * An replace name update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
-  * An update name request must not create a duplicate of an existing name for an NHI number.
+    * the replace-id (set-id for name being replaced).
+  * An update name request must not create a duplicate of an existing name for an NHI number [see glossary for name definitions](/glossary.html).
   * A request must not result in information, removed from a Patient Record by NHI Administration, being added (A name that has been deleted by HealthNZ cannot be added i.e. family name, given(1) and given(2) match a name with a ‘deleted’ status).
   * A request must not result in modification of information confirmed by authorised Agency (“registered” information).
   * A request must update the source of information only when the information is also provided.
@@ -476,6 +477,7 @@ table, th, td {
 * _Replace-name errors._
   * _Patient NHI and version number are required._
   * _Version number is incorrect._
+  * _Patient Name Set ID provided is invalid or inactive_
   * _The name already exists for this patient._
   * _The name requested has been removed from the patient record by NHI administration._
   * _name-information-source is required when name is present._
@@ -585,10 +587,10 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 * **Inactivate-name rules**
-  * * An update request must contain:
+  * * An Inactivate name update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
-    * the inactivate-id.
+    * the inactivate-id (set-id for name being inactivated)
   * A request must not result in modification of information confirmed by authorised Agency (“registered” information).
   * A request may modify active patient information which is not ‘registered’ or verified’ information.
   * An existing name must be active to be updated
