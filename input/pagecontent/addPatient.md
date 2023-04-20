@@ -78,7 +78,7 @@ The user has sourced the required identity information, and initiates an add req
     * ‘other’ given name (1)
     * use
     * name-use-extra (baby-of and unallocated)
-  * A name cannot be added with a name use = old.
+  * A name cannot be added with a name use = usual, official or anonymous, old
   * A name can only include: Alphas (A-Z or a-z), hypens(-), spaces, apostrophes (TBC)
   * The first character of a name must be an Alpha (A-Z or a-z) or apostrophe
   * A name field must include at least one Alpha (A-Z or a-z) character
