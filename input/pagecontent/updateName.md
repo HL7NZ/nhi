@@ -416,7 +416,7 @@ table, th, td {
         "valueString" : "3357591"
     },
     {
-        "name" : "replace-id,
+        "name" : "replace-id",
         "valueString" : "22"
     },
     {
