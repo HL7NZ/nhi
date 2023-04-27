@@ -934,6 +934,31 @@ Change gender from current gender to one of the four acceptable gender codes, in
 <td>mandatory</td></tr>
 </table>
 
+#### Update-core-1
+<div>
+<img style="width:900px; float:none" src=update-core-1.png"/>
+</div>
+
+#### Update-core-2
+<div>
+<img style="width:900px; float:none" src=update-core-2.png"/>
+</div>
+
+#### Update-core-3
+<div>
+<img style="width:900px; float:none" src=update-core-3.png"/>
+</div>
+
+#### Update-core-4
+<div>
+<img style="width:900px; float:none" src=update-core-4.png"/>
+</div>
+
+#### Update-core-5
+<div>
+<img style="width:900px; float:none" src=update-core-5.png"/>
+</div>
+
 <h3>NHI Patient Add tests</h3>
 <table>
 <style>
