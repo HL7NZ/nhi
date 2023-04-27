@@ -99,6 +99,13 @@ table, th, td {
 <td>The application reaches its usage plan limit and is returned an HTTP 429 error (See 'Usage Plans' in the 'General Notes')</td>
 <td>The application will retry several times with an exponentially increasing delay</td>
 <td>Recommended</td></tr>
+
+<tr><td>General-2</td>
+<td>Application can present the NHI terms of use to individual user's when the integrating appliction first goes live for an Organisation. A reference terms of use is supplied here, or the NHI terms of use can be included as part of the application's terms of use</td>
+<td>See terms of use</td>
+<td>The application will display terms of use to end user, and <br />
+application stores end users aceptance of the terms</td>
+<td>Recommended</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
