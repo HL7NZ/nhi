@@ -101,10 +101,10 @@ table, th, td {
 <td>Recommended</td></tr>
 
 <tr><td>General-2</td>
-<td>Application can present the NHI terms of use to individual user's when the integrating appliction first goes live for an Organisation. A reference terms of use is supplied here, or the NHI terms of use can be included as part of the application's terms of use</td>
-<td>See terms of use</td>
-<td>The application will display terms of use to end user, and <br />
-application stores end users aceptance of the terms</td>
+<td>Application can present the NHI terms of use to individual user's when the integrating application first goes live for an Organisation. A reference terms of use is supplied <Link>, or the NHI terms of use can be included as part of the application's terms of use.</td>
+<td><Link></td>
+<td><li>The application will display terms of use to the end user</li>
+<li>The application must store the end users acceptance of the terms</li></td>
 <td>Recommended</td></tr>
 </table>
 
