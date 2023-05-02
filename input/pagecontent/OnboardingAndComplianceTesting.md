@@ -99,6 +99,13 @@ table, th, td {
 <td>The application reaches its usage plan limit and is returned an HTTP 429 error (See 'Usage Plans' in the 'General Notes')</td>
 <td>The application will retry several times with an exponentially increasing delay</td>
 <td>Recommended</td></tr>
+
+<tr><td>General-2</td>
+<td>Application can present the NHI terms of use to individual user's when the integrating application first goes live for an Organisation. A reference terms of use is supplied <Link>, or the NHI terms of use can be included as part of the application's terms of use.</td>
+<td><Link></td>
+<td><li>The application will display terms of use to the end user</li>
+<li>The application must store the end users acceptance of the terms</li></td>
+<td>Recommended</td></tr>
 </table>
 
 <h3>NHI Patient GET tests</h3>
@@ -850,9 +857,7 @@ ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 
 <tr><td>NHI-update-core-1 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
-<img style="width:900px; float:none" src=update-core-1.png"/>
-</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-1 below this table) for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be: 
 * 11111
@@ -862,22 +867,18 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-2 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
-<img style="width:900px; float:none" src=update-core-2.png"/>
-</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-2 below this table) for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 11111
 * 34111
 * 51120
-*  4211 </td>
+* 4211 </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-3 <br /> $update-identity</td>
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
-<img style="width:900px; float:none" src=update-core-3.png"/>
-</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-3 below this table) for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 97777 </td>
@@ -885,9 +886,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-4 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
-<img style="width:900px; float:none" src=update-core-4.png"/>
-</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-4 below this table) for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 12211
@@ -896,9 +895,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-5 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question shown below for the selected NHI number
-<img style="width:900px; float:none" src=update-core-5.png"/>
-</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-5 below this table) for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 61118 </td>
@@ -943,6 +940,31 @@ Change gender from current gender to one of the four acceptable gender codes, in
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
 </table>
+
+#### Update-core-1
+<div>
+<img style="width:900px; float:none" src=update-core-1.png"/>
+</div>
+
+#### Update-core-2
+<div>
+<img style="width:900px; float:none" src=update-core-2.png"/>
+</div>
+
+#### Update-core-3
+<div>
+<img style="width:900px; float:none" src=update-core-3.png"/>
+</div>
+
+#### Update-core-4
+<div>
+<img style="width:900px; float:none" src=update-core-4.png"/>
+</div>
+
+#### Update-core-5
+<div>
+<img style="width:900px; float:none" src=update-core-5.png"/>
+</div>
 
 <h3>NHI Patient Add tests</h3>
 <table>
