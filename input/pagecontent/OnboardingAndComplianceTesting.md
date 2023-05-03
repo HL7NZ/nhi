@@ -943,27 +943,39 @@ Change gender from current gender to one of the four acceptable gender codes, in
 <tr><td>NHI-update-core-11 <br /> $update-eligibility</td>
 <td>application can correctly update citizenship on a patient's identity record</td>
 <td>Update the citizenship for Patient: ZAA1063 <br />
-<b> Do all three </b> <br />
-<li> status - unknown, source - NPRF </li>
-<li> status - no, source - NPRF </li>
-<li> status - yes, source BRCT </li></td>
+from current value to either status - unknown or no, source - NPRF</td>
+<td>Output: Citizenship is updated on the patient record <br />
+The patient record clearly shows citizenship status and source </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-12 <br /> $update-eligibility</td>
+<td>application can correctly update citizenship on a patient's identity record</td>
+<td>Update the citizenship for Patient: ZKF6683 <br />
+maintain the yes response but change the verified source</td>
 <td>Output: Citizenship is updated on the patient record <br />
 The patient record clearly shows citizenship status and source </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-eligibility-error-1</td>
-<td>application can display an error when an attempt to replace citizenship from a verified to unverified source is made</td>
-<td>Attempt to replace citizenship on NHI ZKE9687- xxxx the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>application can display an error when an attempt to add a registered source for citizenship </td>
+<td>Attempt replace citizenship for Patient: ZKF6683 <br />
+maintain the yes response but attempt to add source = DIA </td>
+<td>Output: EM0XXXX "Patient NZ Citizenship has been validated by a public Agency, and cannot be updated"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-eligibility-error-2</td>
+<td>application can display an error when an attempt to replace a verified to unverified source for citizenship</td>
+<td>Attempt replace citizenship for Patient: ZKF6683 <br />
+maintain the yes response but attempt to add source = NPRF </td>
 <td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
 <td>mandatory</td></tr>
 
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-4 below this table) for the selected NHI number</td>
-<td>Output: The application can update the patients ethnicity information <br />
-patient’s ethnicity after update should be:
-* 12211
-* 12920 </td>
+<tr><td>NHI-update-eligibility-error-3</td>
+<td>application can display an error when an attempt to replace a citizenship that has a registered source</td>
+<td>Attempt to replace citizenship on NHI ZKF6691 <br />
+from Registered source (DIA) to verified or non-verified source </td>
+<td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
 <td>mandatory</td></tr>
-
 </table>
 
 
