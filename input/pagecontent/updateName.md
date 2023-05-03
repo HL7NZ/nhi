@@ -170,7 +170,7 @@ table, th, td {
 <tr><td> version-id </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> the name use qualifier for a name </td></tr>
+<td> The current patient version number </td></tr>
 
 <tr><td> use </td>
 <td> valueString </td>
@@ -205,7 +205,7 @@ table, th, td {
 <tr><td> name-information-source </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> the information source sighted when adding the name </td></tr>
+<td> The information source sighted when adding the name </td></tr>
 </table>
 
 
@@ -343,12 +343,12 @@ table, th, td {
 <tr><td> version-id </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> the name use qualifier for a name </td></tr>
+<td> The current patient version number </td></tr>
 
 <tr><td> replace-id </td>
 <td> valueInteger </td>
 <td> Mandatory </td>
-<td> the set id for the name to be reaplaced </td></tr>
+<td> The set id for the name to be reaplaced </td></tr>
 
 <tr><td> use </td>
 <td> valueString </td>
@@ -383,7 +383,7 @@ table, th, td {
 <tr><td> name-information-source </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> the information source sighted when adding the name </td></tr>
+<td> The information source sighted when adding the name </td></tr>
 </table>
 
 
