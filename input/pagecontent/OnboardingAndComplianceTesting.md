@@ -952,8 +952,8 @@ The patient record clearly shows citizenship status and source </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-eligibility-error-1</td>
-<td>application can display an error when an attempt to replace citizenship from a verified to unverified source</td>
-<td>Attempt to replace citizenship on NHI - xxxx the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>application can display an error when an attempt to replace citizenship from a verified to unverified source is made</td>
+<td>Attempt to replace citizenship on NHI ZKE9687- xxxx the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
 <td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
 <td>mandatory</td></tr>
 
