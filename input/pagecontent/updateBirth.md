@@ -126,7 +126,7 @@ table, th, td {
     {
         "name" : "place-of-birth",
         "valueString" : "Whangarei" 
-    },
+    }
   ]
 }
 
