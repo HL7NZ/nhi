@@ -857,7 +857,7 @@ ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 
 <tr><td>NHI-update-core-1 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-1 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-1.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be: 
 * 11111
@@ -867,7 +867,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-2 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-2 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-2.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 11111
@@ -878,7 +878,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-3 <br /> $update-identity</td>
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-3 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-3.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 97777 </td>
@@ -886,7 +886,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-4 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-4 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-4.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 12211
@@ -895,7 +895,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-5 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-5 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-5.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 * 61118 </td>
@@ -939,32 +939,33 @@ Change gender from current gender to one of the four acceptable gender codes, in
 <td>Update the gender-original-text for Patient: ZAA1063</td>
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-11 <br /> $update-eligibility</td>
+<td>application can correctly update citizenship on a patient's identity record</td>
+<td>Update the citizenship for Patient: ZAA1063 <br />
+<b> Do all three </b> <br />
+<li> status - unknown, source - NPRF </li>
+<li> status - no, source - NPRF </li>
+<li> status - yes, source BRCT </li></td>
+<td>Output: Citizenship is updated on the patient record <br />
+The patient record clearly shows citizenship status and source </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-eligibility-error-1</td>
+<td>application can display an error when an attempt to replace citizenship from a verified to unverified source</td>
+<td>Attempt to replace citizenship on NHI - xxxx the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
+<td>mandatory</td></tr>
+
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-4 below this table) for the selected NHI number</td>
+<td>Output: The application can update the patients ethnicity information <br />
+patient’s ethnicity after update should be:
+* 12211
+* 12920 </td>
+<td>mandatory</td></tr>
+
 </table>
 
-#### Update-core-1
-<div>
-<img style="width:900px; float:none" src=update-core-1.png"/>
-</div>
-
-#### Update-core-2
-<div>
-<img style="width:900px; float:none" src=update-core-2.png"/>
-</div>
-
-#### Update-core-3
-<div>
-<img style="width:900px; float:none" src=update-core-3.png"/>
-</div>
-
-#### Update-core-4
-<div>
-<img style="width:900px; float:none" src=update-core-4.png"/>
-</div>
-
-#### Update-core-5
-<div>
-<img style="width:900px; float:none" src=update-core-5.png"/>
-</div>
 
 <h3>NHI Patient Add tests</h3>
 <table>
@@ -1249,3 +1250,4 @@ Do not supply a country of birth </td>
 <td>Mandatory</td></tr>
 </table>
 
+### Other stuff
