@@ -53,12 +53,12 @@ table, th, td {
 <tr><td> version-id </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> The patients date of birth </td></tr>
+<td> The current patient version number </td></tr>
 
 <tr><td> birthdate </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> May contain up to six </td></tr>
+<td> The patients date of birth </td></tr>
 
 <tr><td> birthdate-information-source </td>
 <td> valueString </td>
