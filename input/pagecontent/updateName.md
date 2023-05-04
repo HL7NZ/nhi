@@ -202,10 +202,15 @@ table, th, td {
 <td> Mandatory </td>
 <td> The attribute used to indicate whether the name is preferred or not </td></tr>
 
-<tr><td> name-information-source </td>
+<tr><td> information-source </td>
 <td> valueString </td>
 <td> Mandatory </td>
 <td> The information source sighted when adding the name </td></tr>
+
+<tr><td> nhi-name-use-extra </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> an attribute used to qualify pre-allocated and babyof names </td></tr>
 </table>
 
 
@@ -262,7 +267,7 @@ table, th, td {
         "valueString" : "true"
     },
     {
-        "name" : "name-information-source",
+        "name" : "information-source",
         "valueString" : "NPRF"
     }
   ]
@@ -348,7 +353,7 @@ table, th, td {
 <tr><td> replace-id </td>
 <td> valueInteger </td>
 <td> Mandatory </td>
-<td> The set id for the name to be reaplaced </td></tr>
+<td> The set id for the name to be replaced </td></tr>
 
 <tr><td> use </td>
 <td> valueString </td>
@@ -380,10 +385,15 @@ table, th, td {
 <td> Mandatory </td>
 <td> The attribute used to indicate whether the name is preferred or not </td></tr>
 
-<tr><td> name-information-source </td>
+<tr><td> information-source </td>
 <td> valueString </td>
 <td> Mandatory </td>
 <td> The information source sighted when adding the name </td></tr>
+
+<tr><td> nhi-name-use-extra </td>
+<td> valueString </td>
+<td> Optional </td>
+<td> an attribute used to qualify pre-allocated and babyof names </td></tr>
 </table>
 
 
@@ -417,7 +427,7 @@ table, th, td {
     },
     {
         "name" : "replace-id",
-        "valueString" : "22"
+        "valueInteger" : "22"
     },
     {
         "name" : "use",
@@ -444,7 +454,7 @@ table, th, td {
         "valueString" : "true"
     },
     {
-        "name" : "name-information-source",
+        "name" : "information-source",
         "valueString" : "NPRF"
     }
   ]
@@ -540,7 +550,7 @@ table, th, td {
 <td> The current patient version number </td></tr>
 
 <tr><td> inactivate-id </td>
-<td> valueString </td>
+<td> valueInteger </td>
 <td> Mandatory </td>
 <td> The id for the name to be made inactive on the patient record </td></tr>
 </table>
