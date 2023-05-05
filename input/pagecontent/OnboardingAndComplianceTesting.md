@@ -767,20 +767,25 @@ Output: The name is presented to the user with all name parts</td>
 
 <tr><td>NHI-update-name-error-6 <br /> $add-name </td>
 <td>application can display an error when an invalid source is provided</td>
-<td>Attempt to add a fictitious name to ZAA1578 (Given Name: Keith. Family Name: Gordon) with an information-source of BREG (Birth Register)</td>
+<td>Attempt to add a fictitious name to ZAA1578 (Given Name: Keith. Family Name: Gordon) <br />
+   <li> Source = BREG (Birth Register)</li></td>
 <td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-7 <br /> $add-name </td>
 <td>application can display an error when a Babyof name is supplied with a use other than temp and a source other than NPRF</td>
-<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) with Name use = nickname, source = PPRT.</td>
+<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
+   <li> Name use = nickname </li>
+   <li> source = PPRT </li></td>
 <td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp."</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-8 <br /> $add-name </td>
 <td>application can display an error when no given or family name is present</td>
 <td>Attempt to add a fictitious name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
-Name use = nickname, source = PPRT, don't insert a family or given name.</td>
+   <li>Name use = nickname</li>
+   <li>Source = PPRT</li>
+   <li>Don't insert a family or given name</li></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>mandatory</td></tr>
 
@@ -800,7 +805,7 @@ Name use = nickname, source = PPRT, don't insert a preferred-name flag.</td>
 
 <tr><td>NHI-update-name-error-11 <br /> $add-name </td>
 <td>application can display an error when the given or family name contains special characters e.g. # @ %</td>
-<td>Attempt to add a fictitious name (with special character) to the patient. ZAZ1913 (Given Name: Alan. Family Name: Abbot) </td>
+<td>Attempt to add a fictitious name (with special character) to the patient ZAZ1913 (Given Name: Alan. Family Name: Abbot) </td>
 <td>Output: "Invalid request body"</td>
 <td>mandatory</td></tr>
 
@@ -818,28 +823,28 @@ Name use = nickname, source = PPRT, don't insert a preferred-name flag.</td>
 
 <tr><td>NHI-update-name-error-14 <br /> $replace-name</td>
 <td>application can display an error when an attempt to replace a verified name with an unverified</td>
-<td>Attempt to replace the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>Attempt to replace the verified name (Given: RA, Family: Lumbago) to the patient ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
 <td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-15 <br /> $inactivate-name</td>
 <td>application can display an error when an authorised name is modified</td>
-<td><li>Attempt to inactivate a name with source BREG on NHI ZKE9393 (Given Name: Jonathan Joseph. Family Name: Savage)</td>
+<td>Attempt to inactivate the name with source BREG on patient ZKE9393 (Given Name: Jonathan Joseph. Family Name: Savage)</td>
 <td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-16 <br /> $inactivate-name</td>
 <td>application can display an error when attempting to inactivate an inactive name</td>
-<td>Attempt to inactivate the name below from Patient ZKF7027, (Given Name: Chester. Family Name: Minit)
+<td>Attempt to inactivate the name below on the Patient ZKF7027, (Given Name: Chester. Family Name: Minit)
    <li>Given Name: CJ </li>
    <li>Family Name: Minit</li>
-   <li>Set Id: xx</li></td>
+   <li>Set Id: "11" </li></td>
 <td>Output: EM07223 "The <Patient> <Name> is not active and cannot be updated"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-17 <br /> $inactivate-name</td>
 <td>application can display an error when an attempt is made to inactivate a preferred name </td>
-<td>Attempt to inactivate preferred name below from Patient ZBJ3544 (Given Name: Rosemary, Thyme. Family Name: Smith)
+<td>Attempt to inactivate the preferred name below from Patient ZBJ3544 (Given Name: Rosemary, Thyme. Family Name: Smith)
    <li>Given Name: Rosemary </li>
    <li>Family Name: Alexander</li></td>
 <td>Output: EM02104 "An active Patient Preferred Name must not be deleted"</td>
@@ -873,54 +878,56 @@ ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 
 <tr><td>NHI-update-core-1 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-1.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-1.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be: 
-* 11111
-* 21111
-* 31111</td>
+<li> 11111 </li>
+<li> 21111 </li>
+<li> 31111</li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-2 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-2.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-2.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 11111
-* 34111
-* 51120
-* 4211 </td>
+<li> 11111 </li>
+<li> 34111 </li>
+<li> 51120 </li>
+<li> 4211 </li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-3 <br /> $update-identity</td>
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-3.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-3.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 97777 </td>
+   <li> 97777 </li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-4 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-4.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-4.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 12211
-* 12920 </td>
+   <li> 12211</li>
+   <li> 12920</li> </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-5 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:900px; float:none" src="update-core-5.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-5.png"/> for the selected NHI number</td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 61118 </td>
+   <li> 61118 </li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-6 <br /> $update-identity-error</td>
 <td>application can display an error when ethnicity information invalid</td>
 <td>Update the ethnicity information for Patient: ZAA0261 <br />
-Ethnicities to use: 97777 (response unidentifiable) and 99999 (not stated).</td>
+Ethnicities to use:
+   <li> 97777 (response unidentifiable) </li>
+   <li> and 99999 (not stated)</li></td>
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
