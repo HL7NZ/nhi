@@ -51,12 +51,12 @@ table, th, td {
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
-<tr><td> citizenship </td>
+<tr><td> nz-citizenship-status </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The patients ethnicity <br /> May contain up to six </td></tr>
 
-<tr><td> citizenship-information-source </td>
+<tr><td> nz-citizenship-source </td>
 <td> valueString </td>
 <td> Optional </td>
 <td> The information source for the patients date of birth </td></tr>
@@ -89,11 +89,11 @@ table, th, td {
         "valueString" : "3321540"
     },
     {
-        "name" : "citizenship",
+        "name" : "nz-citizenship-status",
         "valueString" : "unknown" 
     },
     {
-        "name" : "citizenship-information-source",
+        "name" : "nz-citizenship-source",
         "valueString" : "NPRF" 
     }
   ]
