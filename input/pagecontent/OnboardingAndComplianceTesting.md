@@ -878,7 +878,7 @@ ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 
 <tr><td>NHI-update-core-1 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-1.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <img style="width:200px; float:none" src="update-core-1.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be: 
 <li> 11111 </li>
@@ -888,7 +888,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-2 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-2.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <img style="width:200px; float:none" src="update-core-2.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
 <li> 11111 </li>
@@ -899,7 +899,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-3 <br /> $update-identity</td>
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-3.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <img style="width:200px; float:none" src="update-core-3.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
    <li> 97777 </li></td>
@@ -907,7 +907,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-4 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-4.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <img style="width:200px; float:none" src="update-core-4.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
    <li> 12211</li>
@@ -916,7 +916,7 @@ patient’s ethnicity after update should be:
 
 <tr><td>NHI-update-core-5 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question <img style="width:200px; float:none" src="update-core-5.png"/> for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <img style="width:200px; float:none" src="update-core-5.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
    <li> 61118 </li></td>
