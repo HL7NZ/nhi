@@ -120,4 +120,4 @@ table, th, td {
 * _Patient update-eligibility errors_
   * _Patient NHI and version number are required_
   * _Version number is incorrect_
-  * _The NHI Identifier provided is dormant. This record cannot be updated
+  * _The NHI Identifier provided is dormant. This record cannot be updated_
