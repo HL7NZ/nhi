@@ -78,7 +78,7 @@ table, th, td {
   "parameter": [
     {
         "name" : "operation-type",
-        "valueString" : "$update-birth"
+        "valueString" : "$update-eligibility"
     },
     {
         "name" : "nhi",
