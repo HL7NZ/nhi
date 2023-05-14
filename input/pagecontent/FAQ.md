@@ -31,7 +31,6 @@ The information source attribute is used to provide provenance to the attribute 
 
 The information source attribute is required on the following attributes:
 •	NZ citizenship,
-•	NZ residency,
 •	Birthplace,
 •	Birthdate,
 •	Deceased date, and
@@ -53,7 +52,7 @@ The information source is not required to be stored in the local system.
 
 
 
-### Does the NHI lock down the Citizenship and Residency status?
+### Does the NHI lock down the NZ Citizenship status?
 
 The NHI provides update access to all users with the correct permissions.
 
@@ -61,11 +60,11 @@ If an attribute is not present it can be added using the update-eligibility oper
 
 If present then an unverified source can be updated to a verified source, a verified source can then be updated to another verified source (if required) or by an authorised user to a registered source.
 
-Local role based access should limit the updating of eligibility attributes to users with a good knowledge of eligibility determination. 
+Local role based access should limit the updating of NZ Citizenship to users with a good knowledge of the NZ Citizenship determination. 
 
 
 
-### Does my system have to update the information source codes for citizenship, birthdate, residency, name, deceased date?
+### Does my system have to update the information source codes for citizenship, birthdate, name, deceased date?
 
 [See above](/FAQ.html#what-is-the-information-source-attribute-and-why-is-it-used)
 
@@ -111,30 +110,14 @@ NZCT <1%</td></tr>
 </table>
 
 
-### What is the NZ Residency status attribute?
+### Where has the New Zealand Resident status attribute gone?
 
-The New Zealand residency status attribute was introduced in HL7 Legacy to capture permanent resident status:
+The New Zealand resident status attribute was introduced in the NHI Legacy service to capture permanent resident status:
 * 'Y' = Permanent resident (New Zealand citizen or classified as ‘ordinarily resident in New Zealand’)
 * 'N' = Temporary (not a New Zealand citizen, does not have New Zealand ‘ordinarily resident’ status)
 
-This was discontinued in SOAP... However is still used today ...
+Organiations with update access had the ability to update the New Zealand resident status for a person, although at a national level the quality of this data was varied.
 
-There is still work to do to determine how this attribute should be used going forward.
+With the release of the NHI SOAP service the attribute was discontinued, however is still used today by some integrators using the NHI Legacy service.
 
-<h4>NZ Current Residency status on the NHI</h4>
-<table>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
-<tr><th>Status on record</th>
-<th>Percentage of records</th></tr>
-
-<tr><td>No </td>
-<td>19.4%</td></tr>
-
-<tr><td>Yes</td>
-<td>80.6%</td></tr>
-</table>
+A new attribute _NZ Residency_ was designed to capture a person with a permanent resident visa. For the NHI, there is currently no data sharing agreement or mechanism to populate this data from an authorised source. We have therefore had to remove this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
