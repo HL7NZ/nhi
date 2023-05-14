@@ -202,9 +202,6 @@ The patient has the following fields fully populated in the test record (field l
 <td>application behaves appropriately when a new format NHI number is produced</td>
 <td>ZZZ00AX<br />
 ZGT56KB<br />
-ZHS91BR<br />
-ZHW58CN<br />
-ZLV86AX<br />
 ZBE4905</td>
 <td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
@@ -227,7 +224,10 @@ ZBE4905</td>
 <tr><td>NHI-GET-10</td>
 <td>application can handle a response when a patient has <br /> only a family name; <br /> only a given name; <br /> multiple names</td>
 <td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
-<td>Output: application does not error <br /> application returns all name parts when present <br /> Order of name parts is clear to the user</td>
+<td>Output:
+<li>application does not error</li> 
+<li>application returns all name parts when present</li> 
+<li>order of name parts is clear to the user</li></td>
 <td>mandatory</td></tr>
 </table>
 
@@ -255,7 +255,9 @@ table, th, td {
 <li>enrolling organisation ID and name</li>
 <li>Facility ID and name</li></td>
 <td> Enrolled GP - ZKC4641 <br /> Enrolled GP and Contact details ZKC4633 </td>
-<td>Output: application does not error <br /> application returns all General Practice details when present </td>
+<td>Output:
+<li>application does not error</li> 
+<li>application returns all General Practice details when present</li></td>
 <td>*Mandatory if</td></tr>
 
 <tr><td>NHI-GET-12</td>
@@ -264,7 +266,9 @@ table, th, td {
 <li>Mobile phone</li>
 <li>Email address</li></td>
 <td> Contact details - ZKC4650 <br /> Enrolled GP and Contact details ZKC4633 </td>
-<td>Output: application does not error <br /> application returns all Contact details when present </td>
+<td>Output:
+<li>application does not error</li> 
+<li>application returns all Contact details when present</li></td>
 <td>*Mandatory if </td></tr>
 </table>
 
@@ -303,10 +307,9 @@ Middle Name: James <br />
 Family Name: Owen <br />
 Gender: M <br />
 DOB: 1949-10-30 (30th October 1949)</td>
-<td>Input: Minimum search criteria can be entered <br />
-Output: The top result returned in the search should be NHI ZAT4626 <br />
-Output: Minimum search result identity attributes are all present in result list
-</td>
+<td>Input: Minimum search criteria can be entered <br /> Output:
+<li>The top result returned in the search should be NHI ZAT4626</li>
+<li>Minimum search result identity attributes are all present in result list</li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-2 (if applicable)</td>
@@ -341,10 +344,9 @@ Middle Name: <br />
 Family Name: Test <br />
 Gender: M <br />
 DOB: 31-12-1999 </td>
-<td>Input: Above criteria can be entered <br />
-Output: 10 results are returned <br />
-Output: The top result returned is NHI: ZAX6965 Score: 99
-</td>
+<td>Input: Above criteria can be entered <br /> Output:
+<li>10 results are returned</li> 
+<li>The top result returned is NHI: ZAX6965 Score: 99</li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-Error-1</td>
@@ -592,13 +594,13 @@ Output: The address that is displayed to the end user is the address that is ret
 <li> <b> 'no fixed abode' unvalidated address </b> </li>
 <li> <b> 'other' unvalidated address </b> </li> </td>
 <td> <li> Use selected NHI number</li>
-<li>Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li>
-<b>Do ALL</b><
+<li>Add a new <b> primary residential address </b> to the patient record using the $set-unvalidated-address operation</li>
+<b>Do ALL</b>
 <li> <b> 'unknown' unvalidated address </b> </li>
 <li> <b> 'no fixed abode' unvalidated address </b> </li>
 <li> <b> 'other' unvalidated address </b></li> </td>
-<td>Input: An address request can be populated with the unvalidated address information <br />
-Input: Best Practice is followed for adding addresses [See Best practice guide](https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf) and [address use case's](/updateAddress.html) <br />
+<td>Input: An address request can be populated with unvalidated address information <br />
+Input: Best Practice is followed for adding addresses <a href="https://www.health.govt.nz/system/files/documents/pages/identity-nhi-user-reference-information-best-practice-advice-sep21_8.pdf" target="_blank">Best Practice Guide</a> <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
@@ -607,7 +609,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td><li>Use selected NHI number</li>
 <li> Disable the external Address Service lookup</li>
 <li> Show Address Service error </li>
-<li> Add a new <b> primary residential address </b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
+<li> Add a new <b> primary residential address </b> to the patient record using the <a href="updateAddress.html">$set-unvalidated-address</a></li></td>
 <td>Input: An address request can be populated with NOSVC unvalidated address information<br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
@@ -617,23 +619,23 @@ Output: The address that is displayed to the end user is the address that is ret
 <td><li>Use selected NHI number</li>
 <li> Disable the external Address Service lookup</li>
 <li> Show Address Service error </li>
-<li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
-<td>Input: An address request can be populated with NOSVC unvalidated address information<br />
+<li> Add a new <b>postal address</b> to the patient record using the $set-unvalidated-address operation</li></td>
+<td>Input: An address request can be populated with NOSVC unvalidated address information <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-7</td>
 <td>application can replace the <b>postal address</b> on a patient record with an <b>Overseas</b> unvalidated address</td>
 <td><li>Use selected NHI number</li>
-<li> Add a new <b>postal address</b> to the patient record using the [$set-unvalidated-address operation](/updateAddress.html#set-unvalidated-address)</li></td>
-<td>Input: An address request can be populated with overseas unvalidated address information<br />
+<li> Add a new <b>postal address</b> to the patient record using the $set-unvalidated-address operation</li></td>
+<td>Input: An address request can be populated with overseas unvalidated address information <br />
 Output: The address that is displayed to the end user is the address that is returned in the update response</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-8</td>
 <td>application can remove the <b>postal address</b> on a patient record</td>
 <td><li>Use selected NHI number</li>
-<li> Remove the <b>postal address</b> from the patient record using the [$remove-postal-address](/updateAddress.html#remove-postal-address)</li></td>
+<li> Remove the <b>postal address</b> from the patient record using the $remove-postal-address operation</li></td>
 <td>Output: The patient record has Postal address removed</td>
 <td>mandatory</td></tr>  
 </table>
@@ -699,7 +701,6 @@ Output: The name is presented to the user with appropraite name parts populated<
 <li>name use 'maiden'; AND</li>
 <li>a name prefix; AND</li>
 <li>a name source (e.g. a passport – ‘PPRT’)</li></td>
-</td>
 <td>Input: A name can be replaced with a fictitious name <br />
 Output: The preferred name that is displayed to the end user is the name that was selected in the operation with all name parts<br />
 Output: The replaced name is not returned to the user</td>
@@ -707,7 +708,7 @@ Output: The replaced name is not returned to the user</td>
 
 <tr><td>NHI-$inactivate-name-1</td>
 <td>application can inactivate a patients name</td>
-<td>Inactivate a non-verified / non-preferred name on a selected NHI from list above</td>
+<td>Inactivate an unverified, non-preferred name on a selected NHI from list above</td>
 <td>Input: Use $inactivate-name operation<br />
 Output: The selected name is made inctive and not returned to the user</td>
 <td>mandatory</td></tr>
@@ -726,52 +727,63 @@ Output: The name is presented to the user with all name parts</td>
 <td>application can display an error when the patient version is not current</td>
 <td><li>Requires two users to update a name on the provided patient record</li>
 <li>Use selected NHI number</li>
-<li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record using the <b>$add-name operation</b> and then pauses</li>
-<li>User two retrieves the patient record and adds a fictitious name to the record using the $add-name operation</li>
+<li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record and then pauses</li>
+<li>User two retrieves the patient record and adds a fictitious name to the record</li>
 <li>User one then completes their update to the name and should receive the error message</li></td>
 <td>Output: EM02007 "Version number is incorrect"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-2 <br /> $add-name </td>
 <td>application can display an error when the NHI provided in dormant</td>
-<td>Attempt to add a fictitious name, using the <b>$add-name operation</b>, to NHI ZDV8901 </td>
+<td>Attempt to add a fictitious name to NHI ZDV8901 </td>
 <td>Output: EM02004 "The NHI Identifier provided is dormant. This record cannot be updated"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-3 <br /> $add-name </td>
 <td>application can display an error when the patient has too many names</td>
-<td>Attempt a add a fictitious name, using the <b>$add-name operation</b>, to NHI ZDJ6518 (Given Name: John Charles Family Name: Achilles)</td>
+<td>Attempt a add a fictitious name to NHI ZDJ6518
+<li>Given Names: John Charles</li>
+<li> Family Name: Achilles)</li></td>
 <td>Output: EM02105 "A Patient must not have more than 200 active names"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-4 <br /> $add-name </td>
 <td>application can display an error when an attempt to add a name that exists as an active name for that patient</td>
-<td>Attempt to add the name - Given: RA, Family: Lumbago - to NHI ZKE9687 using the <b>$add-name operation</b> </td>
+<td>Attempt to add the name below to NHI ZKE9687
+<li>Given: RA</li>
+<li>Family: Lumbago</li></td>
 <td>Output: EM07222 "The Patient name already exists for this Patient"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-5 <br /> $add-name </td>
 <td>application can display an error when adding a name that has been deleted from the patient record</td>
-<td><li>Attempt to add the name - Given Name: Amy. Family Name: Johnson - to ZAD0152 (Given Name: Amy. Family Name: Alesana) </td>
+<td>Attempt to add the name below to ZAD0152 (Given Name: Amy. Family Name: Alesana)
+<li> Given Name: Amy</li>
+<li> Family Name: Johnson</li></td>
 <td>Output: EM07008 - "The Patient name requested has been removed from the Patient record by NHI administration"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-6 <br /> $add-name </td>
 <td>application can display an error when an invalid source is provided</td>
-<td>Attempt to add a fictitious name  to ZAA1578 (Given Name: Keith. Family Name: Gordon) with an information-source of BREG (Birth Register)</td>
+<td>Attempt to add a fictitious name to ZAA1578 (Given Name: Keith. Family Name: Gordon) <br />
+   <li> Source = BREG (Birth Register)</li></td>
 <td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-7 <br /> $add-name </td>
 <td>application can display an error when a Babyof name is supplied with a use other than temp and a source other than NPRF</td>
-<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) with Name use = nickname, source = PPRT.</td>
+<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
+   <li> Name use = nickname </li>
+   <li> source = PPRT </li></td>
 <td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp."</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-8 <br /> $add-name </td>
 <td>application can display an error when no given or family name is present</td>
 <td>Attempt to add a fictitious name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
-Name use = nickname, source = PPRT, don't insert a family or given name.</td>
+   <li>Name use = nickname</li>
+   <li>Source = PPRT</li>
+   <li>Don't insert a family or given name</li></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>mandatory</td></tr>
 
@@ -809,31 +821,38 @@ Name use = nickname, source = PPRT, don't insert a preferred-name flag.</td>
 
 <tr><td>NHI-update-name-error-14 <br /> $replace-name</td>
 <td>application can display an error when an attempt to replace a verified name with an unverified</td>
-<td>Attempt to replace the verified name (Given: RA, Family: Lumbago) on NHI ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
+<td>Attempt to replace the verified name (Given: RA, Family: Lumbago) to the patient ZKE9687, with a fictitious unverified name (name source = NPRF).</td>
 <td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-15 <br /> $inactivate-name</td>
 <td>application can display an error when an authorised name is modified</td>
-<td><li>Attempt to inactivate a name with source BREG on NHI ZKE9393 (Given Name: Jonathan Joseph. Family Name: Savage)</td>
+<td>Attempt to inactivate the name with source BREG on patient ZKE9393 (Given Name: Jonathan Joseph. Family Name: Savage)</td>
 <td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-16 <br /> $inactivate-name</td>
 <td>application can display an error when attempting to inactivate an inactive name</td>
-<td><li>Attempt to inactivate a name set id X on NHI X. Given Name: XX. Family Name: X</td>
+<td>Attempt to inactivate the name below on the Patient ZKF7027, (Given Name: Chester. Family Name: Minit)
+   <li>Given Name: CJ </li>
+   <li>Family Name: Minit</li>
+   <li>Set Id: "11" </li></td>
 <td>Output: EM07223 "The <Patient> <Name> is not active and cannot be updated"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-17 <br /> $inactivate-name</td>
 <td>application can display an error when an attempt is made to inactivate a preferred name </td>
-<td>Attempt to inactivate preferred name Rosemary Alexander, ZBJ3544 (Given Name: Rosemary, Thyme. Family Name: Smith)</td>
+<td>Attempt to inactivate the preferred name below from Patient ZBJ3544 (Given Name: Rosemary, Thyme. Family Name: Smith)
+   <li>Given Name: Rosemary </li>
+   <li>Family Name: Alexander</li></td>
 <td>Output: EM02104 "An active Patient Preferred Name must not be deleted"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-18 <br /> $inactivate-name</td>
 <td>application can display an error when an attempt is made to inactivate a name with a verified source</td>
-<td>Attempt to inactivate the name Michaela Aldom, from the NHI, ZDW1872. Given Name: Leslie. Family Name: SULLIVAN </td>
+<td>Attempt to inactivate the name below from Patient ZDW1872. Given Name: Leslie. Family Name: SULLIVAN
+   <li>Given Name: Michaela</li>
+   <li>Family Name: Aldom</li></td>
 <td>Output: EM07230 "Patient Name has been validated by a public Agency, and cannot be updated"</td>
 <td>mandatory</td></tr>
 </table>
@@ -857,54 +876,61 @@ ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 
 <tr><td>NHI-update-core-1 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-1 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br /> 
+<img style="width:200px; float:none" src="update-core-1.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be: 
-* 11111
-* 21111
-* 31111</td>
+<li> 11111 </li>
+<li> 21111 </li>
+<li> 31111</li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-2 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-2 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br /> 
+<img style="width:200px; float:none" src="update-core-2.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 11111
-* 34111
-* 51120
-* 4211 </td>
+<li> 11111 </li>
+<li> 34111 </li>
+<li> 51120 </li>
+<li> 4211 </li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-3 <br /> $update-identity</td>
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-3 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br />
+<img style="width:200px; float:none" src="update-core-3.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 97777 </td>
+   <li> 97777 </li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-4 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-4 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br />
+<img style="width:200px; float:none" src="update-core-4.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 12211
-* 12920 </td>
+   <li> 12211</li>
+   <li> 12920</li> </td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-5 <br /> $update-identity</td>
 <td>application can correctly update ethnicity values on a patient's record</td>
-<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question (see image update-core-5 below this table) for the selected NHI number</td>
+<td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br />
+<img style="width:200px; float:none" src="update-core-5.png"/> </td>
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
-* 61118 </td>
-<td>mandatory</td></tr>
+   <li> 61118 </li></td>
+<td>mandatory</td></tr>>
 
 <tr><td>NHI-update-core-6 <br /> $update-identity-error</td>
 <td>application can display an error when ethnicity information invalid</td>
 <td>Update the ethnicity information for Patient: ZAA0261 <br />
-Ethnicities to use: 97777 (response unidentifiable) and 99999 (not stated).</td>
+Ethnicities to use:
+   <li> 97777 (response unidentifiable) </li>
+   <li> and 99999 (not stated)</li></td>
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
@@ -939,34 +965,48 @@ Change gender from current gender to one of the four acceptable gender codes, in
 <td>Update the gender-original-text for Patient: ZAA1063</td>
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-11 <br /> $update-eligibility</td>
+<td>application can correctly update citizenship on a patient's identity record</td>
+<td>Update the citizenship for Patient: ZAA1063 <br />
+from current value to either status - unknown or no, source - NPRF</td>
+<td>Output: Citizenship is updated on the patient record <br />
+The patient record clearly shows citizenship status and source </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-core-12 <br /> $update-eligibility</td>
+<td>application can correctly update citizenship on a patient's identity record</td>
+<td>Update the citizenship for Patient: ZKF6683 <br />
+maintain the yes response but change the verified source</td>
+<td>Output: Citizenship is updated on the patient record <br />
+The patient record clearly shows citizenship status and source </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-eligibility-error-1</td>
+<td>application can display an error when an attempt to add a registered source for citizenship </td>
+<td>Attempt replace citizenship for Patient: ZKF6683 <br />
+maintain the yes response but attempt to add source = DIA </td>
+   <td>Output: <b>TBC Error </b> EM0XXXX "Patient NZ Citizenship has been validated by a public Agency, and cannot be updated"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-eligibility-error-2</td>
+<td>application can display an error when an attempt to replace a verified to unverified source for citizenship</td>
+<td>Attempt replace citizenship for Patient: ZKF6683 <br />
+maintain the yes response but attempt to add source = NPRF </td>
+<td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-update-eligibility-error-3</td>
+<td>application can display an error when an attempt to replace a citizenship that has a registered source</td>
+<td>Attempt to replace citizenship on NHI ZKF6691 <br />
+from Registered source (DIA) to verified or non-verified source </td>
+<td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
+<td>mandatory</td></tr>
 </table>
 
-#### Update-core-1
-<div>
-<img style="width:900px; float:none" src="update-core-1.png"/>
-</div>
 
-#### Update-core-2
-<div>
-<img style="width:900px; float:none" src="update-core-2.png"/>
-</div>
 
-#### Update-core-3
-<div>
-<img style="width:900px; float:none" src="update-core-3.png"/>
-</div>
-
-#### Update-core-4
-<div>
-<img style="width:900px; float:none" src="update-core-4.png"/>
-</div>
-
-#### Update-core-5
-<div>
-<img style="width:900px; float:none" src="update-core-5.png"/>
-</div>>
-
-<h3>NHI Patient Add tests</h3>
+<h3>NHI Patient Add tests - TBC</h3>
 <table>
 <style>
 table, th, td {
@@ -1248,4 +1288,3 @@ Do not supply a country of birth </td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 </table>
-
