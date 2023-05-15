@@ -729,9 +729,10 @@ Output: The selected name is made inctive and not returned to the user</td>
 
 <tr><td>NHI-$set-preferred-name-1</td>
 <td>application can set the patients preferred name</td>
-<td><li>Use NHI number ZZK09PQ</li>
-<li>Do a Get Patient request to see active patient names</li>
-<li>Change the preferred name from the current name to another active name for the patient</li></td>
+<td>
+ <li>Use NHI number ZZK09PQ</li>
+ <li>Do a Get Patient request to see active patient names</li>
+ <li>Change the preferred name from the current name to another active name for the patient</li></td>
 <td>Input: An application can select a Patients preferred name from the active names list<br />
 Output: The preferred name that is displayed to the end user is the name that was selected in the operation<br />
 Output: The name is presented to the user with all name parts</td>
@@ -739,11 +740,12 @@ Output: The name is presented to the user with all name parts</td>
 
 <tr><td>NHI-update-name-error-1 <br /> $add-name </td>
 <td>application can display an error when the patient version is not current</td>
-<td><li>Requires two users to update a name on the provided patient record</li>
-<li>Use selected NHI number</li>
+<td>
+ <li>Requires two users to update a name on the provided patient record</li>
+ <li>Use selected NHI number</li>
 <li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record and then pauses</li>
-<li>User two retrieves the patient record and adds a fictitious name to the record</li>
-<li>User one then completes their update to the name and should receive the error message</li></td>
+ <li>User two retrieves the patient record and adds a fictitious name to the record</li>
+ <li>User one then completes their update to the name and should receive the error message</li></td>
 <td>Output: EM02007 "Version number is incorrect"</td>
 <td>mandatory</td></tr>
 
@@ -779,14 +781,14 @@ Output: The name is presented to the user with all name parts</td>
 
 <tr><td>NHI-update-name-error-6 <br /> $add-name </td>
 <td>application can display an error when an invalid source is provided</td>
-<td>Attempt to add a fictitious name to ZAA1578 (Given Name: Keith. Family Name: Gordon) <br />
+<td>Attempt to add a fictitious name to ZAA1578 (Given Name: Keith. Family Name: Gordon)
    <li> Source = BREG (Birth Register)</li></td>
 <td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-7 <br /> $add-name </td>
 <td>application can display an error when a Babyof name is supplied with a use other than temp and a source other than NPRF</td>
-<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
+<td>Attempt to add a fictitious babyof name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas)
    <li> Name use = nickname </li>
    <li> source = PPRT </li></td>
 <td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp."</td>
@@ -794,7 +796,7 @@ Output: The name is presented to the user with all name parts</td>
 
 <tr><td>NHI-update-name-error-8 <br /> $add-name </td>
 <td>application can display an error when no given or family name is present</td>
-<td>Attempt to add a fictitious name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas) <br />
+<td>Attempt to add a fictitious name to the patient ZDM4902 (Given Name: Sarah-Jayne, Margaret. Family Name: Thomas)
    <li>Name use = nickname</li>
    <li>Source = PPRT</li>
    <li>Don't insert a family or given name</li></td>
@@ -816,7 +818,7 @@ Name use = nickname, source = PPRT, don't insert a preferred-name flag.</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-11 <br /> $add-name </td>
-<td>application can display an error when the given or family name contains special characters e.g. # @ %</td>
+<td>application can display an error when the given or family name contains special characters e.g. # @ % </td>
 <td>Attempt to add a fictitious name (with special character) to the patient. ZAZ1913 (Given Name: Alan. Family Name: Abbot) </td>
 <td>Output: "Invalid request body"</td>
 <td>mandatory</td></tr>
@@ -851,7 +853,7 @@ Name use = nickname, source = PPRT, don't insert a preferred-name flag.</td>
    <li>Given Name: CJ </li>
    <li>Family Name: Minit</li>
    <li>Set Id: "11" </li></td>
-<td>Output: EM07223 "The <Patient> <Name> is not active and cannot be updated"</td>
+<td>Output: EM07223 "The 'Patient Name' is not active and cannot be updated"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-17 <br /> $inactivate-name</td>
