@@ -917,7 +917,7 @@ patient’s ethnicity after update should be:
 <td>application can correctly update an unidentifiable response to the standard ethnicity collection question.</td>
 <td>Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br />
 <img style="width:200px; float:none" src="update-core-3.png"/> </td>
-<td>Output: The application can update the patients ethnicity information <br />
+<td>Output: The application can update the patients ethnicity information
 patient’s ethnicity after update should be:
    <li> 97777 </li></td>
 <td>mandatory</td></tr>
@@ -939,7 +939,7 @@ patient’s ethnicity after update should be:
 <td>Output: The application can update the patients ethnicity information <br />
 patient’s ethnicity after update should be:
    <li> 61118 </li></td>
-<td>mandatory</td></tr>>
+<td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-6 <br /> $update-identity-error</td>
 <td>application can display an error when ethnicity information invalid</td>
