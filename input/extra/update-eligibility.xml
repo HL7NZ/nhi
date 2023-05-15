@@ -2,12 +2,12 @@
 
 <div>
 			<h2>Update Eligibility</h2>
-			<p>OPERATION: Inactivate Name</p>
+			<p>OPERATION: Update Eligibility</p>
 			<p>The official URL for this operation definition is: </p>
 			<pre>https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility</pre>
 			<div>
 				<p>
-					An operation to update a patients residency and citizensip information 
+					An operation to update a patients citizenship information 
 				</p>
 				
 			</div>
@@ -77,7 +77,7 @@
 					<td>nz-citizenship-status</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
@@ -91,40 +91,12 @@
 					<td>nz-citizenship-source</td>
 					<td>0..1</td>
 					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
+						<a href="https://www.hl7.org/fhir/datatypes.html#string">string</a>
 					</td>
 					<td />
 					<td>
 						<div>
 							<p>NZ citizenship status information source</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>nz-residency-status</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>NZ residency status</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>IN</td>
-					<td>nz-residency-source</td>
-					<td>0..1</td>
-					<td>
-						<a href="https://www.hl7.org/fhir/datatypes.html#integer">string</a>
-					</td>
-					<td />
-					<td>
-						<div>
-							<p>NZ residency status - information source</p>
 						</div>
 					</td>
 				</tr>
