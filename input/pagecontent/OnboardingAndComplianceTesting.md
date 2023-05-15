@@ -1110,19 +1110,19 @@ This will result in a patient that looks the same as that created in test NHI-Ad
 Create a false identity to use (this can be done using http://www.fakenamegenerator.com/) and enter the address as No Fixed Abode</td>
 <td>New patient information can be populated: <br />
 1.	Name
- *	Given Name only
+<li> Given Name only </li>
 2.	Address 
- *	No fixed abode
+ <li> No fixed abode </li>
 3.	Core
- *	Date of Birth as a year only
- *	Date of Birth Information Source
- *	Gender as Unknown
- *	Ethnicity as a single Residual code
- *	Country of Birth Code
- *	Country of Birth information Source
- *	New Zealand Citizenship Status
- *	New Zealand Citizenship Status Information Source
- *	Output: New NHI is displayed with minimum dataset</li></td>
+<li> Date of Birth as a year only </li>
+<li> Date of Birth Information Source </li>
+<li> Gender as Unknown </li>
+<li> Ethnicity as a single Residual code </li>
+<li> Country of Birth Code </li>
+<li> Country of Birth information Source </li>
+<li> New Zealand Citizenship Status </li>
+<li> New Zealand Citizenship Status Information Source </li>
+<li> Output: New NHI is displayed with minimum dataset</li></td>
 <td>Mandatory</td></tr>
 </table>
 
