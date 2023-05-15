@@ -1,7 +1,18 @@
 
 
+### Can I use a FHIR search for a patient in the NHI?
 
-### Can I search the NHI?
+No, the NHI FHIR service currently supports $match but not Patient search.
+
+The purpose of using $Match versus a regular search is that $Match is intended to target and find a specific single patient for recording information about, reducing errors through incorrectly selecting the wrong patient. This aligns better with the NHI probabilistic search algorithm. The $Match operation won't return any data if there is insufficient search parameter data, such as a partial surname. This compares to a regular search which can be used for finding lists of patients, such as to locate a group of patients that share an attribute.
+
+The [NHI $match operation](/matchPatient.html) processes a parameters resource containing a complete or fragment of a patient resource, along with some other control parameters. This means that an application cannot search the NHI using the Patient Search Parameters.
+
+
+
+### Can I use age range instead of date of birth when searching for a patient?
+The standard FHIR $Match on patient does not allow an age range parameter. A year and month or year only can be used if the exact birthdate is not known
+An extension to allow an age-range parameter is being considered. (Please reach out to the team)[] if this is something that would benefit you.
 
 
 
