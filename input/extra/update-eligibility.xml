@@ -135,8 +135,8 @@
 	</extension>
 	<url value="https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility" />
 	<version value="1.0.0" />
-	<name value="Inactivate Name" />
-	<title value="An operation to update a patients residency and citizensip information" />
+	<name value="Update Eligibility" />
+	<title value="An operation to update a patients citizensip information" />
 	<status value="draft" />
 	<kind value="operation" />
 	<experimental value="false" />
@@ -202,24 +202,6 @@
 		<max value="1" />
 		<documentation
 			value="NZ citizenship status information source" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="nz-residency-status" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="NZ residency status" />
-		<type value="string" />
-	</parameter>
-	<parameter>
-		<name value="nz-residency-source" />
-		<use value="in" />
-		<min value="0" />
-		<max value="1" />
-		<documentation
-			value="NZ residency status - information source" />
 		<type value="string" />
 	</parameter>
 	<parameter>
