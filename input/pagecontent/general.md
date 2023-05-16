@@ -281,11 +281,11 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th> Version 1 Scopes </th><th> SMART on FHIR Scopes </th><th> Description </th></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:read   </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.r </td><td> Read access to all Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:search </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:validate </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:write </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
+<tr><th> SMART on FHIR Scopes </th><th> Description </th></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.r </td><td> Read access to all Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
 </table>
 
 * Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
