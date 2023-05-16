@@ -114,7 +114,7 @@ table, th, td {
   * An update request must update the source of information only when the information is also provided.
 
 ##### Update-eligibility nz citizenship rules
-    * All [add patient nz citizenship rules apply](/addPatient.html#add-patient-citizenship-rules) and,
+    * All [add patient nz citizenship rules apply](/addPatient.html#add-patient-nz-citizenship-rules) and,
     * A request to update citizenship must also update citizenship-information-source
     * birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
     * birth-place can only be updated to registered by an authorised agency
