@@ -158,8 +158,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 
-* **Patient update-identity rules**
-  * All add Patient [ethnicity](/addPatient.html#add-patient-ethnicity-rules) and [gender](/addPatient.html#add-patient-gender-rules) rules apply, and
+##### Patient update-identity rules
   * An update request must contain:
     * the live NHI number for the Patient Record
     * the version number of the current Patient Record
@@ -168,12 +167,12 @@ table, th, td {
     * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
     * Not populate the request parameter to retain the existing NHI value for that parameter
 
-  * Update-identity Gender rules
-    * All add rules apply and,
+  ##### Update-identity Gender rules
+    * All [add pateint gender rules apply](/addPatient.html#add-patient-gender-rules) and,
     * An update request will replace the current gender code or gender original text.
   
-  * Update-identity Ethnicity rules
-    * All add rules apply and,
+  ##### Update-identity Ethnicity rules
+    * All [add patient ethnicity rules apply](/addPatient.html#add-patient-ethnicity-rules) and,
     * A full set of ethnicities is required for an update and will replace the current set.
 
 * _Patient update-identity errors_
