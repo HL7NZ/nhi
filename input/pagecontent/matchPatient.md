@@ -79,6 +79,8 @@ table, th, td {
 * Each record will have a match score from 40 (least likely) - 140 (most likely)
   * Scores below 40 are not returned.
 * The highest scoring records are returned first in the bundle
+* If no records meet the match threshold, an empty bundle will be returned
+
 
 Note: To be more FHIR compliant this will be changed to return:
 * A search score most likely (1) to least likely (0)
