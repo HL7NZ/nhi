@@ -111,11 +111,11 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Set-preferred-name rules**
-  * * An update request must contain:
-    * the live NHI number for the Patient Record.
-    * the version number of the current Patient Record.
-    * the preferred-id.
+##### Set-preferred-name rules
+* An update request must contain:
+  * the live NHI number for the Patient Record.
+  * the version number of the current Patient Record.
+  * the preferred-id.
 
 * _Set-preferred-name errors._
   * _A valid NHI, preferred ID and version number are required._ 
