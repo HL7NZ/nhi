@@ -39,10 +39,10 @@ The user has sourced the required identity information, and initiates an add req
     * [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity),
     * NZ Citizenship status,
     * [Primary residential address](/StructureDefinition-NhiPatient-definitions.html#Patient.address), and
-    * An information source for each of the following items if they are present; birthdate, country of birth, citizenship, deceased date, name.
+    * An information source for each of the following items if they are present; birthdate, country of birth, nz citizenship, deceased date, name.
       * Note:  A status of registered can only be added by an authorised agency [See glossary for definitions](/glossary.html).
   
-  * A request must update the source of information only when the information is also provided (birthdate, country of birth, citizenship, deceased date, name). 
+  * A request must update the source of information only when the information is also provided (birthdate, country of birth, nz citizenship, deceased date, name). 
 
   * An add Patient request may include a:
     *  birthplace
@@ -57,7 +57,7 @@ The user has sourced the required identity information, and initiates an add req
   * _Ethnicity is required_
   * _NZ Citizenship is required_
   * _Address is required_
-  * _Information source is a required field (birthdate, country of birth, citizenship, deceased date, and name)_
+  * _Information source is a required field (birthdate, country of birth, nz citizenship, deceased date, and name)_
   * _A source of registered can only be updated by an authorised agency_
 
 
@@ -140,11 +140,11 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-##### Add Patient Citizenship rules
+##### Add Patient NZ Citizenship rules
   *  A Patient must have a NZ citizenship status
   *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
 
-* _Add Patient Citizenship errors_
+* _Add Patient NZ Citizenship errors_
   * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
 
 
