@@ -159,21 +159,25 @@ table, th, td {
 
 
 ##### Patient update-identity rules
-  * An update request must contain:
-    * the live NHI number for the Patient Record
-    * the version number of the current Patient Record
-  * An update request must not delete/inactivate mandatory information.
-  * An update request may:
-    * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
-    * Not populate the request parameter to retain the existing NHI value for that parameter
+* An update request must contain:
+  * the live NHI number for the Patient Record
+  * the version number of the current Patient Record
+* An update request must not delete/inactivate mandatory information.
+* An update request may:
+  * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
+  * Not populate the request parameter to retain the existing NHI value for that parameter
 
-  ##### Update-identity Gender rules
-    * All [add pateint gender rules apply](/addPatient.html#add-patient-gender-rules) and,
-    * An update request will replace the current gender code or gender original text.
+##### Update-identity Gender rules
+* All [add patient gender rules apply](/addPatient.html#add-patient-gender-rules) and,
+* An update request will replace the current gender code or gender original text.
   
-  ##### Update-identity Ethnicity rules
-    * All [add patient ethnicity rules apply](/addPatient.html#add-patient-ethnicity-rules) and,
-    * A full set of ethnicities is required for an update and will replace the current set.
+##### Update-identity Ethnicity rules
+* All [add patient ethnicity rules apply](/addPatient.html#add-patient-ethnicity-rules) and,
+* A full set of ethnicities is required for an update and will replace the current set.
+
+
+---
+
 
 * _Patient update-identity errors_
   * _Patient NHI and version number are required_
