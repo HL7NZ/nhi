@@ -112,10 +112,14 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Set-preferred-name rules
-* An update request must contain:
-  * the live NHI number for the Patient Record.
-  * the version number of the current Patient Record.
-  * the preferred-id.
+  * An update request must contain:
+    * the live NHI number for the Patient Record.
+    * the version number of the current Patient Record.
+    * the preferred-id.
+
+
+---
+
 
 * _Set-preferred-name errors._
   * _A valid NHI, preferred ID and version number are required._ 
@@ -125,7 +129,7 @@ table, th, td {
 
 ### Add-name Overview
 
-* Allows an authorised user to add a new name to the set of patient names for this NHI number.
+* Allows an authorised user to add a new name to the set of patient names for this NHI record.
 
 
 <div>
@@ -279,8 +283,8 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Add-name rules**
-  * All Add Patient [name rules](/addPatient.md#add-patient-name-rules) apply, and
+##### Add-name rules
+  * All Add Patient [name rules](/addPatient.html#add-patient-name-rules) apply, and
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -290,6 +294,10 @@ table, th, td {
   * An update which results in an attribute Status of Registered must only be submitted via an authorised Agency update.
   * A Patient must have one, and only one, Active Name which is preferred.
   * A Patient may have a maximum of 200 active Names.
+
+
+---
+
 
 * _Add-name errors._
   * _Patient NHI and version number are required._
@@ -404,7 +412,7 @@ table, th, td {
 * The name replace-id is validated.
 * If all request parameters are valid the name in the request will replace the requested name in the NHI.
   * If the preferred boolean is set to TRUE in the request then the name is added as the preferred name.
-
+  * If the preferred boolean is set to FALSE in the request then the name is added as the preferred name.
 
 #### Replace-name - Example request
 
@@ -466,8 +474,8 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Replace-name rules**
-  * All Add Patient [name rules](/addPatient.md#add-patient-name-rules) apply, and
+##### Replace-name rules
+  * All Add Patient [name rules](/addPatient.html#add-patient-name-rules) apply, and
   * An replace name update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -483,6 +491,10 @@ table, th, td {
   * An existing name must be active to be updated.
   * A non-preferred name may be made inactive (an inactive name is not returned in web service responses)
   * A Patient may have a maximum of 200 active Names.
+
+
+---
+
 
 * _Replace-name errors._
   * _Patient NHI and version number are required._
@@ -596,14 +608,18 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Inactivate-name rules**
-  * * An Inactivate name update request must contain:
-    * the live NHI number for the Patient Record.
-    * the version number of the current Patient Record.
-    * the inactivate-id (set-id for name being inactivated)
-  * A request must not result in modification of information confirmed by authorised Agency (“registered” information).
-  * A request may modify active patient information which is not ‘registered’ or verified’ information.
-  * An existing name must be active to be updated
+##### Inactivate-name rules
+* An Inactivate name update request must contain:
+  * the live NHI number for the Patient Record.
+  * the version number of the current Patient Record.
+  * the inactivate-id (set-id for name being inactivated)
+* A request must not result in modification of information confirmed by authorised Agency (“registered” information).
+* A request may modify active patient information which is not ‘registered’ or verified’ information.
+* An existing name must be active to be updated
+
+
+---
+
 
 * _Inactivate-name errors._
   * _A valid NHI, preferred ID and version number are required._ 
