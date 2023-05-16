@@ -162,9 +162,12 @@ table, th, td {
 
 ---
 
-  ##### Update-birth birthdate rules
-    * All [add patient birthdate rules apply](/addPatient.html#add-patient-birthdate-rules) and,
-    * An update will replace the current value
+##### Update-birth birthdate rules
+* All [add patient birthdate rules apply](/addPatient.html#add-patient-birthdate-rules) and,
+* An update will replace the current value
+
+
+---
 
 
 * _Patient update-birth birthdate errors_
@@ -174,16 +177,19 @@ table, th, td {
   * birth-date-information-source is required when birth-date is present
   * birth-date is required when birth-date-information-source is present.
 
+
+
+##### Update-birth birthplace rules
+* All [add patient birthplace rules apply](/addPatient.html#add-patient-birthplace-rules) and,
+* A request to update place-of-birth must also update country-of-birth
+* A request to update country of birth must also update country-of-birth-information-source
+* birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
+* birth-place can only be updated to registered by an authorised agency
+* A verified birthplace can be updated by another verified source, not by an unverified source.
+
+
 ---
 
-  ##### Update-birth birthplace rules
-    * All [add patient birthplace rules apply](/addPatient.html#add-patient-birthplace-rules) and,
-    * A request to update place-of-birth must also update country-of-birth
-    * A request to update country of birth must also update country-of-birth-information-source
-    * birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
-    * birth-place can only be updated to registered by an authorised agency
-    * A verified birthplace can be updated by another verified source, not by an unverified source.
-  
   
 * _Patient update-birth birthdate errors_
   * birth-place has been validated against a verified source, and must only be modified by authorised users
