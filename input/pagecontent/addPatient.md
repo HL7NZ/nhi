@@ -49,6 +49,7 @@ The user has sourced the required identity information, and initiates an add req
     *  deceased date
     *  postal address (TBC) 
  
+ 
 * _Add Patient errors_
   * _Name is required_
   * _birth date is a required field_
