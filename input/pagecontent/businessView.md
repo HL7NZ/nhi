@@ -26,7 +26,7 @@ The NHI holds the following information:
 * address
 * date of birth
 * gender
-* New Zealand resident and citizenship status 
+* New Zealand citizenship status
 * place of birth
 * ethnicity
 * date of death
