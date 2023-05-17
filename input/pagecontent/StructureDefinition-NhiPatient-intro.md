@@ -41,6 +41,9 @@ The core NHI Profile attributes are returned to all users that have read and/or 
   * nz-address-id extension
   * nz-address-derived extension
 
+### New NHI Number Format and check digit calculation
+
+For more information [click here](https://www.health.govt.nz/our-work/health-identity/national-health-index/upcoming-changes-nhi-numbers) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462022-consumer-health-identity-standard/) for the consumer health identity standard, that includes the check digit calculation.
 
 
 ### Patient's enrolled General Practice
