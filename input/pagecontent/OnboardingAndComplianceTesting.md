@@ -208,9 +208,8 @@ The patient has the following fields fully populated in the test record (field l
 
 <tr><td>NHI-GET-7</td>
 <td>application behaves appropriately when a new format NHI number is produced</td>
-<td>ZZZ00AX<br />
-ZGT56KB<br />
-ZBE4905</td>
+<td>ZXE24NV<br />
+ZUA48EH</td>
 <td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
 
