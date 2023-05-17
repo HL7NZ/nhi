@@ -183,7 +183,7 @@ table, th, td {
 * All [add patient birthplace rules apply](/addPatient.html#add-patient-birthplace-rules) and,
 * A request to update place-of-birth must also update country-of-birth
 * A request to update country of birth must also update country-of-birth-information-source
-* birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
+* birth-place cannot be updated if source is ‘registered’ (BREG) [See Glossary](/glossary.html#birthplace-definitions)
 * birth-place can only be updated to registered by an authorised agency
 * A verified birthplace can be updated by another verified source, not by an unverified source.
 
