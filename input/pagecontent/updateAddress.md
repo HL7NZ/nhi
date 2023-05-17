@@ -133,11 +133,15 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Patient set-address rules**
-  * All add address rules apply, and
-  * A Patient Update request must contain the live NHI number for the Patient Record
-  * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
-  * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
+##### Patient set-address rules
+* All [add address rules apply](/addPatient.html#add-patient-address-rules), and
+* A Patient Update request must contain the live NHI number for the Patient Record
+* A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
+* A request must not result in information, removed from a Patient Record by the NHI Administration team being added
+
+
+---
+
 
 * _Patient set-address errors_
   * _Patient NHI, version number, address type and address-id are all required_
@@ -240,15 +244,18 @@ table, th, td {
 
 <tr><td> address-domicile-code </td>
 <td> valueString </td>
-<td> Optional </td>
-<td></td> </tr>
+<td> Optional* </td>
+<td>See future functionality below</td> </tr>
 </table>
+
+#### Future functionality for Domicile code
+* If domicile code supplied this is added to the address, if not supplied the suburb and city are used to derive a domicile code from the streets file. If a suburb/city combination is not found in the streets file an error is returned.
+* For now domicile code is currently mandatory.
 
 #### Set-unvalidated-address - Behaviour
   * The NHI is validated
   * The Patient versionId is validated
   * The parameters are validated
-  * If domicile code supplied this is added to address, if not supplied the suburb and city are used to derive a domicile code from the streets file. If a suburb/city combination is not found in the streets file an error is returned
   * With a succcesful address add, the new address is added to the NHI and the existing address made inactive
 
 
@@ -317,11 +324,15 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Patient set-unvalidated-address rules**
-  * All add address rules apply, and
+##### Patient set-unvalidated-address rules
+  * All [add address rules apply](/addPatient.html#add-patient-address-rules), and
   * A Patient Update request must contain the live NHI number for the Patient Record
   * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
   * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
+
+
+---
+
 
 * _Patient set-unvalidated-address errors_
   * _Patient NHI, version number, address type and address-id are all required_
@@ -411,10 +422,14 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Patient remove-postal-address rules**
-  * All add address rules apply, and
-  * A Patient Update request must contain the live NHI number for the Patient Record
-  * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
+##### Patient remove-postal-address rules
+* All [add address rules apply](/addPatient.html#add-patient-address-rules), and
+* A Patient Update request must contain the live NHI number for the Patient Record
+* A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
+
+
+---
+
 
 * _Patient remove-postal-address errors_
   * _Patient NHI, version number, address type and address-id are all required_

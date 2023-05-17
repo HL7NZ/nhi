@@ -281,11 +281,11 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th> Version 1 Scopes </th><th> SMART on FHIR Scopes </th><th> Description </th></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:read   </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.r </td><td> Read access to all Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:search </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:validate </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/patient:write </td><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
+<tr><th> SMART on FHIR Scopes </th><th> Description </th></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.r </td><td> Read access to all Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
 </table>
 
 * Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
@@ -329,6 +329,6 @@ table, th, td {
 
 All test accounts will be assigned to the bronze usage plan
 
-Production accounts will be assigned to the silver usage plan. If an Organisation wished to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](NHI_Access@health.govt.nz)
+Production accounts will be assigned to the silver usage plan. If an Organisation wished to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay

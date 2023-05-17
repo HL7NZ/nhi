@@ -10,7 +10,7 @@ This includes the core NHI Profile attributes:
 * address
 * date of birth
 * gender
-* New Zealand resident and citizenship status
+* New Zealand citizenship status
 * place of birth
 * ethnicity
 * date of death
@@ -22,7 +22,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 ### Key differences from HL7 FHIR Patient specification
 
 * Ethnicity extension
-* NZ Citizenship and Residency extension
+* NZ Citizenship extension
 * Dhb extension
 * Birthplace extension
 * Name

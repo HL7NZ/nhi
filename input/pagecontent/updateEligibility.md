@@ -3,8 +3,8 @@
 The update eligibility operation allows an authorised user to update citizenship on a person's identity record.
 
 This includes:
-* Citizenship
-* Citizenship information source
+* NZ Citizenship
+* NZ Citizenship information source
 
 
 <div>
@@ -60,7 +60,7 @@ table, th, td {
 <td> The information source for the patients NZ citizenship status </td></tr>
 </table>
 
-#### Update-identity - Behaviour
+#### Update-eligibility - Behaviour
   * The NHI is validated
   * The Patient version-id is validated
   * The parameters are validated
@@ -102,18 +102,28 @@ table, th, td {
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Patient update-eligibility rules**
-  * An update request must contain:
-    * the live NHI number for the Patient Record.
-    * the version number of the current Patient Record.
-  * An update request may:
-    * modify active patient information which is not ‘registered’ information.
-    * modify active patient information for which evidence has been sighted (“verified” information). Can modify a verified source to another verified source or verified to Registered.
-  * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
-  * An update request to update the value for a core identity field must also update the information source.
-  * An update request must update the source of information only when the information is also provided.
+##### Patient update-eligibility rules
+* An update request must contain:
+  * the live NHI number for the Patient Record.
+  * the version number of the current Patient Record.
+* An update request may:
+  * modify active patient information which is not ‘registered’ information.
+  * modify active patient information for which evidence has been sighted (“verified” information). Can modify a verified source to another verified source or verified to Registered.
+* An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
+* An update request to update the value for a core identity field must also update the information source.
+* An update request must update the source of information only when the information is also provided.
+
+##### Update-eligibility nz citizenship rules
+* All [add patient nz citizenship rules apply](/addPatient.html#add-patient-nz-citizenship-rules) and,
+* A request to update citizenship must also update citizenship-information-source
+* birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
+* birth-place can only be updated to registered by an authorised agency
+* A verified birthplace can be updated by another verified source, not by an unverified source.
 
 
+---
+
+    
 * _Patient update-eligibility errors_
   * _Patient NHI and version number are required_
   * _Version number is incorrect_
