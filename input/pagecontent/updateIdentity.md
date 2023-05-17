@@ -67,32 +67,32 @@ table, th, td {
 <tr><td> ethnicity-1 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> one of up to six </td></tr>
+<td> The patients ethnicity <br /> up to six </td></tr>
 
 <tr><td> ethnicity-2 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> two of up to six </td></tr>
+<td> The patients ethnicity <br /> up to six </td></tr>
 
 <tr><td> ethnicity-3 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> three of up to six </td></tr>
+<td> The patients ethnicity <br /> up to six <br /> populted in ascending order</td></tr>
 
 <tr><td> ethnicity-4 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> four of up to six </td></tr>
+<td> The patients ethnicity </td></tr>
 
 <tr><td> ethnicity-5 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> five of up to six </td></tr>
+<td> The patients ethnicity </td></tr>
 
 <tr><td> ethnicity-6 </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The patients ethnicity <br /> six of up to six </td></tr>
+<td> The patients ethnicity </td></tr>
 </table>
 
 #### Update-identity - Behaviour
@@ -158,23 +158,26 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 
-* **Patient update-identity rules**
-  * All add Patient [ethnicity](/addPatient.md#add-patient-ethnicity-rules) and [gender](/addPatient.md#add-patient-gender-rules) rules apply, and
-  * An update request must contain:
-    * the live NHI number for the Patient Record
-    * the version number of the current Patient Record
-  * An update request must not delete/inactivate mandatory information.
-  * An update request may:
-    * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
-    * Not populate the request parameter to retain the existing NHI value for that parameter
+##### Patient update-identity rules
+* An update request must contain:
+  * the live NHI number for the Patient Record
+  * the version number of the current Patient Record
+* An update request must not delete/inactivate mandatory information.
+* An update request may:
+  * Populate the request parameter with the required value(s) to modify the existing NHI value for that parameter
+  * Not populate the request parameter to retain the existing NHI value for that parameter
 
-  * Update-identity Gender rules
-    * All add rules apply and,
-    * An update request will replace the current gender code or gender original text.
+##### Update-identity Gender rules
+* All [add patient gender rules apply](/addPatient.html#add-patient-gender-rules) and,
+* An update request will replace the current gender code or gender original text.
   
-  * Update-identity Ethnicity rules
-    * All add rules apply and,
-    * A full set of ethnicities is required for an update and will replace the current set.
+##### Update-identity Ethnicity rules
+* All [add patient ethnicity rules apply](/addPatient.html#add-patient-ethnicity-rules) and,
+* A full set of ethnicities is required for an update and will replace the current set.
+
+
+---
+
 
 * _Patient update-identity errors_
   * _Patient NHI and version number are required_
