@@ -655,7 +655,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> For the NHI Maintain 'name'tests. Please select one of the following NHI numbers and use this for all tests unless stated otherwise <br />
+<caption> For the NHI Maintain 'name' tests. Please select one of the following NHI numbers and use this for all tests unless stated otherwise <br />
 ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
@@ -726,7 +726,7 @@ Output:
 <td>Input:
  <li> Use $inactivate-name operation</li>
 Output:
- <li> The selected name is made inctive and not returned to the user<li></td>
+ <li> The selected name is made inctive and not returned to the user</li></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-$set-preferred-name-1</td>
@@ -747,7 +747,7 @@ Output:
 <td>
  <li>Requires two users to update a name on the provided patient record</li>
  <li>Use selected NHI number</li>
-<li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record and then pauses</li>
+ <li>User one retrieves a patient record (to retrieve the current patient version) and starts adding a name to the record and then pauses</li>
  <li>User two retrieves the patient record and adds a fictitious name to the record</li>
  <li>User one then completes their update to the name and should receive the error message</li></td>
 <td>Output: EM02007 "Version number is incorrect"</td>
@@ -862,7 +862,7 @@ Output:
    <li>Given Name: CJ </li>
    <li>Family Name: Minit</li>
    <li>Set Id: "11" </li>
- <li>Note: inactive names won't appear on the patient record so use set id to attempt to inactivate </li ></td>
+   <li>Note: inactive names won't appear on the patient record so use set id to attempt to inactivate </li ></td>
 <td>Output: EM07223 "The 'Patient Name' is not active and cannot be updated"</td>
 <td>mandatory</td></tr>
 
