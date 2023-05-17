@@ -78,7 +78,7 @@ table, th, td {
 <tr><td> place-of-birth </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> The place where the person as born, E.g. Whangarei. Only populate if country-of-birth is populated </td></tr>
+<td> The place where the person as born, E.g. Whangarei. <br /> Only populate if country-of-birth is populated </td></tr>
 </table>
 
 #### Update-identity - Behaviour
@@ -136,7 +136,7 @@ table, th, td {
   
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-* **Patient update-birth rules**
+##### Patient update-birth rules
   * An update request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
@@ -153,19 +153,22 @@ table, th, td {
   * An update requestt to update the value for a core identity field must also update the information source.
   * An update request must update the source of information only when the information is also provided.
 
+
 * _Patient update-birth errors_
   * _Patient NHI and version number are required_
   * _Version number is incorrect_
   * _The NHI Identifier provided is dormant. This record cannot be updated
   * _Cannot delete mandatory data_
 
+---
 
---
+##### Update-birth birthdate rules
+* All [add patient birthdate rules apply](/addPatient.html#add-patient-birthdate-rules) and,
+* An update will replace the current value
 
 
-  * Update-birth birthdate rules
-    * All add patient birth-date rules apply and,
-    * An update will replace the current value
+---
+
 
 * _Patient update-birth birthdate errors_
   * birth-date has been validated against a verified source, and must only be modified by authorised users
@@ -175,16 +178,18 @@ table, th, td {
   * birth-date is required when birth-date-information-source is present.
 
 
---
+
+##### Update-birth birthplace rules
+* All [add patient birthplace rules apply](/addPatient.html#add-patient-birthplace-rules) and,
+* A request to update place-of-birth must also update country-of-birth
+* A request to update country of birth must also update country-of-birth-information-source
+* birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
+* birth-place can only be updated to registered by an authorised agency
+* A verified birthplace can be updated by another verified source, not by an unverified source.
 
 
-  * Update-birth birthplace rules
-    * All add patient birthplace rules apply and,
-    * A request to update place-of-birth must also update country-of-birth
-    * A request to update country of birth must also update country-of-birth-information-source
-    * birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
-    * birth-place can only be updated to registered by an authorised agency
-    * A verified birthplace can be updated by another verified source, not by an unverified source.
+---
+
   
 * _Patient update-birth birthdate errors_
   * birth-place has been validated against a verified source, and must only be modified by authorised users
