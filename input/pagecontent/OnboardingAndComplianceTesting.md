@@ -44,8 +44,10 @@ Provide the following details in a test report and email to [integration@health.
    
 2. For each test supply screen shots of the user interface for:
     * the input data as entered in the integrating application (“the application”)
-    * any warnings or error messages presented by the application
-    * the confirmation or result of the request presented by the application
+    * the output:
+      * any error messages presented by the application
+      * the confirmation or result of the request presented by the application
+    * For update operations the state of the record pre-request should be included. 
     * **Note**: If non-interactive, please provide JSON request (update / add) or response (get/search).
 
 3. For each test supply a timestamp when each request is sent.
@@ -560,6 +562,8 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption> For the NHI Maintain 'address' tests. Please select one of the following NHI numbers and use this for all tests unless stated otherwise <br />
+ZAY5549, ZAY5557, ZAY5565, ZAY5573, ZAY5581 </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
