@@ -127,12 +127,14 @@ NZCT <1%</td></tr>
 
 ### Where has the New Zealand Resident status attribute gone?
 
-The New Zealand resident status attribute was introduced in the NHI Legacy service to capture permanent resident status:
+The New Zealand resident status attribute was introduced in the NHI Legacy service to capture resident status:
 * 'Y' = Permanent resident (New Zealand citizen or classified as ‘ordinarily resident in New Zealand’)
 * 'N' = Temporary (not a New Zealand citizen, does not have New Zealand ‘ordinarily resident’ status)
 
-Organiations with update access had the ability to update the New Zealand resident status for a person, although at a national level the quality of this data was varied.
+Organiations with legacy update access had the ability to update the New Zealand resident status for a person. The process for updating varied between integrators which resulted in inconsistent data quailty.
 
-With the release of the NHI SOAP service the attribute was discontinued, however is still used today by some integrators using the NHI Legacy service.
+With the release of the NHI SOAP service the attribute was discontinued, however is still maintained today by some integrators using the NHI Legacy service.
 
-A new attribute _NZ Residency_ was designed to capture a person with a permanent resident visa. For the NHI, there is currently no data sharing agreement or mechanism to populate this data from an authorised source. We have therefore had to remove this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
+A new attribute _NZ Residency_ was designed to capture a person with a resident class visa. For the NHI, there is currently no data sharing agreement with Immigration New Zealand or mechanism to populate this data from an authorised source. 
+
+We have removed this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
