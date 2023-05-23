@@ -1,3 +1,9 @@
+Alias: $ethnic-group-level-4-code = https://standards.digital.health.nz/ns/ethnic-group-level-4-code
+Alias: $information-source-code = https://standards.digital.health.nz/ns/information-source-code
+Alias: $nz-citizenship-status-code = https://standards.digital.health.nz/ns/nz-citizenship-status-code
+Alias: $address-not-validated-reason-code = https://standards.digital.health.nz/ns/address-not-validated-reason-code
+Alias: $domicile-code = https://standards.digital.health.nz/ns/domicile-code
+
 Instance: ZAT2348
 InstanceOf: Patient
 Description: "Example Patient - deceased"
@@ -79,3 +85,12 @@ Usage: #example
 * address.use = #home
 * address.type = #physical
 * address.line = "NO FIXED ABODE"
+* generalPractitioner = Reference(20006579)
+
+Instance: Inline-Instance-for-ZAT2348-1
+InstanceOf: PractitionerRole
+Usage: #inline
+* id = "20006579"
+* period.start = "2019-10-30T00:00:00+13:00"
+* period.end = "2022-10-30T00:00:00+13:00"
+* organization = Reference(Organization/G08550-C)
