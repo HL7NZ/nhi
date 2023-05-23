@@ -1,6 +1,12 @@
+Alias: $ethnic-group-level-4-code = https://standards.digital.health.nz/ns/ethnic-group-level-4-code
+Alias: $information-source-code = https://standards.digital.health.nz/ns/information-source-code
+Alias: $nz-citizenship-status-code = https://standards.digital.health.nz/ns/nz-citizenship-status-code
+Alias: $dhb-code = https://standards.digital.health.nz/ns/dhb-code
+Alias: $domicile-code = https://standards.digital.health.nz/ns/domicile-code
+
 Instance: ZAA0792
 InstanceOf: Patient
-Description: "Example Patient dormat identifier, two addresses"
+Description: "Example Patient dormant identifier, two addresses"
 Usage: #example
 * meta.versionId = "3384084"
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
@@ -33,7 +39,7 @@ Usage: #example
 * name.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
 * name.extension.valueBoolean = true
 * name.family = "Matariki"
-* name.given = "Jaime"
+* name.given = "Jamie"
 * gender = #female
 * birthDate = "1985-06-02"
 * birthDate.extension.url = "http://hl7.org.nz/fhir/StructureDefinition/information-source"
