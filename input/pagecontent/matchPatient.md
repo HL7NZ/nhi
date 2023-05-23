@@ -100,7 +100,7 @@ For an example Match request body [click here](/artifacts.html#example-example-i
 
 #### Match Patient Rules and errors
 
-[For Request rules and errors click here](/general.html#request-rules-and-errors)
+[For Request rules and errors click here]($matchExample.html)
 
 ##### Match Patient rules
 * A Match patient request must include:
