@@ -96,7 +96,7 @@ Note: To be more FHIR compliant this will be changed to return:
 
 #### Example request
 
-For an example Match request body [click here](/artifacts.html#example-example-instances)
+For an example Match request body [click here](/matchExample.html)
 
 #### Match Patient Rules and errors
 
