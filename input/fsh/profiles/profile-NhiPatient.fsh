@@ -174,7 +174,7 @@ Description: "only allows certain name name use values"
 
 ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
-Id: nhi-address-type
+Id: nhi-contactpoint-use
 Description: "Types of contact use supported  by the NHI"
 * ^url = https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType
 * ^version = "1.0"
