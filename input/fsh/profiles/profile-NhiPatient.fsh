@@ -35,7 +35,7 @@ Description:    "The Patient resource exposed by the NHI."
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>NHI Patient profile</div>"
 
 //elements that have been removed
-* active 0..
+* active 0..0
 * photo 0..0
 * contact 0..0
 * communication 0..0
