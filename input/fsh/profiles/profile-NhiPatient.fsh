@@ -35,7 +35,7 @@ Description:    "The Patient resource exposed by the NHI."
 * ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>NHI Patient profile</div>"
 
 //elements that have been removed
-* active 0..
+* active 0..0
 * photo 0..0
 * contact 0..0
 * communication 0..0
@@ -174,7 +174,7 @@ Description: "only allows certain name name use values"
 
 ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
-Id: nhi-address-type
+Id: nhi-contactpoint-use
 Description: "Types of contact use supported  by the NHI"
 * ^url = "https://nzhts.digital.health.nz/fhir/ValueSet/nhiContactUseType"
 * ^version = "1.0"

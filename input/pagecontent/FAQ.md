@@ -12,7 +12,7 @@ The [NHI $match operation](/matchPatient.html) processes a parameters resource c
 
 ### Can I use age range instead of date of birth when searching for a patient?
 The standard FHIR $Match on patient does not allow an age range parameter. A year and month or year only can be used if the exact birthdate is not known
-An extension to allow an age-range parameter is being considered. (Please reach out to the team)[] if this is something that would benefit you.
+An extension to allow an age-range parameter is being considered. (Please reach out to the integration team)[https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36] if this is something that would benefit you.
 
 
 
@@ -45,19 +45,19 @@ If a prioritised ethnicity is required on output for analysis/reporting/kpi etc 
 The information source attribute is used to provide provenance to the attribute it corresponds to. It is required when a patient record is created or when an update is made. 
 
 The information source attribute is required on the following attributes:
-•	NZ citizenship,
-•	Birthplace,
-•	Birthdate,
-•	Deceased date, and
-•	Name
+* NZ citizenship,
+* Birthplace,
+* Birthdate,
+* Deceased date, and
+* Name
 
 Information sources are classified as unverified, verified or registered.
 
 Unverified sources are added when no documentation has been sighted to verify the information. Verified sources are added when a specific document has been sighted to verify the information. Registered sources are only added by Te Whatu Ora when the information has been verified with the official source e.g. Department of Internal Affairs. 
 
 The service will return an error if a request attempts to update:
-•	an attribute that has a Registered source or 
-•	a verified attribute with an unverified one. 
+* an attribute that has a Registered source or 
+* a verified attribute with an unverified one. 
 
 For more information of the list of information sources see the [glossary definitions](/glossary.html)
 
