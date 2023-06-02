@@ -60,9 +60,27 @@
 </td>
 </tr>
 <tr>
-<td>update-death</td>
-<td><a href ="update-death.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death </a></td>
-<td><p>An operation to update a patient's death details.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+<td>add-name</td>
+<td><a href ="add-name.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name </a></td>
+<td><p>An operation to add a name to a patient's NHI record.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+</td>
+</tr>
+<tr>
+<td>replace-name</td>
+<td><a href ="replace-name.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name </a></td>
+<td><p>An operation to replace a name on a patient's record.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+</td>
+</tr>
+<tr>
+<td>inactivate-name</td>
+<td><a href ="inactivate-name.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name </a></td>
+<td><p>An operation to replace a name on a patient's record.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
+</td>
+</tr>
+<tr>
+<td>update-eligibility</td>
+<td><a href ="update-eligibility.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility </a></td>
+<td><p>An operation to replace a name on a patient's record.  <strong>HTTP Request</strong> 'POST'.  <strong>Scope required:</strong>  system/Patient.u, system/Patient.a</p>
 </td>
 </tr>
 </table>
