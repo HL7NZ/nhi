@@ -58,6 +58,10 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * deceasedDateTime.extension[information-source] 1..1
 * name.extension[information-source] 1..1
 * name.extension[preferred] 1..1
+
+* obeys EM02106
+* obeys nhi-nz-create-2
+* obeys EM02101
  
 Invariant: EM02106
 Expression: "Patient.name.where((extension[preferred].valueBoolean = true)).count()=1 )"
