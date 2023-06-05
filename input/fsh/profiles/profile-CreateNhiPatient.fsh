@@ -70,7 +70,7 @@ Description: "must have exactly one preferred name"
 
 
 Invariant: nhi-nz-create-2
-Expression: "Patient.address.where(  (use = #home) and (type = #physical)) )"
+Expression: "Patient.address.where(  (use = #home) and (type = #physical))"
 Severity: #error
 Description: "must have primary residential address"
 
