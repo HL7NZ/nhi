@@ -92,15 +92,19 @@ if (fs.existsSync(rootPath)) {
                         
                         ar.push("<table class='table table-bordered table-condensed'>")
                         ar.push("<strong>Operations</strong>")
-                        ar.push("<tr><th width='30%'>Name</th><th width='30%'>Definition</th><th width='40%'>Documentation</th></tr>")
+                        ar.push("<tr><th width='15%'>Name</th><th width='15%'>Definition</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th></tr>")
                         res.operation.forEach(function(int){
                             ar.push("<tr>")
                             ar.push(`<td>${int.name}</td>`)
                             ar.push(`<td><a href ="${int.name}.xml"> ${int.definition} </a></td>`)
-                            let documentation = cleanText(int.documentation) || hashInteraction[int.name]   
-                            console.log("operation:"+documentation)                       
-                            ar.push(`<td>${documentation}</td>`)
-                            
+                          
+                           	let documentation = int.documentation.split(',')
+                           	let verb  = documentation[0] ?? " "
+                           	let url = documentation[1] ?? " "
+                           	let doc = documentation[2] ?? " "
+                          	ar.push(`<td>${verb}</td>`)
+							ar.push(`<td>${url}</td>`)
+                            ar.push(`<td>${doc}</td>`)
                             ar.push("</tr>")
     
                         })
