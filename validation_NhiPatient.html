@@ -22,27 +22,59 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results</h1>
- <p>14 errors, 0 warnings, 0 hints. Generated Jun 5, 2023, 11:32:21 PM by Validator Version 5.6.45 (Git# f2134e964338). Built 2022-05-06T01:02:18.421Z (395 days old) (10900ms)</p>
+ <p>21 errors, 0 warnings, 0 hints. Generated Jun 6, 2023, 10:07:06 PM by Validator Version 5.6.45 (Git# f2134e964338). Built 2022-05-06T01:02:18.421Z (396 days old) (9788ms)</p>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#;1"><b>.\temp\Patient-create1.json</b></a></td><td><b>7</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#;1"><b>.\temp\Patient-create-error-no-birth-place-source.json</b></a></td><td><b>7</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#;2"><b>.\temp\Patient-create2-error-no-preferred-name.json</b></a></td><td><b>7</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#;2"><b>.\temp\Patient-create1.json</b></a></td><td><b>7</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#;3"><b>.\temp\Patient-create2-error-no-preferred-name.json</b></a></td><td><b>7</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
 <a name="l1"> </a>
+<h2><a href="file:.\temp\Patient-create-error-no-birth-place-source.json">.\temp\Patient-create-error-no-birth-place-source.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient (l1/c2)</b></td><td><b>error</b></td><td title="EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed"><b>EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.extension[1].extension[0].value.ofType(CodeableConcept) (l27/c24)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'ISO 3166-1:2013 (2-alpha country code)' (https://nzhts.digital.health.nz/fhir/ValueSet/country-code), and a coding from this value set is required) (codes = urn:iso:std:iso:3166#NZ)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.extension[1].extension[1] (l36/c10)</b></td><td><b>error</b></td><td title="ext-1: 'Must have either extensions or value[x], not both' Rule 'Must have either extensions or value[x], not both' Failed"><b>ext-1: 'Must have either extensions or value[x], not both' Rule 'Must have either extensions or value[x], not both' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.extension[2].extension[0].value.ofType(CodeableConcept) (l47/c24)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'NZ Citizenship Information Source' (https://nzhts.digital.health.nz/fhir/ValueSet/nz-citizenship-source-code), and a coding from this value set is required) (codes = https://standards.digital.health.nz/ns/information-source-code#BRCT)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.name[0].extension[0].value.ofType(CodeableConcept) (l78/c24)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Name Information Source' (https://nzhts.digital.health.nz/fhir/ValueSet/name-source-code), and a coding from this value set is required) (codes = https://standards.digital.health.nz/ns/information-source-code#NPRF)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.birthDate.extension[0].value.ofType(CodeableConcept) (l125/c22)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Date of Birth Information Source' (https://nzhts.digital.health.nz/fhir/ValueSet/date-of-birth-source-code), and a coding from this value set is required) (codes = https://standards.digital.health.nz/ns/information-source-code#HL7)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Patient.address[0].country (l117/c6)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('NZ') is not in the value set 'ISO 3166-1:2013 (2-alpha country code)' (https://nzhts.digital.health.nz/fhir/ValueSet/country-code), and a code is required from this value set) (error message = class org.hl7.fhir.r5.model.UriType cannot be cast to class org.hl7.fhir.r5.model.StringType (org.hl7.fhir.r5.model.UriType and org.hl7.fhir.r5.model.StringType are in unnamed module of loader 'app'))</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="l2"> </a>
 <h2><a href="file:.\temp\Patient-create1.json">.\temp\Patient-create1.json</a></h2>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Patient (l1/c2)</b></td><td><b>error</b></td><td title="Problem_processing_expression__in_profile__path__"><b>Problem processing expression 'Patient.name.where((extension[preferred].valueBoolean = true)).count()=1 )' in profile 'http://hl7.org.nz/fhir/StructureDefinition/CreateNhiPatient' at path 'Patient': Error @1, 4: Premature ExpressionNode termination at unexpected token &quot;)&quot;</b></td>
+     <td><b>Patient (l1/c2)</b></td><td><b>error</b></td><td title="EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed"><b>EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Patient.extension[1].extension[0].value.ofType(CodeableConcept) (l27/c24)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'ISO 3166-1:2013 (2-alpha country code)' (https://nzhts.digital.health.nz/fhir/ValueSet/country-code), and a coding from this value set is required) (codes = urn:iso:std:iso:3166#NZ)</b></td>
@@ -64,14 +96,14 @@
    </tr>
 </table>
 <hr/>
-<a name="l2"> </a>
+<a name="l3"> </a>
 <h2><a href="file:.\temp\Patient-create2-error-no-preferred-name.json">.\temp\Patient-create2-error-no-preferred-name.json</a></h2>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Patient (l1/c2)</b></td><td><b>error</b></td><td title="Problem_processing_expression__in_profile__path__"><b>Problem processing expression 'Patient.name.where((extension[preferred].valueBoolean = true)).count()=1 )' in profile 'http://hl7.org.nz/fhir/StructureDefinition/CreateNhiPatient' at path 'Patient': Error @1, 4: Premature ExpressionNode termination at unexpected token &quot;)&quot;</b></td>
+     <td><b>Patient (l1/c2)</b></td><td><b>error</b></td><td title="EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed"><b>EM02106: 'must have exactly one preferred name' Rule 'must have exactly one preferred name' Failed</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Patient.extension[1].extension[0].value.ofType(CodeableConcept) (l27/c24)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'ISO 3166-1:2013 (2-alpha country code)' (https://nzhts.digital.health.nz/fhir/ValueSet/country-code), and a coding from this value set is required) (codes = urn:iso:std:iso:3166#NZ)</b></td>
