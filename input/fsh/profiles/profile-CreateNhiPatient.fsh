@@ -64,7 +64,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02101
  
 Invariant: EM02106
-Expression: "Patient.name.where((extension[preferred].valueBoolean = true)).count()=1"
+Expression: "(Patient.name.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred').valueBoolean=true).count()=1"
 Severity: #error
 Description: "must have exactly one preferred name"
 
