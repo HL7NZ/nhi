@@ -60,7 +60,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * name.extension[preferred] 1..1
 
 * obeys EM02106
-* obeys nhi-nz-create-2
+* obeys EM02201
 * obeys EM02101
  
 Invariant: EM02106
