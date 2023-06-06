@@ -69,10 +69,10 @@ Severity: #error
 Description: "must have exactly one preferred name"
 
 
-Invariant: nhi-nz-create-2
-Expression: "Patient.address.where(  (use = 'home') and (type = 'physical'))"
+Invariant: EM02201
+Expression: "Patient.address.where(  (use = 'home') and (type = 'physical')).count()=1"
 Severity: #error
-Description: "must have primary residential address"
+Description: "A Patient must have a primary residential address"
 
 Invariant: EM02101
 Expression: "Patient.name.exists() implies Patient.name.given.exists() or Patient.name.family.exists()"
