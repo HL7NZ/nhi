@@ -50,7 +50,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 
 // NHIPatient elements which should not be included in a create
 * implicitRules 0..0
-* text 0..0 
+
 
 * language 0..0
 * extension[dhb] 0..0

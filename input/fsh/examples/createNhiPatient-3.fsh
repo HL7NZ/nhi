@@ -1,4 +1,4 @@
-Instance: create3
+Instance: create3-no-primary-address
 InstanceOf: CreateNhiPatient
 Description: "example patient parameter for $create-patient request"
 Usage: #example
@@ -6,7 +6,8 @@ Usage: #example
 * name[0].extension[preferred].valueBoolean = true
 * name[0].given = "ChewyBakA"
 * name[0].extension[information-source].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#NPRF "Proof not Sighted"
-* name[0].use = #maiden
+* name[0].use = #temp
+* name[0].extension[nhi-name-use-extra].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/nhi-name-use-extra-code#BABYOF
 
 * birthDate = "1972-06-05"
 * birthDate.extension[information-source].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#HL7 "HL7 applied"
