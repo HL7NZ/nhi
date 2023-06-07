@@ -48,8 +48,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * extension[nzCitizen].extension[source].valueCodeableConcept 1..1
 * extension[nzCitizen].extension[status] 1..1
 
-// NHIPatient elements which should not be included in a create 
-* meta 0..0
+// NHIPatient elements which should not be included in a create
 * implicitRules 0..0
 * text 0..0 
 
@@ -72,10 +71,10 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02106
 * obeys EM02201
 * obeys EM02101
-* obeys NAME-USE-1
+
  
 Invariant: EM02106
-Expression: "(Patient.name.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred').valueBoolean=true).count()=1"
+Expression: "Patient.name.extension.where((url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred') and (valueBoolean=true)).count()=1"
 Severity: #error
 Description: "A Patient must have exactly one preferred name"
 
@@ -88,10 +87,5 @@ Description: "A Patient must have a primary residential address"
 Invariant: EM02101
 Expression: "Patient.name.exists() implies Patient.name.given.exists() or Patient.name.family.exists()"
 Description: "A Patient name must contain either a given or family name"
-Severity: #error
-
-Invariant: NAME-USE-1
-Expression: "name.use.exists() implies (name.use = 'temp' or name.use = 'maiden' or name.use = 'nickname')"
-Description: "name .use should be one of temp, maiden or nickname"
 Severity: #error
 
