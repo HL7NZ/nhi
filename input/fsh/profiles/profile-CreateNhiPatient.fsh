@@ -40,20 +40,30 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * name 1..*
 * birthDate 1..1
 * gender 1..1
-* extension[ethnicity] 1..1
+* extension[ethnicity] 1..6
 * address 1..1
+* address.use 1..1
 * birthDate.extension[information-source] 1..1
+* extension[nzCitizen] 1..1
+* extension[nzCitizen].extension[source].valueCodeableConcept 1..1
+* extension[nzCitizen].extension[status] 1..1
 
 // NHIPatient elements which should not be included in a create 
+* meta 0..0
+* implicitRules 0..0
+* text 0..0 
+
 * language 0..0
 * extension[dhb] 0..0
 * identifier[NHI] 0..0
 * telecom 0..0
 * generalPractitioner 0..0
+* contained[GP] 0..0
 
 
-//information-source required if element present
+//required if element present
 * extension[birthPlace].extension[source] 1..1
+* extension[birthPlace].extension[country] 1..1
 * extension[nzCitizen].extension[source] 1..1
 * deceasedDateTime.extension[information-source] 1..1
 * name.extension[information-source] 1..1
@@ -62,11 +72,12 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02106
 * obeys EM02201
 * obeys EM02101
+* obeys NAME-USE-1
  
 Invariant: EM02106
 Expression: "(Patient.name.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred').valueBoolean=true).count()=1"
 Severity: #error
-Description: "must have exactly one preferred name"
+Description: "A Patient must have exactly one preferred name"
 
 
 Invariant: EM02201
@@ -78,3 +89,9 @@ Invariant: EM02101
 Expression: "Patient.name.exists() implies Patient.name.given.exists() or Patient.name.family.exists()"
 Description: "A Patient name must contain either a given or family name"
 Severity: #error
+
+Invariant: NAME-USE-1
+Expression: "name.use.exists() implies (name.use = 'temp' or name.use = 'maiden' or name.use = 'nickname')"
+Description: "name .use should be one of temp, maiden or nickname"
+Severity: #error
+
