@@ -29,5 +29,5 @@ Usage: #example
 * address[=].city = "Palmerston North"
 * address[=].postalCode = "4412"
 * address[=].country = "NZ"
-
+* deceasedDateTime = "1888-10-18"
 

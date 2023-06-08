@@ -102,3 +102,13 @@ Expression: "(birthDate > @1900-01-01) and (birthDate < now())"
 Description: "birthdate must be after 1 January 1900, and not a future date"
 Severity: #error
 
+Invariant: EM07212
+Expression: "deceasedDateTime < now()"
+Description: "Patient Date of Death date cannot be a future date."
+Severity: #error
+
+Invariant: EM07215
+Expression: "deceasedDateTime >= birthDate"
+Description: "Patient Date of Death date must be greater than, or equal to Date of Birth  "
+Severity: #error
+
