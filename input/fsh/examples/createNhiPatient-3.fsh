@@ -1,6 +1,6 @@
 Instance: create3-errors
 InstanceOf: CreateNhiPatient
-Description: "example patient parameter for $create-patient request, errors - no primary address, birthdate < 1900"
+Description: "example patient parameter for $create-patient request, errors - no primary address(EM02201), birthdate < 1900 (EM07212), deceasedDateTime < birthdate(EM07215)"
 Usage: #example
 
 * name[0].extension[preferred].valueBoolean = true
@@ -21,13 +21,17 @@ Usage: #example
 
 * gender = #male
 
-* address[0].extension[nz-address-id].valueString = "1199146"
+
+* address[0].id = "2"
+* address[=].extension[nz-address-id].valueString = "12345"
 * address[=].extension[suburb].valueString = "Awapuni"
 * address[=].use = #home
 * address[=].type = #postal
-* address[=].line = "24 Anglesey Place"
+* address[=].line = "74 Chancellor Street"
 * address[=].city = "Palmerston North"
 * address[=].postalCode = "4412"
 * address[=].country = "NZ"
-* deceasedDateTime = "1888-10-18"
 
+//deceasedDateTime earlier than birthdate - violates EM07215
+* deceasedDateTime = "1888-10-18"
+* deceasedDateTime.extension.valueCodeableConcept.coding = $information-source-code#DREG "Death Register"
