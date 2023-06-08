@@ -72,6 +72,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02201
 * obeys EM02101
 * obeys EM07225
+* obeys EM07212
 
  
 Invariant: EM02106
@@ -93,5 +94,11 @@ Severity: #error
 Invariant: EM07225
 Expression: "name.where(use='temp').exists() implies (name.extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
 Description: "Baby of and unallocated names must have source of NPRF"
+Severity: #error
+
+
+Invariant: EM07212
+Expression: "(birthDate > @1900-01-01) and (birthDate < now())"
+Description: "birthdate must be after 1 January 1900, and not a future date"
 Severity: #error
 

@@ -1,6 +1,6 @@
-Instance: create3-no-primary-address
+Instance: create3-errors
 InstanceOf: CreateNhiPatient
-Description: "example patient parameter for $create-patient request"
+Description: "example patient parameter for $create-patient request, errors - no primary address, birthdate < 1900"
 Usage: #example
 
 * name[0].extension[preferred].valueBoolean = true
@@ -9,7 +9,7 @@ Usage: #example
 * name[0].use = #temp
 * name[0].extension[nhi-name-use-extra].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/nhi-name-use-extra-code#BABYOF
 
-* birthDate = "1972-06-05"
+* birthDate = "1899-06-05"
 * birthDate.extension[information-source].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#HL7 "HL7 applied"
 
 * extension[nz-ethnicity].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/ethnic-group-level-4-code#21111 "Māori"
@@ -29,3 +29,5 @@ Usage: #example
 * address[=].city = "Palmerston North"
 * address[=].postalCode = "4412"
 * address[=].country = "NZ"
+
+
