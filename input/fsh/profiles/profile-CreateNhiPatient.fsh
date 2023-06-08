@@ -73,6 +73,9 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02101
 * obeys EM07225
 * obeys EM07212
+* obeys EM07212-1
+* obeys EM07215
+
 
  
 Invariant: EM02106
@@ -102,7 +105,7 @@ Expression: "(birthDate > @1900-01-01) and (birthDate < now())"
 Description: "birthdate must be after 1 January 1900, and not a future date"
 Severity: #error
 
-Invariant: EM07212
+Invariant: EM07212-1
 Expression: "deceasedDateTime < now()"
 Description: "Patient Date of Death date cannot be a future date."
 Severity: #error
