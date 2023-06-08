@@ -24,7 +24,7 @@ Usage: #example
 * address[0].extension[nz-address-id].valueString = "1199146"
 * address[=].extension[suburb].valueString = "Awapuni"
 * address[=].use = #home
-* address[=].type = #physical
+* address[=].type = #postal
 * address[=].line = "24 Anglesey Place"
 * address[=].city = "Palmerston North"
 * address[=].postalCode = "4412"

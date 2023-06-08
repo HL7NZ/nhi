@@ -71,6 +71,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM02106
 * obeys EM02201
 * obeys EM02101
+* obeys EM07225
 
  
 Invariant: EM02106
@@ -87,5 +88,10 @@ Description: "A Patient must have a primary residential address"
 Invariant: EM02101
 Expression: "Patient.name.exists() implies Patient.name.given.exists() or Patient.name.family.exists()"
 Description: "A Patient name must contain either a given or family name"
+Severity: #error
+
+Invariant: EM07225
+Expression: "name.where(use='temp').exists() implies (name.extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
+Description: "Baby of and unallocated names must have source of NPRF"
 Severity: #error
 
