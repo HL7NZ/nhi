@@ -110,7 +110,7 @@
 </tr>
 <tr>
 <td>create-patient</td>
-<td><a href ="create-patient.xml"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient </a></td>
+<td><a href ="OperationDefinition-createNhiPatientOperationDefinition.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient </a></td>
 <td>POST</td>
 <td> [base]/Patient/$update-eligibility</td>
 <td> An operation to replace a name on a patient's record.</td>

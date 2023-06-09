@@ -98,7 +98,12 @@ if (fs.existsSync(rootPath)) {
                         res.operation.forEach(function(int){
                             ar.push("<tr>")
                             ar.push(`<td>${int.name}</td>`)
-                            ar.push(`<td><a href ="${int.name}.xml"> ${int.definition} </a></td>`)
+                            //temporary workaround till we repalce all handcrafted xml definitiosn with OperationDefintiion instances
+                            if (int.name=="create-patient") {
+								ar.push(`<td><a href ="OperationDefinition-createNhiPatientOperationDefinition.html"> ${int.definition} </a></td>`)
+							}
+                            else
+                             	ar.push(`<td><a href ="${int.name}.xml"> ${int.definition} </a></td>`)
                           
                            	let documentation = int.documentation.split(',')
                            	let verb  = documentation[0] ?? " "
@@ -188,7 +193,7 @@ if (fs.existsSync(rootPath)) {
                         //ar.push("<br></br>")
                         let def = cleanText(ser.definition) || ""                        
                         ar.push(`<td>${def}</td>`)
-                        /ar.push("<br></br>")
+                        ar.push("<br></br>")
                         ar.push("</tr>")
                     
 					})
