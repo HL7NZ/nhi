@@ -6,6 +6,6 @@ Description: "Additional name use codes for NHI names"
 
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 * ^context.type = #element
-* ^context.expression = "Patient"
+* ^context.expression = "HumanName"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $nhi-name-use-extra-vs
