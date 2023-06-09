@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Description: "A custom operation to create a patient in the NHI"
 Usage: #example
 
-* url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-nhi-patient"
+* url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient"
 * version = "1.0.0"
 * name = "Create Patient"
 * title = "Create a new patient record in the NHI"

@@ -79,9 +79,11 @@ if (fs.existsSync(rootPath)) {
                             let verb  = documentation[0] ?? " "
                             let url = documentation[1] ?? " "
                             let doc = documentation[2] ?? " "
+                            let scope = documentation[3] ?? " "
 							ar.push(`<td>${verb}</td>`)
 							ar.push(`<td>${url}</td>`)
                             ar.push(`<td>${doc}</td>`)
+                            ar.push(`<td>${scope}</td>`)
                             ar.push("</tr>")
     
                         })
@@ -102,9 +104,11 @@ if (fs.existsSync(rootPath)) {
                            	let verb  = documentation[0] ?? " "
                            	let url = documentation[1] ?? " "
                            	let doc = documentation[2] ?? " "
+                           	let scope = documentation[3] ?? " "
                           	ar.push(`<td>${verb}</td>`)
 							ar.push(`<td>${url}</td>`)
                             ar.push(`<td>${doc}</td>`)
+                             ar.push(`<td>${scope}</td>`)
                             ar.push("</tr>")
     
                         })
