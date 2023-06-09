@@ -5,7 +5,7 @@ Usage: #example
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient"
 * version = "1.0.0"
-* name = "Create Patient"
+* name = "OperationDefinition-createNhiPatientOperationDefinition"
 * title = "Create a new patient record in the NHI"
 * status = #draft
 * kind = #operation

@@ -8,18 +8,18 @@
 <h5>Patient</h5>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='20%'>Code</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='50%'>Documentation</th></tr>
+<tr><th width='10%'>Name</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='50%'>Documentation</th><th width='10%'>Scope</th></tr>
 <tr>
 <td>read</td>
-<td>Used to retrieve a Patient resource by Id.  **HTTP Request** 'GET'  **Scope required:** patient:read / Patient.r</td>
-<td> </td>
-<td> </td>
-<td> </td>
+<td>GET</td>
+<td>[base]/Patient/[nhi-id]</td>
+<td> Used to retrieve a Patient resource by Id. </td>
+<td>patient:read / Patient.r</td>
 </tr>
 </table>
 <table class='table table-bordered table-condensed'>
 <strong>Operations</strong>
-<tr><th width='15%'>Name</th><th width='15%'>Definition</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th></tr>
+<tr><th width='10%'>Name</th><th width='10%'>Definition</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th><th width='10%'>Scope</th></tr>
 <tr>
 <td>match</td>
 <td><a href ="match.xml"> http://hl7.org/fhir/OperationDefinition/Patient-match </a></td>

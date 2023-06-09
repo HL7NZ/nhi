@@ -20,7 +20,8 @@ Usage: #definition
 * rest.resource.type = #Patient
 * rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
-* rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id.  **HTTP Request** 'GET'  **Scope required:** patient:read / Patient.r"
+//comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
+* rest.resource.interaction.documentation = "GET,[base]/Patient/[nhi-id], Used to retrieve a Patient resource by Id. ,patient:read / Patient.r"
 // * rest.resource.interaction[1].code = #patch
 // * rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
 // * rest.resource.interaction[2].code = #create
@@ -29,7 +30,7 @@ Usage: #definition
 // * rest.resource.interaction[3].documentation = "Not yet enabled"
 * rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
-//comma delimited fields in documentation string extracted by makeCaapbilityStatement.js:   <verb,url,do scope>
+//comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc, scope>
 * rest.resource.operation.documentation = "POST, [base]/Patient/$Match, /**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.,patient:validate / Patient.v"
 
 * rest.resource.operation[1].name = "set-preferred-name"

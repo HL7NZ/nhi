@@ -70,7 +70,7 @@ if (fs.existsSync(rootPath)) {
                     if (res.interaction) {
                         ar.push("<strong>Interactions</strong>")
                         ar.push("<table class='table table-bordered table-condensed'>")
-                        ar.push("<tr><th width='20%'>Code</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='50%'>Documentation</th></tr>")
+                        ar.push("<tr><th width='10%'>Name</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='50%'>Documentation</th><th width='10%'>Scope</th></tr>")
                         res.interaction.forEach(function(int){
                             ar.push("<tr>")
                             ar.push(`<td>${int.code}</td>`)
@@ -94,7 +94,7 @@ if (fs.existsSync(rootPath)) {
                         
                         ar.push("<table class='table table-bordered table-condensed'>")
                         ar.push("<strong>Operations</strong>")
-                        ar.push("<tr><th width='15%'>Name</th><th width='15%'>Definition</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th></tr>")
+                        ar.push("<tr><th width='10%'>Name</th><th width='10%'>Definition</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th><th width='10%'>Scope</th></tr>")
                         res.operation.forEach(function(int){
                             ar.push("<tr>")
                             ar.push(`<td>${int.name}</td>`)
