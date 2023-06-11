@@ -47,11 +47,13 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * extension[nzCitizen] 1..1
 * extension[nzCitizen].extension[source].valueCodeableConcept 1..1
 * extension[nzCitizen].extension[status] 1..1
+* extension[nzCitizen].extension[status].valueCodeableConcept 1..1
 
 // NHIPatient elements which should not be included in a create
 * implicitRules 0..0
 
 
+* id 0..0
 * language 0..0
 * extension[dhb] 0..0
 * identifier[NHI] 0..0
