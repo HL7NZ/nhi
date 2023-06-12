@@ -100,6 +100,7 @@ Expression: "Patient.name.all(given.exists() and family.exists())"
 Description: "A Patient name must contain either a given or family name"
 Severity: #error
 
+//only works if we only allow one name, otherwise one name could use temp as long as another has NPRF
 Invariant: EM07225
 Expression: "name.where(use='temp').exists() implies (name.extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
 Description: "Baby of and unallocated names must have source of NPRF"
@@ -121,4 +122,9 @@ Expression: "deceasedDateTime >= birthDate"
 Description: "Patient Date of Death date must be greater than, or equal to Date of Birth  "
 Severity: #error
 
-
+// doesn't work, don't know how to give it the address context
+//Invariant: EM04011
+//Expression: "extension.where(url='http://hl7.org.nz/fhir/StructureDefinition/nz-address-id').exists() implies line.exists()"
+//Description: "A validated address must have an address line"
+//Severity: #error
+//Context: address
