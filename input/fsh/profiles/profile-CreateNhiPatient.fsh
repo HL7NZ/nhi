@@ -43,6 +43,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * extension[ethnicity] 1..6
 * address 1..1
 * address.use 1..1
+* birthDate.extension[information-source].valueCodeableConcept 1..1
 * birthDate.extension[information-source] 1..1
 * extension[nzCitizen] 1..1
 * extension[nzCitizen].extension[source].valueCodeableConcept 1..1
@@ -64,9 +65,13 @@ Description:    "The information to be supplied when requesting that a new  Pati
 //required if element present
 * extension[birthPlace].extension[source] 1..1
 * extension[birthPlace].extension[country] 1..1
+* extension[birthPlace].extension[source] 1..1
+* extension[birthPlace].extension[source].valueCodeableConcept 1..1
 * extension[nzCitizen].extension[source] 1..1
 * deceasedDateTime.extension[information-source] 1..1
+* deceasedDateTime.extension[information-source].valueCodeableConcept 1..1
 * name.extension[information-source] 1..1
+* name.extension[information-source].valueCodeableConcept 1..1
 * name.extension[preferred] 1..1
 
 * obeys EM02106
