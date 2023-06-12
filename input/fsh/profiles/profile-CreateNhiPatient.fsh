@@ -53,7 +53,6 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * implicitRules 0..0
 
 
-* id 0..0
 * language 0..0
 * extension[dhb] 0..0
 * identifier[NHI] 0..0
