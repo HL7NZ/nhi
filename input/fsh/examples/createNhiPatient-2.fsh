@@ -1,6 +1,6 @@
-Instance: create2-error-no-preferred-name
+Instance: create2-error-
 InstanceOf: CreateNhiPatient
-Description: "example patient parameter for $create-patient request"
+Description: "example patient parameter for $create-patient request - errors no-preferred-name, not address line"
 Usage: #example
 
 * name[0].extension[preferred].valueBoolean = false

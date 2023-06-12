@@ -82,7 +82,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM07212-1
 * obeys EM07215
 
-
+//* address obeys EM04011
  
 Invariant: EM02106
 Expression: "Patient.name.extension.where((url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred') and (valueBoolean=true)).count()=1"
@@ -122,9 +122,9 @@ Expression: "deceasedDateTime >= birthDate"
 Description: "Patient Date of Death date must be greater than, or equal to Date of Birth  "
 Severity: #error
 
-// doesn't work, don't know how to give it the address context
+
 //Invariant: EM04011
 //Expression: "extension.where(url='http://hl7.org.nz/fhir/StructureDefinition/nz-address-id').exists() implies line.exists()"
 //Description: "A validated address must have an address line"
 //Severity: #error
-//Context: address
+

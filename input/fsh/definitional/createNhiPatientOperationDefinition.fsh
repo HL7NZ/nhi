@@ -1,7 +1,7 @@
 Instance: createNhiPatientOperationDefinition
 InstanceOf: OperationDefinition
 Description: "A custom operation to create a patient in the NHI"
-Usage: #example
+Usage: #definition
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient"
 * version = "1.0.0"
