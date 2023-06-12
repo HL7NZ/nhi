@@ -82,7 +82,8 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * obeys EM07212-1
 * obeys EM07215
 
-//* address obeys EM04011
+
+* name obeys EM07225
  
 Invariant: EM02106
 Expression: "Patient.name.extension.where((url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred') and (valueBoolean=true)).count()=1"
@@ -100,9 +101,9 @@ Expression: "Patient.name.all(given.exists() and family.exists())"
 Description: "A Patient name must contain either a given or family name"
 Severity: #error
 
-//only works if we only allow one name, otherwise one name could use temp as long as another has NPRF
+
 Invariant: EM07225
-Expression: "name.where(use='temp').exists() implies (name.extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
+Expression: "name.where(use='temp').exists() implies (extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
 Description: "Baby of and unallocated names must have source of NPRF"
 Severity: #error
 
@@ -123,8 +124,4 @@ Description: "Patient Date of Death date must be greater than, or equal to Date 
 Severity: #error
 
 
-//Invariant: EM04011
-//Expression: "extension.where(url='http://hl7.org.nz/fhir/StructureDefinition/nz-address-id').exists() implies line.exists()"
-//Description: "A validated address must have an address line"
-//Severity: #error
 
