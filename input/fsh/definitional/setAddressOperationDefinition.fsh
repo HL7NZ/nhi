@@ -1,6 +1,6 @@
 Instance: Patient-set-address
 InstanceOf: OperationDefinition
-Description: "A custom operation to Update a patient's address."
+Description: "A custom operation to update a patient's address."
 Usage: #definition
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
@@ -23,7 +23,7 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* parameter[0].name = #"set-address"
+* parameter[0].name = #"operation-type"
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
@@ -56,14 +56,14 @@ Usage: #definition
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "The id of the validated address as retuned by the eSAM address service" 
+* parameter[=].documentation = "The id of the validated address as returned by the eSAM address service" 
 
 * parameter[+].name = #"address-line"
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "The first line of the validated address as returned by eSAM"" 
+* parameter[=].documentation = "The first line of the validated address as returned by eSAM" 
 
 * parameter[+].name = #"address-building-name"
 * parameter[=].use = #in
