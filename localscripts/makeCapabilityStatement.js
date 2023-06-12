@@ -98,13 +98,10 @@ if (fs.existsSync(rootPath)) {
                         res.operation.forEach(function(int){
                             ar.push("<tr>")
                             ar.push(`<td>${int.name}</td>`)
-                            //temporary workaround till we repalce all handcrafted xml definitiosn with OperationDefintiion instances
-                            if (int.name=="create-patient") {
-								ar.push(`<td><a href ="OperationDefinition-createNhiPatientOperationDefinition.html"> ${int.definition} </a></td>`)
-							}
-                            else
-                             	ar.push(`<td><a href ="${int.name}.xml"> ${int.definition} </a></td>`)
-                          
+                            console.log('operation name ' + int.name)                           
+							ar.push(`<td><a href ="OperationDefinition-Patient-${int.name}.html"> ${int.definition} </a></td>`)
+							
+                                          
                            	let documentation = int.documentation.split(',')
                            	let verb  = documentation[0] ?? " "
                            	let url = documentation[1] ?? " "

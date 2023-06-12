@@ -1,12 +1,12 @@
 Instance: create3-errors
 InstanceOf: CreateNhiPatient
-Description: "example patient parameter for $create-patient request, errors:name must contain either a given or family name(EM02101),no primary address(EM02201), birthdate < 1900 (EM07212), deceasedDateTime < birthdate(EM07215)"
+Description: "example patient parameter for $create-patient request, errors:name must contain either a given or family name(EM02101),no primary address(EM02201), birthdate < 1900 (EM07212), deceasedDateTime < birthdate(EM07215), Baby of name source not NPRF (EM07225)"
 Usage: #example
 
 * name[0].extension[preferred].valueBoolean = true
 // no family ot given name - violates EM02101
 //* name[0].given = "ChewyBakA"
-* name[0].extension[information-source].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#NPRF "Proof not Sighted"
+* name[0].extension[information-source].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/information-source-code#GREG "Proof not Sighted"
 * name[0].use = #temp
 * name[0].extension[nhi-name-use-extra].valueCodeableConcept.coding = https://standards.digital.health.nz/ns/nhi-name-use-extra-code#BABYOF
 
