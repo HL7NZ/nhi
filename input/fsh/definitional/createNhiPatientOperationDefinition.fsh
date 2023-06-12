@@ -1,4 +1,4 @@
-Instance: createNhiPatientOperationDefinition
+Instance: Patient-create
 InstanceOf: OperationDefinition
 Description: "A custom operation to create a patient in the NHI"
 Usage: #definition
