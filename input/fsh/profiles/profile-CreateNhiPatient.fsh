@@ -96,7 +96,7 @@ Severity: #error
 Description: "A Patient must have a primary residential address"
 
 Invariant: EM02101
-Expression: "Patient.name.exists() implies Patient.name.given.exists() or Patient.name.family.exists()"
+Expression: "Patient.name.all(given.exists() and family.exists())"
 Description: "A Patient name must contain either a given or family name"
 Severity: #error
 
