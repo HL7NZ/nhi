@@ -109,8 +109,8 @@
 <td> system/Patient.u</td>
 </tr>
 <tr>
-<td>create-patient</td>
-<td><a href ="OperationDefinition-Patient-create-patient.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient </a></td>
+<td>create</td>
+<td><a href ="OperationDefinition-Patient-create.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient </a></td>
 <td>POST</td>
 <td> [base]/Patient/$update-eligibility</td>
 <td> An operation to replace a name on a patient's record.</td>

@@ -47,44 +47,33 @@ To ask an MPI to match a patient, clients use the &quot;$match&quot; operation, 
 * affectsState = false
 // need a value set for our custom operation names
 * code = #"match"
-* comment = "The NHI is validated, the versionId is validated, the parameters validated. If all request parameters are valid the included items are updated on the Patients NHI record."
+* comment = "The response is a bundle containing a patient record (validate) or records (match). For match the records are ordered from most likely to least likely. If there are no patient matches an empty search set with no error will be returned. All patient records SHALL have a search score from 0 to 1, where 1 is the most certain match, along with  \"match-grade\" that indicates the MPI's position on the match quality."
 * resource = #Patient
 * system = false
 * type = true
 * instance = false
-* parameter[0].name = #"operation-type"
+* parameter[0].name = #"resource"
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "Use this to provide an entire set of patient details for the MPI to match against (e.g.
-     POST a patient record to Patient/$match)."
+* parameter[=].documentation = "Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match)."
 * parameter[=].type = #Resource
 
 * parameter[+].name = #"onlyCertainMatches"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].documentation = """If there are multiple potential matches, then the match should not return the results
-     with this flag set to true.  When false, the server may return multiple results with each
-     result graded accordingly."""
+* parameter[=].documentation = "IWhen set to TRUE = Validate, When set to FALSE = NHI Search"
 * parameter[=].type = #boolean
-
-* parameter[+].name = #"version-id"
-* parameter[=].use = #in
-* parameter[=].min = 1
-* parameter[=].max = "1"
-* parameter[=].type = #string
-* parameter[=].documentation = "The current value of the patient resources meta.versionId"
-
 
 * parameter[+].name = #"count"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #integer
-* parameter[=].documentation = "The maximum number of records to return. If no value is provided, the server decides how
+* parameter[=].documentation = """The maximum number of records to return. If no value is provided, the server decides how
      many matches to return. Note that clients should be careful when using this, as it may
-     prevent probable - and valid - matches from being returned" 
+     prevent probable - and valid - matches from being returned""" 
 
 
 * parameter[+].name = #"return"
@@ -92,6 +81,6 @@ To ask an MPI to match a patient, clients use the &quot;$match&quot; operation, 
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #Patient
-* parameter[=].documentation = "The updated patient resource" 
+* parameter[=].documentation = "A bundle containing a set of Patient records that represent possible matches, optionally it may also contain an OperationOutcome with further information about the search results (such as warnings or information messages, such as a count of records that were close but eliminated) If the operation was unsuccessful, then an OperationOutcome may be returned along with a BadRequest status Code (e.g. security issue, or insufficient properties in patient fragment - check against profile)" 
 * parameter[=].type = #Bundle
 

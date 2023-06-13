@@ -81,14 +81,14 @@ Usage: #definition
 
 * parameter[+].name = #"preferred"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "attribute used to indicate whether the name is preferred or not" 
 
 * parameter[+].name = #"information-source"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "attribute used to indicate whether the name is preferred or not" 

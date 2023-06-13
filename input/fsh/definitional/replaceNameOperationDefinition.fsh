@@ -44,6 +44,13 @@ Usage: #definition
 * parameter[=].type = #string
 * parameter[=].documentation = "The current value of the patient resources meta.versionId"
 
+* parameter[+].name = #"replace-id"
+* parameter[=].use = #in
+* parameter[=].min = 1
+* parameter[=].max = "1"
+* parameter[=].type = #string
+* parameter[=].documentation = "The id for the name on the nhi to be replaced"
+
 * parameter[+].name = #"use"
 * parameter[=].use = #in
 * parameter[=].min = 0

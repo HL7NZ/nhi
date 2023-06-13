@@ -53,7 +53,7 @@ Usage: #definition
 
 * parameter[+].name = #"nz-address-id"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "The id of the validated address as returned by the eSAM address service" 

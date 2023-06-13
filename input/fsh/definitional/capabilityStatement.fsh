@@ -73,7 +73,7 @@ Usage: #definition
 * rest.resource.operation[10].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility"
 * rest.resource.operation[10].documentation = "POST, [base]/Patient/$update-eligibility, An operation to replace a name on a patient's record., system/Patient.u, system/Patient.a" 
 
-* rest.resource.operation[11].name = "create-patient"
+* rest.resource.operation[11].name = "create"
 * rest.resource.operation[11].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient"
 * rest.resource.operation[11].documentation = "POST, [base]/Patient/$update-eligibility, An operation to replace a name on a patient's record., system/Patient.u, system/Patient.a" 
 

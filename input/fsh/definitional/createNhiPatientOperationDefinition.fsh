@@ -5,7 +5,7 @@ Usage: #definition
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient"
 * version = "1.0.0"
-* name = "OperationDefinition-createNhiPatientOperationDefinition"
+* name = "Create Patient"
 * title = "Create a new patient record in the NHI"
 * status = #draft
 * kind = #operation
@@ -16,7 +16,7 @@ Usage: #definition
 * description = "create a patient in the NHI"
 * affectsState = true
 // need a value set for our custom operation names
-* code = #"create-patient"
+* code = #"create"
 * comment = "The patient information is validated. If all request parameters are valid the new patient is created in the NHI"
 * resource = #Patient
 * system = false

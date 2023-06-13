@@ -46,7 +46,7 @@ Usage: #definition
 
 * parameter[+].name = #"not-validated-address-reason"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "The reason the address could not be validated" 
