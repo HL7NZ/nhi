@@ -65,7 +65,7 @@
 <td><a href ="OperationDefinition-Patient-update-birth.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth </a></td>
 <td>POST</td>
 <td> [base]/Patient/$update-birth</td>
-<td> Uupdate a patient's self-identified demographic information's</td>
+<td> Update a patient's birth information</td>
 <td> system/Patient.u</td>
 </tr>
 <tr>
@@ -89,7 +89,7 @@
 <td><a href ="OperationDefinition-Patient-replace-name.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name </a></td>
 <td>POST</td>
 <td> [base]/Patient/$replace-name</td>
-<td> An operation to replace a name on a patient's record.  **HTTP Request** 'POST'.</td>
+<td> An operation to replace a name on a patient's record</td>
 <td> system/Patient.u</td>
 </tr>
 <tr>

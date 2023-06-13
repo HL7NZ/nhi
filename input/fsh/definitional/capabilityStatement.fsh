@@ -51,7 +51,7 @@ Usage: #definition
 
 * rest.resource.operation[5].name = "update-birth"
 * rest.resource.operation[5].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth"
-* rest.resource.operation[5].documentation = "POST, [base]/Patient/$update-birth, Uupdate a patient's self-identified demographic information's, system/Patient.u, system/Patient.a" 
+* rest.resource.operation[5].documentation = "POST, [base]/Patient/$update-birth, Update a patient's birth information, system/Patient.u, system/Patient.a" 
 
 * rest.resource.operation[6].name = "update-identity"
 * rest.resource.operation[6].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity"
@@ -63,7 +63,7 @@ Usage: #definition
 
 * rest.resource.operation[8].name = "replace-name"
 * rest.resource.operation[8].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-name"
-* rest.resource.operation[8].documentation = "POST, [base]/Patient/$replace-name, An operation to replace a name on a patient's record.  **HTTP Request** 'POST'., system/Patient.u, system/Patient.a" 
+* rest.resource.operation[8].documentation = "POST, [base]/Patient/$replace-name, An operation to replace a name on a patient's record, system/Patient.u, system/Patient.a" 
 
 * rest.resource.operation[9].name = "inactivate-name"
 * rest.resource.operation[9].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name"
