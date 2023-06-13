@@ -61,7 +61,7 @@ Usage: #definition
 * parameter[+].name = #"address-line"
 * parameter[=].use = #in
 * parameter[=].min = 1
-* parameter[=].max = "1"
+* parameter[=].max = "2"
 * parameter[=].type = #string
 * parameter[=].documentation = "The first line of the validated address as returned by eSAM" 
 

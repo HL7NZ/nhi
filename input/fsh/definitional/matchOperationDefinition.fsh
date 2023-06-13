@@ -57,7 +57,7 @@ To ask an MPI to match a patient, clients use the &quot;$match&quot; operation, 
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "Use this to provide an entire set of patient details for the MPI to match against (e.g. POST a patient record to Patient/$match)."
-* parameter[=].type = #Resource
+* parameter[=].type = #Patient
 
 * parameter[+].name = #"onlyCertainMatches"
 * parameter[=].use = #in

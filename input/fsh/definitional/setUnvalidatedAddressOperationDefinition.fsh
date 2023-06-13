@@ -72,7 +72,7 @@ Usage: #definition
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "The second line of the address" 
+* parameter[=].documentation = "The first line of the address" 
 
 * parameter[+].name = #"address-building-name"
 * parameter[=].use = #in
@@ -81,32 +81,32 @@ Usage: #definition
 * parameter[=].type = #string
 * parameter[=].documentation = "Building name if required as additional address information, not returned by eSAM" 
 
-* parameter[+].name = #"suburb"
+* parameter[+].name = #"address-suburb"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
 
-* parameter[+].name = #"city"
+* parameter[+].name = #"address-city"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
 
-* parameter[+].name = #"postal-code"
+* parameter[+].name = #"address-postal-code"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
 
-* parameter[+].name = #"country-code"
+* parameter[+].name = #"address-country-code"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "Must be supplied when not-validated-address-reason = OSEA and must not be ‘NZ’. When not-validated-address-reason not = OSEA and country-code is supplied it must be ‘NZ’ " 
 
-* parameter[+].name = #"domicile-code"
+* parameter[+].name = #"address-domicile-code"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
