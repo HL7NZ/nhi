@@ -50,7 +50,7 @@
 <td>POST</td>
 <td> [base]/Patient/$set-unvalidated-address</td>
 <td> Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address</td>
-<td>Patient.u</td>
+<td>system/Patient.u</td>
 </tr>
 <tr>
 <td>remove-postal-address</td>

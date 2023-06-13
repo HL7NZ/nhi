@@ -43,7 +43,7 @@ Usage: #definition
 
 * rest.resource.operation[3].name = "set-unvalidated-address"
 * rest.resource.operation[3].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address"
-* rest.resource.operation[3].documentation = "POST, [base]/Patient/$set-unvalidated-address, Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address,Patient.u" 
+* rest.resource.operation[3].documentation = "POST, [base]/Patient/$set-unvalidated-address, Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address,system/Patient.u" 
 
 * rest.resource.operation[4].name = "remove-postal-address"
 * rest.resource.operation[4].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address"
