@@ -1,6 +1,6 @@
 Instance: Patient-add-name
 InstanceOf: OperationDefinition
-Description: "A custom operation to create a patient in the NHI"
+Description: "A custom operation to add a name to a patient's NHI record"
 Usage: #definition
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name"

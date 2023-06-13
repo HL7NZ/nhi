@@ -1,6 +1,6 @@
 Instance: Patient-update-identity
 InstanceOf: OperationDefinition
-Description: "A custom operation toAn operation to update a patients self-identified demographic information."
+Description: "A custom operation to update a patient's self-identified demographic information."
 Usage: #definition
 
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-identity"

@@ -13,8 +13,8 @@
 <td>read</td>
 <td>GET</td>
 <td>[base]/Patient/[nhi-id]</td>
-<td> Used to retrieve a Patient resource by Id. </td>
-<td>patient:read / Patient.r</td>
+<td> Retrieve a Patient resource by Id </td>
+<td>system/Patient.r</td>
 </tr>
 </table>
 <table class='table table-bordered table-condensed'>
@@ -25,47 +25,47 @@
 <td><a href ="OperationDefinition-Patient-match.html"> http://hl7.org/fhir/OperationDefinition/Patient-match </a></td>
 <td>POST</td>
 <td> [base]/Patient/$Match</td>
-<td> /**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.</td>
-<td>patient:validate / Patient.v</td>
+<td> /**$Match (Find NHI)** with In parameter onlyCertainMatches: 0 (False) An operation to search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  **HTTP Request** 'POST'.  **Scope required:** patient:search / Patient.s.  **$Match (Validate)** with In parameter onlyCertainMatches: 1 (True) An operation to validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id</td>
+<td>system/Patient.v</td>
 </tr>
 <tr>
 <td>set-preferred-name</td>
 <td><a href ="OperationDefinition-Patient-set-preferred-name.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name </a></td>
 <td>POST</td>
 <td> [base]/Patient/$set-preferred-name</td>
-<td> An operation to set the patient.name.preferred boolean to True.</td>
-<td> patient:write / Patient.u</td>
+<td> Set the patient's preferred name</td>
+<td> system/Patient.u</td>
 </tr>
 <tr>
 <td>set-address</td>
 <td><a href ="OperationDefinition-Patient-set-address.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address </a></td>
 <td>POST</td>
 <td> [base]/Patient/$set-address</td>
-<td> Allows a user to replace a physical address OR add or replace a postal address with an eSAM validated address.</td>
-<td> patient:write / Patient.u</td>
+<td>Update a patient's address</td>
+<td> system/Patient.u</td>
 </tr>
 <tr>
 <td>set-unvalidated-address</td>
 <td><a href ="OperationDefinition-Patient-set-unvalidated-address.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-unvalidated-address </a></td>
 <td>POST</td>
 <td> [base]/Patient/$set-unvalidated-address</td>
-<td> Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address.</td>
-<td> patient:write / Patient.u</td>
+<td> Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address</td>
+<td>Patient.u</td>
 </tr>
 <tr>
 <td>remove-postal-address</td>
 <td><a href ="OperationDefinition-Patient-remove-postal-address.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/remove-postal-address </a></td>
 <td>POST</td>
 <td> [base]/Patient/$remove-postal-address</td>
-<td> Allows a user to remove a postal address from the nhi record.</td>
-<td>  patient:write / Patient.u</td>
+<td> Remove a patient's postal address</td>
+<td>system/Patient.u</td>
 </tr>
 <tr>
 <td>update-birth</td>
 <td><a href ="OperationDefinition-Patient-update-birth.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-birth </a></td>
 <td>POST</td>
 <td> [base]/Patient/$update-birth</td>
-<td> An operation to update a patient's birth details.</td>
+<td> Uupdate a patient's self-identified demographic information's</td>
 <td> system/Patient.u</td>
 </tr>
 <tr>
@@ -81,7 +81,7 @@
 <td><a href ="OperationDefinition-Patient-add-name.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-name </a></td>
 <td>POST</td>
 <td> [base]/Patient/$add-name</td>
-<td> An operation to add a name to a patient's NHI record.</td>
+<td> Add a name to a patient's NHI record</td>
 <td> system/Patient.u</td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@
 <td><a href ="OperationDefinition-Patient-inactivate-name.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/inactivate-name </a></td>
 <td>POST</td>
 <td> [base]/Patient/$inactivate-name</td>
-<td> An operation to replace a name on a patient's record. </td>
+<td> Inactivate a name that is currently active on a patients record </td>
 <td>system/Patient.u</td>
 </tr>
 <tr>
@@ -105,16 +105,16 @@
 <td><a href ="OperationDefinition-Patient-update-eligibility.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-eligibility </a></td>
 <td>POST</td>
 <td> [base]/Patient/$update-eligibility</td>
-<td> An operation to replace a name on a patient's record.</td>
+<td> Update a patient's citizenship information</td>
 <td> system/Patient.u</td>
 </tr>
 <tr>
 <td>create</td>
 <td><a href ="OperationDefinition-Patient-create.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/create-patient </a></td>
 <td>POST</td>
-<td> [base]/Patient/$update-eligibility</td>
-<td> An operation to replace a name on a patient's record.</td>
-<td> system/Patient.u</td>
+<td> [base]/Patient/$create</td>
+<td>Create a new patient record in the NHI</td>
+<td> system/Patient.c</td>
 </tr>
 </table>
 </div>
