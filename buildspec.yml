@@ -52,6 +52,7 @@ phases:
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
        # deploy the nhi conformance artefacts
+      
       - mvn deploy
       - echo checking in full-ig.zip
       - git add ./output/full-ig.zip
