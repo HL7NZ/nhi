@@ -1,8 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>nhi-HL7NZ</groupId>
-	<artifactId>nhi-HL7NZ</artifactId>
+	<groupId>nz.health.digital.nhi.fhir</groupId>
+	<artifactId>hip-nhi-conformance-module</artifactId>
 	<version>1.4.0-SAPSHOT</version>
+	
 
 
 	<properties>
@@ -68,7 +69,7 @@
 				<version>2.5.2</version>
 				<executions>
 					<execution>
-						<phase>deploy</phase>
+						<phase>install</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
