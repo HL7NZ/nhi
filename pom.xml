@@ -21,6 +21,18 @@
 			<type>zip</type>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>MoH Nexus repository - releases</name>
+			<url>${releases.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>MoH Nexus repository - snapshots</name>
+			<url>${snapshots.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<plugins>
 
