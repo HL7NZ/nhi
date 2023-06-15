@@ -45,7 +45,7 @@ phases:
       - ls
       - echo getting dependencies
       #- mvn package -ntp
-      - mvn package
+      - mvn validate
       - echo building IG
       - ls -l
       - ls -l ./hfc_package
