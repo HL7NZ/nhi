@@ -37,12 +37,13 @@ Description:    "The information to be supplied when requesting that a new  Pati
 //* obeys nhi-nz-create-3
 
 //required elements
-* name 1..*
+* name 1..1
 * birthDate 1..1
 * gender 1..1
 * extension[ethnicity] 1..6
 * address 1..1
 * address.use 1..1
+* address.line 1..2
 * birthDate.extension[information-source].valueCodeableConcept 1..1
 * birthDate.extension[information-source] 1..1
 * extension[nzCitizen] 1..1
@@ -73,6 +74,9 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * name.extension[information-source] 1..1
 * name.extension[information-source].valueCodeableConcept 1..1
 * name.extension[preferred] 1..1
+
+//other cardinality ruels
+* name.prefix 0..1
 
 * obeys EM02106
 * obeys EM02201
