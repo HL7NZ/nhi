@@ -91,7 +91,7 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "attribute used to indicate whether the name is preferred or not" 
+* parameter[=].documentation = "The information source for the patient's name" 
 
 * parameter[+].name = #"nhi-name-use-extra"
 * parameter[=].use = #in

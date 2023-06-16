@@ -63,7 +63,7 @@ To ask an MPI to match a patient, clients use the &quot;$match&quot; operation, 
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].documentation = "IWhen set to TRUE = Validate, When set to FALSE = NHI Search"
+* parameter[=].documentation = "When set to TRUE = Validate, When set to FALSE = NHI Search"
 * parameter[=].type = #boolean
 
 * parameter[+].name = #"count"

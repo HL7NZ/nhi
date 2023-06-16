@@ -64,7 +64,7 @@ Usage: #definition
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "he patient's country of birth" 
+* parameter[=].documentation = "The patient's country of birth" 
 
 * parameter[+].name = #"country-of-birth-information-source"
 * parameter[=].use = #in

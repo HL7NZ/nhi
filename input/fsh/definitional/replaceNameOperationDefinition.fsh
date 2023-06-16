@@ -48,7 +48,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].type = #string
+* parameter[=].type = #integer
 * parameter[=].documentation = "The id for the name on the nhi to be replaced"
 
 * parameter[+].name = #"use"
@@ -98,7 +98,7 @@ Usage: #definition
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "attribute used to indicate whether the name is preferred or not" 
+* parameter[=].documentation = "The information source for the patient's name" 
 
 * parameter[+].name = #"nhi-name-use-extra"
 * parameter[=].use = #in
