@@ -3,6 +3,8 @@ env:
     secrets-manager:
       GITUSERNAME: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:username'
       GITTOKEN: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:token'
+      MAVEN_USER: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.username:hip-secrets.nexus.username'
+      MAVEN_PASSWORD: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.password:hip-secrets.nexus.password'
     
     
 phases:
@@ -16,7 +18,7 @@ phases:
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/settings-clean.xml - | envsubst > /root/.m2/settings.xml  
       - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar  >/dev/null 2>&1
       - cp publisher.jar ~/publisher.jar
-      # gettign  a 404 from githunb so getting this from s3
+      # gettign  a 404 from github so getting this from s3
       # - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar  >/dev/null 2>&1     
       # - cp validator_cli.jar ~/validator_cli.jar 
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/validator_cli.jar ~/validator_cli.jar
@@ -39,20 +41,24 @@ phases:
     commands:
       - ls 
       - rm -r nhi 
-      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi      
+      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi   
       - cd nhi
       - git checkout $BRANCH
       - ls
       - echo getting dependencies
       #- mvn package -ntp
-      - mvn package
+      # unpackage dependancy conformance artifact zips
+      - mvn validate
       - echo building IG
       - ls -l
       - ls -l ./hfc_package
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
+       # deploy the nhi conformance artifacts
+      
+      - mvn deploy
       - echo checking in full-ig.zip
-      - git add ./output/full-ig.zip
+      - git add -f ./output/full-ig.zip
       - git commit -m "new IG build"
       - git push
       
