@@ -3,6 +3,8 @@ env:
     secrets-manager:
       GITUSERNAME: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:username'
       GITTOKEN: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:token'
+      MAVEN_USER: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.username:hip-secrets.nexus.username'
+      MAVEN_PASSWORD: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.password:hip-secrets.nexus.password'
     
     
 phases:
@@ -55,7 +57,7 @@ phases:
       
       - mvn deploy
       - echo checking in full-ig.zip
-      - git add ./output/full-ig.zip
+      - git add -f ./output/full-ig.zip
       - git commit -m "new IG build"
       - git push
       
