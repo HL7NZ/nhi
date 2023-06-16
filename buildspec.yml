@@ -47,13 +47,14 @@ phases:
       - ls
       - echo getting dependencies
       #- mvn package -ntp
+      # unpackage dependancy conformance artifact zips
       - mvn validate
       - echo building IG
       - ls -l
       - ls -l ./hfc_package
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
-       # deploy the nhi conformance artefacts
+       # deploy the nhi conformance artifacts
       
       - mvn deploy
       - echo checking in full-ig.zip
