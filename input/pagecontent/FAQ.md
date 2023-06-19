@@ -11,7 +11,7 @@ The [NHI $match operation](/matchPatient.html) processes a parameters resource c
 
 
 ### Can I use age range instead of date of birth when searching for a patient?
-The standard FHIR $Match on patient does not allow an age range parameter. A year and month or year only can be used if the exact birthdate is not known. An extension to allow an age-range parameter is being considered [Please contact the integration](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if this is something that would benefit you.
+The standard FHIR $Match on patient does not allow an age range parameter. A year and month or year only can be used if the exact birthdate is not known. An extension to allow an age-range parameter is being considered [Please contact the integration team](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if this is something that would benefit you.
 
 
 
