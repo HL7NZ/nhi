@@ -52,7 +52,7 @@ The user has sourced the required identity information, and initiates a create r
 ---
  
 
-* _Add Patient errors_
+* _Create Patient errors_
   * _Name is required_
   * _birth date is a required field_
   * _Gender is a required field_
