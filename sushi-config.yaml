@@ -21,7 +21,7 @@ description: The FHIR  API for the NHI
 license: CC0-1.0
 dependencies:
   fhir.org.nz.ig.base:
-    uri: 'https://fhir.org.nz/ig/base'
+    uri: 'https://fhir.org.nz/ig/base/'
     #version: 1.0.0
 
     #uri: 'http://fhir.org.nz/ig/base'
