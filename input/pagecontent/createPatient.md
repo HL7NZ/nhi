@@ -202,17 +202,11 @@ The user has sourced the required identity information, done a thorough search o
 
 
 ##### Create Patient - Address rules
-* A Patient must have a single Primary Residential Address
-  * use = home
-  * type = physical
+* A Patient must have a single Primary Residential Address (type = physical)
 * An acceptable Patient Address must be: 
   * Validated by an Address Service; OR 
   * User Qualified with a NotValidatedAddressReason 
-* A Patient can have a maximum of one residential and one mailing address (1 x address type=physical and 1 x type= postal)
-* A residential address must have at least one of: 
-  * domicile code (source - eSAM domicile code), 
-  * notional domicile code (source – web service call to location lookup file using address parameters), 
-  * notional domicile code (source - optional web service request address parameter)}
+* A Patient can have a maximum of one residential and one mailing address (1 x address type = physical and 1 x type = postal)
 * A Validated Address must include:
   * a valid nz-address-id
   * Address-line-1 (that matches the address-line-1 returned by eSAM)
@@ -227,7 +221,6 @@ The user has sourced the required identity information, done a thorough search o
   * address-type
   * address-line-1
   * [Enough address information](/updateAddress.html#future-functionality-for-domicile-code) for the domicile code and DHB to be derived, if not, a domicile code must be supplied.
-
 * An unvalidated-address may include:
   * address-building-name
   * address-line-2
