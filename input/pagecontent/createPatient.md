@@ -225,7 +225,9 @@ The user has sourced the required identity information, done a thorough search o
 * An unvalidated-address must include:
   * not-validated-address-reason
   * address-type
-  * address-line-1 
+  * address-line-1
+  * [Enough address information](/updateAddress.html#future-functionality-for-domicile-code) for the domicile code and DHB to be derived, if not, a domicile code must be supplied.
+
 * An unvalidated-address may include:
   * address-building-name
   * address-line-2
