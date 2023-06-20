@@ -47,7 +47,7 @@ menu:
     Get patient: getPatient.html
     Match patient: matchPatient.html
     Validate patient: validatePatient.html
-    Add patient: addPatient.html
+    Create patient: createPatient.html
     Update name: updateName.html
     Update address: updateAddress.html
     Update identity: updateIdentity.html
