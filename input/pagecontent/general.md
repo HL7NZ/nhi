@@ -286,6 +286,7 @@ table, th, td {
 <tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.s </td><td> Search (Match) access to Patient resources </td></tr>
 <tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.v </td><td> Access to Patient resources to vaidate a patient only </td></tr>
 <tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.u </td><td> Update access to all Patient resources </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/Patient.c </td><td> Create access to Patient resource </td></tr>
 </table>
 
 * Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
