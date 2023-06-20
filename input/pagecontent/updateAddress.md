@@ -134,7 +134,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Patient set-address rules
-* All [add address rules apply](/addPatient.html#add-patient-address-rules), and
+* All [create patient address rules apply](/createPatient.html#create-patient-address-rules), and
 * A Patient Update request must contain the live NHI number for the Patient Record
 * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
 * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
@@ -325,7 +325,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Patient set-unvalidated-address rules
-  * All [add address rules apply](/addPatient.html#add-patient-address-rules), and
+  * All [create patient address rules apply](/createPatient.html#create-patient-address-rules), and
   * A Patient Update request must contain the live NHI number for the Patient Record
   * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
   * A request must not result in information, removed from a Patient Record by the NHI Administration team being added
@@ -423,7 +423,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Patient remove-postal-address rules
-* All [add address rules apply](/addPatient.html#add-patient-address-rules), and
+* All [create patient address rules apply](/createPatient.html#create-patient-address-rules), and
 * A Patient Update request must contain the live NHI number for the Patient Record
 * A system must source the most recent Patient Record from the NHI before creating a request to update the Patient record
 
