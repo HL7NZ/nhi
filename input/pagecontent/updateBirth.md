@@ -163,7 +163,7 @@ table, th, td {
 ---
 
 ##### Update-birth birthdate rules
-* All [add patient birthdate rules apply](/addPatient.html#add-patient-birthdate-rules) and,
+* All [create patient birthdate rules apply](/createPatient.html#create-patient-birthdate-rules) and,
 * An update will replace the current value
 
 
@@ -180,7 +180,7 @@ table, th, td {
 
 
 ##### Update-birth birthplace rules
-* All [add patient birthplace rules apply](/addPatient.html#add-patient-birthplace-rules) and,
+* All [create patient birthplace rules apply](/createPatient.html#create-patient-birthplace-rules) and,
 * A request to update place-of-birth must also update country-of-birth
 * A request to update country of birth must also update country-of-birth-information-source
 * birth-place cannot be updated if source is ‘registered’ (BREG) [See Glossary](/glossary.html#birthplace-definitions)
