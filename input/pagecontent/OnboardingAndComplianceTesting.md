@@ -25,10 +25,7 @@ If you require help or have any questions regarding the onboarding process, plea
 
 
 
-### Compliance testing
-
-
-#### Testing Process
+### Compliance testing process
 
 Provide the following details in a test report and email to [integration@health.govt.nz](mailto:integration@health.govt.nz).
 
@@ -52,6 +49,8 @@ Provide the following details in a test report and email to [integration@health.
 
 3. For each test supply a timestamp when each request is sent.
 
+
+### Compliance tests
 
 <h4>Security and Audit Assessment</h4>
 <table>
@@ -116,7 +115,7 @@ table, th, td {
 <td>Recommended</td></tr>
 </table>
 
-<h3>NHI Patient GET tests</h3>
+<h4>NHI Patient GET tests</h4>
 <table>
 <style>
 table, th, td {
@@ -238,7 +237,7 @@ ZUA48EH</td>
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient GET tests (enrolled GP and contact details only)</h3>
+<h4>NHI Patient GET tests (enrolled GP and contact details only)</h4>
 <table>
 <style>
 table, th, td {
@@ -279,7 +278,7 @@ table, th, td {
 <td>*Mandatory if </td></tr>
 </table>
 
-<h3>NHI Patient Match tests</h3>
+<h4>NHI Patient Match tests</h4>
 <table>
 <style>
 table, th, td {
@@ -369,7 +368,7 @@ DOB: 31-12-1999 </td>
 <td>mandatory</td></tr>
 </table>
 
-<h3>NHI Patient Match tests (Minimum data requirements)</h3>
+<h4>NHI Patient Match tests (Minimum data requirements)</h4>
 <table>
 <style>
 table, th, td {
@@ -377,7 +376,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you are not implementing Patient Read and completing the ‘NHI Patient GET tests’** </caption>
+<caption> Only complete these if you are implementing <b>Patient $Match</b> prior to <b>Get Patient</b> and therefore need to prove minimum data requirements are met. Please discuss this with the integration team prior to submitting your compliance tests to make sure the use case is valid </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -553,7 +552,7 @@ Output: Order of name parts is clear to the user </td>
 </table>
 
 
-<h3>NHI Patient Maintain Address tests</h3>
+<h4>NHI Patient Maintain Address tests</h4>
 <table>
 <style>
 table, th, td {
@@ -650,7 +649,7 @@ Output: The address that is displayed to the end user is the address that is ret
 </table>
 
 
-<h3>NHI Patient Maintain Name tests</h3>
+<h4>NHI Patient Maintain Name tests</h4>
 <table>
 <style>
 table, th, td {
@@ -887,7 +886,7 @@ Output:
 </table>
 
 
-<h3>NHI Patient Maintain 'Core' tests</h3>
+<h4>NHI Patient Maintain 'Core' tests</h4>
 <table>
 <style>
 table, th, td {
@@ -1048,7 +1047,7 @@ Ethnicities to use:<br />
 </table>
 
 
-<h3>NHI Patient Add tests - TBC</h3>
+<h4>NHI Patient Add tests - TBC</h4>
 <table>
 <style>
 table, th, td {
@@ -1152,7 +1151,7 @@ Create a false identity to use (this can be done using http://www.fakenamegenera
 <td>Mandatory</td></tr>
 </table>
 
-<h3>NHI Patient Add error tests</h3>
+<h4>NHI Patient Add error tests</h4>
 <table>
 <style>
 table, th, td {
