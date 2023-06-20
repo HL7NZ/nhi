@@ -57,7 +57,7 @@ table, th, td {
 <tr><td> 'Patient resource' </td>
 <td> Resource </td>
 <td> Mandatory </td>
-<td> See match request example (link below) </td></tr>
+<td> <a href="matchExample.html">$match request Patient resource examples</a> </td></tr>
 
 <tr><td> onlyCertainMatches: 0 (False) </td>
 <td> boolean </td>
@@ -90,9 +90,9 @@ Note: To be more FHIR compliant this will be changed to return:
 
 #### Privcy requirements
 
-* Te Whatu Ora does not require a Get to be done after a match request
-* Te Whatu Ora will log details of each NHI returned by a match operation so that any privacy requests from people wanting to know which organisations and users have retrieved their NHI record, can be responded to
-* Integrating systems should also ensure they have sufficient logging in place to respond to similar requests
+* Te Whatu Ora does not require a Get to be done after a match request.
+* Te Whatu Ora will log details of each NHI returned by a $match operation so that any privacy requests from people wanting to know which organisations and users have retrieved their NHI record, can be responded to.
+* Integrating systems should also ensure they have sufficient logging in place to respond to similar requests.
 
 #### Example request
 
