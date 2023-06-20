@@ -1,22 +1,22 @@
 
 
-### Add Patient Overview
+### Create Patient Overview
 
-An ‘Add Patient’ interaction is initiated by a user who needs to add a new identity record for a person to the Patient Index. <br />
-The user has sourced the required identity information, and initiates an add request to create a patient identity record in the NHI.
+The ‘Create Patient’ interaction is initiated by a user who needs to create a new identity record for a person not found on the NHI. <br />
+The user has sourced the required identity information, done a thorough search of the NHI, and initiates a request to create a new patient identity record in the NHI.
 
 **Expectations**
 * Prior to adding a new identity record to the NHI an authorised user must complete a thorough [search of the NHI](/matchPatient.html) to ensure the patient does not already exist.
 * Duplicate NHI records will not be checked upfront, but will create a task for a potential duplicate to be resolved.
-* If the Patient is found in the NHI, then an _update operation_ is required. If not found then a new identitiy record may be added, see below.
+* If the Patient is found in the NHI, then an _update operation_ is required (See use cases for available operations). If not found then a new identitiy record may be created.
 
 <div>
-{% include add-patient.svg %}
+{% include create-patient.svg %}
 </div>
 
-#### NHI FHIR Add Patient processing steps:
+#### NHI FHIR Create Patient processing steps:
 
-1. The user initiates creating a new Patient in the integrating application
+1. The user initiates creating a new patient in the integrating application
 2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details E.g. Post\<Endpoint>/Patient
 3. The request is validated - ALT: Validation failure. OperationOutcome resource returned
 4. A Patient record is created and a Patient ID (nhi-id) is issued
@@ -24,15 +24,15 @@ The user has sourced the required identity information, and initiates an add req
 6. The integrating application indicates to the user the create has been successful
 7. The integrating application retains the nhi-id and version number for future requests relating to this record
 
-#### Add Patient rules and errors
+#### Create Patient rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-##### Add Patient rules
+##### Create Patient rules
 
-* An Add Patient request must not create an NHI record which is a duplicate of another Patient’s identity
+* A Create Patient request must not create an NHI record which is a duplicate of another Patient’s identity
 
-* An add Patient request must include a:
+* A Create Patient request must include a:
   * [preferred name](/StructureDefinition-NhiPatient-definitions.html#Patient.name),
   * [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate),
   * [gender](/StructureDefinition-NhiPatient-definitions.html#Patient.gender),
@@ -44,16 +44,15 @@ The user has sourced the required identity information, and initiates an add req
   
 * A request must update the source of information only when the information is also provided (birthdate, country of birth, nz citizenship, deceased date, name). 
 
-* An add Patient request may include a:
+* A Create Patient request may include a:
   *  birthplace
   *  deceased date
-  *  postal address (TBC) 
 
 
 ---
  
 
-* _Add Patient errors_
+* _Create Patient errors_
   * _Name is required_
   * _birth date is a required field_
   * _Gender is a required field_
@@ -65,7 +64,7 @@ The user has sourced the required identity information, and initiates an add req
 
 
 
-##### Add Patient Name rules
+##### Create Patient - Name rules
 * A Patient must have:
   * at least one Active Name
   * one, and only one, Active Name which is preferred.
@@ -98,7 +97,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Name errors_
+* _Create Patient - Name errors_
   * A Patient must have only one active Preferred Name
   * _A Patient name must contain either a Given name or a Surname and a Name Type, a preferred name flag and an information source_
   * _A Baby of name must have source = NPRF, name use = temp_
@@ -111,7 +110,7 @@ The user has sourced the required identity information, and initiates an add req
 
 
 
-##### Add Patient Birthdate rules
+##### Create Patient - Birthdate rules
 * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
 * A birthdate must be a complete date and formatted either:
   * YYYYMMDD - DOB less than or equal to the current date;
@@ -124,13 +123,14 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Birthdate errors_
+* _Create Patient - Birthdate errors_
   * _Patient Birthdate must be after After 1 January 1900 AND cannot be a future date_
   * _A patient Birthdate is required when a patient Birthdate information source is present_
   * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
 
 
-##### Add Patient Ethnicity rules
+
+##### Create Patient - Ethnicity rules
 * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
 * A Patient must supply all ethnicities identified with when supplying ethnicity information
 * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
@@ -139,11 +139,12 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Ethnicity errors_
+* _Create Patient - Ethnicity errors_
   * _A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code_
 
 
-##### Add Patient NZ Citizenship rules
+
+##### Create Patient - NZ Citizenship rules
 *  A Patient must have a NZ citizenship status
 *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
 
@@ -151,11 +152,11 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient NZ Citizenship errors_
+* _Create Patient - NZ Citizenship errors_
   * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
 
 
-##### Add Patient Birthplace rules
+##### Create Patient - Birthplace rules
 * A place of birth must only be populated if a country of birth is present
 * A request to populate the Country of Birth Information Source must also populate the Country of Birth
 
@@ -163,12 +164,12 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Birthplace errors_
+* _Create Patient - Birthplace errors_
   * _Country of birth is required when a place of birth is present_
   * _A Country of birth is required when a Country of Birth Information Source is present_
 
 
-##### Add Patient Deceased date rules
+##### Create Patient - Deceased date rules
 * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
 * deceased date must be a complete date and formatted either;
   * YYYYMMDD - DOD less than or equal to the current date;
@@ -181,20 +182,26 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Deceased date errors_
+* _Create Patient - Deceased date errors_
   * _Patient Date of death cannot be a future date_
   * _A patient Date of Death is required when a patient Date of Death information source is present_
   * _Deceased date can only be set to ‘Registered’ by an authorised Agency_
   * _The Date of Birth must be less than or equal to the Date of Death_
 
 
-##### Add Patient Gender Rules
+##### Create Patient - Gender Rules
 *  A Patient must have a current gender, supplied as a valid gender code.
 *  A Patient may have a gender-original-text response
   * If supplied, both gender code and gender-original-text will be recorded in the NHI.
 
 
-##### Add Patient Address rules
+---
+
+
+* _Create Patient - Gender errors_
+
+
+##### Create Patient - Address rules
 * A Patient must have a single Primary Residential Address
   * use = home
   * type = physical
@@ -235,7 +242,7 @@ The user has sourced the required identity information, and initiates an add req
 ---
 
 
-* _Add Patient Address errors_
+* _Create Patient - Address errors_
   * _A Patient must have a primary residential address_
   * _A Patient Address must either be validated by the MoH address service, or have a qualifier to indicate why the address cannot be validated_
   * _A residential address must have a notional domicile code_
