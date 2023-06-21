@@ -48,7 +48,7 @@ Information is received by the hospital or provider that patient information has
   2. Read the patients file from the NHI [Get Patient.](/getPatient.html)
   3. Confirm the record belongs to the patient.
   4. Notice discrepancy between local and NHI record.
-  5. Ring or email Te Whatu Ora contact centre so discrepancy can be updated.
+  5. Contact the Te Whatu Ora contact centre (0800 855 066) so discrepancy can be updated.
 
 
 #### A user needs to validate an NHI number.
