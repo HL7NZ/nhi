@@ -31,5 +31,13 @@ This should output the build logs and full-ig.zip to the S3 bucket
 ###  Deploying the IG
 Check in your changes including the new full-ig.zip to github. Amplify will autobuild on commit  
 
+### Release
+
+1. merge to master
+2. change version in pom and sushi-config.yaml
+3. checkin
+4. create tag
+5. create branch from tag and push
+6. change codebuild to point to branch and run
 
 

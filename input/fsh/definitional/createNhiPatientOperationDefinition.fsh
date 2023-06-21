@@ -21,7 +21,7 @@ Usage: #definition
 * resource = #Patient
 * system = false
 * type = true
-* instance = true
+* instance = false
 * parameter[0].name = #"operation-type"
 * parameter[0].use = #in
 * parameter[0].min = 1

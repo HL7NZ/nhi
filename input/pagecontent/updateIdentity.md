@@ -168,11 +168,11 @@ table, th, td {
   * Not populate the request parameter to retain the existing NHI value for that parameter
 
 ##### Update-identity Gender rules
-* All [add patient gender rules apply](/addPatient.html#add-patient-gender-rules) and,
+* All [create patient gender rules apply](/createPatient.html#create-patient-gender-rules) and,
 * An update request will replace the current gender code or gender original text.
   
 ##### Update-identity Ethnicity rules
-* All [add patient ethnicity rules apply](/addPatient.html#add-patient-ethnicity-rules) and,
+* All [create patient ethnicity rules apply](/createPatient.html#create-patient-ethnicity-rules) and,
 * A full set of ethnicities is required for an update and will replace the current set.
 
 

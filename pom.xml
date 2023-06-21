@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nz.health.digital.nhi.fhir</groupId>
 	<artifactId>hip-nhi-conformance-module</artifactId>
-	<version>1.4.0</version>
+	<version>1.4.3</version>
 
 
 	<properties>
-		<revision>1.4.0</revision>
+		<revision>1.4.3</revision>
 		<fhir-common.version>1.2.0</fhir-common.version>
 
 	</properties>
@@ -74,7 +74,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -82,7 +82,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
+							
 							<descriptors>
 								<descriptor>assembly/spec-zip.xml</descriptor>
 							</descriptors>

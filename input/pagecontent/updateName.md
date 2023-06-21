@@ -112,7 +112,7 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Set-preferred-name rules
-  * An update request must contain:
+  * A set-preferred-name request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
     * the preferred-id.
@@ -284,8 +284,8 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Add-name rules
-  * All Add Patient [name rules](/addPatient.html#add-patient-name-rules) apply, and
-  * An update request must contain:
+  * All [create patient name rules](/createPatient.html#create-patient-name-rules) apply, and
+  * An add-name request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
   * An update name request must not create a duplicate of an existing name for an NHI number [see glossary for name definitions](/glossary.html)
@@ -475,8 +475,8 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Replace-name rules
-  * All Add Patient [name rules](/addPatient.html#add-patient-name-rules) apply, and
-  * An replace name update request must contain:
+  * All [create patient name rules](/createPatient.html#create-patient-name-rules) apply, and
+  * An replace-name request must contain:
     * the live NHI number for the Patient Record.
     * the version number of the current Patient Record.
     * the replace-id (set-id for name being replaced).
@@ -609,13 +609,14 @@ table, th, td {
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 ##### Inactivate-name rules
-* An Inactivate name update request must contain:
+* All [create patient name rules](/createPatient.html#create-patient-name-rules) apply, and
+* An Inactivate-name request must contain:
   * the live NHI number for the Patient Record.
   * the version number of the current Patient Record.
-  * the inactivate-id (set-id for name being inactivated)
+  * the inactivate-id (set-id for name being inactivated).
 * A request must not result in modification of information confirmed by authorised Agency (“registered” information).
 * A request may modify active patient information which is not ‘registered’ or verified’ information.
-* An existing name must be active to be updated
+* An existing name must be active to be updated.
 
 
 ---
