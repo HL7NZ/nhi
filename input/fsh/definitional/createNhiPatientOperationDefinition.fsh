@@ -39,7 +39,7 @@ Usage: #definition
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].type = #NhiPatient
+* parameter[=].type = #Patient
 * parameter[=].documentation = "The updated patient resource" 
 
 
