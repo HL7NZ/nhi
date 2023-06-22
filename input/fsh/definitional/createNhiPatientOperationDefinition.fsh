@@ -35,4 +35,11 @@ Usage: #definition
 * parameter[1].type = #Patient
 * parameter[1].targetProfile = "http://hl7.org.nz/fhir/StructureDefinition/CreateNhiPatient"
 * parameter[1].documentation = "Patient demographic information"
+* parameter[+].name = #"return"
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #NhiPatient
+* parameter[=].documentation = "The updated patient resource" 
+
 
