@@ -28,12 +28,14 @@ Usage: #definition
 * parameter[0].max = "1"
 * parameter[0].documentation = "Must be $create-patient"
 * parameter[0].type = #string
+
 * parameter[1].name = #"patient"
 * parameter[1].use = #in
 * parameter[1].min = 1
 * parameter[1].max = "1"
 * parameter[1].type = #Patient
 * parameter[1].targetProfile = "http://hl7.org.nz/fhir/StructureDefinition/CreateNhiPatient"
+
 * parameter[1].documentation = "Patient demographic information"
 * parameter[+].name = #"return"
 * parameter[=].use = #out
@@ -41,5 +43,12 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].type = #Patient
 * parameter[=].documentation = "The updated patient resource" 
+
+* parameter[+].name = #"failure"
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #OperationOutcome
+* parameter[=].documentation = "Error response" 
 
 

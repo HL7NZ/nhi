@@ -110,3 +110,10 @@ Usage: #definition
 * parameter[=].type = #Patient
 * parameter[=].documentation = "The updated patient resource" 
 
+* parameter[+].name = #"failure"
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #OperationOutcome
+* parameter[=].documentation = "Error response" 
+

@@ -84,3 +84,10 @@ To ask an MPI to match a patient, clients use the &quot;$match&quot; operation, 
 * parameter[=].documentation = "A bundle containing a set of Patient records that represent possible matches, optionally it may also contain an OperationOutcome with further information about the search results (such as warnings or information messages, such as a count of records that were close but eliminated) If the operation was unsuccessful, then an OperationOutcome may be returned along with a BadRequest status Code (e.g. security issue, or insufficient properties in patient fragment - check against profile)" 
 * parameter[=].type = #Bundle
 
+* parameter[+].name = #"failure"
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #OperationOutcome
+* parameter[=].documentation = "Error response" 
+
