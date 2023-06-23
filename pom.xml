@@ -59,6 +59,25 @@
 
 						</configuration>
 					</execution>
+					
+					<execution>
+						<id>unpack-nzbase</id>
+						<phase>
+							validate
+						</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>nz.health.digital.com.fhir</includeGroupIds>
+							<includeArtifactIds>nzbase-conformance-module</includeArtifactIds>
+							<outputDirectory>
+								${project.basedir}/fhir_packages
+							</outputDirectory>
+							<includes>**/package.tgz</includes>
+						</configuration>
+					</execution>
+					
 				</executions>
 			</plugin>
 
