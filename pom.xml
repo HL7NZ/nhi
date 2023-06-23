@@ -72,7 +72,7 @@
 							<includeGroupIds>nz.health.digital.com.fhir</includeGroupIds>
 							<includeArtifactIds>nzbase-conformance-module</includeArtifactIds>
 							<outputDirectory>
-								${project.basedir}/hfc_packages
+								${project.basedir}/hfc_package
 							</outputDirectory>
 							<includes>**/package.tgz</includes>
 						</configuration>
