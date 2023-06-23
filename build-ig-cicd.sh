@@ -28,7 +28,7 @@ echo getting nzbase dependencies...
 nzbase_name="fhir.org.nz.ig.base"
 nzbase_url=$(yq '.dependencies."fhir.org.nz.ig.base".uri' ./sushi-config.yaml)
 nzbase_version=$(yq '.dependencies."fhir.org.nz.ig.base".version' ./sushi-config.yaml)
-nzbase_source="./fhir_packages/nzbase-conformance-module-$nzbase_version/package.tgz"
+nzbase_source="./hpc_package/nzbase-conformance-module-$nzbase_version/package.tgz"
 addPackage "$nzbase_name" "$nzbase_version" "$nzbase_source" "$nzbase_url"
 
 
@@ -38,13 +38,10 @@ sudo mkdir -p ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/ >/dev/null 2>&1
 
 echo getting common dependencies...
-pwd
-ls -l ./fhir_packages/
-ls  ./fhir_packages/hip-fhir-common-1.2.0/
-ls  ./fhir_packages/hip-fhir-common-1.2.0/package/
+
 common_name="hl7.org.nz.fhir.ig.hip-core"
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
-common_source="./fhir_packages/hip-fhir-common-$common_version/package/package.tgz"
+common_source="./hpc_package/hip-fhir-common-$common_version/package/package.tgz"
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 addPackage "$common_name" "$common_version" "$common_source" "$common_url" 
 
