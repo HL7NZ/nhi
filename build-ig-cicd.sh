@@ -6,8 +6,8 @@ addPackage() {
 echo " adding package named $1 version $2 from source $3 using url $4"
 ls  $3
 
-mkdir ~/.fhir/packages/$1#$2
-mkdir ~/.fhir/packages/$1#current
+sudo mkdir -p ~/.fhir/packages/$1#$2
+sudo mkdir -p ~/.fhir/packages/$1#current
 
 tar zxvf  $3 -C  ~/.fhir/packages/$1#$2
 #publisher seems to need the current version as well
@@ -34,7 +34,7 @@ addPackage "$nzbase_name" "$nzbase_version" "$nzbase_source" "$nzbase_url"
 
 #cp hl7 packages into user's .fhir cache 
 aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.1/package.zip ./hl7-package.zip
-sudo mkdir ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
+sudo mkdir -p ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/ >/dev/null 2>&1
 
 echo getting common dependencies...
