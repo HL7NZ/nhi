@@ -28,7 +28,7 @@ dependencies:
     version: dev
   hl7.org.nz.fhir.ig.hip-core:
     uri: https://common-ig-v1-2-0.hip.digital.health.nz/site
-    version: dev
+    version: 1.2.0
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
