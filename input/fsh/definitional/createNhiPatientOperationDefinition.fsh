@@ -26,7 +26,7 @@ Usage: #definition
 * parameter[0].use = #in
 * parameter[0].min = 1
 * parameter[0].max = "1"
-* parameter[0].documentation = "Must be $create-patient"
+* parameter[0].documentation = "Must be $create"
 * parameter[0].type = #string
 
 * parameter[1].name = #"patient"
