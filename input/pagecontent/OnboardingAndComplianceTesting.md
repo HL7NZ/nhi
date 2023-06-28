@@ -1047,7 +1047,7 @@ Ethnicities to use:<br />
 </table>
 
 
-<h4>NHI Patient Add tests - TBC</h4>
+<h4>NHI Create Patient tests</h4>
 <table>
 <style>
 table, th, td {
@@ -1062,92 +1062,191 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr>
-<td>NHI-Add-1</td>
-<td>Application can add new patients to the NHI with the minimum set of patient information
-<li>A given name and family name</li>
-<li>A primary residential address</li>
-<li>A DoB (no proof sighted)</li>
-<li>Gender</li>
-<li>Ethnicity</li>
-<li>NZ citizenship (no proof sighted)</li></td>
-<td>Add a patient to the NHI with the above details populated<br />
-Create a false identity to use (this can be done using http://www.fakenamegenerator.com/), and add fictional information as required</td>
-<td>New patient information can be populated:
-1.	Name
- *	Given Name
- *	Family Name
-2.	Address (as per address)
-3.	Core
- *	Date of Birth
- *	Gender
- *	Ethnicity
- *	New Zealand Citizenship Status 
+<td>NHI-Create-Patient-1</td>
+<td>Application can create a new patient with the minimum set of patient information <br /> given only  </td>
+<td>Create a patient with:
+<ul>
+ <li> Name
+  <ul>
+   <li> given only </li>
+   <li> Source - PPRT</li>
+  </ul>
+ </li>
+ <li> Address
+  <ul>
+   <li> Validated</li>
+  </ul>
+ </li>
+ <li> Date of Birth
+ <ul>
+  <li> Date</li>
+  <li> Source - BRCT</li>
+ </ul>
+ </li>
+ <li> Gender
+ <ul>
+  <li> other</li>
+ </ul>
+ </li>
+ <li>	Ethnicity
+  <ul>
+   <li>32100 (Cook Islands Maori) and,</li>
+   <li>12948 (South African) and,</li>
+   <li>32100 (Cook Islands Maori)</li>
+  </ul>
+ </li>
+ <li> New Zealand Citizenship Status
+  <ul>
+   <li>Status - yes</li>
+   <li>Source - BRCT</li>
+  </ul>
+ </li>
+</ul>
+Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
+</td>
+<td>
+<li>Input: Minimum set of patient information can be provided </li>
 <li>Output: New NHI is displayed with minimum dataset</li>
 <li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-2</td>
-<td>Application can supply additional identity information when adding a patient to the NHI, including the fields of:
-<li>Date of death (and information source)</li>
-<li>Locality of birth</li>
-<li>Country of birth (and information source)</li></td>
-<td>Add a patient to the NHI using the same details as the previous test, with additional details populated. Override the ‘duplicate’ warning after viewing the duplicate record <br />
-Use values supplied for NHI-Add-1 and add fictional
-<li>Date of Death</li>
-<li>Date of death information source</li>
-<li>Place of birth</li>
-<li>Country of birth</li>
-<li>Country of birth information source</li>
-This will result in a patient that looks the same as that created in test NHI-Add-1 but with the added DoD and locality information. This should trigger the duplicate warning</td>
-<td>New patient information can be populated:
-1.	Name
- *	Given Name
- *	Family Name
-2.	Address 
-3.	Core
- *	Date of Birth
- *	Date of Birth Information Source
- *	Date of Death
- *	Date of Death Information Source
- *	Gender
- *	Ethnicity
- *	Place of Birth
- *	Country of Birth Code
- *	Country of Birth information Source 
- *	New Zealand Citizenship Status 
- *	New Zealand Citizenship Status Information Source 
-<li>Output: ‘Duplicate’ warning is displayed</li>
-<li>Output: Duplicate record is displayed</li>
-<li>Input: Duplicate warning can be overridden</li>
+<tr>
+<td>NHI-Create-Patient-2</td>
+<td>Application can create a new patient with the minimum set of patient information <br /> family only  </td>
+<td>Create a patient with:
+<ul>
+ <li> Name
+  <ul>
+   <li> family only </li>
+   <li> Source NPRF</li>
+  </ul>
+ </li>
+ <li> Address
+  <ul>
+   <li> Validated</li>
+  </ul>
+ </li>
+ <li> Date of Birth
+  <ul>
+  <li> Date</li>
+  <li> Source - NPRF</li>
+ </ul>
+</li>
+ <li> Gender
+ <ul>
+  <li> unknown</li>
+ </ul>
+ </li>
+ <li>	Ethnicity - see below </li>
+ <li> New Zealand Citizenship Status
+  <ul>
+   <li>Status - no</li>
+   <li>Source - NPRF</li>
+  </ul>
+ </li>
+</ul>
+<img style="width:200px; float:none" src="update-core-2.png"/>
+Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
+</td>
+<td>
+<li> Input: Minimum set of patient information can be provided </li>
 <li>Output: New NHI is displayed with minimum dataset</li>
-<li>Output: New NHI can be displayed with full dataset</li></td>
+<li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-3</td>
-<td>Application can add new patients to the NHI with minimum partial patient information
-<li>A given name only</li>
-<li>A primary residential address of ‘No fixed Abode’</li>
-<li>A DoB which is a year only(no proof sighted)</li>
-<li>Unknown gender</li>
-<li>Unknown Ethnicity</li>
-<li>NZ citizenship (no proof sighted)</li></td>
-<td>Add a patient to the NHI with a No Fixed Abode address <br />
-Create a false identity to use (this can be done using http://www.fakenamegenerator.com/) and enter the address as No Fixed Abode</td>
-<td>New patient information can be populated: <br />
-1.	Name
-<li> Given Name only </li>
-2.	Address 
- <li> No fixed abode </li>
-3.	Core
-<li> Date of Birth as a year only </li>
-<li> Date of Birth Information Source </li>
-<li> Gender as Unknown </li>
-<li> Ethnicity as a single Residual code </li>
-<li> Country of Birth Code </li>
-<li> Country of Birth information Source </li>
-<li> New Zealand Citizenship Status </li>
-<li> New Zealand Citizenship Status Information Source </li>
-<li> Output: New NHI is displayed with minimum dataset</li></td>
+<tr>
+<td>NHI-Create-Patient-3</td>
+<td>Application can create a new patient with the minimum set of patient information <br /> given, other given and family <br /> partial Date of birth  </td>
+<td>Create a patient with:
+<ol>
+  <li> Name
+  <ul>
+   <li> given, other given and family </li>
+   <li> Source NPRF</li>
+  </ul>
+ </li>
+ <li> Address
+  <ul>
+   <li> Validated</li>
+  </ul>
+ </li>
+ <li> Date of Birth
+  <ul>
+  <li> Date month and year only</li>
+  <li> Source - NPRF</li>
+ </ul>
+</li>
+ <li> Gender
+ <ul>
+  <li>code - female</li>
+  <li>original-text (optional)</li>
+ </ul>
+ </li>
+ <li>	Ethnicity
+  <ul>
+   <li>97777 (response unidentifiable)</li>
+  </ul>
+ </li>
+ <li> New Zealand Citizenship Status
+  <ul>
+   <li>Status - unknown	</li>
+   <li>Source - NPRF</li>
+  </ul>
+ </li>
+</ol>
+Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
+</td>
+<td>
+<li> Input: Minimum set of patient information can be provided </li>
+<li>Output: New NHI is displayed with minimum dataset</li>
+<li>Output: All patient information can be displayed</li></td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-Create-Patient-4</td>
+<td>Application can supply additional identity information when creating a patient, including the fields:
+<ul>
+ <li>Date of death</li>
+ <li>Birthplace</li>
+</ul>
+</td>
+<td>Create a patient with the minimum set of patient information and the additional details below
+<ul>
+ <li>Date of death - if applicable
+   <ul>
+    <li> Date </li>
+    <li> Information source </li>
+   </ul>
+ </li>
+ <li>Birthplace
+  <ul>
+   <li> Place of birth </li>
+   <li> Country of birth </li>
+   <li> Information source </li>
+  </ul>
+ </li>
+</ul></td>
+<td>
+<li> Input: Additional identity information can be provided </li>
+<li>Output: New NHI is displayed with minimum dataset</li>
+<li>Output: All patient information can be displayed</li></td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-Create-Patient-5</td>
+<td>Application can create a patient with an unvalidated patient address</td>
+<td>Create a patient with minimum set of patient information, with an unvalidated patient address <br />
+<b>Do all</b>
+<ol>
+ <li>OSEA</li>
+ <li>UKWN</li>
+ <li>NFAB</li>
+ <li>NOSVC</li>
+ <li>OTHER</li>
+</ol>
+</td>
+<td>
+<li> Input: All unvalidated address reasons can be provided </li>
+<li>Output: New NHI is displayed with minimum dataset</li>
+<li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
 </table>
 
@@ -1167,7 +1266,7 @@ table, th, td {
 <th>Mandatory</th>
 </tr>
 
-<tr><td>NHI-Add-error-4</td>
+<tr><td>NHI-Create-Patient-error-4</td>
 <td>Application will show the correct error when attempting to add a new patient with the supplied mailing (web services address type) address as the primary residential address</td>
 <td>Address: 20 Aitken Street, Thorndon, 6011 <br />
 Address type: mailing<br />
@@ -1175,8 +1274,8 @@ Is Primary: yes</td>
 <td>The Primary Residential Address for a patient must be a residential address (EM04008)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-5</td>
-<td>Application will show the correct error when attempting to add a patient with the supplied address as the primary residential address</td>
+<tr><td>NHI-Create-Patient-error-5</td>
+<td>Application will show the correct error when attempting to create a patient with the supplied address as the primary residential address</td>
 <td>Address to add for patient:<br />
 Street address: 12 Streetaddress Road<br />
 Town/City: Fictionville<br />
@@ -1184,13 +1283,13 @@ Qualifier: No fixed abode</td>
 <td>A residential address must have a notional domicile code (EM02210)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-6</td>
+<tr><td>NHI-Create-Patient-error-6</td>
 <td>Application can handle the situation where eSAM is unavailable</td>
 <td></td>
 <td>A residential address must have a domicile code. The address validation service was not available to validate this address; and a notional domicile code was not provided for this address, and could not be automatically assigned (EM02211)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-7</td>
+<tr><td>NHI-Create-Patient-error-7</td>
 <td>Application will show the correct error when attempting to add patient with the supplied address that does not contain address line 1 (street address)</td>
 <td>Address to create patient with:<br />
 Suburb: Thorndon<br />
@@ -1198,14 +1297,14 @@ City: Wellington</td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-9</td>
+<tr><td>NHI-Create-Patient-error-9</td>
 <td>Application will show the correct error when attempting to add a street address that resolves to two addresses as in this example: <br />
 80 monmourth road will resolve to
  * 80 monmourth road, Pembroke, Stratford 4394
  * 80 monmourth road, RD 24, Stratford 4394
 Background: Some addresses in eSAM have more than one address recorded against the first line of the address <br />
-Attempt to add a patient with the supplied unvalidated address and show how the Application behaves when a street address resolves to more than one eSAM address</td>
-<td>Add a patient with the following address: <br />
+Attempt to create a patient with the supplied unvalidated address and show how the Application behaves when a street address resolves to more than one eSAM address</td>
+<td>Create a patient with the following address: <br />
  * ‘80 Monmouth Road, Stratford 4394’ 
 Add this address as an unvalidated address with only the above information  <br />
 If the Application submits an eSAM unique ID this error will not occur.</td>
@@ -1213,16 +1312,16 @@ If the Application submits an eSAM unique ID this error will not occur.</td>
 Note: the wording of this error message may be somewhat misleading; the ‘validated address’ refers to the validation that the MoH attempts to do on all addresses</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-10</td>
-<td>Application will show the correct error when attempting to add a patient with the supplied address containing invalid characters</td>
+<tr><td>NHI-Create-Patient-error-10</td>
+<td>Application will show the correct error when attempting to create a patient with the supplied address containing invalid characters</td>
 <td>Address to add: 133$ Molesworth St<br />
 TH()RN^Don<br />
 Wellington^</td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-11</td>
-<td>Application will show the correct error when attempting to add a patient with a name source of ‘Birth Register’</td>
+<tr><td>NHI-Create-Patient-error-11</td>
+<td>Application will show the correct error when attempting to create a patient with a name source of ‘Birth Register’</td>
 <td>Supply a fictitious name and set the name source to ‘Birth Register’</td>
 <td>The patient name source cannot be set to:
  * MIGR
@@ -1231,41 +1330,41 @@ Wellington^</td>
 using an update request (EM07229)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-12</td>
-<td>Application will show the correct error when attempting to add a patient with a ‘Baby of’ name with a name source of something other than ‘NPRF’ (Proof not sighted)</td>
+<tr><td>NHI-Create-Patient-error-12</td>
+<td>Application will show the correct error when attempting to create a patient with a ‘Baby of’ name with a name source of something other than ‘NPRF’ (Proof not sighted)</td>
 <td>Supply a fictitious name and set the Name Qualifier Code to: Baby of <br />
 And <br />
 Name Source to: e.g. Birth Registrar</td>
 <td>A Patient ‘Baby Of’ Name Source must be set to ‘NPRF - Proof not Sighted (EM07225)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-13</td>
-<td>Application will show the correct error when attempting to add a patient with a Name type only (no given or family name)</td>
+<tr><td>NHI-Create-Patient-error-13</td>
+<td>Application will show the correct error when attempting to create a patient with a Name type only (no given or family name)</td>
 <td>Supply only a name type</td>
 <td>A Patient name must contain either a Given name or a Family Name and a Name Type (EM02101)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-14</td>
-<td>Application will show the correct error when attempting to add a patient with a name that only contains an ‘other given’ name and a Family Name</td>
+<tr><td>NHI-Create-Patient-error-14</td>
+<td>Application will show the correct error when attempting to create a patient with a name that only contains an ‘other given’ name and a Family Name</td>
 <td>Supply fictitious name details</td>
 <td>A user has populated other given names but not given name. <br /> 
 Patient given name is required when patient other given name(s) is present (EM07202)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-15</td>
-<td>Application will show the correct error when attempting to add a patient with a name where the given name or Family Name contains special characters e.g. # @ %</td>
+<tr><td>NHI-Create-Patient-error-15</td>
+<td>Application will show the correct error when attempting to create a patient with a name where the given name or Family Name contains special characters e.g. # @ %</td>
 <td>Supply fictitious name details with these characters # @ %</td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-16</td>
+<tr><td>NHI-Create-Patient-error-16</td>
 <td>Application will show the correct error when attempting to add a name where the given name or Family Name begins with a number e.g. 1Smith</td>
 <td>Supply a fictitious name with a given and/or Family Name beginning with a numeral</td>
 <td>A Patient’s given name and Family Name must start with a letter of the alphabet or an apostrophe (EM02107)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-18</td>
-<td>Application will show the correct error when attempting to add a patient with the invalid set of ethnicities supplied <br />
+<tr><td>NHI-Create-Patient-error-18</td>
+<td>Application will show the correct error when attempting to create a patient with the invalid set of ethnicities supplied <br />
 A valid set of Ethnicity information: 
 <li>contains at least one, and up to 6, detailed (level four) ethnic groups </li>
 <li>each code appears only once in the set (i.e. no duplicate values) </li>
@@ -1276,8 +1375,8 @@ and 99999 (not stated)</td>
 <td>Error – unacceptable ethnicity values (EM02301)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-19</td>
-<td>Application will show the correct error when attempting to add a patient with the set of supplied ethnicities that includes a duplicate ethnicity</td>
+<tr><td>NHI-Create-Patient-error-19</td>
+<td>Application will show the correct error when attempting to create a patient with the set of supplied ethnicities that includes a duplicate ethnicity</td>
 <td>Ethnicities to add patient with:<br />
 Rarotongan (32121)<br />
 South African (12948)<br />
@@ -1285,46 +1384,46 @@ Rarotongan (32121)</td>
 <td>A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code (EM02301)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-20</td>
-<td>Application will show the correct error when attempting to add a patient with a date of death information source but with no date of death</td>
+<tr><td>NHI-Create-Patient-error-20</td>
+<td>Application will show the correct error when attempting to create a patient with a date of death information source but with no date of death</td>
 <td>Choose a date of death information source without supplying a date of death</td>
 <td>Patient Date of Death is required when Patient Date of Death Information Source is present (EM07202)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-21</td>
-<td>Application will show the correct error when attempting to add a patient with a country of birth information source but with no country of birth</td>
+<tr><td>NHI-Create-Patient-error-21</td>
+<td>Application will show the correct error when attempting to create a patient with a country of birth information source but with no country of birth</td>
 <td>Choose a country of birth information source without supplying a country of birth</td>
 <td>Patient Country of Birth is required when Patient Country of Birth Information Source is present (EM07202)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-22</td>
-<td>Application will show the correct error when attempting to add a patient with the supplied date of birth in the future</td>
+<tr><td>NHI-Create-Patient-error-22</td>
+<td>Application will show the correct error when attempting to create a patient with the supplied date of birth in the future</td>
 <td>Date of Birth: 22/06/2031</td>
 <td>Patient date of birth cannot be a future date (EM07212)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-23</td>
-<td>Application will show the correct error when attempting to add a patient with the supplied date of death in the future</td>
+<tr><td>NHI-Create-Patient-error-23</td>
+<td>Application will show the correct error when attempting to create a patient with the supplied date of death in the future</td>
 <td>Date of Death: 22/06/2041</td>
 <td>Patient date of death cannot be a future date (EM07212)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-24</td>
-<td>Application will show the correct error when attempting to add a patient with a date of birth after the date of death supplied</td>
+<tr><td>NHI-Create-Patient-error-24</td>
+<td>Application will show the correct error when attempting to create a patient with a date of birth after the date of death supplied</td>
 <td>Date of death: 22/11/1982 <br />
 Date of Birth: 01/02/2008</td>
 <td>Patient date of birth must be less than, or equal to patient date of death (EM07214)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-25</td>
-<td>Application will show the correct error when attempting to add a patient with a place of birth but no country of birth</td>
+<tr><td>NHI-Create-Patient-error-25</td>
+<td>Application will show the correct error when attempting to create a patient with a place of birth but no country of birth</td>
 <td>Place of Birth: London <br />
 Do not supply a country of birth </td>
 <td>Patient country of birth is required when patient place of birth is present (EM07202)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Add-error-26</td>
-<td>Application will show the correct error when attempting to add a patient with a NZ Citizenship information source without a NZ Citizenship status </td>
+<tr><td>NHI-Create-Patient-error-26</td>
+<td>Application will show the correct error when attempting to create a patient with a NZ Citizenship information source without a NZ Citizenship status </td>
 <td>Choose an NZ Citizenship information source to supply but do not add NZ Citizenship status </td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
