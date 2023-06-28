@@ -9,80 +9,54 @@
   "id" : "Match",
   "parameter" : [
     {
-      "extension" : [
-        {
-          "url" : "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "https://standards.digital.health.nz/ns/ethnic-group-level-4-code",
-                "version" : "2.0",
-                "code" : "21111",
-                "display" : "Māori"
-              }
-            ],
-            "text" : "Māori"
-          }
-        },
-        {
-          "extension" : [
-            {
-              "url" : "http://hl7.org.nz/fhir/StructureDefinition/birth-place#country",
-              "valueCodeableConcept" : {
-                "coding" : [
-                  {
-                    "system" : "urn:iso:std:iso:3166",
-                    "version" : "2013",
-                    "code" : "AU",
-                    "display" : "Australia"
-                  }
-                ],
-                "text" : "Australia"
-              }
-            },
-            {
-              "url" : "http://hl7.org.nz/fhir/StructureDefinition/birth-place#placeofbirth",
-              "valueString" : "Sydney"
-            }
-          ],
-          "url" : "http://hl7.org.nz/fhir/StructureDefinition/birth-place"
-        }
-      ],
       "name" : "resource",
       "resource" : {
         "resourceType" : "Patient",
-        "meta" : {
-          "versionId" : "123"
-        },
         "name" : [
           {
-            "extension" : [
-              {
-                "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-preferred",
-                "valueBoolean" : true
-              }
-            ],
-            "use" : "nickname",
-            "text" : "TEST-AQURE, ROBERT",
-            "family" : "TEST-AQURE",
+            "family" : "Franks",
             "given" : [
-              "ROBERT"
+              "John"
             ]
           }
         ],
         "gender" : "male",
-        "birthDate" : "1985-06-15",
-        "address" : [
-          {
-            "use" : "home",
-            "type" : "physical",
-            "line" : [
-              "24 Warren Avenue",
-              "Three Kings"
+        "birthDate" : "2000-07-29",
+            "address": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org.nz/fhir/StructureDefinition/nz-address-id",
+                    "valueString": "97107"
+                },
+                {
+                    "url": "http://hl7.org.nz/fhir/StructureDefinition/domicile-code",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://standards.digital.health.nz/ns/domicile-code",
+                                "code": "0887",
+                                "display": "Hamilton Central"
+                            }
+                        ],
+                        "text": "Hamilton Central"
+                    }
+                },
+                {
+                    "url": "http://hl7.org.nz/fhir/StructureDefinition/suburb",
+                    "valueString": "Hamilton Central"
+                }
             ],
-            "district" : "Auckland 1042"
-          }
-        ]
+            "use": "home",
+            "type": "physical",
+            "line": [
+                "8 Anzac Parade"
+            ],
+            "city": "Hamilton",
+            "postalCode": "3204",
+            "country": "NZ"
+        }
+    ]
       }
     },
     {
