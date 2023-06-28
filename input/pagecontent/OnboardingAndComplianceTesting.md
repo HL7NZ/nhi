@@ -1219,9 +1219,9 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
  </li>
  <li>Birthplace
   <ul>
-   <li> Place of birth </li>
    <li> Country of birth </li>
    <li> Information source </li>
+   <li> Place of birth </li>
   </ul>
  </li>
 </ul></td>
@@ -1250,7 +1250,7 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
 <td>Mandatory</td></tr>
 </table>
 
-<h4>NHI Patient Add error tests</h4>
+<h4>NHI Create Patient error tests</h4>
 <table>
 <style>
 table, th, td {
