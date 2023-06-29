@@ -853,7 +853,7 @@ Output:
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-15 <br /> $inactivate-name</td>
-<td>application can display an error when an authorised name is modified</td>
+<td>application can display an error when a registered name is modified</td>
 <td>Attempt to inactivate the name with source BREG on patient ZKE9393 (Given Name: Jonathan Joseph. Family Name: Savage)</td>
 <td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
 <td>mandatory</td></tr>
@@ -1063,12 +1063,12 @@ table, th, td {
 
 <tr>
 <td>NHI-Create-Patient-1</td>
-<td>Application can create a new patient with the minimum set of patient information <br /> given only  </td>
-<td>Create a patient with:
+<td>Application can create a new patient with the minimum set of patient information </td>
+<td>Create a patient with a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
 <ul>
  <li> Name
   <ul>
-   <li> given only </li>
+   <li> Given only </li>
    <li> Source - PPRT</li>
   </ul>
  </li>
@@ -1102,7 +1102,6 @@ table, th, td {
   </ul>
  </li>
 </ul>
-Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
 </td>
 <td>
 <li>Input: Minimum set of patient information can be provided </li>
@@ -1112,12 +1111,12 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
 
 <tr>
 <td>NHI-Create-Patient-2</td>
-<td>Application can create a new patient with the minimum set of patient information <br /> family only  </td>
-<td>Create a patient with:
+<td>Application can create a new patient with the minimum set of patient information </td>
+<td>Create a patient with a fictitious identity
 <ul>
  <li> Name
   <ul>
-   <li> family only </li>
+   <li> Family only </li>
    <li> Source NPRF</li>
   </ul>
  </li>
@@ -1146,7 +1145,6 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
  </li>
 </ul>
 <img style="width:200px; float:none" src="update-core-2.png"/>
-Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
 </td>
 <td>
 <li> Input: Minimum set of patient information can be provided </li>
@@ -1156,12 +1154,12 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
 
 <tr>
 <td>NHI-Create-Patient-3</td>
-<td>Application can create a new patient with the minimum set of patient information <br /> given, other given and family <br /> partial Date of birth  </td>
+<td>Application can create a new patient with the minimum set of patient information </td>
 <td>Create a patient with:
-<ol>
+<ul>
   <li> Name
   <ul>
-   <li> given, other given and family </li>
+   <li> Given, other given and family </li>
    <li> Source NPRF</li>
   </ul>
  </li>
@@ -1193,7 +1191,7 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
    <li>Source - NPRF</li>
   </ul>
  </li>
-</ol>
+</ul>
 Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
 </td>
 <td>
