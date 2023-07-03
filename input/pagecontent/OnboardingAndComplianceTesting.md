@@ -645,9 +645,128 @@ Output: The address that is displayed to the end user is the address that is ret
 <td><li>Use selected NHI number</li>
 <li> Remove the <b>postal address</b> from the patient record using the $remove-postal-address operation</li></td>
 <td>Output: The patient record has Postal address removed</td>
-<td>mandatory</td></tr>  
-</table>
+<td>mandatory</td></tr>
 
+<tr><td>NHI-NHI-Maintain-Address-error-1 <br /> $set-address</td>
+<td>Application will show the correct error when attempting to add a new address to the provided dormant NHI number</td>
+<td>
+ <ul>
+  <li> NHI: ZAT2518 </li>
+  <li> address-line: 24 Anglesey Place  </li>
+  <li> nz-address-id: 1199146 </li>
+  <li> address-type: physical</li>
+ </ul>
+</td>
+<td>Error: EM02004 - The NHI Identifier provided is dormant. This record cannot be updated</td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-2  <br /> $set-address</td>
+<td><b>Not currently implemented</b> < br />
+Application will show the correct error when attempting to add the supplied address that has been previously removed from the patient record by NHI administration</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> address-line: 24 Anglesea Avenue </li>
+  <li> nz-address-id: 967406 </li>
+  <li> address-type: physical</li>
+ </ul>
+</td>
+<td>Error: EM02004 - The Patient Address requested has been removed from the Patient record by Te Whatu Ora </td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-3  <br /> $set-address</td>
+<td>Application will show the correct error when attempting to add the following postal address for an undeliverable address</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> address-line: 748E Whitemans Valley Road </li>
+  <li> nz-address-id: 3193368 </li>
+  <li> address-type: postal</li>
+ </ul>
+</td>
+<td>Error: EM02209 - A validated mailing address must be an address at which mail can be delivered </td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-4 <br /> $set-address</td>
+<td>Application will show the correct error when attempting to add an address where the nz address id does not match the first line of the validated address</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> address-line: 24 Ranglesey Place </li>
+  <li> nz-address-id: 1199146 </li>
+  <li> address-type: physical</li>
+ </ul>
+</td>
+<td> Error: "address-line must match the espatial value: /<24 Anglesey Place>  </td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
+<td>Application will show the correct error when attempting to add the following unvalidated mailing address without a domicile code</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> not-validated-address-reason: NOSVC </li>
+  <li> address-type: physical </li>
+  <li> address-line-1: 74 Chancellor Street" </li>
+  <li> address-suburb: Richmond </li>
+  <li> address-city: Christchurch </li>
+  <li> address-country-code: NZ </li>
+ </ul>
+</td>
+<td>Error: "Invalid codeset value" < br />
+This will be updated in an upcming release - EM02210 - An unvalidated residential address must have a notional domicile code</td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-6 <br /> $set-unvalidated-address</td></td>
+<td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> not-validated-address-reason: OTHER </li>
+  <li> address-type: physical </li>
+  <li> address-line-1: 11 L$nnet Street </li>
+  <li> address-suburb: Taihape </li>
+  <li> address-city: Taihape </li>
+  <li> address-domicile-code: 4720 </li>
+  <li> address-country-code: NZ </li>
+ </ul>
+</td>
+<td>Error: "Invalid request body"</td>
+<td>Mandatory</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td></td>
+<td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> not-validated-address-reason: OTHER </li>
+  <li> address-type: physical </li>
+  <li> address-line-2: 11 Linnet Street </li>
+  <li> address-suburb: Taihape </li>
+  <li> address-city: Taihape </li>
+  <li> address-domicile-code: 4720 </li>
+  <li> address-country-code: NZ </li>
+ </ul>
+</td>
+<td>Error: "Patient address-line-1 is required"</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td></td>
+<td>Application will show the correct error when attempting to add an address without a not validated reason</td>
+<td>
+ <ul>
+  <li> NHI: ZZJM9397 </li>
+  <li> address-type: physical </li>
+  <li> address-line-1: 11 Linnet Street </li>
+  <li> address-suburb: Taihape </li>
+  <li> address-city: Taihape </li>
+  <li> address-domicile-code: 4720 </li>
+  <li> address-country-code: NZ </li>
+ </ul>
+</td>
+<td>Error: "Address not validated reason is required"</td>
+<td>Optional</td></tr>
+</table>
 
 <h4>NHI Patient Maintain Name tests</h4>
 <table>
@@ -825,7 +944,7 @@ Output:
  <li>source = PPRT</li>
  <li>don't insert a preferred-name flag</li></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
-<td>mandatory</td></tr>
+<td>optional</td></tr>
 
 <tr><td>NHI-update-name-error-11 <br /> $add-name </td>
 <td>application can display an error when the given or family name contains special characters e.g. # @ % </td>
@@ -866,7 +985,7 @@ Output:
    <li>Set Id: "11" </li>
    <li>Note: inactive names won't appear on the patient record so use set id to attempt to inactivate </li ></td>
 <td>Output: EM07223 "The 'Patient Name' is not active and cannot be updated"</td>
-<td>mandatory</td></tr>
+<td>optional</td></tr>
 
 <tr><td>NHI-update-name-error-17 <br /> $inactivate-name</td>
 <td>application can display an error when an attempt is made to inactivate a preferred name </td>
