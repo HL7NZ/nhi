@@ -52,7 +52,9 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Compliance tests
 
-Not all tests below will be appropriate for every application. If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
+Not all tests below will be appropriate for every application. <br />
+
+If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
 
 <h4>Security and Audit Assessment</h4>
 <table>
