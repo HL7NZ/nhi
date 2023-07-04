@@ -703,7 +703,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
-<td>Application will show the correct error when attempting to add the following unvalidated mailing address without a domicile code</td>
+<td>Application will show the correct error when attempting to add the following unvalidated address without a domicile code</td>
 <td>
  <ul>
   <li> NHI: ZZJM9397 </li>
@@ -737,7 +737,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
-<td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
+<td>Application will show the correct error when attempting to add an address that does not contain address line 1 </td>
 <td>
  <ul>
   <li> NHI: ZZJM9397 </li>
@@ -753,8 +753,8 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Patient address-line-1 is required"</td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
-<td>Application will show the correct error when attempting to add an address without a not validated reason</td>
+<tr><td>NHI-NHI-Maintain-Address-error-8 <br /> $set-unvalidated-address</td>
+<td>Application will show the correct error when attempting to add an address missing a not validated reason</td>
 <td>
  <ul>
   <li> NHI: ZZJM9397 </li>
@@ -767,7 +767,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
  </ul>
 </td>
 <td>Error: "Address not validated reason is required"</td>
-<td>Optional</td></tr>
+<td>optional</td></tr>
 </table>
 
 <h4>NHI Patient Maintain Name tests</h4>
