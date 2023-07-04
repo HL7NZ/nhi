@@ -699,7 +699,7 @@ Application will show the correct error when attempting to add the supplied addr
   <li> address-type: physical</li>
  </ul>
 </td>
-<td> Error: "address-line must match the espatial value: {{24 Anglesey Place}}  </td>
+<td> Error: "address-line must match the espatial value: ..."  </td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
