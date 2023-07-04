@@ -52,6 +52,8 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Compliance tests
 
+* Not all tests below will be appropriate for every application. If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
+
 <h4>Security and Audit Assessment</h4>
 <table>
 <style>
@@ -661,7 +663,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-NHI-Maintain-Address-error-2  <br /> $set-address</td>
-<td><b>Not currently implemented</b> < br />
+<td><b>Not currently implemented</b> <br />
 Application will show the correct error when attempting to add the supplied address that has been previously removed from the patient record by NHI administration</td>
 <td>
  <ul>
@@ -697,7 +699,7 @@ Application will show the correct error when attempting to add the supplied addr
   <li> address-type: physical</li>
  </ul>
 </td>
-<td> Error: "address-line must match the espatial value: /<24 Anglesey Place>  </td>
+<td> Error: "address-line must match the espatial value: {{24 Anglesey Place}}  </td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
@@ -713,11 +715,11 @@ Application will show the correct error when attempting to add the supplied addr
   <li> address-country-code: NZ </li>
  </ul>
 </td>
-<td>Error: "Invalid codeset value" < br />
+<td>Error: "Invalid codeset value" <br />
 This will be updated in an upcming release - EM02210 - An unvalidated residential address must have a notional domicile code</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-6 <br /> $set-unvalidated-address</td></td>
+<tr><td>NHI-NHI-Maintain-Address-error-6 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
 <td>
  <ul>
@@ -734,7 +736,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Invalid request body"</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td></td>
+<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
 <td>
  <ul>
@@ -751,7 +753,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Patient address-line-1 is required"</td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td></td>
+<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address without a not validated reason</td>
 <td>
  <ul>
