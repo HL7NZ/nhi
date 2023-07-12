@@ -651,7 +651,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>Output: The patient record has Postal address removed</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-1 <br /> $set-address</td>
+<tr><td>NHI-Maintain-Address-error-1 <br /> $set-address</td>
 <td>Application will show the correct error when attempting to add a new address to the provided dormant NHI number</td>
 <td>
  <ul>
@@ -664,7 +664,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>Error: EM02004 - The NHI Identifier provided is dormant. This record cannot be updated</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-2  <br /> $set-address</td>
+<tr><td>NHI-Maintain-Address-error-2  <br /> $set-address</td>
 <td><b>Not currently implemented</b> <br />
 Application will show the correct error when attempting to add the supplied address that has been previously removed from the patient record by NHI administration</td>
 <td>
@@ -678,7 +678,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Error: EM02004 - The Patient Address requested has been removed from the Patient record by Te Whatu Ora </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-3  <br /> $set-address</td>
+<tr><td>NHI-Maintain-Address-error-3  <br /> $set-address</td>
 <td>Application will show the correct error when attempting to add the following postal address for an undeliverable address</td>
 <td>
  <ul>
@@ -691,7 +691,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Error: EM02209 - A validated mailing address must be an address at which mail can be delivered </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-4 <br /> $set-address</td>
+<tr><td>NHI-Maintain-Address-error-4 <br /> $set-address</td>
 <td>Application will show the correct error when attempting to add an address where the nz address id does not match the first line of the validated address</td>
 <td>
  <ul>
@@ -704,7 +704,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td> Error: "address-line must match the espatial value: ..."  </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
+<tr><td>NHI-Maintain-Address-error-5 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add the following unvalidated address without a domicile code</td>
 <td>
  <ul>
@@ -721,7 +721,7 @@ Application will show the correct error when attempting to add the supplied addr
 This will be updated in an upcming release - EM02210 - An unvalidated residential address must have a notional domicile code</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-6 <br /> $set-unvalidated-address</td>
+<tr><td>NHI-Maintain-Address-error-6 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
 <td>
  <ul>
@@ -738,7 +738,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Invalid request body"</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
+<tr><td>NHI-Maintain-Address-error-7 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address that does not contain address line 1 </td>
 <td>
  <ul>
@@ -755,7 +755,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Patient address-line-1 is required"</td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-NHI-Maintain-Address-error-8 <br /> $set-unvalidated-address</td>
+<tr><td>NHI-Maintain-Address-error-8 <br /> $set-unvalidated-address</td>
 <td>Application will show the correct error when attempting to add an address missing a not validated reason</td>
 <td>
  <ul>
