@@ -1465,51 +1465,63 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <tr><td>NHI-Create-Patient-error-6 <br /> Name</td>
 <td>application can display an error when an invalid source is provided</td>
 <td>Attempt to create a patient with a registered name source
- <li>source = BREG (Birth Register)</li></td>
+ <ul>
+  <li>source = BREG (Birth Register)</li>
+ </ul></td>
 <td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-7 <br /> Name</td>
 <td>application can display an error when a Babyof name is supplied with a use other than 'temp' and a source other than 'NPRF'</td>
 <td>Attempt to create a patient with babyof name
-   <li> Name use = nickname </li>
-   <li> source = PPRT </li></td>
+   <ul>
+    <li> Name use = nickname </li>
+    <li> source = PPRT </li>
+   </ul></td>
 <td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-8 <br /> Name</td>
 <td>application can display an error when no given and family name is present</td>
 <td>Attempt to create a patient with no family or given name
-   <li>Name use = nickname</li>
-   <li>Source = PPRT</li>
-   <li>Don't insert a family or given name</li></td>
+   <ul>
+    <li>Name use = nickname</li>
+    <li>Source = PPRT</li>
+    <li>Don't insert a family or given name</li>
+   </ul></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-9 <br /> Name</td>
 <td>application can display an error when no information source</td>
-<td>Attempt to add a fictitious name to the patient ZDM4902
- <li>Name use = nickname</li>
- <li>source = PPRT</li>
- <li>Don't insert a information-source</li></td>
+<td>Attempt to create a patient with a fictitious name
+ <ul>
+  <li>Name use = nickname</li>
+  <li>source = PPRT</li>
+  <li>Don't insert a information-source</li>
+ </ul></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-10 <br /> Name</td>
 <td>application can display an error when no preferred-name-flag</td>
-<td>Attempt to create a patient with no preferred flag to the patient
- <li>Name use = nickname</li>
- <li>source = PPRT</li>
- <li>don't insert a preferred-name flag</li></td>
+<td>Attempt to create a patient with no preferred flag
+ <ul>
+  <li>Name use = nickname</li>
+  <li>source = PPRT</li>
+  <li>don't insert a preferred-name flag</li>
+ </ul></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>optional</td></tr>
 
 <tr><td>NHI-Create-Patient-error-11 <br /> Name</td>
-<td>application can display an error when no preferred-name-flag</td>
+<td>application can display an error when preferred-name = false</td>
 <td>Attempt to create a patient with preferred flag = false
- <li>Name use = nickname</li>
- <li>source = PPRT</li>
- <li>preferred-name = false</li></td>
+ <ul>
+  <li>Name use = nickname</li>
+  <li>source = PPRT</li>
+  <li>preferred-name = false</li>
+ </ul></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name and an information source."</td>
 <td>optional</td></tr>
 
@@ -1531,8 +1543,8 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02110 "Each populated Patient Name field must contain at least one letter"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-XXXX <br /> Ethnicity</td>
-<td>application can display an error when ethnicity information invalid < br /> contains multiple residual codes (9xxxx)</td>
+<tr><td>NHI-Create-Patient-error-15 <br /> Ethnicity</td>
+<td>application can display an error when attempting to create a patient with invalid ethnicity information < br /> contains multiple residual codes (9xxxx)</td>
 <td>Create a Patient with the ethnicities below:
  <ul>
    <li> 97777 (response unidentifiable) </li>
@@ -1541,8 +1553,8 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-XXXXX <br /> Ethnicity</td>
-<td>application can display an error when ethnicity information invalid <br /> set of supplied ethnicities that includes a duplicate ethnicity</td>
+<tr><td>NHI-Create-Patient-error-16 <br /> Ethnicity</td>
+<td>application can display an error when attempting to create a patient with invalid ethnicity information <br /> set of supplied ethnicities that includes a duplicate ethnicity</td>
 <td>Create a Patient with the ethnicities below:
  <ul>
 <li>32100 (Cook Islands Maori) and,</li>
@@ -1552,14 +1564,14 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-XXXXX <br /> Gender</td>
+<tr><td>NHI-Create-Patient-error-17 <br /> Gender</td>
 <td>application can display an error when attempting to create a patient with a gender-original-text and no gender value</td>
 <td>Attempt to create a patient with a gender-original-text (and not gender)</td>
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-XXXXX <br /> Citizenship</td>
-<td>application can display an error when an attempt to add a registered source for citizenship </td>
+<tr><td>NHI-Create-Patient-error-18 <br /> Citizenship</td>
+<td>application can display an error when when attempting to create a patient with a registered source for citizenship </td>
 <td>Attempt to create a patient with a citizenship
  <ul>
   <li> Citizenship = yes </li>
@@ -1582,59 +1594,6 @@ NHI-Create-Patient-error-24
 
 NHI-Create-Patient-error-26
 
-<tr><td>NHI-Create-Patient-error-4</td>
-<td>Application will show the correct error when attempting to add a new patient with the supplied mailing (web services address type) address as the primary residential address</td>
-<td>Address: 20 Aitken Street, Thorndon, 6011 <br />
-Address type: mailing<br />
-Is Primary: yes</td>
-<td>The Primary Residential Address for a patient must be a residential address (EM04008)</td>
-<td>Mandatory</td></tr>
-
-<tr><td>NHI-Create-Patient-error-5</td>
-<td>Application will show the correct error when attempting to create a patient with the supplied address as the primary residential address</td>
-<td>Address to add for patient:<br />
-Street address: 12 Streetaddress Road<br />
-Town/City: Fictionville<br />
-Qualifier: No fixed abode</td>
-<td>A residential address must have a notional domicile code (EM02210)</td>
-<td>Mandatory</td></tr>
-
-<tr><td>NHI-Create-Patient-error-6</td>
-<td>Application can handle the situation where eSAM is unavailable</td>
-<td></td>
-<td>A residential address must have a domicile code. The address validation service was not available to validate this address; and a notional domicile code was not provided for this address, and could not be automatically assigned (EM02211)</td>
-<td>Mandatory</td></tr>
-
-<tr><td>NHI-Create-Patient-error-7</td>
-<td>Application will show the correct error when attempting to add patient with the supplied address that does not contain address line 1 (street address)</td>
-<td>Address to create patient with:<br />
-Suburb: Thorndon<br />
-City: Wellington</td>
-<td>The format of the message is invalid (EM01002)</td>
-<td>Mandatory</td></tr>
-
-<tr><td>NHI-Create-Patient-error-9</td>
-<td>Application will show the correct error when attempting to add a street address that resolves to two addresses as in this example: <br />
-80 monmourth road will resolve to
- * 80 monmourth road, Pembroke, Stratford 4394
- * 80 monmourth road, RD 24, Stratford 4394
-Background: Some addresses in eSAM have more than one address recorded against the first line of the address <br />
-Attempt to create a patient with the supplied unvalidated address and show how the Application behaves when a street address resolves to more than one eSAM address</td>
-<td>Create a patient with the following address: <br />
- * ‘80 Monmouth Road, Stratford 4394’ 
-Add this address as an unvalidated address with only the above information  <br />
-If the Application submits an eSAM unique ID this error will not occur.</td>
-<td>A validated address must result in a single unique address being returned by the NHI address validation service (EM04009) <br />
-Note: the wording of this error message may be somewhat misleading; the ‘validated address’ refers to the validation that the MoH attempts to do on all addresses</td>
-<td>Mandatory</td></tr>
-
-<tr><td>NHI-Create-Patient-error-10</td>
-<td>Application will show the correct error when attempting to create a patient with the supplied address containing invalid characters</td>
-<td>Address to add: 133$ Molesworth St<br />
-TH()RN^Don<br />
-Wellington^</td>
-<td>The format of the message is invalid (EM01002)</td>
-<td>Mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-11</td>
 <td>Application will show the correct error when attempting to create a patient with a name source of ‘Birth Register’</td>
