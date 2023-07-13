@@ -1568,8 +1568,8 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Create a Patient with the ethnicities below:
  <ul>
    <li> 97777 (response unidentifiable) </li>
-   <li> and 99999 (not stated)</li></td>
- </ul>
+   <li> and 99999 (not stated)</li>
+ </ul></td>
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
@@ -1579,8 +1579,8 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
  <ul>
 <li>32100 (Cook Islands Maori) and,</li>
 <li>12948 (South African) and,</li>
-<li>32100 (Cook Islands Maori)</li></td>
- </ul>
+<li>32100 (Cook Islands Maori)</li>
+ </ul></td>
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
@@ -1590,13 +1590,13 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Citizenship</td>
+<tr><td>NHI-Create-Patient-error-18 <br /> Citizenship</td>
 <td>application can display an error when attempting to create a patient with a NZ Citizenship information source without a NZ Citizenship status </td>
 <td>Choose an NZ Citizenship information source to supply but do not add NZ Citizenship status </td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Citizenship</td>
+<tr><td>NHI-Create-Patient-error-19 <br /> Citizenship</td>
 <td>application can display an error when when attempting to create a patient with a registered Citizenship information source </td>
 <td>Attempt to create a patient with a citizenship
  <ul>
@@ -1606,13 +1606,13 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07229 "Patient NZ Citizenship can only be set to a ‘Registered’ value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Date of birth</td>
+<tr><td>NHI-Create-Patient-error-20 <br /> Date of birth</td>
 <td>application will show the correct error when attempting to create a patient with a bithdate in the future</td>
 <td>Date of birth: A future date </td>
 <td>EM07212 - Patient Date of birth cannot be a future date</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Date of birth</td>
+<tr><td>NHI-Create-Patient-error-21 <br /> Date of birth</td>
 <td>application can display an error when when attempting to create a patient with a registered Date of birth information source </td>
 <td>Attempt to create a patient with Date of birth source = BREG
  <ul>
@@ -1621,14 +1621,14 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07229 "Patient Date of birth can only be set to a ‘Registered’ value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-22 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with a place of birth but no country of birth</td>
 <td>Place of Birth: London <br />
 Do not supply a country of birth </td>
 <td>EM07202 - A place of birth must only be populated if a country of birth is populated</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-23 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with no information source</td>
 <td>
  <ul>
@@ -1639,7 +1639,7 @@ Do not supply a country of birth </td>
 <td>EM07202 - A place of birth must only be populated if a place of birth source is populated</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-xxxx <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-24 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with no information source</td>
 <td>
  <ul>
@@ -1694,7 +1694,7 @@ table, th, td {
   <li> Date of death = future date </li>
   <li> Source: TBC </li>
  </ul></td>
-<td>EM07212 - Patient Date of Death date cannot be a future date. <br /> </td>
+<td>EM07212 - Patient Date of Death date cannot be a future date </td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-death-date-error-3</td>
