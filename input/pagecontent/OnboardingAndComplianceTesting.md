@@ -1665,7 +1665,7 @@ table, th, td {
 <th>Mandatory</th>
 </tr>
 
-<tr><td>NHI-Create-Patient-date-od-death</td>
+<tr><td>NHI-Create-Patient-date-death</td>
 <td>application can create a patient with a date of death</td>
 <td>Create a patient with date of death</td>
 <td>
