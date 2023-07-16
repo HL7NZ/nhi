@@ -40,11 +40,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $update-birth </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -95,10 +90,6 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
-    {
-        "name" : "operation-type",
-        "valueString" : "$update-birth"
-    },
     {
         "name" : "nhi",
         "valueString" : "ZGD9203"
