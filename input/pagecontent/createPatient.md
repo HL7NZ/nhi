@@ -37,11 +37,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $create </td></tr>
-
 <tr><td> patient </td>
 <td> Patient </td>
 <td> Mandatory </td>
