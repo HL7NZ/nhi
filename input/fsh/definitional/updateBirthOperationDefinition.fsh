@@ -23,12 +23,6 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* parameter[0].name = #"operation-type"
-* parameter[=].use = #in
-* parameter[=].min = 1
-* parameter[=].max = "1"
-* parameter[=].documentation = "Must be $update-birth"
-* parameter[=].type = #string
 
 * parameter[+].name = #"nhi"
 * parameter[=].use = #in
