@@ -268,7 +268,7 @@ table, th, td {
 
 #### OAUTH2
 
-The HPI server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services
+The NHI server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services
 
 #### Scopes
 
