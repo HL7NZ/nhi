@@ -22,12 +22,6 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* parameter[0].name = #"operation-type"
-* parameter[0].use = #in
-* parameter[0].min = 1
-* parameter[0].max = "1"
-* parameter[0].documentation = "Must be $create"
-* parameter[0].type = #string
 
 * parameter[1].name = #"patient"
 * parameter[1].use = #in
