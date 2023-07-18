@@ -173,7 +173,7 @@ table, th, td {
 <li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
 <li>Has three ethnicities</li>
 <li>Is a NZ citizen</li></td>
-<td>*Mandatory if</td></tr>
+<td>*Mandatory if the application is using the data</td></tr>
 
 <tr><td>NHI-GET-4</td>
 <td>application can display all other identity data returned by the NHI in a GET response including:
