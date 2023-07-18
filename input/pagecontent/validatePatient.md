@@ -68,7 +68,7 @@ For an example Validate request and response [click here](/artifacts.html#exampl
 
 ##### Validate Patient rules
 * A Validate patient request must include:
-  * An nhi-id
+  * A valid nhi-id
   * name
   * birthdate
 
@@ -77,6 +77,7 @@ For an example Validate request and response [click here](/artifacts.html#exampl
 
 
 * _Validate Patient errors_
+  * _NHI number supplied cannot be found_
   * _onlyCertainMatches is only currently supported when sending an NHI identifier (Not an ID)_
   * _Patient name is a required field_
   * _Patient birthdate is a required field_
