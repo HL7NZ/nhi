@@ -65,7 +65,8 @@ table, th, td {
    <li> birthdate </li>
    <li> gender </li>
   </ul>
-  <li> Address is not curretly supported in match</li>
+ <li> Address is not curretly supported in match - this will be included in a future release</li>
+ <li> Attributes included in the match request and not used by the service will be silently ignored</li> 
 </ul> 
 </td></tr>
 
