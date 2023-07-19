@@ -57,7 +57,17 @@ table, th, td {
 <tr><td> 'Patient resource' </td>
 <td> Resource </td>
 <td> Mandatory </td>
-<td> <a href="matchExample.html">$match request Patient resource examples</a> </td></tr>
+<td> <a href="matchExample.html">$match request Patient resource examples</a> <br /> The match patient resource uses the following attributes in the $match request 
+<ul>
+ <li> Attributes used in match </li>
+  <ul>
+   <li> name </li>
+   <li> birthdate </li>
+   <li> gender </li>
+  </ul>
+  <li> Address is not curretly supported in match</li>
+</ul> 
+</td></tr>
 
 <tr><td> onlyCertainMatches: 0 (False) </td>
 <td> boolean </td>
