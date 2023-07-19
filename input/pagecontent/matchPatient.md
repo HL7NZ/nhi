@@ -57,7 +57,7 @@ table, th, td {
 <tr><td> 'Patient resource' </td>
 <td> Resource </td>
 <td> Mandatory </td>
-<td> <a href="matchExample.html">$match request Patient resource examples</a> <br /> The match patient operation uses the following attributes 
+<td> The match patient operation uses the following attributes 
 <ul>
  <li> Attributes used in match </li>
   <ul>
@@ -67,7 +67,8 @@ table, th, td {
   </ul>
  <li> Address is not curretly supported in match - this will be included in a future release</li>
  <li> Attributes included in the match request and not used by the operation will be silently ignored</li> 
-</ul> 
+</ul>
+<a href="matchExample.html">$match request Patient resource examples</a>
 </td></tr>
 
 <tr><td> onlyCertainMatches: 0 (False) </td>
