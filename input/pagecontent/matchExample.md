@@ -21,42 +21,7 @@
           }
         ],
         "gender" : "male",
-        "birthDate" : "2000-07-29",
-            "address": [
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org.nz/fhir/StructureDefinition/nz-address-id",
-                    "valueString": "97107"
-                },
-                {
-                    "url": "http://hl7.org.nz/fhir/StructureDefinition/domicile-code",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "https://standards.digital.health.nz/ns/domicile-code",
-                                "code": "0887",
-                                "display": "Hamilton Central"
-                            }
-                        ],
-                        "text": "Hamilton Central"
-                    }
-                },
-                {
-                    "url": "http://hl7.org.nz/fhir/StructureDefinition/suburb",
-                    "valueString": "Hamilton Central"
-                }
-            ],
-            "use": "home",
-            "type": "physical",
-            "line": [
-                "8 Anzac Parade"
-            ],
-            "city": "Hamilton",
-            "postalCode": "3204",
-            "country": "NZ"
-        }
-    ]
+        "birthDate" : "2000-07-29"
       }
     },
     {
