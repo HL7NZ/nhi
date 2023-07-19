@@ -68,7 +68,7 @@ table, th, td {
  <li> Address is not curretly supported in match - this will be included in a future release</li>
  <li> Attributes included in the match request and not used by the operation will be silently ignored</li> 
 </ul>
-<a href="matchExample.html">$match request Patient resource examples</a>
+<a href="matchExample.html">Example match patient request and response</a>
 </td></tr>
 
 <tr><td> onlyCertainMatches: 0 (False) </td>
