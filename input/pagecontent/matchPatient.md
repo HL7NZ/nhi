@@ -57,9 +57,9 @@ table, th, td {
 <tr><td> 'Patient resource' </td>
 <td> Resource </td>
 <td> Mandatory </td>
-<td> The match patient operation uses the following attributes 
+<td> 
 <ul>
- <li> Attributes used in match </li>
+ <li>The match patient operation uses the following attributes: </li>
   <ul>
    <li> name </li>
    <li> birthdate </li>
