@@ -65,7 +65,7 @@ table, th, td {
    <li> birthdate </li>
    <li> gender </li>
   </ul>
- <li> Address is not curretly supported in match - this will be included in a future release</li>
+ <li> Address is not currently supported in match - this will be included in a future release</li>
  <li> Attributes included in the match request and not used by the operation will be silently ignored</li> 
 </ul>
 <a href="matchExample.html">Example match patient request and response</a>
