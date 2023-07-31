@@ -1,3 +1,6 @@
+### Create Patient Request
+
+```
 {
     "resourceType": "Parameters",
     "id": "Patient-create",
@@ -148,3 +151,4 @@
         }
     ]
 }
+```
