@@ -53,6 +53,10 @@ table, th, td {
 <td> The id for the name that will be preferred </td></tr>
 </table>
 
+#### Create Patient Example
+
+For a create patient example [click here](createPatientExample.html)
+
 #### Create Patient rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
