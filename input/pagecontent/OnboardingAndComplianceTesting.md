@@ -21,7 +21,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
 
 Please allow at least 5 working days for these applications to be processed and production credentials issued. If your product is to be used by many different organisations please get in touch to discuss your rollout plans and how we might assist.
 
-If you require help or have any questions regarding the onboarding process, please contact our team by completing a [General enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
+If you require help or have any questions regarding the onboarding process, please contact our team by completing the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
 
 
 
@@ -52,9 +52,9 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Compliance tests
 
-Not all tests below will be appropriate for every application. <br />
+Not all tests below will be appropriate for every application. If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
 
-If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
+To request a template for the compliance tests either add a comment to your onboarding request form or reach out using the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
 
 <h4>Security and Audit Assessment</h4>
 <table>
