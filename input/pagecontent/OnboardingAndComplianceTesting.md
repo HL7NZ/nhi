@@ -1318,7 +1318,7 @@ table, th, td {
 Create a fictitious identity (this can be done using http://www.fakenamegenerator.com/)
 </td>
 <td>
-<li> Input: Minimum set of patient information can be provided </li>
+<li>Input: Minimum set of patient information can be provided </li>
 <li>Output: New NHI is displayed with minimum dataset</li>
 <li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
@@ -1387,7 +1387,7 @@ table, th, td {
 <th>Mandatory</th>
 </tr>
 
-<tr><td> TBC... NHI-Create-Patient-error-XXXX <br /> Mandatory information</td>
+<tr><td> NHI-Create-Patient-error-1 <br /> Mandatory information</td>
 <td>application will show the correct error when attempting to create a patient with a mandaotory attribute missing</td>
 <td>Attempt to create a patient with a piece of mandatory information missing <b> Do all </b>
  <ol>
@@ -1407,7 +1407,7 @@ Error: EM07201 "Patient NZ Citizenship is a required field" <br />
 Error: EM07201 "Patient Address is a required field" </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-1 <br /> Address</td>
+<tr><td>NHI-Create-Patient-error-2 <br /> Address</td>
 <td>Application will show the correct error when attempting to create a patient with an eSAM validated address where the nz address id does not match the first line of the validated address</td>
 <td>
  <ul>
@@ -1419,7 +1419,7 @@ Error: EM07201 "Patient Address is a required field" </td>
 <td> Error: "address-line must match the espatial value: ..."  </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-2 <br /> Address</td>
+<tr><td>NHI-Create-Patient-error-3 <br /> Address</td>
 <td>Application will show the correct error when attempting to create a patient with the following unvalidated address without a domicile code</td>
 <td>
  <ul>
@@ -1435,7 +1435,7 @@ Error: EM07201 "Patient Address is a required field" </td>
 This will be updated in an upcming release - EM02210 - An unvalidated residential address must have a notional domicile code</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-3 <br /> Address</td>
+<tr><td>NHI-Create-Patient-error-4 <br /> Address</td>
 <td>Application will show the correct error when attempting to create a patient with an address with invalid characters</td>
 <td>
  <ul>
@@ -1451,7 +1451,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Invalid request body"</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-4 <br /> Address</td>
+<tr><td>NHI-Create-Patient-error-5 <br /> Address</td>
 <td>Application will show the correct error when attempting to create a patient with an address that does not contain address line 1 </td>
 <td>
  <ul>
@@ -1467,7 +1467,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Patient address-line-1 is required"</td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-Create-Patient-error-5 <br /> Address</td>
+<tr><td>NHI-Create-Patient-error-6 <br /> Address</td>
 <td>Application will show the correct error when attempting to create a patient with an address missing a not validated reason</td>
 <td>
  <ul>
@@ -1482,7 +1482,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Error: "Address not validated reason is required"</td>
 <td>optional</td></tr>
 
-<tr><td>NHI-Create-Patient-error-6 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-7 <br /> Name</td>
 <td>application can display an error when no given and family name is present</td>
 <td>Attempt to create a patient with no family or given name
    <ul>
@@ -1493,25 +1493,25 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-7 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-8 <br /> Name</td>
 <td>application can display an error when the given or family name contains special characters e.g. # @ % </td>
 <td>Attempt to create a patient with a fictitious name (with special character) </td>
 <td>Output: "Invalid request body"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-8 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-9 <br /> Name</td>
 <td>application can display an error when a given or family name begins with a number e.g. 1Smith </td>
 <td>Attempt to create a patient with a fictitious name (with a number as the first character) </td>
 <td>Output: EM02107 "A Patient’s given and family name must start with a letter of the alphabet or an apostrophe"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-9 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-10 <br /> Name</td>
 <td>application can display an error when a given or family name contains only whitespace/s </td>
 <td>Attempt to create a patient with a name (containing only whitespace) </td>
 <td>Output: EM02110 "Each populated Patient Name field must contain at least one letter"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-10 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-11 <br /> Name</td>
 <td>application can display an error when no information source</td>
 <td>Attempt to create a patient with a fictitious name
  <ul>
@@ -1522,7 +1522,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-11 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-12 <br /> Name</td>
 <td>application can display an error when an invalid source is provided</td>
 <td>Attempt to create a patient with a registered name source
  <ul>
@@ -1531,7 +1531,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07229 - "The patient name can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-12 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-13 <br /> Name</td>
 <td>application can display an error when no preferred-name-flag</td>
 <td>Attempt to create a patient with no preferred flag
  <ul>
@@ -1542,7 +1542,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>optional</td></tr>
 
-<tr><td>NHI-Create-Patient-error-13 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-14 <br /> Name</td>
 <td>application can display an error when preferred-name = false</td>
 <td>Attempt to create a patient with preferred flag = false
  <ul>
@@ -1553,7 +1553,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name and an information source."</td>
 <td>optional</td></tr>
 
-<tr><td>NHI-Create-Patient-error-14 <br /> Name</td>
+<tr><td>NHI-Create-Patient-error-15 <br /> Name</td>
 <td>application can display an error when a Babyof name is supplied with a use other than 'temp' and a source other than 'NPRF'</td>
 <td>Attempt to create a patient with babyof name
    <ul>
@@ -1563,7 +1563,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07225 - "name-use-extra is conditional on source = NPRF and name use = temp"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-15 <br /> Ethnicity</td>
+<tr><td>NHI-Create-Patient-error-16 <br /> Ethnicity</td>
 <td>application can display an error when attempting to create a patient with invalid ethnicity information < br /> contains multiple residual codes (9xxxx)</td>
 <td>Create a Patient with the ethnicities below:
  <ul>
@@ -1573,7 +1573,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-16 <br /> Ethnicity</td>
+<tr><td>NHI-Create-Patient-error-17 <br /> Ethnicity</td>
 <td>application can display an error when attempting to create a patient with invalid ethnicity information <br /> set of supplied ethnicities that includes a duplicate ethnicity</td>
 <td>Create a Patient with the ethnicities below:
  <ul>
@@ -1584,19 +1584,19 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-17 <br /> Gender</td>
+<tr><td>NHI-Create-Patient-error-18 <br /> Gender</td>
 <td>application can display an error when attempting to create a patient with a gender-original-text and no gender value</td>
 <td>Attempt to create a patient with a gender-original-text (and not gender)</td>
 <td>Output: EM07201 - "Is a required field - Patient.gender" </td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-18 <br /> Citizenship</td>
+<tr><td>NHI-Create-Patient-error-19 <br /> Citizenship</td>
 <td>application can display an error when attempting to create a patient with a NZ Citizenship information source without a NZ Citizenship status </td>
 <td>Choose an NZ Citizenship information source to supply but do not add NZ Citizenship status </td>
 <td>The format of the message is invalid (EM01002)</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-19 <br /> Citizenship</td>
+<tr><td>NHI-Create-Patient-error-20 <br /> Citizenship</td>
 <td>application can display an error when when attempting to create a patient with a registered Citizenship information source </td>
 <td>Attempt to create a patient with a citizenship
  <ul>
@@ -1606,13 +1606,13 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07229 "Patient NZ Citizenship can only be set to a ‘Registered’ value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-20 <br /> Date of birth</td>
+<tr><td>NHI-Create-Patient-error-21 <br /> Date of birth</td>
 <td>application will show the correct error when attempting to create a patient with a bithdate in the future</td>
 <td>Date of birth: A future date </td>
 <td>EM07212 - Patient Date of birth cannot be a future date</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-21 <br /> Date of birth</td>
+<tr><td>NHI-Create-Patient-error-22 <br /> Date of birth</td>
 <td>application can display an error when when attempting to create a patient with a registered Date of birth information source </td>
 <td>Attempt to create a patient with Date of birth source = BREG
  <ul>
@@ -1621,14 +1621,14 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Output: EM07229 "Patient Date of birth can only be set to a ‘Registered’ value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-22 <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-23 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with a place of birth but no country of birth</td>
 <td>Place of Birth: London <br />
 Do not supply a country of birth </td>
 <td>EM07202 - A place of birth must only be populated if a country of birth is populated</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-23 <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-24 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with no information source</td>
 <td>
  <ul>
@@ -1639,7 +1639,7 @@ Do not supply a country of birth </td>
 <td>EM07202 - A place of birth must only be populated if a place of birth source is populated</td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Create-Patient-error-24 <br /> Birthplace</td>
+<tr><td>NHI-Create-Patient-error-25 <br /> Birthplace</td>
 <td>Application will show the correct error when attempting to create a patient with no information source</td>
 <td>
  <ul>
