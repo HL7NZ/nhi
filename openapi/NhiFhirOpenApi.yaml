@@ -692,7 +692,7 @@ components:
         The Patient resource exposed by the NHI.
       properties:
         resourceType:
-          description: This is a Practitioner resource
+          description: This is a Patient resource
           enum:
               - Patient
         

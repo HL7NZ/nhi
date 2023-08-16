@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nz.health.digital.nhi.fhir</groupId>
 	<artifactId>hip-nhi-conformance-module</artifactId>
-	<version>1.4.3</version>
+	<version>1.4.5-SNAPSHOT</version>
 
 
 	<properties>
-		<revision>1.4.3</revision>
+		<revision>1.4.5-SNAPSHOT</revision>
 		<fhir-common.version>1.2.0</fhir-common.version>
 
 	</properties>
@@ -20,6 +20,15 @@
 			<classifier>fhir-resources</classifier>
 			<type>zip</type>
 		</dependency>
+		
+		<dependency>
+			<groupId>nz.health.digital.com.fhir</groupId>
+			<artifactId>nzbase-conformance-module</artifactId>
+			<version>2.0.0</version>
+			<classifier>zip</classifier>
+			<type>zip</type>
+		</dependency>
+		
 	</dependencies>
 	<distributionManagement>
 		<repository>
@@ -59,6 +68,25 @@
 
 						</configuration>
 					</execution>
+					
+					<execution>
+						<id>unpack-nzbase</id>
+						<phase>
+							validate
+						</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>nz.health.digital.com.fhir</includeGroupIds>
+							<includeArtifactIds>nzbase-conformance-module</includeArtifactIds>
+							<outputDirectory>
+								${project.basedir}/hfc_package
+							</outputDirectory>
+							<includes>**/package.tgz</includes>
+						</configuration>
+					</execution>
+					
 				</executions>
 			</plugin>
 

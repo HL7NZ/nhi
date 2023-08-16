@@ -49,11 +49,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $set-preferred-name </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -86,10 +81,6 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
-    {
-        "name" : "operation-type",
-        "valueString" : "$set-preferred-name"
-    },
     {
         "name" : "nhi",
         "valueString" : "ZGD1407"
@@ -161,11 +152,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $add-name </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -234,10 +220,6 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
-    {
-        "name" : "operation-type",
-        "valueString" : "$add-name"
-    },
     {
         "name" : "nhi",
         "valueString" : "ZGD1407"
@@ -343,11 +325,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $replace-name </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -421,10 +398,6 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
-    {
-        "name" : "operation-type",
-        "valueString" : "$replace-name"
-    },
     {
         "name" : "nhi",
         "valueString" : "ZGD1407"
@@ -546,11 +519,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $inactivate-name </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -583,10 +551,6 @@ table, th, td {
   "resourceType": "Parameters",
   "id": "example",
   "parameter": [
-    {
-        "name" : "operation-type",
-        "valueString" : "$inactivate-name"
-    },
     {
         "name" : "nhi",
         "valueString" : "ZGD1407"

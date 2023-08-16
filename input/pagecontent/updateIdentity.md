@@ -39,11 +39,6 @@ table, th, td {
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> operation-type </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> $update-identity </td></tr>
-
 <tr><td> nhi </td>
 <td> valueString </td>
 <td> Mandatory </td>
@@ -110,10 +105,6 @@ table, th, td {
   "id": "example",
   "parameter": [
     {
-        "name" : "operation-type",
-        "valueString" : "$update-identity"
-    },
-    {
         "name" : "nhi",
         "valueString" : "ZGD9203"
     },
@@ -133,18 +124,23 @@ table, th, td {
         "name" : "ethnicity-1",
         "valueString" : "21111"
     },
+    {
         "name" : "ethnicity-2",
         "valueString" : "12113"
     },
+    {
         "name" : "ethnicity-3",
         "valueString" : "12116"
     },
+    {
         "name" : "ethnicity-4",
         "valueString" : "12411"
     },
+    {
         "name" : "ethnicity-5",
         "valueString" : "12913"
     },
+    {
         "name" : "ethnicity-6",
         "valueString" : "12114"
     }

@@ -23,12 +23,6 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* parameter[0].name = #"operation-type"
-* parameter[=].use = #in
-* parameter[=].min = 1
-* parameter[=].max = "1"
-* parameter[=].documentation = "Must be $remove-postal-address"
-* parameter[=].type = #string
 
 * parameter[+].name = #"nhi"
 * parameter[=].use = #in
@@ -50,4 +44,12 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].type = #Patient
 * parameter[=].documentation = "The updated patient resource" 
+
+* parameter[+].name = #"failure"
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #OperationOutcome
+* parameter[=].documentation = "Error response" 
+
 

@@ -71,4 +71,9 @@ artifacts:
     - 'nhi/target/*.zip'
     - 'nhi/build-ig.log'
   name: $BRANCH
+  
+   
+cache:
+    paths:
+        - '/root/.m2/repository/**/*'  
  

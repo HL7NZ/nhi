@@ -17,12 +17,45 @@ The user has sourced the required identity information, done a thorough search o
 #### NHI FHIR Create Patient processing steps:
 
 1. The user initiates creating a new patient in the integrating application
-2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details E.g. Post\<Endpoint>/Patient
+2. The integrating application sends an HTTP POST request (a FHIR create) containing the Patient details E.g. Post\<Endpoint>/Patient/$create
 3. The request is validated - ALT: Validation failure. OperationOutcome resource returned
 4. A Patient record is created and a Patient ID (nhi-id) is issued
 5. The NHPI FHIR API confirms a successful update – HTTP 201 Created status code
 6. The integrating application indicates to the user the create has been successful
 7. The integrating application retains the nhi-id and version number for future requests relating to this record
+
+<h4>Create Patient - In Parameters </h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th> Parameter name </th>
+<th> Parameter type </th>
+<th> Mandatory / Optional </th>
+<th> Description </th></tr>
+
+<tr><td> patient </td>
+<td> Patient </td>
+<td> Mandatory </td>
+<td> <a href="StructureDefinition-CreateNhiPatient.html"> See Create Patient Profile</a> </td></tr>
+
+<tr><td> version-id </td>
+<td> valueString </td>
+<td> Mandatory </td>
+<td> The current patient version number </td></tr>
+
+<tr><td> preferred-id </td>
+<td> valueInteger </td>
+<td> Mandatory </td>
+<td> The id for the name that will be preferred </td></tr>
+</table>
+
+#### Create Patient Example
+
+For a create patient example [click here](createPatientExample.html)
 
 #### Create Patient rules and errors
 
