@@ -51,7 +51,8 @@ menu:
     Update birth: updateBirth.html
     Update eligibility: updateEligibility.html
   Important information:
-    Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
+    Onboarding: Onboarding.html
+    Compliance testing: ComplianceTesting.html
     General Notes: general.html
     FAQ: FAQ.html
     Glossary: glossary.html
