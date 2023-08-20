@@ -642,7 +642,7 @@ Output: The address that is displayed to the end user is the address that is ret
 Application will show the correct error when attempting to add the supplied address that has been previously removed from the patient record by NHI administration</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> address-line: 24 Anglesea Avenue </li>
   <li> nz-address-id: 967406 </li>
   <li> address-type: physical</li>
@@ -655,7 +655,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Application will show the correct error when attempting to add the following postal address for an undeliverable address</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> address-line: 748E Whitemans Valley Road </li>
   <li> nz-address-id: 3193368 </li>
   <li> address-type: postal</li>
@@ -668,7 +668,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Application will show the correct error when attempting to add an address where the nz address id does not match the first line of the validated address</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> address-line: 24 Ranglesey Place </li>
   <li> nz-address-id: 1199146 </li>
   <li> address-type: physical</li>
@@ -681,7 +681,7 @@ Application will show the correct error when attempting to add the supplied addr
 <td>Application will show the correct error when attempting to add the following unvalidated address without a domicile code</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> not-validated-address-reason: NOSVC </li>
   <li> address-type: physical </li>
   <li> address-line-1: 74 Chancellor Street" </li>
@@ -698,7 +698,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Application will show the correct error when attempting to add an address with invalid characters to the supplied patient</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> not-validated-address-reason: OTHER </li>
   <li> address-type: physical </li>
   <li> address-line-1: 11 L$nnet Street </li>
@@ -715,7 +715,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Application will show the correct error when attempting to add an address that does not contain address line 1 </td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> not-validated-address-reason: OTHER </li>
   <li> address-type: physical </li>
   <li> address-line-2: 11 Linnet Street </li>
@@ -732,7 +732,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>Application will show the correct error when attempting to add an address missing a not validated reason</td>
 <td>
  <ul>
-  <li> NHI: ZZJM9397 </li>
+  <li> NHI: ZJM9397 </li>
   <li> address-type: physical </li>
   <li> address-line-1: 11 Linnet Street </li>
   <li> address-suburb: Taihape </li>
