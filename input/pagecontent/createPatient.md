@@ -2,7 +2,7 @@
 
 ### Create Patient Overview
 
-The ‘Create Patient’ interaction is initiated by a user who needs to create a new identity record for a person not found on the NHI. <br />
+The ‘Create Patient’ operation is initiated by a user who needs to create a new identity record for a person not found on the NHI. <br />
 The user has sourced the required identity information, done a thorough search of the NHI, and initiates a request to create a new patient identity record in the NHI.
 
 **Expectations**
