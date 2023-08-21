@@ -45,7 +45,7 @@ table, th, td {
 <a href="OperationDefinition-Patient-create.html"> See Create Patient Operation definition</a> </td></tr>
 </table>
 
-#### Create Patient Example
+### Create Patient Example
 
 For a create patient example [click here](createPatientExample.html)
 
