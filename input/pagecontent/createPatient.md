@@ -24,7 +24,7 @@ The user has sourced the required identity information, done a thorough search o
 6. The integrating application indicates to the user the create has been successful
 7. The integrating application retains the nhi-id and version number for future requests relating to this record
 
-<h4>Create Patient - In Parameters </h4>
+<h3>Create Patient - In Parameters </h3>
 <table>
 <style>
 table, th, td {
@@ -32,7 +32,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>**A create request is actioned by submitting a resourceType Parameters**</caption>
+<caption>**A create patint request is actioned by submitting a parameters resource**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
@@ -49,11 +49,11 @@ table, th, td {
 
 For a create patient example [click here](createPatientExample.html)
 
-#### Create Patient rules and errors
+### Create Patient rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-##### Create Patient rules
+#### Create Patient rules
 
 * A Create Patient request must not create an NHI record which is a duplicate of another Patient’s identity
 
@@ -89,7 +89,7 @@ For a create patient example [click here](createPatientExample.html)
 
 
 
-##### Create Patient - Name rules
+#### Create Patient - Name rules
 * A Patient must have:
   * at least one Active Name
   * one, and only one, Active Name which is preferred.
@@ -135,7 +135,7 @@ For a create patient example [click here](createPatientExample.html)
 
 
 
-##### Create Patient - Birthdate rules
+#### Create Patient - Birthdate rules
 * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
 * A birthdate must be a complete date and formatted either:
   * YYYYMMDD - DOB less than or equal to the current date;
@@ -155,7 +155,7 @@ For a create patient example [click here](createPatientExample.html)
 
 
 
-##### Create Patient - Ethnicity rules
+#### Create Patient - Ethnicity rules
 * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
 * A Patient must supply all ethnicities identified with when supplying ethnicity information
 * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
@@ -169,7 +169,7 @@ For a create patient example [click here](createPatientExample.html)
 
 
 
-##### Create Patient - NZ Citizenship rules
+#### Create Patient - NZ Citizenship rules
 *  A Patient must have a NZ citizenship status
 *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
 
@@ -181,7 +181,7 @@ For a create patient example [click here](createPatientExample.html)
   * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
 
 
-##### Create Patient - Birthplace rules
+#### Create Patient - Birthplace rules
 * A place of birth must only be populated if a country of birth is present
 * A request to populate the Country of Birth Information Source must also populate the Country of Birth
 
@@ -194,7 +194,7 @@ For a create patient example [click here](createPatientExample.html)
   * _A Country of birth is required when a Country of Birth Information Source is present_
 
 
-##### Create Patient - Deceased date rules
+#### Create Patient - Deceased date rules
 * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
 * deceased date must be a complete date and formatted either;
   * YYYYMMDD - DOD less than or equal to the current date;
@@ -214,7 +214,7 @@ For a create patient example [click here](createPatientExample.html)
   * _The Date of Birth must be less than or equal to the Date of Death_
 
 
-##### Create Patient - Gender Rules
+#### Create Patient - Gender Rules
 *  A Patient must have a current gender, supplied as a valid gender code.
 *  A Patient may have a gender-original-text response
   * If supplied, both gender code and gender-original-text will be recorded in the NHI.
@@ -226,7 +226,7 @@ For a create patient example [click here](createPatientExample.html)
 * _Create Patient - Gender errors_
 
 
-##### Create Patient - Address rules
+#### Create Patient - Address rules
 * A Patient must have a single Primary Residential Address (type = physical)
 * An acceptable Patient Address must be: 
   * Validated by an Address Service; OR 
