@@ -244,6 +244,7 @@ For a create patient example [click here](createPatientExample.html)
   * a valid nz-address-id
   * Address-line-1 (that matches the address-line-1 returned by eSAM)
   * Address Type (physical or postal)
+* A validated postal address, must be an address where mail can be delivered (must be eSAM deliverable).
 * The result of an address service 'find address' request using the values provided for the first line of the Address Location must: 
   * result in a single validated address with a match score exceeding the match threshold, AND 
   * have a unique nz-address-id matching the ID provided in the request
