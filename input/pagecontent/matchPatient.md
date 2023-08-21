@@ -49,13 +49,14 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>**A match patient request is actioned by submitting a Parameters resource**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> 'Patient resource' </td>
-<td> Resource </td>
+<tr><td> resource </td>
+<td> patient </td>
 <td> Mandatory </td>
 <td> 
 <ul>
@@ -71,7 +72,7 @@ table, th, td {
 <a href="matchExample.html">Example match patient request and response</a>
 </td></tr>
 
-<tr><td> onlyCertainMatches: 0 (False) </td>
+<tr><td> onlyCertainMatches </td>
 <td> boolean </td>
 <td> Mandatory </td>
 <td> Must be set to false </td></tr>
