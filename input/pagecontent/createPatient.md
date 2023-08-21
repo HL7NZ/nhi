@@ -32,25 +32,17 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>**A create request is actioned by submitting a resourceType Parameters**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> patient </td>
-<td> Patient </td>
+<td> patient </td>
 <td> Mandatory </td>
-<td> <a href="StructureDefinition-CreateNhiPatient.html"> See Create Patient Profile</a> </td></tr>
-
-<tr><td> version-id </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> The current patient version number </td></tr>
-
-<tr><td> preferred-id </td>
-<td> valueInteger </td>
-<td> Mandatory </td>
-<td> The id for the name that will be preferred </td></tr>
+<td> <a href="StructureDefinition-CreateNhiPatient.html"> See Create Patient Profile</a> <br />
+<a href="OperationDefinition-Patient-create.html"> See Create Patient Operation definition</a> </td></tr>
 </table>
 
 #### Create Patient Example
