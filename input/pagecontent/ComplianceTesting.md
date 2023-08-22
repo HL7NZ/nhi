@@ -909,7 +909,6 @@ Output:
 <td>application can display an error when no information source</td>
 <td>Attempt to add a fictitious name to the patient ZDM4902
  <li>Name use = nickname</li>
- <li>source = PPRT</li>
  <li>Don't insert a information-source</li></td>
 <td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source."</td>
 <td>mandatory</td></tr>
