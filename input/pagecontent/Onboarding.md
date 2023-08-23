@@ -46,7 +46,7 @@ table, th, td {
 <td>The patient’s enrolled GP information is returned in the patient resource <br />
 The source for this is the National Enrolment Service (NES) <br />
 NES Business owner approval required <br />
- <a href="getPatient.html">See Get Patient use case</a>
+ <a href="getPatient.html">See Get Patient use case</a> <br />
  <a href="StructureDefinition-NhiPatient.html#patients-enrolled-general-practice">See information on Patient’s Enrolled GP</a> </td></tr>
 
 <tr><td>Get Patient - Contact details</td>
@@ -55,7 +55,7 @@ NES Business owner approval required <br />
 The source for this is the National Enrolment Service Patient Preferences. <br />
 Access to a patient’s contact details in Production will only be granted to Te Whatu Ora business teams that have completed a Privacy Impact Assessment which has been assessed and approved by the Te Whatu Ora privacy team.
 Business Owners should progress this in parallel with any application development. Production access to contact details will not be granted unless this step has been completed.<br />
- <a href="getPatient.html">See Get Patient use case</a>
+ <a href="getPatient.html">See Get Patient use case</a> <br />
  <a href="StructureDefinition-NhiPatient.html#patients-contact-details">See information on Patient’s Contact details</a> </td></tr>
 
 <tr><td>Search Patient</td>
