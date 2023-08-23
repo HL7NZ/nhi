@@ -1085,7 +1085,7 @@ Ethnicities to use:<br />
 <td>application can correctly update the gender value and gender-original-text on a patient record</td>
 <td>Update the gender for Patient: ZAA1063
  <li>Do a Get patient request </li>
- <li>Change gender from current gender to one of the four acceptable gender codes, include an original text reponse that a patient might submit </li></td>
+ <li>Change gender from current gender to one of the four acceptable gender codes, include an original text response that a patient might submit </li></td>
 <td>Output: 
  <li>Patients gender coded and gender original text updated and presented to user</li></td>
 <td>mandatory</td></tr>
