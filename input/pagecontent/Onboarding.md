@@ -62,7 +62,7 @@ Business Owners should progress this in parallel with any application developmen
 <td>Search Patient using name, birthdate and other demographics</td>
 <td>Returns only the core NHI fields (No enrolled GP or contact details even if the user has the correct permissions. <br /> Returns a patient resource <a href="matchPatient.html">See Match Patient use case</a></td></tr>
 
-<tr><td>Update Patient</td>
+<tr><td>Maintain Patient</td>
 <td>Update Patient records</td>
 <td>Provided on a limited basis to primary and secondary healthcare providers, and health system data quality teams. <br /> Allows access to the following operations:
 <ul>
