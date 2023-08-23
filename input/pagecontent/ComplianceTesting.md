@@ -271,20 +271,36 @@ table, th, td {
 
 <tr><td>NHI-Match-1</td>
 <td>application allows the user to search using the following attributes:
-<li>Name (Given Name(s) and/or Family Name)</li>
-<li>Date of birth (Full or partial)</li>
+<ul>
+   <li>Name
+      <ul>
+         <li> First name (Given Name) </li>
+         <li> Middle name (Other given name) </li>
+         <li> Last name (Family Name)</li>
+      </ul>
+   <li>Date of birth (Full or partial)</li>
+</ul>
 And to show that the application can present the minimum details to allow for adequate confirmation of identity (if present on the patient record): 
-<li>Name (Given Name(s), Family Name)</li>
-<li>Gender</li>
-<li>Date of birth</li>
-<li>Primary Address</li>
-<li>Date of Death</li>
-<li>NHI Identifier</li>
-<li>Match Score</li>
-<li>Display a flag/indicate when a patient in the search result has multiple names</li>
+<ul>
+   <li>Name
+      <ul>
+         <li> First name (Given Name) </li>
+         <li> Middle name (Other given name) </li>
+         <li> Last name (Family Name)</li>
+      </ul>
+   <li>Date of birth (Full or partial)</li>
+   <li>Gender</li>
+   <li>Primary Address</li>
+   <li>Date of Death</li>
+   <li>NHI Identifier</li>
+   <li>Match Score</li>
+   <li>Display a flag/indicate when a patient in the search result has multiple names</li>
+</ul>
 Note:
-<li>The application must display multiple results if they are returned.</li>
-<li>Results must be presented in descending order of the match score.</li></td>
+<ul>
+   <li>The application must display multiple results if they are returned.</li>
+   <li>Results must be presented in descending order of the match score.</li>
+</ul></td>
 <td>Given Name: Noah <br />
 Middle Name: James <br />
 Family Name: Owen <br />
@@ -296,40 +312,54 @@ DOB: 1949-10-30 (30th October 1949)</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-2 (if applicable)</td>
-<td> application allows the user to search with additional match criteria <br />
+<td>application allows the user to search with additional match criteria <br />
 If the application is populating any of these other parameters in your Match request then do this one too <br />
 The additional criteria includes:
-<li>Address</li>
-<li>Date of Death</li>
-<li>Place of Birth</li>
-<li>Country of Birth</li>
-<li>Building name</li> </td>
-<td>Given Name: Summer <br />
-Middle Name: Barbara <br />
-Family Name: MacKenzie <br />
-Gender: F <br />
-Date of Birth: 28-09-1954 <br />
-Street: 167 Springfield Road <br />
-Suburb: St Albans <br />
-townOrCity: Christchurch <br />
-dateOfDeath:  1975-05 <br />
-Place of Birth: Wellington <br />
-Country of Birth: India (Code ‘IN’) <br />
-Building name: Buildingnametest</td>
+<ul>
+   <li>Address</li>
+   <li>Date of Death</li>
+   <li>Place of Birth</li>
+   <li>Country of Birth</li>
+   <li>Building name</li>
+</ul></td>
+<td>
+<ul>
+   <li>Given Name: Summer</li>
+   <li> Middle Name: Barbara</li>
+   <li> Family Name: MacKenzie</li>
+   <li>Gender: F</li>
+   <li>Date of Birth: 28-09-1954</li>
+   <li>Street: 167 Springfield Road</li>
+   <li>Suburb: St Albans</li>
+   <li>townOrCity: Christchurch</li>
+   <li>dateOfDeath:  1975-05</li>
+   <li>Place of Birth: Wellington</li>
+   <li>Country of Birth: India (Code ‘IN’)</li>
+   <li>Building name: Buildingnametest</li>
+</ul></td>
 <td>Input: Additional Search Criteria can be populated <br />
 Output: First result returned in the search result list should be NHI ZAT4642</td>
 <td>mandatory (if applicable) </td></tr>
 
 <tr><td>NHI-Match-3</td>
 <td> application can manage many NHI resources in the response bundle and that results are presented in descending order of the match score </td>
-<td> Given Name: Test <br />
-Middle Name: <br />
-Family Name: Test <br />
-Gender: M <br />
-DOB: 31-12-1999 </td>
-<td>Input: Above criteria can be entered <br /> Output:
-<li>10 results are returned</li> 
-<li>The top result returned is NHI: ZAX6965 Score: 99</li></td>
+<td> 
+   <ul>
+      <li> Given Name: Test</li>
+      <li> Middle Name:</li>
+      <li> Family Name: Test</li>
+      <li> Gender: M </li>
+      <lu> DOB: 31-12-1999 </lu>
+   </ul></td>
+<td>
+   <ul>
+      <li> Input: Above criteria can be entered </li>
+      <li> Output:</li>
+      <ul>
+         <li> 10 results are returned</li> 
+         <li>The top result returned is NHI: ZAX6965 Score: 99</li>
+      </ul>
+   </ul></td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-Error-1</td>
