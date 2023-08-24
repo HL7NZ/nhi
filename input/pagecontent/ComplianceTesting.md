@@ -860,7 +860,7 @@ Output:
 <tr><td>NHI-$set-preferred-name-1</td>
 <td>application can set the patients preferred name</td>
 <td>
- <li>Use NHI number ZZK09PQ</li>
+ <li>Use NHI number ZAY5581</li>
  <li>Do a Get Patient request to see active patient names</li>
  <li>Change the preferred name from the current name to another active name for the patient</li></td>
 <td>Input:
