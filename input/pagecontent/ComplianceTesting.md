@@ -279,8 +279,8 @@ table, th, td {
          <li> Last name (Family Name)</li>
       </ul>
    <li>Date of birth (Full or partial)</li>
-</ul>
-And to show that the application can present the minimum details to allow for adequate confirmation of identity (if present on the patient record): 
+</ul> <br />
+And to show that the application can present the minimum details to allow for adequate confirmation of identity. <br />
 <ul>
    <li>Name
       <ul>
@@ -288,6 +288,7 @@ And to show that the application can present the minimum details to allow for ad
          <li> Middle name (Other given name) </li>
          <li> Last name (Family Name)</li>
       </ul>
+   </li>
    <li>Date of birth (Full or partial)</li>
    <li>Gender</li>
    <li>Primary Address</li>
@@ -295,7 +296,7 @@ And to show that the application can present the minimum details to allow for ad
    <li>NHI Identifier</li>
    <li>Match Score</li>
    <li>Display a flag/indicate when a patient in the search result has multiple names</li>
-</ul>
+</ul> <br />
 Note:
 <ul>
    <li>The application must display multiple results if they are returned.</li>
