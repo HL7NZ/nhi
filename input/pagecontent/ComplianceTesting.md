@@ -277,7 +277,7 @@ table, th, td {
          <li> First name (Given Name) </li>
          <li> Middle name (Other given name) </li>
          <li> Last name (Family Name)</li>
-      </ul>
+      </ul></li>
    <li>Date of birth (Full or partial)</li>
 </ul> <br />
 And to show that the application can present the minimum details to allow for adequate confirmation of identity. <br />
@@ -302,14 +302,29 @@ Note:
    <li>The application must display multiple results if they are returned.</li>
    <li>Results must be presented in descending order of the match score.</li>
 </ul></td>
-<td>Given Name: Noah <br />
-Middle Name: James <br />
-Family Name: Owen <br />
-Gender: M <br />
-DOB: 1949-10-30 (30th October 1949)</td>
-<td>Input: Minimum search criteria can be entered <br /> Output:
-<li>The top result returned in the search should be NHI ZAT4626</li>
-<li>Minimum search result identity attributes are all present in result list</li></td>
+<td>
+   <ul>
+      <li> Name
+        <ul>
+           <li>Given Name: Noah</li>
+           <li>Middle Name: James</li>
+           <li>Family Name: Owen</li>
+        </ul>
+      </li>
+      <li>Gender: M</li>
+      <li>DOB: 1949-10-30 (30th October 1949)</li>
+   </ul></td>
+<td>
+   <ul>
+     <li> Input: Minimum search criteria can be entered</li>
+     <li> Output:
+       <ul>
+         <li>The top result returned in the search should be NHI ZAT4626</li>
+         <li>Minimum search result identity attributes are all present in result list</li>
+        </ul>
+      </li>
+   </ul>
+</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-2 (if applicable)</td>
@@ -325,9 +340,12 @@ The additional criteria includes:
 </ul></td>
 <td>
 <ul>
-   <li>Given Name: Summer</li>
-   <li> Middle Name: Barbara</li>
-   <li> Family Name: MacKenzie</li>
+   <li>Name</li>
+     <ul>
+        <li>Given Name: Summer</li>
+        <li>Middle Name: Barbara</li>
+        <li>Family Name: MacKenzie</li>
+     </ul>
    <li>Gender: F</li>
    <li>Date of Birth: 28-09-1954</li>
    <li>Street: 167 Springfield Road</li>
@@ -338,28 +356,36 @@ The additional criteria includes:
    <li>Country of Birth: India (Code ‘IN’)</li>
    <li>Building name: Buildingnametest</li>
 </ul></td>
-<td>Input: Additional Search Criteria can be populated <br />
-Output: First result returned in the search result list should be NHI ZAT4642</td>
+<td>
+   <ul>
+      <li>Input: Additional Search Criteria can be populated</li>
+      <li>Output:First result returned in the search result list should be NHI ZAT4642</li>
+   </ul>
+</td>
 <td>mandatory (if applicable) </td></tr>
 
 <tr><td>NHI-Match-3</td>
 <td> application can manage many NHI resources in the response bundle and that results are presented in descending order of the match score </td>
 <td> 
    <ul>
-      <li> Given Name: Test</li>
-      <li> Middle Name:</li>
-      <li> Family Name: Test</li>
+      <li>Name</li>
+        <ul>
+          <li>Given Name: Test</li>
+          <li> Middle Name:</li>
+          <li> Family Name: Test</li>
+        </ul>
       <li> Gender: M </li>
-      <lu> DOB: 31-12-1999 </lu>
+      <li> DOB: 31-12-1999 </li>
    </ul></td>
 <td>
    <ul>
       <li> Input: Above criteria can be entered </li>
-      <li> Output:</li>
+      <li> Output
       <ul>
          <li> 10 results are returned</li> 
          <li>The top result returned is NHI: ZAX6965 Score: 99</li>
       </ul>
+      </li>
    </ul></td>
 <td>mandatory</td></tr>
 
