@@ -6,7 +6,7 @@ The NHI Patient resource represents the nationally held identity data for a pati
 
 This includes the core NHI Profile attributes:
 * name (including alternative names such as maiden names)
-* NHI number
+* NHI number (live and any dormants)
 * address
 * date of birth
 * gender
