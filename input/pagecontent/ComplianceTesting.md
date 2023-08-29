@@ -230,29 +230,83 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-GET-11</td>
-<td>application can display the patients's enrolled General Practice details returned by the NHI in a GET response including
-<li>The NES enrolment id</li>
-<li>enrolment.startDate</li>
-<li>enrolment.expiryDate</li>
-<li>Practitioner identifier (CPN) and name</li>
-<li>enrolling organisation ID and name</li>
-<li>Facility ID and name</li></td>
-<td> Enrolled GP - ZKC4641 <br /> Enrolled GP and Contact details ZKC4633 </td>
+<td>
+application can display the patients's enrolled General Practice details returned by the NHI in a GET response including: <br />
+<ul>
+   <li>The NES enrolment id</li>
+   <li>enrolment.startDate</li>
+   <li>enrolment.expiryDate</li>
+   <li>Practitioner identifier (CPN) and name</li>
+   <li>enrolling organisation ID and name</li>
+   <li>Facility ID and name</li>
+</ul>
+</td>
+<td>
+   <ol>
+      <li> ZKC4641
+        <ul>
+          <li>Practitioner</li>
+          <li>Organisation</li>
+          <li>Facility</li>
+        </ul>
+      </li>
+      <li>ZKC4633
+        <ul>
+          <li>Practitioner</li>
+          <li>Organisation</li>
+          <li>Facility</li>
+        </ul>
+      </li>
+      <li>ZAN5358
+        <ul>
+          <li>Organisation</li>
+          <li>Facility</li>
+        </ul>
+      </li>
+   </ol>
+</td>
 <td>Output:
-<li>application does not error</li> 
-<li>application returns all General Practice details when present</li></td>
-<td>*Mandatory if</td></tr>
+   <ul>
+      <li>application does not error</li> 
+      <li>application returns all General Practice details when present</li>
+   </ul>
+</td>
+<td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-12</td>
-<td>application can display the patients's contact details returned by the NHI in a GET response including:
-<li>Home phone</li>
-<li>Mobile phone</li>
-<li>Email address</li></td>
-<td> Contact details - ZKC4650 <br /> Enrolled GP and Contact details ZKC4633 </td>
-<td>Output:
-<li>application does not error</li> 
-<li>application returns all Contact details when present</li></td>
-<td>*Mandatory if </td></tr>
+<td>application can display the patients's contact details returned by the NHI in a GET response including: <br />
+<ul>
+   <li>Home phone</li>
+   <li>Mobile phone</li>
+   <li>Email address</li>
+</ul>
+</td>
+<td>
+   <ol>
+      <li>ZKC4650
+        <ul>
+           <li>Home phone</li>
+           <li>Mobile phone</li>
+           <li>Email address</li>
+        </ul>
+      </li>
+      <li>ZKC4633
+        <ul>
+           <li>Home phone</li>
+           <li>Mobile phone</li>
+           <li>Email address</li>
+        </ul>
+      </li>
+   </ol>
+</td>
+<td>
+   <li>Output:
+      <ul>
+         <li>application does not error</li> 
+         <li>application returns all Contact details when present</li>
+      </ul>
+   </li> 
+<td>Mandatory</td></tr>
 </table>
 
 <h4>NHI Patient Match tests</h4>
