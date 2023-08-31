@@ -155,9 +155,10 @@ We’re transitioning to the following operation outcome
                     {
                         "system": "https://hip-fhir-api/errors/error-codes",
                         "code": "EM02002"
+                        "display": "Missing required field when related field is present"
                     }
                 ],
-                "text": "EM02002 - NHI number supplied cannot be found"
+                "text": "EM07202 - Patient NZ Citizenship source is required when Patient NZ Citizenship is present"
             }
         }
     ]
