@@ -145,34 +145,23 @@ We’re transitioning to the following operation outcome
 ```
 
 {
-  "resourceType": "OperationOutcome",
-  "issue": [ {
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "https://standards.digital.health.nz/ns/hip-operation-outcome-details-code",
-        "code": "EM07106",
-        "display": "Record version provided is out of date. The record cannot be updated"
-      } ]
-    },
-    "expression": [ "Patient.identifier:NHI" ]
-  } ]
+    "resourceType": "OperationOutcome",
+    "issue": [
+        {
+            "severity": "error",
+            "code": "processing",
+            "details": {
+                "coding": [
+                    {
+                        "system": "https://hip-fhir-api/errors/error-codes",
+                        "code": "EM02002"
+                    }
+                ],
+                "text": "EM02002 - NHI number supplied cannot be found"
+            }
+        }
+    ]
 }
-
-```
-
-But not all errors have been converted or assigned error codes, the unconverted errors use:
-
-```
-
-{
-  "resourceType": "OperationOutcome",
-  "issue": [ {
-    "severity": "error",
-    "code": "processing",
-    "diagnostics": "Authentication: missing userid header"
-  }
 
 ```
 
