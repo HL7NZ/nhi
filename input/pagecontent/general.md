@@ -153,12 +153,12 @@ We’re transitioning to the following operation outcome
             "details": {
                 "coding": [
                     {
-                        "system": "https://hip-fhir-api/errors/error-codes",
+                        "system": "https://standards.digital.health.nz/ns/hip-error-code",
                         "code": "EM02002"
-                        "display": "Missing required field when related field is present"
+                        "display": "Missing a required field"
                     }
                 ],
-                "text": "EM07202 - Patient NZ Citizenship source is required when Patient NZ Citizenship is present"
+                "text": "Name is a required field"
             }
         }
     ]
