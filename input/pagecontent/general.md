@@ -154,7 +154,7 @@ We’re transitioning to the following operation outcome
                 "coding": [
                     {
                         "system": "https://standards.digital.health.nz/ns/hip-error-code",
-                        "code": "EM02002"
+                        "code": "EM07201"
                         "display": "Missing a required field"
                     }
                 ],
