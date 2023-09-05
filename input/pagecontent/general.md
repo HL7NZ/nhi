@@ -223,7 +223,7 @@ table, th, td {
 ```
 
 
-#### Request Rules and Errors
+### Request Rules and Errors
 
 * **Request rules**
   * Every request must include an:
@@ -241,7 +241,7 @@ table, th, td {
 
 * This is a list of any additions to standard HTTP header protocol
 
-<h3>Request Headers</h3>
+<h4>Request Headers</h4>
 <table>
 <style>
 table, th, td {
@@ -285,7 +285,7 @@ Preferred less than 64 characters <br /> </td>
 <td> Mandatory </td></tr>
 </table>
 
-<h3>Response Headers</h3>
+<h4>Response Headers</h4>
 <table>
 <style>
 table, th, td {
