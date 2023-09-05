@@ -112,7 +112,7 @@ Note: To be more FHIR compliant this will be changed to return:
 
 ### Match Patient Rules and errors
 
-[For Request rules and errors click here]($matchExample.html)
+[For Request rules and errors click here](/general.html#request-rules-and-errors)
 
 #### Match Patient rules
 * A Match patient request must include:
