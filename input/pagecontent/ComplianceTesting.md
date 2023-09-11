@@ -1165,7 +1165,7 @@ Patient’s ethnicity after update should be:
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-core-6 <br /> $update-identity-error <br /> Ethnicity</td>
-<td>application can display an error when ethnicity information invalid < br /> contains multiple residual codes (9xxxx)</td>
+<td>application can display an error when ethnicity information invalid <br /> contains multiple residual codes (9xxxx)</td>
 <td>Update the ethnicity information for Patient: ZAA0261 <br />
 Ethnicities to use:
    <li> 97777 (response unidentifiable) </li>
@@ -1647,7 +1647,7 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-16 <br /> Ethnicity</td>
-<td>application can display an error when attempting to create a patient with invalid ethnicity information < br /> contains multiple residual codes (9xxxx)</td>
+<td>application can display an error when attempting to create a patient with invalid ethnicity information <br /> contains multiple residual codes (9xxxx)</td>
 <td>Create a Patient with the ethnicities below:
  <ul>
    <li> 97777 (response unidentifiable) </li>
