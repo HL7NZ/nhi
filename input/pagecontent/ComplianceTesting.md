@@ -192,7 +192,7 @@ table, th, td {
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-4</td>
-<td>application behaves appropriately when a request for an older format dormant NHI number returns a 'live' new format NHI number </td>
+<td>application behaves appropriately when a request for a dormat older format NHI number returns a 'live' new format NHI number </td>
 <td>
    <ul>
       <li>ZKP3289</li>
