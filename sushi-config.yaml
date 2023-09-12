@@ -56,10 +56,10 @@ menu:
     FAQ: FAQ.html
     Glossary: glossary.html
   Compliance Testing:
-    Compliance testing important information: ComplianceTestingImportant.html
-    Get / Match Patient Compliance testing: ComplianceTestingGetMatch.html
-    Update Patient Compliance testing: ComplianceTestingUpdate.html
-    Create Patient Compliance testing: ComplianceTestingCreate.html
+    Compliance testing important information: ComplianceTestingImportantInformation.html
+    Get / Match Patient Compliance testing: GetMatchPatientComplianceTesting.html
+    Update Patient Compliance testing: UpdatePatientComplianceTesting.html
+    Create Patient Compliance testing: CreatePatientComplianceTesting.html
   API: API.html
   Profiles: profiles.html
   Extensions: extensions.html
