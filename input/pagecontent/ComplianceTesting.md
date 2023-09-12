@@ -92,6 +92,219 @@ table, th, td {
 <td>Recommended</td></tr>
 </table>
 
+<h4>Extra tests</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption>**These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to work with other HIP services**</caption>
+<tr><th>Reference</th>
+<th>Purpose</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Extra-1</td>
+<td>application behaves appropriately when a new format NHI number is produced</td>
+<td>
+   <ul>
+      <li>ZXE24NV</li>
+      <li>ZUA48EH</li>
+      <li>ZUT01RG</li>
+   </ul>
+</td>
+<td>Output: Application does not error </td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-2</td>
+<td>application behaves appropriately when a new format NHI number is returned in a search response</td>
+<td>Use a Match request to retrieve patients below<br />
+   <ul>
+      <li>ZXE24NV</li>
+        <ul>
+           <li>Family Name: Federstein </li>
+           <li>Given Name: Franklin</li>
+           <li>Date of birth:1999-04-04</li>
+           <li>Gender: male</li>
+        </ul>
+   </ul>
+   <ul>
+      <li>ZUA48EH</li>
+        <ul>
+           <li>Family Name: Brady </li>
+           <li>Given Names: Thomas, James</li>
+           <li>Date of birth:1971-11-11</li>
+           <li>Gender: male</li>
+        </ul>
+   </ul>     
+   <ul>
+      <li>ZUT01RG</li>
+        <ul>
+           <li>Family Name: Sparrow </li>
+           <li>Given Names: James</li>
+           <li>Date of birth:2000-11-12</li>
+           <li>Gender: male</li>
+        </ul>
+   </ul>
+</td>
+<td>Input: Above criteria can be entered <br />
+Output: Application does not error when new formt NHI returned</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-3</td>
+<td>application behaves appropriately when a request for a dormant new format NHI number returns a 'live' older format NHI number </td>
+<td>
+   <ul>
+      <li>ZNK28DJ</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter new format NHI </li>
+      <li> Output
+      <ul>
+         <li>application should return live record 'ZKP3424'</li>
+         <li>application does not error when an older format NHI is returned.</li> 
+         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+      </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-4</td>
+<td>application behaves appropriately when a request for an older format dormant NHI number returns a 'live' new format NHI number </td>
+<td>
+   <ul>
+      <li>ZKP3289</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter the older format NHI </li>
+      <li> Output
+      <ul>
+         <li>application should return live record 'ZKP3424'</li>
+         <li>application does not error when an older format NHI is returned.</li> 
+         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+      </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-5</td>
+<td>application can create an enrolment for a new format NHI number </td>
+<td>
+   <ul>
+      <li>ZTL39SK</li>
+      <li>ZWB84LW</li>
+      <li>ZQF54PV</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can create an enrolment for a new format NHI </li>
+      <li> Output: enrolment created successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-6</td>
+<td>application can update an enrolment for a new format NHI number </td>
+<td>
+<li> update one of the enrolments created above</li>
+</td>
+<td>
+   <ul>
+      <li> Input: user can update an enrolment for a new format NHI </li>
+      <li> Output: enrolment updated successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-7</td>
+<td>application can create a Medical Warning for a new format NHI number </td>
+<td>
+   <ul>
+      <li>ZTL39SK</li>
+      <li>ZWB84LW</li>
+      <li>ZQF54PV</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can create a Medical Warning for a new format NHI </li>
+      <li> Output: Medical Warning created successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-8</td>
+<td>application can update a Medical Warning for a new format NHI number </td>
+<td>
+<li> update one of the Medical Warnings created above</li>
+</td>
+<td>
+   <ul>
+      <li> Input: User can update a Medical Warning for a new format NHI </li>
+      <li> Output: Medical Warning updated successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-9</td>
+<td>application can create a patient with a new format NHI number</td>
+<td>
+   <ul>
+      <li>Family Name: NEWNHI</li>
+      <li>Add all other relevant ficticious data</li>
+</td>
+<td>
+   <ul>
+      <li> Input: Create a new format NHI with Family name above </li>
+      <li> Output:
+         <ul>
+            <li>Application can create a patient successfully</li>
+            <li>Application does not error</li>
+         </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-10</td>
+<td>application can update a patient with a new format NHI number</td>
+<td>
+<li>Use NHI created above and update relevant attributes depending on use case
+   <ul>
+      <li>Birthdate</li>
+      <li>Birthplace</li>
+      <li>Gender</li>
+      <li>Ethnicity</li>
+      <li>Name</li>
+      <li>Address</li>
+      <li>NZ Citizenship status</li>
+   </ul>
+</li>
+</td>
+<td>
+   <ul>
+      <li> Input: User can input information to update</li>
+      <li> Output:
+         <ul>
+            <li>Application can update a new format NHI successfully</li>
+            <li>Application does not error</li>
+         </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+</table>
+
 <h4>NHI Patient GET tests</h4>
 <table>
 <style>
@@ -184,8 +397,12 @@ The patient has the following fields fully populated in the test record (field l
 
 <tr><td>NHI-GET-7</td>
 <td>application behaves appropriately when a new format NHI number is produced</td>
-<td>ZXE24NV<br />
-ZUA48EH</td>
+<td>
+   <ul>
+      <li>ZXE24NV</li>
+      <li>ZUA48EH</li>
+   </ul>
+</td>
 <td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
 
@@ -440,7 +657,8 @@ The additional criteria includes:
          <li>The top result returned is NHI: ZAX6965 Score: 99</li>
       </ul>
       </li>
-   </ul></td>
+   </ul>
+</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Match-Error-1</td>
@@ -508,16 +726,19 @@ Output: The application alerts the user that the patient is deceased and provide
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-6 (NHI-Get-3)</td>
-<td>application can display all other identity data returned by the NHI in a GET response including:
-<li>All patient names with all name parts</li>
-<li>Name Information Source</li>
-<li>Date of Birth Information Source</li>
-<li>Ethnicity information</li>
-<li>All patient addresses and address parts</li>
-<li>NZ Citizenship status</li>
-<li>Country of Birth</li>
-<li>Country of Birth source</li>
-<li>Place of Birth</li></td>
+<td>application can display all other identity data returned by the NHI in a GET response including: <br />
+   <ul>
+      <li>All patient names with all name parts</li>
+      <li>Name Information Source</li>
+      <li>Date of Birth Information Source</li>
+      <li>Ethnicity information</li>
+      <li>All patient addresses and address parts</li>
+      <li>NZ Citizenship status</li>
+      <li>Country of Birth</li>
+      <li>Country of Birth source</li>
+      <li>Place of Birth</li>
+   </ul>
+</td>
 <td>Use a Match request to retrieve ZAT2364 and demonstrate how you display the NHI details <br />
 Family Name: John <br />
 Given Names: Levi, Sands <br />
@@ -1430,7 +1651,7 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
  </li>
 </ul></td>
 <td>
-<li> Input: Additional identity information can be provided </li>
+<li>Input: Additional identity information can be provided </li>
 <li>Output: New NHI is displayed with minimum dataset</li>
 <li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
@@ -1448,7 +1669,7 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
 </ol>
 </td>
 <td>
-<li> Input: All unvalidated address reasons can be provided </li>
+<li>Input: All unvalidated address reasons can be provided </li>
 <li>Output: New NHI is displayed with minimum dataset</li>
 <li>Output: All patient information can be displayed</li></td>
 <td>Mandatory</td></tr>
