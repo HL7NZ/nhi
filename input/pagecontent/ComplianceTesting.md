@@ -108,7 +108,7 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-Extra-1</td>
-<td>application behaves appropriately when a new format NHI number is produced</td>
+<td>Get new format NHI <br /> application behaves appropriately when a new format NHI number is produced</td>
 <td>
    <ul>
       <li>ZXE24NV</li>
@@ -127,7 +127,49 @@ table, th, td {
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-2</td>
-<td>application behaves appropriately when a new format NHI number is returned in a search response</td>
+<td>Get dormant-1 <br /> application behaves appropriately when a request for a dormant new format NHI number returns a 'live' older format NHI number </td>
+<td>
+   <ul>
+      <li>ZNK28DJ</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter new format NHI </li>
+      <li> Output
+      <ul>
+         <li>application should return live record 'ZKP3424'</li>
+         <li>application does not error when an older format NHI is returned.</li> 
+         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+      </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-3</td>
+<td>Get dormant-2 <br /> application behaves appropriately when a request for a dormat older format NHI number returns a 'live' new format NHI number </td>
+<td>
+   <ul>
+      <li>ZKP3289</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter the older format NHI </li>
+      <li> Output
+      <ul>
+         <li>application should return live record 'ZKP3424'</li>
+         <li>application does not error when an older format NHI is returned.</li> 
+         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
+      </ul>
+      </li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-4</td>
+<td>Search / Match new format NHI <br / application behaves appropriately when a new format NHI number is returned in a search response</td>
 <td>Use an NHI Search / Match request to retrieve patients below<br />
    <ul>
       <li>ZXE24NV</li>
@@ -170,110 +212,8 @@ table, th, td {
 </td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-Extra-3</td>
-<td>application behaves appropriately when a request for a dormant new format NHI number returns a 'live' older format NHI number </td>
-<td>
-   <ul>
-      <li>ZNK28DJ</li>
-   </ul>
-</td>
-<td>
-   <ul>
-      <li> Input: user can enter new format NHI </li>
-      <li> Output
-      <ul>
-         <li>application should return live record 'ZKP3424'</li>
-         <li>application does not error when an older format NHI is returned.</li> 
-         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
-      </ul>
-      </li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
-<tr><td>NHI-Extra-4</td>
-<td>application behaves appropriately when a request for a dormat older format NHI number returns a 'live' new format NHI number </td>
-<td>
-   <ul>
-      <li>ZKP3289</li>
-   </ul>
-</td>
-<td>
-   <ul>
-      <li> Input: user can enter the older format NHI </li>
-      <li> Output
-      <ul>
-         <li>application should return live record 'ZKP3424'</li>
-         <li>application does not error when an older format NHI is returned.</li> 
-         <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
-      </ul>
-      </li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
 <tr><td>NHI-Extra-5</td>
-<td>application can create an enrolment for a new format NHI number </td>
-<td>
-   <ul>
-      <li>ZTL39SK</li>
-      <li>ZWB84LW</li>
-      <li>ZQF54PV</li>
-   </ul>
-</td>
-<td>
-   <ul>
-      <li> Input: user can create an enrolment for a new format NHI </li>
-      <li> Output: enrolment created successfully</li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
-<tr><td>NHI-Extra-6</td>
-<td>application can update an enrolment for a new format NHI number </td>
-<td>
-<li> update one of the enrolments created above</li>
-</td>
-<td>
-   <ul>
-      <li> Input: user can update an enrolment for a new format NHI </li>
-      <li> Output: enrolment updated successfully</li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
-<tr><td>NHI-Extra-7</td>
-<td>application can create a Medical Warning for a new format NHI number </td>
-<td>
-   <ul>
-      <li>ZTL39SK</li>
-      <li>ZWB84LW</li>
-      <li>ZQF54PV</li>
-   </ul>
-</td>
-<td>
-   <ul>
-      <li> Input: user can create a Medical Warning for a new format NHI </li>
-      <li> Output: Medical Warning created successfully</li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
-<tr><td>NHI-Extra-8</td>
-<td>application can update a Medical Warning for a new format NHI number </td>
-<td>
-<li> update one of the Medical Warnings created above</li>
-</td>
-<td>
-   <ul>
-      <li> Input: User can update a Medical Warning for a new format NHI </li>
-      <li> Output: Medical Warning updated successfully</li>
-   </ul>
-</td>
-<td>Optional</td></tr>
-
-<tr><td>NHI-Extra-9</td>
-<td>application can create a patient with a new format NHI number</td>
+<td>Create new format NHI <br /> application can create a patient with a new format NHI number</td>
 <td>
    <ul>
       <li>Family Name: NEWNHI</li>
@@ -293,8 +233,8 @@ table, th, td {
 </td>
 <td>Optional</td></tr>
 
-<tr><td>NHI-Extra-10</td>
-<td>application can update a patient with a new format NHI number</td>
+<tr><td>NHI-Extra-6</td>
+<td>Update new format NHI <br />application can update a patient with a new format NHI number</td>
 <td>
 <li>Use NHI created above and update relevant attributes depending on use case
    <ul>
@@ -320,7 +260,105 @@ table, th, td {
    </ul>
 </td>
 <td>Optional</td></tr>
+
+<tr><td>NHI-Extra-7</td>
+<td>Get enrolment for new format <br /> application can return enrolment information for a new format NHI </td>
+<td>
+   <ul>
+      <li>ZKP3289</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter new format NHI </li>
+      <li> Output: application can display enrolment information for new format NHI</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-8</td>
+<td>Create enrolment for new format <br /> application can create an enrolment for a new format NHI number </td>
+<td>
+   <ul>
+      <li>ZTL39SK</li>
+      <li>ZWB84LW</li>
+      <li>ZQF54PV</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can create an enrolment for a new format NHI </li>
+      <li> Output: enrolment created successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-9</td>
+<td>Update enrolment for new format <br /> application can update an enrolment for a new format NHI number </td>
+<td>
+   <li> update one of the enrolments created above, do all relevant tests:</li>
+   <ul>
+      <li>Service Practitioner</li>
+      <li>Re-enrolment date </li>
+      <li>Qualified encounter date </li>
+      <li>Termination Reason </li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can update an enrolment for a new format NHI </li>
+      <li> Output: enrolment updated successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-10</td>
+<td>Get Medical Warning for new format <br /> application can return Medical Warning information for a new format NHI </td>
+<td>
+   <ul>
+      <li>ZKP3289</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter new format NHI </li>
+      <li> Output: application can display Medical Warning information for new format NHI</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-11</td>
+<td>Create Medical Warning for new format <br /> application can create a Medical Warning for a new format NHI number </td>
+<td>
+   <ul>
+      <li>ZTL39SK</li>
+      <li>ZWB84LW</li>
+      <li>ZQF54PV</li>
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can create a Medical Warning for a new format NHI </li>
+      <li> Output: Medical Warning created successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-12</td>
+<td>Update Medical Warning for new format <br /> application can update a Medical Warning for a new format NHI number </td>
+<td>
+<li> update one of the Medical Warnings created above</li>
+</td>
+<td>
+   <ul>
+      <li> Input: User can update a Medical Warning for a new format NHI </li>
+      <li> Output: Medical Warning updated successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
 </table>
+
+
 
 <h4>NHI Patient GET tests</h4>
 <table>
