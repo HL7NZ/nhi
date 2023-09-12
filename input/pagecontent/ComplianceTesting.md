@@ -262,6 +262,7 @@ Output: Application does not error when new formt NHI returned</td>
    <ul>
       <li>Family Name: NEWNHI</li>
       <li>Add all other relevant ficticious data</li>
+   </ul>
 </td>
 <td>
    <ul>
