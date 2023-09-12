@@ -100,7 +100,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>**These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to work with other HIP services**</caption>
+<caption><b>These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to work with other HIP services</b></caption>
 <tr><th>Reference</th>
 <th>Purpose</th>
 <th>Input values</th>
@@ -116,12 +116,19 @@ table, th, td {
       <li>ZUT01RG</li>
    </ul>
 </td>
-<td>Output: Application does not error </td>
+<td>
+      <li>Output:
+         <ul>
+            <li>Application does not error</li>
+            <li>Minimum identity information is displayed for the patient</li>
+         </ul>
+      </li>
+</td>
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-2</td>
 <td>application behaves appropriately when a new format NHI number is returned in a search response</td>
-<td>Use a Match request to retrieve patients below<br />
+<td>Use an NHI Search / Match request to retrieve patients below<br />
    <ul>
       <li>ZXE24NV</li>
         <ul>
@@ -150,8 +157,17 @@ table, th, td {
         </ul>
    </ul>
 </td>
-<td>Input: Above criteria can be entered <br />
-Output: Application does not error when new formt NHI returned</td>
+<td>
+<li>Input: Search criteria can be entered</li>
+<ul>
+   <li>Output:
+      <ul>
+         <li>Application does not error when new formt NHI returned</li>
+         <li>Minimum identity information is displayed for the patient</li>
+      </ul>
+   </li>
+</ul>
+</td>
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-3</td>
@@ -440,7 +456,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> **Only complete these if you have either permission to vew a patient's enrolled GP or contact details** </caption>
+<caption> <b>Only complete these if you have either permission to vew a patient's enrolled GP or contact details</b> </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -524,6 +540,7 @@ application can display the patients's enrolled General Practice details returne
          <li>application returns all Contact details when present</li>
       </ul>
    </li> 
+</td>
 <td>Mandatory</td></tr>
 </table>
 
