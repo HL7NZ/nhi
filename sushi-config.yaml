@@ -52,10 +52,14 @@ menu:
     Update eligibility: updateEligibility.html
   Important information:
     Onboarding: Onboarding.html
-    Compliance testing: ComplianceTesting.html
     General Notes: general.html
     FAQ: FAQ.html
     Glossary: glossary.html
+  Compliance Testing:
+    Compliance testing important information: ComplianceTestingImportant.html
+    Get / Match Patient Compliance testing: ComplianceTestingGetMatch.html
+    Update Patient Compliance testing: ComplianceTestingUpdate.html
+    Create Patient Compliance testing: ComplianceTestingCreate.html
   API: API.html
   Profiles: profiles.html
   Extensions: extensions.html
