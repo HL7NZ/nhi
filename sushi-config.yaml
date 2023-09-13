@@ -57,7 +57,7 @@ menu:
     Glossary: glossary.html
   Compliance Testing:
     Compliance testing important information: ComplianceTestingImportantInformation.html
-    Get / Match Patient Compliance testing: GetMatchPatientComplianceTesting.html
+    Get and Match Patient Compliance testing: GetandMatchPatientComplianceTesting.html
     Update Patient Compliance testing: UpdatePatientComplianceTesting.html
     Create Patient Compliance testing: CreatePatientComplianceTesting.html
   API: API.html
