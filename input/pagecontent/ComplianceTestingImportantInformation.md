@@ -71,7 +71,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>**These tests apply to all integrations** </caption>
+<caption><b>These tests apply to all integrations</b></caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -92,7 +92,7 @@ table, th, td {
 <td>Recommended</td></tr>
 </table>
 
-<h4>Extra tests</h4>
+<h4>Extra Tests for New NHI number format</h4>
 <table>
 <style>
 table, th, td {
@@ -100,7 +100,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption><b>These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to incorporate other HIP services</b></caption>
+<caption><b>This set of tests allow you to self assess your readiness for the new NHI number format when interacting with the NHI and other HIP services. They can be used for FHIR, SOAP or the legacy HL7 interfaces.</b></caption>
 <tr><th>Reference</th>
 <th>Purpose</th>
 <th>Input values</th>
