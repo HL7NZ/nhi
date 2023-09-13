@@ -25,7 +25,7 @@ Provide the following details in a test report and email to [integration@health.
 
 ### Compliance tests
 
-Not all tests below will be appropriate for every application. If there are tests below that do not apply please discuss this with the integration team and where appropriate write a description in the compliance tests why the test does not apply.
+Not all compliance tests in this implementation guide will be appropriate for every application. If there are tests that do not apply please discuss this with the integration team and where appropriate write a description in the compliance test submission why the particular test does not apply.
 
 To request a template for the compliance tests either add a comment to your onboarding request form or reach out using the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
 
@@ -37,7 +37,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>**All test messages will be assessed against the security criteria in the table below**</caption>
+<caption><b>All test messages will be assessed against the security criteria in the table below</b></caption>
 <tr><th>Reference</th>
 <th>Purpose</th>
 <th>Input values</th>
@@ -100,7 +100,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption><b>These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to work with other HIP services</b></caption>
+<caption><b>These are optional tests which help cover off the ability for applications to cope with new format NHI numbers and to incorporate other HIP services</b></caption>
 <tr><th>Reference</th>
 <th>Purpose</th>
 <th>Input values</th>
