@@ -151,7 +151,7 @@ For a create patient example [click here](createPatientExample.html)
 * _Create Patient - Birthdate errors_
   * _Patient Birthdate must be after After 1 January 1900 AND cannot be a future date_
   * _A patient Birthdate is required when a patient Birthdate information source is present_
-  * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
+  * _Birthdate can only be set to a ‘Registered’ value by an authorised agency_
 
 
 
@@ -195,6 +195,7 @@ For a create patient example [click here](createPatientExample.html)
 
 
 #### Create Patient - Deceased date rules
+* A deceased date can only be added by an authorised agency
 * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
 * deceased date must be a complete date and formatted either;
   * YYYYMMDD - DOD less than or equal to the current date;
