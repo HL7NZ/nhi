@@ -39,7 +39,7 @@ The patient’s general practice and their phone and email contact details are n
 * AAANNNC (3 alpha, 3 numeric and one numeric check digit).
 * AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025. 
 
-For more information [click here](https://www.health.govt.nz/our-work/health-identity/national-health-index/upcoming-changes-nhi-numbers) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462022-consumer-health-identity-standard/) for the consumer health identity standard, that includes the check digit calculation.
+For more information [click here](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462022-consumer-health-identity-standard/) for the consumer health identity standard, that includes the check digit calculation.
 
 
 #### Context
