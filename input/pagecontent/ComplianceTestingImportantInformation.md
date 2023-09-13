@@ -316,7 +316,8 @@ table, th, td {
 <td>Get Medical Warning for new format <br /> application can return Medical Warning information for a new format NHI </td>
 <td>
    <ul>
-      <li>ZKP3289</li>
+      <li>ZAK21MS</li>
+      <li>ZYC49PX</li>      
    </ul>
 </td>
 <td>
@@ -353,6 +354,22 @@ table, th, td {
    <ul>
       <li> Input: User can update a Medical Warning for a new format NHI </li>
       <li> Output: Medical Warning updated successfully</li>
+   </ul>
+</td>
+<td>Optional</td></tr>
+
+<tr><td>NHI-Extra-13</td>
+<td>Get Health Care Event for new format NHI <br /> application can return Health Care Events for a new format NHI </td>
+<td>
+   <ul>
+      <li>ZDP92ZR</li>
+      <li>ZVE74QH</li>      
+   </ul>
+</td>
+<td>
+   <ul>
+      <li> Input: user can enter new format NHI </li>
+      <li> Output: application can display Health Care Events for new format NHI</li>
    </ul>
 </td>
 <td>Optional</td></tr>
