@@ -19,6 +19,7 @@ publisher:
   email: mailto:integration@health.govt.nz
 description: The FHIR  API for the NHI
 license: CC0-1.0
+date: 2023-09-14
 dependencies:
   hl7.fhir.uv.extensions.r4: 
     version: 1.0.0
