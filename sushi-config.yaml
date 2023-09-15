@@ -21,8 +21,8 @@ description: The FHIR  API for the NHI
 license: CC0-1.0
 date: 2022-08-03
 dependencies:
-  hl7.fhir.uv.extensions.r4: 
-    version: 1.0.0
+  #hl7.fhir.uv.extensions.r4: 
+   # version: 1.0.0
   fhir.org.nz.ig.base:
     uri: 'https://fhir.org.nz/ig/base/'
     version: 2.0.0
