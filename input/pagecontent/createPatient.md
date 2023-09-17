@@ -2,7 +2,7 @@
 
 ### Create Patient Overview
 
-The ‘Create Patient’ interaction is initiated by a user who needs to create a new identity record for a person not found on the NHI. <br />
+The ‘Create Patient’ operation is initiated by a user who needs to create a new identity record for a person not found on the NHI. <br />
 The user has sourced the required identity information, done a thorough search of the NHI, and initiates a request to create a new patient identity record in the NHI.
 
 **Expectations**
@@ -24,7 +24,7 @@ The user has sourced the required identity information, done a thorough search o
 6. The integrating application indicates to the user the create has been successful
 7. The integrating application retains the nhi-id and version number for future requests relating to this record
 
-<h4>Create Patient - In Parameters </h4>
+<h3>Create Patient - In Parameters </h3>
 <table>
 <style>
 table, th, td {
@@ -32,32 +32,28 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>**A create patint request is actioned by submitting a parameters resource**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
 <tr><td> patient </td>
-<td> Patient </td>
+<td> patient </td>
 <td> Mandatory </td>
-<td> <a href="StructureDefinition-CreateNhiPatient.html"> See Create Patient Profile</a> </td></tr>
-
-<tr><td> version-id </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> The current patient version number </td></tr>
-
-<tr><td> preferred-id </td>
-<td> valueInteger </td>
-<td> Mandatory </td>
-<td> The id for the name that will be preferred </td></tr>
+<td> <a href="StructureDefinition-CreateNhiPatient.html"> See Create Patient Profile</a> <br />
+<a href="OperationDefinition-Patient-create.html"> See Create Patient Operation definition</a> </td></tr>
 </table>
 
-#### Create Patient rules and errors
+### Create Patient Example
+
+For a create patient example [click here](createPatientExample.html)
+
+### Create Patient rules and errors
 
 [For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-##### Create Patient rules
+#### Create Patient rules
 
 * A Create Patient request must not create an NHI record which is a duplicate of another Patient’s identity
 
@@ -93,7 +89,7 @@ table, th, td {
 
 
 
-##### Create Patient - Name rules
+#### Create Patient - Name rules
 * A Patient must have:
   * at least one Active Name
   * one, and only one, Active Name which is preferred.
@@ -139,7 +135,7 @@ table, th, td {
 
 
 
-##### Create Patient - Birthdate rules
+#### Create Patient - Birthdate rules
 * A [birth date](/StructureDefinition-NhiPatient-definitions.html#Patient.birthDate) must be after 1 January 1900 and not a future date
 * A birthdate must be a complete date and formatted either:
   * YYYYMMDD - DOB less than or equal to the current date;
@@ -155,11 +151,11 @@ table, th, td {
 * _Create Patient - Birthdate errors_
   * _Patient Birthdate must be after After 1 January 1900 AND cannot be a future date_
   * _A patient Birthdate is required when a patient Birthdate information source is present_
-  * _Birthdate can only be set to a ‘Registered’ value by an authorised Agency_
+  * _Birthdate can only be set to a ‘Registered’ value by an authorised agency_
 
 
 
-##### Create Patient - Ethnicity rules
+#### Create Patient - Ethnicity rules
 * A Patient must have at least one active set of valid [ethnicity](/StructureDefinition-NhiPatient-definitions.html#Patient.extension:ethnicity) information.
 * A Patient must supply all ethnicities identified with when supplying ethnicity information
 * A set of ethnicity codes must contain at least 1 ethnicity, only one instance of each selected ethnicity, no more than one ‘unspecified’ (residual) ethnicity code and can contain up to 6 ethnicities. 
@@ -173,7 +169,7 @@ table, th, td {
 
 
 
-##### Create Patient - NZ Citizenship rules
+#### Create Patient - NZ Citizenship rules
 *  A Patient must have a NZ citizenship status
 *  A request to populate the NZ Citizenship Information Source must also populate the NZ Citizenship status value
 
@@ -185,7 +181,7 @@ table, th, td {
   * _An NZ Citizenship status is required when an NZ Citizenship Information Source is present_
 
 
-##### Create Patient - Birthplace rules
+#### Create Patient - Birthplace rules
 * A place of birth must only be populated if a country of birth is present
 * A request to populate the Country of Birth Information Source must also populate the Country of Birth
 
@@ -198,7 +194,8 @@ table, th, td {
   * _A Country of birth is required when a Country of Birth Information Source is present_
 
 
-##### Create Patient - Deceased date rules
+#### Create Patient - Deceased date rules
+* A deceased date can only be added by an authorised agency
 * If present, a [deceased date](/StructureDefinition-NhiPatient-definitions.html#Patient.deceased[x]) must be on or after birthdate, and not a future date
 * deceased date must be a complete date and formatted either;
   * YYYYMMDD - DOD less than or equal to the current date;
@@ -218,7 +215,7 @@ table, th, td {
   * _The Date of Birth must be less than or equal to the Date of Death_
 
 
-##### Create Patient - Gender Rules
+#### Create Patient - Gender Rules
 *  A Patient must have a current gender, supplied as a valid gender code.
 *  A Patient may have a gender-original-text response
   * If supplied, both gender code and gender-original-text will be recorded in the NHI.
@@ -230,7 +227,7 @@ table, th, td {
 * _Create Patient - Gender errors_
 
 
-##### Create Patient - Address rules
+#### Create Patient - Address rules
 * A Patient must have a single Primary Residential Address (type = physical)
 * An acceptable Patient Address must be: 
   * Validated by an Address Service; OR 
@@ -240,6 +237,7 @@ table, th, td {
   * a valid nz-address-id
   * Address-line-1 (that matches the address-line-1 returned by eSAM)
   * Address Type (physical or postal)
+* A validated postal address, must be an address where mail can be delivered (must be eSAM deliverable).
 * The result of an address service 'find address' request using the values provided for the first line of the Address Location must: 
   * result in a single validated address with a match score exceeding the match threshold, AND 
   * have a unique nz-address-id matching the ID provided in the request

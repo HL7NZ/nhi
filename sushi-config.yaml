@@ -54,10 +54,15 @@ menu:
     Update birth: updateBirth.html
     Update eligibility: updateEligibility.html
   Important information:
-    Onboarding and Compliance testing: OnboardingAndComplianceTesting.html
+    Onboarding: Onboarding.html
     General Notes: general.html
     FAQ: FAQ.html
     Glossary: glossary.html
+  Compliance Testing:
+    Compliance testing important information: ComplianceTestingImportantInformation.html
+    Get and Match Patient Compliance testing: GetAndMatchPatientComplianceTesting.html
+    Update Patient Compliance testing: UpdatePatientComplianceTesting.html
+    Create Patient Compliance testing: CreatePatientComplianceTesting.html
   API: API.html
   Profiles: profiles.html
   Extensions: extensions.html

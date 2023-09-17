@@ -32,7 +32,7 @@ Patient $Match does not enable searching in the same way that  Patient Search do
 
 
 
-**Match Patient processing steps:**
+#### Match Patient processing steps:
  
 1. The user supplies patient details to be be matched against the NHI patient records
 2. The integrating application sends an HTTP Post request (E.g. Post\<Endpoint>/Patient/$match) using the $match operation to the NHI with 'In Parameters' (A Patient resource, onlyCertainMatches set to False, and a count (optional)).
@@ -41,7 +41,7 @@ Patient $Match does not enable searching in the same way that  Patient Search do
 8. The response containing a bundle of matching patient resources is returned to the integrating application - ALT: Empty bundle returned
 9. The integrating application displays the matching patients to the user.
 
-<h4>In Parameters</h4>
+<h3>In Parameters</h3>
 <table>
 <style>
 table, th, td {
@@ -49,13 +49,14 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>**A match patient request is actioned by submitting a Parameters resource**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
 <th> Description </th></tr>
 
-<tr><td> 'Patient resource' </td>
-<td> Resource </td>
+<tr><td> resource </td>
+<td> patient </td>
 <td> Mandatory </td>
 <td> 
 <ul>
@@ -68,10 +69,9 @@ table, th, td {
  <li> Address is not currently supported in match - this will be included in a future release</li>
  <li> Attributes included in the match request and not used by the operation will be silently ignored</li> 
 </ul>
-<a href="matchExample.html">Example match patient request and response</a>
 </td></tr>
 
-<tr><td> onlyCertainMatches: 0 (False) </td>
+<tr><td> onlyCertainMatches </td>
 <td> boolean </td>
 <td> Mandatory </td>
 <td> Must be set to false </td></tr>
@@ -82,9 +82,12 @@ table, th, td {
 <td> The maximum number of records to return. Note that interators should be careful when using this, as it may prevent probable - and valid - matches from being returned </td></tr>
 </table>
  
+### Match Patient Example
+
+For a match patient example [click here](matchExample.html)
 
 
-#### Behaviour:
+### Behaviour:
 
 * The NHI does a search using supplied Patient demographics
 * A bundle of patient records that represent possible matches is returned
@@ -100,21 +103,18 @@ Note: To be more FHIR compliant this will be changed to return:
 
 
 
-#### Privcy requirements
+### Privcy requirements
 
 * Te Whatu Ora does not require a Get to be done after a match request.
 * Te Whatu Ora will log details of each NHI returned by a $match operation so that any privacy requests from people wanting to know which organisations and users have retrieved their NHI record, can be responded to.
 * Integrating systems should also ensure they have sufficient logging in place to respond to similar requests.
 
-#### Example request
 
-For an example Match request body [click here](/matchExample.html)
+### Match Patient Rules and errors
 
-#### Match Patient Rules and errors
+[For Request rules and errors click here](/general.html#request-rules-and-errors)
 
-[For Request rules and errors click here]($matchExample.html)
-
-##### Match Patient rules
+#### Match Patient rules
 * A Match patient request must include:
   * name (Either family or given) 
   * birthdate (this can be a partial birthdate i.e. year only)

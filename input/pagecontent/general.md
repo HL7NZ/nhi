@@ -136,48 +136,94 @@ table, th, td {
 <td> Exceeded quota </td></tr>
 </table>
 
+#### Response Body
+The Response body may contain an OperationOutcome resource describing the result of the request message processing <br />
+The table below describes how the OperationOutcome should be populated <br />
+
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr>
+<th> Field </th>
+<th> Description </th>
+<th> Cardinality </th>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue</td>
+<td>  </td>
+<td> 0..n </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].severity</td>
+<td> error </td>
+<td> 0..1 </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].code</td>
+<td> processing </td>
+<td> 0..1 </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].details.coding.system</td>
+<td>https://standards.digital.health.nz/ns/hip-error-code</td>
+<td> 0..1 </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].details.coding.code</td>
+<td> <a href="https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
+<td> 0..1 </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].details.coding.display</td>
+<td> <a href="https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
+<td> 0..1 </td>
+</tr>
+
+<tr>
+<td>OperationOutcome.issue[].details.text</td>
+<td> See indicative text on each operation use case </td>
+<td> 0..1 </td>
+</tr>
+</table>
 
 #### Error Format
-
-Error responses may contain a FHIR operation outcome:
-We’re transitioning to the following operation outcome
 
 ```
 
 {
-  "resourceType": "OperationOutcome",
-  "issue": [ {
-    "severity": "error",
-    "code": "processing",
-    "details": {
-      "coding": [ {
-        "system": "https://standards.digital.health.nz/ns/hip-operation-outcome-details-code",
-        "code": "EM07106",
-        "display": "Record version provided is out of date. The record cannot be updated"
-      } ]
-    },
-    "expression": [ "Patient.identifier:NHI" ]
-  } ]
+    "resourceType": "OperationOutcome",
+    "issue": [
+        {
+            "severity": "error",
+            "code": "processing",
+            "details": {
+                "coding": [
+                    {
+                        "system": "https://standards.digital.health.nz/ns/hip-error-code",
+                        "code": "EM07201"
+                        "display": "Missing a required field"
+                    }
+                ],
+                "text": "Name is a required field"
+            }
+        }
+    ]
 }
 
 ```
 
-But not all errors have been converted or assigned error codes, the unconverted errors use:
 
-```
-
-{
-  "resourceType": "OperationOutcome",
-  "issue": [ {
-    "severity": "error",
-    "code": "processing",
-    "diagnostics": "Authentication: missing userid header"
-  }
-
-```
-
-
-#### Request Rules and Errors
+### Request Rules and Errors
 
 * **Request rules**
   * Every request must include an:
@@ -195,7 +241,7 @@ But not all errors have been converted or assigned error codes, the unconverted 
 
 * This is a list of any additions to standard HTTP header protocol
 
-<h3>Request Headers</h3>
+<h4>Request Headers</h4>
 <table>
 <style>
 table, th, td {
@@ -239,7 +285,7 @@ Preferred less than 64 characters <br /> </td>
 <td> Mandatory </td></tr>
 </table>
 
-<h3>Response Headers</h3>
+<h4>Response Headers</h4>
 <table>
 <style>
 table, th, td {
