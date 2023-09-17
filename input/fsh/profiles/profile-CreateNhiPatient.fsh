@@ -92,7 +92,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 Invariant: EM02106
 Expression: "Patient.name.extension.where((url = 'http://hl7.org/fhir/StructureDefinition/iso21090-preferred') and (valueBoolean=true)).count()=1"
 Severity: #error
-Description: "A Patient must have exactly one preferred name"
+Description: "A Patient must have an active Preferred Name"
 
 
 Invariant: EM02201
@@ -108,7 +108,7 @@ Severity: #error
 
 Invariant: EM07225
 Expression: "name.where(use='temp').exists() implies (extension.where((url='http://hl7.org.nz/fhir/StructureDefinition/information-source') and (valueCodeableConcept.coding.code ='NPRF')).exists())"
-Description: "Baby of and unallocated names must have source of NPRF"
+Description: "If name-use-extra is supplied name-use must be temp, and source NPRF"
 Severity: #error
 
 
@@ -119,12 +119,12 @@ Severity: #error
 
 Invariant: EM07212-1
 Expression: "deceasedDateTime < now()"
-Description: "Patient Date of Death date cannot be a future date."
+Description: "Date of Death cannot be a future date"
 Severity: #error
 
 Invariant: EM07215
 Expression: "deceasedDateTime >= birthDate"
-Description: "Patient Date of Death date must be greater than, or equal to Date of Birth  "
+Description: "Date of Death must be greater than, or equal to Date of Birth"
 Severity: #error
 
 
