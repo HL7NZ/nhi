@@ -138,3 +138,7 @@ With the release of the NHI SOAP service the attribute was discontinued, however
 A new attribute _NZ Residency_ was designed to capture a person with a resident class visa. For the NHI, there is currently no data sharing agreement with Immigration New Zealand or mechanism to populate this data from an authorised source. 
 
 We have removed this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
+
+### How should my application ask for a gender?
+
+The standard 
