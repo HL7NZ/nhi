@@ -14,7 +14,7 @@ table, th, td {
 
 <tr>
 <td>NHI-Consumer-GET-1</td>
-<td>application can clearly display that the information has been returned from NHI</td>
+<td>application can clearly display that the information has come from the NHI rather than another source</td>
 <td>XXXXXXX</td>
 <td>Output: The application alerts the user that the information they are viewing has been returned from the NHI</td>
 <td>Mandatory</td>
