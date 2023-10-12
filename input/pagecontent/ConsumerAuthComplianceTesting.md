@@ -44,14 +44,14 @@ table, th, td {
   <li> Gender 
     <ul>
       <li>Gender code</li>
-      <li>Gender-original-text is present</li>
+      <li>Gender-original-text if present</li>
     </ul>
   </li>
   <li>Date of Birth</li>
   <li>Place of Birth</li>
   <li>Ethnicities
     <ul>
-      <li>All - up to six</li>
+      <li>All (up to six)</li>
     </ul>
   </li>
   <li>NZ Citizenship status</li>
@@ -60,14 +60,14 @@ table, th, td {
 </td>
 <td>XXXXXXX</td>
 <td>Output: Person's information clearly displayed</td>
-<td>Mandatory</td>
+<td>Mandatory (for data item being handled)</td>
 </tr>
 
 <tr>
 <td>NHI-Consumer-GET-3</td>
-<td>application can display error message if a patient record has a Date of Death</td>
+<td>application has an appropriate exception flow if a patient record has a Date of Death</td>
 <td>XXXXXXX</td>
-<td>Output: The application alerts the user of an error an a business process to sort out the reason that a patient record has a death date</td>
+<td>Output: The application alerts the user of the exception flow and an appropriate business process to reslove data quality errors</td>
 <td>Mandatory</td>
 </tr>
 
@@ -84,21 +84,21 @@ table, th, td {
     <li>Partial date of birth</li>
   </ul>
 </td>
-<td>Mandatory</td></tr>
+<td>Mandatory **IF**</td></tr>
 
-<tr><td>NHI-Consumer-GET-5</td>
-<td>application alerts the user that a requested NHI is dormant, and that the live NHI has been returned.</td>
+<tr><td>NHI-Consumer-GET-5 - TBD _ MHA</td>
+<td> Describe the excpetion flow if the requested NHI is dormant, and that the live NHI has been returned.</td>
 <td>XXXXXXX</td>
 <td>
   <ul>
     <li>Outout: Notification to the user that the requested NHI was dormant and the live NHI has been returned </li>
-    <li> Output: Patient Live NHI returned should be XXXXXXX </li>
+    <li>Output: Patient Live NHI returned should be XXXXXXX </li>
   </ul>
 </td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Consumer-GET-6</td>
-<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Family Name of 100 characters).</td>
+<td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Family Name of 100 characters)</td>
 <td>XXXXXXX</td>
 <td>
   <ul>
@@ -128,8 +128,8 @@ table, th, td {
 <td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Consumer-GET-8</td>
-<td>application can synchronize with local system in response to the NHI version changing</td>
+<tr><td>NHI-Consumer-GET-8- TBD MHA</td>
+<td>??????????????????? SYNC?????? NHI info varies to consumer can see on APP - application can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
 <td><li>Do a GET</li>
 <li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
@@ -315,7 +315,7 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-Consumer-Update-Identity-1 <br /> Ethnicity</td>
-<td>application can correctly update ethnicity values on a patient's record</td>
+<td>application can correctly re-collect ethnicity information from a person</td>
 <td>Ethnicity question presented correctly</td>
 <td>
   <li>Output:
