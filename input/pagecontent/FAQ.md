@@ -141,4 +141,4 @@ We have removed this attribute from the NHI Patient profile. There is no current
 
 ### How should my application ask for a gender?
 
-The standard 
+The standard gender  <img style="width:900px; float:none" src="GenderQuestionExample.PNG"/>
