@@ -63,6 +63,7 @@ menu:
     Get and Match Patient Compliance testing: GetAndMatchPatientComplianceTesting.html
     Update Patient Compliance testing: UpdatePatientComplianceTesting.html
     Create Patient Compliance testing: CreatePatientComplianceTesting.html
+    Consumer Facing API Compliance testing: ConsumerAuthComplianceTesting.html
   API: API.html
   Profiles: profiles.html
   Extensions: extensions.html
