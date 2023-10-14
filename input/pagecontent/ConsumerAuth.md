@@ -6,7 +6,7 @@
 Te Whatu Ora has implemented a Consumer Facing API Authentication Pattern to allow a person to access and update information held about them using their NHI number.
 The pattern describes how an end user's NHI can be securely established and communicated to a resource provider via a REST API. This is an implementation of the OAUTH2/OIDC Authorisation Code flow.
 
-The trusted identity provider (idp) is My Health Account (MHA).
+The trusted identity provider (idp) is My Health Account (MHA). [For more information click here](https://marketplace.hira.health.nz/digital-services/digital-health-identity-2/)
 
 #### Prerequisites
 
@@ -205,7 +205,7 @@ table, th, td {
 <td><b>Rules - $set-preferred-name</b></td>
 <td>
   <ul>
-   <li>All rules from set-preferred-name apply, and </li>
+   <li>All rules from <a href="updateName.html#set-preferred-name-overview">$set-preferred-name</a> apply, and </li>
    <li>Must not set Preferred name to a BabyOf name</li>
   </ul>
 </td>
@@ -213,26 +213,26 @@ table, th, td {
 
 <tr>
 <td><b>Rules - $set-address</b></td>
-<td><li>All rules from set-address apply</li></td>
+<td><li>All rules from <a href="updateAddress.html#set-address">$set-address</a> apply</li></td>
 </tr>
 
 <tr>
 <td><b>Rules - $remove-postal-address</b></td>
-<td><li>All rules from remove-postal address apply</li></td>
+<td><li>All rules from <a href="updateAddress.html#remove-postal-address">$remove-postal-address</a> apply</li></td>
 </tr>
 
 <tr>
 <td><b>Rules - $update-identity</b></td>
-<td><li>All rules from update-identity apply</li>
+<td><li>All rules from <a href="updateIdentity.html#update-identity">$update-identity</a> apply</li>
 <ul>
   <li> Ethnicity
   <ul>
-    <li>Application must present the standard ethnicity question and supply the consumer selected reponses</li>
+    <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-ethnicity-question">standard ethnicity question</a> and supply the consumer selected reponses</li>
   </ul>
   </li>
   <li> Gender
   <ul>
-    <li>Application must present the standard gender question and supply the consumer selected or entered text response</li>
+    <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-gender-question"> and supply the consumer selected or entered text response</li>
   </ul>
   </li>
 </ul>
