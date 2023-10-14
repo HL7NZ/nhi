@@ -139,6 +139,8 @@ A new attribute _NZ Residency_ was designed to capture a person with a resident 
 
 We have removed this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
 
-### How should my application ask for a gender?
+### How should my application present the standard gender question?
 
 The standard gender  <img style="width:900px; float:none" src="GenderQuestionExample.PNG"/>
+
+### How should my application present the standard ethnicity question?
