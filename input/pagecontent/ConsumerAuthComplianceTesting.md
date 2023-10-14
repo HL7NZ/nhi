@@ -1,3 +1,5 @@
+
+
 <h4>NHI Patient Consumer GET tests</h4>
 <table>
 <style>
@@ -71,11 +73,15 @@ table, th, td {
 <td>Mandatory</td>
 </tr>
 
-<tr><td>NHI-Consumer-GET-4</td>
-<td>application can display all other identity data returned by the NHI in a GET response including:
-<li>A non validated residential (physical) and mailing (postal) address</li>
-<li>A year of birth</li>
-<li>Unknown citizenship</li></td>
+<tr>
+<td>NHI-Consumer-GET-4</td>
+<td>application can display all other identity data returned by the NHI in a GET response including: <br />
+<ul>
+  <li>A non validated residential (physical) and mailing (postal) address</li>
+  <li>A year of birth</li>
+  <li>Unknown citizenship</li>
+</ul>
+</td>
 <td>XXXXXXX</td>
 <td>Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
   <ul>
@@ -105,14 +111,14 @@ table, th, td {
     <li>Output: Patient information supplied is displayed without loss of data</li>
     <li>This is for a patient record that has attribute values which are the maximum allowed field length in some fields</li>
     <li>The patient has the following fields fully populated in the test record (field lengths in parentheses):</li>
-    <ul>
-      <li>Given name (50)</li>
-      <li>Other Given Name(s) (100)</li>
-      <li>Family Name (100)</li>
-      <li>Address line 1 (100)</li>
-      <li>Address lines 2-5 (50)</li>
-      <li>Building name/additional details (255)</li>
-    </ul>
+     <ul>
+       <li>Given name (50)</li>
+       <li>Other Given Name(s) (100)</li>
+       <li>Family Name (100)</li>
+       <li>Address line 1 (100)</li>
+       <li>Address lines 2-5 (50)</li>
+       <li>Building name/additional details (255)</li>
+     </ul>
   </ul>
 </td>
 <td>Mandatory</td></tr>
@@ -131,10 +137,14 @@ table, th, td {
 <tr><td>NHI-Consumer-GET-8- TBD MHA</td>
 <td>??????????????????? SYNC?????? NHI info varies to consumer can see on APP - application can synchronize with local system in response to the NHI version changing</td>
 <td>ZCX7065</td>
-<td><li>Do a GET</li>
-<li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
-<li>Do another GET</li>
-<li>Demonstrate how end user can view the difference then synchronize</li></td>
+<td>
+  <ul>
+    <li>Do a GET</li>
+    <li>Update the patient details (to simulate a 3rd party updating the NHI info)</li>
+    <li>Do another GET</li>
+    <li>Demonstrate how end user can view the difference then synchronize</li>
+  </ul>
+</td>
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Consumer-GET-9</td>
@@ -144,14 +154,13 @@ table, th, td {
     <li>only a given name</li>
     <li>multiple names</li>
   </ul>
-<td>
-  <li><b>Do all</b>
+</td>
+<td> <b>Do all</b> <br />
   <ul>
     <li>ZAU8023</li>
     <li>ZAV8657</li>
     <li>ZHS7524</li>
   </ul>
-  </li>
 </td>
 <td><li>Output:
   <ul>
@@ -258,6 +267,7 @@ Application will show the correct error when attempting to add the supplied addr
 </td>
 <td> Error: "address-line must match the espatial value: ..."  </td>
 <td>Mandatory</td></tr>
+</table>
 
 
 <h4>NHI Consumer Set-Preferred-Name</h4>
@@ -316,13 +326,88 @@ table, th, td {
 
 <tr><td>NHI-Consumer-Update-Identity-1 <br /> Ethnicity</td>
 <td>application can correctly re-collect ethnicity information from a person</td>
-<td>Ethnicity question presented correctly</td>
+<td>Ethnicity question presented correctly <br />
+Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br /> 
+<img style="width:200px; float:none" src="update-core-1.png"/> </td>
 <td>
   <li>Output:
     <ul>
-      <li> Person able to select their ethnicities The application can update the patients ethnicity information</li>
-Patient’s ethnicity after update should be: 
-<li> 11111 </li>
-<li> 21111 </li>
-<li> 31111</li></td>
+      <li> Person able to select their ethnicities </li>
+      <li>The application can update the patients ethnicity information</li>
+      <li> Patient’s ethnicity after update should be: 
+      <ul>
+        <li> 11111 </li>
+        <li> 21111 </li>
+        <li> 31111</li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+</td>
 <td>mandatory</td></tr>
+
+<tr><td>NHI-Consumer-Update-Identity-2 <br /> Ethnicity</td>
+<td>application can correctly re-collect ethnicity information from a person</td>
+<td>Ethnicity question presented correctly <br />
+Update the set of ethnicity information based on the responses to the standard ethnicity collection question for the selected NHI number <br /> 
+<img style="width:200px; float:none" src="update-core-2.png"/> </td>
+<td>
+  <li>Output:
+    <ul>
+      <li> Person able to select their ethnicities </li>
+      <li>The application can update the patients ethnicity information</li>
+      <li> Patient’s ethnicity after update should be: 
+      <ul>
+        <li> 11111 </li>
+        <li> 34111 </li>
+        <li> 51120 </li>
+        <li> 4211 </li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Consumer-Update-Identity-3 <br /> Ethnicity-error</td>
+<td>application can display an error when ethnicity information invalid <br /> set of supplied ethnicities that includes a duplicate ethnicity</td>
+<td>Update the ethnicity information for Patient: ZAA1063 <br />
+Ethnicities to use:<br />
+<li>32100 (Cook Islands Maori) and,</li>
+<li>12948 (South African) and,</li>
+<li>32100 (Cook Islands Maori)</li></td>
+<td>Output: EM02301 - "A Patient must have at least one valid ethnicity code, only one instance of each selected ethnicity, and no more than one ‘unspecified’ ethnicity code" </td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Consumer-Update-Identity-4 <br /> Gender</td>
+<td>application can correctly update a gender value on a patient's record </td>
+<td> Change the gender from current gender to one of the three acceptable gender codes <br />
+<b> Do all </b>
+  <ul>
+    <li> Male</li>
+    <li>Female</li>
+    <li>Another gender</li>
+  </ul>
+</td>
+<td>Output: 
+ <li> Patients gender coded updated corrctly</li></td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Consumer-Update-Identity-5 <br /> Gender</td>
+<td>application can correctly update the gender value and gender-original-text on a patient record</td>
+<td>
+  <ul>
+    <li> Change the gender code from current gender to 'Another gender' </li>
+    <li> include an original text response that a patient might submit </li>
+  </ul>
+</td>
+<td>Output: 
+ <li> Patients gender coded updated corrctly</li></td>
+<td>Mandatory if allowing a gendeer text update</td></tr>
+
+<tr><td>NHI-Consumer-Update-Identity-6 <br /> Gender-error</td>
+<td>application can display an error when gender-original-text updated without a gender value</td>
+<td>Update the gender-original-text for Patient</td>
+<td>Output: EM07201 - "Is a required field - Patient.gender" </td>
+<td>Mandatory if allowing a gendeer text update</td></tr>
+</table>
