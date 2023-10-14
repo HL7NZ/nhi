@@ -1,5 +1,5 @@
 
-### Consumer Facing API
+### Consumer Facing APIs
 
 #### Background
 
