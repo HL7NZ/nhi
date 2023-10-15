@@ -152,7 +152,7 @@ See the source standard for more information about how to collect gender informa
 
 <br />
 
-The standard gender  <img style="width:400px; float:none" src="GenderQuestionExample.PNG"/>
+<img style="width:400px; float:none" src="GenderQuestionExample.PNG"/>
 
 
 ### How should my application present the standard ethnicity question?
