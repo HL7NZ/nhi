@@ -47,13 +47,13 @@ To view the NHI FHIR FHIR Consumer Facing API Compliance tests [Click here](/Con
 
 #### Consumer Facing API
 
-##### Access my NHI record - Communication View
+##### Access my NHI - Communication View
 
 <div>
 {% include ConsumerAuthAccessNHI.svg %}
 </div>
 
-<h5>Access my NHI record - Important information</h5>
+<h5>Access my NHI - Important information</h5>
 <table>
 <style>
 table, th, td {
@@ -73,7 +73,7 @@ table, th, td {
 
 <tr>
 <td><b>Operation</b></td>
-<td>Patient read <br /> GET\<Endpoint>/Patient/[nhi-id] </td>
+<td>Patient read <br /> GET[Endpoint]/Patient/[nhi-id] </td>
 </tr>
 
 <tr>
@@ -161,16 +161,13 @@ table, th, td {
 For more information on the attributes please see the [NHI FHIR Patient profile](/StructureDefinition-NhiPatient.html)
 
 
-
-#### Consumer Facing API - Update my NHI record
-
-##### Update my NHI record - Communication View
+##### Update my NHI - Communication View
 
 <div>
 {% include ConsumerAuthUpdateNHI.svg %}
 </div>
 
-<h5>Update my NHI record - Important information</h5>
+<h5>Update my NHI - Important information</h5>
 <table>
 <style>
 table, th, td {
@@ -225,14 +222,14 @@ table, th, td {
 
 <tr>
 <td><b>Rules - $update-identity</b></td>
-<td><li>All rules from <a href="updateIdentity.html#update-identity">$update-identity</a> apply</li>
+<td>
+<li>All rules from <a href="updateIdentity.html#update-identity">$update-identity</a> apply</li>
 <ul>
-  <li> Ethnicity
-  <ul>
-    <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-ethnicity-question">standard ethnicity question</a> and supply the consumer selected reponses</li>
+ <li> Ethnicity
+  <ul> <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-ethnicity-question">standard ethnicity question</a> and supply the consumer selected reponses</li>
   </ul>
   </li>
-  <li> Gender
+ <li>Gender
   <ul>
     <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-gender-question"> and supply the consumer selected or entered text response</li>
   </ul>
