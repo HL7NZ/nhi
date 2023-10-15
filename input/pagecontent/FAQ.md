@@ -141,6 +141,28 @@ We have removed this attribute from the NHI Patient profile. There is no current
 
 ### How should my application present the standard gender question?
 
-The standard gender  <img style="width:900px; float:none" src="GenderQuestionExample.PNG"/>
+Gender is a self-identified attribute. Gender refers to a person’s social and personal identity as male,
+female, or another gender or genders that may be non-binary. A person’s current gender may
+differ from the sex recorded at their birth, and may change over time. Some people may not identify with any gender. <br />
+See the source standard for more information about how to collect gender information from the person.
+
+* For More information see
+  * [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+  * [Mandated data standard for gender and sex](https://aria.stats.govt.nz/aria/?_ga=2.82725014.1888179889.1697335665-1611494496.1697335665#StandardView:uri=http://stats.govt.nz/cms/StatisticalStandard/y8iEeAMz2o4fBItv)
+
+<br />
+
+The standard gender  <img style="width:400px; float:none" src="GenderQuestionExample.PNG"/>
+
 
 ### How should my application present the standard ethnicity question?
+
+The standard ethnicity question for the health and disability sector mirrors the Statistics New Zealand 2018 Census ethnicity question. The ethnicity question has been rigorously tested by Stats NZ to establish the most effective wording, layout and font, and is re analysed after every census. 
+
+* For More information see
+  * [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+  * [HISO 10001:2017 Ethnicity Data Protocols](https://www.tewhatuora.govt.nz/our-health-system/digital-health/health-identity/ethnicity/)
+
+<br />
+
+  <img style="width:400px; float:none" src="EthnicityQuestionExample.PNG"/>
