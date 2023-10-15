@@ -1,14 +1,12 @@
 
-### Consumer Facing APIs
-
-#### Background
+### Background
 
 Te Whatu Ora has implemented a Consumer Facing API Authentication Pattern to allow a person to access and update information held about them using their NHI number.
 The pattern describes how an end user's NHI can be securely established and communicated to a resource provider via a REST API. This is an implementation of the OAUTH2/OIDC Authorisation Code flow.
 
 The trusted identity provider (idp) is My Health Account (MHA). [For more information click here](https://marketplace.hira.health.nz/digital-services/digital-health-identity-2/)
 
-#### Prerequisites
+### Prerequisites
 
 * The person (end user) must have a MHA Level 3N with an NHI bound to that account. 
 * The API will only grant the end user access to their own NHI information.
@@ -30,12 +28,12 @@ The client registration process involves both the NHI FHIR service and the IdP.
 #### Compliance Testing
 
 Compliance testing will need to be completed for both the idp and the NHI FHIR service. <br />
-For MHA Compliance infomration [For more information click here](https://marketplace.hira.health.nz/digital-services/digital-health-identity-2/).
-To view the NHI FHIR FHIR Consumer Facing API Compliance tests [Click here](/ConsumerAuthComplianceTesting.html).
+For MHA Compliance information [For more information click here](https://marketplace.hira.health.nz/digital-services/digital-health-identity-2/). <br />
+To view the NHI FHIR Consumer Facing API Compliance tests [Click here](/ConsumerAuthComplianceTesting.html).
 
-#### Component View
+#### Consumer Facing API - Component View
 
-<img style="width:400px; float:none" src="ConsumerFacingAuthComponentView.png"/>
+<img style="width:600px; float:none" src="ConsumerFacingAuthComponentView.png"/>
 
 * **Health Consumer** - a person with an NHI
 * **Resource Provider (NHI FHIR API)**- the system that implements the API and provides access to a resource referenceable by NHI (NHI FHIR API).
@@ -45,9 +43,10 @@ To view the NHI FHIR FHIR Consumer Facing API Compliance tests [Click here](/Con
   * **Login** - login UI via which the Health Consumer presents their credential's to MHA in order to establish their identity, and provide their consent to the Client Application
   * **User Info** - OIDC endpoint which enables the Resource Provider to obtain the NHI number assigned to the Health Consumer
 
-#### Consumer Facing API
 
-##### Access my NHI - Communication View
+#### Access my NHI
+
+##### Communication View
 
 <div>
 {% include ConsumerAuthAccessNHI.svg %}
@@ -161,7 +160,9 @@ table, th, td {
 For more information on the attributes please see the [NHI FHIR Patient profile](/StructureDefinition-NhiPatient.html)
 
 
-##### Update my NHI - Communication View
+#### Update my NHI
+
+##### Communication View
 
 <div>
 {% include ConsumerAuthUpdateNHI.svg %}
@@ -223,17 +224,17 @@ table, th, td {
 <tr>
 <td><b>Rules - $update-identity</b></td>
 <td>
-<li>All rules from <a href="updateIdentity.html#update-identity">$update-identity</a> apply</li>
 <ul>
+ <li>All rules from <a href="updateIdentity.html">$update-identity</a> apply</li>
  <li> Ethnicity
   <ul> <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-ethnicity-question">standard ethnicity question</a> and supply the consumer selected reponses</li>
   </ul>
-  </li>
+ </li>
  <li>Gender
   <ul>
-    <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-gender-question"> and supply the consumer selected or entered text response</li>
+   <li>Application must present the <a href="FAQ.html#how-should-my-application-present-the-standard-gender-question"> and supply the consumer selected or entered text response </a></li>
   </ul>
-  </li>
+ </li>
 </ul>
 </td>
 </tr>
