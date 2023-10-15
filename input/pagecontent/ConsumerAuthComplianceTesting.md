@@ -271,7 +271,7 @@ Application will show the correct error when attempting to add the supplied addr
 </table>
 
 
-<h4>NHI Consumer set-preferred-name</h4>
+<h4>NHI Consumer set-preferred-name tests</h4>
 <table>
 <style>
 table, th, td {
