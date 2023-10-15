@@ -35,7 +35,7 @@ To view the NHI FHIR FHIR Consumer Facing API Compliance tests [Click here](/Con
 
 #### Component View
 
-<img style="width:200px; float:none" src="ConsumerFacingAuthComponentView.png"/>
+<img style="width:400px; float:none" src="ConsumerFacingAuthComponentView.png"/>
 
 * **Health Consumer** - a person with an NHI
 * **Resource Provider (NHI FHIR API)**- the system that implements the API and provides access to a resource referenceable by NHI (NHI FHIR API).
@@ -45,7 +45,7 @@ To view the NHI FHIR FHIR Consumer Facing API Compliance tests [Click here](/Con
   * **Login** - login UI via which the Health Consumer presents their credential's to MHA in order to establish their identity, and provide their consent to the Client Application
   * **User Info** - OIDC endpoint which enables the Resource Provider to obtain the NHI number assigned to the Health Consumer
 
-#### Consumer Facing API - Access my NHI record
+#### Consumer Facing API
 
 ##### Access my NHI record - Communication View
 
@@ -61,8 +61,10 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th> Reference </th>
-<th> Comments </th></tr>
+<tr>
+<th> Reference </th>
+<th> Comments </th>
+</tr>
 
 <tr>
 <td><b>Oauth scope</b></td>
@@ -71,7 +73,7 @@ table, th, td {
 
 <tr>
 <td><b>Operation</b></td>
-<td>Patient read <br />GET<Endpoint>/Patient/[nhi-id] </td>
+<td>Patient read <br /> GET\<Endpoint>/Patient/[nhi-id] </td>
 </tr>
 
 <tr>
