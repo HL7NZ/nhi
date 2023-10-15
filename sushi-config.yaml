@@ -53,7 +53,7 @@ menu:
     Update identity: updateIdentity.html
     Update birth: updateBirth.html
     Update eligibility: updateEligibility.html
-    Consumer Facing API: ConsumerAuth.html
+    Consumer Facing API: ConsumerFacingAPI.html
   Important information:
     Onboarding: Onboarding.html
     General Notes: general.html
