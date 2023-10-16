@@ -29,7 +29,7 @@ The client registration process involves both the NHI FHIR service and the IdP.
 
 Compliance testing will need to be completed for both the idp and the NHI FHIR service. <br />
 For MHA Compliance information [For more information click here](https://marketplace.hira.health.nz/digital-services/digital-health-identity-2/). <br />
-To view the NHI FHIR Consumer Facing API Compliance tests [Click here](/ConsumerAuthComplianceTesting.html).
+To view the NHI FHIR Consumer Facing API Compliance tests [Click here](/ConsumerFacingApplicationAuthentication.html).
 
 #### Consumer Facing API - Component View
 
