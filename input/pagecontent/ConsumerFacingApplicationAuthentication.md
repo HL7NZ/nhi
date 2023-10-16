@@ -81,7 +81,7 @@ table, th, td {
 </tr>
 
 <tr>
-<td><b>Atributes returned with a Get Request</b></td>
+<td><b>Attributes returned with a Get Request</b></td>
 <td>
 <ul>
   <li>NHI numbers
@@ -94,9 +94,9 @@ table, th, td {
      <li>All names and name details</li>
    </ul>
   </li>
-  <li>Address
+  <li>Addresses
    <ul>
-     <li>All address details</li>
+     <li>Residential and Postal addresses</li>
    </ul>
   </li>
   <li>Gender
@@ -132,7 +132,7 @@ table, th, td {
   </li>
   <li>DHB
    <ul>
-     <li>The DHB code, derived from the persons address</li>
+     <li>The DHB code, derived from the person's residential address</li>
    </ul>
   </li>
 </ul>
