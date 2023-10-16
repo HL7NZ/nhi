@@ -5,7 +5,7 @@ skinparam maxmessagesize 180
 skinparam sequenceParticipant bold
 title Strict OAuth2 Authorization Code Flow - Update my NHI record
 actor "Health Consumer" as User #CornflowerBlue
-participant "Integrating application" as A #BUSINESS
+participant "Client application" as A #BUSINESS
 participant "MHA Login" as B #CornflowerBlue
 participant "<<idp>> B2C" as C #CornflowerBlue
 participant "<FHIR API> NHI" as D #LightGreen
