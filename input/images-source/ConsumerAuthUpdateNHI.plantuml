@@ -19,7 +19,7 @@ activate D
 D -> D: Validate[]
 |||
 group Strict OIDC user info
-D -> C: Get user attributes()
+D -> C: Get user NHI
 activate C
 deactivate C
 |||
