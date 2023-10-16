@@ -8,7 +8,7 @@ The trusted identity provider (idp) is My Health Account (MHA). [For more inform
 
 ### Prerequisites
 
-* The person (end user) must have a MHA Level 3N with an NHI bound to that account. 
+* The person’s NHI must be verified with MHA to a confidence level of at least 3N.
 * The API will only grant the end user access to their own NHI information.
 * The Client Application must be registered with MHA.
 * The Client Application must be permitted SMART patient scopes on the resource being accessed.
