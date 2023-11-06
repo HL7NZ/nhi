@@ -46,13 +46,13 @@ The core NHI Profile attributes are returned to all users that have read and/or 
 For more information [click here](https://www.health.govt.nz/our-work/health-identity/national-health-index/upcoming-changes-nhi-numbers) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462022-consumer-health-identity-standard/) for the consumer health identity standard, that includes the check digit calculation.
 
 
-### Person's General Practice
+### Patient's General Practice
 
-The details for a person’s General Practice (GP) are returned in the NHI Patient Profile to users who have permission to access a person’s National Enrolment Service (NES) information. 
+The details for a patient’s General Practice (GP) are returned in the NHI Patient Profile to users who have permission to access a patient’s National Enrolment Service (NES) information. 
 
 This is an additional permission required on your NHI FHIR account.
 
-The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the person's usual doctor (hpi-person-id / CPN).
+The NES details are maintained in real time in the NES database, which holds the relationship of a Patient (NHI number), to their GP Practice (hpi-organisation-id), GP clinic (hpi-facility-id) and where available the patient's usual doctor (hpi-person-id / CPN).
 
 Changes to the NES in October 2023 allows a patient’s GP Practice details to be recorded for both patients that are funded and also patients who are registered with a practice but not eligible for PHO funding. This change allows the Get Patient response to return the GP Practice details for both types of patients.  
 
@@ -60,9 +60,9 @@ The expiry date for a registered patient is set to 01/01/2100 whereas the expiry
 
 For more information on what is available in the NES FHIR API please see [NES UAT Implementation guide](https://nes-ig.hip-uat.digital.health.nz). 
 
-In the NHI the person'sG P is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
+In the NHI the patient's GP is only returned with a read on the resource. It is not returned in the $match response – even if a user has the correct permissions.
 
-The patient version-id does not change when the GP changes. This is because the person's GP is not held in the NHI but is retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The patient version-id only reflects changes to details held on the NHI.
+The patient version-id does not change when the GP changes. This is because the patient's GP is not held in the NHI but is retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The patient version-id only reflects changes to details held on the NHI.
 
 For information on enrolment history, re-enrolment dates, enrolment status, or the last visit date (qualified encounter date) please subscribe to the NES.
 
@@ -87,8 +87,8 @@ table, th, td {
 
 <tr><td>id</td>
 <td>The NES enrolment id</td>
-<td>Unique identifier of the person's enrolment record. <br />
-This will change when a person transfers to a new practice, but will not reflect minor changes within an enrolment.</td></tr>
+<td>Unique identifier of the patient's enrolment record. <br />
+This will change when a patient transfers to a new practice, but will not reflect minor changes within an enrolment.</td></tr>
 
 <tr><td> Period.start </td>
 <td> enrolment.startDate </td>
