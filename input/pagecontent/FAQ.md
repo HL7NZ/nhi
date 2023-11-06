@@ -141,11 +141,9 @@ We have removed this attribute from the NHI Patient profile. There is no current
 
 ### How should my application present the standard gender question?
 
-Gender is a self-identified attribute and refers to a person’s social and personal identity as male, female, or another gender.
-
-A person’s current gender may differ from the sex recorded at their birth, may change over time and some people may not identify with any gender.
-
-While multiple responses to the gender question are valid, only a single gender code can be updated in the NHI.
+Gender is a self-identified attribute and refers to a person’s social and personal identity as male, female, or another gender. <br />
+A person’s current gender may differ from the sex recorded at their birth, may change over time and some people may not identify with any gender. <br />
+While multiple responses to the gender question are valid, only a single gender code can be updated in the NHI. <br />
 
 See the source standard for more information about how to collect gender information from the person.
 
