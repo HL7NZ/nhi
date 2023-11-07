@@ -91,7 +91,7 @@ NZ Citizenship is an attribute that was introduced with the NHI SOAP services in
 
 Providers can update the NZ Citizenship status if there is no data on the NHI for their patient and the source is not DIA.  Evidence of citizenship should be sighted before updating the NHI. Organisations may want to limit update capability of these fields to users who have a good understanding of the eligibility rules.
 
-<h4>NZ Current Citizenship status numbers in the NHI</h4>
+<h4>NZ Citizenship status numbers in the NHI</h4>
 <table>
 <style>
 table, th, td {
@@ -99,6 +99,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption><b>As at March 2023</b></caption>
 <tr><th>Status of the record</th>
 <th>Percentage of records</th>
 <th>Breakdown of source <br /> for yes reponses</th></tr>
