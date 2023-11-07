@@ -318,7 +318,7 @@ The NHI server uses the OAUTH2 Client Credentials flow for authentication and au
 
 #### Scopes
 
-The following scopes are supported
+The following scopes are supported. For more information on available functionality please see [Business Functions](/Onboarding.html#business-functions).
 
 <table>
 <style>
