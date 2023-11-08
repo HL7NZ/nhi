@@ -61,7 +61,7 @@ menu:
     Glossary: glossary.html
   Compliance Testing:
     Compliance testing important information: ComplianceTestingImportantInformation.html
-    Get and Match Patient Compliance testing: GetAndMatchPatientComplianceTesting.html
+    Get, Match and Validate Patient Compliance testing: Get,MatchAndValidatePatientComplianceTesting.html
     Update Patient Compliance testing: UpdatePatientComplianceTesting.html
     Create Patient Compliance testing: CreatePatientComplianceTesting.html
     Consumer Facing Application Authentication Compliance testing: ConsumerFacingApplicationAuthenticationComplianceTesting.html
