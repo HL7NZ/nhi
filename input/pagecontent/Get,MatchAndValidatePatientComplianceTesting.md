@@ -553,3 +553,118 @@ Output: Application returns all name parts when present <br />
 Output: Order of name parts is clear to the user </td>
 <td>Mandatory</td></tr>
 </table>
+
+
+<h4>NHI Validate Patient tests</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
+<tr><td>NHI-Validate-1</td>
+<td>application makes appropriate use or displays correct messaging for a positive Patient Validate - minimum validate criteria <br />
+<ul>
+  <li> NHI number</li>
+  <li>Name</li>
+  <li>Birthdate</li>
+</td>
+<td>
+   <ul>
+     <li> NHI: ZJS7596</li>
+     <li> Name
+        <ul>
+           <li>Given Name: Jamie</li>
+           <li>Middle Name: Susan</li>
+           <li>Family Name: Maraka</li>
+        </ul>
+      </li>
+      <li>DOB: 1977-08-25 (25th August 1977)</li>
+   </ul></td>
+<td>
+   <ul>
+     <li> Input: Minimum validate criteria can be entered</li>
+     <li> Output:
+       <ul>
+         <li>The validate should return a successful result</li>
+        </ul>
+      </li>
+   </ul>
+</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Validate-2</td>
+<td>application makes appropriate use or displays correct messaging for a positive Patient Validate using other validate criteria</td>
+<td>
+   <ul>
+     <li> NHI: ZJS7596</li>
+     <li> Name
+        <ul>
+           <li>Given Name: Jamie</li>
+           <li>Middle Name: Susan</li>
+           <li>Family Name: Maraka</li>
+        </ul>
+      </li>
+      <li>Gender: Female</li>
+      <li>DOB: 1977-08-25 (25th August 1977)</li>
+     <li> Address
+      <ul>
+        <li>Line: 2 Tennyson Street</li>
+        <li>Suburb: Napier South</li>
+        <li>City: Napier</li>
+        <li>Postcode: 4110</li>
+      </ul>
+     </li>
+      </li>
+   </ul></td>
+<td>
+   <ul>
+     <li> Input: Validate criteria can be entered</li>
+     <li> Output:
+       <ul>
+         <li>The validate should return a successful result</li>
+        </ul>
+      </li>
+   </ul>
+</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Validate-3</td>
+<td>application makes appropriate use or displays correct messaging for a negative Patient Validate</td>
+<td>
+   <ul>
+     <li> NHI: ZJK9604</li>
+     <li> Name
+        <ul>
+           <li>Given Name: Jaime</li>
+           <li>Family Name: jones</li>
+        </ul>
+      </li>
+      <li>Gender: Female</li>
+      <li>DOB: 1979-06-10 (10th June 1979)</li>
+     <li> Address
+      <ul>
+        <li>Line: "PO Box 525", "Whanganui 4541"</li>
+      </ul>
+     </li>
+      </li>
+   </ul></td>
+<td>
+   <ul>
+     <li> Input: Validate criteria can be entered</li>
+     <li> Output:
+       <ul>
+         <li>The validate should return a negative result (Empty bundle)</li>
+        </ul>
+      </li>
+   </ul>
+</td>
+<td>mandatory</td></tr>
+</table>
