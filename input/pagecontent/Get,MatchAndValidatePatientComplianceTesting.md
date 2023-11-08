@@ -570,7 +570,7 @@ table, th, td {
 <th>Mandatory</th></tr>
 
 <tr><td>NHI-Validate-1</td>
-<td>application makes appropriate use or displays correct messaging for a positive Patient Validate - minimum validate criteria <br />
+<td>application makes appropriate use or displays correct messaging for a positive Patient Validate with the minimum validate criteria <br />
 <ul>
   <li> NHI number</li>
   <li>Name</li>
@@ -591,11 +591,7 @@ table, th, td {
 <td>
    <ul>
      <li> Input: Minimum validate criteria can be entered</li>
-     <li> Output:
-       <ul>
-         <li>The validate should return a successful result</li>
-        </ul>
-      </li>
+     <li> Output: The validate should return a successful result</li>
    </ul>
 </td>
 <td>mandatory</td></tr>
@@ -626,12 +622,8 @@ table, th, td {
    </ul></td>
 <td>
    <ul>
-     <li> Input: Validate criteria can be entered</li>
-     <li> Output:
-       <ul>
-         <li>The validate should return a successful result</li>
-        </ul>
-      </li>
+     <li> Input: Other validate criteria can be included</li>
+     <li> Output: The validate should return a successful result</li>
    </ul>
 </td>
 <td>mandatory</td></tr>
@@ -659,11 +651,7 @@ table, th, td {
 <td>
    <ul>
      <li> Input: Validate criteria can be entered</li>
-     <li> Output:
-       <ul>
-         <li>The validate should return a negative result (Empty bundle)</li>
-        </ul>
-      </li>
+     <li> Output: The validate should return a negative result (Empty bundle)</li>
    </ul>
 </td>
 <td>mandatory</td></tr>
