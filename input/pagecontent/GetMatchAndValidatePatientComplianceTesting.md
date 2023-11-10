@@ -619,7 +619,6 @@ table, th, td {
         <li>Postcode: 4110</li>
       </ul>
      </li>
-      </li>
    </ul></td>
 <td>
    <ul>
@@ -647,7 +646,6 @@ table, th, td {
         <li>Line: "PO Box 525", "Whanganui 4541"</li>
       </ul>
      </li>
-      </li>
    </ul></td>
 <td>
    <ul>
