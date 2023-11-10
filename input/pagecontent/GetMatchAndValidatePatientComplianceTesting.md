@@ -575,6 +575,7 @@ table, th, td {
   <li> NHI number</li>
   <li>Name</li>
   <li>Birthdate</li>
+</ul>
 </td>
 <td>
    <ul>
