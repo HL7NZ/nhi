@@ -180,8 +180,8 @@ table, th, td {
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-4</td>
-<td>Search / Match new format NHI <br / application behaves appropriately when a new format NHI number is returned in a search response</td>
-<td>Use an NHI Search / Match request to retrieve patients below<br />
+<td>Search / Match new format NHI <br /> application behaves appropriately when a new format NHI number is returned in a search response</td>
+<td>Use an NHI Search / Match request to retrieve patients below <br />
    <ul>
       <li>ZXE24NV</li>
         <ul>
