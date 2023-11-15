@@ -374,9 +374,9 @@ table, th, td {
 <td> 500,000 requests per day </td></tr>
 </table>
 
-All test accounts will be assigned to the bronze usage plan
+All test accounts will be assigned to the bronze usage plan. If a Vendor wishes to be assigned to a higher plan, they should contact the Integration team via the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) Please request a change to the usage plan and make sure you include the ClientID at minimum (AppId and Orgid also recommended).
 
-Production accounts will be assigned to the silver usage plan. If an Organisation wished to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
+Production accounts will be assigned to the silver usage plan. If an Organisation wishes to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
 
