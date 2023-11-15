@@ -21,7 +21,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
 
 Please allow at least 5 working days for these applications to be processed and production credentials issued. If your product is to be used by many different organisations please get in touch to discuss your rollout plans and how we might assist.
 
-If you require help or have any questions regarding the onboarding process, please contact our team by completing the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
+If you require help or have any questions regarding the onboarding process, please contact our team by completing the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
 
 
 <h3>Business Functions</h3>
