@@ -169,4 +169,27 @@ For More information see:
 
 <br />
 
+<div>
   <img style="width:400px; float:none" src="EthnicityQuestionExample.PNG"/>
+</div>
+
+### Dormant NHI numbers
+
+#### What is a dormant NHI?
+
+For a description on dormant identifier see [Linking resources and Dormant identifiers](/general.html#linking-resources-and-dormant-identifiers)
+
+#### Live / Dormant NHI statistics
+
+As at November 2023
+
+* **Number of NHI records with no death date**
+  * Live = 7,980,098
+  * Dormant = 1,306,065
+* **Number of distinct Live NHI with associated Dormants**
+  * 1,104,260
+* **Percentage of NHI numbers that are dormant**
+  * 14.1%
+* **Percentage of people that have a dormant NHI number**
+  * 13.8%
+
