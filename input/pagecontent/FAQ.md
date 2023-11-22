@@ -185,4 +185,5 @@ For a description on dormant identifier see [Linking resources and Dormant ident
   * 14.1%
 * **Percentage of people that have one or more dormant NHI numbers**
   * 13.8%
+(Current as of November 2023)
 
