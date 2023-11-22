@@ -20,7 +20,7 @@ https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
 
 ### Linking resources and Dormant identifiers
 
-Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers.
+Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers. For sttistics on Dormant NHI numbers see [Live / Dormant NHI statistics](/FAQ.md#live--dormant-nhi-statistics)
 
 All the NHI numbers will appear in the resource identifier list, the live or active NHI number will have a use value of ‘official’ and the dormant identifiers will all have a use value of ‘old’.
 
