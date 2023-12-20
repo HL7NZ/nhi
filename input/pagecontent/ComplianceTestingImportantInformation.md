@@ -22,6 +22,9 @@ Provide the following details in a test report and email to [integration@health.
 
 3. For each test supply a timestamp when each request is sent.
 
+### Test Data
+
+To access a list of NHI test identifiers follow [this link](https://www.tewhatuora.govt.nz/our-health-system/digital-health/health-identity/information-for-it-vendors-and-developers/#national-health-index-nhi). For a set of current formant identifiers and look for heading **NHI Test identifiers** and for new format NHI test identifiers see **NHI records Mod23**.
 
 ### Compliance tests
 
