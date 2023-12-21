@@ -134,8 +134,8 @@ table, th, td {
 <td>Output: Application does not error </td>
 <td>Mandatory</td></tr>
 
-<tr><td>NHI-Consumer-Get-8 <br /> <b>TBD-MHA</b></td>
-<td>??????????????????? SYNC?????? NHI info varies to consumer can see on APP - application can synchronize with local system in response to the NHI version changing</td>
+<tr><td>NHI-Consumer-Get-8 </td>
+<td>application can synchronize with local system in response to the NHI version changing</td>
 <td>Di.mha.test+INT-ZCX7065@gmail.com</td>
 <td>
   <ul>
@@ -158,7 +158,6 @@ table, th, td {
   <ul>
     <li>Di.mha.test+INT-ZKV8747@gmail.com</li>
     <li>Di.mha.test+INT-ZAV8657@gmail.com</li>
-    <li>ZHS7524</li>
   </ul>
 </td>
 <td><li>Output:
@@ -278,6 +277,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>Use Di.mha.test+INT-ZUG37LU@gmail.com for all updates</caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
