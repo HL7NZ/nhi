@@ -318,6 +318,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>Use Di.mha.test+INT-ZUG37LU@gmail.com for all updates</caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
