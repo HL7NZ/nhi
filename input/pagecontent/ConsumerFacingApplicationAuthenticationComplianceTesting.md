@@ -17,7 +17,7 @@ table, th, td {
 <tr>
 <td>NHI-Consumer-Get-1</td>
 <td>application can clearly display that the information has come from the NHI rather than another source</td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZKV6957@gmail.com</td>
 <td>Output: The application alerts the user that the information they are viewing has been returned from the NHI</td>
 <td>Mandatory</td>
 </tr>
@@ -60,7 +60,7 @@ table, th, td {
   <li>DHB - optional</li>
 </ul>
 </td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZKV6957@gmail.com</td>
 <td>Output: Person's information clearly displayed</td>
 <td>Mandatory <br /> (for data items being handled)</td>
 </tr>
@@ -68,7 +68,7 @@ table, th, td {
 <tr>
 <td>NHI-Consumer-Get-3</td>
 <td>application has an appropriate exception flow if a patient record has a Date of Death</td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZKV7015@gmail.com</td>
 <td>Output: The application alerts the user of the exception flow and an appropriate business process to reslove data quality errors</td>
 <td>Mandatory</td>
 </tr>
@@ -82,7 +82,7 @@ table, th, td {
   <li>Unknown citizenship</li>
 </ul>
 </td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZKV7520@gmail.com</td>
 <td>Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
   <ul>
     <li>A not validated physical address</li>
@@ -95,7 +95,7 @@ table, th, td {
 
 <tr><td>NHI-Consumer-Get-5 <br /> <b>TBD-MHA</b></td>
 <td> Describe the excpetion flow if the requested NHI is dormant, and that the live NHI has been returned.</td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZKV7457@gmail.com</td>
 <td>
   <ul>
     <li>Outout: Notification to the user that the requested NHI was dormant and the live NHI has been returned </li>
@@ -106,7 +106,7 @@ table, th, td {
 
 <tr><td>NHI-Consumer-Get-6</td>
 <td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Family Name of 100 characters)</td>
-<td>XXXXXXX</td>
+<td>Di.mha.test+INT-ZBE4905@gmail.com</td>
 <td>
   <ul>
     <li>Output: Patient information supplied is displayed without loss of data</li>
@@ -128,8 +128,7 @@ table, th, td {
 <td>application behaves appropriately when a new format NHI number is returned</td>
 <td>
    <ul>
-      <li>XXXXXXX</li>
-      <li>XXXXXXX</li>
+      <li>Di.mha.test+INT-ZUG37LU@gmail.com</li>
    </ul>
 </td>
 <td>Output: Application does not error </td>
@@ -137,7 +136,7 @@ table, th, td {
 
 <tr><td>NHI-Consumer-Get-8 <br /> <b>TBD-MHA</b></td>
 <td>??????????????????? SYNC?????? NHI info varies to consumer can see on APP - application can synchronize with local system in response to the NHI version changing</td>
-<td>ZCX7065</td>
+<td>Di.mha.test+INT-ZCX7065@gmail.com</td>
 <td>
   <ul>
     <li>Do a Get</li>
@@ -153,13 +152,12 @@ table, th, td {
   <ul>
     <li>only a family name</li>
     <li>only a given name</li>
-    <li>multiple names</li>
   </ul>
 </td>
 <td> <b>Do all</b> <br />
   <ul>
-    <li>ZAU8023</li>
-    <li>ZAV8657</li>
+    <li>Di.mha.test+INT-ZKV8747@gmail.com</li>
+    <li>Di.mha.test+INT-ZAV8657@gmail.com</li>
     <li>ZHS7524</li>
   </ul>
 </td>
@@ -182,6 +180,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption>Use Di.mha.test+INT-ZUG37LU@gmail.com for all updates</caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
