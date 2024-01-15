@@ -124,7 +124,7 @@ The patient has the following fields fully populated in the test record (field l
 <td>mandatory</td></tr>
 </table>
 
-<h4>NHI Patient GET tests - enrolled GP</h4>
+<h4>NHI Patient GET tests - Enrolled GP</h4>
 <table>
 <style>
 table, th, td {
@@ -184,7 +184,7 @@ application can display the patients's enrolled General Practice details returne
 <td>Mandatory</td></tr>
 </table>
 
-<h4>NHI Patient GET tests - contact details</h4>
+<h4>NHI Patient GET tests - Contact details</h4>
 <table>
 <style>
 table, th, td {
