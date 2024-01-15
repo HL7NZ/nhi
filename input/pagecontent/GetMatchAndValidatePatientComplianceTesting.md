@@ -124,7 +124,7 @@ The patient has the following fields fully populated in the test record (field l
 <td>mandatory</td></tr>
 </table>
 
-<h4>NHI Patient GET tests (enrolled GP and contact details only)</h4>
+<h4>NHI Patient GET tests - enrolled GP</h4>
 <table>
 <style>
 table, th, td {
@@ -132,7 +132,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> <b>Only complete these if you have either permission to vew a patient's enrolled GP or contact details</b> </caption>
+<caption> <b>Only complete these if you have permission to vew a patient's enrolled GP </b> </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -182,6 +182,23 @@ application can display the patients's enrolled General Practice details returne
    </ul>
 </td>
 <td>Mandatory</td></tr>
+</table>
+
+<h4>NHI Patient GET tests - contact details</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<caption> <b>Only complete these if you have permission to vew a patient's contact details</b> </caption>
+<tr><th>Reference</th>
+<th>Purpose – Demonstrate that the</th>
+<th>Input values</th>
+<th>Expected outcome</th>
+<th>Mandatory</th></tr>
+
 
 <tr><td>NHI-GET-12</td>
 <td>application can display the patients's contact details returned by the NHI in a GET response including: <br />
@@ -219,6 +236,7 @@ application can display the patients's enrolled General Practice details returne
 </td>
 <td>Mandatory</td></tr>
 </table>
+
 
 <h4>NHI Patient Match tests</h4>
 <table>
