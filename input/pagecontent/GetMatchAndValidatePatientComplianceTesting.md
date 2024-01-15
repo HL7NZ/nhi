@@ -228,6 +228,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption> If the Match tests are being completed in the absence of Patient Get tests then please complete the section below <b>NHI Patient Match tests </b> (Minimum data requirements). <br /> This is not a common use case so please discuss with the integration tea prior to implementing  </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
@@ -376,7 +377,8 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption> Only complete these if you are implementing <b>Patient $Match</b> prior to <b>Get Patient</b> and therefore need to prove minimum data requirements are met. Please discuss this with the integration team prior to submitting your compliance tests to make sure the use case is valid </caption>
+<caption> These tests are designed to prove minimum data requirements are met in the absence of doing the <b>NHI Patient GET tests</b> <br /> 
+This is not a common use case so please discuss with the integration tea prior to implementing  </caption>
 <tr><th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
 <th>Input values</th>
