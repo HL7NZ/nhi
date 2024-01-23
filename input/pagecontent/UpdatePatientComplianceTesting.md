@@ -97,7 +97,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-9</td>
-<td>application can add addresses with a building name </b> unvalidated address</td>
+<td>application can add an unvalidated address with a building name </td>
 <td><li>Use selected NHI number</li>
 <li> Add a new <b>physical address</b> to the patient record using the $set-unvalidated-address operation</li></td>
 <td>Input: An address can be populated with a building name<br />
@@ -105,7 +105,7 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Maintain-Address-10</td>
-<td>application can add addresses with a building name </b> validated address</td>
+<td>application can add a validated address with a building name </b> validated address</td>
 <td><li>Use selected NHI number</li>
 <li> Add a new <b>physical address</b> to the patient record using the $set-address operation</li></td>
 <td>Input: An address can be populated with a building name<br />
