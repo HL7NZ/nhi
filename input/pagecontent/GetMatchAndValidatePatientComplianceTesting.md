@@ -18,7 +18,7 @@ table, th, td {
 <li>Preferred name including Given Name(s), Family Name</li>
 <li>Date of Birth</li>
 <li>Gender</li>
-<li>Primary Address</li>
+<li>Primary Address - including the building name</li>
 </td>
 <td>ZJS7596</td>
 <td>Output: Minimum identity information is displayed for the patient</td>
@@ -408,7 +408,7 @@ This is not a common use case so please discuss with the integration team prior 
 <li>Preferred name including Given Name(s), Family Name</li>
 <li>Date of Birth</li>
 <li>Gender</li>
-<li>Primary Address</li></td>
+<li>Primary Address - including the building name</li></td>
 <td>Use a Match request to retrieve ZJS7596 and demonstrate how you display the NHI details <br />
 Family Name: Maraka <br />
 Given Names: Jamie, Susan <br />
