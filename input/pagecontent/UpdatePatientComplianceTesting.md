@@ -96,6 +96,22 @@ Output: The address that is displayed to the end user is the address that is ret
 <td>Output: The patient record has Postal address removed</td>
 <td>mandatory</td></tr>
 
+<tr><td>NHI-Maintain-Address-9</td>
+<td>application can add an unvalidated address with a building name </td>
+<td><li>Use selected NHI number</li>
+<li> Add a new <b>physical address</b> to the patient record using the $set-unvalidated-address operation</li></td>
+<td>Input: An address can be populated with a building name<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
+<tr><td>NHI-Maintain-Address-10</td>
+<td>application can add a validated address with a building name</td>
+<td><li>Use selected NHI number</li>
+<li> Add a new <b>physical address</b> to the patient record using the $set-address operation</li></td>
+<td>Input: An address can be populated with a building name<br />
+Output: The address that is displayed to the end user is the address that is returned in the update response</td>
+<td>mandatory</td></tr>
+
 <tr><td>NHI-Maintain-Address-error-1 <br /> $set-address</td>
 <td>Application will show the correct error when attempting to add a new address to the provided dormant NHI number</td>
 <td>

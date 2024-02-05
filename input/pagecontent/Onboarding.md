@@ -16,12 +16,19 @@ Access to NHI operations is available to all health providers listed in [Schedul
   * You will also receive the access token url, provided scopes, and the UAT endpoint.
 3. Complete your development and testing.
 4. Submit the results of the compliance tests by email to the [integration team](mailto:integration@health.govt.nz).
-5. The integration team team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
+5. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
 6. Each organisation using your application with NHI integrated services must apply individually for access to the production environment by completing the production form, please email [NHI Access](mailto:nhi_access@health.govt.nz).
 
 Please allow at least 5 working days for these applications to be processed and production credentials issued. If your product is to be used by many different organisations please get in touch to discuss your rollout plans and how we might assist.
 
-If you require help or have any questions regarding the onboarding process, please contact our team by completing the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
+
+### Assistance
+
+Please fill in the [General Enquiry form] (https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if you:
+* have a general enquiry,
+* require help or have any questions regarding the onboarding process,
+* want to add new business functions to an existing application, or
+* want to add a new set of credentials to an existing application.
 
 
 <h3>Business Functions</h3>

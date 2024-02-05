@@ -18,14 +18,21 @@ Provide the following details in a test report and email to [integration@health.
       * any error messages presented by the application
       * the confirmation or result of the request presented by the application
     * For update operations the state of the record pre-request should be included. 
-    * **Note**: If non-interactive, please provide JSON request (update / add) or response (get/search).
+    * **Note**: If non-interactive, please provide JSON request (update / create) or response (get/search).
 
 3. For each test supply a timestamp when each request is sent.
 
+### Test Data
+
+To access a list of NHI test identifiers follow [this link](https://www.tewhatuora.govt.nz/our-health-system/digital-health/health-identity/information-for-it-vendors-and-developers/#national-health-index-nhi). For a set of current formant identifiers and look for heading **NHI Test identifiers** and for new format NHI test identifiers see **NHI records Mod23**.
 
 ### Compliance tests
 
 Not all compliance tests in this implementation guide will be appropriate for every application. If there are tests that do not apply please discuss this with the integration team and where appropriate write a description in the compliance test submission why the particular test does not apply.
+
+**Mandatory vs Optional tests**
+* If there are tests below that are labelled mandatory but do fit the application's use case then please let us know why.
+* Some tests are labelled *mandatory if*. These tests are Mandatory only if you are using this piece of data for your use case.
 
 To request a template for the compliance tests either add a comment to your onboarding request form or reach out using the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
 
@@ -61,6 +68,13 @@ table, th, td {
 <td>Checked against all tests</td>
 <td>Te Whatu Ora will check internal logs</td>
 <td>Mandatory</td></tr>
+
+<tr><td>Security 4</td>
+<td>Each request has a unique request id in the X-Correlation-Id field <br />
+If present this will be returned in the response</td>
+<td>Checked against all tests</td>
+<td>Te Whatu Ora will check internal logs</td>
+<td>Recommended</td></tr>
 </table>
 
 <h4>General tests</h4>
@@ -85,7 +99,7 @@ table, th, td {
 <td>Recommended</td></tr>
 
 <tr><td>General-2</td>
-<td>Application can present the NHI terms of use to individual user's when the integrating application first goes live for an Organisation. A reference terms of use is supplied <Link>, or the NHI terms of use can be included as part of the application's terms of use.</td>
+<td>Application can present the NHI terms of use to individual user's when the integrating application first goes live for an Organisation. A reference terms of use is supplied, or the NHI terms of use can be included as part of the application's terms of use.</td>
 <td><a href="TermsOfUse.html">See Terms Of Use</a></td>
 <td><li>The application will display terms of use to the end user</li>
 <li>The application must store the end users acceptance of the terms</li></td>
@@ -169,8 +183,8 @@ table, th, td {
 <td>Optional</td></tr>
 
 <tr><td>NHI-Extra-4</td>
-<td>Search / Match new format NHI <br / application behaves appropriately when a new format NHI number is returned in a search response</td>
-<td>Use an NHI Search / Match request to retrieve patients below<br />
+<td>Search / Match new format NHI <br /> application behaves appropriately when a new format NHI number is returned in a search response</td>
+<td>Use an NHI Search / Match request to retrieve patients below <br />
    <ul>
       <li>ZXE24NV</li>
         <ul>

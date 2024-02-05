@@ -1,0 +1,37 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Strict OAuth2 Authorization Code Flow - Update my NHI record
+actor "Health Consumer" as User #CornflowerBlue
+participant "Client application" as A #BUSINESS
+participant "MHA Login" as B #CornflowerBlue
+participant "<<idp>> B2C" as C #CornflowerBlue
+participant "<FHIR API> NHI" as D #LightGreen
+|||
+User -> A: Provide details to be updated
+activate A
+|||
+A -> D: Update Patient (NHI,PatientVersion,Token,API key)
+activate D
+|||
+D -> D: Validate[]
+|||
+group Strict OIDC user info
+D -> C: Get user NHI
+activate C
+deactivate C
+|||
+D -> D: Authorise()
+end
+|||
+D -> D: Update Patient record
+|||
+D -[dashed]-> A: Return Updated Patient resource
+deactivate D
+|||
+A -> User: Display updated Patient resource
+deactivate A
+|||
+@enduml

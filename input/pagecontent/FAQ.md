@@ -91,7 +91,7 @@ NZ Citizenship is an attribute that was introduced with the NHI SOAP services in
 
 Providers can update the NZ Citizenship status if there is no data on the NHI for their patient and the source is not DIA.  Evidence of citizenship should be sighted before updating the NHI. Organisations may want to limit update capability of these fields to users who have a good understanding of the eligibility rules.
 
-<h4>NZ Current Citizenship status numbers in the NHI</h4>
+<h4>NZ Citizenship status numbers in the NHI</h4>
 <table>
 <style>
 table, th, td {
@@ -99,6 +99,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption><b>As at March 2023</b></caption>
 <tr><th>Status of the record</th>
 <th>Percentage of records</th>
 <th>Breakdown of source <br /> for yes reponses</th></tr>
@@ -138,3 +139,51 @@ With the release of the NHI SOAP service the attribute was discontinued, however
 A new attribute _NZ Residency_ was designed to capture a person with a resident class visa. For the NHI, there is currently no data sharing agreement with Immigration New Zealand or mechanism to populate this data from an authorised source. 
 
 We have removed this attribute from the NHI Patient profile. There is no current timeframe for when this might be returned.
+
+### How should my application present the standard gender question?
+
+Gender is a self-identified attribute and refers to a person’s social and personal identity as male, female, or another gender. <br />
+A person’s current gender may differ from the sex recorded at their birth, may change over time and some people may not identify with any gender. <br />
+While multiple responses to the gender question are valid, only a single gender code can be updated in the NHI. <br />
+
+See the source standard for more information about how to collect gender information from the person.
+
+For More information see:
+* [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+* [Mandated data standard for gender and sex](https://aria.stats.govt.nz/aria/?_ga=2.82725014.1888179889.1697335665-1611494496.1697335665#StandardView:uri=http://stats.govt.nz/cms/StatisticalStandard/y8iEeAMz2o4fBItv)
+
+<br />
+
+<img style="width:400px; float:none" src="GenderQuestionExample.PNG"/>
+
+
+### How should my application present the standard ethnicity question?
+
+The standard ethnicity question for the health and disability sector mirrors the Statistics New Zealand 2018 Census ethnicity question. The ethnicity question has been rigorously tested by Stats NZ to establish the most effective wording, layout and font, and is re analysed after every census.
+
+Consumer facing applications that allow a person to update their NHI ethnicity must present the standard question in an unanswered format when a request to change is made. Do not present their previous responses for amendment.
+
+For More information see:
+* [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+* [HISO 10001:2017 Ethnicity Data Protocols](https://www.tewhatuora.govt.nz/our-health-system/digital-health/data-and-digital-standards/approved-standards/identity-standards/)
+
+<br />
+
+<div>
+  <img style="width:400px; float:none" src="EthnicityQuestionExample.PNG"/>
+</div>
+
+### Dormant NHI numbers
+
+#### What is a dormant NHI?
+
+For a description on dormant identifier see [Linking resources and Dormant identifiers](/general.html#linking-resources-and-dormant-identifiers)
+
+#### Dormant NHI statistics
+
+* **Percentage of NHI numbers that are dormant**
+  * 14.1%
+* **Percentage of people that have one or more dormant NHI numbers**
+  * 13.8%
+(Current as of November 2023)
+

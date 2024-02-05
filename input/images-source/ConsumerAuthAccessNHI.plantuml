@@ -1,0 +1,60 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Strict OAuth2 Authorization Code Flow
+actor "Health Consumer" as User #CornflowerBlue
+participant "Client application" as A #BUSINESS
+participant "MHA Login" as B #CornflowerBlue
+participant "<<idp>> B2C" as C #CornflowerBlue
+participant "<FHIR API> NHI" as D #LightGreen
+|||
+User -> A: View my NHI record
+activate A
+|||
+A -[dashed]-> User: 302 redirect to MHA login (client_id, scope, callback)
+deactivate A
+|||
+User -> B: Post login form (username, password, consent)
+activate B
+|||
+B -> User: Consent required
+|||
+User -> B:Consent provided
+|||
+B -> C: Verify credentials()
+activate C
+deactivate C
+|||
+B -[dashed]-> User: 302 redirect to client app callback (code)
+deactivate B
+|||
+User -> A: Callback (code)
+activate A
+A -> C: Get access token (code, client_id, client_secret)
+activate C
+|||
+C -[dashed]-> A: return access token()
+deactivate C
+|||
+A -> D: Get Patient (NHI,token,API key)
+activate D
+|||
+D -> D: Validate[]
+|||
+group Strict OIDC user info
+D -> C: Get user NHI
+activate C
+deactivate C
+|||
+D -> D: Authorise()  
+end
+|||
+D -[dashed]-> A: Return Patient resource
+deactivate D
+|||
+A -> User: Display Patient resource
+deactivate A
+|||
+@enduml

@@ -20,7 +20,7 @@ https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
 
 ### Linking resources and Dormant identifiers
 
-Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers.
+Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers. For statistics on Dormant NHI numbers see [Dormant NHI statistics](/FAQ.md#dormant-nhi-statistics)
 
 All the NHI numbers will appear in the resource identifier list, the live or active NHI number will have a use value of ‘official’ and the dormant identifiers will all have a use value of ‘old’.
 
@@ -266,14 +266,6 @@ All requests for all resources must include an http header userid that uniquely 
 Preferably the hpi-person-id of the user would be provided if known, otherwise a userid that allows the authenticated organisation to identify the individual </td>
 <td>Mandatory</td></tr>
 
-<tr><td> X-Correlation-Id </td>
-<td> {string} </td>
-<td> Client provided <br />
-All requests should contain a unique transaction id in the X-Correlation-Id field <br />
-If present in the request this will be returned in the response, and can be used to track API calls <br />
-Preferred less than 64 characters <br /> </td>
-<td> Recommended </td></tr>
-
 <tr><td> Content-Type </td>
 <td> Application/json </td>
 <td> Supported content type </td>
@@ -283,6 +275,19 @@ Preferred less than 64 characters <br /> </td>
 <td> {string} </td>
 <td> Te Whatu Ora Provided – issued with client credentials </td>
 <td> Mandatory </td></tr>
+
+<tr><td> User-Agent </td>
+<td> {string} </td>
+<td> The user-agent header is a string field that lets Te Whatu Ora know the application and version of the application accessing the HIP APIs. </td>
+<td> Mandatory </td></tr>
+
+<tr><td> X-Correlation-Id </td>
+<td> {string} </td>
+<td> Client provided <br />
+All requests should contain a unique transaction id in the X-Correlation-Id field <br />
+If present in the request this will be returned in the response, and can be used to track API calls <br />
+Preferred less than 64 characters <br /> </td>
+<td> Recommended </td></tr>
 </table>
 
 <h4>Response Headers</h4>
@@ -318,7 +323,7 @@ The NHI server uses the OAUTH2 Client Credentials flow for authentication and au
 
 #### Scopes
 
-The following scopes are supported
+The following scopes are supported. For more information on available functionality please see [Business Functions](/Onboarding.html#business-functions).
 
 <table>
 <style>
@@ -374,8 +379,18 @@ table, th, td {
 <td> 500,000 requests per day </td></tr>
 </table>
 
-All test accounts will be assigned to the bronze usage plan
+All test accounts will be assigned to the bronze usage plan. If a Vendor wishes to be assigned to a higher plan, they should contact the Integration team via the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) Please request a change to the usage plan and make sure you include the ClientID at minimum (AppId and Orgid also recommended).
 
-Production accounts will be assigned to the silver usage plan. If an Organisation wished to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
+Production accounts will be assigned to the silver usage plan. If an Organisation wishes to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
+
+
+#### GEO Restriction 
+
+GEO Restriction rules prevent access from clients with IPs located in countries other than those listed below. If you need access from another country,  please contact our team by completing the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) or adding a comment to the online onboarding request form if you have one.
+
+* New Zealand
+* Australia
+* Canada
+* Cook Islands

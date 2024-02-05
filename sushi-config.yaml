@@ -53,6 +53,7 @@ menu:
     Update identity: updateIdentity.html
     Update birth: updateBirth.html
     Update eligibility: updateEligibility.html
+    Consumer Facing Application Authentication: ConsumerFacingApplicationAuthentication.html
   Important information:
     Onboarding: Onboarding.html
     General Notes: general.html
@@ -60,9 +61,10 @@ menu:
     Glossary: glossary.html
   Compliance Testing:
     Compliance testing important information: ComplianceTestingImportantInformation.html
-    Get and Match Patient Compliance testing: GetAndMatchPatientComplianceTesting.html
+    Get, Match and Validate Patient Compliance testing: GetMatchAndValidatePatientComplianceTesting.html
     Update Patient Compliance testing: UpdatePatientComplianceTesting.html
     Create Patient Compliance testing: CreatePatientComplianceTesting.html
+    Consumer Facing Application Authentication Compliance testing: ConsumerFacingApplicationAuthenticationComplianceTesting.html
   API: API.html
   Profiles: profiles.html
   Extensions: extensions.html
