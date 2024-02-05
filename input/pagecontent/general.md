@@ -179,13 +179,13 @@ table, th, td {
 
 <tr>
 <td>OperationOutcome.issue[].details.coding.code</td>
-<td> <a href="https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
+<td><a href="https://common-ig-v1-3-1.hip.digital.health.nz/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
 <td> 0..1 </td>
 </tr>
 
 <tr>
 <td>OperationOutcome.issue[].details.coding.display</td>
-<td> <a href="https://dev.d3ox9vcqia2rpj.amplifyapp.com/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
+<td> <a href="https://common-ig-v1-3-1.hip.digital.health.nz/site/CodeSystem-hip-error-code.html">See the HIP Error codes</a> </td>
 <td> 0..1 </td>
 </tr>
 
