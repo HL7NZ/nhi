@@ -154,9 +154,9 @@ The contact details are only returned with a read on the resource. They are not 
 The patient version-id does not change when the patient's contact details change. This is because the patient's contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The Patient Version-id only reflects changes to details held on the NHI.
 
 The information returned may include:
--	Email address
--	Home phone number
--	Mobile phone number
+-	1x email address,
+-	1x home phone number,
+-	1x mobile phone number
 
 #### Example of Patient contact details
 
