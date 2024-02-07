@@ -257,7 +257,7 @@
       - LambdaAuthorizer: []
       - api_key: []
       
-      /fhir/nhi/v1/Patient/$set-address:
+/fhir/nhi/v1/Patient/$set-address:
     post:
       parameters:
       - name: "userid"
@@ -508,7 +508,7 @@
       - api_key: []
       
       
-      /fhir/nhi/v1/Patient/$update-identity:
+/fhir/nhi/v1/Patient/$update-identity:
     post:
       parameters:
       - name: "userid"

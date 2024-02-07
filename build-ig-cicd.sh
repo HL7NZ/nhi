@@ -57,6 +57,12 @@ echo running local scripts
 sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
 
+
+echo "building openapi spec"
+sudo chmod +x ./openapi/makeoas.sh
+./openapi/makeoas.sh
+
+
 echo "Making API summary"
 sudo chmod +x ./localscripts/makeCapabilityStatement.js
 ./localscripts/makeCapabilityStatement.js nhi

@@ -10,6 +10,75 @@ servers:
         default: "dev"
 components:
   schemas:
+    positiveInt:
+      pattern: "^[1-9][0-9]*$"
+      type: number
+      description: An integer with a value that is positive (e.g. >0)
+        
+    Element:
+      description: Base definition for all elements in a resource.
+      properties:
+        id:
+          description: Unique id for the element within a resource (for internal references).
+            This may be any string value that does not contain spaces.
+          "$ref": "#/components/schemas/string"
+      
+      additionalProperties: false
+
+    ContactPoint:
+      description: Details for all kinds of technology mediated contact points for a person
+        or organization, including telephone, email, etc.
+      properties:
+        id:
+          description: Unique id for the element within a resource (for internal references).
+            This may be any string value that does not contain spaces.
+          "$ref": "#/components/schemas/string"
+        
+        system:
+          description: Telecommunications form for contact point - what communications
+            system is required to make use of the contact.
+          enum:
+          - phone
+          - fax
+          - email
+          - pager
+          - url
+          - sms
+          - other
+        _system:
+          description: Extensions for system
+          "$ref": "#/components/schemas/Element"
+        value:
+          description: The actual contact point details, in a form that is meaningful
+            to the designated communication system (i.e. phone number or email address).
+          "$ref": "#/components/schemas/string"
+        _value:
+          description: Extensions for value
+          "$ref": "#/components/schemas/Element"
+        use:
+          description: Identifies the purpose for the contact point.
+          enum:
+          - home
+          - work
+          - temp
+          - old
+          - mobile
+        _use:
+          description: Extensions for use
+          "$ref": "#/components/schemas/Element"
+        rank:
+          description: Specifies a preferred order in which to use a set of contacts.
+            ContactPoints with lower rank values are more preferred than those with higher
+            rank values.
+          "$ref": "#/components/schemas/positiveInt"
+        _rank:
+          description: Extensions for rank
+          "$ref": "#/components/schemas/Element"
+        period:
+          description: Time period when the contact point was/is in use.
+          "$ref": "#/components/schemas/Period"
+      additionalProperties: false
+      
     date:
       pattern: "^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?$"
       type: "string"
@@ -151,6 +220,24 @@ components:
             - "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
       additionalProperties: false
       description: "The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group."
+    DHBExtension:
+      required:
+      - "url"
+      - "valueCodeableConcept"
+      type: "object"
+      properties:
+        valueCodeableConcept:
+          type: "object"
+          properties:
+            coding:
+              type: "array"
+              items:
+                $ref: "#/components/schemas/Coding"
+        url:
+          type: "string"
+          enum:
+          - "http://hl7.org.nz/fhir/StructureDefinition/dhb"
+   
     Identifier:
       type: "object"
       properties:
@@ -321,6 +408,8 @@ components:
                   valueCodeableConcept:
                     type: "object"
                     properties:
+                      text:  
+                        type: "string"
                       coding:
                         type: "array"
                         items:
@@ -363,6 +452,8 @@ components:
                 properties:
                   valueCodeableConcept:
                     type: "object"
+                    text:  
+                      type: "string"
                     properties:
                       coding:
                         type: "array"
@@ -1175,6 +1266,18 @@ components:
               - $ref: "#/components/schemas/NzEthnicityExtension"
               - $ref: "#/components/schemas/NzCitizenshipExtension"
               - $ref: "#/components/schemas/BirthPlaceExtension"
+              - $ref: "#/components/schemas/DHBExtension"
+        contained:
+          type: "array"
+          items:
+            anyOf:
+            - $ref: "#/components/schemas/NesPractitionerRole"
+        telecom:
+          description: "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted."
+          items:
+            "$ref": "#/components/schemas/ContactPoint"
+        
+        
         address:
           minItems: 1
           type: "array"
@@ -1195,6 +1298,7 @@ components:
                   valueCodeableConcept:
                     type: "object"
                     properties:
+                    
                       coding:
                         type: "array"
                         items:
@@ -1209,8 +1313,7 @@ components:
                             code:
                               $ref: "#/components/schemas/code"
                             display:
-                              type: "object"
-                              additionalProperties: false
+                               $ref: "#/components/schemas/string"
                             version:
                               $ref: "#/components/schemas/string"
                           additionalProperties: false
@@ -1261,6 +1364,12 @@ components:
           description: "This is a Patient resource"
           enum:
             - "Patient"
+        generalPractitioner:
+            description: Patient's nominated care provider.
+            items:
+              "$ref": "#/components/schemas/Reference"
+            type: array
+            
       additionalProperties: false
       description: "The Patient resource exposed by the NHI."
     NzCitizenshipExtension:
@@ -1816,7 +1925,7 @@ paths:
       security:
         - LambdaAuthorizer: []
         - api_key: []
-      /fhir/nhi/v1/Patient/$set-address:
+  /fhir/nhi/v1/Patient/$set-address:
     post:
       parameters:
         - name: "userid"
@@ -2062,7 +2171,7 @@ paths:
       security:
         - LambdaAuthorizer: []
         - api_key: []
-      /fhir/nhi/v1/Patient/$update-identity:
+  /fhir/nhi/v1/Patient/$update-identity:
     post:
       parameters:
         - name: "userid"
