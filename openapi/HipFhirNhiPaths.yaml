@@ -206,11 +206,7 @@
                 type: "string"
           content: {}
       security:
-      - hip-fhir-cog:
-        - "https://api.hip.digital.health.nz/fhir/patient:read"
-        - "https://api.hip.digital.health.nz/fhir/patient:search"
-        - "https://api.hip.digital.health.nz/fhir/patient:write"
-        - "https://api.hip.digital.health.nz/fhir/patient:admin"
+      - hip-fhir-cog:       
         - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
@@ -254,7 +250,10 @@
           description: "200 response"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:       
+        - "patient:Patient.r"     
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
+    
       - api_key: []
       
 /fhir/nhi/v1/Patient/$set-address:
@@ -296,7 +295,10 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:       
+        - "patient:Patient.u"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      
       - api_key: []
 /fhir/nhi/v1/Patient/$inactivate-name:
     post:
@@ -337,7 +339,9 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:             
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      
       - api_key: []
       
 /fhir/nhi/v1/Patient/$set-unvalidated-address:
@@ -379,7 +383,9 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:       
+        - "patient:Patient.u"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
 /fhir/nhi/v1/Patient/$update-eligibility:
@@ -421,7 +427,8 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:       
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
 /fhir/nhi/v1/Patient/$update-birth:
@@ -463,7 +470,8 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:              
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
 /fhir/nhi/v1/Patient/$add-name:
     post:
@@ -504,7 +512,8 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:              
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
       
@@ -547,7 +556,8 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:              
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
 /fhir/nhi/v1/Patient/$remove-postal-address:
     post:
@@ -588,5 +598,7 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:       
+        - "patient:Patient.u"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
