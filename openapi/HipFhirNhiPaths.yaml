@@ -40,6 +40,14 @@
       - hip-fhir-cog:                 
         - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+  
       
 /fhir/nhi/v1/Patient/$replace-name:
     post:
@@ -82,6 +90,14 @@
       security:
       - LambdaAuthorizer: []
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+        
 /fhir/nhi/v1/Patient/$create:
     post:
       parameters:
@@ -123,7 +139,15 @@
       security:
       - hip-fhir-cog:       
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
-      - api_key: []      
+      - api_key: []   
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+           
 /fhir/nhi/v1/Patient/$set-preferred-name:
     post:
       parameters:
@@ -167,6 +191,14 @@
         - "patient:Patient.u"        
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+      
 /fhir/nhi/v1/metadata:
     get:
       parameters:
@@ -217,6 +249,14 @@
         - "https://api.hip.digital.health.nz/fhir/system/Patient.a"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-only"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+        
 /fhir/nhi/v1/Patient/{nhiId}:
     get:
       parameters:
@@ -257,8 +297,14 @@
       - hip-fhir-cog:       
         - "patient:Patient.r"     
         - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
-    
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-only"
+      x-amazon-apigateway-integration:
+          httpMethod: "POST"
+          uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+          passthroughBehavior: "when_no_match"
+          timeoutInMillis: 29000
+          type: "aws_proxy"
       
 /fhir/nhi/v1/Patient/$set-address:
     post:
@@ -304,6 +350,14 @@
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+        
 /fhir/nhi/v1/Patient/$inactivate-name:
     post:
       parameters:
@@ -347,6 +401,13 @@
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
       
 /fhir/nhi/v1/Patient/$set-unvalidated-address:
     post:
@@ -391,6 +452,13 @@
         - "patient:Patient.u"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
       
 /fhir/nhi/v1/Patient/$update-eligibility:
     post:
@@ -435,6 +503,14 @@
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+      
 /fhir/nhi/v1/Patient/$update-birth:
     post:
       parameters:
@@ -477,6 +553,15 @@
       - hip-fhir-cog:              
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
+      
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+        
 /fhir/nhi/v1/Patient/$add-name:
     post:
       parameters:
@@ -519,7 +604,13 @@
       - hip-fhir-cog:              
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
-      
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
       
 /fhir/nhi/v1/Patient/$update-identity:
     post:
@@ -563,6 +654,14 @@
       - hip-fhir-cog:              
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
+        
 /fhir/nhi/v1/Patient/$remove-postal-address:
     post:
       parameters:
@@ -606,3 +705,10 @@
         - "patient:Patient.u"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-southeast-2:142606043651:function:hip-nhi-lambda-proxy-function-PuIyLgyjgIqM:LIVE/invocations"
+        passthroughBehavior: "when_no_match"
+        timeoutInMillis: 29000
+        type: "aws_proxy"
