@@ -1690,8 +1690,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$replace-name:
     post:
       parameters:
@@ -1733,6 +1735,7 @@ paths:
       security:
         - LambdaAuthorizer: []
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$create:
     post:
       parameters:
@@ -1772,8 +1775,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$set-preferred-name:
     post:
       parameters:
@@ -1813,8 +1818,11 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "patient:Patient.u"
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/metadata:
     get:
       parameters:
@@ -1859,16 +1867,13 @@ paths:
           content: {}
       security:
         - hip-fhir-cog:
-            - "https://api.hip.digital.health.nz/fhir/patient:read"
-            - "https://api.hip.digital.health.nz/fhir/patient:search"
-            - "https://api.hip.digital.health.nz/fhir/patient:write"
-            - "https://api.hip.digital.health.nz/fhir/patient:admin"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.a"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-only"
   /fhir/nhi/v1/Patient/{nhiId}:
     get:
       parameters:
@@ -1906,8 +1911,11 @@ paths:
           description: "200 response"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "patient:Patient.r"
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-only"
   /fhir/nhi/v1/Patient/$set-address:
     post:
       parameters:
@@ -1947,8 +1955,11 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "patient:Patient.u"
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$inactivate-name:
     post:
       parameters:
@@ -1988,8 +1999,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$set-unvalidated-address:
     post:
       parameters:
@@ -2029,8 +2042,11 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "patient:Patient.u"
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-eligibility:
     post:
       parameters:
@@ -2070,8 +2086,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-birth:
     post:
       parameters:
@@ -2111,8 +2129,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$add-name:
     post:
       parameters:
@@ -2152,8 +2172,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-identity:
     post:
       parameters:
@@ -2193,8 +2215,10 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$remove-postal-address:
     post:
       parameters:
@@ -2234,5 +2258,8 @@ paths:
                 type: "string"
           content: {}
       security:
-        - LambdaAuthorizer: []
+        - hip-fhir-cog:
+            - "patient:Patient.u"
+            - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
+      x-amazon-apigateway-request-validator: "params-and-body"
