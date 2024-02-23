@@ -1,7 +1,7 @@
 openapi: "3.0.1"
 info:
-  title: "hip-hpi-fhir-dev"
-  description: "HPI FHIR - dev gateway"
+  title: "HIP NHI FHIR"
+  description: "Te Whatu Ora NHI FHIR services"
   version: "1.5.0-SNAPSHOT"
 servers:
   - url: "https://gb2r96qpik.execute-api.ap-southeast-2.amazonaws.com/{basePath}"
@@ -225,6 +225,8 @@ components:
           type: "string"
           enum:
             - "http://hl7.org.nz/fhir/StructureDefinition/dhb"
+      additionalProperties: false
+      description: "The ethnic group or groups that a person identifies with or feels they belong to.  Ethnicity is a measure of cultural affiliation as opposed to race, ancestry, nationality or citizen.  Ethnicity is self-perceived and a person can belong to more than one group."
     Identifier:
       type: "object"
       properties:
@@ -439,9 +441,9 @@ components:
                 properties:
                   valueCodeableConcept:
                     type: "object"
-                    text:
-                      type: "string"
                     properties:
+                      text:
+                        $ref: "#/components/schemas/string"
                       coding:
                         type: "array"
                         items:
@@ -1259,10 +1261,6 @@ components:
           items:
             anyOf:
               - $ref: "#/components/schemas/NesPractitionerRole"
-        telecom:
-          description: "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted."
-          items:
-            "$ref": "#/components/schemas/ContactPoint"
         address:
           minItems: 1
           type: "array"
@@ -1693,7 +1691,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$replace-name:
     post:
       parameters:
@@ -1735,7 +1732,6 @@ paths:
       security:
         - LambdaAuthorizer: []
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$create:
     post:
       parameters:
@@ -1778,7 +1774,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$set-preferred-name:
     post:
       parameters:
@@ -1822,7 +1817,6 @@ paths:
             - "patient:Patient.u"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/metadata:
     get:
       parameters:
@@ -1873,7 +1867,6 @@ paths:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.a"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-only"
   /fhir/nhi/v1/Patient/{nhiId}:
     get:
       parameters:
@@ -1915,7 +1908,6 @@ paths:
             - "patient:Patient.r"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-only"
   /fhir/nhi/v1/Patient/$set-address:
     post:
       parameters:
@@ -1959,7 +1951,6 @@ paths:
             - "patient:Patient.u"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$inactivate-name:
     post:
       parameters:
@@ -2002,7 +1993,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$set-unvalidated-address:
     post:
       parameters:
@@ -2046,7 +2036,6 @@ paths:
             - "patient:Patient.u"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-eligibility:
     post:
       parameters:
@@ -2089,7 +2078,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-birth:
     post:
       parameters:
@@ -2132,7 +2120,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$add-name:
     post:
       parameters:
@@ -2175,7 +2162,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$update-identity:
     post:
       parameters:
@@ -2218,7 +2204,6 @@ paths:
         - hip-fhir-cog:
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
   /fhir/nhi/v1/Patient/$remove-postal-address:
     post:
       parameters:
@@ -2262,4 +2247,3 @@ paths:
             - "patient:Patient.u"
             - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
         - api_key: []
-      x-amazon-apigateway-request-validator: "params-and-body"
