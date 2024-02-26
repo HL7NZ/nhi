@@ -45,11 +45,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
-                passthroughBehavior: "when_no_match"
-                timeoutInMillis: 29000
+                uri: 
+                  Ref: pLambdaNameNes
   
       
 /fhir/nhi/v1/Patient/$replace-name:
@@ -98,9 +95,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -151,9 +147,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
            
@@ -205,9 +200,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -266,9 +260,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -318,9 +311,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -373,9 +365,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -427,9 +418,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -481,9 +471,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -534,9 +523,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -587,9 +575,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -641,9 +628,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -694,9 +680,8 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -748,8 +733,7 @@
       x-amazon-apigateway-integration:
                 type: "aws_proxy"
                 httpMethod: "POST"
-                uri: !Sub
-                  - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${aLambdaAC}:function:${aLambdaName}:${aLambdaMajor}/invocations'
-                  - {aLambdaAC: !Ref pLambdaAccountId, aLambdaName: !Ref pLambdaNameNhi, aLambdaMajor: !Ref pLambdaMajor}
+                uri: 
+                  Ref: pLambdaNameNes
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
