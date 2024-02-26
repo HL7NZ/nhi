@@ -46,7 +46,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
   
       
 /fhir/nhi/v1/Patient/$replace-name:
@@ -96,7 +96,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -148,7 +148,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
            
@@ -201,7 +201,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -261,7 +261,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -312,7 +312,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -366,7 +366,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -419,7 +419,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -472,7 +472,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -524,7 +524,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -576,7 +576,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -629,7 +629,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
       
@@ -681,7 +681,7 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
         
@@ -734,6 +734,6 @@
                 type: "aws_proxy"
                 httpMethod: "POST"
                 uri: 
-                  Ref: pLambdaNameNes
+                  Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
