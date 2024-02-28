@@ -28,7 +28,7 @@ echo getting nzbase dependencies...
 nzbase_name="fhir.org.nz.ig.base"
 nzbase_url=$(yq '.dependencies."fhir.org.nz.ig.base".uri' ./sushi-config.yaml)
 nzbase_version=$(yq '.dependencies."fhir.org.nz.ig.base".version' ./sushi-config.yaml)
-nzbase_source="./hfc_package/nzbase-conformance-module-$nzbase_version/package.tgz"
+nzbase_source="./fhir_packages/nzbase-conformance-module-$nzbase_version/package.tgz"
 addPackage "$nzbase_name" "$nzbase_version" "$nzbase_source" "$nzbase_url"
 
 
@@ -41,7 +41,9 @@ echo getting common dependencies...
 
 common_name="hl7.org.nz.fhir.ig.hip-core"
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
-common_source="./hfc_package/hip-fhir-common-$common_version/package/package.tgz"
+
+comdir=$(ls -d ./fhir_packages/hip-fhir-common*)
+common_source="$comdir/package/package.tgz"
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 addPackage "$common_name" "$common_version" "$common_source" "$common_url" 
 
@@ -56,6 +58,12 @@ sushi -o .
 echo running local scripts
 sudo chmod +x ./localscripts/makeTerminologySummary.js
 ./localscripts/makeTerminologySummary.js
+
+
+echo "building openapi spec"
+sudo chmod +x ./openapi/makeoas.sh
+./openapi/makeoas.sh
+
 
 echo "Making API summary"
 sudo chmod +x ./localscripts/makeCapabilityStatement.js

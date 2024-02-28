@@ -10,7 +10,7 @@
 
 id: hl7.org.nz.fhir.ig.nhi
 canonical: http://hl7.org.nz/fhir/ig/nhi
-version: 1.4.1
+version: 1.5.0-SNAPSHOT
 name: NewZealandNHIIG
 title: New Zealand NHI IG
 status: active
@@ -28,7 +28,8 @@ dependencies:
     version: 2.0.0
   hl7.org.nz.fhir.ig.hip-core:    
     uri: https://common-ig-v1-3-1.hip.digital.health.nz/site
-    version: 1.3.1
+    #version: 1.6.0-SNAPSHOT
+    version: dev
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
@@ -77,4 +78,4 @@ menu:
     Download IG: full-ig.zip
     Artifacts (Json): definitions.json.zip
     Artifacts (Xml): definitions.xml.zip
-    "OpenApi 3 spec": NhiFhirOpenApi.zip
+    "OpenApi 3 spec": HipFhirNhiOpenApi.zip
