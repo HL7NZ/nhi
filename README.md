@@ -38,6 +38,6 @@ Check in your changes including the new full-ig.zip to github. Amplify will auto
 3. checkin
 4. create tag
 5. create branch from tag and push
-6. change codebuild to point to branch and run
+6. change codebuild to point to branch and run 
 
 
