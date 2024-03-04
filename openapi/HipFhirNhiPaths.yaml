@@ -38,6 +38,7 @@
           content: {}
       security:
       - hip-fhir-cog:                 
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
       - api_key: []
       
@@ -140,7 +141,7 @@
           content: {}
       security:
       - hip-fhir-cog:       
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.c"
       - api_key: []   
        
       x-amazon-apigateway-request-validator: params-and-body

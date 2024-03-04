@@ -54,9 +54,9 @@ phases:
       - ls -l ./hfc_package
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
-       # deploy the nhi conformance artifacts
-      
+      # deploy the nhi conformance artifacts    
       - mvn deploy
+      # checkin full-ig.zip
       - echo checking in full-ig.zip
       - git add -f ./output/full-ig.zip
       - git commit -m "new IG build"
