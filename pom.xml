@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nz.health.digital.nhi.fhir</groupId>
 	<artifactId>hip-nhi-conformance-module</artifactId>
-	<version>1.5.0</version>
+	<version>1.5.0-SNAPSHOT</version>
 
 
 	<properties>
-		<revision>1.5.0</revision>
+		<revision>1.5.1-SNAPSHOT</revision>
 		<fhir-common.version>1.6.0</fhir-common.version>
 
 	</properties>
