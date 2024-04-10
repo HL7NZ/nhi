@@ -120,3 +120,4 @@ table, th, td {
   * _Patient NHI and version number are required_
   * _Version number is incorrect_
   * _The NHI Identifier provided is dormant. This record cannot be updated_
+  * _Cannot update attribute source with a lower level of proof._
