@@ -459,7 +459,8 @@ table, th, td {
   * A request must update the source of information only when the information is also provided.
   * An update which results in an attribute Status of Registered must only be submitted via an authorised Agency update.
   * A request may modify active patient information for which evidence has been sighted (“verified” information).
-    * Can modify a verified source to another verified source or verified to Registered.
+    *  Cannot update attribute source with a lower level of proof.
+    *  Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
   * A Patient must have one, and only one, Active Name which is preferred.
   * An existing name must be active to be updated.
   * A non-preferred name may be made inactive (an inactive name is not returned in web service responses)
@@ -481,6 +482,7 @@ table, th, td {
   * _The patient name is not active and cannot be updated._
   * _Cannot update a source to a lower level of proof. Can modify a verified source to another verified source or verified to Registered._
   * _Information set to registered cannot be updated please contact NHI administration for more information._
+  * _Cannot update attribute source with a lower level of proof._
  
  
 
