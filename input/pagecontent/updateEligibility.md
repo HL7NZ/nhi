@@ -99,17 +99,17 @@ table, th, td {
   * the version number of the current Patient Record.
 * An update request may:
   * modify active patient information which is not ‘registered’ information.
-  * modify active patient information for which evidence has been sighted (“verified” information). Can modify a verified source to another verified source or verified to Registered.
+  * modify active patient information for which evidence has been sighted (“verified” information).
+    *  Cannot update attribute source with a lower level of proof. Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
 * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
 * An update request to update the value for a core identity field must also update the information source.
 * An update request must update the source of information only when the information is also provided.
 
 ##### Update-eligibility nz citizenship rules
 * All [create patient NZCitizenship rules apply](/createPatient.html#create-patient-nz-citizenship-rules) and,
-* A request to update citizenship must also update citizenship-information-source
-* birth-place cannot be updated if source is ‘registered’ (BREG) See Glossary
-* birth-place can only be updated to registered by an authorised agency
-* A verified birthplace can be updated by another verified source, not by an unverified source.
+* A request to update NZCitizenship must also update citizenship-information-source
+* NZCitizenship cannot be updated if source is ‘registered’ (BREG) See Glossary
+* NZCitizenship can only be updated to registered by an authorised agency
 
 
 ---
