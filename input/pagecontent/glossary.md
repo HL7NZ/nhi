@@ -53,6 +53,9 @@
 
 * **Unverified birthplace definition**
   * An Unverified Country of Birth is either a place and country of birth, or a country of birth only, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the birthplace
+  * This is a source of
+    * NPRF - Proof not Sighted
+    * OTHR - Other  official document
 
 
 ### NZ Citizenship definitions
