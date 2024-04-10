@@ -100,7 +100,8 @@ table, th, td {
 * An update request may:
   * modify active patient information which is not ‘registered’ information.
   * modify active patient information for which evidence has been sighted (“verified” information).
-    *  Cannot update attribute source with a lower level of proof. Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
+    *  Cannot update attribute source with a lower level of proof.
+    *  Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
 * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
 * An update request to update the value for a core identity field must also update the information source.
 * An update request must update the source of information only when the information is also provided.
