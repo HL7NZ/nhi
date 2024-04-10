@@ -86,33 +86,6 @@
 
 
 
-### Birthplace definitions
-
-* **Registered birthplace definition**
-  * A Registered birthplace is either a place of birth and country of birth, or a country of birth only, which has been verified by a Government Agency
-  * This would be a source of:
-    * BREG - Has been confirmed with a match to the Birth Register
-
-* **Verified birthplace definition**
-  * A Verified birthplace is either a place of birth and country of birth, or a country of birth only, for which acceptable documentary evidence has been sighted by the person recording the birthplace
-  * This would be a source of:
-    * BRCT - Birth Certificate, 
-    * NZCI - NZ Certificate of Identity, 
-    * NZCT - NZ Citizenship Certificate, 
-    * NZET - NZ Emergency Travel Document, 
-    * NZPV - NZ Permanent Resident Visa A New Zealand Permanent Resident Visa (not time bound) issued by Immigration New Zealand, 
-    * NZTV - NZ Resident Visa A New Zealand Resident Visa (time bound) issued by Immigration New Zealand, 
-    * NZRT - NZ Refugee Travel Document,
-    * PPRT - Passport
-
-* **Unverified birthplace definition**
-  * An Unverified Country of Birth is either a place and country of birth, or a country of birth only, for which either no proof, or unacceptable documentary evidence, has been sighted by the person recording the birthplace
-  * This would be a source of:
-    * NPRF - No Proof Information provided (no proof) by patient/whanau, 
-    * OTHR - Other official document
-
-
-
 ### Deceased date definitions
 
 * **Registered Deceased date Status Definition**
