@@ -133,7 +133,7 @@ table, th, td {
     * the version number of the current Patient Record.
   * An update request must not:
     * delete/inactivate mandatory information.
-    * modify or delete any information with a Status of Registered.
+    * modify or delete any information with a Status of registered.
   * An update request may:
     * populate the request parameter with the required value(s) to modify the existing NHI value for that parameter.
     * not populate the request parameter to retain the existing NHI value for that parameter.
@@ -141,7 +141,7 @@ table, th, td {
     * modify active patient information for which evidence has been sighted (“verified” information)
         *  Cannot update attribute source with a lower level of proof.
         *  Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
-  * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
+  * An update request which results in an attribute Status of registered must only be submitted via an authorised Agency.
   * An update request must not modify a record to the extent that the patient identity describes a different patient.
   * An update requestt to update the value for a core identity field must also update the information source.
   * An update request must update the source of information only when the information is also provided.
@@ -166,7 +166,7 @@ table, th, td {
 
 * _Patient update-birth birthdate errors_
   * _birth-date has been validated against a verified source, and must only be modified by authorised users_
-  * _birth-date can only be set to a ‘Registered’ value by an authorised Agency_
+  * _birth-date can only be set to a ‘registered’ value by an authorised Agency_
   * _The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration._
   * _birth-date-information-source is required when birth-date is present_
   * _birth-date is required when birth-date-information-source is present_
@@ -188,8 +188,8 @@ table, th, td {
   
 * _Patient update-birth birthplace errors_
   * _birth-place has been validated against a verified source, and must only be modified by authorised users_
-  * _Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)_
-  * _birth-place can only be set to a ‘Registered’ value by an authorised Agency_
+  * _Can only modify a verified source to another verified source or verified to registered (see Modification of registered information)_
+  * _birth-place can only be set to a ‘registered’ value by an authorised Agency_
   * _Cannot update attribute source with a lower level of proof._
   * _Cannot delete mandatory data_
   * _country-of-birth-information-source is required when country-of-birth is present_
