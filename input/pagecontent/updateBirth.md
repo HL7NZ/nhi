@@ -150,8 +150,9 @@ table, th, td {
 * _Patient update-birth errors_
   * _Patient NHI and version number are required_
   * _Version number is incorrect_
-  * _The NHI Identifier provided is dormant. This record cannot be updated
+  * _The NHI Identifier provided is dormant. This record cannot be updated_
   * _Cannot delete mandatory data_
+
 
 ---
 
@@ -164,11 +165,12 @@ table, th, td {
 
 
 * _Patient update-birth birthdate errors_
-  * birth-date has been validated against a verified source, and must only be modified by authorised users
-  * birth-date can only be set to a ‘Registered’ value by an authorised Agency
-  * The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration.
-  * birth-date-information-source is required when birth-date is present
-  * birth-date is required when birth-date-information-source is present.
+  * _birth-date has been validated against a verified source, and must only be modified by authorised users_
+  * _birth-date can only be set to a ‘Registered’ value by an authorised Agency_
+  * _The patient identity information supplied may result in transformation of this NHI. Please resubmit or contact NHI administration._
+  * _birth-date-information-source is required when birth-date is present_
+  * _birth-date is required when birth-date-information-source is present_
+  * _Cannot update attribute source with a lower level of proof._
 
 
 
@@ -185,10 +187,11 @@ table, th, td {
 
   
 * _Patient update-birth birthplace errors_
-  * birth-place has been validated against a verified source, and must only be modified by authorised users
-  * Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)
-  * birth-place can only be set to a ‘Registered’ value by an authorised Agency
-  * Cannot delete mandatory data
-  * country-of-birth-information-source is required when country-of-birth is present
-  * country-of-birth is required when country-of-birth-information-source is present.
+  * _birth-place has been validated against a verified source, and must only be modified by authorised users_
+  * _Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)_
+  * _birth-place can only be set to a ‘Registered’ value by an authorised Agency_
+  * _Cannot update attribute source with a lower level of proof._
+  * _Cannot delete mandatory data_
+  * _country-of-birth-information-source is required when country-of-birth is present_
+  * _country-of-birth is required when country-of-birth-information-source is present._
   
