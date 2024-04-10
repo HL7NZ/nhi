@@ -138,7 +138,9 @@ table, th, td {
     * populate the request parameter with the required value(s) to modify the existing NHI value for that parameter.
     * not populate the request parameter to retain the existing NHI value for that parameter.
     * modify active patient information which is not ‘registered’ or verified’ information.
-    * modify active patient information for which evidence has been sighted (“verified” information) Can modify a verified source to another verified source or verified to Registered.
+    * modify active patient information for which evidence has been sighted (“verified” information)
+        *  Cannot update attribute source with a lower level of proof.
+        *  Can modify a verified source to another verified source or verified to registered (see Modification of registered information).
   * An update request which results in an attribute Status of Registered must only be submitted via an authorised Agency.
   * An update request must not modify a record to the extent that the patient identity describes a different patient.
   * An update requestt to update the value for a core identity field must also update the information source.
@@ -182,7 +184,7 @@ table, th, td {
 ---
 
   
-* _Patient update-birth birthdate errors_
+* _Patient update-birth birthplace errors_
   * birth-place has been validated against a verified source, and must only be modified by authorised users
   * Can only modify a verified source to another verified source or verified to Registered (see Modification of registered information)
   * birth-place can only be set to a ‘Registered’ value by an authorised Agency
