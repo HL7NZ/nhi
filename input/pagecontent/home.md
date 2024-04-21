@@ -4,6 +4,8 @@
 
 National Health Index FHIR API
 
+<div>
+
 ### Brief Description
 
 The purpose of the National Health Index (NHI), including the National Health Index number (NHI number), is to help with the planning, coordination and provision of health and disability support services across New Zealand.
@@ -13,11 +15,19 @@ Where regional services exist, such as centralised diagnostic services, health p
 The NHI number is used to ensure that the results are associated with the correct patient.
 For more information, [please go here:](https://nhi-ig.hip.digital.health.nz/businessView.html).
 
+</div>
+
+<div>
+
 ### Overview
 
 This is a FHIR API made up of two resources:
 * NHIPatient, derived from the HL7 FHIR Patient resource.
 * NHIAddress, derived from HL7 FHIR Address data type.
+
+</div>
+
+<div>
 
 #### NHI Number format
 
@@ -26,6 +36,10 @@ NHI numbers have one of 2 formats:
 *	AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025.
 
 For more information, [please go here:](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes/)
+
+</div>
+
+<div>
 
 #### Accessible Data
 
@@ -56,8 +70,10 @@ The Contact details that may be returned include:
 *	Home phone number
 *	Mobile phone number
 
+</div>
 
 <h3>Business functions & risk scores</h3>
+<div>
 <table>
 <style>
 table, th, td {
@@ -149,6 +165,10 @@ Validate parameters include NHI number, name, date of birth, gender, place of bi
 </tr>
 </table>
 
+</div>
+
+<div>
+
 ### Who can use this API
 
 Health providers listed in Schedule 2 of the Health Information Privacy Code may access the information in the NHI.
@@ -172,6 +192,9 @@ This includes:
 
 Te Whatu Ora — Health New Zealand assigns appropriate permissions and monitors and audits the actions of health provider use of the NHI.
 
+</div>
+
+<div>
 
 ### Use Cases
 
@@ -189,6 +212,9 @@ The below lists a few example outcomes that can be achieved when using the NHI A
   * Update gender and ethnicity details
   * Update address details
 
+</div>
+
+<div>
 
 ### Guidelines
 
@@ -204,17 +230,26 @@ Suggestions on how to implement the NHI FHIR API.
 Multi API use cases
 * National Health Index and Health Provider Index
   * Lookup the healthlink EDI for an enrolled patient’s General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)
- 
+
+</div>
+
+<div>
   
 ### API Type
 
 REST API <br />
 All REST API endpoints adhere to Fast Healthcare Interoperable Resources (FHIR) interoperability standards.
 
+</div>
+
+<div>
 
 ### Service Levels
 Target 99.99% service availability 24x7.
 
+</div>
+
+<div>
 
 ### Restrictions
 
@@ -225,6 +260,10 @@ GEO Restriction rules prevent access from clients with IPs located in countries 
 * Australia
 * Canada
 * Cook Islands
+
+</div>
+
+<div>
 
 #### API Keys and Usage Plans
 
@@ -263,13 +302,17 @@ table, th, td {
 <td> 500,000 requests per day </td></tr>
 </table>
 
+</div>
+
+<div>
+
 All test accounts will be assigned to the bronze usage plan. If a Vendor wishes to be assigned to a higher plan, they should contact the Integration team via the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) Please request a change to the usage plan and make sure you include the ClientID at minimum (AppId and Orgid also recommended).
 
 Production accounts will be assigned to the silver usage plan. If an Organisation wishes to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
 
-
+</div>
 
 
 
