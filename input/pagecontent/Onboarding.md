@@ -24,7 +24,7 @@ Please allow at least 5 working days for these applications to be processed and 
 
 ### Assistance
 
-Please fill in the [General Enquiry form] (https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if you:
+Please fill in the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if you:
 * have a general enquiry,
 * require help or have any questions regarding the onboarding process,
 * want to add new business functions to an existing application, or
