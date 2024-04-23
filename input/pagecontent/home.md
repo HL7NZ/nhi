@@ -1,12 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
 
-
-### Name
+<header>
+  <h3>Name</h3>
+</header>
 
 National Health Index FHIR API
 
 <div>
 
-### Brief Description
+<header>
+  <h3> Brief Description</h3>
+</header>
 
 The purpose of the National Health Index (NHI), including the National Health Index number (NHI number), is to help with the planning, coordination and provision of health and disability support services across New Zealand.
 The NHI number is the unique identifier for all patients who receive healthcare in NZ and is the cornerstone of clinical and administrative patient-related information. Very rarely do health providers rely on names alone for identifying patients. The NHI number identifies the patient for referrals, visits to the hospital, tests, medication prescriptions and patient-related correspondence. Correct identification of the patient is a critical aspect of clinical safety.
@@ -19,7 +25,9 @@ For more information, [please go here:](https://nhi-ig.hip.digital.health.nz/bus
 
 <div>
 
-### Overview
+<header>
+  <h3> Overview</h3>
+</header>
 
 This is a FHIR API made up of two resources:
 <ul>
@@ -31,7 +39,9 @@ This is a FHIR API made up of two resources:
 
 <div>
 
-#### NHI Number format
+<header>
+  <h4> NHI Number format</h4>
+</header>
 
 NHI numbers have one of 2 formats:
 <ul>
@@ -45,9 +55,12 @@ For more information, [please go here:](https://www.tewhatuora.govt.nz/our-healt
 
 <div>
 
-#### Accessible Data
+<header>
+  <h4> Accessible Data</h4>
+</header>
 
 The NHI holds the following information:
+
 <ul>
   <li>name (including alternative names such as maiden names)</li>
   <li>NHI number</li>
@@ -179,7 +192,9 @@ Validate parameters include NHI number, name, date of birth, gender, place of bi
 
 <div>
 
-### Who can use this API
+<header>
+  <h3>Who can use this API</h3>
+</header>
 
 Health providers listed in Schedule 2 of the Health Information Privacy Code may access the information in the NHI.
 
@@ -208,7 +223,9 @@ Te Whatu Ora — Health New Zealand assigns appropriate permissions and monitors
 
 <div>
 
-### Use Cases
+<header>
+  <h3>Use Cases</h3>
+</header>
 
 The below lists a few example outcomes that can be achieved when using the NHI API.
 
@@ -234,7 +251,9 @@ The below lists a few example outcomes that can be achieved when using the NHI A
 
 <div>
 
-### Guidelines
+<header>
+  <h3>Guidelines</h3>
+</header>
 
 Suggestions on how to implement the NHI FHIR API.
 <ul>
@@ -259,7 +278,9 @@ Multi API use cases
 
 <div>
   
-### API Type
+<header>
+  <h3>API Type</h3>
+</header>
 
 REST API <br />
 All REST API endpoints adhere to Fast Healthcare Interoperable Resources (FHIR) interoperability standards.
@@ -268,16 +289,23 @@ All REST API endpoints adhere to Fast Healthcare Interoperable Resources (FHIR) 
 
 <div>
 
-### Service Levels
+<header>
+  <h3>Service Levels</h3>
+</header>
+
 Target 99.99% service availability 24x7.
 
 </div>
 
 <div>
 
-### Restrictions
+<header>
+  <h3>Restrictions</h3>
+</header>
 
-#### GEO Restriction
+<header>
+  <h4>GEO Restriction</h4>
+</header>
 
 GEO Restriction rules prevent access from clients with IPs located in countries other than those listed below:
 
@@ -292,7 +320,9 @@ GEO Restriction rules prevent access from clients with IPs located in countries 
 
 <div>
 
-#### API Keys and Usage Plans
+<header>
+  <h4>API Keys and Usage Plans</h4>
+</header>
 
 API key's should be treated as confidential information and not shared with other parties
 
@@ -341,5 +371,5 @@ If an application reaches its usage plan limit an HTTP 429 error will be returne
 
 </div>
 
-
-
+</body>
+</html>
