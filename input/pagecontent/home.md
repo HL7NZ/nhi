@@ -22,8 +22,10 @@ For more information, [please go here:](https://nhi-ig.hip.digital.health.nz/bus
 ### Overview
 
 This is a FHIR API made up of two resources:
-* NHIPatient, derived from the HL7 FHIR Patient resource.
-* NHIAddress, derived from HL7 FHIR Address data type.
+<ul>
+  <li> NHIPatient, derived from the HL7 FHIR Patient resource.</li>
+  <li> NHIAddress, derived from HL7 FHIR Address data type.</li>
+</ul>.
 
 </div>
 
@@ -32,8 +34,10 @@ This is a FHIR API made up of two resources:
 #### NHI Number format
 
 NHI numbers have one of 2 formats:
-*	AAANNNC (3 alpha, 3 numeric and one numeric check digit) – in current circulation
-*	AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025.
+<ul>
+  <li>AAANNNC (3 alpha, 3 numeric and one numeric check digit) – in current circulation</li>
+  <li>AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025.</li>
+</ul>.
 
 For more information, [please go here:](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes/)
 
@@ -44,31 +48,37 @@ For more information, [please go here:](https://www.tewhatuora.govt.nz/our-healt
 #### Accessible Data
 
 The NHI holds the following information:
-*	name (including alternative names such as maiden names)
-*	NHI number
-*	address
-*	date of birth
-*	gender
-*	New Zealand citizenship status
-*	place of birth
-*	ethnicity
-*	date of death
+<ul>
+  <li>name (including alternative names such as maiden names)</li>
+  <li>NHI number</li>
+  <li>address</li>
+  <li>date of birth</li>
+  <li>gender</li>
+  <li>New Zealand citizenship status</li>
+  <li>place of birth</li>
+  <li>ethnicity</li>
+  <li>date of death</li>
+</ul>
 
 
 The patient’s general practice and their phone and email contact details are not held in the NHI but are retrieved from the National Enrolment Service 
 and NES Patient Preferences Service respectively, and returned along with the NHI details if the user has the correct permissions.
 
 The Enrolled General Practitioner details may include:
-* Enrolment id
-* Period of enrolment
-* HPI Practitioner
-* HPI Organisation
-* HPI Facility
+<ul>
+  <li>Enrolment id</li>
+  <li>Period of enrolment</li>
+  <li>HPI Practitioner</li>
+  <li>HPI Organisation</li>
+  <li>HPI Facility</li>
+</ul>
 
 The Contact details that may be returned include:
-*	Email address
-*	Home phone number
-*	Mobile phone number
+<ul>
+  <li>Email address</li>
+  <li>Home phone number</li>
+  <li>Mobile phone number</li>
+</ul>
 
 </div>
 
@@ -174,21 +184,23 @@ Validate parameters include NHI number, name, date of birth, gender, place of bi
 Health providers listed in Schedule 2 of the Health Information Privacy Code may access the information in the NHI.
 
 This includes: 
-* Accident Compensation Corporation (ACC)
-* Department of Corrections Health Services
-* Te Whatu Ora — Health New Zealand
-* Health Practitioners
-* Hospitals 
-* Independent Practitioner Associations  
-* MedicAlert Foundation — New Zealand Incorporated  
-* Manatū Hauora — Ministry of Health   
-* New Zealand Blood and Organ Service  
-* New Zealand Defense Force Health Services
-* Pharmaceutical Management Agency of New Zealand 
-* Primary Health Organisations (PHOs)
-* Maori Health Authority
-* Ministry for Disabled People 
-* Any health agency that has a contract or is funded by the above list to provide health or disability services.
+<ul>
+  <li>Accident Compensation Corporation (ACC)</li>
+  <li> Department of Corrections Health Services</li>
+  <li>Te Whatu Ora — Health New Zealand</li>
+  <li>Health Practitioners</li>
+  <li>Hospitals</li>
+  <li>Independent Practitioner Associations</li>
+  <li>MedicAlert Foundation — New Zealand Incorporated</li>
+  <li>Manatū Hauora — Ministry of Health</li>
+  <li>New Zealand Blood and Organ Service</li>
+  <li>New Zealand Defense Force Health Services</li>
+  <li>Pharmaceutical Management Agency of New Zealand</li>
+  <li>Primary Health Organisations (PHOs)</li>
+  <li>Maori Health Authority</li>
+  <li>Ministry for Disabled People</li>
+  <li>Any health agency that has a contract or is funded by the above list to provide health or disability services.</li>
+</ul>
 
 Te Whatu Ora — Health New Zealand assigns appropriate permissions and monitors and audits the actions of health provider use of the NHI.
 
@@ -200,17 +212,23 @@ Te Whatu Ora — Health New Zealand assigns appropriate permissions and monitors
 
 The below lists a few example outcomes that can be achieved when using the NHI API.
 
-* System to System
-  * Check that you’re referring to the right person when communicating with another healthcare provider.
-  * Search the NHI using known patient demographics to find the correct NHI number for a person.
-  * Lookup the NHI record for a patient using their NHI number.
-  * Update a person’s details so the NHI mains it’s value as the source of truth.
-  * Create a new NHI number for a person if they don’t have one (this is their first interaction with ta New Zealand health service).
-* Patient (Consumer Facing Application Authentication)
-  * View their NHI details.
-  * Update their preferred name
-  * Update gender and ethnicity details
-  * Update address details
+<ul>
+  <li>System to System</li>
+    <ul>
+      <li>Check that you’re referring to the right person when communicating with another healthcare provider.</li>
+      <li>Search the NHI using known patient demographics to find the correct NHI number for a person.</li>
+      <li>Lookup the NHI record for a patient using their NHI number.</li>
+      <li>Update a person’s details so the NHI mains it’s value as the source of truth.</li>
+      <li>Create a new NHI number for a person if they don’t have one (this is their first interaction with ta New Zealand health service).</li>
+    </ul>
+  <li>Patient (Consumer Facing Application Authentication)</li>
+    <ul>
+      <li>View their NHI details.</li>
+      <li>Update their preferred name.</li>
+      <li>Update gender and ethnicity details.</li>
+      <li>Update address details</li>
+    </ul>
+</ul>
 
 </div>
 
@@ -219,17 +237,23 @@ The below lists a few example outcomes that can be achieved when using the NHI A
 ### Guidelines
 
 Suggestions on how to implement the NHI FHIR API.
-* [A new patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-new-patient-presents-for-healthcare)
-* [A returning patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-returning-patient-presents-for-healthcare)
-* [A notification is received that patient details have changed](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-notification-is-received-that-patient-details-have-changed)
-* [A provider notices a discrepancy between local and NHI record, but does not have update access](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-provider-notices-a-discrepancy-between-local-and-nhi-record-but-does-not-have-update-access)
-* [A user needs to validate an NHI number](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-user-needs-to-validate-an-nhi-number)
-* [Look up the patient’s enrolled General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-the-patients-enrolled-general-practice-gp)
-* [Look up patient’s contact details](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-patients-contact-details)
+<ul>
+  <li>[A new patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-new-patient-presents-for-healthcare)</li>
+  <li>[A returning patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-returning-patient-presents-for-healthcare)</li>
+  <li>[A notification is received that patient details have changed](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-notification-is-received-that-patient-details-have-changed)</li>
+  <li>[A provider notices a discrepancy between local and NHI record, but does not have update access](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-provider-notices-a-discrepancy-between-local-and-nhi-record-but-does-not-have-update-access)</li>
+  <li>[A user needs to validate an NHI number](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-user-needs-to-validate-an-nhi-number)</li>
+  <li>[Look up the patient’s enrolled General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-the-patients-enrolled-general-practice-gp)</li>
+  <li>[Look up patient’s contact details](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-patients-contact-details)</li>
+</ul>
 
 Multi API use cases
-* National Health Index and Health Provider Index
-  * Lookup the healthlink EDI for an enrolled patient’s General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)
+<ul>
+  <li>National Health Index and Health Provider Index</li>
+    <ul>
+      <li>Lookup the healthlink EDI for an enrolled patient’s General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)</li>
+    </ul>
+</ul>
 
 </div>
 
@@ -256,10 +280,13 @@ Target 99.99% service availability 24x7.
 #### GEO Restriction
 
 GEO Restriction rules prevent access from clients with IPs located in countries other than those listed below:
-* New Zealand
-* Australia
-* Canada
-* Cook Islands
+
+<ul>
+  <li>New Zealand</li>
+  <li>Australia</li>
+  <li>Canada</li>
+  <li>Cook Islands</li>
+</ul>
 
 </div>
 
