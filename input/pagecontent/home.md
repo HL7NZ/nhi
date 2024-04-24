@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <body>
 
@@ -19,7 +18,7 @@ The NHI number is the unique identifier for all patients who receive healthcare 
 The NHI number ties together all patient information and patient systems. The NHI number is on patient labels, which are used on most items of patient documentation, from pharmaceutical labels to discharge summaries.
 Where regional services exist, such as centralised diagnostic services, health providers may receive the diagnostic results electronically from an external source.
 The NHI number is used to ensure that the results are associated with the correct patient.
-For more information, [please go here:](https://nhi-ig.hip.digital.health.nz/businessView.html).
+For more information, <a href="https://nhi-ig.hip.digital.health.nz/businessView.html" target="_blank">please go here:</a>
 
 </div>
 
@@ -49,7 +48,7 @@ NHI numbers have one of 2 formats:
   <li>AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025.</li>
 </ul>.
 
-For more information, [please go here:](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes/)
+For more information, <a href="https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes/" target="_blank">please go here:</a>
 
 </div>
 
@@ -257,20 +256,21 @@ The below lists a few example outcomes that can be achieved when using the NHI A
 
 Suggestions on how to implement the NHI FHIR API.
 <ul>
-  <li>[A new patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-new-patient-presents-for-healthcare)</li>
-  <li>[A returning patient presents for healthcare](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-returning-patient-presents-for-healthcare)</li>
-  <li>[A notification is received that patient details have changed](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-notification-is-received-that-patient-details-have-changed)</li>
-  <li>[A provider notices a discrepancy between local and NHI record, but does not have update access](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-provider-notices-a-discrepancy-between-local-and-nhi-record-but-does-not-have-update-access)</li>
-  <li>[A user needs to validate an NHI number](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-user-needs-to-validate-an-nhi-number)</li>
-  <li>[Look up the patient’s enrolled General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-the-patients-enrolled-general-practice-gp)</li>
-  <li>[Look up patient’s contact details](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-patients-contact-details)</li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-new-patient-presents-for-healthcare" target="_blank">A new patient presents for healthcare</a></li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-returning-patient-presents-for-healthcare" target="_blank">A returning patient presents for healthcare</a></li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-notification-is-received-that-patient-details-have-changed" target="_blank">A notification is received that patient details have changed</a></li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-provider-notices-a-discrepancy-between-local-and-nhi-record-but-does-not-have-update-access" target="_blank">A provider notices a discrepancy between local and NHI record, but does not have update access</a></li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#a-user-needs-to-validate-an-nhi-number" target="_blank">A user needs to validate an NHI number</a></li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-the-patients-enrolled-general-practice-gp" target="_blank">Look up the patient’s enrolled General Practice</a> </li>
+  <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#look-up-patients-contact-details" target="_blank">Look up patient’s contact details</a></li>
 </ul>
+
 
 Multi API use cases
 <ul>
   <li>National Health Index and Health Provider Index</li>
     <ul>
-      <li>Lookup the healthlink EDI for an enrolled patient’s General Practice](https://nhi-ig.hip-uat.digital.health.nz/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice)</li>
+      <li><a href="https://nhi-ig.hip-uat.digital.health.nz/guidance.html#lookup-edi-for-an-enrolled-patients-general-practice" target="_blank">Lookup the healthlink EDI for an enrolled patient’s General Practice</a></li>
     </ul>
 </ul>
 
@@ -363,9 +363,10 @@ table, th, td {
 
 <div>
 
-All test accounts will be assigned to the bronze usage plan. If a Vendor wishes to be assigned to a higher plan, they should contact the Integration team via the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) Please request a change to the usage plan and make sure you include the ClientID at minimum (AppId and Orgid also recommended).
+All test accounts will be assigned to the bronze usage plan. If a Vendor wishes to be assigned to a higher plan, they should contact the Integration team via the <a href="https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36" target="_blank">General Enquiry form</a>. Please request a change to the usage plan and make sure you include the ClientID at minimum (AppId and Orgid also recommended).
 
-Production accounts will be assigned to the silver usage plan. If an Organisation wishes to be assigned to the gold usage plan, they should contact the Te Whatu Ora [NHI access team](mailto:NHI_Access@health.govt.nz)
+Production accounts will be assigned to the silver usage plan. If an Organisation wishes to be assigned to the gold usage plan, they should contact the Te Whatu Ora
+<a href="mailto:NHI_Access@health.govt.nz"_blank">NHI access team</a>
 
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
 
