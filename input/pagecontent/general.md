@@ -249,6 +249,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption><b>Note:Headers are case sensitive</b></caption>
 <tr><th> HTTP Header (Key) </th>
 <th> HTTP Header (Value) </th>
 <th> Description </th>
@@ -267,7 +268,7 @@ Preferably the hpi-person-id of the user would be provided if known, otherwise a
 <td>Mandatory</td></tr>
 
 <tr><td> Content-Type </td>
-<td> Application/json </td>
+<td> application/json </td>
 <td> Supported content type </td>
 <td> Mandatory </td></tr>
 
