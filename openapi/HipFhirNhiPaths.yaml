@@ -253,8 +253,7 @@
       - hip-fhir-cog:       
         - "https://api.hip.digital.health.nz/fhir/system/Patient.r"
         - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.a"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"      
         - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
       - api_key: []
       
@@ -464,8 +463,7 @@
                 type: "string"
           content: {}
       security:
-      - hip-fhir-cog:       
-        - "patient:Patient.u"
+      - hip-fhir-cog:              
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
