@@ -2,6 +2,21 @@
 set -x #echo on
 # this script is intended to be run from code build, it should build the IG using the Hl7 IG Publisher
 
+getPomProperty() {
+ 
+ #echo "getting value of $1 from pom"
+ line=$(grep $1.*$1 pom.xml  | grep -v '!' | tr -d '\t ')
+
+ plength=${#1}
+ offset=2
+ plength=$(($plength+$offset))
+ sline=${line:plength:200}
+ #trim trailing chars
+ property=${sline%%</$1>}
+ #echo "property $1 = $property"
+ echo $property
+ }
+
 addPackage() {
 echo " adding package named $1 version $2 from source $3 using url $4"
 ls  $3
@@ -38,12 +53,14 @@ sudo mkdir -p ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 unzip  ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/ >/dev/null 2>&1
 
 echo getting common dependencies...
+pwd
+ls -l ./fhir_packages/
 
 common_name="hl7.org.nz.fhir.ig.hip-core"
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
-#comdir=$(ls -d ./fhir_packages/hip-fhir-common*)
-common_source="./fhir_packages/hip-fhir-common-$common_version/package/package.tgz"
+comdir=$(getPomProperty "fhir-common.version")
+common_source="./fhir_packages/hip-fhir-common-$comdir/package/package.tgz"
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 addPackage "$common_name" "$common_version" "$common_source" "$common_url" 
 
