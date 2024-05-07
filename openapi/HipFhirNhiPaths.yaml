@@ -89,7 +89,8 @@
                 type: "string"
           content: {}
       security:
-      - LambdaAuthorizer: []
+      - hip-fhir-cog:  
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
       x-amazon-apigateway-request-validator: params-and-body
@@ -673,7 +674,8 @@
                 type: "string"
           content: {}
       security:
-      - hip-fhir-cog:              
+      - hip-fhir-cog:           
+        - "patient:Patient.u"   
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
       
