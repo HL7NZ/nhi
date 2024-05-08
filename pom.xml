@@ -68,7 +68,7 @@
 						</configuration>
 					</execution>
 					
-					<execution>
+						<execution>
 						<id>unpack-hpicm</id>
 						<phase>
 							validate
@@ -77,13 +77,13 @@
 							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
-							<includeGroupIds>health.identity.fhir</includeGroupIds>
-							<includeArtifactIds>hip-fhir-common</includeArtifactIds>
+							<includeGroupIds>nz.health.digital.hpi.fhir</includeGroupIds>
+							<includeArtifactIds>hip-hpi-conformance-module</includeArtifactIds>
+
 							<outputDirectory>
 								${project.basedir}/fhir_packages
 							</outputDirectory>
 							<includes>**/package/package.tgz,**/openapi/*</includes>
-
 						</configuration>
 					</execution>
 					
