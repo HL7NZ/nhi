@@ -50,6 +50,24 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
+				    <execution>
+						<id>unpack-hfc</id>
+						<phase>
+							validate
+						</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>health.identity.fhir</includeGroupIds>
+							<includeArtifactIds>hip-fhir-common</includeArtifactIds>
+							<outputDirectory>
+								${project.basedir}/fhir_packages
+							</outputDirectory>
+							<includes>**/package/package.tgz,**/openapi/*</includes>
+						</configuration>
+					</execution>
+					
 					<execution>
 						<id>unpack-hpicm</id>
 						<phase>
