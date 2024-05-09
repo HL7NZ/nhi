@@ -31,7 +31,7 @@ Usage: #definition
 * rest.resource.operation.name = "match"
 * rest.resource.operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-match"
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc, scope>
-* rest.resource.operation.documentation = "POST, [base]/Patient/$match,<b>Match</b>: with In parameter <code>onlyCertainMatches=0</code> (False), the operation will search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  <br/><b>Validate:</b> with In parameter <code>onlyCertainMatches=1</code> (True) the operation will validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.,  system/Patient.u system/Patient.v"
+* rest.resource.operation.documentation = "POST, [base]/Patient/$match, <b>Match</b>: with In parameter <code>onlyCertainMatches=0</code> (False), the operation will search the NHI by demographics using fuzzy logic. Returns a bundle of results with match scores.  <br/><b>Validate:</b> with In parameter <code>onlyCertainMatches=1</code> (True) the operation will validate known patient demographic details against an NHI number. Returns a bundle of results with one patient resource that only includes the live nhi-id.,  system/Patient.u system/Patient.v"
 
 * rest.resource.operation[1].name = "set-preferred-name"
 * rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
