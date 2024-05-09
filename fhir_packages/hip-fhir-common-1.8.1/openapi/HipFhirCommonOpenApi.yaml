@@ -8,7 +8,51 @@ servers:
   variables:
     basePath:
       default: "dev"
+paths:
+
 components:
+
+  parameters:
+
+          nhiId:
+            name: nhiId
+            in: path
+            description: id identifies the kind of post operation
+            required: true
+            allowEmptyValue: false
+            style: simple
+            schema:
+              $ref: '#/components/schemas/NhiNumber'
+              
+          X-correlation-ID:
+            name: "X-correlation-ID"
+            in: "header"
+            required: false
+            schema:
+              type: "string"
+              
+          X-Request-Id:
+              name: "X-Request-Id"
+              in: "header"
+              required: false
+              schema:
+                type: "string"
+                  
+          x-api-key:  
+              name: "x-api-key"
+              in: "header"
+              required: true
+              schema:
+                type: "string" 
+           
+          userid:    
+              name: "userid"
+              in: "header"
+              required: true
+              schema:
+                type: "string"
+               
+
   schemas:
     positiveInt:
       pattern: "^[1-9][0-9]*$"
@@ -295,73 +339,83 @@ components:
           type: "array"
           items:
             anyOf:
-            - required:
-              - "url"
-              type: "object"
-              properties:
-                valueDate:
-                  $ref: "#/components/schemas/date"
-                url:
-                  type: "object"
-              additionalProperties: false
-            - required:
-              - "url"
-              type: "object"
-              properties:
-                valueDate:
-                  $ref: "#/components/schemas/date"
-                url:
-                  type: "object"
-              additionalProperties: false
-            - required:
-              - "url"
-              type: "object"
-              properties:
-                valueReference:
-                  $ref: "#/components/schemas/Reference"
-                url:
-                  type: "object"
-              additionalProperties: false
-            - required:
-              - "url"
-              type: "object"
-              properties:
-                valueCodeableConcept:
-                  type: "object"
-                  properties:
-                    coding:
-                      type: "array"
-                      items:
-                        required:
-                        - "system"
-                        type: "object"
-                        properties:
-                          system:
-                            type: "string"
-                            enum:
-                            - "https://standards.digital.health.nz/nes-enrolment-termination-reason"
-                          code:
-                            $ref: "#/components/schemas/code"
-                          display:
-                            $ref: "#/components/schemas/string"
-                          version:
-                            $ref: "#/components/schemas/string"
-                        additionalProperties: false
-                    text:
-                      $ref: "#/components/schemas/string"
-                  additionalProperties: false
-                url:
-                  type: "object"
-              additionalProperties: false
-            - required:
-              - "url"
-              type: "object"
-              properties:
-                valueReference:
-                  $ref: "#/components/schemas/Reference"
-                url:
-                  type: "object"
-              additionalProperties: false
+              - required:
+                  - "url"
+                type: "object"
+                properties:
+                  valueDate:
+                    $ref: "#/components/schemas/date"
+                  url:
+                    type: "string"
+                    enum:
+                      - "http://hl7.org.nz/fhir/StructureDefinition/enrolment-expiry-date"
+                additionalProperties: false
+              - required:
+                  - "url"
+                type: "object"
+                properties:
+                  valueDate:
+                    $ref: "#/components/schemas/date"
+                  url:
+                    type: "string"
+                    enum:
+                      - "http://hl7.org.nz/fhir/StructureDefinition/reenrolment-date"
+                additionalProperties: false
+              - required:
+                  - "url"
+                type: "object"
+                properties:
+                  valueReference:
+                    $ref: "#/components/schemas/Reference"
+                  url:
+                      type: "string"
+                      enum:
+                       - "http://hl7.org.nz/fhir/StructureDefinition/enrolment-owner-org"
+                additionalProperties: false
+              - required:
+                  - "url"
+                type: "object"
+                properties:
+                  valueCodeableConcept:
+                    type: "object"
+                    properties:
+                      coding:
+                        type: "array"
+                        items:
+                          required:
+                            - "system"
+                          type: "object"
+                          properties:
+                            system:
+                              type: "string"
+                              enum:
+                                - "https://standards.digital.health.nz/nes-enrolment-termination-reason"
+                            code:
+                              $ref: "#/components/schemas/code"
+                            display:
+                              $ref: "#/components/schemas/string"
+                            version:
+                              $ref: "#/components/schemas/string"
+                          additionalProperties: false
+                      text:
+                        $ref: "#/components/schemas/string"
+                    additionalProperties: false
+                  url:
+                      type: "string"
+                      enum:
+                       - "http://hl7.org.nz/fhir/StructureDefinition/nes-enrolment-termination-reason"
+                additionalProperties: false
+              - required:
+                  - "url"
+                type: "object"
+                properties:
+                  valueReference:
+                    $ref: "#/components/schemas/Reference"
+                  url:
+                      type: "string"
+                      enum:
+                       - "http://hl7.org.nz/fhir/StructureDefinition/enrolment-encounter"
+                additionalProperties: false
         period:
           $ref: "#/components/schemas/Period"
         careManager:
@@ -369,14 +423,37 @@ components:
         type:
           type: "array"
           items:
-            $ref: "#/components/schemas/Coding"
+              type: "object"
+              properties:
+                    
+                      coding:
+                        type: "array"
+                        items:
+                          required:
+                            - "system"
+                          type: "object"
+                          properties:
+                            system:
+                              type: "string"
+                              enum:
+                                - "https://standards.digital.health.nz/nes-enrolment-type"
+                            code:
+                              $ref: "#/components/schemas/code"
+                            display:
+                              $ref: "#/components/schemas/string"
+                            version:
+                              $ref: "#/components/schemas/string"
+                          additionalProperties: false
+                   
+                    
+          
         contained:
           type: "array"
           items:
             anyOf:
-            - $ref: "#/components/schemas/NesEncounter"
-            - $ref: "#/components/schemas/NesPractitionerRole"
-            - $ref: "#/components/schemas/Patient"
+              - $ref: "#/components/schemas/NesEncounter"
+              - $ref: "#/components/schemas/NesPractitionerRole"
+              - $ref: "#/components/schemas/Patient"
         managingOrganization:
           $ref: "#/components/schemas/Reference"
         meta:
@@ -391,14 +468,14 @@ components:
           type: "string"
           description: "This is an Coverage resource"
           enum:
-          - "EpisodeOfCare"
+            - "EpisodeOfCare"
         status:
           type: "string"
           enum:
-          - "planned"
-          - "waitlist"
-          - "active"
-          - "finished"
+            - "planned"
+            - "waitlist"
+            - "active"
+            - "finished"
       description: "The Entitlement resource exposed by NESEntitlement service."
     Coding:
       type: "object"
@@ -1255,6 +1332,9 @@ components:
           enum:
           - "Parameters"
       additionalProperties: false
+      
+   
+          
     Reference:
       type: "object"
       properties:
@@ -1262,12 +1342,34 @@ components:
           $ref: "#/components/schemas/string"
         display:
           $ref: "#/components/schemas/string"
-        id:
-          $ref: "#/components/schemas/string"
-        type:
-          $ref: "#/components/schemas/uri"
+        identifier:
+          type: "object"
+          properties:
+              period:
+                $ref: "#/components/schemas/Period"
+              system:
+                $ref: "#/components/schemas/uri"             
+              value:
+                $ref: "#/components/schemas/string"
+              use:
+                type: "string"
+                description: "The purpose of this identifier."
+                enum:
+                - "usual"
+                - "official"
+                - "temp"
+                - "nickname"
+                - "anonymous"
+                - "old"
+                - "maiden"              
+              id:
+                  $ref: "#/components/schemas/string"
+              type:
+                  $ref: "#/components/schemas/CodeableConcept"
+             
       additionalProperties: false
       description: "A reference from one resource to another."
+      
     ParameterMatchResource:
       required:
       - "name"
@@ -1504,10 +1606,12 @@ components:
           enum:
           - "Coverage"
         status:
-          type: "string"
-          enum:
-          - "active"
-          - "cancelled"
+          $ref: "#/components/schemas/RestrictedString"
+        contained:
+          type: "array"
+          items:
+            anyOf:
+            - $ref: "#/components/schemas/Patient"
       additionalProperties: false
       description: "The Entitlement resource exposed by NESEntitlement service."
     PatientMatchRequest:
@@ -1554,7 +1658,12 @@ components:
       type: "string"
       description: "String of characters used to identify a name or a resource"
     RestrictedString:
+      description: "restricted character string" 
       pattern: "^([a-zA-Z0-9'\\s\\.\\-\\/,])+$"
+      type: "string"
+    RestrictedString2:
+      description: "restricted character string allows macrons" 
+      pattern: "^([a-zA-Z0-9'\\s\\.\\-\\/,\u0101\u0113\u012b\u014d\u016b\u0100\u0112\u012a\u014c\u016a])+$"
       type: "string"
     SetAddressRequest:
       required:
@@ -1695,6 +1804,190 @@ components:
           $ref: "#/components/schemas/code"
       additionalProperties: false
       description: "Adds additional, NHI specific extensions"
+      
+   
+    MwsAllergyIntolerance:
+        description: Risk of harmful or undesirable, physiological response which is unique
+          to an individual and associated with exposure to a substance.
+        properties:
+          resourceType:
+            type: "string"
+            enum:
+              - "AllergyIntolerance"
+            description: This is a AllergyIntolerance resource
+           
+          id:
+            description: The logical id of the resource, as used in the URL for the resource.
+              Once assigned, this value never changes.
+            $ref: "#/components/schemas/id"
+          meta:
+            description: The metadata about the resource. This is content that is maintained
+              by the infrastructure. Changes to the content might not always be associated
+              with version changes to the resource.
+            $ref: "#/components/schemas/Meta"
+         
+        
+          text:
+            description: A human-readable narrative that contains a summary of the resource
+              and can be used to represent the content of the resource to a human. The narrative
+              need not encode all the structured data, but is required to contain sufficient
+              detail to make it "clinically safe" for a human to just read the narrative.
+              Resource definitions may define what content should be represented in the
+              narrative to ensure clinical safety.
+            $ref: "#/components/schemas/string"
+         
+          contained:
+            type: "array"
+            items:
+              anyOf:
+                - $ref: "#/components/schemas/Reference"
+                - $ref: "#/components/schemas/NesPractitionerRole"
+                - $ref: "#/components/schemas/Patient"
+                
+          extension:
+            type: array
+            items:
+               anyOf:
+                  - required:
+                      - "url"
+                    type: "object"
+                    properties:
+                      valueReference:
+                         $ref: "#/components/schemas/Reference"
+                      url:
+                        type: "string"
+                        enum:
+                          - "http://hl7.org.nz/fhir/StructureDefinition/mws-attester"
+                    additionalProperties: false
+                  - required:
+                        - "url"
+                    type: "object"
+                    properties:
+                      valueDate:
+                        $ref: "#/components/schemas/date"
+                      url:
+                        type: "string"
+                        enum:
+                          - "http://hl7.org.nz/fhir/StructureDefinition/mws-attested-date"
+                    additionalProperties: false
+        
+        
+          identifier:
+            description: Business identifiers assigned to this AllergyIntolerance by the
+              performer or other systems which remain constant as the resource is updated
+              and propagates from server to server.
+            items:
+              $ref: "#/components/schemas/Identifier"
+            type: array
+          clinicalStatus:
+            description: The clinical status of the allergy or intolerance.
+            $ref: "#/components/schemas/CodeableConcept"
+          verificationStatus:
+            description: Assertion about certainty associated with the propensity, or potential
+              risk, of a reaction to the identified substance (including pharmaceutical
+              product).
+            "$ref": "#/components/schemas/CodeableConcept"
+         
+          category:
+            description: Category of the identified substance.
+            items:
+              enum:
+              - food
+              - medication
+              - environment
+              - biologic
+            type: array
+         
+          criticality:
+            description: Estimate of the potential clinical harm, or seriousness, of the
+              reaction to the identified substance.
+            enum:
+            - low
+            - high
+            - unable-to-assess
+       
+          code:
+            description: 'Code for an allergy or intolerance statement (either a positive
+              or a negated/excluded statement).  This may be a code for a substance or pharmaceutical
+              product that is considered to be responsible for the adverse reaction risk
+              (e.g., "Latex"), an allergy or intolerance condition (e.g., "Latex allergy"),
+              or a negated/excluded code for a specific substance or class (e.g., "No latex
+              allergy") or a general or categorical negated statement (e.g.,  "No known
+              allergy", "No known drug allergies").  Note: the substance for a specific
+              reaction may be different from the substance identified as the cause of the
+              risk, but it must be consistent with it. For instance, it may be a more specific
+              substance (e.g. a brand medication) or a composite product that includes the
+              identified substance. It must be clinically safe to only process the ''code''
+              and ignore the ''reaction.substance''.  If a receiving system is unable to
+              confirm that AllergyIntolerance.reaction.substance falls within the semantic
+              scope of AllergyIntolerance.code, then the receiving system should ignore
+              AllergyIntolerance.reaction.substance.'
+            $ref: "#/components/schemas/CodeableConcept"
+          patient:
+            description: The patient who has the allergy or intolerance.
+            $ref: "#/components/schemas/Reference"
+         
+          onsetDateTime:
+            description: Estimated or actual date,  date-time, or age when allergy or intolerance
+              was identified.
+            pattern: "^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$"
+            type: string
+        
+          recordedDate:
+            description: The recordedDate represents when this particular AllergyIntolerance
+              record was created in the system, which is often a system-generated date.
+            $ref: "#/components/schemas/dateTime"
+        
+          recorder:
+            description: Individual who recorded the record and takes responsibility for
+              its content.
+            "$ref": "#/components/schemas/Reference"
+          asserter:
+            description: The source of the information about the allergy that is recorded.
+            $ref: "#/components/schemas/Reference"
+         
+          note:
+            type: array
+            description: Additional narrative about the propensity for the Adverse Reaction,
+              not captured in other fields.
+            items:
+              type: object
+              properties:
+                text:
+                  $ref: "#/components/schemas/RestrictedString2"
+            
+          reaction:
+            description: Details about each adverse reaction event linked to exposure to
+              the identified substance.
+            items:
+              $ref: "#/components/schemas/AllergyIntoleranceReaction"
+            type: array
+        additionalProperties: false
+        required:
+        - patient
+        - resourceType
+    AllergyIntoleranceReaction:
+        description: Risk of harmful or undesirable, physiological response which is unique
+          to an individual and associated with exposure to a substance.
+        properties:
+          id:
+            description: Unique id for the element within a resource (for internal references).
+              This may be any string value that does not contain spaces.
+            $ref: "#/components/schemas/string"
+         
+          manifestation:
+            description: Clinical symptoms and/or signs that are observed or associated
+              with the adverse reaction event.
+            items:
+              $ref: "#/components/schemas/CodeableConcept"
+            type: array
+          
+      
+        additionalProperties: false
+        required:
+        - manifestation
+          
+    
   securitySchemes:
     LambdaAuthorizer:
       type: "apiKey"
