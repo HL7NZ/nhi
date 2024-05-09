@@ -100,6 +100,12 @@ sudo chmod +x ./openapi/makeoas.sh
 echo "Making API summary"
 sudo chmod +x ./localscripts/makeCapabilityStatement.js
 ./localscripts/makeCapabilityStatement.js nhi
+
+echo "building openapi spec"
+sudo chmod +x ./openapi/makeoas.sh
+./openapi/makeoas.sh
+
+cp ./template/* $HOME/.fhir/packages/fhir.base.template#current/package/content
 pwd
 
 cp ./template/* $HOME/.fhir/packages/fhir.base.template#current/package/content
