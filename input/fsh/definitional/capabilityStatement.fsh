@@ -21,7 +21,7 @@ Usage: #definition
 * rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
-* rest.resource.interaction.documentation = "GET,[base]/Patient/[nhi-id], Retrieve a Patient resource by Id ,system/Patient.r"
+* rest.resource.interaction.documentation = "GET,[base]/Patient/[nhi-id], Retrieve a Patient resource by Id , patient:Patient.r system/Patient.r"
 // * rest.resource.interaction[1].code = #patch
 // * rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
 // * rest.resource.interaction[2].code = #create
