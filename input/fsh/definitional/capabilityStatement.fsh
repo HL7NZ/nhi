@@ -21,7 +21,7 @@ Usage: #definition
 * rest.resource.profile = "http://hl7.org.nz/fhir/StructureDefinition/NhiPatient"
 * rest.resource.interaction.code = #read
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
-* rest.resource.interaction.documentation = "GET,[base]/Patient/[nhi-id], Retrieve a Patient resource by Id ,system/Patient.r"
+* rest.resource.interaction.documentation = "GET,[base]/Patient/[nhi-id], Retrieve a Patient resource by Id , patient:Patient.r system/Patient.r"
 // * rest.resource.interaction[1].code = #patch
 // * rest.resource.interaction[1].documentation = "Not yet enabled. Security will be applied to patch updates"
 // * rest.resource.interaction[2].code = #create
@@ -35,7 +35,7 @@ Usage: #definition
 
 * rest.resource.operation[1].name = "set-preferred-name"
 * rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
-* rest.resource.operation[1].documentation = "POST, [base]/Patient/$set-preferred-name, Set the patient's preferred name, patient:Patient.u system/Patient.u"
+* rest.resource.operation[1].documentation = "POST, [base]/Patient/$set-preferred-name, Set the patient's preferred name,  patient:Patient.r patient:Patient.u system/Patient.u"
 
 * rest.resource.operation[2].name = "set-address"
 * rest.resource.operation[2].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
