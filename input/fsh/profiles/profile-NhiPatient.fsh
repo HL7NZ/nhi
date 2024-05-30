@@ -100,7 +100,7 @@ Description:    "The Patient resource exposed by the NHI."
     $information-source named information-source 0..1 
 * deceasedDateTime.extension[information-source].valueCodeableConcept from  https://nzhts.digital.health.nz/fhir/ValueSet/dod-information-source-code
 
-* extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code (required)
+* extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code|2.0 (required)
 
 
 // address is required and has a number of extensions. It uses NhiAddress which takes NzAddress and adds NHI specific extensions...
