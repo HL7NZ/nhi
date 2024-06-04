@@ -7,7 +7,7 @@
 
 	<properties>
 	
-		<fhir-common.version>1.8.1</fhir-common.version>
+		<fhir-common.version>1.8.5</fhir-common.version>
 
 	</properties>
 	<dependencies>
