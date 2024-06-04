@@ -55,6 +55,7 @@ Description:    "The Patient resource exposed by the NHI."
     $birthPlace named birthPlace 0..1 
     //and $nzResidency named nzResidency 0..1  
  
+* extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code|2.0 (required)
 
 * extension[nzCitizen] ^short = "This field indicates New Zealand citizenship status of the patient"
 * extension[nzCitizen] ^definition = "This field is used to indicate the New Zealand citizenship status of the patient"
