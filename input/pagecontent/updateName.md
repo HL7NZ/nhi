@@ -389,7 +389,7 @@ table, th, td {
 * The name replace-id is validated.
 * If all request parameters are valid the name in the request will replace the requested name in the NHI.
   * If the preferred boolean is set to TRUE in the request then the name is added as the preferred name.
-  * If the preferred boolean is set to FALSE in the request then the name is added as the preferred name.
+  * If the preferred boolean is set to FALSE in the request then the name is added as a _non-preferred name_.
 
 #### Replace-name - Example request
 
