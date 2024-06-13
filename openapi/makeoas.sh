@@ -20,15 +20,22 @@ set -x #echo off
 # constants
 IG_FILENAME=HipFhirNhiOpenApi
 PATHS_FILENAME=HipFhirNhiPaths.yaml
+MODEL_FILENAME=HipFhirNhiModel.yaml
 
 common_version=$(getPomProperty "fhir-common.version")
 ig_version=$(getPomProperty "revision")
 echo "ig_version = $ig_version"
+
+rm  openapi/$IG_FILENAME.yaml
  
 cp "./fhir_packages/hip-fhir-common-$common_version/openapi/HipFhirCommonOpenApi.yaml" ./openapi/$IG_FILENAME.yaml
 
 #add the NHI paths to the common openapi spec
 newpath=$(< ./openapi/$PATHS_FILENAME)  yq -i '.paths=env(newpath) ' openapi/$IG_FILENAME.yaml 
+
+#add the NHI model
+newmodel=$(< ./openapi/$MODEL_FILENAME)  yq -i '.components.schemas += env(newmodel) ' openapi/$IG_FILENAME.yaml
+
 newversion=$(yq '.version' ./sushi-config.yaml)   yq -i '.info.version=env(newversion) ' openapi/$IG_FILENAME.yaml
 
 yq -i 'del(.paths[][].x-amazon-apigateway-integration)' openapi/$IG_FILENAME.yaml
