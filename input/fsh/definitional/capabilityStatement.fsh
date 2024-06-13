@@ -35,7 +35,7 @@ Usage: #definition
 
 * rest.resource.operation[1].name = "set-preferred-name"
 * rest.resource.operation[1].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-preferred-name"
-* rest.resource.operation[1].documentation = "POST, [base]/Patient/$set-preferred-name, Set the patient's preferred name,  patient:Patient.r patient:Patient.u system/Patient.u"
+* rest.resource.operation[1].documentation = "POST, [base]/Patient/$set-preferred-name, Set the patient's preferred name,patient:Patient.u system/Patient.u"
 
 * rest.resource.operation[2].name = "set-address"
 * rest.resource.operation[2].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/set-address"
