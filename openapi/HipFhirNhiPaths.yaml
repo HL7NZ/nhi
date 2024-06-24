@@ -12,7 +12,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -29,8 +29,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -64,7 +64,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -81,8 +81,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -116,7 +116,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -168,7 +168,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -185,8 +185,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -221,7 +221,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -280,7 +280,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -331,7 +331,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -348,8 +348,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -385,7 +385,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -402,8 +402,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -438,7 +438,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -455,8 +455,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -490,7 +490,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -507,8 +507,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -542,7 +542,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -559,8 +559,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -595,7 +595,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -612,8 +612,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -647,7 +647,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -664,8 +664,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -700,7 +700,7 @@
           type: "string"
       - name: "x-api-key"
         in: "header"
-        required: true
+        required: false
         schema:
           type: "string"
       - name: "X-Request-Id"
@@ -717,8 +717,8 @@
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
