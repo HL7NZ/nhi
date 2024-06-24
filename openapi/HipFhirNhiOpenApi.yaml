@@ -2,7 +2,7 @@ openapi: "3.0.1"
 info:
   title: "HIP NHI FHIR"
   description: "Te Whatu Ora NHI FHIR services"
-  version: "1.5.2"
+  version: "1.5.4"
 servers:
   - url: "https://gb2r96qpik.execute-api.ap-southeast-2.amazonaws.com/{basePath}"
     variables:
@@ -23,7 +23,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -40,8 +40,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -66,7 +66,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -83,8 +83,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -108,7 +108,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -150,7 +150,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -167,8 +167,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -193,7 +193,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -242,7 +242,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -283,7 +283,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -300,8 +300,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -326,7 +326,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -343,8 +343,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -368,7 +368,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -385,8 +385,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -410,7 +410,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -427,8 +427,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -452,7 +452,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -469,8 +469,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -494,7 +494,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -511,8 +511,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -536,7 +536,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -553,8 +553,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -579,7 +579,7 @@ paths:
             type: "string"
         - name: "x-api-key"
           in: "header"
-          required: true
+          required: false
           schema:
             type: "string"
         - name: "X-Request-Id"
@@ -596,8 +596,8 @@ paths:
         "422":
           description: "422 response"
           content: {}
-        "204":
-          description: "204 response"
+        "200":
+          description: "200 response"
           headers:
             Content-Location:
               schema:
@@ -2339,7 +2339,7 @@ components:
           $ref: "#/components/schemas/Meta"
         text:
           description: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
-          $ref: "#/components/schemas/string"
+          type: "string"
         contained:
           type: "array"
           items:
