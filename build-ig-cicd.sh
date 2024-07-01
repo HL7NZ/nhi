@@ -49,10 +49,6 @@ mv temp2.json  ~/.fhir/packages/$1#$2/package/package.json
 
 }
 
-
-
-
-
 echo getting nzbase dependencies...
 nzbase_name="fhir.org.nz.ig.base"
 nzbase_url=$(yq '.dependencies."fhir.org.nz.ig.base".uri' ./sushi-config.yaml)
@@ -69,6 +65,21 @@ else
   aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.r4.core#4.0.1/package.zip ./hl7-package.zip
   sudo mkdir -p  ~/.fhir/packages/hl7.fhir.r4.core#4.0.1
 fi
+unzip -q -o ./hl7-package.zip -d ~/.fhir/packages/hl7.fhir.r4.core#4.0.1/
+
+
+#cp hl7-uv packages into user's .fhir cache 
+echo "islocal =$islocal"
+if [[ "$islocal" == "true" ]]; then
+  echo "copying using hip-profile - makse sure yoiu have updates ~/.aws/credentals"
+  aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.uv.tools#current/package.zip ./hl7-uv-package.zip  --profile hip-profile
+  mkdir -p ~/.fhir/packages/fhir/hl7.fhir.uv.tools#current
+else
+   aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/hl7.fhir.uv.tools#current/package.zip ./hl7-uv-package.zip
+   sudo mkdir -p ~/.fhir/packages/fhir/hl7.fhir.uv.tools#current
+fi
+ unzip -q -o ./hl7-uv-package.zip -d ~/.fhir/packages/fhir/hl7.fhir.uv.tools#current/ 
+
 echo getting common dependencies...
 pwd
 ls -l ./fhir_packages/
