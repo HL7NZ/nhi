@@ -15,7 +15,7 @@ getPomProperty() {
 
 
 #!/bin/bash
-set -x #echo off
+#set -x 
  
 # constants
 IG_FILENAME=HipFhirNhiOpenApi
