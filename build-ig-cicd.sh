@@ -1,5 +1,6 @@
 #!/bin/bash
-set -x -e #echo on, exit on error
+#set -x -e #echo on, exit on error
+set -x
 # this script is intended to be run from code build, it should build the IG using the Hl7 IG Publisher
 # to run locally, pass in the parameter true:
 ## ./build-ig-cicd.sh true
