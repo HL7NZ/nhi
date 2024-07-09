@@ -616,7 +616,7 @@ Ethnicities to use:<br />
 <td>application can display an error when an attempt to replace a verified to unverified source for citizenship</td>
 <td>Attempt replace citizenship for Patient: ZKF6683
  <li> Citizenship = yes </li>
- <li> Attempt to add source = NPRF </li></td>
+ <li> Attempt to add source = DIA </li></td>
 <td>Output: EM0XXXX - "Cannot update a source to a lower level of proof"</td>
 <td>mandatory</td></tr>
 
