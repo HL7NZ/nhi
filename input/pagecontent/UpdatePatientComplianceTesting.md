@@ -350,7 +350,7 @@ Output:
 <td>Attempt a add a fictitious name to NHI ZDJ6518
 <li>Given Names: John Charles</li>
 <li> Family Name: Achilles</li></td>
-<td>Output: EM02105 "A Patient must not have more than 200 active names"</td>
+<td>Output: EM02105 "A Patient must not have more than 40 active names"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-4 <br /> $add-name </td>
