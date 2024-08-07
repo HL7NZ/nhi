@@ -1,7 +1,7 @@
-/fhir/nhi/v1/metadata:
-    summary: "Returns the server's capability statement"
-    operationId: "nhiMetadata"
+/fhir/nhi/v1/metadata:   
     get:
+      summary: "Returns the server's capability statement"
+      operationId: "nhiMetadata"
       parameters:
       - name: "userid"
         in: "header"
@@ -60,7 +60,6 @@
       summary: "Find nearest matching patient record based on demographics"
       operationId: "patientMatch"
       
-      version: "1.0.0"
       parameters:
       - name: "userid"
         in: "header"
