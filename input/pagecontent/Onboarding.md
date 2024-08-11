@@ -29,11 +29,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
 
 ### Assistance
 
-Please fill in the [General Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if you:
-* have a general enquiry,
-* require help or have any questions regarding the onboarding process,
-* want to add new business functions to an existing application, or
-* want to add a new set of credentials to an existing application.
+Please fill in the [Digital Services Hub Support and Feedback form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/35/create/112).
 
 
 <h3>Business Functions</h3>
