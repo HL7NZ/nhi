@@ -10,8 +10,8 @@ Access to NHI operations is available to all health providers listed in [Schedul
 
 ### On-boarding and Implementation
 
-1. To get started, head to [Consumer onboarding, over at the digital services hub](https://www.tewhatuora.govt.nz/health-services-and-programmes/digital-health/digital-services-hub/consumer-onboarding/) You will need to provide information about your organisation, the product you are developing and the API's you want to integrate with.
-  * For more information [Have a look at the other resources on the Digital Service Hub](https://www.tewhatuora.govt.nz/health-services-and-programmes/digital-health/digital-services-hub/).
+1. To get started, head to ['Consumer onboarding', over at the digital services hub](https://www.tewhatuora.govt.nz/health-services-and-programmes/digital-health/digital-services-hub/consumer-onboarding/). You will need to provide information about your organisation, the product you are developing and the API's you want to integrate with.
+  * For more information [have a look at the other resources on the Digital Service Hub](https://www.tewhatuora.govt.nz/health-services-and-programmes/digital-health/digital-services-hub/).
 3. Once your onboarding request has been approved, you will be provided with the information to start integration. The integration team will be in touch if further information is required.
   * You will receive your credentials, access token url, provided scopes, and the compliance environment endpoint.
 3. Complete your development and testing.
