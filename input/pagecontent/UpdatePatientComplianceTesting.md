@@ -460,7 +460,7 @@ Output:
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-name-error-18 <br /> $inactivate-name</td>
-<td>application can display an error when an attempt is made to inactivate a name with a verified source</td>
+<td>application can display an error when an attempt is made to inactivate a name with a registered source</td>
 <td>Attempt to inactivate the name below from Patient ZDW1872
    <li>Given Name: Michaela</li>
    <li>Family Name: Aldom</li></td>
