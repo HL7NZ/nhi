@@ -1,214 +1,7 @@
-/fhir/nhi/v1/Patient/$match:
-    post:
-      parameters:
-      - name: "userid"
-        in: "header"
-        required: true
-        schema:
-          type: "string"
-      - name: "X-correlation-ID"
-        in: "header"
-        schema:
-          type: "string"
-      - name: "x-api-key"
-        in: "header"
-        required: false
-        schema:
-          type: "string"
-      - name: "X-Request-Id"
-        in: "header"
-        schema:
-          type: "string"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PatientMatchRequest"
-        required: true
-      responses:
-        "422":
-          description: "422 response"
-          content: {}
-        "200":
-          description: "200 response"
-          headers:
-            Content-Location:
-              schema:
-                type: "string"
-          content: {}
-      security:
-      - hip-fhir-cog:                 
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
-      - api_key: []
-      
-      x-amazon-apigateway-request-validator: params-and-body
-      x-amazon-apigateway-integration:
-                type: "aws_proxy"
-                httpMethod: "POST"
-                uri: 
-                  Ref: pLambdaNameNhi
-  
-      
-/fhir/nhi/v1/Patient/$replace-name:
-    post:
-      parameters:
-      - name: "userid"
-        in: "header"
-        required: true
-        schema:
-          type: "string"
-      - name: "X-correlation-ID"
-        in: "header"
-        schema:
-          type: "string"
-      - name: "x-api-key"
-        in: "header"
-        required: false
-        schema:
-          type: "string"
-      - name: "X-Request-Id"
-        in: "header"
-        schema:
-          type: "string"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ReplaceNameRequest"
-        required: true
-      responses:
-        "422":
-          description: "422 response"
-          content: {}
-        "200":
-          description: "200 response"
-          headers:
-            Content-Location:
-              schema:
-                type: "string"
-          content: {}
-      security:
-      - hip-fhir-cog:  
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
-      - api_key: []
-      
-      x-amazon-apigateway-request-validator: params-and-body
-      x-amazon-apigateway-integration:
-                type: "aws_proxy"
-                httpMethod: "POST"
-                uri: 
-                  Ref: pLambdaNameNhi
-                passthroughBehavior: "when_no_match"
-                timeoutInMillis: 29000
-        
-/fhir/nhi/v1/Patient/$create:
-    post:
-      parameters:
-      - name: "userid"
-        in: "header"
-        required: true
-        schema:
-          type: "string"
-      - name: "X-correlation-ID"
-        in: "header"
-        schema:
-          type: "string"
-      - name: "x-api-key"
-        in: "header"
-        required: false
-        schema:
-          type: "string"
-      - name: "X-Request-Id"
-        in: "header"
-        schema:
-          type: "string"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/CreatePatientRequest"
-        required: true
-      responses:
-        "422":
-          description: "422 response"
-          content: {}
-        "201":
-          description: "201 response"
-          headers:
-            Content-Location:
-              schema:
-                type: "string"
-          content: {}
-      security:
-      - hip-fhir-cog:       
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.c"
-      - api_key: []   
-       
-      x-amazon-apigateway-request-validator: params-and-body
-      x-amazon-apigateway-integration:
-                type: "aws_proxy"
-                httpMethod: "POST"
-                uri: 
-                  Ref: pLambdaNameNhi
-                passthroughBehavior: "when_no_match"
-                timeoutInMillis: 29000
-           
-/fhir/nhi/v1/Patient/$set-preferred-name:
-    post:
-      parameters:
-      - name: "userid"
-        in: "header"
-        required: true
-        schema:
-          type: "string"
-      - name: "X-correlation-ID"
-        in: "header"
-        schema:
-          type: "string"
-      - name: "x-api-key"
-        in: "header"
-        required: false
-        schema:
-          type: "string"
-      - name: "X-Request-Id"
-        in: "header"
-        schema:
-          type: "string"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/SetPreferredNameRequest"
-        required: true
-      responses:
-        "422":
-          description: "422 response"
-          content: {}
-        "200":
-          description: "200 response"
-          headers:
-            Content-Location:
-              schema:
-                type: "string"
-          content: {}
-      security:
-      - hip-fhir-cog:  
-        - "patient:Patient.u"        
-        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
-      - api_key: []
-      
-      x-amazon-apigateway-request-validator: params-and-body
-      x-amazon-apigateway-integration:
-                type: "aws_proxy"
-                httpMethod: "POST"
-                uri: 
-                  Ref: pLambdaNameNhi
-                passthroughBehavior: "when_no_match"
-                timeoutInMillis: 29000
-      
-/fhir/nhi/v1/metadata:
+/fhir/nhi/v1/metadata:   
     get:
+      summary: "Returns the server's capability statement"
+      operationId: "nhiMetadata"
       parameters:
       - name: "userid"
         in: "header"
@@ -261,9 +54,234 @@
                   Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
+/fhir/nhi/v1/Patient/$match:
+    
+    post:
+      summary: "Find nearest matching patient record based on demographics"
+      operationId: "patientMatch"
+      
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PatientMatchRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:                 
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.v"
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.s"
+      - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+  
+      
+/fhir/nhi/v1/Patient/$replace-name:
+    post:
+      summary: "An operation to replace a name on a patient's record"
+      operationId: "patientReplaceName"
+      
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReplaceNameRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:  
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+        
+/fhir/nhi/v1/Patient/$create:
+    post:
+      summary: "Create a new patient record in the NHI"
+      operationId: "patientCreate"
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreatePatientRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "201":
+          description: "201 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:       
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.c"
+      - api_key: []   
+       
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+           
+/fhir/nhi/v1/Patient/$set-preferred-name:
+  
+    post:
+      summary: "Set the patient's preferred name"
+      operationId: "patientSetPreferredName"
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SetPreferredNameRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:  
+        - "patient:Patient.u"        
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+      
+
         
 /fhir/nhi/v1/Patient/{nhiId}:
+     
     get:
+      summary: "Retrieve a Patient resource by Id"
+      operationId: "patientGet"
       parameters:
       - name: "userid"
         in: "header"
@@ -315,6 +333,8 @@
       
 /fhir/nhi/v1/Patient/$set-address:
     post:
+      summary: "Update a patient's address"
+      operationId: "patientSetAddress"
       parameters:
       - name: "userid"
         in: "header"
@@ -369,6 +389,8 @@
         
 /fhir/nhi/v1/Patient/$inactivate-name:
     post:
+      summary: "Inactivate a name that is currently active on a patients record"
+      operationId: "patientInactivateName"
       parameters:
       - name: "userid"
         in: "header"
@@ -422,6 +444,8 @@
       
 /fhir/nhi/v1/Patient/$set-unvalidated-address:
     post:
+      summary: "Allows a user to replace a physical address OR add or replace a postal address with an unvalidated address"
+      operationId: "patientSetUnvalidatedAddress"
       parameters:
       - name: "userid"
         in: "header"
@@ -474,6 +498,8 @@
       
 /fhir/nhi/v1/Patient/$update-eligibility:
     post:
+      summary: "Update a patient's citizenship information"
+      operationId: "patientUpdateEligibility"
       parameters:
       - name: "userid"
         in: "header"
@@ -526,6 +552,8 @@
       
 /fhir/nhi/v1/Patient/$update-birth:
     post:
+      summary: "Update a patient's birth information"
+      operationId: "patientUpdateBirth"
       parameters:
       - name: "userid"
         in: "header"
@@ -579,6 +607,8 @@
         
 /fhir/nhi/v1/Patient/$add-name:
     post:
+      summary: "Add a name to a patient's NHI record"
+      operationId: "patientAddName"
       parameters:
       - name: "userid"
         in: "header"
@@ -631,6 +661,8 @@
       
 /fhir/nhi/v1/Patient/$update-identity:
     post:
+      summary: "An operation to update a patient's identity details"
+      operationId: "patientUpdateIdentity"
       parameters:
       - name: "userid"
         in: "header"
@@ -684,6 +716,8 @@
         
 /fhir/nhi/v1/Patient/$remove-postal-address:
     post:
+      summary: "Remove a patient's postal address"
+      operationId: "patientRemovePostalAddress"
       parameters:
       - name: "userid"
         in: "header"
