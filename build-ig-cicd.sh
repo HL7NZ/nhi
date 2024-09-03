@@ -137,3 +137,5 @@ ls ./output/full-ig.sh
 
 chmod +x ./fhirValidate.sh
 ./fhirValidate.sh
+
+ls -l ./output/package.tgz
