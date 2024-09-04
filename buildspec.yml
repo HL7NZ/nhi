@@ -16,7 +16,8 @@ phases:
     commands:
       - env
       - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/settings-clean.xml - | envsubst > /root/.m2/settings.xml  
-      - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar  >/dev/null 2>&1
+      #- wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar  >/dev/null 2>&1         
+      - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/publisher/1.6.18/publisher.jar ./publisher.jar
       - cp publisher.jar ~/publisher.jar
       # gettign  a 404 from github so getting this from s3
       # - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar  >/dev/null 2>&1     
@@ -48,7 +49,8 @@ phases:
       - echo getting dependencies
       #- mvn package -ntp
       # unpackage dependancy conformance artifact zips
-      - mvn validate
+      #- mvn validate
+      - mvn clean dependency:purge-local-repository validate
       - echo building IG
       - ls -l
       - sudo chmod +x ./build-ig-cicd.sh     

@@ -133,7 +133,9 @@ echo $?
 echo running ig publisher
 java -jar ~/publisher.jar -ig . -proxy WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 -no-sushi
 
-ls ./output/full-ig.sh
+
 
 chmod +x ./fhirValidate.sh
 ./fhirValidate.sh
+
+ls -l ./output/package.tgz

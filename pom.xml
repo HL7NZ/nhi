@@ -6,8 +6,8 @@
 
 
 	<properties>
-		<revision>1.6.0</revision>
-		<fhir-common.version>1.8.8</fhir-common.version>
+		<revision>1.6.1</revision>
+		<fhir-common.version>1.8.9</fhir-common.version>
 		
 
 	</properties>
