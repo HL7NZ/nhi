@@ -506,17 +506,17 @@ The patient has the following fields fully populated in the test record (field l
 
 <tr><td>NHI-Match-9 (NHI-Get-7)</td>
 <td>application behaves appropriately when a new format NHI number is produced</td>
-<td>Use a Match request to retrieve either ZZZ00AX or ZGT56KB and demonstrate how you display the NHI details <br />
-1. <b>ZZZ00AX</b> <br />
-Family Name: Newnhi <br />
-Given Name: Format <br />
-Date of birth:28-08-2020 <br />
-Gender: Female <br />
-2. <b>ZGT56KB</b> <br />
-Family Name: Kucharski <br />
-Given Names: Markus, Christoff <br />
-Date of birth:06-09-2013 <br />
-Gender: Male </td>
+<td>Use a Match request to retrieve either ZXE24NV or ZUA48EH and demonstrate how you display the NHI details <br />
+1. <b>ZXE24NV</b> <br />
+Family Name: FEDERSTEIN <br />
+Given Name: FRANKLIN <br />
+Date of birth:1999-04-04 <br />
+Gender: male <br />
+2. <b>ZUA48EH</b> <br />
+Family Name: BRADY <br />
+Given Names: THOMAS, JAMES TEST <br />
+Date of birth:1971-11-11 <br />
+Gender: male </td>
 <td>Input: Above criteria can be entered <br />
 Output: Application does not error</td>
 <td>Mandatory</td></tr>
