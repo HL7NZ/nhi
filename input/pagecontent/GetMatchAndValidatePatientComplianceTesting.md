@@ -115,8 +115,8 @@ The patient has the following fields fully populated in the test record (field l
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-10</td>
-<td>application can handle a response when a patient has <br /> only a family name; <br /> only a given name; <br /> multiple names</td>
-<td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
+<td>application can handle a response when a patient has <br /> only a family name (ZAU8023, ZAV8657); <br /> multiple names (ZHS7524)</td>
+<td> <b>Do all</b> <br /> ZAU8023, ZAV8657 <br /> ZHS7524 </td>
 <td>Output:
 <li>application does not error</li> 
 <li>application returns all name parts when present</li> 
@@ -548,15 +548,14 @@ Output: All address formats are displayed appropriately</td>
 <tr><td>NHI-Match-12 (NHI-Get-10)</td>
 <td>application can handle a response when a patient has <br />
 only a surname; <br />
-only a given name; <br />
 multiple names</td>
 <td> Use a Match request to retrieve <b> all of the following </b> and demonstrate how you display the NHI details <br />
-<b> 1. ZAU8023 </b> <br />
+<b> 1. ZAU8023 - surname only </b> <br />
 Family Name: Magi <br />
 Date of birth:01-01-2012 <br />
 Gender: Unknown <br />
-<b> 2. ZAV8657 </b> <br />
-Given Name: Cambridge <br />
+<b> 2. ZAV8657 - surname only </b> <br />
+Family Name: Cambridge <br />
 Date of birth:12-04-1960 <br />
 Gender: Male <br />
 <b> 3. ZHS7524 </b> <br />
