@@ -18,7 +18,7 @@ This guide uses artifacts from [New Zealand Base Implementation Guide.](https://
 
 ### Organization of the Guide
 
-* **Business view:** The Business context of the NHI
+* **Business View:** The Business context of the NHI
 
 * **Use Cases:**  The expected Use Cases including the FHIR interactions that the NHI supports.
 
