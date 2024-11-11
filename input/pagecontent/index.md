@@ -1,7 +1,7 @@
-This is the Implementation Guide for an [HL7&reg; FHIR&copy;](http://hl7.org/fhir/) interface to the New Zealand National Health Index [NHI](https://www.health.govt.nz/our-work/health-identity/national-health-index). It brings together all the artifacts that are necessary to understand and use the NHI FHIR API.
+This is the Implementation Guide for an [HL7&reg; FHIR&copy;](https://hl7.org/fhir/R4/index.html)interface to the New Zealand National Health Index [NHI](https://www.health.govt.nz/our-work/health-identity/national-health-index). It brings together all the artifacts that are necessary to understand and use the NHI FHIR API.
 
 The NHI is made up of two resources:
-* [NHIPatient](StructureDefinition-NhiPatient.html), derived from the [HL7 FHIR Patient resource](http://hl7.org/fhir/patient.html).
+* [NHIPatient](StructureDefinition-NhiPatient.html), derived from the [HL7 FHIR Patient resource](https://hl7.org/fhir/R4/patient.html).
 * [NHIAddress](StructureDefinition-NhiAddress.html), derived from [HL7 FHIR Address data type](http://hl7.org/fhir/R4/datatypes.html#Address).
 
 This guide uses artifacts from [New Zealand Base Implementation Guide.](https://fhir.org.nz/ig/base/index.html)
