@@ -169,11 +169,12 @@
 * **Duplicate Name Definition**
   * A Name is a duplicate name for a given NHI number if the 'Given Name', 'Other Given Names', and 'Family Name' match the values for an existing name for that NHI.
   * Concatenated names are included as duplicates.
-  * Duplicates are case insensitive (mark Fraser and Mark Fraser are considered duplicates). 
+  * Duplicates are case insensitive (mark Fraser and Mark Fraser are considered duplicates).
+  * Non alphanumeric characters are treated as if they don’t exist.
 
 * **Mononym**
-  * Mononyms on the NHI confirm to the data content standard for name of personName Profile — NZ Government OASIS CIQ
-    
+  * Mononyms on the NHI confirm to the [Person name mandated standard](https://data.govt.nz/toolkit/data-standards/mandated-standards-register/person-name-standard) which reference the [NZ Government OASIS CIQ Name Profile](https://ndhadeliver.natlib.govt.nz/webarchive/20171204083638/https:/ict.cwp.govt.nz/guidance-and-resources/standards-compliance/nz-government-ciq-profiles/).
+
 * **Registered Name Definition**
   * A Registered Name is a name which has been verified by a Government Agency
   * This is a source of BREG - Has been confirmed with a match to the Birth Register
