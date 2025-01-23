@@ -412,7 +412,7 @@ table, th, td {
     },
     {
         "name" : "use",
-        "valueString" : "Official"
+        "valueString" : "nickname"
     },
     {
         "name" : "prefix",
