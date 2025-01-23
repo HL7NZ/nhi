@@ -42,7 +42,7 @@ phases:
     commands:
       - ls 
       - rm -r nhi 
-      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi   
+      - git clone https://github.com/HL7NZ/nhi   
       - cd nhi
       - git checkout $BRANCH
       - ls
@@ -60,7 +60,7 @@ phases:
       - echo checking in full-ig.zip
       - git add -f ./output/full-ig.zip
       - git commit -m "new IG build"
-      - git push
+      - git push  https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi 
       
        # deploy the nhi conformance artifacts    
       - mvn deploy
