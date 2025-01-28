@@ -107,7 +107,7 @@ GIT_COMMIT_ID=$(git rev-parse HEAD)
 echo adding source info to index.md
 sed -i "s/_BRANCH_/$BRANCH/g"  ./input/pagecontent/index.md
 sed -i "s/_GIT_COMMIT_ID_/$GIT_COMMIT_ID/g"  ./input/pagecontent/index.md
-rm -rf temp
+
 echo running sushi ...
 sushi -o .
 
