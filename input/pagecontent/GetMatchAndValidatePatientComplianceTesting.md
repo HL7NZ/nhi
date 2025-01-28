@@ -115,8 +115,8 @@ The patient has the following fields fully populated in the test record (field l
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-GET-10</td>
-<td>application can handle a response when a patient has <br /> only a family name; <br /> only a given name; <br /> multiple names</td>
-<td> <b>Do all</b> <br /> ZAU8023 <br /> ZAV8657 <br /> ZHS7524 </td>
+<td>application can handle a response when a patient has <br /> only a family name (ZAU8023, ZAV8657); <br /> multiple names (ZHS7524)</td>
+<td> <b>Do all</b> <br /> ZAU8023, ZAV8657 <br /> ZHS7524 </td>
 <td>Output:
 <li>application does not error</li> 
 <li>application returns all name parts when present</li> 
@@ -506,17 +506,17 @@ The patient has the following fields fully populated in the test record (field l
 
 <tr><td>NHI-Match-9 (NHI-Get-7)</td>
 <td>application behaves appropriately when a new format NHI number is produced</td>
-<td>Use a Match request to retrieve either ZZZ00AX or ZGT56KB and demonstrate how you display the NHI details <br />
-1. <b>ZZZ00AX</b> <br />
-Family Name: Newnhi <br />
-Given Name: Format <br />
-Date of birth:28-08-2020 <br />
-Gender: Female <br />
-2. <b>ZGT56KB</b> <br />
-Family Name: Kucharski <br />
-Given Names: Markus, Christoff <br />
-Date of birth:06-09-2013 <br />
-Gender: Male </td>
+<td>Use a Match request to retrieve either ZXE24NV or ZUA48EH and demonstrate how you display the NHI details <br />
+1. <b>ZXE24NV</b> <br />
+Family Name: FEDERSTEIN <br />
+Given Name: FRANKLIN <br />
+Date of birth:1999-04-04 <br />
+Gender: male <br />
+2. <b>ZUA48EH</b> <br />
+Family Name: BRADY <br />
+Given Names: THOMAS, JAMES TEST <br />
+Date of birth:1971-11-11 <br />
+Gender: male </td>
 <td>Input: Above criteria can be entered <br />
 Output: Application does not error</td>
 <td>Mandatory</td></tr>
@@ -548,18 +548,17 @@ Output: All address formats are displayed appropriately</td>
 <tr><td>NHI-Match-12 (NHI-Get-10)</td>
 <td>application can handle a response when a patient has <br />
 only a surname; <br />
-only a given name; <br />
 multiple names</td>
 <td> Use a Match request to retrieve <b> all of the following </b> and demonstrate how you display the NHI details <br />
-<b> 1. ZAU8023 </b> <br />
+<b> 1. ZAU8023 - surname only </b> <br />
 Family Name: Magi <br />
 Date of birth:01-01-2012 <br />
 Gender: Unknown <br />
-<b> 2. ZAV8657 </b> <br />
-Given Name: Cambridge <br />
+<b> 2. ZAV8657 - surname only </b> <br />
+Family Name: Cambridge <br />
 Date of birth:12-04-1960 <br />
 Gender: Male <br />
-<b> 3. ZHS7524 </b> <br />
+<b> 3. ZHS7524 - multiple names </b> <br />
 Family Name: WILLIS <br />
 Given Names: ELIZABETH, MARGARET <br />
 Date of birth:15-06-2002 <br />
