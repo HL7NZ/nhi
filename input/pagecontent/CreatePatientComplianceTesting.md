@@ -471,7 +471,7 @@ Do not supply a country of birth </td>
 
 <div>
 
-**The tests below are future scope**
+
 
 </div>
 
@@ -483,6 +483,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
+<caption><b>The tests included in this section are future scope and therefore not currently implemented. They are here for interest sake only.</b></caption>
 <tr>
 <th>Reference</th>
 <th>Purpose – Demonstrate that the</th>
