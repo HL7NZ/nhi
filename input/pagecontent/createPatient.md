@@ -94,11 +94,12 @@ For a create patient example [click here](createPatientExample.html)
   * at least one Active Name
   * one, and only one, Active Name which is preferred.
 * A name must have:
-  * a [given](/StructureDefinition-NhiPatient-definitions.html#Patient.name.given) or a [family](/StructureDefinition-NhiPatient-definitions.html#Patient.name.family) at minimum.
+  * a [family](/StructureDefinition-NhiPatient-definitions.html#Patient.name.family) at minimum.
   * a [preferred name flag](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:preferred) (set to true - for add patient only)
   * an information source.
 * A name may have:
   * prefix (title),
+  * a [given](/StructureDefinition-NhiPatient-definitions.html#Patient.name.given) or 
   * ‘other’ given name (1)
   * use
   * name-use-extra (baby-of and unallocated)
@@ -110,12 +111,9 @@ For a create patient example [click here](createPatientExample.html)
 * [‘babyof and unallocated names’](/StructureDefinition-NhiPatient-definitions.html#Patient.name.extension:nhi-name-use-extra) must have:
   * source = NPRF
   * name use = temp
-  * name-use-extra ('babyof' or 'unallocated'). 
+  * name-use-extra ('babyof' or 'unallocated').
 *  Unallocated names can only be set by an authorised agency
-*  The first character of a name must be an Alpha (A-Z or a-z) or apostrophe.
 *  A name field which is not null must contain at least one alphabetic character.
-*  Allowed name characters alpha, a-z, A-Z, space, hyphen - and apostrophe.
-*  A Name update which results in a Name Status of Registered must only be submitted via an authorised Agency
 *  A 'Legacy Name' must only be submitted via a legacy HL7 update request
 
 
@@ -124,7 +122,7 @@ For a create patient example [click here](createPatientExample.html)
 
 * _Create Patient - Name errors_
   * A Patient must have only one active Preferred Name
-  * _A Patient name must contain either a Given name or a Surname and a Name Type, a preferred name flag and an information source_
+  * _A Patient name must contain a Surname and a Name Type, a preferred name flag and an information source_
   * _A Baby of name must have source = NPRF, name use = temp_
   * _Unallocted names can only be set by an authorised Agency_
   * _A Patient’s given name and surname must start with a letter of the alphabet or an apostrophe_
