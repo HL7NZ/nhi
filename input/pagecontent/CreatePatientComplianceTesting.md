@@ -22,7 +22,7 @@ table, th, td {
 <ul>
  <li> Name
   <ul>
-   <li> Given, middle, and surname </li>
+   <li> Given name and surname </li>
    <li> Source - PPRT</li>
   </ul>
  </li>
@@ -155,20 +155,9 @@ Create a fictitious identity (this can be done using http://www.fakenamegenerato
 <td>Mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-4</td>
-<td>Application can supply additional identity information when creating a patient, including the fields:
-<ul>
- <li>Date of death</li>
- <li>Birthplace</li>
-</ul>
-</td>
+<td>Application can supply birthplace information when creating a patient</td>
 <td>Create a patient with the minimum set of patient information and the additional details below
 <ul>
- <li>Date of death - if applicable
-   <ul>
-    <li> Date </li>
-    <li> Information source </li>
-   </ul>
- </li>
  <li>Birthplace
   <ul>
    <li> Country of birth </li>
@@ -314,14 +303,14 @@ This will be updated in an upcming release - EM02210 - An unvalidated residentia
 <td>optional</td></tr>
 
 <tr><td>NHI-Create-Patient-error-7 <br /> Name</td>
-<td>application can display an error when no given and family name is present</td>
-<td>Attempt to create a patient with no family or given name
+<td>application can display an error when no family name is present</td>
+<td>Attempt to create a patient with no family name
    <ul>
     <li>Name use = nickname</li>
     <li>Source = PPRT</li>
-    <li>Don't insert a family or given name</li>
+    <li>Don't insert a family name</li>
    </ul></td>
-<td>Output: EM02101 - "A Patient name must contain either a given or family name, a preferred name flag and an information source"</td>
+<td>Output: EM02101 - "A Patient name must contain a family name, a preferred name flag and an information source"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-Create-Patient-error-8 <br /> Name</td>
@@ -479,6 +468,12 @@ Do not supply a country of birth </td>
 <td>EM07202 - A place of birth source must only be populated if birth locality information is populated</td>
 <td>Mandatory</td></tr>
 </table>
+
+<div>
+
+**The tests below are future scope**
+
+</div>
 
 <h4>NHI Create Patient - death date</h4>
 <table>
