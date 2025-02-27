@@ -22,7 +22,7 @@ table, th, td {
 <ul>
  <li> Name
   <ul>
-   <li> Given name and surname </li>
+   <li> Given name and family name </li>
    <li> Source - PPRT</li>
   </ul>
  </li>
