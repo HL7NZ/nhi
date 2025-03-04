@@ -14,3 +14,4 @@ Thumbs.db
 /package.tgz
 /output/
 /fhir_packages/
+.idea/
