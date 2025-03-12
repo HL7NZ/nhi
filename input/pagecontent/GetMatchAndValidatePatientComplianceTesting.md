@@ -354,20 +354,20 @@ The additional criteria includes:
    <ul>
       <li>Name</li>
         <ul>
-          <li>Given Name: Test</li>
-          <li> Middle Name:</li>
-          <li> Family Name: Test</li>
+          <li>Given Name: Compliance</li>
+          <li> Middle Name: by</li>
+          <li> Family Name: Thebook</li>
         </ul>
-      <li> Gender: M </li>
-      <li> DOB: 31-12-1999 </li>
+      <li> Gender: F </li>
+      <li> DOB: 03-07-2003 </li>
    </ul></td>
 <td>
    <ul>
       <li> Input: Above criteria can be entered </li>
       <li> Output
       <ul>
-         <li> 10 results are returned</li> 
-         <li>The top result returned is NHI: ZAX6965 Score: 99</li>
+         <li> 9 results are returned</li> 
+         <li>The top result returned is NHI: ZMP4241 Score: 99</li>
       </ul>
       </li>
    </ul>
