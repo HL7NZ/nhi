@@ -71,7 +71,7 @@ For a create patient example [click here](createPatientExample.html)
 
 * A Create Patient request may include a:
   *  birthplace
-  *  *deceased date*
+  *  *deceased date - note: future scope*
 
 
 ---
