@@ -475,7 +475,7 @@ Do not supply a country of birth </td>
 
 </div>
 
-<h4>NHI Create Patient - death date</h4>
+<h4>NHI Create Patient - death date - <i>future scope</i></h4>
 <table>
 <style>
 table, th, td {
