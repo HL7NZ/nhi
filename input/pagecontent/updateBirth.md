@@ -83,7 +83,7 @@ table, th, td {
   * If all request parameters are valid, the attributes are updated on the NHI.
 
 
-#### Update-birth - Example request - TBC
+#### Update-birth - Example request
 
 ```  
 {
