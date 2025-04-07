@@ -23,7 +23,7 @@ The trusted identity provider (idp) is My Health Account (MHA). [For more inform
 The client registration process involves both the NHI FHIR service and the IdP.
 * The IdP will provide the client_ID, client_secret and SMART on FHIR scopes.
 * The NHI FHIR service will provide an API Key and approve any scopes granted to the client.
-  * OAuth2 scopes are granted by the IdP to the client application, not the end user. For more information see [online onboarding request form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/67).
+  * OAuth2 scopes are granted by the IdP to the client application, not the end user. For more information email the [integration team](mailto:integration@tewhatuora.govt.nz)
 
 #### Compliance Testing
 
