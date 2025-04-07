@@ -12,7 +12,7 @@ The [NHI $match operation](/matchPatient.html) processes a parameters resource c
 
 ### Can I use age range instead of date of birth when searching for a patient?
 The standard FHIR $Match on patient does not allow an age range parameter. A year and month or year only can be used if the exact birthdate is not known
-An extension to allow an age-range parameter is being considered. [Please contact the integration team](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36) if this is something that would benefit you.
+An extension to allow an age-range parameter is being considered. [Please contact the integration team](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/35/create/112) if this is something that would benefit you.
 
 
 
@@ -149,7 +149,7 @@ While multiple responses to the gender question are valid, only a single gender 
 See the source standard for more information about how to collect gender information from the person.
 
 For More information see:
-* [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+* [HISO 10046:2024 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462024-consumer-health-identity-standard) 
 * [Mandated data standard for gender and sex](https://aria.stats.govt.nz/aria/?_ga=2.82725014.1888179889.1697335665-1611494496.1697335665#StandardView:uri=http://stats.govt.nz/cms/StatisticalStandard/y8iEeAMz2o4fBItv)
 
 <br />
@@ -164,7 +164,7 @@ The standard ethnicity question for the health and disability sector mirrors the
 Consumer facing applications that allow a person to update their NHI ethnicity must present the standard question in an unanswered format when a request to change is made. Do not present their previous responses for amendment.
 
 For More information see:
-* [HISO 10046:2023 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462023-consumer-health-identity-standard/)
+* [HISO 10046:2024 Consumer Health Identity Standard](https://www.tewhatuora.govt.nz/publications/hiso-100462024-consumer-health-identity-standard) 
 * [HISO 10001:2017 Ethnicity Data Protocols](https://www.tewhatuora.govt.nz/our-health-system/digital-health/data-and-digital-standards/approved-standards/identity-standards/)
 
 <br />
