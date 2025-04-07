@@ -34,7 +34,7 @@ Not all compliance tests in this implementation guide will be appropriate for ev
 * If there are tests below that are labelled mandatory but do fit the application's use case then please let us know why.
 * Some tests are labelled *mandatory if*. These tests are Mandatory only if you are using this piece of data for your use case.
 
-To request a template for the compliance tests either add a comment to your onboarding request form or reach out using the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/36).
+To request a template for the compliance tests either add a comment to your onboarding request form or reach out using the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/35/create/112).
 
 <h4>Security and Audit Assessment</h4>
 <table>
