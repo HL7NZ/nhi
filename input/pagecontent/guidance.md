@@ -98,7 +98,7 @@ I don't have access rights to view the NHI details. I want to validate the NHI n
 {% include lookup-edi-number.svg %}
 </div>
 
-* Steps involved:
+Steps involved:
   1.	The user initiates searching for an EDI number for a patient’s General Practice
   2.	The integrating application sends a read request for the Patient Resource using the nhi-id to the NHI FHIR API E.g. GET\<Endpoint>/Patient/ZZZ0008
   3.	The request is validated - ALT: Validation failure. OperationOutcome resource returned
