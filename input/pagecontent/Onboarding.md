@@ -16,7 +16,7 @@ Access to NHI operations is available to all health providers listed in [Schedul
   * You will receive your credentials, access token url, provided scopes, and the compliance environment endpoint.
 3. Complete your development and testing.
 4. When you are ready for compliance testing, email the [integration team](mailto:integration@tewhatuora.govt.nz) to get a compliance testing template.
-5. Submit the results of the compliance tests using this form [HIP Compliance Submission] (https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/129).
+5. Submit the results of the compliance tests using this form [HIP Compliance Submission](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/11/create/129).
 6. The integration team will issue a compliance test report. Your application will receive certification to be used in production or additional requirements will need to be met.
   * This can be an iterative process, so please get in touch as needed to discuss the compliance testing process.
 7. _Each organisation_ using your application with NHI integrated services must apply individually for access to the production environment (and recieve their own set of credentials) by completing the production form, please email [NHI Access](mailto:nhi_access@health.govt.nz).
