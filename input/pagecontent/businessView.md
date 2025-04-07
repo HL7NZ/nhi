@@ -14,7 +14,7 @@ The NHI serves 2 primary purposes:
 
 Note that the NHI  is not the actual source of information, rather it is the central registry from where a client can access (or update) it.
 
-For more information [click here](https://www.health.govt.nz/our-work/health-identity/national-health-index/national-health-index-overview).
+For more information [click here](https://www.tewhatuora.govt.nz/health-services-and-programmes/health-identity/national-health-index).
 
 
 #### What the NHI Contains
@@ -37,9 +37,9 @@ The patient’s general practice and their phone and email contact details are n
 
 **NHI numbers have one of 2 formats**
 * AAANNNC (3 alpha, 3 numeric and one numeric check digit).
-* AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued circa 2025. 
+* AAANNAX (3 alpha, 2 numeric, 1 alpha and one alpha check digit). This format will be first issued in July 2026.
 
-For more information [click here](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462022-consumer-health-identity-standard/) for the consumer health identity standard, that includes the check digit calculation.
+For more information [click here](https://www.tewhatuora.govt.nz/our-health-system/claims-provider-payments-and-entitlements/nhi-number-format-changes) for website links or [click here](https://www.tewhatuora.govt.nz/publications/hiso-100462024-consumer-health-identity-standard) for the consumer health identity standard, that includes the check digit calculation.
 
 
 #### Context
@@ -65,7 +65,7 @@ Te Whatu Ora assigns appropriate permissions, and monitors and audits the action
 All users of the NHI are subject to the Privacy Act 1993 and the Health Information Privacy Code 2020. Privacy impact assessments and security assessments should be completed prior to applying for access to the NHI.
 
 A terms of use agreement with user organisations will be signed before access is granted to production services
-For more information see - [On-boarding and Compliance](/OnboardingAndComplianceTesting.html)
+For more information see - [On-boarding and Compliance](/ComplianceTestingImportantInformation.html)
 
 
 
