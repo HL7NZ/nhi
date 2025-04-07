@@ -1,7 +1,7 @@
 # Repository for NHI IG
 
 ## Current Release 
-1.6.4
+1.6.5
 
 ## Pre requisites 
 
