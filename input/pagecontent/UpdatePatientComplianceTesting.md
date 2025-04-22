@@ -173,7 +173,7 @@ Application will show the correct error when attempting to add the supplied addr
   <li> not-validated-address-reason: NOSVC </li>
   <li> address-type: physical </li>
   <li> address-line-1: 74 Chancellor Street" </li>
-  <li> address-suburb: Richmond </li>
+  <li> address-suburb: Richvale </li>
   <li> address-city: Christchurch </li>
   <li> address-country-code: NZ </li>
  </ul>
