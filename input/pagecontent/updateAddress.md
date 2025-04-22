@@ -231,12 +231,11 @@ table, th, td {
 <tr><td> address-domicile-code </td>
 <td> valueString </td>
 <td> Optional* </td>
-<td>See future functionality below</td> </tr>
+<td>See conditions below</td> </tr>
 </table>
 
-#### Future functionality for Domicile code
-* If domicile code supplied this is added to the address, if not supplied the suburb and city are used to derive a domicile code from the streets file. If a suburb/city combination is not found in the streets file an error is returned.
-* For now domicile code is currently mandatory.
+#### Address domicile code - conditions
+* If a domicile code is supplied, this is added to the address, if not supplied the suburb and city are used to derive a domicile code from the streets file. If a suburb/city combination is not found in the streets file an error is returned.
 
 #### Set-unvalidated-address - Behaviour
   * The NHI is validated
