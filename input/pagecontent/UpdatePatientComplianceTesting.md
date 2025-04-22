@@ -605,11 +605,11 @@ Ethnicities to use:<br />
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-eligibility-error-1</td>
-<td>application can display an error when an attempt to add a registered source for citizenship </td>
+<td>application can display an error when attempting to add a registered source for citizenship </td>
 <td>Attempt replace citizenship for Patient: ZKF6683
  <li> Citizenship = yes </li>
  <li> Attempt to add source = DIA </li></td>
-   <td>Output: EM0XXXX "Patient NZ Citizenship has been validated by a public Agency, and cannot be updated"</td>
+   <td>Output: EM07229 - The citizenship information source can only be set to a registered value by an authorised agency"</td>
 <td>mandatory</td></tr>
 
 <tr><td>NHI-update-eligibility-error-2</td>
@@ -625,6 +625,6 @@ Ethnicities to use:<br />
 <td>Attempt to replace citizenship on NHI ZKF6691
  <li> Citizenship = yes </li>
  <li> Attempt to add a verified or non-verified source </li></td>
-<td>Output: EM0XXXX "Information set to registered cannot be updated contact NHI administration"</td>
+<td>Output: "EM07230 - The patient's citizenship has been validated by a public Agency, and cannot be updated"</td>
 <td>mandatory</td></tr>
 </table>
