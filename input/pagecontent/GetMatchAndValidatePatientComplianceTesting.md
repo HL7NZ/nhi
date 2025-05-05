@@ -68,7 +68,12 @@ table, th, td {
 
 <tr><td>NHI-GET-5</td>
 <td>application alerts the user that a requested NHI is dormant, and that the live NHI has been returned.</td>
-<td>ZAT2518</td>
+<td>
+  <ul>
+    <li>ZAA0962</li>
+    <li>ZAT2518</li>
+  </ul>
+</td>
 <td>Outout: Notification to the user that the requested NHI was dormant and the live NHI has been returned <br />
 Output: Patient Live NHI returned should be ZAT2496 <br />
 Output: Minimum identity information for the live NHI is displayed for the patient</td>
