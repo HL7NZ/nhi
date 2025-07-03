@@ -165,7 +165,7 @@ table, th, td {
 <td>Get dormant-2 <br /> application behaves appropriately when a request for a dormat older format NHI number returns a 'live' new format NHI number </td>
 <td>
    <ul>
-      <li>ZKP3289</li>
+      <li>ZWX5200</li>
    </ul>
 </td>
 <td>
@@ -173,7 +173,7 @@ table, th, td {
       <li> Input: user can enter the older format NHI </li>
       <li> Output
       <ul>
-         <li>application should return live record 'ZKP3424'</li>
+         <li>application should return live record 'ZXE24NV'</li>
          <li>application does not error when an older format NHI is returned.</li> 
          <li>Notification to the user that the requested NHI was dormant and the live NHI has been returned</li>
       </ul>
@@ -279,7 +279,7 @@ table, th, td {
 <td>Get enrolment for new format <br /> application can return enrolment information for a new format NHI </td>
 <td>
    <ul>
-      <li>ZKP3289</li>
+      <li>ZXE24NV</li>
    </ul>
 </td>
 <td>
