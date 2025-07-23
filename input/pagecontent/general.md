@@ -1,14 +1,14 @@
 
-The following notes apply to all resources in this implementation.
+
+### Information for all resources in this implementation.
 
 
-
-### Resource representation: Json
+#### Resource representation: Json
 
 Only Json is supported by this implementation.
 
 
-### Id and Identifiers
+#### Id and Identifiers
 
 In this implementation, **the id of the resource will always be the same as the value of the identifier assigned by the NHI with a use value of ‘official’**. (There will only ever be a single identifier with this use type and system in a resource).
 
@@ -18,7 +18,7 @@ https://api.hip.digital.health.nz/fhir/Patient/ZAT2348
 
 
 
-### Linking resources and Dormant identifiers
+#### Linking resources and Dormant identifiers
 
 Sometimes a person may have been added more than once to the NHI and been accidentally assigned more than one NHI number. When this is discovered to have occurred, the NHI records are linked, one of the NHI numbers becomes the ‘live’ identifier and the other NHI numbers become ‘dormant’ identifiers. For statistics on Dormant NHI numbers see [Dormant NHI statistics](/FAQ.md#dormant-nhi-statistics)
 
@@ -91,9 +91,9 @@ A GET call of GET\<Endpoint>/Patient/ZAT2534 or GET\<Endpoint>/Patient/ZAT2518 w
 
 ```
 
-### Errors
+#### Errors
 
-#### HTTP Error response codes
+##### HTTP Error response codes
 
 <table>
 <style>
@@ -136,7 +136,7 @@ table, th, td {
 <td> Exceeded quota </td></tr>
 </table>
 
-#### Response Body
+##### Response Body
 The Response body may contain an OperationOutcome resource describing the result of the request message processing <br />
 The table below describes how the OperationOutcome should be populated <br />
 
@@ -196,7 +196,7 @@ table, th, td {
 </tr>
 </table>
 
-#### Error Format
+##### Error Format
 
 ```
 
@@ -223,7 +223,7 @@ table, th, td {
 ```
 
 
-### Request Rules and Errors
+#### Request Rules and Errors
 
 * **Request rules**
   * Every request must include an:
@@ -237,7 +237,18 @@ table, th, td {
   * _Forbidden, HTTP403_
 
 
-### HTTP Header Details
+
+
+### Information specific for NHI integrators using the Digital Services.
+
+For specific information on requirements related to the digital services hub see:
+
+[Developer Guides: System-to-System authentication](https://github.com/tewhatuora/schemas/blob/main/Developer%20Guide%20System-to-System%20authentication%20%20clinical%20applications.pdf)
+[Information available in the developer portal](https://hub.digital.health.nz/hub/s/)
+
+### Information specific for NHI integrators using the Legacy HIP services.
+
+#### HTTP Header Details
 
 * This is a list of any additions to standard HTTP header protocol
 
@@ -316,13 +327,13 @@ table, th, td {
 <td> The resource version number, returned on a Get </td></tr>
 </table>
 
-### Security
+#### Security
 
-#### OAUTH2
+##### OAUTH2
 
 The NHI server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services
 
-#### Scopes
+##### Scopes
 
 The following scopes are supported. For more information on available functionality please see [Business Functions](/Onboarding.html#business-functions).
 
@@ -343,7 +354,7 @@ table, th, td {
 
 * Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
 
-#### API Keys and Usage Plans
+##### API Keys and Usage Plans
 
 Clients will be emailed their API key, which should be treated as confidential information and not shared with other parties
 
@@ -387,7 +398,7 @@ Production accounts will be assigned to the silver usage plan. If an Organisatio
 If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay
 
 
-#### GEO Restriction 
+##### GEO Restriction 
 
 GEO Restriction rules prevent access from clients with IPs located in countries other than those listed below. If you need access from another country,  please contact our team by completing the [Enquiry form](https://mohapis.atlassian.net/servicedesk/customer/portal/3/group/35/create/112) or adding a comment to the online onboarding request form if you have one.
 
