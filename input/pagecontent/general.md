@@ -239,14 +239,19 @@ table, th, td {
 
 
 
-### Information specific for NHI integrators using the Digital Services.
+### Information specific for NHI FHIR integrators onboarding via the Digital Services Hub.
+
+From August 2025 all new HIP integrations will onboard to the Digital Services Hub and integrate to the NHI FHIR API via the HNZ enterprise Keycloak OAuth solution and HNZ FHIR API Gateway. 
 
 For specific information on requirements related to the digital services hub see:
 
 [Developer Guides: System-to-System authentication](https://github.com/tewhatuora/schemas/blob/main/Developer%20Guide%20System-to-System%20authentication%20%20clinical%20applications.pdf)
 [Information available in the developer portal](https://hub.digital.health.nz/hub/s/)
 
-### Information specific for NHI integrators using the Legacy HIP services.
+### Information specific for NHI integrators who have onboarded via the Legacy HIP FHIR services.
+
+The HIP Cognito OAuth service and HIP FHIR API Gateway have been deprecated and all integrations are being migrated to the digital services hub - commencing July 2025.
+
 
 #### HTTP Header Details
 
