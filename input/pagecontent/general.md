@@ -246,6 +246,7 @@ From August 2025 all new HIP integrations will onboard to the Digital Services H
 For specific information on requirements related to the digital services hub see:
 
 [Developer Guides: System-to-System authentication](https://github.com/tewhatuora/schemas/blob/main/Developer%20Guide%20System-to-System%20authentication%20%20clinical%20applications.pdf)
+
 [Information available in the developer portal](https://hub.digital.health.nz/hub/s/)
 
 ### Information specific for NHI integrators who have onboarded via the Legacy HIP FHIR services.
