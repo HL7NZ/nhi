@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Select name (that exists on NHI) to become inactive
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$inactivate-name
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$inactivate-name
 activate B
 |||
 B -> B: Validate[]
