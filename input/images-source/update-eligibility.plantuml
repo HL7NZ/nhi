@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Provide citizenship details to be updated
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$update-eligibility
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$update-eligibility
 activate B
 |||
 B -> B: Validate[]
