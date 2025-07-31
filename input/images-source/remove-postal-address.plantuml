@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Requests postal address removal
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$remove-postal-address
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$remove-postal-address
 activate B
 |||
 B -> B: Validate[]
