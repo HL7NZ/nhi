@@ -14,7 +14,7 @@ participant "HPI MDM" as E #CornflowerBlue
 User -> A: Lookup EDI number the General Practice the Patient is enrolled with
 activate A
 |||
-A -> B: GET<Endpoint>/Patient/[nhi-id]
+A -> B: GET<base-url>/fhir/nhi/v1/Patient/[nhi-id]
 activate B
 |||
 B -> B: Validate[]
