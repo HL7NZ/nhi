@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Provide new patient name to replace a name on a patient's NHI record
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$replace-name
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$replace-name
 activate B
 |||
 B -> B: Validate[]
