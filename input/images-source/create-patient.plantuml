@@ -13,7 +13,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: User enters Patient details
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$create
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$create
 activate B
 |||
 B -> B: Validate[]
