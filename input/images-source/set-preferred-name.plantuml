@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Select name (that exists on NHI) to become the new preferred name
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$set-preferred-name
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$set-preferred-name
 activate B
 |||
 B -> B: Validate[]
