@@ -12,7 +12,7 @@ participant "NHI MDM" as C #CornflowerBlue
 User -> A: Provide patient details to be updated
 activate A
 |||
-A -> B: POST<Endpoint>/Patient/$update-identity
+A -> B: POST<base-url>/fhir/nhi/v1/Patient/$update-identity
 activate B
 |||
 B -> B: Validate[]
