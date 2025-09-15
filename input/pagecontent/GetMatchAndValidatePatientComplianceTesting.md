@@ -372,7 +372,7 @@ The additional criteria includes:
       <li> Output
       <ul>
          <li> 9 results are returned</li> 
-         <li>The top result returned is NHI: ZMP4241 Score: 99</li>
+         <li>The top result returned is NHI: ZMP4241</li>
       </ul>
       </li>
    </ul>
