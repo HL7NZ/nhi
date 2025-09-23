@@ -14,6 +14,7 @@ Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/informat
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
 Alias: $name-use-extra = http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
+Alias: $nhi-contact = http://hl7.org.nz/fhir/StructureDefinition/nhi-contact
 
 
 
@@ -144,6 +145,8 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.period 0..0
 * telecom.extension[cp-purpose] 0..0
 
+* telecom.extension contains
+	$nhi-contact named contact 0..1 
 
 // GP
 
