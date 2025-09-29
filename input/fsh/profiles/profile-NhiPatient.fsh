@@ -169,11 +169,30 @@ Description:    "The Patient resource exposed by the NHI."
 * contained[GP] ^definition = "Contained resource for the General Practice that the patient is enrolled with"
 
 * obeys nhi-nz-pat-1
+* obeys nhi-nz-pat-2
+* obeys nhi-nz-pat-3
+* obeys nhi-nz-pat-4
 
 Invariant: nhi-nz-pat-1
 Expression: "Patient.name.where( (use.empty()) or (use='nickname') or (use = 'maiden') or (use = 'temp') )"
 Severity: #error
 Description: "only allows certain name name use values"
+
+Invariant: nhi-nz-pat-2
+Expression: "Patient.telecom.where(use='home' and system = 'phone').count() < 2"
+Severity: #error
+Description: "home phone 0..1"
+
+Invariant: nhi-nz-pat-3
+Expression: "Patient.telecom.where(use='mobile' and system = 'phone').count() < 2"
+Severity: #error
+Description: "mobile phone 0..1"
+
+
+Invariant: nhi-nz-pat-4
+Expression: "Patient.telecom.where(system = 'email').count() < 2"
+Severity: #error
+Description: "email 0..1"
 
 
 ValueSet: NhiContactPointUse
