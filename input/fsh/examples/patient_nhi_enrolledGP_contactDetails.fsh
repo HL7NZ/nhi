@@ -79,6 +79,8 @@ Usage: #example
 * telecom[=].extension[=].valueBoolean = false
 * telecom[=].extension[+].url = "isPrivate"
 * telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "context"
+* telecom[=].extension[=].valueString = "between 9am and 6pm only"
 
 
 

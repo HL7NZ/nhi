@@ -172,6 +172,10 @@ Description:    "The Patient resource exposed by the NHI."
 * obeys nhi-nz-pat-2
 * obeys nhi-nz-pat-3
 * obeys nhi-nz-pat-4
+* obeys nhi-nz-pat-5
+* obeys nhi-nz-pat-6
+
+
 
 Invariant: nhi-nz-pat-1
 Expression: "Patient.name.where( (use.empty()) or (use='nickname') or (use = 'maiden') or (use = 'temp') )"
@@ -194,6 +198,17 @@ Expression: "Patient.telecom.where(system = 'email').count() < 2"
 Severity: #error
 Description: "email 0..1"
 
+
+
+Invariant: nhi-nz-pat-5
+Expression: "Patient.telecom.extension[context].valueString.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))"
+Description: "character restrictions for contact context"
+Severity: #error
+
+Invariant:  nhi-nz-pat-6
+Expression: "Patient.telecom.extension[context].256.all(length()<256)"
+Description: "Contact context must be less than 1024 characters"
+Severity: #error
 
 ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
