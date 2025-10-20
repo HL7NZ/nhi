@@ -6,7 +6,7 @@ Usage: #definition
 * url = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/delete-contact"
 * version = "1.0.0"
 * name = "Delete Contact"
-* title = "Delete a contact on a patient's NHI record."
+* title = "Delete a contact from a patient's NHI record."
 * status = #draft
 * kind = #operation
 * experimental = false

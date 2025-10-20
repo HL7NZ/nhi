@@ -207,7 +207,7 @@ Severity: #error
 
 Invariant:  nhi-nz-pat-6
 Expression: "Patient.telecom.extension[context].256.all(length()<256)"
-Description: "Contact context must be less than 1024 characters"
+Description: "Contact context must be less than 256 characters"
 Severity: #error
 
 ValueSet: NhiContactPointUse

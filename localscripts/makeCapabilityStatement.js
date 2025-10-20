@@ -56,6 +56,8 @@ if (fs.existsSync(rootPath)) {
 			ar.push('<br/><h4>' + "Resource Level Interactions" + "</h4>") 
             capStmt.rest.forEach(function(rest){
                 rest.resource.forEach(function(res){
+					console.log("!!!!!!!!!!!!!!! " + res.type)
+
 
                     ar.push(`<a name="${res.type}"> </a>`)   
                     
@@ -101,6 +103,7 @@ if (fs.existsSync(rootPath)) {
                             console.log('operation name ' + int.name)                           
 							ar.push(`<td><a href ="OperationDefinition-Patient-${int.name}.html"> ${int.definition} </a></td>`)
 							
+ 							console.log("!!!!!!!!!!!!!!! " + int.documentation)
                                           
                            	let documentation = int.documentation.split(',')
                            	let verb  = documentation[0] ?? " "
