@@ -92,5 +92,5 @@ Usage: #definition
  
 * rest.resource.operation[+].name = "delete-contact"
 * rest.resource.operation[=].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/delete-contact"
-* rest.resource.operation[=].documentation = "POST, [base]/Patient/$delete-contact, Delete a contact from a patient's NHI record, system/Patient.u" 
+* rest.resource.operation[=].documentation = "POST, [base]/Patient/$delete-contact, Delete a contact from a patient's NHI record, system/Patient.d" 
  
