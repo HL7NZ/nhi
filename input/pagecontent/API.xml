@@ -121,24 +121,24 @@
 <td><a href ="OperationDefinition-Patient-add-contact.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-contact </a></td>
 <td>POST</td>
 <td> [base]/Patient/$add-contact</td>
-<td> Add a contact to a patient's NHI record</td>
-<td>patient:Patient.u system/Patient.u</td>
-</tr>
-<tr>
-<td>delete-contact</td>
-<td><a href ="OperationDefinition-Patient-delete-contact.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/delete-contact </a></td>
-<td>POST</td>
-<td> [base]/Patient/$delete-contact</td>
-<td>  Delete a contact from a patient's NHI record</td>
-<td>patient:Patient.u system/Patient.u</td>
+<td> add a contact to a patient's NHI record</td>
+<td> system/Patient.c</td>
 </tr>
 <tr>
 <td>replace-contact</td>
 <td><a href ="OperationDefinition-Patient-replace-contact.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-contact </a></td>
 <td>POST</td>
 <td> [base]/Patient/$replace-contact</td>
-<td>  Replace a contact on a patient's NHI record</td>
-<td>patient:Patient.u system/Patient.u</td>
+<td>  replace a contact on a patient's NHI record</td>
+<td> system/Patient.u</td>
+</tr>
+<tr>
+<td>delete-contact</td>
+<td><a href ="OperationDefinition-Patient-delete-contact.html"> https://nhi-ig.hip.digital.health.nz/OperationDefinition/delete-contact </a></td>
+<td>POST</td>
+<td> [base]/Patient/$delete-contact</td>
+<td> Delete a contact from a patient's NHI record</td>
+<td> system/Patient.d</td>
 </tr>
 </table>
 </div>

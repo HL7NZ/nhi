@@ -68,23 +68,6 @@ Usage: #definition
 * parameter[=].type = #string
 * parameter[=].documentation = "the phone number or email address" 
 
-
-* parameter[+].name = #"isValidFormat"
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[=].documentation = "The format of the email address or phone number is valid (true or  false)" 
-
-
-* parameter[+].name = #"isValidDomain"
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #string
-* parameter[=].documentation = "The domain of the email address is valid (true or  false)" 
-
-
 * parameter[+].name = #"isVerified"
 * parameter[=].use = #in
 * parameter[=].min = 0
@@ -106,12 +89,6 @@ Usage: #definition
 * parameter[=].type = #string
 * parameter[=].documentation = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI" 
 
-* parameter[+].name = #"isPrivate"
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #string
-* parameter[=].documentation = "Additional information about the context of use of this contact" 
 
 * parameter[+].name = #"return"
 * parameter[=].use = #out

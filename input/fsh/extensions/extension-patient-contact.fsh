@@ -11,19 +11,18 @@ Description: "Additional attributes for managing patient contact information"
 * ^context.expression = "Telecom"
 
 * extension contains
-	isValidFormat 0..1 and
-	isValidDomain 0..1 and
     isVerified 0..1 and 
     isShared 0..1 and
     isPrivate 0..1 and
-    context 0..1
+    context 0..1 and
+    lastUpdatedDate 0..1
     
 
-* extension[isValidFormat] ^short = "The format of the email address or phone number is valid (true or  false)"
-* extension[isValidFormat].value[x] only boolean
+//* extension[isValidFormat] ^short = "The format of the email address or phone number is valid (true or  false)"
+//* extension[isValidFormat].value[x] only boolean
 
-* extension[isValidDomain] ^short = "The domain of the email address is valid (true or  false)"
-* extension[isValidDomain].value[x] only boolean
+//* extension[isValidDomain] ^short = "The domain of the email address is valid (true or  false)"
+//* extension[isValidDomain].value[x] only boolean
 
 * extension[isVerified] ^short = "Verification has  been performed to determine that the email or phone number can be used to communicate with the patient (true or false)"
 * extension[isVerified].value[x] only boolean
@@ -36,4 +35,7 @@ Description: "Additional attributes for managing patient contact information"
 
 * extension[context] ^short = "Additional information about the context of use of this contact"
 * extension[context].value[x] only string
+
+* extension[lastUpdatedDate] ^short = "The date this contact was last updated"
+* extension[lastUpdatedDate].value[x] only date
 
