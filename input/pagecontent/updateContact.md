@@ -8,7 +8,7 @@ Three operations are available:
 * **add-contact – Set the Preferred Name the person wishes to be identied as**
 * **replace-contact – Add a new name to the set of Patient Names for this NHI record**
 * **delete-contact – Replace a name that is currently on the patients NHI record**
-* 
+
 
 
 ### Add-contact Overview
@@ -26,14 +26,14 @@ Three operations are available:
 **Add-contact  - Processing steps:**
  
 1. The user provides the new contact details to be added to the patient's NHI record
-2. The integrating application sends an HTTP Post request using the $add-contact operation to the NHI E.g.`Post\<Endpoint>/Patient/$add-contact`
+2. The integrating application sends an HTTP Post request using the $add-contact operation to the NHI E.g.`Post <Endpoint>/Patient/$add-contact`
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned.
 4. The updated patient record is returned with an HTTP 200 ok response.
 5. The integrating application displays the updated patient details to the user.
 
 
 
-<h4>Add-contact - In Parameters </h4>
+***Add-contact - In Parameters 
 <table>
 <style>
 table, th, td {
@@ -51,15 +51,10 @@ table, th, td {
 <td> Mandatory </td>
 <td> The patients nhi number </td></tr>
 
-<tr><td> version-id </td>
-<td> valueString </td>
-<td> Mandatory </td>
-<td> The current patient version number </td></tr>
-
 <tr><td> use </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> home or mobile</td></tr>
+<td> home or mobile </td></tr>
 
 <tr><td> system </td>
 <td> valueString </td>
@@ -71,10 +66,23 @@ table, th, td {
 <td> Optional </td>
 <td> the phone number or email address</td></tr>
 
-<tr><td> value </td>
+
+<tr><td> isVerified </td>
 <td> valueString </td>
 <td> Optional </td>
-<td> the phone number or email address</td></tr>
+<td>Verification has  been performed to determine that the email or phone number can be used to communicate with the patient (true or false)</td></tr>
+
+
+<tr><td> isShared </td>
+<td> valueString </td>
+<td> Optional </td>
+<td>The email address or phone number is shared with other people (true or false)</td></tr>
+
+<tr><td> isPrivate </td>
+<td> valueString </td>
+<td> Optional </td>
+<td>The email address or phone number may be used to communicate private health information about the individual identified by the NHI</td></tr>
+
 
 </table>
 
@@ -83,7 +91,7 @@ table, th, td {
 #### Add-contact - Behaviour
   * The NHI is validated.
   * The Patient version-id is validated.
-  * Thecontact details are  validated.
+  * The contact details are  validated.
   * If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name.
 
 
@@ -126,7 +134,7 @@ to do
 **Replace-contact - Processing steps:**
  
 1. The user provides the new patient contact  to be added to the patients NHI record, and the id of the existing contact which is to be replaced.
-2. The integrating application sends an HTTP Post request using the $add-name operation to the NHI E.g. `Post\<Endpoint>/Patient/$replace-contact`
+2. The integrating application sends an HTTP Post request using the $add-name operation to the NHI E.g. `Post <Endpoint>/Patient/$replace-contact`
 3. The request is validated - ALT: Validation failure. Operation Outcome resource returned.
 4. The updated patient record is returned with an HTTP 200 ok response.
 5. The integrating application displays the updated patient details to the user.
@@ -156,45 +164,15 @@ table, th, td {
 <td> Mandatory </td>
 <td> The current patient version number </td></tr>
 
-<tr><td> use </td>
-<td> valueString </td>
-<td> Optional </td>
-<td> The name use qualifier for a name </td></tr>
-
-<tr><td> prefix </td>
-<td> valueString </td>
-<td> Optional </td>
-<td> The name prefix </td></tr>
-
-<tr><td> given-1 </td>
-<td> valueString </td>
-<td> Optional* </td>
-<td> The first or given name </td></tr>
-
-<tr><td> given-2 </td>
-<td> valueString </td>
-<td> Optional* </td>
-<td> The middle or other given name/s </td></tr>
-
-<tr><td> family </td>
-<td> valueString </td>
-<td> Optional* </td>
-<td> The family name </td></tr>
-
-<tr><td> preferred </td>
+<tr><td> contact-id </td>
 <td> valueString </td>
 <td> Mandatory </td>
-<td> The attribute used to indicate whether the name is preferred or not </td></tr>
+<td> The id of the contact element to be replaced </td></tr>
 
-<tr><td> information-source </td>
+<tr><td> use,system,value,isVerified,isShared  </td>
 <td> valueString </td>
-<td> Mandatory </td>
-<td> the information source sighted when adding the name </td></tr>
-
-<tr><td> nhi-name-use-extra </td>
-<td> valueString </td>
-<td> Optional </td>
-<td> an attribute used to qualify pre-allocated and babyof names </td></tr>
+<td>  </td>
+<td> as per #Add-contact - In Parameters </td></tr>
 </table>
 
 
@@ -210,48 +188,7 @@ table, th, td {
 #### Replace-contact- Example request
 
 ```  
-{
-  "resourceType": "Parameters",
-  "id": "example",
-  "parameter": [
-    {
-        "name" : "nhi",
-        "valueString" : "ZGD1407"
-    },
-    {
-        "name" : "version-id",
-        "valueString" : "3357591"
-    },
-    {
-        "name" : "use",
-        "valueString" : "maiden"
-    },
-    {
-        "name" : "prefix",
-        "valueString" : "mr"
-    },
-    {
-        "name" : "given-1",
-        "valueString" : "James"
-    },
-    {
-        "name" : "given-2",
-        "valueString" : "George Joseph"
-    },
-    {
-        "name" : "family",
-        "valueString" : "Granger"
-    },
-    {
-        "name" : "preferred",
-        "valueString" : "true"
-    },
-    {
-        "name" : "information-source",
-        "valueString" : "NPRF"
-    }
-  ]
-}
+to do
 
 ```
 

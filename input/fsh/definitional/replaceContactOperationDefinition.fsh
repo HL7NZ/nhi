@@ -43,7 +43,7 @@ Usage: #definition
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
-* parameter[=].documentation = "The id of the telecom element to be replaced"
+* parameter[=].documentation = "The id of the contact to be replaced"
 
 
 * parameter[+].name = #"use"

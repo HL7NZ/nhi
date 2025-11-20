@@ -83,7 +83,6 @@ Usage: #definition
 * parameter[=].documentation = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI" 
 
 
-
 * parameter[+].name = #"return"
 * parameter[=].use = #out
 * parameter[=].min = 0
