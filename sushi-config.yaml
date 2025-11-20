@@ -54,6 +54,7 @@ menu:
     Update identity: updateIdentity.html
     Update birth: updateBirth.html
     Update eligibility: updateEligibility.html
+    Update contact: updateContact.html
     Consumer Facing Application Authentication: ConsumerFacingApplicationAuthentication.html
   Important information:
     Onboarding: Onboarding.html
