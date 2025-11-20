@@ -23,7 +23,7 @@ Three operations are available:
 
 
 
-**Add-contact  - Processing steps:**
+#### Add-contact  - Processing steps:
  
 1. The user provides the new contact details to be added to the patient's NHI record
 2. The integrating application sends an HTTP Post request using the $add-contact operation to the NHI E.g.`Post <Endpoint>/Patient/$add-contact`
@@ -33,7 +33,8 @@ Three operations are available:
 
 
 
-***Add-contact - In Parameters 
+<h3> Add-contact - In Parameters </h3>
+
 <table>
 <style>
 table, th, td {
@@ -172,7 +173,7 @@ table, th, td {
 <tr><td> use,system,value,isVerified,isShared  </td>
 <td> valueString </td>
 <td>  </td>
-<td> as per #Add-contact - In Parameters </td></tr>
+<td> as per  <a href="# Add-contact - In Parameters"> Add-contact - In Parameters</a>  </td></tr>
 </table>
 
 
