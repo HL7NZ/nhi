@@ -1,8 +1,8 @@
 
 
-### Update Contact Overview
+### Maintain Contact 
 
-The update contact operations allow an authorised user to maintain a person's contact informatioon on their identity record.
+The maintain  contact operations allow an authorised user to maintain a person's contact information on their identity record.
 
 Three operations are available:
 * **add-contact – Set the Preferred Name the person wishes to be identied as**
@@ -102,11 +102,9 @@ table, th, td {
 
 
 #### Add-contact - Example request
-
-```  
+  
 [add-contact request](/Parameters-AddContact.html) 
 
-```
 
 #### Add-contact - Rules and errors
 
@@ -190,10 +188,8 @@ table, th, td {
 
 #### Replace-contact- Example request
 
-```  
 [replace-contact request](//Parameters-ReplaceContact.html) 
 
-```
 
 #### Replace-contact - Rules and errors
 
@@ -278,10 +274,8 @@ table, th, td {
 
 #### Delete-contact - Example request
 
-```  
 [delete-contact request](//Parameters-DeleteContact.html) 
 
-```
 
 #### Delete-contact - Rules and errors
 
