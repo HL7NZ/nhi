@@ -188,7 +188,7 @@ table, th, td {
 
 #### Replace-contact- Example request
 
-[replace-contact request](//Parameters-ReplaceContact.html) 
+[replace-contact request](/Parameters-ReplaceContact.html) 
 
 
 #### Replace-contact - Rules and errors
@@ -274,7 +274,7 @@ table, th, td {
 
 #### Delete-contact - Example request
 
-[delete-contact request](//Parameters-DeleteContact.html) 
+[delete-contact request](/Parameters-DeleteContact.html) 
 
 
 #### Delete-contact - Rules and errors
