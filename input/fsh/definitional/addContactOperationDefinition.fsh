@@ -82,6 +82,12 @@ Usage: #definition
 * parameter[=].type = #string
 * parameter[=].documentation = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI" 
 
+* parameter[+].name = #"context"
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].type = #string
+* parameter[=].documentation = "Additional information about the context of use of this contact"
 
 * parameter[+].name = #"return"
 * parameter[=].use = #out
