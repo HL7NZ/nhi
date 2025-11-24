@@ -104,7 +104,7 @@ table, th, td {
 #### Add-contact - Example request
 
 ```  
-to do
+[add-contact request](/Parameters-AddContact.html) 
 
 ```
 
@@ -191,7 +191,7 @@ table, th, td {
 #### Replace-contact- Example request
 
 ```  
-to do
+[replace-contact request](//Parameters-ReplaceContact.html) 
 
 ```
 
@@ -279,7 +279,7 @@ table, th, td {
 #### Delete-contact - Example request
 
 ```  
-to do 
+[delete-contact request](//Parameters-DeleteContact.html) 
 
 ```
 
