@@ -50,10 +50,9 @@ Usage: #example
 
 //home email
 * telecom[0].system = #email
-* telecom[=].value = "test.contact@testContatc.com"
+* telecom[=].value = "test.contact@testContact.com"
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].url = "isValidDomain"
-* telecom[=].extension[=].valueBoolean = true
+
 * telecom[=].extension[+].url = "isVerified"
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "isShared"
@@ -61,7 +60,7 @@ Usage: #example
 * telecom[=].extension[+].url = "isPrivate"
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "isValidFormat"
-* telecom[=].extension[=].valueBoolean = true
+
 
 
 
@@ -71,7 +70,6 @@ Usage: #example
 * telecom[=].value = "0275151510"
 * telecom[=].use = #mobile
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[+].url = "isValidFormat"
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "isVerified"
 * telecom[=].extension[=].valueBoolean = true
@@ -81,6 +79,8 @@ Usage: #example
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "context"
 * telecom[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].valueDate = "2025-02-21"
 
 
 
@@ -89,7 +89,6 @@ Usage: #example
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[+].url = "isValidFormat"
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "isVerified"
 * telecom[=].extension[=].valueBoolean = true
@@ -97,7 +96,10 @@ Usage: #example
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "isPrivate"
 * telecom[=].extension[=].valueBoolean = false
-
+* telecom[=].extension[+].url = "context"
+* telecom[=].extension[=].valueString = "before 9am or after 6pm"
+* telecom[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].valueDate = "2025-02-21"
 
 
 

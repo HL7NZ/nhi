@@ -162,19 +162,67 @@ The information returned may include:
 
 ```
     "telecom": [
+    {
+      "system": "email",
+      "value": "test.contact@testContatc.com",
+      "extension": [
         {
-            "system": "email",
-            "value": "test.contact@testContact.com",
-            "use": "home"
+          "url": "isValidDomain",
+          "valueBoolean": true
         },
         {
-            "system": "phone",
-            "value": "0275151510",
-            "use": "mobile"
+          "url": "isVerified",
+          "valueBoolean": true
         },
         {
-            "system": "phone",
-            "value": "045882334",
-            "use": "home"
+          "url": "isShared",
+          "valueBoolean": false
+        },
+        {
+          "url": "isPrivate",
+          "valueBoolean": true
+        },
+        {
+          "url": "isValidFormat",
+          "valueBoolean": true
+        },
+          {
+          "url": "lastUpdatedDate",
+          "valueDate": "2025-03-17"
         }
+      ],
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "0275151510",
+      "use": "mobile",
+      "extension": [
+        {
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact",
+          "valueBoolean": true
+        },
+        {
+          "url": "isVerified",
+          "valueBoolean": true
+        },
+        {
+          "url": "isShared",
+          "valueBoolean": false
+        },
+        {
+          "url": "isPrivate",
+          "valueBoolean": true
+        },
+        {
+          "url": "context",
+          "valueString": "between 9am and 6pm only"
+        },
+        {
+          "url": "lastUpdatedDate",
+          "valueDate": "2025-02-21"
+        }
+      ]
+    }
+  ]
 ```
