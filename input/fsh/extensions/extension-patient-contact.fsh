@@ -3,6 +3,7 @@ Extension: NhiContact
 Id: nhi-contact
 Title: "NHI Contact"
 Description: "Additional attributes for managing patient contact information"
+//Parent:     http://hl7.org.nz/fhir/StructureDefinition/NzContactpoint
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
 
