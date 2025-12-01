@@ -8,7 +8,7 @@ Description: "Additional attributes for managing patient contact information"
 
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 * ^context.type = #element
-* ^context.expression = "Telecom"
+* ^context.expression = "ContactPoint"
 
 * extension contains
     isVerified 0..1 and 

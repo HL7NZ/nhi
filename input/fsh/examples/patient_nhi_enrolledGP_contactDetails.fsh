@@ -51,56 +51,54 @@ Usage: #example
 //home email
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
+* telecom[=].use = #home
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-
-* telecom[=].extension[+].url = "isVerified"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isShared"
-* telecom[=].extension[=].valueBoolean = false
-* telecom[=].extension[+].url = "isPrivate"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isValidFormat"
-
+* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "context"
+* telecom[=].extension[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[=].valueDate = "2024-07-21"
 
 
 
 //mobile phone
-* telecom[=].use = #home
-* telecom[+].system = #phone
-* telecom[=].value = "0275151510"
-* telecom[=].use = #mobile
-* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isVerified"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isShared"
-* telecom[=].extension[=].valueBoolean = false
-* telecom[=].extension[+].url = "isPrivate"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "context"
-* telecom[=].extension[=].valueString = "between 9am and 6pm only"
-* telecom[=].extension[+].url = "lastUpdatedDate"
-* telecom[=].extension[=].valueDate = "2025-02-21"
 
+* telecom[+].system = #phone
+* telecom[=].use = #mobile
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
+* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "context"
+* telecom[=].extension[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[=].valueDate = "2025-01-21"
 
 
 //home phone
+
 * telecom[+].system = #phone
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
-* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isVerified"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isShared"
-* telecom[=].extension[=].valueBoolean = true
-* telecom[=].extension[+].url = "isPrivate"
-* telecom[=].extension[=].valueBoolean = false
-* telecom[=].extension[+].url = "context"
-* telecom[=].extension[=].valueString = "before 9am or after 6pm"
-* telecom[=].extension[+].url = "lastUpdatedDate"
-* telecom[=].extension[=].valueDate = "2025-02-21"
-
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
+* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "context"
+* telecom[=].extension[=].extension[=].valueString = "before 9am or after 6pm"
+* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[=].valueDate = "2025-02-21"
 
 
 
