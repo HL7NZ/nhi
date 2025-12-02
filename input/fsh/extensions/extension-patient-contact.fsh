@@ -8,8 +8,7 @@ Description: "Additional attributes for managing patient contact information"
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
 
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
-*// ^context.type = #element
-//* ^context.expression = "ContactPoint"
+
 
 * extension contains
     isVerified 0..1 and 
