@@ -149,7 +149,7 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.extension[cp-purpose] 0..0
 
 //* telecom.extension contains
-//	$nhi-contact named contact 0..1 
+	$nhi-contact named temp2 0..1 
 
 // GP
 
