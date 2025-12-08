@@ -49,6 +49,9 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * deceased[x] only dateTime
 
+* telecom only NzContactPoint|2.1.0
+
+
 * extension contains 
     $ethnicity named ethnicity 0..6 and
     // $nzCitizen named nzCitizen 0..1 and
@@ -148,8 +151,8 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.period 0..0
 * telecom.extension[cp-purpose] 0..0
 
-* telecom.extension contains
-	$nhi-contact named temp2 0..1 
+//* telecom.extension contains
+//	$nhi-contact named temp2 0..1 
 
 // GP
 

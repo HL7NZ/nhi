@@ -64,8 +64,11 @@ Usage: #example
 * telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
 
-
-
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
+* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[=].extension[=].valueBoolean = true
+* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[=].valueBoolean = true
 
 
 * gender = #female
