@@ -53,8 +53,11 @@ Description:    "The Patient resource exposed by the NHI."
     $ethnicity named ethnicity 0..6 and
     // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
-    $birthPlace named birthPlace 0..1 
+    $birthPlace named birthPlace 0..1 and
     //and $nzResidency named nzResidency 0..1  
+    
+    //
+    $nhi-contact named temp 0..1 
  
 * extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code|2.0 (required)
 
@@ -145,8 +148,8 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.period 0..0
 * telecom.extension[cp-purpose] 0..0
 
-* telecom.extension contains
-	$nhi-contact named contact 0..1 
+//* telecom.extension contains
+//	$nhi-contact named contact 0..1 
 
 // GP
 
