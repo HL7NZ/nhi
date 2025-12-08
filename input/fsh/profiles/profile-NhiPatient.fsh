@@ -148,7 +148,7 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.period 0..0
 * telecom.extension[cp-purpose] 0..0
 
-//* telecom.extension contains
+* telecom.extension contains
 	$nhi-contact named temp2 0..1 
 
 // GP
