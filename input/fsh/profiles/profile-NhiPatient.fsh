@@ -14,11 +14,7 @@ Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/informat
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
 Alias: $name-use-extra = http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
-Alias: $nhi-contact = http://hl7.org.nz/fhir/StructureDefinition/nhi-contact
-
-
-
-
+Alias: $nhi-contact = http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point
 
 Profile:        NhiPatient
 
@@ -49,18 +45,17 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * deceased[x] only dateTime
 
-* telecom only NzContactPoint|2.1.0
+* telecom only NhiContactPoint
 
 
 * extension contains 
     $ethnicity named ethnicity 0..6 and
     // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
-    $birthPlace named birthPlace 0..1 and
+    $birthPlace named birthPlace 0..1 
     //and $nzResidency named nzResidency 0..1  
     
-    //
-    $nhi-contact named temp 0..1 
+   
  
 * extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code|2.0 (required)
 
