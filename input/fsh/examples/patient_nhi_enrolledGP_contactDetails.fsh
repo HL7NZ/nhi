@@ -52,16 +52,16 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
-* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "context"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
 * telecom[=].extension[=].extension[=].valueString = "between 9am and 6pm only"
-* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].extension[=].valueDate = "2024-07-21"
 
 
@@ -70,16 +70,16 @@ Usage: #example
 
 * telecom[+].system = #phone
 * telecom[=].use = #mobile
-* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
 * telecom[=].extension[=].extension[=].valueBoolean = true
 * telecom[=].extension[=].extension[+].url = "context"
 * telecom[=].extension[=].extension[=].valueString = "between 9am and 6pm only"
-* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].extension[=].valueDate = "2025-01-21"
 
 
@@ -88,16 +88,16 @@ Usage: #example
 * telecom[+].system = #phone
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
-* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact"
-* telecom[=].extension[=].extension[+].url = "isVerified"
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isPrivate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
 * telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[=].extension[=].extension[+].url = "isShared"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
 * telecom[=].extension[=].extension[=].valueBoolean = true
 * telecom[=].extension[=].extension[+].url = "context"
 * telecom[=].extension[=].extension[=].valueString = "before 9am or after 6pm"
-* telecom[=].extension[=].extension[+].url = "lastUpdatedDate"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].extension[=].valueDate = "2025-02-21"
 
 
@@ -105,7 +105,7 @@ Usage: #example
 
 * gender = #female
 * birthDate = "2021-12-29"
-* birthDate.extension.url = "http://hl7.org.nz/fhir/StructureDefinition/information-source"
+* birthDate.extension.url = "http://hl7.org.nz/fhir/StructureDefinition/information-source-"
 * birthDate.extension.valueCodeableConcept.coding.version = "1.0.0"
 * birthDate.extension.valueCodeableConcept.coding = $information-source-code#NPRF "Proof not Sighted"
 * birthDate.extension.valueCodeableConcept.text = "Proof not Sighted"
