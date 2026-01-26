@@ -14,10 +14,7 @@ Alias: $information-source = http://hl7.org.nz/fhir/StructureDefinition/informat
 Alias: $nzCitizen = http://hl7.org.nz/fhir/StructureDefinition/nz-citizenship
 Alias: $nzResidency = http://hl7.org.nz/fhir/StructureDefinition/nz-residency
 Alias: $name-use-extra = http://hl7.org.nz/fhir/StructureDefinition/name-use-extra
-
-
-
-
+Alias: $nhi-contact = http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point
 
 Profile:        NhiPatient
 
@@ -48,12 +45,17 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * deceased[x] only dateTime
 
+* telecom only NhiContactPoint
+
+
 * extension contains 
     $ethnicity named ethnicity 0..6 and
     // $nzCitizen named nzCitizen 0..1 and
     //$dhb named dhb 0..1 and 
     $birthPlace named birthPlace 0..1 
     //and $nzResidency named nzResidency 0..1  
+    
+   
  
 * extension[ethnicity].valueCodeableConcept from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code|2.0 (required)
 
@@ -144,6 +146,8 @@ Description:    "The Patient resource exposed by the NHI."
 * telecom.period 0..0
 * telecom.extension[cp-purpose] 0..0
 
+//* telecom.extension contains
+//	$nhi-contact named temp2 0..1 
 
 // GP
 
@@ -166,12 +170,46 @@ Description:    "The Patient resource exposed by the NHI."
 * contained[GP] ^definition = "Contained resource for the General Practice that the patient is enrolled with"
 
 * obeys nhi-nz-pat-1
+* obeys nhi-nz-pat-2
+* obeys nhi-nz-pat-3
+* obeys nhi-nz-pat-4
+* obeys nhi-nz-pat-5
+* obeys nhi-nz-pat-6
+
+
 
 Invariant: nhi-nz-pat-1
 Expression: "Patient.name.where( (use.empty()) or (use='nickname') or (use = 'maiden') or (use = 'temp') )"
 Severity: #error
 Description: "only allows certain name name use values"
 
+Invariant: nhi-nz-pat-2
+Expression: "Patient.telecom.where(use='home' and system = 'phone').count() < 2"
+Severity: #error
+Description: "home phone 0..1"
+
+Invariant: nhi-nz-pat-3
+Expression: "Patient.telecom.where(use='mobile' and system = 'phone').count() < 2"
+Severity: #error
+Description: "mobile phone 0..1"
+
+
+Invariant: nhi-nz-pat-4
+Expression: "Patient.telecom.where(system = 'email').count() < 2"
+Severity: #error
+Description: "email 0..1"
+
+
+
+Invariant: nhi-nz-pat-5
+Expression: "Patient.telecom.extension[context].valueString.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))"
+Description: "character restrictions for contact context"
+Severity: #error
+
+Invariant:  nhi-nz-pat-6
+Expression: "Patient.telecom.extension[context].256.all(length()<256)"
+Description: "Contact context must be less than 256 characters"
+Severity: #error
 
 ValueSet: NhiContactPointUse
 Title: "NHI ContactPoint Use Codes"
