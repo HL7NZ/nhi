@@ -45,7 +45,7 @@ Description:    "The Patient resource exposed by the NHI."
 * identifier.period 0..0
 * deceased[x] only dateTime
 
-* telecom only NhiContactPoint
+//* telecom only NhiContactPoint
 
 
 * extension contains 
