@@ -4,6 +4,9 @@ Alias: $isPrivate = http://hl7.org.nz/fhir/StructureDefinition/isPrivate
 Alias: $context = http://hl7.org.nz/fhir/StructureDefinition/context
 Alias: $lastUpdatedDate = http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate
 
+//* !! temp
+Alias: $isPrimaryAddress = http://hl7.org.nz/fhir/StructureDefinition/is-primary-address
+
 Profile: NhiContactPoint
 
 Parent:  NzContactPoint  
@@ -19,10 +22,5 @@ Description: "Additional attributes for managing patient contact information"
 //* ^context.type = #element
 
 * extension contains
-    $isVerified named isVerified 0..1 and
-    $isShared named isShared 0..1 and
-    $isPrivate named isPrivate 0..1 and
-    $context named context 0..1 and
-    $lastUpdatedDate named lastUpdatedDate 0..1 
-    
+   $nzAddressDerived named nz-address-derived 0..1
 
