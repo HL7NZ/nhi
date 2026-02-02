@@ -81,3 +81,16 @@ Usage: #definition
 // * rest.resource.operation[11].name = "update-death"
 // * rest.resource.operation[11].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/update-death"
 // * rest.resource.operation[11].documentation = "POST, [base]/Patient/$update-death, Update a patient's death details, system/Patient.u, system/Patient.a" 
+
+* rest.resource.operation[+].name = "add-contact"
+* rest.resource.operation[=].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/add-contact"
+* rest.resource.operation[=].documentation = "POST, [base]/Patient/$add-contact, add a contact to a patient's NHI record, system/Patient.u"
+
+* rest.resource.operation[+].name = "replace-contact"
+* rest.resource.operation[=].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/replace-contact"
+* rest.resource.operation[=].documentation = "POST, [base]/Patient/$replace-contact,  replace a contact on a patient's NHI record, system/Patient.u" 
+ 
+* rest.resource.operation[+].name = "delete-contact"
+* rest.resource.operation[=].definition = "https://nhi-ig.hip.digital.health.nz/OperationDefinition/delete-contact"
+* rest.resource.operation[=].documentation = "POST, [base]/Patient/$delete-contact, Delete a contact from a patient's NHI record, system/Patient.u" 
+ 

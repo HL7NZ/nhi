@@ -55,7 +55,7 @@ Usage: #definition
 
 * parameter[+].name = #"system"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "phone or email" 
@@ -63,7 +63,7 @@ Usage: #definition
 
 * parameter[+].name = #"value"
 * parameter[=].use = #in
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].type = #string
 * parameter[=].documentation = "the phone number or email address" 
@@ -72,21 +72,21 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].type = #string
+* parameter[=].type = #boolean
 * parameter[=].documentation = "Verification has  been performed to determine that the email or phone number can be used to communicate with the patient (true or false)" 
 
 * parameter[+].name = #"isShared"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].type = #string
+* parameter[=].type = #boolean
 * parameter[=].documentation = "The email address or phone number is shared with other people (true or false)" 
 
 * parameter[+].name = #"isPrivate"
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].type = #string
+* parameter[=].type = #boolean
 * parameter[=].documentation = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI" 
 
 * parameter[+].name = #"context"
