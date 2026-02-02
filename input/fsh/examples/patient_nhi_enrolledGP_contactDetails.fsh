@@ -47,18 +47,14 @@ Usage: #example
 * name[=].family = "Aufderhar"
 * name[=].given[0] = "Rickey"
 * name[=].given[+] = "Amalia"
+
+* telecom.id= "17"
 * telecom[0].system = #email
-* telecom[=].value = "test.contact@testContatc.com"
+* telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
-* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point"
-* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
-* telecom[=].extension[=].extension[=].valueBoolean = true
-* telecom[+].system = #phone
-* telecom[=].value = "0275151510"
-* telecom[=].use = #mobile
-* telecom[+].system = #phone
-* telecom[=].value = "045882334"
-* telecom[=].use = #home
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+* telecom[=].extension[=].valueBoolean = true
+
 * gender = #female
 * birthDate = "2021-12-29"
 * birthDate.extension.url = "http://hl7.org.nz/fhir/StructureDefinition/information-source"
