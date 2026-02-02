@@ -48,6 +48,8 @@ Usage: #example
 * name[=].given[0] = "Rickey"
 * name[=].given[+] = "Amalia"
 
+
+//email
 * telecom.id= "17"
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
@@ -59,11 +61,42 @@ Usage: #example
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
 * telecom[=].extension[=].valueBoolean = false
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
-* telecom[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[=].valueString = "any time"
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].valueDate = "2024-07-21"
 
+//mobile phone
+* telecom.id= "18"
+* telecom[0].system = #phone
+* telecom[=].value = "027 123 4567"
+* telecom[=].use = #mobile
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
+* telecom[=].extension[=].valueBoolean = false
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
+* telecom[=].extension[=].valueString = "between 9am and 6pm only
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
+* telecom[=].extension[=].valueDate = "2025-09-22"
 
+
+//home phone
+* telecom.id= "19"
+* telecom[0].system = #phone
+* telecom[=].value = "045882334"
+* telecom[=].use = #home
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
+* telecom[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
+* telecom[=].extension[=].valueDate = "2025-01-17"
 
 
 * gender = #female
