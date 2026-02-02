@@ -52,8 +52,19 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
-* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+* telecom[=].extension[=].valueBoolean = true
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
+* telecom[=].extension[=].valueBoolean = false
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
+* telecom[=].extension[=].valueString = "between 9am and 6pm only"
+* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
+* telecom[=].extension[=].valueDate = "2024-07-21"
+
+
+
 
 * gender = #female
 * birthDate = "2021-12-29"
