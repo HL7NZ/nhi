@@ -47,7 +47,7 @@ table, th, td {
 <td>ZAT2364</td>
 <td>Output: All identity information is displayed for the patient. The patient:
 <li>Is alive</li>
-<li>Has 3 names</li>
+<li>Has 4 names - no name use + preferred = true, no name use + preferred = false, one ‘baby of’, one maiden</li>
 <li>The preferred name should have all name parts populated</li>
 <li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
 <li>Has three ethnicities</li>
@@ -372,7 +372,7 @@ The additional criteria includes:
       <li> Output
       <ul>
          <li> 9 results are returned</li> 
-         <li>The top result returned is NHI: ZMP4241</li>
+         <li>The top result returned is NHI: ZMP4241 Score: 99</li>
       </ul>
       </li>
    </ul>

@@ -32,7 +32,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<caption>**A create patint request is actioned by submitting a parameters resource**</caption>
+<caption>**A create patient request is actioned by submitting a parameters resource**</caption>
 <tr><th> Parameter name </th>
 <th> Parameter type </th>
 <th> Mandatory / Optional </th>
