@@ -50,6 +50,9 @@ Usage: #example
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContatc.com"
 * telecom[=].use = #home
+* telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact-point"
+* telecom[=].extension[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
+* telecom[=].extension[=].extension[=].valueBoolean = true
 * telecom[+].system = #phone
 * telecom[=].value = "0275151510"
 * telecom[=].use = #mobile
