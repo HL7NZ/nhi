@@ -49,8 +49,8 @@ Usage: #example
 * name[=].given[+] = "Amalia"
 
 
-//email
-* telecom.id= "17"
+
+* telecom.id = "17"
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
@@ -65,8 +65,7 @@ Usage: #example
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].valueDate = "2024-07-21"
 
-//mobile phone
-* telecom.id= "18"
+* telecom.id = "18"
 * telecom[0].system = #phone
 * telecom[=].value = "027 123 4567"
 * telecom[=].use = #mobile
@@ -77,13 +76,11 @@ Usage: #example
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isShared"
 * telecom[=].extension[=].valueBoolean = false
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/context"
-* telecom[=].extension[=].valueString = "between 9am and 6pm only
-* telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
-* telecom[=].extension[=].valueDate = "2025-09-22"
+* telecom[=].extension[=].valueString = "between 9am and 6pm only"
 
 
-//home phone
-* telecom.id= "19"
+
+* telecom.id = "19"
 * telecom[0].system = #phone
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
