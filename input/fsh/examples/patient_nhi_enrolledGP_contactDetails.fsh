@@ -50,7 +50,7 @@ Usage: #example
 
 
 
-* telecom.id = "17"
+* telecom[0].id = "17"
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
 * telecom[=].use = #home
@@ -65,8 +65,8 @@ Usage: #example
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].valueDate = "2024-07-21"
 
-* telecom.id = "18"
-* telecom[0].system = #phone
+* telecom.id[+} = "18"
+* telecom[=].system = #phone
 * telecom[=].value = "027 123 4567"
 * telecom[=].use = #mobile
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
@@ -80,8 +80,8 @@ Usage: #example
 
 
 
-* telecom.id = "19"
-* telecom[0].system = #phone
+* telecom.id[+] = "19"
+* telecom[=].system = #phone
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"

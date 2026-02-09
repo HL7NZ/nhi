@@ -48,5 +48,5 @@ Id: lastUpdatedDate
 Title: "LastUpdatedDate"
 Description: "The date this contact was last updated"
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
-* value[x] only boolean
+* value[x] only date
 
