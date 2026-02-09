@@ -20,7 +20,7 @@ Description: "Additional attributes for managing patient contact information"
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 //* ^context.type = #element
 * extension contains
-   //cp-purpose 0..0 and
+
    $isVerified named isVerified 0..1 and
    $isShared named isShared 0..1 and
    $isPrivate named isPrivate 0..1 and
@@ -28,4 +28,7 @@ Description: "Additional attributes for managing patient contact information"
    $lastUpdatedDate named lastUpdatedDate 0..1
    
    
+   
+* extension[cp-purpose] 0..0
+  
 
