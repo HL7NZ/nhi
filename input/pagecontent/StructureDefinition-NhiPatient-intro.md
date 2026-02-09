@@ -163,64 +163,82 @@ The information returned may include:
 ```
     "telecom": [
     {
+      "id": "17",
       "system": "email",
-      "value": "test.contact@testContatc.com",
+      "value": "test.contact@testContact.com",
+      "use": "home",
       "extension": [
         {
-          "url": "isValidDomain",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isVerified",
           "valueBoolean": true
         },
         {
-          "url": "isVerified",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isPrivate",
           "valueBoolean": true
         },
         {
-          "url": "isShared",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isShared",
           "valueBoolean": false
         },
         {
-          "url": "isPrivate",
-          "valueBoolean": true
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/context",
+          "valueString": "any time"
         },
         {
-          "url": "isValidFormat",
-          "valueBoolean": true
-        },
-          {
-          "url": "lastUpdatedDate",
-          "valueDate": "2025-03-17"
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate",
+          "valueDate": "2024-07-21"
         }
-      ],
-      "use": "home"
+      ]
     },
     {
+      "id": "18",
       "system": "phone",
-      "value": "0275151510",
+      "value": "027 123 4567",
       "use": "mobile",
       "extension": [
         {
-          "url": "http://hl7.org.nz/fhir/StructureDefinition/nhi-contact",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isVerified",
           "valueBoolean": true
         },
         {
-          "url": "isVerified",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isPrivate",
           "valueBoolean": true
         },
         {
-          "url": "isShared",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isShared",
           "valueBoolean": false
         },
         {
-          "url": "isPrivate",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/context",
+          "valueString": "between 9am and 6pm only"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "system": "phone",
+      "value": "045882334",
+      "use": "home",
+      "extension": [
+        {
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isVerified",
           "valueBoolean": true
         },
         {
-          "url": "context",
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isPrivate",
+          "valueBoolean": true
+        },
+        {
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/isShared",
+          "valueBoolean": true
+        },
+        {
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/context",
           "valueString": "between 9am and 6pm only"
         },
         {
-          "url": "lastUpdatedDate",
-          "valueDate": "2025-02-21"
+          "url": "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate",
+          "valueDate": "2025-01-17"
         }
       ]
     }
