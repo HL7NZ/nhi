@@ -1,3 +1,16 @@
+Extension: NhiContactPointExtra
+Id: nhi-contact-point-extra
+* ^context.type = #element
+* ^context.expression = "Telecom"
+
+* extension contains   
+    IsVerified 0..1 and   
+    IsShared 0..1  and
+    IsPrivate 0..1 and
+    Context 0..1 and
+    LastUpdatedDate 0..1
+    
+
 Extension: IsVerified
 Id: IsVerified
 Title: "isVerified"
