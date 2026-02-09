@@ -65,7 +65,7 @@ Usage: #example
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
 * telecom[=].extension[=].valueDate = "2024-07-21"
 
-* telecom.id[+} = "18"
+* telecom[+].id = "18"
 * telecom[=].system = #phone
 * telecom[=].value = "027 123 4567"
 * telecom[=].use = #mobile
@@ -80,7 +80,7 @@ Usage: #example
 
 
 
-* telecom.id[+] = "19"
+* telecom[+].id = "19"
 * telecom[=].system = #phone
 * telecom[=].value = "045882334"
 * telecom[=].use = #home
