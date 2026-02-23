@@ -42,7 +42,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].type = #string
+* parameter[=].type = #integer
 * parameter[=].documentation = "The id of the contact to be replaced"
 
 

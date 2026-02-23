@@ -74,18 +74,18 @@ table, th, td {
 
 
 <tr><td> isVerified </td>
-<td> valueString </td>
+<td> valueBoolean </td>
 <td> Optional </td>
 <td>Verification has  been performed to determine that the email or phone number can be used to communicate with the patient (true or false)</td></tr>
 
 
 <tr><td> isShared </td>
-<td> valueString </td>
+<td> valueBoolean </td>
 <td> Optional </td>
 <td>The email address or phone number is shared with other people (true or false)</td></tr>
 
 <tr><td> isPrivate </td>
-<td> valueString </td>
+<td> valueBoolean </td>
 <td> Optional </td>
 <td>The email address or phone number may be used to communicate private health information about the individual identified by the NHI</td></tr>
 
@@ -169,7 +169,7 @@ table, th, td {
 <td> The current patient version number </td></tr>
 
 <tr><td> contact-id </td>
-<td> valueString </td>
+<td> valueInteger </td>
 <td> Mandatory </td>
 <td> The id of the contact element to be replaced </td></tr>
 

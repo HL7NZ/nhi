@@ -226,7 +226,8 @@ Severity: #error
 
 
 Invariant:  nhi-nz-pat-9
-Expression: "Patient.telecom.where(system = 'phone').value.matches('^[-0-9\s.\-+]{0,15}$')"
+Expression: "Patient.telecom.where(system = 'phone').value.matches('^[-0-9\\s.\\-+]{0,15}$')"
+
 Description: "character restrictions for phone"
 Severity: #error
 
