@@ -175,6 +175,9 @@ Description:    "The Patient resource exposed by the NHI."
 * obeys nhi-nz-pat-4
 * obeys nhi-nz-pat-5
 * obeys nhi-nz-pat-6
+* obeys nhi-nz-pat-7
+* obeys nhi-nz-pat-8
+* obeys nhi-nz-pat-9
 
 
 
@@ -209,6 +212,22 @@ Severity: #error
 Invariant:  nhi-nz-pat-6
 Expression: "Patient.telecom.extension[context].256.all(length()<256)"
 Description: "Contact context must be less than 256 characters"
+Severity: #error
+
+Invariant:  nhi-nz-pat-7
+Expression: "Patient.telecom.where(system = 'email').use.empty()"
+Description: "Email should not have a use specified"
+Severity: #error
+
+Invariant:  nhi-nz-pat-8
+Expression: "Patient.telecom.where(system = 'email').value.matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$')"
+Description: "character restrictions for email"
+Severity: #error
+
+
+Invariant:  nhi-nz-pat-9
+Expression: "Patient.telecom.where(system = 'phone').value.matches('^[-0-9\s.\-+]{0,15}$')"
+Description: "character restrictions for phone"
 Severity: #error
 
 ValueSet: NhiContactPointUse
