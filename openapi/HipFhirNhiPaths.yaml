@@ -768,3 +768,149 @@
                   Ref: pLambdaNameNhi
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
+                
+/fhir/nhi/v1/Patient/$add-contact:
+    post:
+      summary: "An operation to add a contact to a patient's NHI record"
+      operationId: "patientAddContact"
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AddContactRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:           
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      - api_key: []
+      
+/fhir/nhi/v1/Patient/$replace-contact:
+    post:
+      summary: "An operation to replace a contact on a patient's NHI record"
+      operationId: "patientReplaceContact"
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReplaceContactRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:             
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      - api_key: []
+      
+/fhir/nhi/v1/Patient/$delete-contact:
+    post:
+      summary: "An operation to delete a contact from a patient's NHI record"
+      operationId: "patientDeleteContact"
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: false
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeleteContactRequest"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:             
+        - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
+      - api_key: []      
+      
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+        

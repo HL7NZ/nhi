@@ -75,7 +75,7 @@ Description:    "The information to be supplied when requesting that a new  Pati
 * name.extension[information-source].valueCodeableConcept 1..1
 * name.extension[preferred] 1..1
 
-//other cardinality ruels
+//other cardinality rules
 * name.prefix 0..1
 
 * obeys EM02106

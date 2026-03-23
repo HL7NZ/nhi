@@ -14,7 +14,7 @@ Usage: #definition
 * publisher = "Te Whatu Ora"
 * contact.telecom.system = #email
 * contact.telecom.value = "integration@health.govt.nz"
-* description = "An operation to delete a contact on a patient's NHI record"
+* description = "An operation to delete a contact from a patient's NHI record"
 * affectsState = true
 // need a value set for our custom operation names
 * code = #"delete-contact"

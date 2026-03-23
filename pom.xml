@@ -7,7 +7,7 @@
 
 	<properties>
 		<revision>1.6.6-SNAPSHOT</revision>
-		<fhir-common.version>1.9.2</fhir-common.version>
+		<fhir-common.version>1.11.0-SNAPSHOT</fhir-common.version>
 		
 
 	</properties>
