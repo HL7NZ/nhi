@@ -2585,6 +2585,174 @@ components:
       additionalProperties: false
       required:
         - manifestation
+    ParameterContactUse:
+      required:
+        - "name"
+        - "valueString"
+      type: "object"
+      properties:
+        valueString:
+          enum:
+            - "home"
+            - "mobile"
+        name:
+          type: "string"
+          enum:
+            - "use"
+      additionalProperties: false
+    ParameterContactSystem:
+      required:
+        - "name"
+        - "valueString"
+      type: "object"
+      properties:
+        valueString:
+          enum:
+            - "phone"
+            - "email"
+        name:
+          type: "string"
+          enum:
+            - "system"
+      additionalProperties: false
+    ParameterContactValue:
+      required:
+        - "name"
+        - "valueString"
+      type: "object"
+      properties:
+        valueString:
+          $ref: "#/components/schemas/RestrictedString"
+        name:
+          type: "string"
+          enum:
+            - "value"
+      additionalProperties: false
+    ParameterIsVerified:
+      required:
+        - "name"
+        - "valueBoolean"
+      type: "object"
+      properties:
+        valueBoolean:
+          type: "boolean"
+        name:
+          type: "string"
+          enum:
+            - "isVerified"
+      additionalProperties: false
+    ParameterIsShared:
+      required:
+        - "name"
+        - "valueBoolean"
+      type: "object"
+      properties:
+        valueBoolean:
+          type: "boolean"
+        name:
+          type: "string"
+          enum:
+            - "isShared"
+      additionalProperties: false
+    ParameterIsPrivate:
+      required:
+        - "name"
+        - "valueBoolean"
+      type: "object"
+      properties:
+        valueBoolean:
+          type: "boolean"
+        name:
+          type: "string"
+          enum:
+            - "isPrivate"
+      additionalProperties: false
+    ParameterContactContext:
+      required:
+        - "name"
+        - "valueString"
+      type: "object"
+      properties:
+        valueString:
+          $ref: "#/components/schemas/RestrictedString"
+        name:
+          type: "string"
+          enum:
+            - "context"
+      additionalProperties: false
+    AddContactRequest:
+      required:
+        - "resourceType"
+      type: "object"
+      properties:
+        parameter:
+          type: "array"
+          description: "An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values"
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/ParameterNhi"
+              - $ref: "#/components/schemas/ParameterVersionId"
+              - $ref: "#/components/schemas/ParameterContactUse"
+              - $ref: "#/components/schemas/ParameterContactSystem"
+              - $ref: "#/components/schemas/ParameterContactValue"
+              - $ref: "#/components/schemas/ParameterIsVerified"
+              - $ref: "#/components/schemas/ParameterIsShared"
+              - $ref: "#/components/schemas/ParameterIsPrivate"
+              - $ref: "#/components/schemas/ParameterContactContext"
+        id:
+          $ref: "#/components/schemas/string"
+        resourceType:
+          type: "string"
+          enum:
+            - "Parameters"
+      additionalProperties: false
+    ReplaceContactRequest:
+      required:
+        - "resourceType"
+      type: "object"
+      properties:
+        parameter:
+          type: "array"
+          description: "An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values"
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/ParameterNhi"
+              - $ref: "#/components/schemas/ParameterVersionId"
+              - $ref: "#/components/schemas/ParameterContactId"
+              - $ref: "#/components/schemas/ParameterContactUse"
+              - $ref: "#/components/schemas/ParameterContactSystem"
+              - $ref: "#/components/schemas/ParameterContactValue"
+              - $ref: "#/components/schemas/ParameterIsVerified"
+              - $ref: "#/components/schemas/ParameterIsShared"
+              - $ref: "#/components/schemas/ParameterIsPrivate"
+              - $ref: "#/components/schemas/ParameterContactContext"
+        id:
+          $ref: "#/components/schemas/string"
+        resourceType:
+          type: "string"
+          enum:
+            - "Parameters"
+      additionalProperties: false
+    DeleteContactRequest:
+      required:
+        - "resourceType"
+      type: "object"
+      properties:
+        parameter:
+          type: "array"
+          description: "An array of paramaters describing what to match or validate. Must contain exactly one patient resource, 0..1 count values , 0..1 onlyCertainMatches values"
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/ParameterNhi"
+              - $ref: "#/components/schemas/ParameterVersionId"
+              - $ref: "#/components/schemas/ParameterContactId"
+        id:
+          $ref: "#/components/schemas/string"
+        resourceType:
+          type: "string"
+          enum:
+            - "Parameters"
+      additionalProperties: false
   securitySchemes:
     LambdaAuthorizer:
       type: "apiKey"
