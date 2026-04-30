@@ -90,6 +90,11 @@ table, th, td {
 <td>The email address or phone number may be used to communicate private health information about the individual identified by the NHI</td></tr>
 
 
+<tr><td> context </td>
+<td> valueString </td>
+<td> Optional </td>
+<td>Additional information about the context of use of this contact</td></tr>
+
 </table>
 
 
@@ -173,7 +178,8 @@ table, th, td {
 <td> Mandatory </td>
 <td> The id of the contact element to be replaced </td></tr>
 
-<tr><td> use,system,value,isVerified,isShared  </td>
+
+<tr><td> use,system,value,isVerified,isShared,context</td>
 
 <td colspan="3" > as per  <a href="#add-contact-in-parameters"> Add-contact - In Parameters</a>  </td></tr>
 </table>
