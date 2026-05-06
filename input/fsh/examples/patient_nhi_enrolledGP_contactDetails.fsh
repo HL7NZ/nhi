@@ -53,7 +53,7 @@ Usage: #example
 * telecom[0].id = "17"
 * telecom[0].system = #email
 * telecom[=].value = "test.contact@testContact.com"
-* telecom[=].use = #home
+
 * telecom[=].extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * telecom[=].extension[=].valueBoolean = true
 * telecom[=].extension[+].url = "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
