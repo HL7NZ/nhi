@@ -22,7 +22,7 @@ Usage: #definition
 * resource = #Patient
 * system = false
 * type = false
-* instance = true
+* instance = false
 
 * parameter[+].name = #"nhi"
 * parameter[=].use = #in
