@@ -15,3 +15,4 @@ Thumbs.db
 /output/
 /fhir_packages/
 .idea/
+/package.tmp
