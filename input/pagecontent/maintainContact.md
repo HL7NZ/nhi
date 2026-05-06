@@ -1,13 +1,13 @@
 
 
-### Maintain Contact 
+### Maintain Contact Overview
 
 The maintain  contact operations allow an authorised user to maintain a person's contact information on their identity record.
 
 Three operations are available:
-* **add-contact – Set the Preferred Name the person wishes to be identied as**
-* **replace-contact – Add a new name to the set of Patient Names for this NHI record**
-* **delete-contact – Replace a name that is currently on the patients NHI record**
+* **add-contact –Add a contact to a patient's NHI record**
+* **replace-contact – Replace a contact on a patient's NHI record**
+* **delete-contact – Delete a contact from a patient's NHI record**
 
 
 
@@ -64,12 +64,12 @@ table, th, td {
 
 <tr><td> system </td>
 <td> valueString </td>
-<td> Optional </td>
+<td> Mandatory </td>
 <td> phone or email</td></tr>
 
 <tr><td> value </td>
 <td> valueString </td>
-<td> Optional </td>
+<td> Mandatory </td>
 <td> the phone number or email address</td></tr>
 
 
@@ -103,8 +103,7 @@ table, th, td {
   * The NHI is validated.
   * The Patient version-id is validated.
   * The contact details are  validated.
-  * If all request parameters are valid the name.preferred boolean is set to TRUE on the requested name and FALSE on the current preferred name.
-
+  * If all request parameters are valid the contact details are updated on the NHI
 
 #### Add-contact - Example request
   
