@@ -220,7 +220,7 @@ Description: "Email should not have a use specified"
 Severity: #error
 
 Invariant:  nhi-nz-pat-8
-Expression: "Patient.telecom.where(system = 'email').value.matches('^[-a-zA-Z0-9@:%._~#=?&\\/]{0,255}$')"
+Expression: "Patient.telecom.where(system = 'email').value.matches('^[-a-zA-Z0-9@:_.\\s\\+-]{0,255}$')"
 Description: "character restrictions for email"
 Severity: #error
 

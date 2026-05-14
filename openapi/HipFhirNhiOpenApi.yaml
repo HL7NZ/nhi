@@ -2320,7 +2320,7 @@ components:
       description: "String of characters used to identify a name or a resource"
     RestrictedString:
       description: "restricted character string"
-      pattern: "^([a-zA-Z0-9'\\s\\.\\-\\/,])+$"
+      pattern: "^([a-z])+$"
       type: "string"
     RestrictedString2:
       description: "restricted character string allows macrons"

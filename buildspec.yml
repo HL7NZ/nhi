@@ -56,9 +56,11 @@ phases:
       - sudo chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
      
-      # checkin full-ig.zip
+      # checkin build artifacts
       - echo checking in full-ig.zip
       - git add -f ./output/full-ig.zip
+      - git add -f ./openapi/HipFhirNhiOpenApi.yaml
+      - git add -f ./input/extra/HipFhirNhiOpenApi.zip
       - git commit -m "new IG build"
       - git push  https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nhi 
       
