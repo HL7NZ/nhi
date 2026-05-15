@@ -1862,6 +1862,12 @@ components:
       properties:
         id:
           $ref: "#/components/schemas/string"
+        system:
+          $ref: "#/components/schemas/code"
+        use:
+        code:
+          $ref: "#/components/schemas/code"
+        value: "#/components/schemas/ContactString"
         extension:
           type: "array"
           items:
