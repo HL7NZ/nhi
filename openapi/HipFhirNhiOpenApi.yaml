@@ -2645,6 +2645,19 @@ components:
           enum:
             - "isVerified"
       additionalProperties: false
+    ParameterContactId:
+      required:
+        - "name"
+        - "valueInteger"
+      type: "object"
+      properties:
+        valueInteger:
+          type: "integer"
+        name:
+          type: "string"
+          enum:
+            - "contact-id"
+      additionalProperties: false
     ParameterIsShared:
       required:
         - "name"
