@@ -2419,7 +2419,7 @@ components:
       type: "string"
     ContactString:
       description: "String of characters used to identify a phone number or email"
-      pattern: "^([a-zA-Z0-9@:_/\\+\\.\\s-]){{0,255}$"
+      pattern: "^([a-zA-Z0-9@:_/\\+\\.\\s\\-])*$"
       type: "string"
     SetAddressRequest:
       required:
