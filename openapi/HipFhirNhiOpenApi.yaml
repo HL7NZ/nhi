@@ -1865,9 +1865,9 @@ components:
         system:
           $ref: "#/components/schemas/code"
         use:
-        code:
           $ref: "#/components/schemas/code"
-        value: "#/components/schemas/ContactString"
+        value:
+          $ref: "#/components/schemas/ContactString"
         extension:
           type: "array"
           items:
@@ -1883,8 +1883,10 @@ components:
       properties:
         url:
           type: "string"
-          ensum: "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
-        valueBoolean: type:boolean
+          enum:
+            - "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
+        valueBoolean:
+          type: boolean
       reqired:
         - url
         - valueBoolean
@@ -1894,8 +1896,10 @@ components:
       properties:
         url:
           type: "string"
-          ensum: "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
-        valueBoolean: type:boolean
+          enum:
+            - "http://hl7.org.nz/fhir/StructureDefinition/isPrivate"
+        valueBoolean:
+          type: boolean
       reqired:
         - url
         - valueBoolean
@@ -1905,8 +1909,10 @@ components:
       properties:
         url:
           type: "string"
-          ensum: "http://hl7.org.nz/fhir/StructureDefinition/isShared"
-        valueBoolean: type:boolean
+          enum:
+            - "http://hl7.org.nz/fhir/StructureDefinition/isShared"
+        valueBoolean:
+          type: boolean
       reqired:
         - url
         - valueBoolean
@@ -1916,19 +1922,21 @@ components:
       properties:
         url:
           type: "string"
-          ensum: "http://hl7.org.nz/fhir/StructureDefinition/context"
+          enum:
+            - "http://hl7.org.nz/fhir/StructureDefinition/context"
         valueString:
           $ref: "#/components/schemas/RestrictedString"
       reqired:
         - url
-        - valueBoolean
+        - valueString
       additionalProperties: false
     lastUpdatedDate:
       type: "object"
       properties:
         url:
           type: "string"
-          ensum: "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
+          enum:
+            - "http://hl7.org.nz/fhir/StructureDefinition/lastUpdatedDate"
         valueDate:
           $ref: "#/components/schemas/date"
       reqired:
@@ -2250,7 +2258,8 @@ components:
           type: array
         telecom:
           description: "Patient's contact details"
-          items: "#/components/schemas/Telecom"
+          items:
+            $ref: "#/components/schemas/Telecom"
           type: array
       additionalProperties: false
       description: "The Patient resource exposed by the NHI."
