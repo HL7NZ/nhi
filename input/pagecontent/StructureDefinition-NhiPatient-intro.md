@@ -14,6 +14,7 @@ This includes the core NHI Profile attributes:
 * place of birth
 * ethnicity
 * date of death
+* contact details
 
 The core NHI Profile attributes are returned to all users that have read and/or $match access to the NHI
 
@@ -40,6 +41,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
   * notValidatedAddressReason extension
   * nz-address-id extension
   * nz-address-derived extension
+  * telecom NHI ContactPoint profile
 
 ### New NHI Number Format and check digit calculation
 
@@ -147,11 +149,8 @@ This will change when a patient transfers to a new practice, but will not reflec
 
 ### Patient's Contact details
 
-The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Preferences. This is an additional permission required on your NHI FHIR account.
+The patient’s contact details are returned in the Patient.telecom attribute to users who have permission to access Patient Contact Details. This is an additional permission required on your NHI FHIR account.
 
-The contact details are only returned with a read on the resource. They are not returned in the $match response – even if a user has the correct permissions.
-
-The patient version-id does not change when the patient's contact details change. This is because the patient's contact details are not held in the NHI but are retrieved from the National Enrolment Service and returned along with the NHI details in the NHI Patient profile. The Patient Version-id only reflects changes to details held on the NHI.
 
 The information returned may include:
 -	1x email address,
