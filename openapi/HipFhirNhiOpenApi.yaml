@@ -1044,6 +1044,29 @@ components:
           $ref: "#/components/schemas/string"
       additionalProperties: false
       description: "An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers."
+    Flag:
+      type: "object"
+      properties:
+        id:
+          $ref: "#/components/schemas/id"
+        meta:
+          $ref: "#/components/schemas/Meta"
+        identifier:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/Identifier"
+        status:
+          type: "string"
+          enum:
+            - "active"
+            - "inactive"
+            - "entered-in-error"
+        code:
+          $ref: "#/components/schemas/CodeableConcept"
+        subject:
+          $ref: "#/components/schemas/Reference"
+        period:
+          $ref: "#/components/schemas/Period"
     EpisodeOfCare:
       type: "object"
       properties:
@@ -1093,29 +1116,7 @@ components:
                 type: "object"
                 properties:
                   valueCodeableConcept:
-                    type: "object"
-                    properties:
-                      coding:
-                        type: "array"
-                        items:
-                          required:
-                            - "system"
-                          type: "object"
-                          properties:
-                            system:
-                              type: "string"
-                              enum:
-                                - "https://standards.digital.health.nz/nes-enrolment-termination-reason"
-                            code:
-                              $ref: "#/components/schemas/code"
-                            display:
-                              $ref: "#/components/schemas/string"
-                            version:
-                              $ref: "#/components/schemas/string"
-                          additionalProperties: false
-                      text:
-                        $ref: "#/components/schemas/string"
-                    additionalProperties: false
+                    $ref: "#/components/schemas/CodeableConcept"
                   url:
                     type: "string"
                     enum:
@@ -1139,7 +1140,7 @@ components:
         type:
           type: "array"
           items:
-            $ref: "#/components/schemas/Coding"
+            $ref: "#/components/schemas/CodeableConcept"
         contained:
           type: "array"
           items:
