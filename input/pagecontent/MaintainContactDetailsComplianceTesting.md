@@ -1,7 +1,9 @@
 
  <h4>Maintain Contact Details Compliance Tests</h4>
-    Use one of the agreed test NHI numbers for all tests unless stated otherwise. <br/>
-    For each successful update, retrieve the Patient record and confirm Patient.telecom reflects the change.<br/><br/>
+   <br> Use one of the agreed test NHI numbers for all tests unless stated otherwise. 
+   <br> For each successful update, retrieve the Patient record and confirm Patient.telecom reflects the change.
+   <br><br>
+    
 
 <table>
 <style>
