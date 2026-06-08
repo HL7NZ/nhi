@@ -41,7 +41,7 @@ The core NHI Profile attributes are returned to all users that have read and/or 
   * notValidatedAddressReason extension
   * nz-address-id extension
   * nz-address-derived extension
-  * telecom NHI ContactPoint profile
+ * telecom NHI ContactPoint profile
 
 ### New NHI Number Format and check digit calculation
 
