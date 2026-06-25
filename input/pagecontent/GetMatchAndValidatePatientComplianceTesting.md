@@ -489,7 +489,7 @@ Output: All identity information is displayed for the patient. This is for a pat
 <li>A not validated physical address</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li></td>
-<td>Mandatory if applicable </td></tr>
+<td>Mandatory</td></tr>
 
 <tr><td>NHI-Match-8 (NHI-Get-6)</td>
 <td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters)</td>
