@@ -58,7 +58,7 @@ table, th, td {
 <td>application can display all other identity data returned by the NHI in a GET response including:
 <li>A non validated primary address</li>
 <li>A year of birth and a year and month of death (partial dates)</li>
-<li>Unknown citizenship</li></td>
+</td>
 <td>ZAT2496</td>
 <td>Output: All identity information is displayed for the patient. This is for a patient record that has partial information in some fields. The patient has:
 <li>A not validated physical address</li>
@@ -472,7 +472,7 @@ The patient: <br />
 <li>Has two addresses, the primary resedential (physical) address is overseas and the mailing (postal) address is in NZ</li>
 <li>Has three ethnicities</li>
 <li>Is a NZ citizen</li></td>
-<td>Mandatory</td></tr>
+<td>*Mandatory if the application is using the data</td></tr>
 
 <tr><td>NHI-Match-7 (NHI-Get-4)</td>
 <td>application can display all other identity data returned by the NHI in a GET response including:
@@ -489,7 +489,7 @@ Output: All identity information is displayed for the patient. This is for a pat
 <li>A not validated physical address</li>
 <li>Partial date of death</li>
 <li>Partial date of birth</li></td>
-<td>Mandatory</td></tr>
+<td>Mandatory if applicable </td></tr>
 
 <tr><td>NHI-Match-8 (NHI-Get-6)</td>
 <td>application can receive and display NHI responses that have fields populated with the maximum allowable sizes (e.g. A given name of 50 characters, Other given name(s) of 100 characters, Surname of 100 characters)</td>
