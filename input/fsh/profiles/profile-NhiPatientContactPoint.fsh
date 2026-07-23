@@ -27,7 +27,11 @@ Description: "Additional attributes for managing patient contact information"
    $context named context 0..1 and
    $lastUpdatedDate named lastUpdatedDate 0..1
    
-   
+* isVerified ^short = "Verification has been performed to determine that the email or phone number can be used to communicate with the patient (true or false)"
+* isShared ^short = "The email address or phone number is shared with other people (true or false)"
+* isPrivate ^short = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI"
+* context ^short = "Additional information about the context of use of this contact"
+
    
 * extension[cp-purpose] 0..0
   
