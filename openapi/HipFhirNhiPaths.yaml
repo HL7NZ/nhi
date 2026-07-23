@@ -813,7 +813,16 @@
       - hip-fhir-cog:           
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
-      
+            
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+                
 /fhir/nhi/v1/Patient/$replace-contact:
     post:
       summary: "An operation to replace a contact on a patient's NHI record"
@@ -858,7 +867,16 @@
       - hip-fhir-cog:             
         - "https://api.hip.digital.health.nz/fhir/system/Patient.u"
       - api_key: []
-      
+            
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNhi
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+                
 /fhir/nhi/v1/Patient/$delete-contact:
     post:
       summary: "An operation to delete a contact from a patient's NHI record"
