@@ -144,6 +144,14 @@ Description:    "The Patient resource exposed by the NHI."
 
 * telecom.rank 0..0
 * telecom.period 0..0
+
+* telecom.extension[isVerified] ^short = "Verification has been performed to determine that the email or phone number can be used to communicate with the patient (true or false)"
+* telecom.extension[isShared] ^short = "The email address or phone number is shared with other people (true or false)"
+* telecom.extension[isPrivate] ^short = "The email address or phone number may be used to communicate private health information about the individual identified by the NHI"
+* telecom.extension[context] ^short = "Additional information about the context of use of this contact"
+   
+   
+   
 * telecom.extension[cp-purpose] 0..0
 
 //* telecom.extension contains

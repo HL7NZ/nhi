@@ -14,7 +14,7 @@ Id: nhi-contact-point-extra
 Extension: IsVerified
 Id: IsVerified
 Title: "isVerified"
-Description: "The format of the email address or phone number is valid (true or  false)."
+Description: "The email address or phone number has been verified (true or  false)."
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/isVerified"
 * value[x] only boolean
 
