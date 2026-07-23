@@ -1067,6 +1067,7 @@ components:
           $ref: "#/components/schemas/Reference"
         period:
           $ref: "#/components/schemas/Period"
+      additionalProperties: false
     EpisodeOfCare:
       type: "object"
       properties:
